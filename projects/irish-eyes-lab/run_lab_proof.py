@@ -26,7 +26,20 @@ def dl(name,remote,digest):
  p=OUT/name
  if not p.is_file() or sha(p)!=digest:
   req=urllib.request.Request(f"{RELEASE}/{remote}",headers={"User-Agent":"AIVideoEdit-MainV2-proof"})
-  with urllib.request.urlopen(req,timeout=180) as r,p.open("wb") as w:shutil.copyfileobj(r,w)
+  try:
+   with urllib.request.urlopen(req,timeout=180) as r,p.open("wb") as w:shutil.copyfileobj(r,w)
+  except Exception as original_error:
+   print(f"Direct release download blocked for {remote}: {type(original_error).__name__}; trying authenticated gh release assets",flush=True)
+   response=subprocess.run([
+    "gh","release","download","media-mountain-noir-after-midnight",
+    "--repo","SouthPaw302/AIVideoEdit","--pattern",remote,
+    "--dir",str(OUT),"--clobber"
+   ],capture_output=True,text=True)
+   if response.returncode:
+    raise RuntimeError(f"Source asset unavailable {remote}; gh exit {response.returncode}: {response.stderr[-450:]}") from original_error
+   staged=OUT/remote
+   if not staged.exists():raise RuntimeError(f"Authenticated asset download produced no file: {remote}")
+   staged.replace(p)
  if sha(p)!=digest:raise RuntimeError("hash mismatch "+name)
  return p
 def run(cmd):
