@@ -121,7 +121,9 @@ jobs:
           assert data["human_visual_approval"] is False
           assert data["production_complete"] is False
           assert data["render_bytes"] > 100000
-          assert data["audio_sha256"] == "6789e6f3ea52501a0d4a151296a6ef7f8abc8516acd1f6cec959213a028ec0d9"
+          manifest=json.loads(Path("source/projects/el-camion-y-la-carretera/RENDER_JOB.json").read_text())
+          assert data["audio_sha256"] == manifest["audio"]["sha256"]
+          assert manifest["audio"]["source_full_track_sha256"] == "6789e6f3ea52501a0d4a151296a6ef7f8abc8516acd1f6cec959213a028ec0d9"
           assert data["render_frames"] == 720
           assert data["fx"]["effects"]
           assert data["jev"]["decision"] in ("PASS", "CONTINUE")
