@@ -85,13 +85,13 @@ jobs:
           if [ "$REQUIRE_ONNX" = '1' ]; then args+=(--require-onnx); fi
           mkdir -p "../source/.verified-audio"
           gh run download 37771954430 --repo "$GITHUB_REPOSITORY" --name el-camion-batch03-real-37771954430 --dir "../source/.verified-audio"
-          ffmpeg -hide_banner -loglevel error -y -i "../source/.verified-audio/real_music_film.mp4" -vn -c:a pcm_s16le "../source/.verified-audio/original_audio.wav"
+          ffmpeg -hide_banner -loglevel error -y -i "../source/.verified-audio/real_music_film.mp4" -t 30 -vn -c:a pcm_s16le "../source/.verified-audio/original_audio.wav"
           python - <<'PY'
           import hashlib, json
           from pathlib import Path
           manifest=Path("../source") / "projects/el-camion-y-la-carretera/RENDER_JOB.json"
           audio_path=Path("../source/.verified-audio/original_audio.wav")
-          expected="6789e6f3ea52501a0d4a151296a6ef7f8abc8516acd1f6cec959213a028ec0d9"
+          expected="0840a84a171848fc64c40f8a7752a0e1c9187b86f16e3c329c01ad3d0867374e"
           assert hashlib.sha256(audio_path.read_bytes()).hexdigest() == expected
           data=json.loads(manifest.read_text())
           data["audio"].pop("url", None)
