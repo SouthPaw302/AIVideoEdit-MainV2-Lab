@@ -1,0 +1,61 @@
+{
+  "schema": "aivideoedit.operating-order.v1",
+  "mission": "Redo El Camión y la Carretera from verified original WAV and exact prior lyrics; author all picture from scratch in Batch-10 as isolated MainV2 Lab production.",
+  "direction_authority": "music_led",
+  "production_mode": null,
+  "canon_lock": {
+    "locked": false,
+    "picture_language": "PENDING VISUAL DIRECTION SELECTION",
+    "items": []
+  },
+  "accepted_baseline": {
+    "status": "none",
+    "file_or_locator": null,
+    "sha256": null,
+    "user_acceptance_statement": null
+  },
+  "accepted_source_library": {
+    "status": "none",
+    "role": null,
+    "file_or_locator": null,
+    "sha256": null,
+    "user_acceptance_statement": null,
+    "content_reuse_authorized": false,
+    "timeline_locked": false
+  },
+  "refinement_scope": {
+    "active": false,
+    "goal": null,
+    "allowed_changes": [],
+    "forbidden_changes": [
+      "reusing prior video picture",
+      "mutating original AIVideoEdit Main"
+    ],
+    "restart_authorized": true
+  },
+  "recut_scope": {
+    "active": false,
+    "named_defects": [],
+    "allowed_changes": [],
+    "forbidden_changes": [],
+    "source_replacement_authorized": false
+  },
+  "current_user_direction": "Import only the original song WAV and exact lyrics; be director, prepare storyboard and every other production file; create fresh media in batches of 10; boot and work with Actions and sandbox.",
+  "exact_next_action": "Find and SHA-lock original WAV and exact lyrics; analyze music, present/lock route, then produce original Batch 01.",
+  "updated_at_utc": "2026-10-08T00:00:00Z",
+  "director_supervision": {
+    "required": true,
+    "reviewer_role": "sandbox_director",
+    "checkpoint_file": "DIRECTOR_CHECKPOINTS.json",
+    "execution_ledger_file": "PRODUCTION_EXECUTION_LEDGER.json",
+    "checkpoints": [
+      "media_selection",
+      "representative_proof",
+      "rough_cut",
+      "fx_pass",
+      "final_review"
+    ],
+    "runner_may_choose_art_direction": false,
+    "technical_pass_is_creative_pass": false
+  }
+}

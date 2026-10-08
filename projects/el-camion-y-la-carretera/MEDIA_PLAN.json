@@ -1,0 +1,104 @@
+{
+  "schema": "aivideoedit.media-plan.v1",
+  "user_approach_established": false,
+  "production_mode": null,
+  "picture_source": "fresh_original_generated",
+  "visual_direction_gate": {
+    "required": true,
+    "presented_in_chat": false,
+    "options": [
+      {
+        "number": 1,
+        "name": "La Ruta Real",
+        "production_mode": "cinematic",
+        "interpretation": "One exhausted driver crosses mountain roads toward daylight in a grounded drama.",
+        "rendering_route": "new realistic truck/road/cab cinematic coverage, physically correct motion",
+        "mini_storyboard": [
+          "Engine starts in midnight rain",
+          "Long drive interrupted by an empty rest stop",
+          "First sunlight finally reaches mountain road"
+        ]
+      },
+      {
+        "number": 2,
+        "name": "La Carretera Recuerda",
+        "production_mode": "hybrid",
+        "interpretation": "Loss and memory intrude through an empty seat, abandoned letter, and recurring reflections.",
+        "rendering_route": "original cinematic shots plus restrained living memory scenes, no hallucinated faces",
+        "mini_storyboard": [
+          "Rain carries half-remembered reflections",
+          "Empty house, folded letter, continuing journey",
+          "Memory fades as the driver enters daybreak"
+        ]
+      },
+      {
+        "number": 3,
+        "name": "La Noche Vive",
+        "production_mode": "living_scene",
+        "interpretation": "The highway is a living landscape and the traveler is barely visible.",
+        "rendering_route": "new painterly still plates, real layered weather/light/water animation, minimal bounded depth motion",
+        "mini_storyboard": [
+          "Moonless Appalachian rain road",
+          "Small warm lights breathe amid dark ridges",
+          "Morning fog yields to first light"
+        ]
+      }
+    ],
+    "user_selection": {
+      "status": "pending",
+      "selected_option_numbers": [],
+      "recorded_user_instruction": null
+    },
+    "locked": false
+  },
+  "batches": [
+    {
+      "number": 1,
+      "shots": [
+        "EC-01",
+        "EC-02",
+        "EC-03",
+        "EC-04",
+        "EC-05",
+        "EC-06",
+        "EC-07",
+        "EC-08",
+        "EC-09",
+        "EC-10"
+      ],
+      "status": "SOURCE_PENDING"
+    },
+    {
+      "number": 2,
+      "shots": [
+        "EC-11",
+        "EC-12",
+        "EC-13",
+        "EC-14",
+        "EC-15",
+        "EC-16",
+        "EC-17",
+        "EC-18",
+        "EC-19",
+        "EC-20"
+      ],
+      "status": "SOURCE_PENDING"
+    },
+    {
+      "number": 3,
+      "shots": [
+        "EC-21",
+        "EC-22",
+        "EC-23",
+        "EC-24",
+        "EC-25",
+        "EC-26",
+        "EC-27",
+        "EC-28",
+        "EC-29",
+        "EC-30"
+      ],
+      "status": "SOURCE_PENDING"
+    }
+  ]
+}

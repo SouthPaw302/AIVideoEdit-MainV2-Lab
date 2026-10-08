@@ -1,0 +1,3 @@
+# Director handoff
+
+Repo SouthPaw302/AIVideoEdit-MainV2-Lab; branch song/el-camion-y-la-carretera; project projects/el-camion-y-la-carretera. Boot offline under lab MainV2 validation authority. Read Prime Directive, generated Second Brain, SOUL, project Operating Order and Zero Drift. No imported old picture. First source: real original WAV and exact lyrics only. Run genuine ONNX on verified audio, map sections and real lyric lines, resolve visual-direction gate, then generate 10 original shots, visually inspect, lock and continue in order. Drive https://drive.google.com/drive/folders/1R-QRUIDg2i5gGccImiM7mUb9HePXrQtU

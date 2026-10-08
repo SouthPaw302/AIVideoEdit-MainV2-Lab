@@ -1,0 +1,28 @@
+{
+  "schema": "aivideoedit.source-authority.v1",
+  "title": "El Camión y la Carretera",
+  "possible_archive_alias": "El Camion y el Camino",
+  "user_authorized_inputs": [
+    "original WAV master",
+    "verified exact previously supplied lyrics"
+  ],
+  "picture_inputs": [
+    "newly generated and reviewed media ONLY"
+  ],
+  "denied": [
+    "old MP4 visual frames",
+    "audio extracted and misidentified as original WAV",
+    "invented lyric verses"
+  ],
+  "audio": {
+    "status": "MISSING",
+    "file_name": null,
+    "sha256": null
+  },
+  "lyrics": {
+    "status": "NOT_VERIFIED",
+    "complete": false,
+    "sha256": null
+  },
+  "source_gate": "BLOCKED"
+}

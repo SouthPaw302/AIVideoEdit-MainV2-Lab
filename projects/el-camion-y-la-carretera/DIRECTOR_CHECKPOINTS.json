@@ -1,0 +1,31 @@
+{
+  "schema": "aivideoedit.director-checkpoints.v1",
+  "checkpoints": [
+    {
+      "id": "media_selection",
+      "status": "PENDING",
+      "human_approval": false
+    },
+    {
+      "id": "representative_proof",
+      "status": "PENDING",
+      "human_approval": false
+    },
+    {
+      "id": "rough_cut",
+      "status": "PENDING",
+      "human_approval": false
+    },
+    {
+      "id": "fx_pass",
+      "status": "PENDING",
+      "human_approval": false
+    },
+    {
+      "id": "final_review",
+      "status": "PENDING",
+      "human_approval": false
+    }
+  ],
+  "runner_may_self_approve": false
+}

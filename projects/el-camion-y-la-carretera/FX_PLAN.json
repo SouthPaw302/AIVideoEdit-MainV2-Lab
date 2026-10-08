@@ -1,0 +1,7 @@
+{
+  "schema": "aivideoedit.fx-plan.v1",
+  "effects": [],
+  "transitions": [],
+  "lock_verified": false,
+  "rule": "Canonical FX V2 + pixel-visible execution receipts after shot proofs, no silent substitutes."
+}

@@ -1,0 +1,65 @@
+{
+  "schema": "aivideoedit.batches.v1",
+  "batch_size": 10,
+  "total_shots": 30,
+  "generated": 0,
+  "batches": [
+    {
+      "batch": 1,
+      "shot_ids": [
+        "EC-01",
+        "EC-02",
+        "EC-03",
+        "EC-04",
+        "EC-05",
+        "EC-06",
+        "EC-07",
+        "EC-08",
+        "EC-09",
+        "EC-10"
+      ],
+      "status": "NOT_STARTED",
+      "files": [],
+      "hashes": [],
+      "visual_qc": "PENDING"
+    },
+    {
+      "batch": 2,
+      "shot_ids": [
+        "EC-11",
+        "EC-12",
+        "EC-13",
+        "EC-14",
+        "EC-15",
+        "EC-16",
+        "EC-17",
+        "EC-18",
+        "EC-19",
+        "EC-20"
+      ],
+      "status": "NOT_STARTED",
+      "files": [],
+      "hashes": [],
+      "visual_qc": "PENDING"
+    },
+    {
+      "batch": 3,
+      "shot_ids": [
+        "EC-21",
+        "EC-22",
+        "EC-23",
+        "EC-24",
+        "EC-25",
+        "EC-26",
+        "EC-27",
+        "EC-28",
+        "EC-29",
+        "EC-30"
+      ],
+      "status": "NOT_STARTED",
+      "files": [],
+      "hashes": [],
+      "visual_qc": "PENDING"
+    }
+  ]
+}

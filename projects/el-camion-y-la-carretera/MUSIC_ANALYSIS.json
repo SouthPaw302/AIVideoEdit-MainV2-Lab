@@ -1,0 +1,18 @@
+{
+  "schema": "aivideoedit.music-analysis.v1",
+  "analysis_complete": false,
+  "lyrics": {
+    "status": "present_unverified",
+    "source": "prior user-supplied exact 40 lines missing"
+  },
+  "rhythm": {
+    "tempo_status": "not_measured",
+    "tempo_bpm": null,
+    "meter_or_groove": null
+  },
+  "genre": {
+    "status": "pending_audio_analysis"
+  },
+  "sections": [],
+  "model_resolution": null
+}
