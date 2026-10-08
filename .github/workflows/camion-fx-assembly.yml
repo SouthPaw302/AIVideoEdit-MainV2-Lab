@@ -30,7 +30,7 @@ jobs:
     env:
       GH_TOKEN: ${{ github.token }}
       REPO: ${{ github.repository }}
-      OUT: .camion-fx-assembly
+      OUT: camion-fx-assembly
       REQUESTED_REAL_RENDER_RUN: ${{ inputs.real_render_run || '' }}
     steps:
       - name: Checkout isolated song branch and production manifests
@@ -232,7 +232,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: camion-fx-camera-review-${{ github.run_id }}
-          path: .camion-fx-assembly/
+          path: camion-fx-assembly/
           retention-days: 30
           if-no-files-found: error
 
