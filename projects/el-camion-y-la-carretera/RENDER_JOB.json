@@ -112,7 +112,9 @@
             "strength": 0.47
           }
         }
-      ]
+      ],
+      "transition_out": "FX2-TRANS-025",
+      "transition_seconds": 0.8
     },
     {
       "id": "EC-24",
@@ -134,6 +136,9 @@
             ],
             "strength": 0.12
           }
+        },
+        {
+          "id": "FX2-COMP-021"
         }
       ]
     },
