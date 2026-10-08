@@ -3,7 +3,11 @@ name: El Camión — Batch 01 FX Loops (MainV2 Runner)
 on:
   push:
     branches: [song/el-camion-y-la-carretera]
-    paths: [".github/workflows/camion-fx-batch-01.yml"]
+    paths:
+      - ".github/workflows/camion-fx-batch-01.yml"
+      - "projects/el-camion-y-la-carretera/render_fx_loops.py"
+      - "projects/el-camion-y-la-carretera/FX_BATCH_01.json"
+      - "projects/el-camion-y-la-carretera/media/batch_01/source/**"
   workflow_dispatch:
 
 permissions:
@@ -95,6 +99,6 @@ jobs:
         if: always()
         run: |
           echo "### El Camión — FX Batch 01" >> "$GITHUB_STEP_SUMMARY"
-          echo "Source stills and canonical FX generated on GitHub runner. Video is 24fps primary; GIFs are loop previews." >> "$GITHUB_STEP_SUMMARY"
+          echo "Canonical FX render requested; check executed steps, QC report and artifact before claiming output." >> "$GITHUB_STEP_SUMMARY"
           echo "**Technical QC:** check run steps and uploaded artifact." >> "$GITHUB_STEP_SUMMARY"
           echo "**Human visual QC:** PENDING. **Batch 02:** LOCKED until approved." >> "$GITHUB_STEP_SUMMARY"
