@@ -78,8 +78,8 @@ jobs:
           print('project_id='+pid)
           PY
           PID="$(cat /tmp/project-id)"
-          curl -fsS -X POST http://127.0.0.1:8080/api/tools/call             -H 'Content-Type: application/json'             --data "$(printf '{\"name\":\"production.initialize\",\"arguments\":{\"project_id\":\"%s\"}}' "$PID")"             | tee /tmp/production-initialize.json
-          curl -fsS -X POST http://127.0.0.1:8080/api/tools/call             -H 'Content-Type: application/json'             --data "$(printf '{\"name\":\"production.status\",\"arguments\":{\"project_id\":\"%s\"}}' "$PID")"             | tee /tmp/production-status.json
+          curl -fsS -X POST http://127.0.0.1:8080/api/tools/call             -H 'Content-Type: application/json'             --data "$(printf '{"name":"production.initialize","arguments":{"project_id":"%s"}}' "$PID")"             | tee /tmp/production-initialize.json
+          curl -fsS -X POST http://127.0.0.1:8080/api/tools/call             -H 'Content-Type: application/json'             --data "$(printf '{"name":"production.status","arguments":{"project_id":"%s"}}' "$PID")"             | tee /tmp/production-status.json
           python - <<'PY'
           import json
           init=json.load(open('/tmp/production-initialize.json'))
