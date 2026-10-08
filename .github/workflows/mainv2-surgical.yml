@@ -1,0 +1,57 @@
+name: MainV2 Surgical Verification
+
+on:
+  push:
+    branches:
+      - main
+      - MainV2
+  pull_request:
+    branches:
+      - main
+      - MainV2
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  surgical-regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install lightweight test dependencies
+        run: python -m pip install pytest numpy opencv-python-headless
+      - name: Compile surgical entrypoints
+        run: |
+          python -m py_compile bootstrap.py
+          python -m py_compile general/reusable/tools/model_registry.py
+          python -m py_compile general/reusable/tools/music_beat_worker.py
+          python -m py_compile general/reusable/tools/jev_decision.py
+          python -m py_compile general/reusable/tools/harness_router.py
+          python -m py_compile general/reusable/tools/execution_ledger.py
+          python -m py_compile general/reusable/tools/director_checkpoint.py
+          python -m py_compile general/reusable/fx_v2/executor.py
+          python -m py_compile general/reusable/fx_v2/promoted_effects.py
+          python -m py_compile general/reusable/fx_v2/fx_resolver.py
+          python -m py_compile general/reusable/fx_v2/execution_guard.py
+          python -m py_compile prototype/backend_gui/runtime_gatekeeper.py
+          python -m py_compile prototype/backend_gui/remote_bridge.py
+          python -m py_compile prototype/backend_gui/remote_agent_client.py
+      - name: Run bounded surgical regression suite
+        run: python general/reusable/tools/surgical_verify.py --json-out /tmp/surgical-verification.json
+      - name: Run canonical camera FX regression
+        run: python -m pytest -q general/reusable/fx_v2/tests/test_camera_fx.py general/reusable/fx_v2/tests/test_fx_resolver.py
+      - name: Run optional Harness MCP smoke test
+        env:
+          AIVE_HARNESS_ENABLED: "1"
+        run: python prototype/backend_gui/harness_selftest.py
+      - name: Upload compact verification report
+        uses: actions/upload-artifact@v4
+        with:
+          name: mainv2-surgical-verification
+          path: /tmp/surgical-verification.json
+          retention-days: 3
