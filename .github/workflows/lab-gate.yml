@@ -1,0 +1,112 @@
+name: MainV2 Lab Gate
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      synthetic_smoke:
+        description: "Also run the six-second technical smoke (NOT visual acceptance)"
+        type: boolean
+        required: false
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  lab-contract:
+    name: Source-lock and isolation contract
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Validate pin and fail-closed scope
+        run: python scripts/validate_contract.py
+      - name: Explain result
+        run: |
+          echo "### Lab contract PASS" >> "$GITHUB_STEP_SUMMARY"
+          echo "This validates the isolated source pin only. **No visual or production approval has been granted.**" >> "$GITHUB_STEP_SUMMARY"
+
+  mainv2-synthetic-smoke:
+    name: Optional MainV2 synthetic runtime smoke (not a movie)
+    if: github.event_name == 'workflow_dispatch' && inputs.synthetic_smoke
+    needs: [lab-contract]
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Checkout isolated lab
+        uses: actions/checkout@v4
+        with:
+          path: lab
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Read immutable source pin
+        id: pin
+        shell: bash
+        run: |
+          echo "sha=$(python -c 'import json; print(json.load(open("lab/SOURCE_LOCK.json"))["source_sha"])')" >> "$GITHUB_OUTPUT"
+      - name: Checkout actual MainV2 implementation at pinned commit
+        uses: actions/checkout@v4
+        with:
+          repository: SouthPaw302/AIVideoEdit
+          ref: ${{ steps.pin.outputs.sha }}
+          path: source
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            prototype
+            general
+            projects
+            bootstrap.py
+            README.md
+            AGENTS.md
+            AGENT_HANDOFF.md
+            CLAUDE.md
+            BIBLE.md
+            PRIME_DIRECTIVE.md
+            SOUL.md
+            SYSTEM_INDEX.md
+            docs
+            tests
+      - name: Verify checkout identity
+        shell: bash
+        run: |
+          test "$(git -C source rev-parse HEAD)" = "${{ steps.pin.outputs.sha }}"
+          git -C source checkout -B MainV2 "${{ steps.pin.outputs.sha }}"
+      - name: Install media runtime
+        run: |
+          if ! command -v ffmpeg >/dev/null 2>&1; then
+            sudo apt-get update -y
+            sudo apt-get install -y ffmpeg
+          fi
+          python -m pip install -r source/general/reusable/fx_v2/requirements-runtime.txt
+      - name: Run existing genuine MainV2 backend smoke
+        env:
+          AIVE_PROBE_EVIDENCE: ${{ runner.temp }}/mainv2-lab-smoke
+          AIVE_CORE_REF: MainV2
+        working-directory: source
+        run: python prototype/backend_gui/probes/mainv2_micro_production.py
+      - name: Inspect video streams, NOT visuals
+        if: success()
+        run: |
+          python lab/scripts/inspect_render.py "${{ runner.temp }}/mainv2-lab-smoke/final_video.mp4" "${{ runner.temp }}/mainv2-lab-smoke/technical_report.json"
+      - name: Preserve evidence for review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mainv2-lab-synthetic-smoke-${{ github.run_id }}
+          path: ${{ runner.temp }}/mainv2-lab-smoke/
+          retention-days: 30
+          if-no-files-found: warn
+      - name: Never certify production from synthetic smoke
+        if: always()
+        run: |
+          echo "### MainV2 synthetic smoke — technical evidence only" >> "$GITHUB_STEP_SUMMARY"
+          echo "This six-second test-pattern probe is **NOT** a visually approved film. Real source media, human inspection, and persistent delivery remain required." >> "$GITHUB_STEP_SUMMARY"
