@@ -24,7 +24,7 @@ def sha_file(p):
     return h.hexdigest()
 def render_shot(shot, cfg, out, fps, seconds, width, height):
     sid=shot["shot_id"]
-    source=ROOT/shot["source"]
+    source=Path(__file__).resolve().parent/shot["source"]
     assert source.is_file(), f"MISSING CANONICAL SOURCE IMAGE: {source}"
     actual=sha_file(source)
     assert actual == shot["source_sha256"], f"SHA MISMATCH {sid}: {actual}"
