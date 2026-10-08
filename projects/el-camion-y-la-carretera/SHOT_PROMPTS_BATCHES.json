@@ -1,9 +1,9 @@
 {
-  "schema": "aivideoedit.storyboard-draft.v1",
-  "locked": false,
-  "authority": "PRESENTED_ROUTES_UNSELECTED",
-  "target_fps": 24,
-  "total_duration_seconds": null,
+  "schema": "aivideoedit.director-shot-prompts.v1",
+  "source_audio_verified": false,
+  "lyrics_verified": false,
+  "route_locked": false,
+  "generated_count": 0,
   "entries": [
     {
       "shot_id": "EC-01",

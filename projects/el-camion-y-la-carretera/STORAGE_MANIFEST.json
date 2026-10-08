@@ -2,8 +2,18 @@
   "schema": "aivideoedit.storage-manifest.v1",
   "project_folder_id": "1R-QRUIDg2i5gGccImiM7mUb9HePXrQtU",
   "project_folder_url": "https://drive.google.com/drive/folders/1R-QRUIDg2i5gGccImiM7mUb9HePXrQtU",
+  "folders": {
+    "original_wav": "1Vs-7kLPyo-1Ri70vjGhfn7yVz2Gvd4bi",
+    "verified_lyrics": "1eFbVtq2t1Fx6a7mSHuPhhMj7UuVPjAqN",
+    "batch_01": "1r6WBeaft0M9yPJFN_CAm9ZnFwcOD_wnO",
+    "batch_02": "1ZyZ5oFJ3k3F4VD7LQJsFknQv7-DIKtdP",
+    "batch_03": "14kXuEbIDQoSCtN22EgrFRumqiIaom314",
+    "fx_proofs": "1Ap2WlFDWEtS-em9k_h71J0QADbTHSUYv",
+    "qc_deliveries": "1xvw2_HzWOxHfYgkduDrTvejeCiVMrT9E"
+  },
   "audio_master_id": null,
   "lyrics_master_id": null,
-  "asset_batches": [],
-  "title": "El Camión y la Carretera — MainV2 Lab"
+  "import_source": "original_WAV_only",
+  "picture_reuse_from_old_mp4": false,
+  "generated_image_count": 0
 }

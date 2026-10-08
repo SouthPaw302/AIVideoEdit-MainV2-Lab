@@ -5,7 +5,7 @@
   "picture_source": "fresh_original_generated",
   "visual_direction_gate": {
     "required": true,
-    "presented_in_chat": false,
+    "presented_in_chat": true,
     "options": [
       {
         "number": 1,
