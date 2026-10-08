@@ -30,7 +30,7 @@ jobs:
     env:
       GH_TOKEN: ${{ github.token }}
       REPO: ${{ github.repository }}
-      OUT: ${{ github.workspace }}/.camion-fx-assembly
+      OUT: .camion-fx-assembly
       REQUESTED_REAL_RENDER_RUN: ${{ inputs.real_render_run || '' }}
     steps:
       - name: Checkout isolated song branch and production manifests
@@ -220,14 +220,21 @@ jobs:
           print("CAMERA ASSEMBLY TECHNICAL QC: PASS")
           PY
 
+      - name: Assert assembled review outputs exist
+        run: |
+          set -euo pipefail
+          test -s "$OUT/el_camion_fx_camera_review_30s.mp4"
+          test -s "$OUT/el_camion_batch03_real_render_latest.mp4"
+          test -s "$OUT/CAMERA_ASSEMBLY_REVIEW_RECEIPT.json"
+
       - name: Upload review artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: camion-fx-camera-review-${{ github.run_id }}
-          path: ${{ github.workspace }}/.camion-fx-assembly/
+          path: .camion-fx-assembly/
           retention-days: 30
-          if-no-files-found: warn
+          if-no-files-found: error
 
       - name: Publish review-only prerelease when repository permits
         if: success()
