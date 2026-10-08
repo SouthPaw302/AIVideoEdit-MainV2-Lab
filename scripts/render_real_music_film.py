@@ -355,10 +355,20 @@ def render(manifest_path, input_root, out, *, require_onnx=False):
         raise RuntimeError("decoded frame count mismatch")
     run(["ffmpeg", "-hide_banner", "-v", "error", "-i", target, "-f", "null", "-"], timeout=7200)
     fx_result = {"lock_sha256": digest(lock_file), "effects": locked_fx, "transitions": locked_transitions} if lock_file else {"effects": [], "transitions": []}
+    # Attest the exact source branch and engine code that produced the technical proof.
+    # No git lineage means a usable proof, but NEVER an eligible release.
+    def _commit(directory):
+        p = subprocess.run(["git", "-C", str(directory), "rev-parse", "HEAD"],
+                           capture_output=True, text=True, check=False)
+        value = p.stdout.strip()
+        return value if p.returncode == 0 and len(value) == 40 and all(c in "0123456789abcdef" for c in value) else None
+
     receipt = {
         "schema": "aivideoedit.real-render-receipt.v1", "production_id": m.get("production_id"),
         "status": "TECHNICAL_RENDER_PASS_VISUAL_REVIEW_PENDING", "human_visual_approval": False,
         "production_complete": False, "manifest_sha256": digest(manifest_path),
+        "source_commit_sha": _commit(input_root), "engine_commit_sha": _commit(REPO),
+        "ledger_sha256": digest(ledger) if ledger.is_file() else None,
         "audio_sha256": digest(audio), "clip_sha256": {s["id"]: digest(p) for s, p in zip(m["shots"], sources)},
         "render_sha256": digest(target), "render_bytes": target.stat().st_size,
         "duration_seconds": duration, "render_frames": total, "decoded_frames": decoded_frames,
