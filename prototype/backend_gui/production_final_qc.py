@@ -86,4 +86,17 @@ def reject(pid,*,reason:str):
     commit=production_project._git_commit_paths(engine,[qc_path,state_path],"Reject final creative QC");production_project._clear_guard_marker(engine);return {**status(pid),"commit":commit}
 def status(pid):
     current,_engine,project_dir=_project(pid);qc=_read(project_dir/"FINAL_QC.json",{});state=_read(project_dir/"PROJECT_STATE.json",{})
-    return {**current,"technical_pass":bool(qc.get("technical_pass")),"creative_status":(qc.get("creative") or {}).get("status"),"final_pass":bool(qc.get("final_pass")) and bool(state.get("final_qc_passed")),"mode_aware_qc_passed":bool(state.get("mode_aware_qc_passed")),"qc":qc}
+    gate=_read(project_dir/"RELEASE_GATE.json",{})
+    gated=bool(gate.get("schema")=="aivideoedit.release-gate.v1" and gate.get("status")=="PASS" and
+               gate.get("human_visual_approval") is True and gate.get("decoded_full_export") is True and
+               state.get("release_gate_status")=="PASS" and state.get("human_visual_approval") is True and
+               gate.get("export_sha256")==qc.get("assembly_sha256") and
+               all(state.get(k) and state[k]==gate.get(v) for k,v in {
+                   "release_gate_export_sha256":"export_sha256",
+                   "release_gate_manifest_sha256":"manifest_sha256",
+                   "release_gate_source_commit_sha":"source_sha",
+                   "release_gate_engine_commit_sha":"engine_sha"}.items()))
+    return {**current,"technical_pass":bool(qc.get("technical_pass")),
+            "creative_status":(qc.get("creative") or {}).get("status"),
+            "final_pass":bool(qc.get("final_pass")) and bool(state.get("final_qc_passed")) and gated,
+            "release_gate_pass":gated,"mode_aware_qc_passed":bool(state.get("mode_aware_qc_passed")),"qc":qc}

@@ -14,3 +14,23 @@ assert lock["synthetic_smoke_is_creative_acceptance"] is False, "Synthetic smoke
 assert lock["visual_acceptance"] == "HUMAN_REQUIRED", "Require independent visual approval"
 assert lock["baseline_status"] == "UNPROVEN_VISUALLY", "Do not pre-approve a production"
 print("LAB_CONTRACT: PASS — scope and source lock are valid; visual approval remains PENDING")
+
+# Production authority is fail-closed even when technical smoke/render checks pass.
+production = json.loads((ROOT / "general/reusable/PRODUCTION_CONTRACT.json").read_text(encoding="utf-8"))
+policy = production.get("release_gate_policy", {})
+for key in ("fail_closed", "full_song_required", "real_source_required",
+            "human_verified_comment_required", "actual_export_inspection_required",
+            "production_contract_is_top_level_authority", "final_master_archive_4k_blocked_without_pass"):
+    assert policy.get(key) is True, f"Missing production release policy: {key}"
+assert (ROOT / "scripts/release_gate.py").is_file(), "missing release implementation"
+assert (ROOT / ".github/workflows/production-final-release.yml").is_file(), "missing gated final delivery"
+for flow in (ROOT / ".github/workflows").glob("*.yml"):
+    content = flow.read_text(encoding="utf-8")
+    if flow.name == "production-final-release.yml":
+        assert "scripts/release_gate.py" in content and "gh release create" in content, "ungated final release"
+    else:
+        # Each technical proof release MUST remain an explicitly marked prerelease.
+        for match in re.finditer(r"gh release create\b", content):
+            following = content[match.start():match.start() + 1100]
+            assert "--prerelease" in following, f"Unprotected release publishing in {flow.name}"
+print("PRODUCTION_RELEASE_POLICY: PASS — final/master/archive/4K paths require release authority")

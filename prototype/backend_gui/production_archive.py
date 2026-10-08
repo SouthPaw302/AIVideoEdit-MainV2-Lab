@@ -29,8 +29,25 @@ def build(pid,*,note:str=""):
     if not qc.get("final_pass") or qc.get("creative_status")!="accepted":raise RuntimeError("accepted final QC is required")
     assembly=production_assembly.status(pid)
     if not assembly.get("assembly_complete") or not assembly.get("output_present"):raise RuntimeError("verified final assembly is required")
+    # GUI archive is a final/release operation: the user's prior creative review
+    # cannot substitute for a full-song release certificate bound to the exact bytes.
+    state=_read(project_dir/"PROJECT_STATE.json",{})
+    gate=_read(project_dir/"RELEASE_GATE.json",{})
+    if (gate.get("schema")!="aivideoedit.release-gate.v1" or gate.get("status")!="PASS" or
+        gate.get("human_visual_approval") is not True or gate.get("decoded_full_export") is not True or
+        state.get("release_gate_status")!="PASS" or state.get("human_visual_approval") is not True or
+        not gate.get("approval_comment_url") or not gate.get("reviewer")):
+        raise RuntimeError("archive blocked: verified full-song production release gate is required")
+    links={"release_gate_export_sha256":"export_sha256",
+           "release_gate_manifest_sha256":"manifest_sha256",
+           "release_gate_source_commit_sha":"source_sha",
+           "release_gate_engine_commit_sha":"engine_sha"}
+    if any(not state.get(k) or state[k]!=gate.get(v) for k,v in links.items()):
+        raise RuntimeError("archive blocked: stale release gate or contradictory project state")
+    if (assembly.get("assembly") or {}).get("sha256") != gate.get("export_sha256"):
+        raise RuntimeError("archive blocked: assembled export differs from human-approved release")
     records=[]
-    canonical_files=["PROJECT.md","STATUS.md","HANDOFF.md","SOURCE_AUTHORITY.json","REFERENCE_MANIFEST.json","MEDIA_PLAN.json","ASSET_MANIFEST.json","MUSIC_ANALYSIS.json","SCRIPT.md","SCRIPT.json","VISUAL_DNA.md","SHOT_LIST.md","RENDER_HISTORY.md","QC.md","STORYBOARD.json","ASSEMBLY.json","FINAL_QC.json","FX_REQUIREMENTS.json","fx.lock.json"]
+    canonical_files=["PROJECT.md","STATUS.md","HANDOFF.md","SOURCE_AUTHORITY.json","REFERENCE_MANIFEST.json","MEDIA_PLAN.json","ASSET_MANIFEST.json","MUSIC_ANALYSIS.json","SCRIPT.md","SCRIPT.json","VISUAL_DNA.md","SHOT_LIST.md","RENDER_HISTORY.md","QC.md","STORYBOARD.json","ASSEMBLY.json","FINAL_QC.json","RELEASE_GATE.json","FX_REQUIREMENTS.json","fx.lock.json"]
     for name in canonical_files:
         path=project_dir/name
         if path.is_file():records.append({"path":name,"sha256":_sha(path),"size_bytes":path.stat().st_size})

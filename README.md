@@ -40,3 +40,7 @@ This checkout is the **target** system: source lineage `AIVideoEdit/main → AIV
 The inherited workflows have been activated in `.github/workflows/`. To render real music footage (not a synthetic test pattern), run **MainV2 Lab — REAL Music Film Render** with a checked-in/hard-linked media manifest or HTTPS SHA-pinned sources. It produces a real H.264/AAC MP4, records QC and publishes a **review-only** prerelease on this lab repository.
 
 Read [Lab Render Operator](docs/LAB_RENDER_OPERATOR.md) for the exact input contract, Batch-10 + FX process, runner list and acceptance/delivery gates. `main` remains system-only; actual song work stays scoped to its own branch and approved media. Never modify the original AIVideoEdit repository from this lab.
+
+## Production release authority (Issue #4)
+
+No proof, technical PASS, short fixture, FX loop, or prerelease is a finished film. The full `general/reusable/PRODUCTION_CONTRACT.json` is the top-level authority. Final/master/archive/4K outputs are denied until `scripts/release_gate.py` verifies complete original-song and primary-media coverage, current source+engine and artifact hashes, actual decoded export, and authenticated human visual approval. The only GitHub final publish workflow is `.github/workflows/production-final-release.yml`, invoked manually after the proof and approval. GUI final QC and archives also require matching `RELEASE_GATE.json`. [Full release procedure](docs/PRODUCTION_RELEASE_GATE.md).

@@ -673,6 +673,38 @@ def validate(branch: str):
         if at(s) and not truthy(state.get(key)):
             fail(f"{s} requires {key}=true", errors)
 
+    # The complete production contract outranks successful FX/ONNX/technical renders.
+    # A release report must be bound to the current project state, not a stale movie.
+    if not at("FINAL_QC_PASSED") and (state.get("release_gate_status") == "PASS" or
+                                     state.get("production_complete") is True or
+                                     state.get("archive_complete") is True):
+        fail("production state claims release/archive before FINAL_QC_PASSED", errors)
+    if at("FINAL_QC_PASSED"):
+        report_path = project / "RELEASE_GATE.json"
+        if not report_path.is_file():
+            fail("FINAL_QC_PASSED/ARCHIVED requires a real RELEASE_GATE.json report", errors)
+        else:
+            report = load_json(report_path)
+            must_equal = {
+                "release_gate_export_sha256": "export_sha256",
+                "release_gate_manifest_sha256": "manifest_sha256",
+                "release_gate_source_commit_sha": "source_sha",
+                "release_gate_engine_commit_sha": "engine_sha",
+            }
+            if report.get("schema") != "aivideoedit.release-gate.v1" or report.get("status") != "PASS":
+                fail("invalid or failed production release gate report", errors)
+            for key, counterpart in must_equal.items():
+                if not state.get(key) or state.get(key) != report.get(counterpart):
+                    fail("stale or contradictory release gate state: " + key, errors)
+            if (state.get("release_gate_status") != "PASS" or
+                state.get("human_visual_approval") is not True or
+                report.get("human_visual_approval") is not True or
+                report.get("decoded_full_export") is not True or
+                not report.get("approval_comment_url") or not report.get("reviewer")):
+                fail("FINAL_QC_PASSED requires verified full-export inspection and human approval", errors)
+            if not report.get("duration_seconds") or not report.get("frames"):
+                fail("release gate has no complete timeline proof", errors)
+
     if at("FX_LOCKED") and not (project / "fx.lock.json").is_file():
         fail("FX_LOCKED requires fx.lock.json", errors)
 
