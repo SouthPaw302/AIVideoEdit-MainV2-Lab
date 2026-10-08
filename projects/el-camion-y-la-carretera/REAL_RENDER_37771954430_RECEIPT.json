@@ -1,0 +1,38 @@
+{
+  "schema": "aivideoedit.real-render-archive.v1",
+  "project_id": "el-camion-y-la-carretera",
+  "branch": "song/el-camion-y-la-carretera",
+  "engine_main_sha": "b77b8f0f0bc6e634edc0b4a5885fb4fa0d68dd93",
+  "workflow": "Song Branch — REAL Music Film Render",
+  "workflow_run_id": 37771954430,
+  "workflow_url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/37771954430",
+  "head_sha": "bc394a187c79413e871267ac56329c5146aec350",
+  "artifact_id": 11547757799,
+  "artifact_name": "el-camion-batch03-real-37771954430",
+  "artifact_size_bytes": 66374198,
+  "artifact_digest": "e20e4a7b58ecc479965fe0a0d4541541083adbaa9fcdb4a3a882627d0b3cbcbc",
+  "render_sha256": "e21cb739a630447df828f5c6e38c811717785479d5386fe2f6d010ee240d4cec",
+  "render_bytes": 5110234,
+  "duration_seconds": 30,
+  "frames": 720,
+  "fps": 24,
+  "resolution": [
+    1280,
+    720
+  ],
+  "audio_sha256": "6789e6f3ea52501a0d4a151296a6ef7f8abc8516acd1f6cec959213a028ec0d9",
+  "audio_drive_file_id": "1VTpk6Lv3Bo3RedASSg8jnEouxdgtvJOu",
+  "status": "TECHNICAL_RENDER_PASS_VISUAL_REVIEW_PENDING",
+  "human_visual_approval": false,
+  "production_complete": false,
+  "drive": {
+    "artifact_zip": "https://drive.google.com/file/d/1r7Q_-lNyod8VMp-4G_QkRTxS1kG1UE4q/view",
+    "playable_mp4": "https://drive.google.com/file/d/1grGw2a9oAUB-B6HbG531N-9vMD2jag-o/view?usp=drivesdk",
+    "render_receipt": "https://drive.google.com/file/d/1hpJnGswmoZP8XcYbbMb-VdFXdTgh2Jt3/view?usp=drivesdk",
+    "contact_sheet": "https://drive.google.com/file/d/1pR1kX_TCXf06O4sKi9BElwsha9p5Jevs/view?usp=drivesdk",
+    "execution_ledger": "https://drive.google.com/file/d/1yCcniJUYpx07mNZ7ZruXccmh5zbCV7q2/view?usp=drivesdk",
+    "fx_lock": "https://drive.google.com/file/d/1fksg8F5BWp6F2Zd7_UT-7F_uJoQ_KPjP/view?usp=drivesdk",
+    "music_beat_evidence": "https://drive.google.com/file/d/11SV54SWyhI0M5uKqaLln521ChzTk7o3Z/view?usp=drivesdk"
+  },
+  "next_gate": "Independent visual review of the 30-second technical assembly; full-film assembly remains blocked until approved true-motion continuations and prior-batch visual gates are complete."
+}
