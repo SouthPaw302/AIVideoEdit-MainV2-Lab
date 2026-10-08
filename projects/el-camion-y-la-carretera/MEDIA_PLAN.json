@@ -71,7 +71,7 @@
         "EC-09",
         "EC-10"
       ],
-      "status": "STILLS_10_FX_TECH_PASS_GEMINI_2_IMPORTED_WORKPRINT_36S_VISUAL_PENDING"
+      "status": "USER_APPROVED_BATCH01_WORKPRINT"
     },
     {
       "number": 2,
@@ -87,7 +87,7 @@
         "EC-19",
         "EC-20"
       ],
-      "status": "SOURCE_PENDING"
+      "status": "10_ORIGINAL_STILLS_APPROVED_DERIVED_FX_PENDING"
     },
     {
       "number": 3,

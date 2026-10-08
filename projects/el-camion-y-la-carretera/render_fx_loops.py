@@ -37,7 +37,7 @@ def render_shot(shot, cfg, out, fps, seconds, width, height):
     src=sub/"derived_png"
     src.mkdir(parents=True,exist_ok=True)
     ledger=sub/"execution_ledger.json"
-    executor=FXExecutor(seed=302,ledger_path=str(ledger),consumer=f"camion-{sid}-FX-batch-01")
+    executor=FXExecutor(seed=302,ledger_path=str(ledger),consumer=f"camion-{sid}-FX-batch-{cfg['batch']:02d}")
     approved=executor.registry["effects"]
     for fx in shot["fx"]:
         assert fx["id"] in approved and approved[fx["id"]]["gate_status"]=="approved", f"FX NOT APPROVED {sid} {fx['id']}"
@@ -116,9 +116,9 @@ def main():
     sheet=Image.new("RGB",(320*5,180*2))
     for i,im in enumerate(thumbs):
         sheet.paste(im,((i%5)*320,(i//5)*180))
-        ImageDraw.Draw(sheet).text(((i%5)*320+8,(i//5)*180+8),f"EC-{i+1:02d}",fill="white",stroke_width=1,stroke_fill="black")
-    sheet.save(out/"FX_BATCH_01_contact_sheet.jpg",quality=88)
+        ImageDraw.Draw(sheet).text(((i%5)*320+8,(i//5)*180+8),cfg["shots"][i]["shot_id"],fill="white",stroke_width=1,stroke_fill="black")
+    sheet.save(out/f"FX_BATCH_{args.batch:02d}_contact_sheet.jpg",quality=88)
     result={"schema":"aivideoedit.fx-batch-result.v1","batch":args.batch,"source_images":len(cfg["shots"]),"rendered_mp4s":len(report),"rendered_gifs":len(report),"fps":cfg["fps"],"seconds_each":cfg["seconds"],"effects_actual_execution_verified":True,"temporary_artifacts_only":True,"human_visual_qc":"PENDING","next_batch_automatically_authorized":False,"shot_results":report}
-    (out/"FX_BATCH_01_QC.json").write_text(json.dumps(result,indent=2)+"\n",encoding="utf-8")
-    print("FX_BATCH_01_TECHNICAL: PASS | 10 SHOTS | HUMAN VISUAL QC PENDING")
+    (out/f"FX_BATCH_{args.batch:02d}_QC.json").write_text(json.dumps(result,indent=2)+"\n",encoding="utf-8")
+    print(f"FX_BATCH_{args.batch:02d}_TECHNICAL: PASS | 10 SHOTS | HUMAN VISUAL QC PENDING")
 if __name__=="__main__":main()

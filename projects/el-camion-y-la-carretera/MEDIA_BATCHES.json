@@ -2,7 +2,7 @@
   "schema": "aivideoedit.batches.v1",
   "batch_size": 10,
   "total_shots": 30,
-  "generated": 10,
+  "generated": 20,
   "batches": [
     {
       "batch": 1,
@@ -43,7 +43,7 @@
         "f0a2ce38538e6aa5a4fb166d3d70be0b402424bc4de5d7d78119ef922017eecd",
         "a63826d16119593eeadbf39a4e10b5ad4dde659844129b29956f1f7bac3af2db"
       ],
-      "visual_qc": "PENDING",
+      "visual_qc": "USER_APPROVED_WORKPRINT",
       "fx_technical_run": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/37736654763",
       "fx_artifact_drive": "https://drive.google.com/file/d/1QaK1TYzgGowkeeJdi1X4W5vAeDf_bd2X/view",
       "gemini_motion_sources": [
@@ -51,7 +51,7 @@
         "EC-04"
       ],
       "review_workprint_drive_id": "1I0JDI3faDes0S_3YsTFjGkz9PYOfh7FK",
-      "assembly_status": "TECHNICAL_PASS_HUMAN_PENDING"
+      "assembly_status": "USER_REVIEW_PASS"
     },
     {
       "batch": 2,
@@ -67,10 +67,34 @@
         "EC-19",
         "EC-20"
       ],
-      "status": "WAITING_BATCH01_DIRECTOR_APPROVAL",
-      "files": [],
-      "hashes": [],
-      "visual_qc": "PENDING"
+      "status": "10_STILLS_APPROVED_FX_NOT_YET_RENDERED",
+      "files": [
+        "projects/el-camion-y-la-carretera/media/batch_02/source/EC-11.png",
+        "projects/el-camion-y-la-carretera/media/batch_02/source/EC-12.png",
+        "projects/el-camion-y-la-carretera/media/batch_02/source/EC-13.png",
+        "projects/el-camion-y-la-carretera/media/batch_02/source/EC-14.png",
+        "projects/el-camion-y-la-carretera/media/batch_02/source/EC-15.png",
+        "projects/el-camion-y-la-carretera/media/batch_02/source/EC-16.png",
+        "projects/el-camion-y-la-carretera/media/batch_02/source/EC-17.png",
+        "projects/el-camion-y-la-carretera/media/batch_02/source/EC-18.png",
+        "projects/el-camion-y-la-carretera/media/batch_02/source/EC-19.png",
+        "projects/el-camion-y-la-carretera/media/batch_02/source/EC-20.png"
+      ],
+      "hashes": [
+        "c313da21792c4b3c3d9b719890b929423dad4d3eb9c38856538fb8d7f2c54501",
+        "0d830b3e557c7c966b398748b94388bc89df4b7cac4a88376bd81471e10f5324",
+        "d68bafcd284575ce97ea6c8611cb0872ee35a717c14125c88f827a1edbbe2fcc",
+        "f07630d82fac7f828c79fc17efac65356a440f73b08ac86243b97a9084547bfb",
+        "cdd6c57bdfe10cce650da8bf399c02685a98954e79ddad4da0a1c739c7f2439d",
+        "7921e0bbc119bd5465ef3aba15ceb6933355e39989e02423d144050f33dafe63",
+        "88d9dd9669486f885c02f4716d2acb20bd56708ecc7149f84d5391a6daf5ff5e",
+        "b2507e700d9609d111145defcb3f2c7f0f7f6ef64d84da9b214cddc6ac57dbef",
+        "81c51b74a4704647d79bd7fcdb02eda65335a446ee906d73f768f7c3784cdd76",
+        "512d07783d03a6e8cfa5257ec688bc152929fa033a9274439bb054349d146c69"
+      ],
+      "visual_qc": "ORIGINAL_STILLS_APPROVED_BY_USER",
+      "source_folder": "https://drive.google.com/drive/folders/1ZyZ5oFJ3k3F4VD7LQJsFknQv7-DIKtdP",
+      "fx_status": "PENDING_GITHUB_RUNNER"
     },
     {
       "batch": 3,

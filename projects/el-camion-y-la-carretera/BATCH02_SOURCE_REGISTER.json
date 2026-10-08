@@ -1,0 +1,70 @@
+{
+  "batch": 2,
+  "mode": "hybrid",
+  "user_approval": "good",
+  "asset_count": 10,
+  "drive_folder": "https://drive.google.com/drive/folders/1ZyZ5oFJ3k3F4VD7LQJsFknQv7-DIKtdP",
+  "assets": [
+    {
+      "shot_id": "EC-11",
+      "git_blob_sha": "f95068d907ee48392b7efaf95c3c5d9d82b988db",
+      "sha256": "c313da21792c4b3c3d9b719890b929423dad4d3eb9c38856538fb8d7f2c54501",
+      "drive_id": "1J13SGwq9IqYZ0zYg5Fy59X5ugjnlk7qZ"
+    },
+    {
+      "shot_id": "EC-12",
+      "git_blob_sha": "4119c22bc7500b308d20aeea915baf36fe7c0812",
+      "sha256": "0d830b3e557c7c966b398748b94388bc89df4b7cac4a88376bd81471e10f5324",
+      "drive_id": "1R2QwmOAnQWhl8dHb8yXTnPg90VY0tJRI"
+    },
+    {
+      "shot_id": "EC-13",
+      "git_blob_sha": "9a7d1e8284dc2fe56c806ddff3994665aa8a6150",
+      "sha256": "d68bafcd284575ce97ea6c8611cb0872ee35a717c14125c88f827a1edbbe2fcc",
+      "drive_id": "1kVhQrhGGd9vfmLtTidBRkTpe7fV_v8yX"
+    },
+    {
+      "shot_id": "EC-14",
+      "git_blob_sha": "13081c989ea930ae95e5c0b0126d15ca8f2ee09a",
+      "sha256": "f07630d82fac7f828c79fc17efac65356a440f73b08ac86243b97a9084547bfb",
+      "drive_id": "1uKcUzkWGcfmVcR1bZ13pRi0TzmguyF4B"
+    },
+    {
+      "shot_id": "EC-15",
+      "git_blob_sha": "5051887f5041fa759f62acd69038e5901a933380",
+      "sha256": "cdd6c57bdfe10cce650da8bf399c02685a98954e79ddad4da0a1c739c7f2439d",
+      "drive_id": "1tx0t8c-rvrnnqBfM1H_g94hGLliK8Vki"
+    },
+    {
+      "shot_id": "EC-16",
+      "git_blob_sha": "63f893b9943fff7ede460d467c1709ee854aff14",
+      "sha256": "7921e0bbc119bd5465ef3aba15ceb6933355e39989e02423d144050f33dafe63",
+      "drive_id": "1iECRTopoBJhPYXrrqIwf8vLonQIk9rmE"
+    },
+    {
+      "shot_id": "EC-17",
+      "git_blob_sha": "cd000001c06433c3d3746d6a75b47eefb82cc1a5",
+      "sha256": "88d9dd9669486f885c02f4716d2acb20bd56708ecc7149f84d5391a6daf5ff5e",
+      "drive_id": "1bkKTxlVAQFFN1kmAiyjYWlaG6S05EqK6"
+    },
+    {
+      "shot_id": "EC-18",
+      "git_blob_sha": "03d2ca6241db152860d7aa9f86ec7ee15ef50d8e",
+      "sha256": "b2507e700d9609d111145defcb3f2c7f0f7f6ef64d84da9b214cddc6ac57dbef",
+      "drive_id": "1lJkQy1R9WbrFQYKwKfOQLtKcBTi-t70V"
+    },
+    {
+      "shot_id": "EC-19",
+      "git_blob_sha": "8ddaede3e47ede7100916d7c8dd7615cb5b56633",
+      "sha256": "81c51b74a4704647d79bd7fcdb02eda65335a446ee906d73f768f7c3784cdd76",
+      "drive_id": "1EezVoIRgh4VT26Q_0Ja16VU0ZrLYJrhl"
+    },
+    {
+      "shot_id": "EC-20",
+      "git_blob_sha": "2e8bec6006a0b78fd3c369117f47a7adcee4626d",
+      "sha256": "512d07783d03a6e8cfa5257ec688bc152929fa033a9274439bb054349d146c69",
+      "drive_id": "1mu4yGd1YaRT5qrRaeU3aWt3Ls0Ld7Ujf"
+    }
+  ],
+  "fx_status": "NOT_RENDERED"
+}
