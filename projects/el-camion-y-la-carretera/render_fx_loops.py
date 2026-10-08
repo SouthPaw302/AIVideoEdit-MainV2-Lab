@@ -95,9 +95,10 @@ def main():
     ap=argparse.ArgumentParser()
     ap.add_argument("--batch",type=int,required=True)
     ap.add_argument("--out",required=True)
-    ap.add_argument("--manifest",default="projects/el-camion-y-la-carretera/FX_BATCH_01.json")
+    ap.add_argument("--manifest",default=None)
     args=ap.parse_args()
-    cfg=json.loads(Path(args.manifest).read_text(encoding="utf-8"))
+    manifest=args.manifest or f"projects/el-camion-y-la-carretera/FX_BATCH_{args.batch:02d}.json"
+    cfg=json.loads(Path(manifest).read_text(encoding="utf-8"))
     assert args.batch==cfg["batch"], "manifest batch mismatch"
     assert len(cfg["shots"])==10 and len({s["shot_id"] for s in cfg["shots"]})==10
     out=Path(args.out).resolve();out.mkdir(parents=True,exist_ok=True)
