@@ -117,8 +117,7 @@ def preflight(manifest, receipt, review, contract, *, source_sha, engine_sha, au
     except (KeyError, ValueError, TypeError) as exc:
         raise GateError("valid timezone-aware review date required") from exc
     reviewer = review.get("reviewer")
-    require(isinstance(reviewer, str) and reviewer and
-            not reviewer.lower().endswith("[bot]"), "human reviewer required")
+    require(reviewer == "SouthPaw302", "release approval requires the human repository owner")
     require(comment.get("user", {}).get("type") == "User" and
             comment.get("user", {}).get("login") == reviewer, "GitHub approval author mismatch or non-human")
     token = "AIVE-RELEASE-ACCEPT " + production_id + " " + receipt["render_sha256"] + " " + source_sha
@@ -186,11 +185,19 @@ def gate(args):
     require(sha(args.fx_lock) == receipt.get("fx", {}).get("lock_sha256"), "FX lock no longer matches render")
     require(sha(args.ledger) == receipt.get("ledger_sha256"), "executed FX/ONNX/JEV evidence changed")
     ledger = load(args.ledger)
-    require(bool(ledger), "missing execution ledger")
+    require(ledger.get("schema") == "aivideoedit.production-execution-ledger.v1" and
+            isinstance(ledger.get("events"), list) and bool(ledger["events"]),
+            "valid executed component evidence required")
+    from general.reusable.tools.execution_ledger import verify_ledger
+    require(not verify_ledger(args.ledger), "selected FX/ONNX/JEV lacked verified execution")
+    require(any(e.get("component") == "jev" and e.get("stage") == "consumed"
+                for e in ledger["events"]), "JEV execution was not consumed")
     require(Path(args.contact_sheet).is_file() and Path(args.contact_sheet).stat().st_size > 0,
             "required visual review contact sheet missing")
 
     # Stage and hash-check all real sources: report-only hashes cannot be substituted.
+    if str(ROOT) not in sys.path:
+        sys.path.insert(0, str(ROOT))
     from scripts.render_real_music_film import stage
     input_root = Path(args.source_root).resolve()
     cache = Path(args.output).resolve().parent / "release_source_cache"
