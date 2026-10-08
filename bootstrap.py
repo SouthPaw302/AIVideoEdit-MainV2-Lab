@@ -22,7 +22,7 @@ import urllib.request
 import uuid
 from pathlib import Path
 
-REPOSITORY = "SouthPaw302/AIVideoEdit"
+REPOSITORY = "SouthPaw302/AIVideoEdit-MainV2-Lab"
 DEFAULT_REF = "main"
 API_MAIN = f"https://api.github.com/repos/{REPOSITORY}/commits/{DEFAULT_REF}"
 SESSION_DIRNAME = ".aivideoedit"
