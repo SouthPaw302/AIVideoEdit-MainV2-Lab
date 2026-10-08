@@ -70,22 +70,37 @@ jobs:
       - name: Render an editorial camera pass for environment-safe shots
         run: |
           set -euo pipefail
-          mkdir -p "$OUT/camera"
-          safe="EC-01 EC-05 EC-06 EC-08 EC-09 EC-11 EC-12 EC-13 EC-16 EC-18 EC-20 EC-21 EC-23 EC-27 EC-29"
-          find "$OUT/fx" -type f -name '*_FX_loop_24fps.mp4' | sort -V | while read -r src; do
-            name="$(basename "$src")"
-            shot="${name%%_FX_loop_24fps.mp4}"
-            dst="$OUT/camera/$name"
-            if [[ " $safe " == *" $shot "* ]]; then
-              ffmpeg -hide_banner -loglevel error -y -i "$src" \
-                -vf "scale=720:405:flags=lanczos,crop=640:360:x='40+40*sin(PI*t/2)':y='22+10*cos(PI*t/2)'" \
-                -an -c:v libx264 -crf 18 -preset veryfast -pix_fmt yuv420p "$dst"
-            else
-              cp "$src" "$dst"
-            fi
-          done
-          find "$OUT/camera" -type f -name '*.mp4' | sort -V > "$OUT/camera_clip_list.txt"
-          test "$(wc -l < "$OUT/camera_clip_list.txt")" -eq 30
+          python - <<'PY'
+          import os
+          import shutil
+          import subprocess
+          from pathlib import Path
+
+          root=Path(os.environ["OUT"])/"fx"
+          dest=Path(os.environ["OUT"])/"camera"
+          dest.mkdir(parents=True, exist_ok=True)
+          safe={"EC-01","EC-05","EC-06","EC-08","EC-09","EC-11","EC-12","EC-13","EC-16","EC-18","EC-20","EC-21","EC-23","EC-27","EC-29"}
+          sources=sorted(root.rglob("*_FX_loop_24fps.mp4"))
+          assert len(sources)==30, len(sources)
+          for src in sources:
+              shot=src.name.removesuffix("_FX_loop_24fps.mp4")
+              dst=dest/src.name
+              if shot in safe:
+                  subprocess.run([
+                      "ffmpeg","-hide_banner","-loglevel","error","-y","-i",str(src),
+                      "-vf","scale=720:405:flags=lanczos,crop=640:360:x='40+40*sin(PI*t/2)':y='22+10*cos(PI*t/2)'",
+                      "-an","-c:v","libx264","-crf","18","-preset","veryfast",
+                      "-pix_fmt","yuv420p",str(dst)
+                  ],check=True)
+              else:
+                  shutil.copyfile(src,dst)
+          clips=sorted(dest.glob("*.mp4"))
+          assert len(clips)==30, len(clips)
+          (Path(os.environ["OUT"])/"camera_clip_list.txt").write_text(
+              "\n".join(str(p.resolve()) for p in clips)+"\n"
+          )
+          print("EDITORIAL CAMERA PASS: 15 environment-safe shots; 15 protected continuation shots")
+          PY
 
       - name: Assemble 60-second FX and camera review with original WAV
         run: |
@@ -155,7 +170,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: camion-fx-camera-review-${{ github.run_id }}
-          path: ${{ runner.temp }}/camion-fx-assembly/
+          path: ${{ github.workspace }}/.camion-fx-assembly/
           retention-days: 30
           if-no-files-found: warn
 
