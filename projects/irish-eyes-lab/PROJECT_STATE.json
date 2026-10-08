@@ -1,0 +1,23 @@
+{
+  "schema": "aivideoedit.project-state.v1",
+  "project_id": "irish-eyes-lab",
+  "branch": "song/irish-eyes-lab",
+  "stage": "INITIALIZED",
+  "director_brain_version": 4,
+  "source_ingest_complete": false,
+  "reference_analysis_complete": false,
+  "music_analysis_complete": false,
+  "lyrics_status_resolved": false,
+  "genre_authority_resolved": false,
+  "visual_approach_established": false,
+  "storyboard_locked": false,
+  "script_locked": false,
+  "shot_packages_built": false,
+  "shot_proofs_accepted": false,
+  "fx_lock_verified": false,
+  "assembly_complete": false,
+  "final_qc_passed": false,
+  "archive_complete": false,
+  "exact_next_action": "Run the pinned MainV2 30-second Irish Eyes source proof and submit its genuine MP4 for human visual acceptance.",
+  "updated_at": "2026-10-08"
+}

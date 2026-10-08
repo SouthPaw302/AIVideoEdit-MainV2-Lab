@@ -1,0 +1,7 @@
+{
+  "schema": "aivideoedit.video-script.v1",
+  "locked": false,
+  "build_on_runner": true,
+  "review_required": true,
+  "entries": []
+}

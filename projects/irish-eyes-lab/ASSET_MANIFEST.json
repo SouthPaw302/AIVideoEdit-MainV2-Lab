@@ -1,0 +1,30 @@
+{
+  "schema": "aivideoedit.asset-manifest.v1",
+  "source_release": "media-mountain-noir-after-midnight",
+  "assets": [
+    {
+      "name": "Irish Eyes Remastered",
+      "remote": "source__Irish_eyes_Remastered.wav",
+      "sha256": "8b0ccd2e57a6e683d526d950bd88b42af0f0867b06e3d1b014a2b3131f3cfb1e",
+      "role": "music"
+    },
+    {
+      "name": "Irish Road",
+      "remote": "source__IE_L21_ROAD_RAIN_GLASS_16x9_V3.mp4",
+      "sha256": "161dcefb278f9f09eb96f3d96041110b338f9bbe84c87469b547f860eac6821d",
+      "role": "source_footage"
+    },
+    {
+      "name": "Irish Window",
+      "remote": "source__IE_L22_WARM_WINDOW_CANDLE_16x9_V1.mp4",
+      "sha256": "69814efe52df37fa7db1ba6ae1d89f59be27c91df027c033e831c9e5f58d4af2",
+      "role": "source_footage"
+    },
+    {
+      "name": "Irish Lake",
+      "remote": "source__IE_L23_DARK_LAKE_RIDGE_16x9_V2.mp4",
+      "sha256": "9bce0b9fd9f0f3eb29a8d2ea0c7bc75dd3e46ceb72e009f7fe7ee904cfb4cb0a",
+      "role": "source_footage"
+    }
+  ]
+}

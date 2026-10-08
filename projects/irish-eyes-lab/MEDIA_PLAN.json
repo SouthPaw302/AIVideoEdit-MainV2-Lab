@@ -1,0 +1,11 @@
+{
+  "schema": "aivideoedit.media-plan.v1",
+  "production_mode": "cinematic",
+  "assets": [
+    "irish_lake.mp4",
+    "irish_road.mp4",
+    "irish_window.mp4"
+  ],
+  "test_only": true,
+  "visual_review_pending": true
+}

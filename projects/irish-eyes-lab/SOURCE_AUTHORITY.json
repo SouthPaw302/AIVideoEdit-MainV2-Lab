@@ -1,0 +1,8 @@
+{
+  "schema": "aivideoedit.source-authority.v1",
+  "current_user_instruction": "Compile MainV2 mirror and enable a real-song evaluation",
+  "test_only": true,
+  "source_release": "https://github.com/SouthPaw302/AIVideoEdit/releases/tag/media-mountain-noir-after-midnight",
+  "historical_finished_videos_as_picture": false,
+  "source_content_not_canon_until_human_approval": true
+}

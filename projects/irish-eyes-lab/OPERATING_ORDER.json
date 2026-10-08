@@ -1,0 +1,57 @@
+{
+  "schema": "aivideoedit.operating-order.v1",
+  "mission": "Isolated 30-second Irish Eyes real-source proof to test MainV2 visual quality; no automatic production acceptance.",
+  "direction_authority": "music_led",
+  "production_mode": "cinematic",
+  "canon_lock": {
+    "locked": false,
+    "picture_language": "Irish Eyes original lake, road and candle-window source footage; bounded movement, no visual replacements.",
+    "items": []
+  },
+  "accepted_baseline": {
+    "status": "none",
+    "file_or_locator": null,
+    "sha256": null,
+    "user_acceptance_statement": null
+  },
+  "accepted_source_library": {
+    "status": "none",
+    "role": null,
+    "file_or_locator": null,
+    "sha256": null,
+    "user_acceptance_statement": null,
+    "content_reuse_authorized": false,
+    "timeline_locked": false
+  },
+  "refinement_scope": {
+    "active": false,
+    "goal": null,
+    "allowed_changes": [],
+    "forbidden_changes": [
+      "changing original AIVideoEdit production repository"
+    ],
+    "restart_authorized": false
+  },
+  "recut_scope": {
+    "active": false,
+    "named_defects": [],
+    "allowed_changes": [],
+    "forbidden_changes": [],
+    "source_replacement_authorized": false
+  },
+  "current_user_direction": "Compile full MainV2 in independent lab so a real song can be run and visually tested.",
+  "exact_next_action": "Run the pinned MainV2 30-second Irish Eyes source proof and submit its genuine MP4 for human visual acceptance.",
+  "director_supervision": {
+    "required": true,
+    "reviewer_role": "human_visual_reviewer",
+    "checkpoints": [
+      "media_selection",
+      "representative_proof",
+      "rough_cut",
+      "fx_pass",
+      "final_review"
+    ],
+    "runner_may_choose_art_direction": false,
+    "technical_pass_is_creative_pass": false
+  }
+}
