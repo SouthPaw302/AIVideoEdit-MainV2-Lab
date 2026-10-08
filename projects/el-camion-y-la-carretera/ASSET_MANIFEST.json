@@ -2,7 +2,8 @@
   "schema": "aivideoedit.asset-manifest.v1",
   "assets": [],
   "planned_new_picture_count": 30,
-  "generated_picture_count": 0,
-  "accepted_picture_count": 0,
-  "audio_status": "NO_SOURCE_WAV"
+  "generated_picture_count": 20,
+  "accepted_picture_count": 20,
+  "audio_status": "NO_SOURCE_WAV",
+  "picture_status": "20 original stills approved; first 10 FX loops user approved via Batch01 workprint; Batch02 FX still awaiting visual approval"
 }

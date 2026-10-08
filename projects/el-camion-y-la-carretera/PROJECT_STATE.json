@@ -8,10 +8,10 @@
   "reference_policy_satisfied": false,
   "reference_analysis_complete": false,
   "music_analysis_complete": false,
-  "lyrics_status_resolved": false,
+  "lyrics_status_resolved": true,
   "genre_authority_resolved": false,
-  "media_plan_valid": false,
-  "visual_approach_established": false,
+  "media_plan_valid": true,
+  "visual_approach_established": true,
   "storyboard_locked": false,
   "script_locked": false,
   "shot_packages_built": false,
@@ -20,6 +20,15 @@
   "assembly_complete": false,
   "final_qc_passed": false,
   "archive_complete": false,
-  "exact_next_action": "Find and SHA-lock original WAV and exact lyrics; analyze music, present/lock route, then produce original Batch 01.",
-  "updated_at": "2026-10-08"
+  "exact_next_action": "Visually review Batch02 FX 20-second reel with 10 shot loops. Correct only rejected effects, then authorize Batch03 new stills followed by its own FX batch.",
+  "updated_at": "2026-10-08",
+  "director_progress": {
+    "batch01": "workprint approved by user",
+    "batch02_stills": "10 approved by user",
+    "batch02_fx": "GitHub Actions technical PASS; visual QC pending",
+    "batch03": "not started",
+    "source_audio": "original WAV identified",
+    "lyrics": "40 lines verified",
+    "full_film": "not complete"
+  }
 }
