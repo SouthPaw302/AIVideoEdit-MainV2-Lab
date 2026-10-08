@@ -49,6 +49,9 @@ jobs:
         env:
           AIVE_HARNESS_ENABLED: "1"
         run: python prototype/backend_gui/harness_selftest.py
+      - name: Verify real-render contract and Lab main bootstrap authority
+        run: python -m pytest -q tests/test_real_film_render.py tests/test_lab_main_authority.py
+
       - name: Upload compact verification report
         uses: actions/upload-artifact@v4
         with:
