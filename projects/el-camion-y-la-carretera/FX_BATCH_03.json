@@ -7,9 +7,9 @@
   "seconds": 2,
   "width": 640,
   "height": 360,
-  "loop_policy": "Render only from independently sourced, byte-pinned EC-21 through EC-30 individual PNG files. Preserve original pixels; use existing canonical FX recipes. Human QC remains pending.",
+  "loop_policy": "Render only from independently sourced, byte-pinned EC-21 through EC-30 individual PNG files. Preserve original pixels; use existing canonical FX recipes. Human visual QC accepted by user on 2026-10-08; true-continuation requirements remain explicit.",
   "source_status": "READY_TEN_ORIGINAL_STILLS_SHA256_VERIFIED",
-  "artistic_status": "SOURCES_IMPORTED_VISUAL_QC_PENDING_FX_PENDING",
+  "artistic_status": "SOURCES_IMPORTED_VISUAL_QC_ACCEPTED_FX_TECHNICAL_PASS",
   "shots": [
     {
       "shot_id": "EC-21",
@@ -48,7 +48,7 @@
       "requires_true_continuation": false,
       "direction": "Move mountain fog between fixed ridge lines; daylight appears gradually; truck and road geometry must remain rigid",
       "source_status": "ORIGINAL_SOURCE_BYTE_PINNED",
-      "director_approval": "NOT_REVIEWED"
+      "director_approval": "USER_APPROVED_2026-10-08"
     },
     {
       "shot_id": "EC-22",
@@ -87,7 +87,7 @@
       "requires_true_continuation": true,
       "direction": "All reflections confined to mirror glass; preserve reflection optic, no face/geometry shifting",
       "source_status": "ORIGINAL_SOURCE_BYTE_PINNED",
-      "director_approval": "NOT_REVIEWED"
+      "director_approval": "USER_APPROVED_2026-10-08"
     },
     {
       "shot_id": "EC-23",
@@ -114,7 +114,7 @@
       "requires_true_continuation": false,
       "direction": "Only low-lying mist over water; shoreline and truck fixed",
       "source_status": "ORIGINAL_SOURCE_BYTE_PINNED",
-      "director_approval": "NOT_REVIEWED"
+      "director_approval": "USER_APPROVED_2026-10-08"
     },
     {
       "shot_id": "EC-24",
@@ -141,7 +141,7 @@
       "requires_true_continuation": true,
       "direction": "Folded letter unchanged; actual hand/glovebox action needs externally animated continuation",
       "source_status": "ORIGINAL_SOURCE_BYTE_PINNED",
-      "director_approval": "NOT_REVIEWED"
+      "director_approval": "USER_APPROVED_2026-10-08"
     },
     {
       "shot_id": "EC-25",
@@ -180,7 +180,7 @@
       "requires_true_continuation": true,
       "direction": "Wheel must genuinely rotate in separate video; here only road spray/reflection changes",
       "source_status": "ORIGINAL_SOURCE_BYTE_PINNED",
-      "director_approval": "NOT_REVIEWED"
+      "director_approval": "USER_APPROVED_2026-10-08"
     },
     {
       "shot_id": "EC-26",
@@ -207,7 +207,7 @@
       "requires_true_continuation": true,
       "direction": "Fence and ridgeline fixed; true bird flight needs separately generated video",
       "source_status": "ORIGINAL_SOURCE_BYTE_PINNED",
-      "director_approval": "NOT_REVIEWED"
+      "director_approval": "USER_APPROVED_2026-10-08"
     },
     {
       "shot_id": "EC-27",
@@ -234,7 +234,7 @@
       "requires_true_continuation": false,
       "direction": "Mountain mist changes without altering parked truck or fixed overlook",
       "source_status": "ORIGINAL_SOURCE_BYTE_PINNED",
-      "director_approval": "NOT_REVIEWED"
+      "director_approval": "USER_APPROVED_2026-10-08"
     },
     {
       "shot_id": "EC-28",
@@ -261,7 +261,7 @@
       "requires_true_continuation": true,
       "direction": "Realistic step-down motion requires true video; never warp limbs or cab door",
       "source_status": "ORIGINAL_SOURCE_BYTE_PINNED",
-      "director_approval": "NOT_REVIEWED"
+      "director_approval": "USER_APPROVED_2026-10-08"
     },
     {
       "shot_id": "EC-29",
@@ -300,7 +300,7 @@
       "requires_true_continuation": false,
       "direction": "Mist in valley changes slowly; rock and road curvature cannot drift",
       "source_status": "ORIGINAL_SOURCE_BYTE_PINNED",
-      "director_approval": "NOT_REVIEWED"
+      "director_approval": "USER_APPROVED_2026-10-08"
     },
     {
       "shot_id": "EC-30",
@@ -339,7 +339,13 @@
       "requires_true_continuation": true,
       "direction": "True vehicle departure is separate motion; no frozen truck masked by generic pan",
       "source_status": "ORIGINAL_SOURCE_BYTE_PINNED",
-      "director_approval": "NOT_REVIEWED"
+      "director_approval": "USER_APPROVED_2026-10-08"
     }
-  ]
+  ],
+  "human_visual_qc": "ACCEPTED",
+  "workflow_run_id": 37757150942,
+  "artifact_id": 11540218670,
+  "artifact_zip_sha256": "E1A8CA5A05CC41F3AB50934ED7FFBC6B1BCAD2EA4673A5679C508899C8826ADD",
+  "drive_artifact": "https://drive.google.com/file/d/1FhpU52EdVIuzyvoKkIh8HeYfN9pzr78b/view",
+  "drive_contact_sheet": "https://drive.google.com/file/d/1qouloE8iEXhFpk9432bXaBD3NIje4DcR/view"
 }
