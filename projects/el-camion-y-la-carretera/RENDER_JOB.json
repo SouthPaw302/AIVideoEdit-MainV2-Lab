@@ -53,8 +53,33 @@
             ],
             "strength": 0.15
           }
+        },
+        {
+          "id": "FX2-CAMERA-023",
+          "params": {
+            "easing": "smoothstep",
+            "zoom_start": 1,
+            "zoom_end": 1.1,
+            "center_start": [
+              0.48,
+              0.5
+            ],
+            "center_end": [
+              0.58,
+              0.47
+            ],
+            "zoom_cap": 1.18
+          }
+        },
+        {
+          "id": "FX2-ATM-021"
+        },
+        {
+          "id": "FX2-MOTION-024"
         }
-      ]
+      ],
+      "transition_out": "FX2-TRANS-024",
+      "transition_seconds": 0.6
     },
     {
       "id": "EC-22",
@@ -88,8 +113,26 @@
             ],
             "strength": 0.08
           }
+        },
+        {
+          "id": "FX2-CAMERA-022",
+          "params": {
+            "rotation_deg": 0.45,
+            "radius_x_px": 2.4,
+            "radius_y_px": 1.4,
+            "zoom_base": 1.006,
+            "zoom_pulse": 0.006
+          }
+        },
+        {
+          "id": "FX2-LIGHT-027"
+        },
+        {
+          "id": "FX2-COMP-021"
         }
-      ]
+      ],
+      "transition_out": "FX2-TRANS-026",
+      "transition_seconds": 0.6
     },
     {
       "id": "EC-23",
@@ -111,6 +154,15 @@
             ],
             "strength": 0.47
           }
+        },
+        {
+          "id": "FX2-ATM-021"
+        },
+        {
+          "id": "FX2-LIGHT-027"
+        },
+        {
+          "id": "FX2-MOTION-025"
         }
       ],
       "transition_out": "FX2-TRANS-025",
@@ -139,8 +191,19 @@
         },
         {
           "id": "FX2-COMP-021"
+        },
+        {
+          "id": "FX2-MOTION-024"
+        },
+        {
+          "id": "FX2-LIGHT-028"
+        },
+        {
+          "id": "FX2-COMP-022"
         }
-      ]
+      ],
+      "transition_out": "FX2-TRANS-032",
+      "transition_seconds": 0.6
     },
     {
       "id": "EC-25",
@@ -174,8 +237,19 @@
             ],
             "strength": 0.12
           }
+        },
+        {
+          "id": "FX2-CAMERA-024"
+        },
+        {
+          "id": "FX2-SURFACE-023"
+        },
+        {
+          "id": "FX2-LIGHT-026"
         }
-      ]
+      ],
+      "transition_out": "FX2-TRANS-029",
+      "transition_seconds": 0.6
     },
     {
       "id": "EC-26",
@@ -197,8 +271,19 @@
             ],
             "strength": 0.24
           }
+        },
+        {
+          "id": "FX2-COMP-022"
+        },
+        {
+          "id": "FX2-MOTION-025"
+        },
+        {
+          "id": "FX2-LIGHT-024"
         }
-      ]
+      ],
+      "transition_out": "FX2-TRANS-030",
+      "transition_seconds": 0.6
     },
     {
       "id": "EC-27",
@@ -220,8 +305,34 @@
             ],
             "strength": 0.3
           }
+        },
+        {
+          "id": "FX2-DISTORT-021"
+        },
+        {
+          "id": "FX2-LIGHT-028"
+        },
+        {
+          "id": "FX2-CAMERA-021",
+          "params": {
+            "easing": "cosine",
+            "zoom_start": 1,
+            "zoom_end": 1.08,
+            "center_start": [
+              0.5,
+              0.52
+            ],
+            "center_end": [
+              0.53,
+              0.48
+            ],
+            "definition_strength": 0.18,
+            "zoom_cap": 1.14
+          }
         }
-      ]
+      ],
+      "transition_out": "FX2-TRANS-021",
+      "transition_seconds": 0.6
     },
     {
       "id": "EC-28",
@@ -243,8 +354,34 @@
             ],
             "strength": 0.15
           }
+        },
+        {
+          "id": "FX2-CAMERA-021",
+          "params": {
+            "easing": "smoothstep",
+            "zoom_start": 1,
+            "zoom_end": 1.12,
+            "center_start": [
+              0.47,
+              0.5
+            ],
+            "center_end": [
+              0.54,
+              0.49
+            ],
+            "definition_strength": 0.22,
+            "zoom_cap": 1.18
+          }
+        },
+        {
+          "id": "FX2-MOTION-024"
+        },
+        {
+          "id": "FX2-LIGHT-025"
         }
-      ]
+      ],
+      "transition_out": "FX2-TRANS-031",
+      "transition_seconds": 0.6
     },
     {
       "id": "EC-29",
@@ -278,8 +415,26 @@
             ],
             "strength": 0.14
           }
+        },
+        {
+          "id": "FX2-COMP-023"
+        },
+        {
+          "id": "FX2-CAMERA-022",
+          "params": {
+            "rotation_deg": 0.35,
+            "radius_x_px": 1.8,
+            "radius_y_px": 1,
+            "zoom_base": 1.004,
+            "zoom_pulse": 0.005
+          }
+        },
+        {
+          "id": "FX2-VIS-022"
         }
-      ]
+      ],
+      "transition_out": "FX2-TRANS-026",
+      "transition_seconds": 0.6
     },
     {
       "id": "EC-30",
@@ -313,10 +468,38 @@
             ],
             "strength": 0.16
           }
+        },
+        {
+          "id": "FX2-CAMERA-023",
+          "params": {
+            "easing": "cosine",
+            "zoom_start": 1,
+            "zoom_end": 1.09,
+            "center_start": [
+              0.5,
+              0.5
+            ],
+            "center_end": [
+              0.46,
+              0.48
+            ],
+            "zoom_cap": 1.16
+          }
+        },
+        {
+          "id": "FX2-COMP-023"
+        },
+        {
+          "id": "FX2-MOTION-022"
         }
       ]
     }
   ],
   "human_visual_review": "REQUIRED_NOT_AUTOMATIC",
-  "deliverable": "30-second approved Batch 03 technical assembly prerelease; not final long-form film"
+  "deliverable": "30-second approved Batch 03 technical assembly prerelease; not final long-form film",
+  "fx_pass": {
+    "name": "FX_BATCH_03_LAYERED_CAMERA_AND_PROMOTED_PASS",
+    "engine_branch": "main",
+    "execution_requirement": "every locked effect and transition must appear as executed in PRODUCTION_EXECUTION_LEDGER.json"
+  }
 }
