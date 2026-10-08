@@ -30,7 +30,7 @@ for flow in (ROOT / ".github/workflows").glob("*.yml"):
         assert "scripts/release_gate.py" in content and "gh release create" in content, "ungated final release"
     else:
         # Each technical proof release MUST remain an explicitly marked prerelease.
-        for match in re.finditer(r"gh release create\\b", content):
+        for match in re.finditer(r"gh release create\b", content):
             following = content[match.start():match.start() + 1100]
             assert "--prerelease" in following, f"Unprotected release publishing in {flow.name}"
 print("PRODUCTION_RELEASE_POLICY: PASS — final/master/archive/4K paths require release authority")
