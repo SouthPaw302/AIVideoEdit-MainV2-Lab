@@ -589,6 +589,20 @@ def write_session(repo: Path, os_root: Path, branch: str, project: Path | None, 
     return path, capsule_path, attestation_path
 
 
+def clear_volatile_session_state(session_dir: Path) -> None:
+    """Keep pinned model cache and downloaded archive intact across bootstrap.
+
+    Model integrity is validated by the model provisioner, not by this helper.
+    """
+    for child in list(session_dir.iterdir()):
+        if child.name in {"cache", "models"}:
+            continue
+        if child.is_dir() and not child.is_symlink():
+            shutil.rmtree(child)
+        else:
+            child.unlink()
+
+
 def boot(args: argparse.Namespace) -> int:
     repo = find_repo_root(Path(args.repo_root) if args.repo_root else None)
     branch = detect_branch(repo, args.branch)
@@ -596,13 +610,7 @@ def boot(args: argparse.Namespace) -> int:
     session_dir = repo / SESSION_DIRNAME
     os_root = session_dir / "os"
     session_dir.mkdir(parents=True, exist_ok=True)
-    for child in list(session_dir.iterdir()):
-        if child.name == "cache":
-            continue
-        if child.is_dir():
-            shutil.rmtree(child)
-        else:
-            child.unlink()
+    clear_volatile_session_state(session_dir)
     os_root.mkdir(parents=True, exist_ok=True)
     main_sha, os_source = fetch_main_sha(args.offline, repo)
     archive_source = materialize_entire_main(repo, os_root, main_sha, args.offline)
