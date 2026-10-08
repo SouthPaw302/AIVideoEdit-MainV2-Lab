@@ -1,0 +1,113 @@
+name: Mirror exact MainV2 engine into lab
+
+on:
+  push:
+    branches: [setup/lab-guardrails-v1]
+    paths: [".github/workflows/seed-mainv2-mirror.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: seed-mainv2-lab
+  cancel-in-progress: false
+
+jobs:
+  exact-code-mirror:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout lab administration branch
+        uses: actions/checkout@v4
+        with:
+          ref: setup/lab-guardrails-v1
+          path: lab
+          persist-credentials: false
+      - name: Read pinned source SHA
+        id: pin
+        run: |
+          echo "sha=$(python3 -c 'import json; print(json.load(open("lab/SOURCE_LOCK.json"))["source_sha"])')" >> "$GITHUB_OUTPUT"
+      - name: Checkout original MainV2 SOURCE (read only)
+        uses: actions/checkout@v4
+        with:
+          repository: SouthPaw302/AIVideoEdit
+          ref: ${{ steps.pin.outputs.sha }}
+          path: source
+          persist-credentials: false
+      - name: Checkout target lab MainV2 branch
+        uses: actions/checkout@v4
+        with:
+          ref: MainV2
+          path: mirror
+          fetch-depth: 1
+      - name: Confirm immutable source commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git -C source rev-parse HEAD)" = "${{ steps.pin.outputs.sha }}"
+          test "$(git -C source rev-parse HEAD^{tree})" = "9320ca41a8faa5c5e3c996b6be2466f4c8bb9f4f"
+      - name: Compile complete source snapshot and preserve lab administration
+        shell: bash
+        run: |
+          set -euo pipefail
+          rsync -a --delete \
+            --exclude='/.git/' \
+            --exclude='/SOURCE_LOCK.json' \
+            --exclude='/LAB_PROTOCOL.md' \
+            --exclude='/scripts/inspect_render.py' \
+            --exclude='/scripts/validate_contract.py' \
+            --exclude='/reviews/' \
+            --exclude='/.github/workflows/lab-gate.yml' \
+            --exclude='/.github/workflows/seed-mainv2-mirror.yml' \
+            source/ mirror/
+          python3 - <<'PY'
+          import hashlib, json, subprocess
+          from pathlib import Path
+          src, dst = Path("source"), Path("mirror")
+          paths = subprocess.check_output(["git","-C","source","ls-files","-z"]).decode().split("\0")
+          checked = 0
+          for name in filter(None, paths):
+              before, after = src/name, dst/name
+              assert after.is_file() == before.is_file(), f"Type mismatch: {name}"
+              if before.is_file():
+                  assert hashlib.sha256(before.read_bytes()).digest() == hashlib.sha256(after.read_bytes()).digest(), f"Content mismatch: {name}"
+                  checked += 1
+          assert checked >= 200, f"Unexpected truncated mirror: {checked} files"
+          meta = {
+             "schema":"mainv2-lab.exact-mirror.v1",
+             "original_repository":"SouthPaw302/AIVideoEdit",
+             "original_branch":"MainV2",
+             "source_commit":"${{ steps.pin.outputs.sha }}",
+             "source_tree":"9320ca41a8faa5c5e3c996b6be2466f4c8bb9f4f",
+             "verified_source_files":checked,
+             "source_file_bytes_equal":True,
+             "lab_overlays":["SOURCE_LOCK.json","LAB_PROTOCOL.md","scripts/inspect_render.py","scripts/validate_contract.py","reviews/REVIEW_TEMPLATE.md",".github/workflows/lab-gate.yml",".github/workflows/seed-mainv2-mirror.yml"],
+             "human_approved":False,
+             "production_released":False
+          }
+          (dst/".lab").mkdir(exist_ok=True)
+          (dst/".lab/MIRROR_RECEIPT.json").write_text(json.dumps(meta,indent=2)+"\n")
+          print("EXACT SOURCE CONTENT MIRROR: PASS",checked,"files; user visual review still PENDING")
+          PY
+      - name: Push SOURCE SNAPSHOT into lab MainV2 branch only
+        shell: bash
+        working-directory: mirror
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REPOSITORY" = "SouthPaw302/AIVideoEdit-MainV2-Lab"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No source changes."
+          else
+            git commit -m "Mirror pinned MainV2 source (238 files) with isolated lab review gates"
+            git push origin HEAD:MainV2
+          fi
+      - name: Summary (copying is not visual acceptance)
+        run: |
+          echo "### Complete MainV2 source mirrored into isolated lab branch" >> "$GITHUB_STEP_SUMMARY"
+          echo "Original source SHA: ${{ steps.pin.outputs.sha }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "Original production repo is read-only. Lab target is **MainV2**, never parent `main`." >> "$GITHUB_STEP_SUMMARY"
+          echo "No film, visual QC or delivery has been approved." >> "$GITHUB_STEP_SUMMARY"
