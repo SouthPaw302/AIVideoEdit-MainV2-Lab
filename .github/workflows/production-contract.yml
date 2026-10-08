@@ -1,0 +1,98 @@
+name: AIVideoEdit Production Contract
+
+on:
+  push:
+    branches: ["main", "song/**", "project/**"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  production-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Resolve contract branch
+        shell: bash
+        run: |
+          if [[ "$GITHUB_EVENT_NAME" == "pull_request" && "$GITHUB_HEAD_REF" == song/* && "$GITHUB_BASE_REF" == "main" ]]; then
+            echo "FAIL: song branches are production archives and must not merge into main."
+            exit 1
+          fi
+          if [[ "$GITHUB_EVENT_NAME" == "pull_request" ]]; then
+            if [[ "$GITHUB_BASE_REF" == "main" ]]; then
+              CONTRACT_BRANCH="main"
+            elif [[ "$GITHUB_HEAD_REF" == song/* || "$GITHUB_HEAD_REF" == project/* ]]; then
+              CONTRACT_BRANCH="$GITHUB_HEAD_REF"
+            else
+              # System/feature PRs targeting integration branches are not production work.
+              # Validate them against the canonical main production contract; branch-specific
+              # integration checks remain responsible for validating the candidate changes.
+              CONTRACT_BRANCH="main"
+            fi
+          else
+            CONTRACT_BRANCH="$GITHUB_REF_NAME"
+          fi
+          echo "CONTRACT_BRANCH=$CONTRACT_BRANCH" >> "$GITHUB_ENV"
+      - name: Bootstrap exact current-main AIVideoEdit OS
+        shell: bash
+        run: |
+          python bootstrap.py boot --repo-root "$GITHUB_WORKSPACE" --branch "$CONTRACT_BRANCH"
+      - name: Validate candidate main system
+        if: github.event_name == 'pull_request' && github.base_ref == 'main'
+        shell: bash
+        run: |
+          python -m py_compile bootstrap.py general/reusable/tools/branch_policy.py general/reusable/tools/production_guard.py general/reusable/tools/narrative_guard.py general/reusable/tools/recut_guard.py general/reusable/tools/recipe_execution_guard.py general/reusable/tools/workflow_resolver.py general/reusable/tools/workflow_guard.py general/reusable/tools/hero_library_extract.py general/reusable/tools/refinement_qc_compare.py general/reusable/tools/test_project_scene_branch.py general/reusable/tools/test_director_brain.py general/reusable/tools/test_recut_system.py general/reusable/tools/test_recipe_execution_guard.py general/reusable/tools/test_workflow_authority.py general/reusable/fx_v2/project_local_fx_gate.py
+          python general/reusable/tools/production_guard.py --bootstrap-phase --branch main
+          python general/reusable/tools/narrative_guard.py --branch main
+          python general/reusable/tools/recut_guard.py --branch main
+          python general/reusable/tools/workflow_resolver.py --verify --json
+          python general/reusable/tools/workflow_guard.py --branch main
+          python general/reusable/tools/test_project_scene_branch.py
+          python general/reusable/tools/test_director_brain.py
+          python general/reusable/tools/test_recut_system.py
+          python general/reusable/tools/test_recipe_execution_guard.py
+          python general/reusable/tools/test_workflow_authority.py
+      - name: Validate Director Brain, workflow selection and recut system on main
+        if: github.event_name == 'push' && github.ref_name == 'main'
+        shell: bash
+        run: |
+          python -m py_compile bootstrap.py general/reusable/tools/branch_policy.py general/reusable/tools/production_guard.py general/reusable/tools/narrative_guard.py general/reusable/tools/recut_guard.py general/reusable/tools/recipe_execution_guard.py general/reusable/tools/workflow_resolver.py general/reusable/tools/workflow_guard.py general/reusable/tools/hero_library_extract.py general/reusable/tools/refinement_qc_compare.py general/reusable/tools/test_project_scene_branch.py general/reusable/tools/test_director_brain.py general/reusable/tools/test_recut_system.py general/reusable/tools/test_recipe_execution_guard.py general/reusable/tools/test_workflow_authority.py general/reusable/fx_v2/project_local_fx_gate.py
+          python general/reusable/tools/workflow_resolver.py --verify --json
+          python general/reusable/tools/workflow_guard.py --branch main
+          python general/reusable/tools/test_project_scene_branch.py
+          python general/reusable/tools/test_director_brain.py
+          python general/reusable/tools/test_recut_system.py
+          python general/reusable/tools/test_recipe_execution_guard.py
+          python general/reusable/tools/test_workflow_authority.py
+      - name: Verify bootstrapped production contract
+        if: github.event_name != 'pull_request' || startsWith(github.head_ref, 'song/') || startsWith(github.head_ref, 'project/')
+        shell: bash
+        run: |
+          python .aivideoedit/os/general/reusable/tools/production_guard.py --branch "$CONTRACT_BRANCH"
+          if [[ -f .aivideoedit/os/general/reusable/tools/narrative_guard.py ]]; then
+            python .aivideoedit/os/general/reusable/tools/narrative_guard.py --branch "$CONTRACT_BRANCH"
+          elif [[ "$GITHUB_EVENT_NAME" == "pull_request" && "$GITHUB_BASE_REF" == "main" ]]; then
+            echo "Directing/media guard is new in this candidate main and was validated in the candidate-main step."
+          else
+            echo "FAIL: bootstrapped current-main OS is missing narrative_guard.py"
+            exit 1
+          fi
+          if [[ -f .aivideoedit/os/general/reusable/tools/recut_guard.py ]]; then
+            python .aivideoedit/os/general/reusable/tools/recut_guard.py --branch "$CONTRACT_BRANCH"
+          elif [[ "$GITHUB_EVENT_NAME" == "pull_request" && "$GITHUB_BASE_REF" == "main" ]]; then
+            echo "Recut guard is new in this candidate main and was validated in the candidate-main step."
+          else
+            echo "FAIL: bootstrapped current-main OS is missing recut_guard.py"
+            exit 1
+          fi
+          if [[ -f .aivideoedit/os/general/reusable/tools/workflow_guard.py ]]; then
+            python .aivideoedit/os/general/reusable/tools/workflow_guard.py --branch "$CONTRACT_BRANCH"
+          else
+            echo "FAIL: bootstrapped current-main OS is missing workflow_guard.py"
+            exit 1
+          fi

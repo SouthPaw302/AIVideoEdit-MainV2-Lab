@@ -1,0 +1,52 @@
+name: MainV2 Micro Production
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  micro-production:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      AIVE_PROBE_EVIDENCE: /tmp/aive-micro-production
+      AIVE_CORE_REF: main
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install media runtime
+        run: |
+          if ! command -v ffmpeg >/dev/null 2>&1; then
+            sudo apt-get update -y
+            sudo apt-get install -y ffmpeg
+          fi
+          python -m pip install -r general/reusable/fx_v2/requirements-runtime.txt
+      - name: Assert validation branch
+        run: test "$(git branch --show-current)" = "main"
+      - name: Run actual micro production
+        run: python prototype/backend_gui/probes/mainv2_micro_production.py
+      - name: Package compact evidence
+        if: always()
+        run: |
+          cd /tmp/aive-micro-production
+          tar -czf /tmp/mainv2-micro-production.tgz result.json stack.log 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mainv2-micro-production
+          path: /tmp/mainv2-micro-production.tgz
+          retention-days: 3
+      - name: Upload final micro-production video
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mainv2-micro-production-video
+          path: /tmp/aive-micro-production/final_video.mp4
+          if-no-files-found: error
+          retention-days: 3

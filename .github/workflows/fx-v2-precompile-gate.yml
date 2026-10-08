@@ -1,0 +1,104 @@
+name: AIVideoEdit Main System Verification
+
+on:
+  push:
+    branches: ["main", "fx/canonical-v2"]
+    paths:
+      - "general/reusable/**"
+      - "projects/PROJECT_TEMPLATE.md"
+      - "SYSTEM_INDEX.md"
+      - ".github/workflows/fx-v2-precompile-gate.yml"
+  pull_request:
+    paths:
+      - "general/reusable/**"
+      - "projects/PROJECT_TEMPLATE.md"
+      - "SYSTEM_INDEX.md"
+      - ".github/workflows/fx-v2-precompile-gate.yml"
+  workflow_dispatch:
+
+jobs:
+  verify-main-system:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install runtime dependencies
+        run: python -m pip install --upgrade pip numpy opencv-python-headless
+      - name: Compile every reusable Python module
+        run: python -m compileall -q general/reusable
+      - name: Parse every JSON document on main
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          bad=[]
+          for p in Path('.').rglob('*.json'):
+              if '.git' in p.parts:
+                  continue
+              try: json.loads(p.read_text(encoding='utf-8'))
+              except Exception as e: bad.append(f'{p}: {e}')
+          if bad: raise SystemExit('\n'.join(bad))
+          print('PASS: JSON documents parse')
+          PY
+      - name: Run hard precompile FX gate
+        run: |
+          python general/reusable/fx_v2/precompile_gate.py \
+            --engine-test \
+            --manifest general/reusable/fx_v2/examples/approved-runtime-core.fx.json \
+            --lock-out /tmp/fx.lock.json
+      - name: Re-run live evidence and verify immutable FX lock
+        run: |
+          python general/reusable/fx_v2/precompile_gate.py \
+            --engine-test \
+            --manifest general/reusable/fx_v2/examples/approved-runtime-core.fx.json \
+            --verify-lock /tmp/fx.lock.json
+      - name: Prove runtime output is process deterministic
+        run: |
+          rm -f /tmp/determinism.txt
+          for seed in 1 999; do
+            PYTHONHASHSEED=$seed python - <<'PY' >> /tmp/determinism.txt
+          import hashlib, importlib.util, sys
+          import numpy as np
+          p='general/reusable/fx_v2/runtime.py'
+          spec=importlib.util.spec_from_file_location('fxrt',p)
+          m=importlib.util.module_from_spec(spec)
+          sys.modules[spec.name]=m
+          spec.loader.exec_module(m)
+          r=m.FXRuntime(seed=302)
+          f=r.noise_field((180,320,3),'determinism-check',.37)
+          print(hashlib.sha256(np.ascontiguousarray(f).tobytes()).hexdigest())
+          PY
+          done
+          test "$(sed -n '1p' /tmp/determinism.txt)" = "$(sed -n '2p' /tmp/determinism.txt)"
+          echo "PASS: deterministic across PYTHONHASHSEED values"
+      - name: Prove unapproved FX are blocked
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          src=Path('general/reusable/fx_v2/examples/approved-runtime-core.fx.json')
+          data=json.loads(src.read_text())
+          data['transitions']=[{'id':'FX2-TRANS-002'}]
+          Path('/tmp/must-fail.fx.json').write_text(json.dumps(data))
+          PY
+          if python general/reusable/fx_v2/precompile_gate.py --engine-test --manifest /tmp/must-fail.fx.json; then
+            echo "ERROR: proof_required transition incorrectly passed the gate"
+            exit 1
+          fi
+          echo "PASS: unapproved transition blocked"
+      - name: Check canonical documentation paths
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          required=[
+            'README.md','AGENT_HANDOFF.md','BIBLE.md','SYSTEM_INDEX.md','projects/PROJECT_TEMPLATE.md',
+            'general/reusable/STYLE_CONTRACT.md','general/reusable/PRODUCTION_PIPELINE.md',
+            'general/reusable/CANONICAL_EFFECT_REGISTRY.json','general/reusable/CANONICAL_EFFECT_REGISTRY.md',
+            'general/reusable/SPATIAL_3DGS_SUPERSPLAT.md','general/reusable/tools/README.md'
+          ]
+          missing=[p for p in required if not Path(p).is_file()]
+          if missing: raise SystemExit('Missing canonical paths: '+', '.join(missing))
+          print('PASS: canonical paths resolve')
+          PY

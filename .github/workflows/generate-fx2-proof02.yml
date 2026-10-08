@@ -1,0 +1,50 @@
+name: Generate Canonical FX2 Proof02
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  generate-proof:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install proof runtime dependencies
+        run: python -m pip install --upgrade pip numpy opencv-python-headless
+      - name: Generate canonical proof binary, contact sheet and pending QC record
+        run: |
+          python general/reusable/fx_v2/tools/generate_canonical_proof02.py \
+            --repo-root . \
+            --source-commit "$GITHUB_SHA"
+      - name: Verify generated artifact bytes against record
+        run: |
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          p=Path('general/reusable/fx_v2/proofs/FX2_PROOF02_LIVING_SCENE_CANONICAL.json')
+          d=json.loads(p.read_text())
+          a=Path(d['artifact_path'])
+          c=Path(d['contact_sheet_path'])
+          assert a.is_file() and c.is_file()
+          assert hashlib.sha256(a.read_bytes()).hexdigest() == d['sha256']
+          assert hashlib.sha256(c.read_bytes()).hexdigest() == d['contact_sheet_sha256']
+          assert d['decoded_frames'] == d['frames'] and d['black_frames'] == 0
+          print('PASS: generated proof artifacts are byte-verifiable and decodable')
+          PY
+      - name: Preserve canonical FX proof without modifying main
+        uses: actions/upload-artifact@v4
+        with:
+          name: canonical-fx2-proof02-${{ github.run_id }}
+          path: |
+            general/reusable/fx_v2/proofs/FX2_PROOF02_LIVING_SCENE_CANONICAL.mp4
+            general/reusable/fx_v2/proofs/FX2_PROOF02_LIVING_SCENE_CANONICAL_contact_sheet.jpg
+            general/reusable/fx_v2/proofs/FX2_PROOF02_LIVING_SCENE_CANONICAL.json
+          retention-days: 30
+          if-no-files-found: error

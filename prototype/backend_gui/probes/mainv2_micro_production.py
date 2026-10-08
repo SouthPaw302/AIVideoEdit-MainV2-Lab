@@ -88,14 +88,14 @@ def main():
     env={**os.environ,
          "AIVE_HOST":"127.0.0.1","AIVE_PORT":"8099",
          "AIVE_RUNTIME":str(runtime),
-         "AIVE_CORE_REF":"MainV2"}
+         "AIVE_CORE_REF":os.environ.get("AIVE_CORE_REF", "MainV2")}
     log=(evidence/"stack.log").open("w")
     proc=subprocess.Popen([sys.executable,str(STACK)],cwd=str(BACKEND),env=env,stdout=log,stderr=subprocess.STDOUT)
     snapshots=[]
     try:
         wait_until(lambda: request("http://127.0.0.1:8099/api/system") if _ping() else None,60)
         core=request("http://127.0.0.1:8099/api/core/bootstrap",{"offline":True})
-        if not core.get("bootstrapped") or core.get("requested_core_ref")!="MainV2" or core.get("core_branch")!="main":
+        if not core.get("bootstrapped") or core.get("requested_core_ref")!=env["AIVE_CORE_REF"] or core.get("core_branch")!="main":
             raise RuntimeError(f"validation core bootstrap failed: {core}")
         snapshots.append({"core":core})
 
