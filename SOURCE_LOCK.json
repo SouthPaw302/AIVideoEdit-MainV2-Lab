@@ -1,0 +1,12 @@
+{
+  "schema": "aivideoedit-lab.source-pin.v1",
+  "source_repository": "SouthPaw302/AIVideoEdit",
+  "source_branch": "MainV2",
+  "source_sha": "316fe96c7316d76d14308d5f27293e071aa20943",
+  "pinned_at": "2026-10-08",
+  "mode": "read-only immutable source checkout",
+  "promotion_to_production": "FORBIDDEN",
+  "synthetic_smoke_is_creative_acceptance": false,
+  "visual_acceptance": "HUMAN_REQUIRED",
+  "baseline_status": "UNPROVEN_VISUALLY"
+}
