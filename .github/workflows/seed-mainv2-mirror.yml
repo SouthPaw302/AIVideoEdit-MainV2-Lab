@@ -58,9 +58,10 @@ jobs:
             --exclude='/scripts/inspect_render.py' \
             --exclude='/scripts/validate_contract.py' \
             --exclude='/reviews/' \
-            --exclude='/.github/workflows/lab-gate.yml' \
-            --exclude='/.github/workflows/seed-mainv2-mirror.yml' \
+            --exclude='/.github/workflows/' \
             source/ mirror/
+          mkdir -p mirror/.lab/upstream-workflows
+          cp -a source/.github/workflows/. mirror/.lab/upstream-workflows/
           python3 - <<'PY'
           import hashlib, json, subprocess
           from pathlib import Path
@@ -68,7 +69,8 @@ jobs:
           paths = subprocess.check_output(["git","-C","source","ls-files","-z"]).decode().split("\0")
           checked = 0
           for name in filter(None, paths):
-              before, after = src/name, dst/name
+              before = src/name
+              after = (dst/".lab/upstream-workflows"/name.removeprefix(".github/workflows/")) if name.startswith(".github/workflows/") else dst/name
               assert after.is_file() == before.is_file(), f"Type mismatch: {name}"
               if before.is_file():
                   assert hashlib.sha256(before.read_bytes()).digest() == hashlib.sha256(after.read_bytes()).digest(), f"Content mismatch: {name}"
@@ -81,8 +83,10 @@ jobs:
              "source_commit":"${{ steps.pin.outputs.sha }}",
              "source_tree":"9320ca41a8faa5c5e3c996b6be2466f4c8bb9f4f",
              "verified_source_files":checked,
+             "upstream_workflows_preserved":sum(p.startswith(".github/workflows/") for p in filter(None, paths)),
+             "upstream_workflows_location":".lab/upstream-workflows (byte-identical, inert)",
              "source_file_bytes_equal":True,
-             "lab_overlays":["SOURCE_LOCK.json","LAB_PROTOCOL.md","scripts/inspect_render.py","scripts/validate_contract.py","reviews/REVIEW_TEMPLATE.md",".github/workflows/lab-gate.yml",".github/workflows/seed-mainv2-mirror.yml"],
+             "lab_overlays":["SOURCE_LOCK.json","LAB_PROTOCOL.md","scripts/inspect_render.py","scripts/validate_contract.py","reviews/REVIEW_TEMPLATE.md",".github/workflows/lab-gate.yml",".github/workflows/seed-mainv2-mirror.yml",".lab/upstream-workflows/"],
              "human_approved":False,
              "production_released":False
           }
@@ -102,7 +106,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No source changes."
           else
-            git commit -m "Mirror pinned MainV2 source (238 files) with isolated lab review gates"
+            git commit -m "Mirror all 238 MainV2 files with upstream workflows preserved as inert source"
             git push origin HEAD:MainV2
           fi
       - name: Summary (copying is not visual acceptance)
