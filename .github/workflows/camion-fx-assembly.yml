@@ -38,16 +38,50 @@ jobs:
           sudo apt-get update -y
           sudo apt-get install -y ffmpeg
 
-      - name: Download the three canonical FX runner artifacts
+      - name: Resolve newest successful production runs
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, os, subprocess
+          from pathlib import Path
+
+          workflows={
+              "BATCH01_RUN":"camion-fx-batch-01.yml",
+              "BATCH02_RUN":"camion-fx-batch-02.yml",
+              "BATCH03_RUN":"camion-fx-batch-03.yml",
+              "REAL_RENDER_RUN":"song-real-render.yml",
+          }
+          values={}
+          for key, workflow in workflows.items():
+              raw=subprocess.check_output([
+                  "gh","run","list","--repo",os.environ["REPO"],
+                  "--workflow",workflow,
+                  "--branch","song/el-camion-y-la-carretera",
+                  "--status","success",
+                  "--limit","20",
+                  "--json","databaseId,createdAt",
+              ], text=True)
+              runs=sorted(json.loads(raw), key=lambda item:item["createdAt"], reverse=True)
+              if not runs:
+                  raise SystemExit(f"no successful run found for {workflow}")
+              values[key]=str(runs[0]["databaseId"])
+          with Path(os.environ["GITHUB_ENV"]).open("a",encoding="utf-8") as fd:
+              for key,value in values.items():
+                  fd.write(f"{key}={value}\n")
+          print(json.dumps(values,indent=2))
+          PY
+
+      - name: Download newest successful FX and real-render artifacts
         run: |
           set -euo pipefail
           mkdir -p "$OUT/fx/batch01" "$OUT/fx/batch02" "$OUT/fx/batch03"
-          gh run download 37745325544 --repo "$REPO" --name camion-batch01-fx-37745325544 --dir "$OUT/fx/batch01"
-          gh run download 37745345877 --repo "$REPO" --name camion-batch02-fx-37745345877 --dir "$OUT/fx/batch02"
-          gh run download 37757150942 --repo "$REPO" --name camion-batch03-fx-37757150942 --dir "$OUT/fx/batch03"
+          gh run download "$BATCH01_RUN" --repo "$REPO" --name "camion-batch01-fx-$BATCH01_RUN" --dir "$OUT/fx/batch01"
+          gh run download "$BATCH02_RUN" --repo "$REPO" --name "camion-batch02-fx-$BATCH02_RUN" --dir "$OUT/fx/batch02"
+          gh run download "$BATCH03_RUN" --repo "$REPO" --name "camion-batch03-fx-$BATCH03_RUN" --dir "$OUT/fx/batch03"
           mkdir -p "$OUT/base-real"
-          gh run download 37771954430 --repo "$REPO" --name el-camion-batch03-real-37771954430 --dir "$OUT/base-real"
+          gh run download "$REAL_RENDER_RUN" --repo "$REPO" --name "el-camion-batch03-real-$REAL_RENDER_RUN" --dir "$OUT/base-real"
           test -s "$OUT/base-real/real_music_film.mp4"
+          cp "$OUT/base-real/real_music_film.mp4" "$OUT/el_camion_batch03_real_render_latest.mp4"
 
       - name: Verify artifact inventory and preserve continuation boundaries
         run: |
@@ -152,10 +186,17 @@ jobs:
             "project":"el-camion-y-la-carretera",
             "branch":"song/el-camion-y-la-carretera",
             "workflow_run_id":int(os.environ["GITHUB_RUN_ID"]),
-            "canonical_fx_runs":[37745325544,37745345877,37757150942,37771954430],
+            "canonical_fx_runs":[int(os.environ["BATCH01_RUN"]),int(os.environ["BATCH02_RUN"]),int(os.environ["BATCH03_RUN"])],
+            "real_render_run_id":int(os.environ["REAL_RENDER_RUN"]),
+            "source_artifacts":{
+              "batch01_run":int(os.environ["BATCH01_RUN"]),
+              "batch02_run":int(os.environ["BATCH02_RUN"]),
+              "batch03_run":int(os.environ["BATCH03_RUN"]),
+              "real_render_run":int(os.environ["REAL_RENDER_RUN"])
+            },
             "duration_seconds":duration,
             "video":{"width":640,"height":360,"codec":"h264"},
-            "audio":{"codec":"aac","source":"exact audio track extracted from verified real render run 37771954430","audio_sha256":"6789e6f3ea52501a0d4a151296a6ef7f8abc8516acd1f6cec959213a028ec0d9"},
+            "audio":{"codec":"aac","source":f"exact audio track extracted from newest successful real render run {os.environ['REAL_RENDER_RUN']}","audio_sha256":hashlib.sha256((out/"original_audio.wav").read_bytes()).hexdigest()},
             "editorial_camera_pass_shots":["EC-01","EC-05","EC-06","EC-08","EC-09","EC-11","EC-12","EC-13","EC-16","EC-18","EC-20","EC-21","EC-23","EC-27","EC-29"],
             "protected_true_continuation_shots":["EC-02","EC-03","EC-04","EC-07","EC-10","EC-14","EC-15","EC-17","EC-19","EC-22","EC-24","EC-25","EC-26","EC-28","EC-30"],
             "technical_qc":"PASS",
@@ -183,7 +224,8 @@ jobs:
           set -euo pipefail
           gh release create "lab-camera-review-${GITHUB_RUN_ID}" \
             "$OUT/el_camion_fx_camera_review_30s.mp4" \
+            "$OUT/el_camion_batch03_real_render_latest.mp4" \
             "$OUT/CAMERA_ASSEMBLY_REVIEW_RECEIPT.json" \
             --repo "$REPO" --target "$GITHUB_SHA" --prerelease \
             --title "El Camión — FX and camera review assembly" \
-            --notes "30-second all-batch technical review assembled from canonical Batch 01/02/03 FX artifacts. Editorial camera drift is limited to environment-safe shots. True-continuation shots remain protected. Human visual approval required; not final release."
+            --notes "30-second all-batch technical review assembled from the newest successful Batch 01/02/03 FX artifacts. The newest effect-bearing real-render MP4 is included as a separate review asset. Editorial camera drift is limited to environment-safe shots. True-continuation shots remain protected. Human visual approval required; not final release."
