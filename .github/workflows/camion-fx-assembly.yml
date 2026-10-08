@@ -229,14 +229,19 @@ jobs:
           retention-days: 30
           if-no-files-found: warn
 
-      - name: Publish review-only prerelease
+      - name: Publish review-only prerelease when repository permits
         if: success()
+        shell: bash
         run: |
           set -euo pipefail
-          gh release create "lab-camera-review-${GITHUB_RUN_ID}" \
+          if gh release create "lab-camera-review-${GITHUB_RUN_ID}" \
             "$OUT/el_camion_fx_camera_review_30s.mp4" \
             "$OUT/el_camion_batch03_real_render_latest.mp4" \
             "$OUT/CAMERA_ASSEMBLY_REVIEW_RECEIPT.json" \
             --repo "$REPO" --target "$GITHUB_SHA" --prerelease \
             --title "El Camión — FX and camera review assembly" \
-            --notes "30-second all-batch technical review assembled from the newest successful Batch 01/02/03 FX artifacts. The newest effect-bearing real-render MP4 is included as a separate review asset. Editorial camera drift is limited to environment-safe shots. True-continuation shots remain protected. Human visual approval required; not final release."
+            --notes "30-second all-batch technical review assembled from the newest successful Batch 01/02/03 FX artifacts. The newest effect-bearing real-render MP4 is included as a separate review asset. Editorial camera drift is limited to environment-safe shots. True-continuation shots remain protected. Human visual approval required; not final release."; then
+            echo "ASSEMBLY REVIEW PRERELEASE: PUBLISHED" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "ASSEMBLY REVIEW PRERELEASE: unavailable from this runner token; Actions artifact remains the canonical review deliverable." >> "$GITHUB_STEP_SUMMARY"
+          fi
