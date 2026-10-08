@@ -7,17 +7,17 @@
   "seconds": 2,
   "width": 640,
   "height": 360,
-  "loop_policy": "Same as Batch02 only after ten independently generated full-resolution stills are present and hashed. Never pass storyboard-collage crops as originals.",
-  "source_status": "NOT_READY:ZERO_INDIVIDUAL_FULL_RESOLUTION_STILLS",
-  "artistic_status": "DIRECTION_ONLY_NO_PICTURE_LOCK",
+  "loop_policy": "Render only from independently sourced, byte-pinned EC-21 through EC-30 individual PNG files. Preserve original pixels; use existing canonical FX recipes. Human QC remains pending.",
+  "source_status": "READY_TEN_ORIGINAL_STILLS_SHA256_VERIFIED",
+  "artistic_status": "SOURCES_IMPORTED_VISUAL_QC_PENDING_FX_PENDING",
   "shots": [
     {
       "shot_id": "EC-21",
       "title": "First cobalt sky",
       "source": "media/batch_03/source/EC-21.png",
-      "git_blob_sha": null,
-      "source_sha256": null,
-      "source_drive_id": null,
+      "git_blob_sha": "e662e89de919e78daac5d1cf516c8561e2d8cada",
+      "source_sha256": "0c80251871bede882388258e87d8afb510d54ba0e6366a75a32e38fbe2bac8a2",
+      "source_drive_id": "1OmBXWA0ogg2gCC4QpPV21ILuUhB--cuJ",
       "fx": [
         {
           "id": "FX2-ATM-001",
@@ -47,16 +47,16 @@
       "motion_scope": "environment_or_practical_light_only",
       "requires_true_continuation": false,
       "direction": "Move mountain fog between fixed ridge lines; daylight appears gradually; truck and road geometry must remain rigid",
-      "source_status": "MISSING",
+      "source_status": "ORIGINAL_SOURCE_BYTE_PINNED",
       "director_approval": "NOT_REVIEWED"
     },
     {
       "shot_id": "EC-22",
       "title": "Rearview mirror",
       "source": "media/batch_03/source/EC-22.png",
-      "git_blob_sha": null,
-      "source_sha256": null,
-      "source_drive_id": null,
+      "git_blob_sha": "0374f91019b26fd77ba17c9f4106814d356ea72c",
+      "source_sha256": "31b539ea9a516e86fc46578cb5b8f4cc6c8be2d093155982459436a6ee0cbf3d",
+      "source_drive_id": "1EU_fPVSSiaiYxcjcUWz-cl3oXlzWxQqg",
       "fx": [
         {
           "id": "FX2-ATM-002",
@@ -86,16 +86,16 @@
       "motion_scope": "environment_or_practical_light_only",
       "requires_true_continuation": true,
       "direction": "All reflections confined to mirror glass; preserve reflection optic, no face/geometry shifting",
-      "source_status": "MISSING",
+      "source_status": "ORIGINAL_SOURCE_BYTE_PINNED",
       "director_approval": "NOT_REVIEWED"
     },
     {
       "shot_id": "EC-23",
       "title": "Reservoir mist",
       "source": "media/batch_03/source/EC-23.png",
-      "git_blob_sha": null,
-      "source_sha256": null,
-      "source_drive_id": null,
+      "git_blob_sha": "8ef7acd2abd8819e116a1db8b9e08f5e250b5fc7",
+      "source_sha256": "6e6d4915457a359926a49c3e339861d05a9a99ad63d069deef447cc5e0dae695",
+      "source_drive_id": "1uF00WEBIF9VdasbPX75ZnldCJObF17gl",
       "fx": [
         {
           "id": "FX2-ATM-001",
@@ -113,16 +113,16 @@
       "motion_scope": "environment_or_practical_light_only",
       "requires_true_continuation": false,
       "direction": "Only low-lying mist over water; shoreline and truck fixed",
-      "source_status": "MISSING",
+      "source_status": "ORIGINAL_SOURCE_BYTE_PINNED",
       "director_approval": "NOT_REVIEWED"
     },
     {
       "shot_id": "EC-24",
       "title": "Letter kept safe",
       "source": "media/batch_03/source/EC-24.png",
-      "git_blob_sha": null,
-      "source_sha256": null,
-      "source_drive_id": null,
+      "git_blob_sha": "e381e555560724af18d0bb31ec834c4f302897bf",
+      "source_sha256": "0ff7b629351fb190f4f963cf3d7e6290fc8084dc381e5ff9ece985cf5acdf533",
+      "source_drive_id": "1mqg7W_AQKyixddIisblNtLeb3o7_cxZ6",
       "fx": [
         {
           "id": "FX2-LIGHT-001",
@@ -140,16 +140,16 @@
       "motion_scope": "environment_or_practical_light_only",
       "requires_true_continuation": true,
       "direction": "Folded letter unchanged; actual hand/glovebox action needs externally animated continuation",
-      "source_status": "MISSING",
+      "source_status": "ORIGINAL_SOURCE_BYTE_PINNED",
       "director_approval": "NOT_REVIEWED"
     },
     {
       "shot_id": "EC-25",
       "title": "Still rolling",
       "source": "media/batch_03/source/EC-25.png",
-      "git_blob_sha": null,
-      "source_sha256": null,
-      "source_drive_id": null,
+      "git_blob_sha": "d250e9efc30efbdf7671c1fca5895a75196dfb50",
+      "source_sha256": "f852c93e7e4265f143822e92ccb29444ae16424bd8abbde176482de09980e5d5",
+      "source_drive_id": "1U6eDJMnmYMFeHb73B5ENglMFmhLET9Hd",
       "fx": [
         {
           "id": "FX2-MOTION-003",
@@ -179,16 +179,16 @@
       "motion_scope": "environment_or_practical_light_only",
       "requires_true_continuation": true,
       "direction": "Wheel must genuinely rotate in separate video; here only road spray/reflection changes",
-      "source_status": "MISSING",
+      "source_status": "ORIGINAL_SOURCE_BYTE_PINNED",
       "director_approval": "NOT_REVIEWED"
     },
     {
       "shot_id": "EC-26",
       "title": "Bird line",
       "source": "media/batch_03/source/EC-26.png",
-      "git_blob_sha": null,
-      "source_sha256": null,
-      "source_drive_id": null,
+      "git_blob_sha": "b148f7ce356ec7c3ecc907c658dad57d7e832d98",
+      "source_sha256": "51f12a42f2e35f33870bda0d8f504a87397f6d0f2ef8beaa52a9dabd3435461e",
+      "source_drive_id": "1j7aCFXGkOQmARI3wP7CyHw5u2hvmfF3R",
       "fx": [
         {
           "id": "FX2-ATM-001",
@@ -206,16 +206,16 @@
       "motion_scope": "environment_or_practical_light_only",
       "requires_true_continuation": true,
       "direction": "Fence and ridgeline fixed; true bird flight needs separately generated video",
-      "source_status": "MISSING",
+      "source_status": "ORIGINAL_SOURCE_BYTE_PINNED",
       "director_approval": "NOT_REVIEWED"
     },
     {
       "shot_id": "EC-27",
       "title": "Temporary stop",
       "source": "media/batch_03/source/EC-27.png",
-      "git_blob_sha": null,
-      "source_sha256": null,
-      "source_drive_id": null,
+      "git_blob_sha": "e17822e3676f4b28b66334316c234927fb610d23",
+      "source_sha256": "bfab15e758e0fcdd7db5366338adb100836d6cc05e252db794eeed94c1a28e4b",
+      "source_drive_id": "12lWcMVTWQUkG6uZgocRkzqE8NN0uDitO",
       "fx": [
         {
           "id": "FX2-ATM-001",
@@ -233,16 +233,16 @@
       "motion_scope": "environment_or_practical_light_only",
       "requires_true_continuation": false,
       "direction": "Mountain mist changes without altering parked truck or fixed overlook",
-      "source_status": "MISSING",
+      "source_status": "ORIGINAL_SOURCE_BYTE_PINNED",
       "director_approval": "NOT_REVIEWED"
     },
     {
       "shot_id": "EC-28",
       "title": "A human at dawn",
       "source": "media/batch_03/source/EC-28.png",
-      "git_blob_sha": null,
-      "source_sha256": null,
-      "source_drive_id": null,
+      "git_blob_sha": "ea6d632f8d5dd68528b26b0b088734093b6b9fdf",
+      "source_sha256": "64ca19a5f223c2d9da168658dd18418cc62c58ccce0eb5ee79ee86776a051d9c",
+      "source_drive_id": "1FJXpUkV5K0YBXMn-5o34kcSfmNzbLCrI",
       "fx": [
         {
           "id": "FX2-LIGHT-001",
@@ -260,16 +260,16 @@
       "motion_scope": "environment_or_practical_light_only",
       "requires_true_continuation": true,
       "direction": "Realistic step-down motion requires true video; never warp limbs or cab door",
-      "source_status": "MISSING",
+      "source_status": "ORIGINAL_SOURCE_BYTE_PINNED",
       "director_approval": "NOT_REVIEWED"
     },
     {
       "shot_id": "EC-29",
       "title": "The road goes on",
       "source": "media/batch_03/source/EC-29.png",
-      "git_blob_sha": null,
-      "source_sha256": null,
-      "source_drive_id": null,
+      "git_blob_sha": "2445a78cc47448e5809a3548652036c3c2ec5394",
+      "source_sha256": "d14745e6bed07a20f7a1de8d03c42bfe6abf74a0692ab395c9bdbb035ba9faa0",
+      "source_drive_id": "15QB4wwwl38dxKDIKIMMrCtvAbWLKimqj",
       "fx": [
         {
           "id": "FX2-ATM-001",
@@ -299,16 +299,16 @@
       "motion_scope": "environment_or_practical_light_only",
       "requires_true_continuation": false,
       "direction": "Mist in valley changes slowly; rock and road curvature cannot drift",
-      "source_status": "MISSING",
+      "source_status": "ORIGINAL_SOURCE_BYTE_PINNED",
       "director_approval": "NOT_REVIEWED"
     },
     {
       "shot_id": "EC-30",
       "title": "No fake resolution",
       "source": "media/batch_03/source/EC-30.png",
-      "git_blob_sha": null,
-      "source_sha256": null,
-      "source_drive_id": null,
+      "git_blob_sha": "6329b5fee79a183c8009b540e34943ea7154f801",
+      "source_sha256": "59a23a58996353685a545c7fbd394586de6b5785468ebf0b382d43f3c3133e96",
+      "source_drive_id": "1rlDCdI52XDXix2caK-wI2XNF-SAmzuKW",
       "fx": [
         {
           "id": "FX2-LIGHT-001",
@@ -338,7 +338,7 @@
       "motion_scope": "environment_or_practical_light_only",
       "requires_true_continuation": true,
       "direction": "True vehicle departure is separate motion; no frozen truck masked by generic pan",
-      "source_status": "MISSING",
+      "source_status": "ORIGINAL_SOURCE_BYTE_PINNED",
       "director_approval": "NOT_REVIEWED"
     }
   ]

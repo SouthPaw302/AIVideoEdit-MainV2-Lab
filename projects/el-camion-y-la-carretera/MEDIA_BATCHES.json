@@ -2,7 +2,7 @@
   "schema": "aivideoedit.batches.v1",
   "batch_size": 10,
   "total_shots": 30,
-  "generated": 20,
+  "generated": 30,
   "batches": [
     {
       "batch": 1,
@@ -114,12 +114,36 @@
         "EC-29",
         "EC-30"
       ],
-      "status": "DIRECTION_LOCKED_INDIVIDUAL_SOURCE_IMAGES_MISSING",
-      "files": [],
-      "hashes": [],
-      "visual_qc": "PENDING_SOURCE_GENERATION",
-      "fx_status": "RUNNER_WORKFLOW_STAGED_NOT_EXECUTED",
-      "planned_manifest": "projects/el-camion-y-la-carretera/FX_BATCH_03.json"
+      "status": "TEN_ORIGINAL_STILLS_INGESTED_SHA256_VERIFIED_FX_PENDING",
+      "files": [
+        "projects/el-camion-y-la-carretera/media/batch_03/source/EC-21.png",
+        "projects/el-camion-y-la-carretera/media/batch_03/source/EC-22.png",
+        "projects/el-camion-y-la-carretera/media/batch_03/source/EC-23.png",
+        "projects/el-camion-y-la-carretera/media/batch_03/source/EC-24.png",
+        "projects/el-camion-y-la-carretera/media/batch_03/source/EC-25.png",
+        "projects/el-camion-y-la-carretera/media/batch_03/source/EC-26.png",
+        "projects/el-camion-y-la-carretera/media/batch_03/source/EC-27.png",
+        "projects/el-camion-y-la-carretera/media/batch_03/source/EC-28.png",
+        "projects/el-camion-y-la-carretera/media/batch_03/source/EC-29.png",
+        "projects/el-camion-y-la-carretera/media/batch_03/source/EC-30.png"
+      ],
+      "hashes": [
+        "0c80251871bede882388258e87d8afb510d54ba0e6366a75a32e38fbe2bac8a2",
+        "31b539ea9a516e86fc46578cb5b8f4cc6c8be2d093155982459436a6ee0cbf3d",
+        "6e6d4915457a359926a49c3e339861d05a9a99ad63d069deef447cc5e0dae695",
+        "0ff7b629351fb190f4f963cf3d7e6290fc8084dc381e5ff9ece985cf5acdf533",
+        "f852c93e7e4265f143822e92ccb29444ae16424bd8abbde176482de09980e5d5",
+        "51f12a42f2e35f33870bda0d8f504a87397f6d0f2ef8beaa52a9dabd3435461e",
+        "bfab15e758e0fcdd7db5366338adb100836d6cc05e252db794eeed94c1a28e4b",
+        "64ca19a5f223c2d9da168658dd18418cc62c58ccce0eb5ee79ee86776a051d9c",
+        "d14745e6bed07a20f7a1de8d03c42bfe6abf74a0692ab395c9bdbb035ba9faa0",
+        "59a23a58996353685a545c7fbd394586de6b5785468ebf0b382d43f3c3133e96"
+      ],
+      "visual_qc": "ORIGINAL_STILL_REVIEW_PENDING",
+      "fx_status": "SOURCE_GATE_READY_RUNNER_PENDING",
+      "planned_manifest": "projects/el-camion-y-la-carretera/FX_BATCH_03.json",
+      "source_folder": "https://drive.google.com/drive/folders/14kXuEbIDQoSCtN22EgrFRumqiIaom314",
+      "source_archive_drive": "https://drive.google.com/file/d/11LPdXgRHu-r9fqGtJgtukw67PrJlLVuG/view"
     }
   ]
 }
