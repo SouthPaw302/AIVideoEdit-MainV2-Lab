@@ -4,7 +4,6 @@ on:
   push:
     branches: [song/el-camion-y-la-carretera]
     paths:
-      - "projects/el-camion-y-la-carretera/FX_BATCH_03.json"
       - "projects/el-camion-y-la-carretera/media/batch_03/source/**"
   workflow_dispatch:
 
