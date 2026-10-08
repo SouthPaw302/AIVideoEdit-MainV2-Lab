@@ -1,0 +1,317 @@
+{
+  "schema": "aivideoedit.real-render.v1",
+  "production_id": "el-camion-y-la-carretera-batch03-real-assembly",
+  "render_authorization": "explicit_user_render_request",
+  "source_policy": "approved original stills plus the attached original WAV; no prior final MP4 and no synthetic replacement",
+  "source_lineage": {
+    "source_repo": "SouthPaw302/AIVideoEdit-MainV2-Lab",
+    "source_branch": "song/el-camion-y-la-carretera",
+    "source_batch": "FX_BATCH_03",
+    "source_run": 37757150942
+  },
+  "audio": {
+    "url": "https://sdmntprsouthcentralus.oaiusercontent.com/files/00000000-8100-81f7-9ebe-cc95eeeb28db/raw?se=2026-10-08T11%3A45%3A19Z&sp=r&sv=2026-02-06&sr=b&scid=a5e0066a-19c3-4eab-96e5-57bb9fadef1e&skoid=864daabb-d06a-46b3-a747-d35075313a83&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-08T11%3A06%3A16Z&ske=2026-10-09T11%3A06%3A16Z&sks=b&skv=2026-02-06&sig=xRzdLgDq7Tttd2NTUuuUpTWqY3bXdSGn%2Bzj36U4PQUE%3D",
+    "sha256": "6789e6f3ea52501a0d4a151296a6ef7f8abc8516acd1f6cec959213a028ec0d9",
+    "start_seconds": 0
+  },
+  "output": {
+    "fps": 24,
+    "width": 1280,
+    "height": 720
+  },
+  "fx_seed": 302,
+  "shots": [
+    {
+      "id": "EC-21",
+      "source": {
+        "path": "projects/el-camion-y-la-carretera/media/batch_03/source/EC-21.png",
+        "sha256": "0c80251871bede882388258e87d8afb510d54ba0e6366a75a32e38fbe2bac8a2"
+      },
+      "duration_seconds": 3,
+      "fit": "cover",
+      "fx": [
+        {
+          "id": "FX2-ATM-001",
+          "params": {
+            "roi": [
+              0,
+              0.05,
+              1,
+              0.65
+            ],
+            "strength": 0.32
+          }
+        },
+        {
+          "id": "FX2-LIGHT-001",
+          "params": {
+            "roi": [
+              0.2,
+              0.04,
+              0.96,
+              0.64
+            ],
+            "strength": 0.15
+          }
+        }
+      ]
+    },
+    {
+      "id": "EC-22",
+      "source": {
+        "path": "projects/el-camion-y-la-carretera/media/batch_03/source/EC-22.png",
+        "sha256": "31b539ea9a516e86fc46578cb5b8f4cc6c8be2d093155982459436a6ee0cbf3d"
+      },
+      "duration_seconds": 3,
+      "fit": "cover",
+      "fx": [
+        {
+          "id": "FX2-ATM-002",
+          "params": {
+            "roi": [
+              0.12,
+              0.06,
+              0.91,
+              0.74
+            ],
+            "strength": 0.1
+          }
+        },
+        {
+          "id": "FX2-LIGHT-001",
+          "params": {
+            "roi": [
+              0.12,
+              0.22,
+              0.87,
+              0.75
+            ],
+            "strength": 0.08
+          }
+        }
+      ]
+    },
+    {
+      "id": "EC-23",
+      "source": {
+        "path": "projects/el-camion-y-la-carretera/media/batch_03/source/EC-23.png",
+        "sha256": "6e6d4915457a359926a49c3e339861d05a9a99ad63d069deef447cc5e0dae695"
+      },
+      "duration_seconds": 3,
+      "fit": "cover",
+      "fx": [
+        {
+          "id": "FX2-ATM-001",
+          "params": {
+            "roi": [
+              0.12,
+              0.27,
+              0.97,
+              0.78
+            ],
+            "strength": 0.47
+          }
+        }
+      ]
+    },
+    {
+      "id": "EC-24",
+      "source": {
+        "path": "projects/el-camion-y-la-carretera/media/batch_03/source/EC-24.png",
+        "sha256": "0ff7b629351fb190f4f963cf3d7e6290fc8084dc381e5ff9ece985cf5acdf533"
+      },
+      "duration_seconds": 3,
+      "fit": "cover",
+      "fx": [
+        {
+          "id": "FX2-LIGHT-001",
+          "params": {
+            "roi": [
+              0.13,
+              0.16,
+              0.88,
+              0.82
+            ],
+            "strength": 0.12
+          }
+        }
+      ]
+    },
+    {
+      "id": "EC-25",
+      "source": {
+        "path": "projects/el-camion-y-la-carretera/media/batch_03/source/EC-25.png",
+        "sha256": "f852c93e7e4265f143822e92ccb29444ae16424bd8abbde176482de09980e5d5"
+      },
+      "duration_seconds": 3,
+      "fit": "cover",
+      "fx": [
+        {
+          "id": "FX2-MOTION-003",
+          "params": {
+            "roi": [
+              0,
+              0.68,
+              1,
+              1
+            ],
+            "strength": 0.18
+          }
+        },
+        {
+          "id": "FX2-ATM-002",
+          "params": {
+            "roi": [
+              0.03,
+              0.51,
+              0.96,
+              0.98
+            ],
+            "strength": 0.12
+          }
+        }
+      ]
+    },
+    {
+      "id": "EC-26",
+      "source": {
+        "path": "projects/el-camion-y-la-carretera/media/batch_03/source/EC-26.png",
+        "sha256": "51f12a42f2e35f33870bda0d8f504a87397f6d0f2ef8beaa52a9dabd3435461e"
+      },
+      "duration_seconds": 3,
+      "fit": "cover",
+      "fx": [
+        {
+          "id": "FX2-ATM-001",
+          "params": {
+            "roi": [
+              0,
+              0.11,
+              1,
+              0.82
+            ],
+            "strength": 0.24
+          }
+        }
+      ]
+    },
+    {
+      "id": "EC-27",
+      "source": {
+        "path": "projects/el-camion-y-la-carretera/media/batch_03/source/EC-27.png",
+        "sha256": "bfab15e758e0fcdd7db5366338adb100836d6cc05e252db794eeed94c1a28e4b"
+      },
+      "duration_seconds": 3,
+      "fit": "cover",
+      "fx": [
+        {
+          "id": "FX2-ATM-001",
+          "params": {
+            "roi": [
+              0.02,
+              0.1,
+              0.98,
+              0.8
+            ],
+            "strength": 0.3
+          }
+        }
+      ]
+    },
+    {
+      "id": "EC-28",
+      "source": {
+        "path": "projects/el-camion-y-la-carretera/media/batch_03/source/EC-28.png",
+        "sha256": "64ca19a5f223c2d9da168658dd18418cc62c58ccce0eb5ee79ee86776a051d9c"
+      },
+      "duration_seconds": 3,
+      "fit": "cover",
+      "fx": [
+        {
+          "id": "FX2-LIGHT-001",
+          "params": {
+            "roi": [
+              0.32,
+              0.12,
+              0.93,
+              0.86
+            ],
+            "strength": 0.15
+          }
+        }
+      ]
+    },
+    {
+      "id": "EC-29",
+      "source": {
+        "path": "projects/el-camion-y-la-carretera/media/batch_03/source/EC-29.png",
+        "sha256": "d14745e6bed07a20f7a1de8d03c42bfe6abf74a0692ab395c9bdbb035ba9faa0"
+      },
+      "duration_seconds": 3,
+      "fit": "cover",
+      "fx": [
+        {
+          "id": "FX2-ATM-001",
+          "params": {
+            "roi": [
+              0.04,
+              0.12,
+              1,
+              0.82
+            ],
+            "strength": 0.38
+          }
+        },
+        {
+          "id": "FX2-LIGHT-001",
+          "params": {
+            "roi": [
+              0.13,
+              0.07,
+              0.9,
+              0.61
+            ],
+            "strength": 0.14
+          }
+        }
+      ]
+    },
+    {
+      "id": "EC-30",
+      "source": {
+        "path": "projects/el-camion-y-la-carretera/media/batch_03/source/EC-30.png",
+        "sha256": "59a23a58996353685a545c7fbd394586de6b5785468ebf0b382d43f3c3133e96"
+      },
+      "duration_seconds": 3,
+      "fit": "cover",
+      "fx": [
+        {
+          "id": "FX2-LIGHT-001",
+          "params": {
+            "roi": [
+              0.22,
+              0.15,
+              0.95,
+              0.86
+            ],
+            "strength": 0.18
+          }
+        },
+        {
+          "id": "FX2-ATM-001",
+          "params": {
+            "roi": [
+              0.07,
+              0.12,
+              1,
+              0.73
+            ],
+            "strength": 0.16
+          }
+        }
+      ]
+    }
+  ],
+  "human_visual_review": "REQUIRED_NOT_AUTOMATIC",
+  "deliverable": "30-second approved Batch 03 technical assembly prerelease; not final long-form film"
+}
