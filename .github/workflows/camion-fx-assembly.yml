@@ -45,6 +45,9 @@ jobs:
           gh run download 37745325544 --repo "$REPO" --name camion-batch01-fx-37745325544 --dir "$OUT/fx/batch01"
           gh run download 37745345877 --repo "$REPO" --name camion-batch02-fx-37745345877 --dir "$OUT/fx/batch02"
           gh run download 37757150942 --repo "$REPO" --name camion-batch03-fx-37757150942 --dir "$OUT/fx/batch03"
+          mkdir -p "$OUT/base-real"
+          gh run download 37771954430 --repo "$REPO" --name el-camion-batch03-real-37771954430 --dir "$OUT/base-real"
+          test -s "$OUT/base-real/real_music_film.mp4"
 
       - name: Verify artifact inventory and preserve continuation boundaries
         run: |
@@ -102,15 +105,11 @@ jobs:
           print("EDITORIAL CAMERA PASS: 15 environment-safe shots; 15 protected continuation shots")
           PY
 
-      - name: Assemble 60-second FX and camera review with original WAV
+      - name: Assemble 30-second all-batch FX and camera review with verified audio
         run: |
           set -euo pipefail
-          AUDIO_URL="$(python - <<'PY'
-          import json
-          print(json.load(open("projects/el-camion-y-la-carretera/RENDER_JOB.json"))["audio"]["url"])
-          PY
-          )"
-          curl --fail --location --retry 3 --retry-all-errors "$AUDIO_URL" -o "$OUT/original_audio.wav"
+          ffmpeg -hide_banner -loglevel error -y -i "$OUT/base-real/real_music_film.mp4" \
+            -vn -c:a pcm_s16le "$OUT/original_audio.wav"
           python - <<'PY'
           import os
           from pathlib import Path
@@ -122,8 +121,8 @@ jobs:
           concat.write_text("\n".join(lines)+"\n")
           PY
           ffmpeg -hide_banner -loglevel error -y -f concat -safe 0 -i "$OUT/concat.txt" -i "$OUT/original_audio.wav" \
-            -t 60 -map 0:v:0 -map 1:a:0 -c:v libx264 -crf 18 -preset medium -pix_fmt yuv420p \
-            -c:a aac -b:a 192k -movflags +faststart "$OUT/el_camion_fx_camera_review_60s.mp4"
+            -t 30 -map 0:v:0 -map 1:a:0 -c:v libx264 -crf 18 -preset medium -pix_fmt yuv420p \
+            -c:a aac -b:a 192k -movflags +faststart "$OUT/el_camion_fx_camera_review_30s.mp4"
 
       - name: Technical QC and write a truthful review receipt
         run: |
@@ -140,7 +139,7 @@ jobs:
           aus=[s for s in probe["streams"] if s["codec_type"]=="audio"]
           assert vs and aus
           duration=float(probe["format"]["duration"])
-          assert 59.5 <= duration <= 60.5, duration
+          assert 29.5 <= duration <= 30.5, duration
           assert vs[0]["width"]==640 and vs[0]["height"]==360
           assert vs[0]["codec_name"]=="h264"
           assert aus[0]["codec_name"]=="aac"
@@ -149,10 +148,10 @@ jobs:
             "project":"el-camion-y-la-carretera",
             "branch":"song/el-camion-y-la-carretera",
             "workflow_run_id":int(os.environ["GITHUB_RUN_ID"]),
-            "canonical_fx_runs":[37745325544,37745345877,37757150942],
+            "canonical_fx_runs":[37745325544,37745345877,37757150942,37771954430],
             "duration_seconds":duration,
             "video":{"width":640,"height":360,"codec":"h264"},
-            "audio":{"codec":"aac","source":"attached original WAV via RENDER_JOB.json"},
+            "audio":{"codec":"aac","source":"exact audio track extracted from verified real render run 37771954430","audio_sha256":"6789e6f3ea52501a0d4a151296a6ef7f8abc8516acd1f6cec959213a028ec0d9"},
             "editorial_camera_pass_shots":["EC-01","EC-05","EC-06","EC-08","EC-09","EC-11","EC-12","EC-13","EC-16","EC-18","EC-20","EC-21","EC-23","EC-27","EC-29"],
             "protected_true_continuation_shots":["EC-02","EC-03","EC-04","EC-07","EC-10","EC-14","EC-15","EC-17","EC-19","EC-22","EC-24","EC-25","EC-26","EC-28","EC-30"],
             "technical_qc":"PASS",
@@ -179,8 +178,8 @@ jobs:
         run: |
           set -euo pipefail
           gh release create "lab-camera-review-${GITHUB_RUN_ID}" \
-            "$OUT/el_camion_fx_camera_review_60s.mp4" \
+            "$OUT/el_camion_fx_camera_review_30s.mp4" \
             "$OUT/CAMERA_ASSEMBLY_REVIEW_RECEIPT.json" \
             --repo "$REPO" --target "$GITHUB_SHA" --prerelease \
             --title "El Camión — FX and camera review assembly" \
-            --notes "60-second technical review assembled from canonical Batch 01/02/03 FX artifacts. Editorial camera drift is limited to environment-safe shots. True-continuation shots remain protected. Human visual approval required; not final release."
+            --notes "30-second all-batch technical review assembled from canonical Batch 01/02/03 FX artifacts. Editorial camera drift is limited to environment-safe shots. True-continuation shots remain protected. Human visual approval required; not final release."
