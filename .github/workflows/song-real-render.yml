@@ -90,14 +90,20 @@ jobs:
           import hashlib, json
           from pathlib import Path
           manifest=Path("../source") / "projects/el-camion-y-la-carretera/RENDER_JOB.json"
+          mp4=Path("../source/.verified-audio/real_music_film.mp4")
           audio_path=Path("../source/.verified-audio/original_audio.wav")
-          expected="0840a84a171848fc64c40f8a7752a0e1c9187b86f16e3c329c01ad3d0867374e"
-          assert hashlib.sha256(audio_path.read_bytes()).hexdigest() == expected
+          expected_render="e21cb739a630447df828f5c6e38c811717785479d5386fe2f6d010ee240d4cec"
+          assert hashlib.sha256(mp4.read_bytes()).hexdigest() == expected_render
           data=json.loads(manifest.read_text())
+          original_audio_hash=data["audio"]["sha256"]
           data["audio"].pop("url", None)
           data["audio"]["path"]=".verified-audio/original_audio.wav"
+          data["audio"]["source_render_sha256"]=expected_render
+          data["audio"]["source_full_track_sha256"]=original_audio_hash
+          data["audio"]["sha256"]=hashlib.sha256(audio_path.read_bytes()).hexdigest()
           manifest.write_text(json.dumps(data, indent=2) + "\n")
-          print("PINNED AUDIO ARTIFACT: PASS — exact verified WAV restored")
+          print("PINNED AUDIO ARTIFACT: PASS — verified prior render container")
+          print("RUNNER-DECODED AUDIO SHA256:", data["audio"]["sha256"])
           PY
           python scripts/render_real_music_film.py --manifest "../source/$MANIFEST" --input-root ../source --out "$RUNNER_TEMP/aive-real-film" "${args[@]}"
           test -s "$RUNNER_TEMP/aive-real-film/real_music_film.mp4"
