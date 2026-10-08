@@ -8,6 +8,12 @@ on:
       - "projects/el-camion-y-la-carretera/RENDER_JOB.json"
       - ".github/workflows/camion-fx-assembly.yml"
   workflow_dispatch:
+    inputs:
+      real_render_run:
+        description: "Exact successful real-render run to consume"
+        required: false
+        type: string
+        default: ""
 
 permissions:
   actions: read
@@ -25,6 +31,7 @@ jobs:
       GH_TOKEN: ${{ github.token }}
       REPO: ${{ github.repository }}
       OUT: ${{ github.workspace }}/.camion-fx-assembly
+      REQUESTED_REAL_RENDER_RUN: ${{ inputs.real_render_run || '' }}
     steps:
       - name: Checkout isolated song branch and production manifests
         uses: actions/checkout@v4
@@ -52,7 +59,11 @@ jobs:
               "REAL_RENDER_RUN":"song-real-render.yml",
           }
           values={}
+          requested=os.environ.get("REQUESTED_REAL_RENDER_RUN","").strip()
           for key, workflow in workflows.items():
+              if key=="REAL_RENDER_RUN" and requested:
+                  values[key]=requested
+                  continue
               raw=subprocess.check_output([
                   "gh","run","list","--repo",os.environ["REPO"],
                   "--workflow",workflow,
