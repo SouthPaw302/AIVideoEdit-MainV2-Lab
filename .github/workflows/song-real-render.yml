@@ -126,8 +126,14 @@ jobs:
           assert manifest["audio"]["source_full_track_sha256"] == "6789e6f3ea52501a0d4a151296a6ef7f8abc8516acd1f6cec959213a028ec0d9"
           assert data["render_frames"] == 720
           assert data["fx"]["effects"]
+          locked={x["id"] for x in data["fx"]["effects"] + data["fx"]["transitions"]}
+          ledger=json.loads((root/"PRODUCTION_EXECUTION_LEDGER.json").read_text())
+          executed={e["subject"] for e in ledger.get("events",[]) if e.get("component")=="fx" and e.get("stage")=="executed"}
+          assert len(locked) >= 20, len(locked)
+          assert locked <= executed, {"declared_not_executed": sorted(locked-executed)}
           assert data["jev"]["decision"] in ("PASS", "CONTINUE")
           assert (root/"contact_sheet.jpg").is_file()
+          print(f"CANONICAL FX EXECUTION: PASS — {len(locked)} locked IDs executed")
           print("REAL RENDER PROOF: PASS; HUMAN VISUAL REVIEW STILL REQUIRED")
           PY
       - name: Upload actual MP4 and receipts
