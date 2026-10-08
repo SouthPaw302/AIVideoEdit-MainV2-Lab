@@ -2,10 +2,10 @@
   "schema": "aivideoedit.operating-order.v1",
   "mission": "Redo El Camión y la Carretera from verified original WAV and exact prior lyrics; author all picture from scratch in Batch-10 as isolated MainV2 Lab production.",
   "direction_authority": "music_led",
-  "production_mode": "cinematic",
+  "production_mode": "hybrid",
   "canon_lock": {
     "locked": false,
-    "picture_language": "PROVISIONAL ONLY: cinematic initialization, visual direction unselected; no media-generation authorization",
+    "picture_language": "Direction selected: La Carretera Recuerda (hybrid cinematic road coverage with restrained memory scenes); shot/character baseline not yet visually approved",
     "items": []
   },
   "accepted_baseline": {
@@ -40,8 +40,8 @@
     "forbidden_changes": [],
     "source_replacement_authorized": false
   },
-  "current_user_direction": "Import only the original song WAV and exact lyrics; be director, prepare storyboard and every other production file; create fresh media in batches of 10; boot and work with Actions and sandbox.",
-  "exact_next_action": "Recover and verify the original WAV and exact lyrics; present/lock visual route, then produce new source media only after musical and direction gates pass.",
+  "current_user_direction": "Route 2 approved; render original still and matching FX batches of 10; user delivered two Gemini true-motion EC-03 and EC-04 clips; save to Drive and splice into production; do not use 3rd Gemini.",
+  "exact_next_action": "Visually review 36-second Batch01 workprint with two Gemini clips; correct only any defects, then Batch02 ten new stills followed by its own derived frame/GIF/MP4 FX batch.",
   "updated_at_utc": "2026-10-08T00:00:00Z",
   "director_supervision": {
     "required": true,

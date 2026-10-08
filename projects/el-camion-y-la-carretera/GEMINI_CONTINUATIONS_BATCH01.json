@@ -1,0 +1,25 @@
+{
+  "schema": "aivideoedit.lab.external-continuations.v1",
+  "shots": [
+    {
+      "shot_id": "EC-03",
+      "drive_id": "101b2sDhWskSq_IT1yoDjGjflNu7A9Znd",
+      "original_filename": "gemini_generated_video_fa92aa42.mp4",
+      "source_sha256": "4a00d711dcda1038a7e016372c177a90c88061142fb2d6a4ffc59b2c5f1b5d5b",
+      "seconds": 10,
+      "role": "driving_truck_true_motion",
+      "native": "1280x720_24fps"
+    },
+    {
+      "shot_id": "EC-04",
+      "drive_id": "1-9_eaQjLjpq0GTXmnfKqbnJ_eU2ArWlq",
+      "original_filename": "gemini_generated_video_d681ba6e.mp4",
+      "source_sha256": "d9c1810e8cc124a7a8ee5ea03de60623a6468d22e662c334b8946c44012921c0",
+      "seconds": 10,
+      "role": "interior_wipers_true_motion",
+      "native": "1280x720_24fps"
+    }
+  ],
+  "source_folder_id": "1ZPY6QCm5vTSSM04YPEhSC3ZyPYeU1P6O",
+  "state": "INGESTED_AND_USED_IN_WORKPRINT_NOT_FINAL"
+}

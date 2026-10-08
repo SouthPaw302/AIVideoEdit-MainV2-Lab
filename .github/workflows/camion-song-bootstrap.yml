@@ -39,10 +39,10 @@ jobs:
           assert s["branch"]=="song/el-camion-y-la-carretera"
           assert len(json.loads((p/"STORYBOARD_DRAFT.json").read_text())["entries"])==30
           assert all(len(x["shot_ids"])==10 for x in json.loads((p/"MEDIA_BATCHES.json").read_text())["batches"])
-          assert not m["visual_direction_gate"]["locked"]
-          assert src["audio"]["status"]=="MISSING" and src["lyrics"]["status"]=="NOT_VERIFIED"
+          assert m["visual_direction_gate"]["locked"] and m["visual_direction_gate"]["user_selection"]["selected_option_numbers"]==[2]
+          assert src["audio"]["status"]=="SOURCE_IDENTIFIED_LOCAL_SHA_VERIFIED" and src["lyrics"]["complete"] is True
           print("SONG PREFLIGHT: 23 production manifests, 30-shot budget, 3 ten-shot batches")
-          print("SOURCE INPUT: BLOCKED pending verified original WAV + exact lyric master")
+          print("SOURCES IDENTIFIED: original WAV hash and 40 lyric lines; end-to-end film NOT complete")
           PY
       - name: Boot complete MainV2 Lab OS on active song branch
         env:
@@ -66,5 +66,5 @@ jobs:
         run: |
           echo '### El Camión y la Carretera — MainV2 Lab' >> "$GITHUB_STEP_SUMMARY"
           echo 'Production bootstrap is a separate gate from source ingest and visual QC.' >> "$GITHUB_STEP_SUMMARY"
-          echo '**Original WAV:** missing. **Exact lyrics:** unverified. **New production pictures:** 0.' >> "$GITHUB_STEP_SUMMARY"
-          echo '**Production stage:** INITIALIZED. No creative acceptance is implied.' >> "$GITHUB_STEP_SUMMARY"
+          echo '**Original WAV and 40 lyric lines:** identified. **Batch 01:** ten stills and derived FX loops; two Gemini true-motion continuations.' >> "$GITHUB_STEP_SUMMARY"
+          echo '**Workprint:** 36 seconds, visual acceptance PENDING; this is not a finished film.' >> "$GITHUB_STEP_SUMMARY"

@@ -14,5 +14,13 @@
     "status": "pending_audio_analysis"
   },
   "sections": [],
-  "model_resolution": null
+  "model_resolution": null,
+  "audio_local_probe": {
+    "duration_seconds": 282.84,
+    "sample_rate": 48000,
+    "channels": 2,
+    "sha256": "394a547a8866e9441c6d8b22000581f201a1324db2bc301837a8140e0a16fb4e",
+    "tempo_estimate_bpm": 92.285,
+    "method": "local beat tracking exploratory; not an authenticated ONNX result"
+  }
 }

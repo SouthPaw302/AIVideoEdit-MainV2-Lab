@@ -45,7 +45,13 @@
       ],
       "visual_qc": "PENDING",
       "fx_technical_run": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/37736654763",
-      "fx_artifact_drive": "https://drive.google.com/file/d/1QaK1TYzgGowkeeJdi1X4W5vAeDf_bd2X/view"
+      "fx_artifact_drive": "https://drive.google.com/file/d/1QaK1TYzgGowkeeJdi1X4W5vAeDf_bd2X/view",
+      "gemini_motion_sources": [
+        "EC-03",
+        "EC-04"
+      ],
+      "review_workprint_drive_id": "1I0JDI3faDes0S_3YsTFjGkz9PYOfh7FK",
+      "assembly_status": "TECHNICAL_PASS_HUMAN_PENDING"
     },
     {
       "batch": 2,
@@ -61,7 +67,7 @@
         "EC-19",
         "EC-20"
       ],
-      "status": "NOT_STARTED",
+      "status": "WAITING_BATCH01_DIRECTOR_APPROVAL",
       "files": [],
       "hashes": [],
       "visual_qc": "PENDING"

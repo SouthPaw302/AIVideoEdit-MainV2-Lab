@@ -3,5 +3,29 @@
   "effects": [],
   "transitions": [],
   "lock_verified": false,
-  "rule": "Canonical FX V2 + pixel-visible execution receipts after shot proofs, no silent substitutes."
+  "rule": "Canonical FX V2 + pixel-visible execution receipts after shot proofs, no silent substitutes.",
+  "external_video_continuations": [
+    {
+      "shot_id": "EC-03",
+      "provider": "Gemini",
+      "role": "true_motion",
+      "source_drive_id": "101b2sDhWskSq_IT1yoDjGjflNu7A9Znd",
+      "sha256": "4a00d711dcda1038a7e016372c177a90c88061142fb2d6a4ffc59b2c5f1b5d5b",
+      "duration_seconds": 10,
+      "frame_rate": 24,
+      "audio_policy": "discard",
+      "status": "EDITED_IN_WORKPRINT_VISUAL_REVIEW_PENDING"
+    },
+    {
+      "shot_id": "EC-04",
+      "provider": "Gemini",
+      "role": "true_motion",
+      "source_drive_id": "1-9_eaQjLjpq0GTXmnfKqbnJ_eU2ArWlq",
+      "sha256": "d9c1810e8cc124a7a8ee5ea03de60623a6468d22e662c334b8946c44012921c0",
+      "duration_seconds": 10,
+      "frame_rate": 24,
+      "audio_policy": "discard",
+      "status": "EDITED_IN_WORKPRINT_VISUAL_REVIEW_PENDING"
+    }
+  ]
 }

@@ -1,0 +1,121 @@
+{
+  "schema": "aivideoedit.lab.camion.batch01.gemini.splice.v1",
+  "branch": "song/el-camion-y-la-carretera",
+  "status": "WORKPRINT_TECHNICAL_PASS_VISUAL_PENDING",
+  "workprint_drive_id": "1I0JDI3faDes0S_3YsTFjGkz9PYOfh7FK",
+  "workprint_sha256": "59820f8b7b212bbc5a0201abb0c8cd58fbde54794c8bf5683cb7004436c51a04",
+  "workprint_duration_seconds": 36,
+  "output_resolution": "1280x720",
+  "output_fps": 24,
+  "video_assets_native_resolution": "8 original canonical FX loops 640x360 upscaled for workprint; 2 Gemini clips native 1280x720",
+  "source_audio_drive_id": "1LTl5s5hqbzTUBmbX0mHsLiOFETKVw5gS",
+  "source_audio_sha256": "394a547a8866e9441c6d8b22000581f201a1324db2bc301837a8140e0a16fb4e",
+  "gemini_audio_policy": "DISCARD",
+  "original_finished_video_used": false,
+  "gemini_clips": [
+    {
+      "shot_id": "EC-03",
+      "drive_id": "101b2sDhWskSq_IT1yoDjGjflNu7A9Znd",
+      "original_filename": "gemini_generated_video_fa92aa42.mp4",
+      "source_sha256": "4a00d711dcda1038a7e016372c177a90c88061142fb2d6a4ffc59b2c5f1b5d5b",
+      "seconds": 10,
+      "role": "driving_truck_true_motion",
+      "native": "1280x720_24fps"
+    },
+    {
+      "shot_id": "EC-04",
+      "drive_id": "1-9_eaQjLjpq0GTXmnfKqbnJ_eU2ArWlq",
+      "original_filename": "gemini_generated_video_d681ba6e.mp4",
+      "source_sha256": "d9c1810e8cc124a7a8ee5ea03de60623a6468d22e662c334b8946c44012921c0",
+      "seconds": 10,
+      "role": "interior_wipers_true_motion",
+      "native": "1280x720_24fps"
+    }
+  ],
+  "timeline": [
+    {
+      "shot_id": "EC-01",
+      "start_seconds": 0,
+      "end_seconds": 2,
+      "duration_seconds": 2,
+      "source_type": "MAINV2_FX_LOOP",
+      "video_audio": "ORIGINAL_WAV_ONLY"
+    },
+    {
+      "shot_id": "EC-02",
+      "start_seconds": 2,
+      "end_seconds": 4,
+      "duration_seconds": 2,
+      "source_type": "MAINV2_FX_LOOP",
+      "video_audio": "ORIGINAL_WAV_ONLY"
+    },
+    {
+      "shot_id": "EC-03",
+      "start_seconds": 4,
+      "end_seconds": 14,
+      "duration_seconds": 10,
+      "source_type": "GEMINI_TRUE_CONTINUATION",
+      "video_audio": "ORIGINAL_WAV_ONLY"
+    },
+    {
+      "shot_id": "EC-04",
+      "start_seconds": 14,
+      "end_seconds": 24,
+      "duration_seconds": 10,
+      "source_type": "GEMINI_TRUE_CONTINUATION",
+      "video_audio": "ORIGINAL_WAV_ONLY"
+    },
+    {
+      "shot_id": "EC-05",
+      "start_seconds": 24,
+      "end_seconds": 26,
+      "duration_seconds": 2,
+      "source_type": "MAINV2_FX_LOOP",
+      "video_audio": "ORIGINAL_WAV_ONLY"
+    },
+    {
+      "shot_id": "EC-06",
+      "start_seconds": 26,
+      "end_seconds": 28,
+      "duration_seconds": 2,
+      "source_type": "MAINV2_FX_LOOP",
+      "video_audio": "ORIGINAL_WAV_ONLY"
+    },
+    {
+      "shot_id": "EC-07",
+      "start_seconds": 28,
+      "end_seconds": 30,
+      "duration_seconds": 2,
+      "source_type": "MAINV2_FX_LOOP",
+      "video_audio": "ORIGINAL_WAV_ONLY"
+    },
+    {
+      "shot_id": "EC-08",
+      "start_seconds": 30,
+      "end_seconds": 32,
+      "duration_seconds": 2,
+      "source_type": "MAINV2_FX_LOOP",
+      "video_audio": "ORIGINAL_WAV_ONLY"
+    },
+    {
+      "shot_id": "EC-09",
+      "start_seconds": 32,
+      "end_seconds": 34,
+      "duration_seconds": 2,
+      "source_type": "MAINV2_FX_LOOP",
+      "video_audio": "ORIGINAL_WAV_ONLY"
+    },
+    {
+      "shot_id": "EC-10",
+      "start_seconds": 34,
+      "end_seconds": 36,
+      "duration_seconds": 2,
+      "source_type": "MAINV2_FX_LOOP",
+      "video_audio": "ORIGINAL_WAV_ONLY"
+    }
+  ],
+  "source_fx_proof_drive": "1QaK1TYzgGowkeeJdi1X4W5vAeDf_bd2X",
+  "qc_contact_sheet_drive_id": "161Up-ZsRhSOPOlIMDbkT4QpJaSRFNXov",
+  "human_visual_approval": "PENDING",
+  "next_batch_locked_until_director_review": true
+}

@@ -1,7 +1,7 @@
 {
   "schema": "aivideoedit.media-plan.v1",
-  "user_approach_established": false,
-  "production_mode": null,
+  "user_approach_established": true,
+  "production_mode": "hybrid",
   "picture_source": "fresh_original_generated",
   "visual_direction_gate": {
     "required": true,
@@ -45,11 +45,16 @@
       }
     ],
     "user_selection": {
-      "status": "pending",
-      "selected_option_numbers": [],
-      "recorded_user_instruction": null
+      "status": "accepted",
+      "selected_option_numbers": [
+        2
+      ],
+      "recorded_user_instruction": "I like 2",
+      "route_name": "La Carretera Recuerda",
+      "choice_is_about_direction_only": true,
+      "independent_media_qc_pending": true
     },
-    "locked": false
+    "locked": true
   },
   "batches": [
     {
@@ -66,7 +71,7 @@
         "EC-09",
         "EC-10"
       ],
-      "status": "SOURCE_PENDING"
+      "status": "STILLS_10_FX_TECH_PASS_GEMINI_2_IMPORTED_WORKPRINT_36S_VISUAL_PENDING"
     },
     {
       "number": 2,

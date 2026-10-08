@@ -11,9 +11,16 @@
     "fx_proofs": "1Ap2WlFDWEtS-em9k_h71J0QADbTHSUYv",
     "qc_deliveries": "1xvw2_HzWOxHfYgkduDrTvejeCiVMrT9E"
   },
-  "audio_master_id": null,
-  "lyrics_master_id": null,
+  "audio_master_id": "1LTl5s5hqbzTUBmbX0mHsLiOFETKVw5gS",
+  "lyrics_master_id": "1bnVudELIXpNCs_Yv2wc4waQgQazLtE3CW2K24o-ukTU",
   "import_source": "original_WAV_only",
   "picture_reuse_from_old_mp4": false,
-  "generated_image_count": 0
+  "generated_image_count": 0,
+  "gemini_folder_id": "1ZPY6QCm5vTSSM04YPEhSC3ZyPYeU1P6O",
+  "workprint": {
+    "drive_file_id": "1I0JDI3faDes0S_3YsTFjGkz9PYOfh7FK",
+    "receipt_drive_id": "1kpEXfDSoJSbSN2gtzYS1cuIXehrrcrEv",
+    "contact_sheet_drive_id": "161Up-ZsRhSOPOlIMDbkT4QpJaSRFNXov",
+    "status": "VISUAL_REVIEW_PENDING"
+  }
 }

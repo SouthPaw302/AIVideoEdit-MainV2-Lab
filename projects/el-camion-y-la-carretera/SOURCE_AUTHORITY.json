@@ -15,14 +15,21 @@
     "invented lyric verses"
   ],
   "audio": {
-    "status": "MISSING",
-    "file_name": null,
-    "sha256": null
+    "status": "SOURCE_IDENTIFIED_LOCAL_SHA_VERIFIED",
+    "file_name": "El camión y el Camino (Remastered x2) (1).wav",
+    "sha256": "394a547a8866e9441c6d8b22000581f201a1324db2bc301837a8140e0a16fb4e",
+    "duration_seconds": 282.84,
+    "sample_rate": 48000,
+    "channels": 2,
+    "drive_id": "1LTl5s5hqbzTUBmbX0mHsLiOFETKVw5gS",
+    "note": "Local file SHA verified; independent download of Drive copy not rehashed."
   },
   "lyrics": {
-    "status": "NOT_VERIFIED",
-    "complete": false,
-    "sha256": null
+    "status": "VERIFIED_USER_SUPPLIED_AND_DRIVE_TEXT",
+    "complete": true,
+    "line_count": 40,
+    "drive_id": "1bnVudELIXpNCs_Yv2wc4waQgQazLtE3CW2K24o-ukTU",
+    "note": "Exact forty lines supplied by user and found matching in Drive."
   },
-  "source_gate": "BLOCKED"
+  "source_gate": "SOURCES_IDENTIFIED; SONG_SYNC_LOCK_NOT_YET_COMPLETE"
 }
