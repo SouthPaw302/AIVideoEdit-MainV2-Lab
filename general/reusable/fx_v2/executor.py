@@ -51,6 +51,8 @@ class FXExecutor:
         if kind=="runtime_transition":
             out=getattr(self.runtime,impl.get("method") or rec.get("name"))(a,b,float(p),**params)
         elif kind=="adapter":
-            c=ctx or FXContext(t=float(p),duration=1.0,frame_index=0,fps=1.0);return self.apply_frame(eid,a,c,params=params,second_frame=b)
+            source=ctx or FXContext(t=0.0,duration=1.0,frame_index=0,fps=1.0)
+            c=FXContext(t=float(p),duration=1.0,frame_index=int(source.frame_index),fps=float(source.fps),energy=float(source.energy),transient=float(source.transient))
+            return self.apply_frame(eid,a,c,params=params,second_frame=b)
         else:raise RuntimeError(f"{eid} cannot be applied as a transition: implementation={kind}")
         self._receipt(eid,ctx,{"transition_progress":float(p)});return out
