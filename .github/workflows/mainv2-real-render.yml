@@ -29,7 +29,7 @@ permissions:
 
 concurrency:
   group: mainv2-real-render-${{ github.ref }}
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   real-render:
@@ -63,8 +63,10 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          sudo apt-get update -y
-          sudo apt-get install -y ffmpeg
+          if ! command -v ffmpeg >/dev/null 2>&1; then
+            sudo apt-get update -y
+            sudo apt-get install -y ffmpeg
+          fi
           python -m pip install --disable-pip-version-check numpy opencv-python-headless onnxruntime
           python -m pip install --disable-pip-version-check -r engine/general/reusable/fx_v2/requirements-runtime.txt
 
@@ -137,6 +139,8 @@ jobs:
           assert data["render_frames"] >= 24
           assert data["audio_sha256"] and data["clip_sha256"]
           assert data["fx"]["effects"]
+          assert data["jev"]["decision"] in ("PASS", "CONTINUE")
+          assert (root/"JEV_DECISION.json").is_file()
           assert (root/"contact_sheet.jpg").is_file()
           print("REAL RENDER PROOF: PASS; HUMAN VISUAL REVIEW STILL REQUIRED")
           PY
@@ -162,6 +166,7 @@ jobs:
             "$root/contact_sheet.jpg" \
             "$root/PRODUCTION_EXECUTION_LEDGER.json" \
             "$root/FX_LOCK.json" \
+            "$root/JEV_DECISION.json" \
             --repo "$GITHUB_REPOSITORY" \
             --target "$GITHUB_SHA" \
             --prerelease \

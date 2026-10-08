@@ -282,6 +282,31 @@ def render(manifest_path, input_root, out, *, require_onnx=False):
                required_consumption=True)
         record(ledger, component="onnx", subject="music-beat-onnx-v1", stage="consumed",
                actor="render_music_evidence", consumer="render_receipt")
+    # JEV is the bounded go/no-go director decision, not a replacement for real QC.
+    from general.reusable.tools.jev_decision import decide
+    fx_declared = any(s.get("fx") or s.get("transition_out") for s in m["shots"])
+    jev = decide({
+        "gate": "PASS",
+        "checks": {
+            "authorized_render_plan": m["render_authorization"] == "explicit_user_render_request",
+            "verified_picture_and_audio": bool(audio and sources),
+            "canonical_fx_lock": bool(lock_file) if fx_declared else True,
+            "onnx_evidence_available": bool(music_evidence) if require_onnx else True,
+        },
+        "model_observations": ([{
+            "authority": "evidence_only",
+            "confidence": music_evidence.get("confidence", 0.9),
+        }] if music_evidence else []),
+        "next_action_permitted": True,
+    })
+    (out / "JEV_DECISION.json").write_text(json.dumps(jev, indent=2) + "\n")
+    if jev.get("decision") not in ("PASS", "CONTINUE"):
+        raise RuntimeError("JEV denied real film rendering: " + str(jev))
+    record(ledger, component="jev", subject="verified_render_plan", stage="executed",
+           actor="jev_decision", consumer="real_film_renderer",
+           evidence=jev, required_consumption=True)
+    record(ledger, component="jev", subject="verified_render_plan", stage="consumed",
+           actor="real_film_renderer", consumer="render_receipt")
     fx = FXExecutor(seed=int(m.get("fx_seed", 302)), ledger_path=ledger, consumer="real_film_renderer")
     raw = out / "picture_intermediate.mp4"
     writer = cv2.VideoWriter(str(raw), cv2.VideoWriter_fourcc(*"mp4v"), fps, (width, height))
@@ -340,6 +365,7 @@ def render(manifest_path, input_root, out, *, require_onnx=False):
         "fps": fps, "resolution": [width, height], "video_codec": video.get("codec_name"),
         "audio_codec": sound.get("codec_name"), "fx": fx_result,
         "model": music_evidence.get("engine") if music_evidence else "not_requested",
+        "jev": jev,
         "source_lineage": "AIVideoEdit/main -> AIVideoEdit/MainV2 -> AIVideoEdit-MainV2-Lab/main",
     }
     (out / "render_receipt.json").write_text(json.dumps(receipt, indent=2) + "\n")
