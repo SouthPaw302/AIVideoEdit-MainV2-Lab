@@ -1,0 +1,171 @@
+name: El Camión — FX artifact assembly and camera review
+
+on:
+  push:
+    branches: [song/el-camion-y-la-carretera]
+    paths:
+      - "projects/el-camion-y-la-carretera/FX_ARTIFACT_INVENTORY.json"
+      - "projects/el-camion-y-la-carretera/RENDER_JOB.json"
+      - ".github/workflows/camion-fx-assembly.yml"
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: write
+
+concurrency:
+  group: camion-fx-assembly
+  cancel-in-progress: false
+
+jobs:
+  assemble-review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REPO: ${{ github.repository }}
+      OUT: ${{ runner.temp }}/camion-fx-assembly
+    steps:
+      - name: Checkout isolated song branch and production manifests
+        uses: actions/checkout@v4
+        with:
+          ref: song/el-camion-y-la-carretera
+          fetch-depth: 0
+
+      - name: Install media tools
+        run: |
+          set -euo pipefail
+          sudo apt-get update -y
+          sudo apt-get install -y ffmpeg
+
+      - name: Download the three canonical FX runner artifacts
+        run: |
+          set -euo pipefail
+          mkdir -p "$OUT/fx/batch01" "$OUT/fx/batch02" "$OUT/fx/batch03"
+          gh run download 37745325544 --repo "$REPO" --name camion-batch01-fx-37745325544 --dir "$OUT/fx/batch01"
+          gh run download 37745345877 --repo "$REPO" --name camion-batch02-fx-37745345877 --dir "$OUT/fx/batch02"
+          gh run download 37757150942 --repo "$REPO" --name camion-batch03-fx-37757150942 --dir "$OUT/fx/batch03"
+
+      - name: Verify artifact inventory and preserve continuation boundaries
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          inv=json.loads(Path("projects/el-camion-y-la-carretera/FX_ARTIFACT_INVENTORY.json").read_text())
+          assert inv["totals"] == {"source_stills":30,"loop_mp4":30,"gif":30,"derived_png":270}
+          root=Path(os.environ["OUT"])/"fx"
+          clips=sorted(root.rglob("*_FX_loop_24fps.mp4"))
+          gifs=sorted(root.rglob("*_FX_loop.gif"))
+          pngs=sorted(root.rglob("*.png"))
+          assert len(clips)==30, len(clips)
+          assert len(gifs)==30, len(gifs)
+          assert len(pngs)==270, len(pngs)
+          required={s for b in inv["batches"] for s in b["requires_true_continuation"]}
+          assert required == {"EC-02","EC-03","EC-04","EC-07","EC-10","EC-14","EC-15","EC-17","EC-19","EC-22","EC-24","EC-25","EC-26","EC-28","EC-30"}
+          print("CANONICAL FX ARTIFACT INVENTORY: PASS — 30 MP4, 30 GIF, 270 PNG")
+          print("TRUE-CONTINUATION SHOTS REMAIN PROTECTED:", ",".join(sorted(required)))
+          PY
+
+      - name: Render an editorial camera pass for environment-safe shots
+        run: |
+          set -euo pipefail
+          mkdir -p "$OUT/camera"
+          safe="EC-01 EC-05 EC-06 EC-08 EC-09 EC-11 EC-12 EC-13 EC-16 EC-18 EC-20 EC-21 EC-23 EC-27 EC-29"
+          find "$OUT/fx" -type f -name '*_FX_loop_24fps.mp4' | sort -V | while read -r src; do
+            name="$(basename "$src")"
+            shot="${name%%_FX_loop_24fps.mp4}"
+            dst="$OUT/camera/$name"
+            if [[ " $safe " == *" $shot "* ]]; then
+              ffmpeg -hide_banner -loglevel error -y -i "$src" \
+                -vf "scale=720:405:flags=lanczos,crop=640:360:x='40+40*sin(PI*t/2)':y='22+10*cos(PI*t/2)'" \
+                -an -c:v libx264 -crf 18 -preset veryfast -pix_fmt yuv420p "$dst"
+            else
+              cp "$src" "$dst"
+            fi
+          done
+          find "$OUT/camera" -type f -name '*.mp4' | sort -V > "$OUT/camera_clip_list.txt"
+          test "$(wc -l < "$OUT/camera_clip_list.txt")" -eq 30
+
+      - name: Assemble 60-second FX and camera review with original WAV
+        run: |
+          set -euo pipefail
+          AUDIO_URL="$(python - <<'PY'
+          import json
+          print(json.load(open("projects/el-camion-y-la-carretera/RENDER_JOB.json"))["audio"]["url"])
+          PY
+          )"
+          curl --fail --location --retry 3 --retry-all-errors "$AUDIO_URL" -o "$OUT/original_audio.wav"
+          python - <<'PY'
+          import os
+          from pathlib import Path
+          clips=Path(os.environ["OUT"])/"camera_clip_list.txt"
+          concat=Path(os.environ["OUT"])/"concat.txt"
+          lines=[]
+          for p in clips.read_text().splitlines():
+              lines.append("file '" + str(Path(p).resolve()).replace("'","'\\''") + "'")
+          concat.write_text("\n".join(lines)+"\n")
+          PY
+          ffmpeg -hide_banner -loglevel error -y -f concat -safe 0 -i "$OUT/concat.txt" -i "$OUT/original_audio.wav" \
+            -t 60 -map 0:v:0 -map 1:a:0 -c:v libx264 -crf 18 -preset medium -pix_fmt yuv420p \
+            -c:a aac -b:a 192k -movflags +faststart "$OUT/el_camion_fx_camera_review_60s.mp4"
+
+      - name: Technical QC and write a truthful review receipt
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib, json, os, subprocess
+          from pathlib import Path
+          out=Path(os.environ["OUT"])
+          mp4=out/"el_camion_fx_camera_review_60s.mp4"
+          probe=json.loads(subprocess.check_output([
+              "ffprobe","-v","error","-show_streams","-show_format","-of","json",str(mp4)
+          ]))
+          vs=[s for s in probe["streams"] if s["codec_type"]=="video"]
+          aus=[s for s in probe["streams"] if s["codec_type"]=="audio"]
+          assert vs and aus
+          duration=float(probe["format"]["duration"])
+          assert 59.5 <= duration <= 60.5, duration
+          assert vs[0]["width"]==640 and vs[0]["height"]==360
+          assert vs[0]["codec_name"]=="h264"
+          assert aus[0]["codec_name"]=="aac"
+          receipt={
+            "schema":"aivideoedit.camera-assembly-review.v1",
+            "project":"el-camion-y-la-carretera",
+            "branch":"song/el-camion-y-la-carretera",
+            "workflow_run_id":int(os.environ["GITHUB_RUN_ID"]),
+            "canonical_fx_runs":[37745325544,37745345877,37757150942],
+            "duration_seconds":duration,
+            "video":{"width":640,"height":360,"codec":"h264"},
+            "audio":{"codec":"aac","source":"attached original WAV via RENDER_JOB.json"},
+            "editorial_camera_pass_shots":["EC-01","EC-05","EC-06","EC-08","EC-09","EC-11","EC-12","EC-13","EC-16","EC-18","EC-20","EC-21","EC-23","EC-27","EC-29"],
+            "protected_true_continuation_shots":["EC-02","EC-03","EC-04","EC-07","EC-10","EC-14","EC-15","EC-17","EC-19","EC-22","EC-24","EC-25","EC-26","EC-28","EC-30"],
+            "technical_qc":"PASS",
+            "human_visual_approval":False,
+            "production_complete":False,
+            "note":"Editorial crop drift is a review treatment, not a claim of true articulated motion or camera capture."
+          }
+          receipt["video_sha256"]=hashlib.sha256(mp4.read_bytes()).hexdigest()
+          (out/"CAMERA_ASSEMBLY_REVIEW_RECEIPT.json").write_text(json.dumps(receipt,indent=2)+"\n")
+          print("CAMERA ASSEMBLY TECHNICAL QC: PASS")
+          PY
+
+      - name: Upload review artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: camion-fx-camera-review-${{ github.run_id }}
+          path: ${{ runner.temp }}/camion-fx-assembly/
+          retention-days: 30
+          if-no-files-found: warn
+
+      - name: Publish review-only prerelease
+        if: success()
+        run: |
+          set -euo pipefail
+          gh release create "lab-camera-review-${GITHUB_RUN_ID}" \
+            "$OUT/el_camion_fx_camera_review_60s.mp4" \
+            "$OUT/CAMERA_ASSEMBLY_REVIEW_RECEIPT.json" \
+            --repo "$REPO" --target "$GITHUB_SHA" --prerelease \
+            --title "El Camión — FX and camera review assembly" \
+            --notes "60-second technical review assembled from canonical Batch 01/02/03 FX artifacts. Editorial camera drift is limited to environment-safe shots. True-continuation shots remain protected. Human visual approval required; not final release."
