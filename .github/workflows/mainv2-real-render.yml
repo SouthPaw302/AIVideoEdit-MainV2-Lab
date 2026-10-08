@@ -1,0 +1,170 @@
+name: MainV2 Lab — REAL Music Film Render
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - scripts/render_real_music_film.py
+      - .lab/fixtures/irish-eyes-real-source-30s.json
+      - .github/workflows/mainv2-real-render.yml
+  workflow_dispatch:
+    inputs:
+      source_ref:
+        description: "Branch containing an authorized production render manifest (main or song/<slug>)"
+        type: string
+        required: true
+        default: main
+      manifest:
+        description: "Repo-relative path to approved JSON render manifest"
+        type: string
+        required: true
+        default: .lab/fixtures/irish-eyes-real-source-30s.json
+      require_onnx:
+        description: "Fail closed unless the real pinned Beat This ONNX model performs analysis"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mainv2-real-render-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  real-render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      SOURCE_REF: ${{ github.event_name == 'workflow_dispatch' && inputs.source_ref || 'main' }}
+      MANIFEST: ${{ github.event_name == 'workflow_dispatch' && inputs.manifest || '.lab/fixtures/irish-eyes-real-source-30s.json' }}
+      REQUIRE_ONNX: ${{ github.event_name == 'push' && '1' || inputs.require_onnx && '1' || '0' }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Check out complete MainV2 Lab production engine
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: engine
+          fetch-depth: 0
+
+      - name: Check out authorized production media/manifest WITHOUT changing main
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.SOURCE_REF }}
+          path: source
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install real audio/video, source QC, FX and ONNX dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update -y
+          sudo apt-get install -y ffmpeg
+          python -m pip install --disable-pip-version-check numpy opencv-python-headless onnxruntime
+          python -m pip install --disable-pip-version-check -r engine/general/reusable/fx_v2/requirements-runtime.txt
+
+      - name: Verify original pinned MainV2 lineage and lab-only scope
+        shell: bash
+        working-directory: engine
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REPOSITORY" = "SouthPaw302/AIVideoEdit-MainV2-Lab"
+          python scripts/validate_contract.py
+          python - <<'PY'
+          import bootstrap, json
+          assert bootstrap.REPOSITORY == "SouthPaw302/AIVideoEdit-MainV2-Lab"
+          p=json.load(open("SOURCE_LOCK.json"))
+          assert p["source_repository"] == "SouthPaw302/AIVideoEdit"
+          assert p["source_branch"] == "MainV2"
+          assert p["source_sha"] == "316fe96c7316d76d14308d5f27293e071aa20943"
+          print("LAB MAIN ENGINE / PINNED MainV2 PROVENANCE: PASS")
+          PY
+
+      - name: Boot exact lab main operating system and preserve approved model cache
+        shell: bash
+        working-directory: engine
+        run: |
+          set -euo pipefail
+          python bootstrap.py boot --repo-root "$PWD" --branch main --offline
+
+      - name: Provision byte-verified Beat This ONNX and refuse silent fallback
+        if: env.REQUIRE_ONNX == '1'
+        working-directory: engine
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m general.reusable.tools.model_provision music-beat-onnx-v1
+          python - <<'PY'
+          from general.reusable.tools.model_registry import ModelRegistry
+          r=ModelRegistry.load().resolve_capability("music_and_beat_analysis")
+          assert r.available and r.resolved == "music-beat-onnx-v1" and not r.used_fallback, r.reason
+          print("PINNED ONNX MODEL: PASS")
+          PY
+
+      - name: Render real SHA-pinned audio and picture with canonical FX
+        working-directory: engine
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f "../source/$MANIFEST"
+          args=()
+          if [ "$REQUIRE_ONNX" = '1' ]; then args+=(--require-onnx); fi
+          python scripts/render_real_music_film.py \
+            --manifest "../source/$MANIFEST" \
+            --input-root ../source \
+            --out "$RUNNER_TEMP/aive-real-film" "${args[@]}"
+          test -s "$RUNNER_TEMP/aive-real-film/real_music_film.mp4"
+          test -s "$RUNNER_TEMP/aive-real-film/render_receipt.json"
+
+      - name: Reject metadata theater and unauthorized creative acceptance
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          root=Path(os.environ["RUNNER_TEMP"])/"aive-real-film"
+          data=json.loads((root/"render_receipt.json").read_text())
+          assert data["status"] == "TECHNICAL_RENDER_PASS_VISUAL_REVIEW_PENDING"
+          assert data["human_visual_approval"] is False
+          assert data["production_complete"] is False
+          assert data["render_bytes"] > 100_000
+          assert data["render_frames"] >= 24
+          assert data["audio_sha256"] and data["clip_sha256"]
+          assert data["fx"]["effects"]
+          assert (root/"contact_sheet.jpg").is_file()
+          print("REAL RENDER PROOF: PASS; HUMAN VISUAL REVIEW STILL REQUIRED")
+          PY
+
+      - name: Retain actual MP4 and all receipts even when QC rejects an output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mainv2-real-film-${{ github.run_id }}
+          path: ${{ runner.temp }}/aive-real-film/
+          retention-days: 30
+          if-no-files-found: warn
+
+      - name: Publish durable PLAYABLE MP4 to lab prerelease for independent review
+        if: success()
+        shell: bash
+        run: |
+          set -euo pipefail
+          root="$RUNNER_TEMP/aive-real-film"
+          gh release create "lab-real-film-${GITHUB_RUN_ID}" \
+            "$root/real_music_film.mp4" \
+            "$root/render_receipt.json" \
+            "$root/contact_sheet.jpg" \
+            "$root/PRODUCTION_EXECUTION_LEDGER.json" \
+            "$root/FX_LOCK.json" \
+            --repo "$GITHUB_REPOSITORY" \
+            --target "$GITHUB_SHA" \
+            --prerelease \
+            --title "AIVideoEdit Lab — REAL film render, visual review pending" \
+            --notes "Real original audio and source footage, canonical MainV2 FX and hashed outputs. NOT visually approved. Original AIVideoEdit remains unchanged."
+          echo "REAL MP4 published as a review-only prerelease lab-real-film-${GITHUB_RUN_ID}" >> "$GITHUB_STEP_SUMMARY"

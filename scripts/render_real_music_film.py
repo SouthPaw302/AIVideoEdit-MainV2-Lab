@@ -76,12 +76,27 @@ def stage(media, *, input_root, cache):
     tmp = target.with_suffix(target.suffix + ".partial")
     try:
         request = urllib.request.Request(url, headers={"User-Agent": "AIVideoEdit-Lab-RealRenderer/1.0"})
-        with urllib.request.urlopen(request, timeout=180) as response, tmp.open("wb") as fd:
-            while True:
-                block = response.read(1024 * 1024)
-                if not block:
-                    break
-                fd.write(block)
+        try:
+            with urllib.request.urlopen(request, timeout=180) as response, tmp.open("wb") as fd:
+                while True:
+                    block = response.read(1024 * 1024)
+                    if not block:
+                        break
+                    fd.write(block)
+        except Exception as http_error:
+            # Public GitHub release may require authenticated asset download
+            # in restricted runners; only exact release URLs qualify.
+            match = re.fullmatch(r"https://github.com/([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)/releases/download/([^/]+)/([^/]+)", url)
+            if match is None or shutil.which("gh") is None:
+                raise
+            owner_repo, tag, filename = match.groups()
+            gh = subprocess.run(["gh", "release", "download", tag, "--repo", owner_repo,
+                                 "--pattern", filename, "--dir", str(cache), "--clobber"],
+                                capture_output=True, text=True, timeout=180)
+            retrieved = cache / filename
+            if gh.returncode or not retrieved.is_file():
+                raise RuntimeError("verified source download failed: " + filename + " " + gh.stderr[-500:]) from http_error
+            retrieved.replace(tmp)
         sha_matches(tmp, want)
         tmp.replace(target)
         return target
@@ -148,6 +163,7 @@ class VisualSource:
             raise ValueError("fit must be cover or contain")
         self.width, self.height = width, height
         self.offset = float(shot.get("source_start_seconds") or 0)
+        self.loop = shot.get("loop") is True
         if self.offset < 0:
             raise ValueError("negative source offset")
         self.still = None
@@ -174,7 +190,10 @@ class VisualSource:
             return self.still.copy()
         frame_idx = round((self.offset + seconds) * self.video_fps)
         if self.count and frame_idx >= self.count:
-            raise RuntimeError("clip too short for requested shot: " + str(self.path))
+            if self.loop:
+                frame_idx %= self.count
+            else:
+                raise RuntimeError("clip too short for requested shot: " + str(self.path))
         if frame_idx != self.cursor + 1:
             self.cap.set(cv2.CAP_PROP_POS_FRAMES, frame_idx)
         ok, frame = self.cap.read()

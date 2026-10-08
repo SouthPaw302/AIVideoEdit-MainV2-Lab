@@ -1,0 +1,162 @@
+{
+  "schema": "aivideoedit.real-render.v1",
+  "production_id": "irish-eyes-mainv2-real-source-acceptance-test",
+  "render_authorization": "explicit_user_render_request",
+  "source_policy": "source footage and original WAV only; no prior final MP4 and no synthetic frames",
+  "source_lineage": {
+    "source_repo": "SouthPaw302/AIVideoEdit",
+    "source_branch": "MainV2",
+    "source_sha": "316fe96c7316d76d14308d5f27293e071aa20943"
+  },
+  "audio": {
+    "url": "https://github.com/SouthPaw302/AIVideoEdit/releases/download/media-mountain-noir-after-midnight/source__Irish_eyes_Remastered.wav",
+    "sha256": "8b0ccd2e57a6e683d526d950bd88b42af0f0867b06e3d1b014a2b3131f3cfb1e",
+    "start_seconds": 0
+  },
+  "output": {
+    "fps": 24,
+    "width": 1280,
+    "height": 720
+  },
+  "fx_seed": 302,
+  "shots": [
+    {
+      "id": "IE-TEST-01",
+      "source": {
+        "url": "https://github.com/SouthPaw302/AIVideoEdit/releases/download/media-mountain-noir-after-midnight/source__IE_L21_ROAD_RAIN_GLASS_16x9_V3.mp4",
+        "sha256": "161dcefb278f9f09eb96f3d96041110b338f9bbe84c87469b547f860eac6821d"
+      },
+      "source_start_seconds": 0,
+      "duration_seconds": 5,
+      "loop": true,
+      "fit": "cover",
+      "fx": [
+        {
+          "id": "FX2-MOTION-003",
+          "params": {
+            "strength": 0.28,
+            "roi": [
+              0,
+              0.56,
+              1,
+              1
+            ]
+          }
+        }
+      ],
+      "transition_out": "FX2-TRANS-025",
+      "transition_seconds": 0.45
+    },
+    {
+      "id": "IE-TEST-02",
+      "source": {
+        "url": "https://github.com/SouthPaw302/AIVideoEdit/releases/download/media-mountain-noir-after-midnight/source__IE_L22_WARM_WINDOW_CANDLE_16x9_V1.mp4",
+        "sha256": "69814efe52df37fa7db1ba6ae1d89f59be27c91df027c033e831c9e5f58d4af2"
+      },
+      "source_start_seconds": 0,
+      "duration_seconds": 5,
+      "loop": true,
+      "fit": "cover",
+      "fx": [
+        {
+          "id": "FX2-LIGHT-001",
+          "params": {
+            "strength": 0.23
+          }
+        }
+      ],
+      "transition_out": "FX2-TRANS-025",
+      "transition_seconds": 0.45
+    },
+    {
+      "id": "IE-TEST-03",
+      "source": {
+        "url": "https://github.com/SouthPaw302/AIVideoEdit/releases/download/media-mountain-noir-after-midnight/source__IE_L23_DARK_LAKE_RIDGE_16x9_V2.mp4",
+        "sha256": "9bce0b9fd9f0f3eb29a8d2ea0c7bc75dd3e46ceb72e009f7fe7ee904cfb4cb0a"
+      },
+      "source_start_seconds": 0,
+      "duration_seconds": 5,
+      "loop": true,
+      "fit": "cover",
+      "fx": [
+        {
+          "id": "FX2-LIGHT-002",
+          "params": {
+            "strength": 0.23
+          }
+        }
+      ],
+      "transition_out": "FX2-TRANS-025",
+      "transition_seconds": 0.45
+    },
+    {
+      "id": "IE-TEST-04",
+      "source": {
+        "url": "https://github.com/SouthPaw302/AIVideoEdit/releases/download/media-mountain-noir-after-midnight/source__IE_L21_ROAD_RAIN_GLASS_16x9_V3.mp4",
+        "sha256": "161dcefb278f9f09eb96f3d96041110b338f9bbe84c87469b547f860eac6821d"
+      },
+      "source_start_seconds": 0,
+      "duration_seconds": 5,
+      "loop": true,
+      "fit": "cover",
+      "fx": [
+        {
+          "id": "FX2-MOTION-003",
+          "params": {
+            "strength": 0.28,
+            "roi": [
+              0,
+              0.56,
+              1,
+              1
+            ]
+          }
+        }
+      ],
+      "transition_out": "FX2-TRANS-025",
+      "transition_seconds": 0.45
+    },
+    {
+      "id": "IE-TEST-05",
+      "source": {
+        "url": "https://github.com/SouthPaw302/AIVideoEdit/releases/download/media-mountain-noir-after-midnight/source__IE_L22_WARM_WINDOW_CANDLE_16x9_V1.mp4",
+        "sha256": "69814efe52df37fa7db1ba6ae1d89f59be27c91df027c033e831c9e5f58d4af2"
+      },
+      "source_start_seconds": 0,
+      "duration_seconds": 5,
+      "loop": true,
+      "fit": "cover",
+      "fx": [
+        {
+          "id": "FX2-LIGHT-001",
+          "params": {
+            "strength": 0.23
+          }
+        }
+      ],
+      "transition_out": "FX2-TRANS-025",
+      "transition_seconds": 0.45
+    },
+    {
+      "id": "IE-TEST-06",
+      "source": {
+        "url": "https://github.com/SouthPaw302/AIVideoEdit/releases/download/media-mountain-noir-after-midnight/source__IE_L23_DARK_LAKE_RIDGE_16x9_V2.mp4",
+        "sha256": "9bce0b9fd9f0f3eb29a8d2ea0c7bc75dd3e46ceb72e009f7fe7ee904cfb4cb0a"
+      },
+      "source_start_seconds": 0,
+      "duration_seconds": 5,
+      "loop": true,
+      "fit": "cover",
+      "fx": [
+        {
+          "id": "FX2-LIGHT-002",
+          "params": {
+            "strength": 0.23
+          }
+        }
+      ]
+    }
+  ],
+  "human_visual_review": "REQUIRED_NOT_AUTOMATIC",
+  "deliverable": "30-second real music-source technical prerelease, NOT finished film"
+}
