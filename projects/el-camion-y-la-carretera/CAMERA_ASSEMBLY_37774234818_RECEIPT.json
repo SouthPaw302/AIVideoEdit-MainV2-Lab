@@ -1,0 +1,73 @@
+{
+  "schema": "aivideoedit.camera-assembly-run-receipt.v1",
+  "project": "el-camion-y-la-carretera",
+  "branch": "song/el-camion-y-la-carretera",
+  "workflow_run_id": 37774234818,
+  "workflow_url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/37774234818",
+  "conclusion": "success",
+  "commit_sha": "7b01f7c9b0788b05bef190efb82025efaed3fcf8",
+  "release_url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/tag/lab-camera-review-37774234818",
+  "mp4_url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/lab-camera-review-37774234818/el_camion_fx_camera_review_30s.mp4",
+  "receipt_url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/lab-camera-review-37774234818/CAMERA_ASSEMBLY_REVIEW_RECEIPT.json",
+  "mp4_sha256": "3549985ff4752b9fc13ff893e3b494c1d7838138bf39312f5659420f32b3a547",
+  "duration_seconds": 30,
+  "video": {
+    "width": 640,
+    "height": 360,
+    "codec": "h264"
+  },
+  "audio": {
+    "codec": "aac",
+    "source_run": 37771954430,
+    "audio_sha256": "6789e6f3ea52501a0d4a151296a6ef7f8abc8516acd1f6cec959213a028ec0d9"
+  },
+  "canonical_fx_runs": [
+    37745325544,
+    37745345877,
+    37757150942
+  ],
+  "counts": {
+    "source_stills": 30,
+    "loop_mp4": 30,
+    "gif": 30,
+    "derived_png": 270
+  },
+  "camera_pass_shots": [
+    "EC-01",
+    "EC-05",
+    "EC-06",
+    "EC-08",
+    "EC-09",
+    "EC-11",
+    "EC-12",
+    "EC-13",
+    "EC-16",
+    "EC-18",
+    "EC-20",
+    "EC-21",
+    "EC-23",
+    "EC-27",
+    "EC-29"
+  ],
+  "protected_true_continuation_shots": [
+    "EC-02",
+    "EC-03",
+    "EC-04",
+    "EC-07",
+    "EC-10",
+    "EC-14",
+    "EC-15",
+    "EC-17",
+    "EC-19",
+    "EC-22",
+    "EC-24",
+    "EC-25",
+    "EC-26",
+    "EC-28",
+    "EC-30"
+  ],
+  "technical_qc": "PASS",
+  "human_visual_approval": false,
+  "production_complete": false,
+  "note": "This is an all-batch review assembly, not the final long-form film. Editorial crop drift is not true articulated motion."
+}
