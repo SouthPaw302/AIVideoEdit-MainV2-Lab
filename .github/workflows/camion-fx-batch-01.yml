@@ -61,7 +61,7 @@ jobs:
         env:
           PYTHONUNBUFFERED: "1"
         run: |
-          python projects/el-camion-y-la-carretera/render_fx_loops.py --batch 1 --out "$RUNNER_TEMP/camion-batch01-fx"
+          PYTHONPATH="$GITHUB_WORKSPACE" python projects/el-camion-y-la-carretera/render_fx_loops.py --batch 1 --out "$RUNNER_TEMP/camion-batch01-fx"
       - name: Inspect actual results and fail if incomplete
         shell: bash
         run: |
