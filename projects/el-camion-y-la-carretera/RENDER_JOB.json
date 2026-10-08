@@ -79,7 +79,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-024",
-      "transition_seconds": 0.6
+      "transition_seconds": 1
     },
     {
       "id": "EC-22",
@@ -132,7 +132,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-026",
-      "transition_seconds": 0.6
+      "transition_seconds": 1
     },
     {
       "id": "EC-23",
@@ -166,7 +166,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.8
+      "transition_seconds": 1.2
     },
     {
       "id": "EC-24",
@@ -203,7 +203,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-032",
-      "transition_seconds": 0.6
+      "transition_seconds": 1
     },
     {
       "id": "EC-25",
@@ -249,7 +249,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-029",
-      "transition_seconds": 0.6
+      "transition_seconds": 1
     },
     {
       "id": "EC-26",
@@ -283,7 +283,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-030",
-      "transition_seconds": 0.6
+      "transition_seconds": 1
     },
     {
       "id": "EC-27",
@@ -332,7 +332,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-021",
-      "transition_seconds": 0.6
+      "transition_seconds": 1
     },
     {
       "id": "EC-28",
@@ -381,7 +381,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-031",
-      "transition_seconds": 0.6
+      "transition_seconds": 1
     },
     {
       "id": "EC-29",
@@ -433,8 +433,8 @@
           "id": "FX2-VIS-022"
         }
       ],
-      "transition_out": "FX2-TRANS-026",
-      "transition_seconds": 0.6
+      "transition_out": "FX2-TRANS-028",
+      "transition_seconds": 1
     },
     {
       "id": "EC-30",
@@ -500,6 +500,21 @@
   "fx_pass": {
     "name": "FX_BATCH_03_LAYERED_CAMERA_AND_PROMOTED_PASS",
     "engine_branch": "main",
-    "execution_requirement": "every locked effect and transition must appear as executed in PRODUCTION_EXECUTION_LEDGER.json"
+    "execution_requirement": "every locked effect and transition must appear as executed in PRODUCTION_EXECUTION_LEDGER.json",
+    "transition_pass": {
+      "mode": "distinct_motivated_transitions_between_every_batch03_still",
+      "transition_seconds": {
+        "EC-21": 1,
+        "EC-22": 1,
+        "EC-23": 1.2,
+        "EC-24": 1,
+        "EC-25": 1,
+        "EC-26": 1,
+        "EC-27": 1,
+        "EC-28": 1,
+        "EC-29": 1
+      },
+      "visual_review_required": true
+    }
   }
 }
