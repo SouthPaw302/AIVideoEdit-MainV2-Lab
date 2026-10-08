@@ -63,6 +63,15 @@ jobs:
           AIVIDEOEDIT_AUTHORITY_REF: "MainV2"
         run: |
           python bootstrap.py boot --repo-root "$GITHUB_WORKSPACE" --branch "song/irish-eyes-lab" --project "projects/irish-eyes-lab" --offline
+      - name: Assert pinned ONNX model survived bootstrap (no fallback)
+        run: |
+          python - <<'PY'
+          from general.reusable.tools.model_registry import ModelRegistry
+          r=ModelRegistry.load().resolve_capability("music_and_beat_analysis")
+          print(r.resolved, r.reason)
+          assert r.available and r.resolved == "music-beat-onnx-v1" and not r.used_fallback, "BOOTSTRAP WIPED ONNX MODEL"
+          PY
+          python -m pytest -q tests/test_lab_bootstrap_model_persistence.py
       - name: Produce 30 seconds from REAL Irish Eyes music and source footage
         env:
           MN_PROOF_OUT: ${{ runner.temp }}/irish-eyes-lab
