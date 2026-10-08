@@ -48,7 +48,7 @@ jobs:
         with:
           ref: ${{ inputs.source_ref }}
           path: source
-          fetch-depth: 1
+          fetch-depth: 0
           persist-credentials: false
 
       - uses: actions/setup-python@v5
@@ -99,6 +99,20 @@ jobs:
             test -s "$RUNNER_TEMP/candidate/$f"
           done
 
+      - name: Resolve exact immutable source commit that created the prerelease proof
+        shell: bash
+        env:
+          MANIFEST: ${{ inputs.manifest }}
+        run: |
+          set -euo pipefail
+          source_sha="$(python -c 'import json,sys; print(json.load(open(sys.argv[1]))["source_commit_sha"])' "$RUNNER_TEMP/candidate/render_receipt.json")"
+          [[ "$source_sha" =~ ^[0-9a-f]{40}$ ]]
+          git -C source cat-file -e "$source_sha^{commit}"
+          git -C source merge-base --is-ancestor "$source_sha" HEAD
+          git -C source worktree add --detach "$GITHUB_WORKSPACE/source_proof" "$source_sha"
+          cmp "source/$MANIFEST" "source_proof/$MANIFEST"
+          echo "SOURCE_PROOF_SHA=$source_sha" >> "$GITHUB_ENV"
+
       - name: Prove full-song source, current engine, FX, full export and human visual approval
         shell: bash
         env:
@@ -111,13 +125,13 @@ jobs:
         run: |
           set -euo pipefail
           engine_sha="$(git rev-parse HEAD)"
-          source_sha="$(git -C ../source rev-parse HEAD)"
+          source_sha="$SOURCE_PROOF_SHA"
           PYTHONPATH="$PWD" python scripts/release_gate.py \
             --repository "$GITHUB_REPOSITORY" \
             --source-branch "$SOURCE_REF" \
             --source-sha "$source_sha" --engine-sha "$engine_sha" \
-            --source-root ../source \
-            --manifest "../source/$MANIFEST" --review "../source/$REVIEW" \
+            --source-root ../source_proof \
+            --manifest "../source_proof/$MANIFEST" --review "../source/$REVIEW" \
             --receipt "$RUNNER_TEMP/candidate/render_receipt.json" \
             --export "$RUNNER_TEMP/candidate/real_music_film.mp4" \
             --fx-lock "$RUNNER_TEMP/candidate/FX_LOCK.json" \
