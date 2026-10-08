@@ -66,6 +66,7 @@ jobs:
       - name: Produce 30 seconds from REAL Irish Eyes music and source footage
         env:
           MN_PROOF_OUT: ${{ runner.temp }}/irish-eyes-lab
+          GH_TOKEN: ${{ github.token }}
         run: python projects/irish-eyes-lab/run_lab_proof.py
       - name: Probe real MP4 and record NO creative acceptance
         if: success()
