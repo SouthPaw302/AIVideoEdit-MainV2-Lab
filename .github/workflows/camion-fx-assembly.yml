@@ -92,11 +92,15 @@ jobs:
                   subprocess.run([
                       "ffmpeg","-hide_banner","-loglevel","error","-y","-i",str(src),
                       "-vf","scale=720:405:flags=lanczos,crop=640:360:x='40+40*sin(PI*t/2)':y='22+10*cos(PI*t/2)'",
-                      "-an","-c:v","libx264","-crf","18","-preset","veryfast",
+                      "-t","1","-an","-c:v","libx264","-crf","18","-preset","veryfast",
                       "-pix_fmt","yuv420p",str(dst)
                   ],check=True)
               else:
-                  shutil.copyfile(src,dst)
+                  subprocess.run([
+                      "ffmpeg","-hide_banner","-loglevel","error","-y","-i",str(src),
+                      "-t","1","-an","-c:v","libx264","-crf","18","-preset","veryfast",
+                      "-pix_fmt","yuv420p",str(dst)
+                  ],check=True)
           clips=sorted(dest.glob("*.mp4"))
           assert len(clips)==30, len(clips)
           (Path(os.environ["OUT"])/"camera_clip_list.txt").write_text(
