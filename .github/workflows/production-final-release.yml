@@ -113,6 +113,19 @@ jobs:
           cmp "source/$MANIFEST" "source_proof/$MANIFEST"
           echo "SOURCE_PROOF_SHA=$source_sha" >> "$GITHUB_ENV"
 
+      - name: Enforce canonical source, narrative, recut and workflow production guards
+        shell: bash
+        env:
+          SOURCE_REF: ${{ inputs.source_ref }}
+        run: |
+          set -euo pipefail
+          export AIVIDEOEDIT_REPO_ROOT="$GITHUB_WORKSPACE/source_proof"
+          export AIVIDEOEDIT_OS_ROOT="$GITHUB_WORKSPACE/engine"
+          python engine/general/reusable/tools/production_guard.py --bootstrap-phase --branch "$SOURCE_REF"
+          python engine/general/reusable/tools/narrative_guard.py --branch "$SOURCE_REF"
+          python engine/general/reusable/tools/recut_guard.py --branch "$SOURCE_REF"
+          python engine/general/reusable/tools/workflow_guard.py --branch "$SOURCE_REF"
+
       - name: Prove full-song source, current engine, FX, full export and human visual approval
         shell: bash
         env:
