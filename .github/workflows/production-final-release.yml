@@ -1,0 +1,147 @@
+name: AIVideoEdit — Human-gated final production release
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_ref:
+        description: "Locked song/<slug> or project/<slug> production branch (never main)"
+        type: string
+        required: true
+      manifest:
+        description: "Production-branch relative path to exact full-song render manifest"
+        type: string
+        required: true
+      review:
+        description: "Production-branch relative path to human review JSON"
+        type: string
+        required: true
+      proof_tag:
+        description: "Existing real-film Lab prerelease with full proof assets"
+        type: string
+        required: true
+
+permissions:
+  contents: write
+  issues: read
+
+concurrency:
+  group: aivideoedit-final-${{ inputs.source_ref }}
+  cancel-in-progress: false
+
+jobs:
+  gate-and-release:
+    name: Complete song and independently approved release ONLY
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    environment: production-release
+    steps:
+      - name: Check out immutable production engine from lab main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: engine
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: Check out the requested production source branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.source_ref }}
+          path: source
+          fetch-depth: 1
+          persist-credentials: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Deny main, untrusted tags or missing locked production authority
+        env:
+          SOURCE_REF: ${{ inputs.source_ref }}
+          PROOF_TAG: ${{ inputs.proof_tag }}
+          MANIFEST: ${{ inputs.manifest }}
+          REVIEW: ${{ inputs.review }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REPOSITORY" = "SouthPaw302/AIVideoEdit-MainV2-Lab"
+          [[ "$SOURCE_REF" == song/* || "$SOURCE_REF" == project/* ]]
+          [[ "$PROOF_TAG" =~ ^lab-real-film-[0-9]+$ ]]
+          test -f "source/$MANIFEST"
+          test -f "source/$REVIEW"
+          python engine/scripts/validate_contract.py
+          echo "Release accepts an existing prerelease proof; no render fallback."
+
+      - name: Install independent decoded media inspector
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update -y
+          sudo apt-get install -y ffmpeg
+          ffprobe -version
+          ffmpeg -version
+
+      - name: Download actual candidate and its execution evidence
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PROOF_TAG: ${{ inputs.proof_tag }}
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/candidate"
+          gh release view "$PROOF_TAG" --repo "$GITHUB_REPOSITORY" --json isPrerelease \
+            --jq '.isPrerelease' | grep -x true
+          gh release download "$PROOF_TAG" --repo "$GITHUB_REPOSITORY" \
+            --dir "$RUNNER_TEMP/candidate" --pattern real_music_film.mp4 \
+            --pattern render_receipt.json --pattern FX_LOCK.json \
+            --pattern PRODUCTION_EXECUTION_LEDGER.json --pattern contact_sheet.jpg
+          for f in real_music_film.mp4 render_receipt.json FX_LOCK.json PRODUCTION_EXECUTION_LEDGER.json contact_sheet.jpg; do
+            test -s "$RUNNER_TEMP/candidate/$f"
+          done
+
+      - name: Prove full-song source, current engine, FX, full export and human visual approval
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ github.token }}
+          SOURCE_REF: ${{ inputs.source_ref }}
+          MANIFEST: ${{ inputs.manifest }}
+          REVIEW: ${{ inputs.review }}
+        working-directory: engine
+        run: |
+          set -euo pipefail
+          engine_sha="$(git rev-parse HEAD)"
+          source_sha="$(git -C ../source rev-parse HEAD)"
+          PYTHONPATH="$PWD" python scripts/release_gate.py \
+            --repository "$GITHUB_REPOSITORY" \
+            --source-branch "$SOURCE_REF" \
+            --source-sha "$source_sha" --engine-sha "$engine_sha" \
+            --source-root ../source \
+            --manifest "../source/$MANIFEST" --review "../source/$REVIEW" \
+            --receipt "$RUNNER_TEMP/candidate/render_receipt.json" \
+            --export "$RUNNER_TEMP/candidate/real_music_film.mp4" \
+            --fx-lock "$RUNNER_TEMP/candidate/FX_LOCK.json" \
+            --ledger "$RUNNER_TEMP/candidate/PRODUCTION_EXECUTION_LEDGER.json" \
+            --contact-sheet "$RUNNER_TEMP/candidate/contact_sheet.jpg" \
+            --output "$RUNNER_TEMP/candidate/RELEASE_GATE.json"
+          test -s "$RUNNER_TEMP/candidate/RELEASE_GATE.json"
+
+      - name: Publish exact approved bytes, never a substitute or fallback
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          c="$RUNNER_TEMP/candidate"
+          test -s "$c/RELEASE_GATE.json"
+          id="$(python -c 'import json,sys; print(json.load(open(sys.argv[1]))["production_id"])' "$c/RELEASE_GATE.json")"
+          [[ "$id" =~ ^[a-zA-Z0-9_-]+$ ]]
+          tag="production-$id-$GITHUB_RUN_ID"
+          gh release create "$tag" \
+            "$c/real_music_film.mp4" "$c/RELEASE_GATE.json" \
+            "$c/render_receipt.json" "$c/FX_LOCK.json" \
+            "$c/PRODUCTION_EXECUTION_LEDGER.json" "$c/contact_sheet.jpg" \
+            --repo "$GITHUB_REPOSITORY" --target "$(git -C engine rev-parse HEAD)" \
+            --title "$id — complete verified and human-approved music film" \
+            --notes "Full song, exact sources, full decoded export, current FX lineage and authenticated human approval. Audit RELEASE_GATE.json for acceptance evidence."
+          echo "Final production release gate PASS: $tag" >> "$GITHUB_STEP_SUMMARY"
