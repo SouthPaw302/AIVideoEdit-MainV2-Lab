@@ -1,0 +1,102 @@
+name: El Camión — Batch 03 FX Loops (MainV2 Runner)
+
+on:
+  push:
+    branches: [song/el-camion-y-la-carretera]
+    paths:
+      - "projects/el-camion-y-la-carretera/FX_BATCH_03.json"
+      - "projects/el-camion-y-la-carretera/media/batch_03/source/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: camion-lab-fx-batch-03
+  cancel-in-progress: false
+
+jobs:
+  derive-and-render-fx-10:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Checkout isolated lab and ten byte-pinned original stills
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Assert only lab authority and original source integrity
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REPOSITORY" = "SouthPaw302/AIVideoEdit-MainV2-Lab"
+          test "$GITHUB_REF_NAME" = "song/el-camion-y-la-carretera"
+          python scripts/validate_contract.py
+          python - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          p=Path("projects/el-camion-y-la-carretera/FX_BATCH_03.json")
+          j=json.loads(p.read_text())
+          assert len(j["shots"])==10
+          for shot in j["shots"]:
+              f=Path("projects/el-camion-y-la-carretera")/shot["source"]
+              assert f.is_file(),str(f)
+              h=hashlib.sha256(f.read_bytes()).hexdigest()
+              assert h==shot["source_sha256"],f"source image changed: {f}"
+          print("SOURCE FRAME GATE: PASS — 10 immutable originals")
+          PY
+      - name: Install actual canonical FX runtime and GIF/MP4 encoders
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y ffmpeg
+          python -m pip install --disable-pip-version-check -r general/reusable/fx_v2/requirements-runtime.txt "Pillow>=10,<13"
+      - name: Boot original MainV2 operating system (isolated lab)
+        env:
+          AIVIDEOEDIT_VALIDATION_MODE: "1"
+          AIVIDEOEDIT_AUTHORITY_REF: MainV2
+        run: |
+          python bootstrap.py boot --repo-root "$GITHUB_WORKSPACE" --branch "song/el-camion-y-la-carretera" --project "projects/el-camion-y-la-carretera" --offline
+          python .aivideoedit/os/general/reusable/tools/production_guard.py --branch song/el-camion-y-la-carretera
+      - name: Render derived frame variations, 24fps source motion, GIF loops, QC
+        env:
+          PYTHONUNBUFFERED: "1"
+        run: |
+          PYTHONPATH="$GITHUB_WORKSPACE" python projects/el-camion-y-la-carretera/render_fx_loops.py --batch 3 --out "$RUNNER_TEMP/camion-batch03-fx"
+      - name: Inspect actual results and fail if incomplete
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json,os,hashlib
+          from pathlib import Path
+          base=Path(os.environ["RUNNER_TEMP"])/"camion-batch03-fx"
+          data=json.loads((base/"FX_BATCH_03_QC.json").read_text())
+          assert data["source_images"]==10 and data["rendered_mp4s"]==10 and data["rendered_gifs"]==10
+          assert data["effects_actual_execution_verified"]
+          for shot in data["shot_results"]:
+              for key,sha_key in [("mp4","mp4_sha256"),("gif","gif_sha256")]:
+                  p=base/shot[key]
+                  assert p.is_file()
+                  assert hashlib.sha256(p.read_bytes()).hexdigest()==shot[sha_key]
+              assert len(shot["png_variations"])>=8
+              assert shot["seam_mae"]<=0.0001
+              assert shot["human_visual_qc"]=="PENDING"
+          print("FX BATCH-03 TECHNICAL PASS: 10 MP4+GIF loops and 90+ derived PNG frames")
+          print("HUMAN VISUAL APPROVAL PENDING. NEXT BATCH NOT UNLOCKED.")
+          PY
+      - name: Upload 10 source-derived FX loops and evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: camion-batch03-fx-${{ github.run_id }}
+          path: ${{ runner.temp }}/camion-batch03-fx/
+          if-no-files-found: warn
+          retention-days: 30
+      - name: Record accurate director-gate status
+        if: always()
+        run: |
+          echo "### El Camión — FX Batch 03" >> "$GITHUB_STEP_SUMMARY"
+          echo "Canonical FX render requested; check executed steps, QC report and artifact before claiming output." >> "$GITHUB_STEP_SUMMARY"
+          echo "**Technical QC:** check run steps and uploaded artifact." >> "$GITHUB_STEP_SUMMARY"
+          echo "**Human visual QC:** PENDING. **Batch 03:** LOCKED until Batch 03 FX and visual review are approved." >> "$GITHUB_STEP_SUMMARY"

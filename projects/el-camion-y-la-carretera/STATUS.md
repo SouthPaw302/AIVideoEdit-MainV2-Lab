@@ -11,3 +11,6 @@ Route **2 — La Carretera Recuerda (hybrid)** locked, original WAV and 40 lyric
 - **Batch 03**: ten planned stills plus its own derivative FX batch; not started until the Batch02 FX review.
 
 **Current work remains only in AIVideoEdit-MainV2-Lab song branch. No original AIVideoEdit main modification.**
+
+## Batch 03 — source-production gate
+User authorized B03. EC-21 through EC-30 are directed in BATCH03_DIRECTOR_BRIEF.md and FX_BATCH_03.json. Image tool attempts produced **collage sheets**, not compliant separate stills; collages rejected, **0/10 usable source stills**. Batch03 FX workflow installed but not run; source SHA and individual image QC pending. No acceptance/FX PASS claimed.

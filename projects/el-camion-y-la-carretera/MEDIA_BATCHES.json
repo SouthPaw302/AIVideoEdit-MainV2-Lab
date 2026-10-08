@@ -114,10 +114,12 @@
         "EC-29",
         "EC-30"
       ],
-      "status": "NOT_STARTED",
+      "status": "DIRECTION_LOCKED_INDIVIDUAL_SOURCE_IMAGES_MISSING",
       "files": [],
       "hashes": [],
-      "visual_qc": "PENDING"
+      "visual_qc": "PENDING_SOURCE_GENERATION",
+      "fx_status": "RUNNER_WORKFLOW_STAGED_NOT_EXECUTED",
+      "planned_manifest": "projects/el-camion-y-la-carretera/FX_BATCH_03.json"
     }
   ]
 }
