@@ -14,6 +14,7 @@ on:
         default: true
 
 permissions:
+  actions: write
   contents: write
 
 concurrency:
@@ -144,11 +145,22 @@ jobs:
           path: ${{ runner.temp }}/aive-real-film/
           retention-days: 30
           if-no-files-found: warn
-      - name: Publish review-only prerelease
+      - name: Publish review-only prerelease when repository permits
         if: success()
         shell: bash
         run: |
           set -euo pipefail
           root="$RUNNER_TEMP/aive-real-film"
-          gh release create "el-camion-real-${GITHUB_RUN_ID}" "$root/real_music_film.mp4" "$root/render_receipt.json" "$root/contact_sheet.jpg" "$root/PRODUCTION_EXECUTION_LEDGER.json" "$root/FX_LOCK.json" "$root/JEV_DECISION.json" --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --prerelease --title "El camión — Batch 03 real render, review pending" --notes "Original attached WAV and approved Batch 03 source stills. Technical prerelease only; independent visual review and final archive remain separate gates."
+          if gh release create "el-camion-real-${GITHUB_RUN_ID}" "$root/real_music_film.mp4" "$root/render_receipt.json" "$root/contact_sheet.jpg" "$root/PRODUCTION_EXECUTION_LEDGER.json" "$root/FX_LOCK.json" "$root/JEV_DECISION.json" --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --prerelease --title "El camión — Batch 03 real render, review pending" --notes "Original attached WAV and approved Batch 03 source stills. Technical prerelease only; independent visual review and final archive remain separate gates."; then
+            echo "REVIEW PRERELEASE: PUBLISHED" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "REVIEW PRERELEASE: unavailable from this runner token; Actions artifact remains the canonical review deliverable." >> "$GITHUB_STEP_SUMMARY"
+          fi
 
+      - name: Trigger downstream FX assembly from this exact render
+        if: success()
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh workflow run camion-fx-assembly.yml --repo "$GITHUB_REPOSITORY" --ref "$GITHUB_REF_NAME" -f real_render_run="$GITHUB_RUN_ID"
+          echo "DOWNSTREAM ASSEMBLY: DISPATCHED FOR REAL_RENDER_RUN=$GITHUB_RUN_ID" >> "$GITHUB_STEP_SUMMARY"
