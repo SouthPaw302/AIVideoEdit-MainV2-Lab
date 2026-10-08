@@ -1,0 +1,87 @@
+name: MainV2 Lab — Full compile and inherited gates
+
+on:
+  push:
+    branches: [MainV2, "song/**"]
+    paths:
+      - "bootstrap.py"
+      - "general/**"
+      - "prototype/**"
+      - "projects/**"
+      - ".lab/**"
+      - ".github/workflows/mainv2-lab-full-compile.yml"
+  pull_request:
+    branches: [main, MainV2]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  complete-stack-compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install verification dependencies
+        run: python -m pip install numpy opencv-python-headless pytest pyyaml
+      - name: Enforce source identity and isolation rules
+        run: |
+          python scripts/validate_contract.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          m=json.loads(Path(".lab/MIRROR_RECEIPT.json").read_text())
+          p=json.loads(Path("SOURCE_LOCK.json").read_text())
+          assert m["source_commit"] == p["source_sha"]
+          assert m["source_file_bytes_equal"] is True
+          assert m["verified_source_files"] == 238
+          assert m["upstream_workflows_preserved"] == 13
+          assert m["human_approved"] is False
+          assert m["production_released"] is False
+          print("SOURCE MIRROR RECEIPT: PASS")
+          PY
+      - name: Compile entire inherited code stack
+        run: |
+          python -m compileall -q bootstrap.py general/reusable prototype/backend_gui
+      - name: Parse all inherited and lab JSON + original workflow YAMLs
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          import yaml
+          paths=[p for p in Path(".").rglob("*.json") if ".git" not in p.parts]
+          for p in paths: json.loads(p.read_text(encoding="utf-8"))
+          workflows=list(Path(".lab/upstream-workflows").glob("*.yml"))
+          assert len(workflows) == 13, len(workflows)
+          for p in workflows:
+              assert isinstance(yaml.safe_load(p.read_text(encoding="utf-8")), dict)
+          print("Parsed",len(paths),"JSON files and",len(workflows),"inherited workflows")
+          PY
+      - name: Run original MainV2 surgical regression
+        run: python general/reusable/tools/surgical_verify.py --json-out /tmp/mainv2-lab-surgical.json
+      - name: Run inherited FX and camera tests
+        run: pytest -q general/reusable/fx_v2/tests/test_camera_fx.py general/reusable/fx_v2/tests/test_fx_resolver.py
+      - name: Run actual FX precompile and lock verification
+        run: |
+          python general/reusable/fx_v2/precompile_gate.py --engine-test --manifest general/reusable/fx_v2/examples/approved-runtime-core.fx.json --lock-out /tmp/mainv2-lab-fx-lock.json
+          python general/reusable/fx_v2/precompile_gate.py --engine-test --manifest general/reusable/fx_v2/examples/approved-runtime-core.fx.json --verify-lock /tmp/mainv2-lab-fx-lock.json
+      - name: Upload bounded evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mainv2-lab-stack-compile-${{ github.run_id }}
+          path: |
+            /tmp/mainv2-lab-surgical.json
+            /tmp/mainv2-lab-fx-lock.json
+          retention-days: 30
+      - name: Report no artistic approval
+        if: always()
+        run: |
+          echo "Compiled MainV2 lab code, JSON, inherited workflow definitions and FX gates." >> "$GITHUB_STEP_SUMMARY"
+          echo "**This is technical evidence only; real-film human acceptance is not part of this workflow.**" >> "$GITHUB_STEP_SUMMARY"
