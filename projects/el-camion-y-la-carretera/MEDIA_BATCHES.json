@@ -2,7 +2,7 @@
   "schema": "aivideoedit.batches.v1",
   "batch_size": 10,
   "total_shots": 30,
-  "generated": 0,
+  "generated": 10,
   "batches": [
     {
       "batch": 1,
@@ -18,10 +18,34 @@
         "EC-09",
         "EC-10"
       ],
-      "status": "NOT_STARTED",
-      "files": [],
-      "hashes": [],
-      "visual_qc": "PENDING"
+      "status": "STILLS_GENERATED_FX_TECH_PASS_VISUAL_PENDING",
+      "files": [
+        "projects/el-camion-y-la-carretera/media/batch_01/source/EC-01.png",
+        "projects/el-camion-y-la-carretera/media/batch_01/source/EC-02.png",
+        "projects/el-camion-y-la-carretera/media/batch_01/source/EC-03.png",
+        "projects/el-camion-y-la-carretera/media/batch_01/source/EC-04.png",
+        "projects/el-camion-y-la-carretera/media/batch_01/source/EC-05.png",
+        "projects/el-camion-y-la-carretera/media/batch_01/source/EC-06.png",
+        "projects/el-camion-y-la-carretera/media/batch_01/source/EC-07.png",
+        "projects/el-camion-y-la-carretera/media/batch_01/source/EC-08.png",
+        "projects/el-camion-y-la-carretera/media/batch_01/source/EC-09.png",
+        "projects/el-camion-y-la-carretera/media/batch_01/source/EC-10.png"
+      ],
+      "hashes": [
+        "377c67ef530d4353a648fe9787a547c4c09f50ebb8e900178c5236f64871ad26",
+        "c5c0b5841946f13fe7ebeb50d4a5361a3230c7a51550c032dbeb98a87bcbe804",
+        "ad28619d881a5d69351fdcf1ac9b4f982004195585c60036193747c35c242433",
+        "39badac34456b2dd444a4f3a529079702502d1599b41e87bc8951a45ae5ff446",
+        "7cc1b0c6767426af092da8bfbcc1d753534ad451dd748d7e2d647bbcce833633",
+        "f88f1adfbc0b21a415bf7b8746a12ece2976a5cccb2f45831df63b4531365fe3",
+        "3c567beaf3d1f1731083513e74c567051d5e81ebcfb3f6016810ece8bd7c9835",
+        "eb3a9167937075bcf64cf0d9f1a405670bafd780d813a92e334605a06133b08b",
+        "f0a2ce38538e6aa5a4fb166d3d70be0b402424bc4de5d7d78119ef922017eecd",
+        "a63826d16119593eeadbf39a4e10b5ad4dde659844129b29956f1f7bac3af2db"
+      ],
+      "visual_qc": "PENDING",
+      "fx_technical_run": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/37736654763",
+      "fx_artifact_drive": "https://drive.google.com/file/d/1QaK1TYzgGowkeeJdi1X4W5vAeDf_bd2X/view"
     },
     {
       "batch": 2,

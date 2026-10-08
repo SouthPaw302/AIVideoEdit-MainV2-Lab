@@ -1,0 +1,33 @@
+{
+  "schema": "aivideoedit.fx-batch-run-receipt.v1",
+  "song": "el-camion-y-la-carretera",
+  "branch": "song/el-camion-y-la-carretera",
+  "batch": 1,
+  "base_source_sha": "6b9eff8c56a5dfe5fc884e0bf9dfb52927474d45",
+  "workflow": "El Camión — Batch 01 FX Loops (MainV2 Runner)",
+  "workflow_run_id": 37736654763,
+  "workflow_url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/37736654763",
+  "workflow_conclusion": "success",
+  "artifact_id": 11532360782,
+  "github_artifact_bytes": 77841051,
+  "artifact_zip_sha256": "a8c18e18c04b1b4d6e7b36dba484c3169ea0173db9528f0d668df49fc55e38e3",
+  "durable_zip_url": "https://drive.google.com/file/d/1QaK1TYzgGowkeeJdi1X4W5vAeDf_bd2X/view",
+  "contact_sheet_url": "https://drive.google.com/file/d/1h9w7ksj-80nV3ukW1XqDE5QMD5owNO4u/view",
+  "source_stills": 10,
+  "loop_mp4_count": 10,
+  "gif_count": 10,
+  "derived_png_snapshots": 90,
+  "frames_per_clip": 48,
+  "fps": 24,
+  "seconds_per_shot": 2,
+  "loop_seam_mae": 0,
+  "fx_engine": "general.reusable.fx_v2.executor.FXExecutor",
+  "human_visual_review": "PENDING",
+  "next_batch_authorized": false,
+  "notes": [
+    "Each output is built from exact SHA-pinned original stills.",
+    "Loop closing frame enforced by rendering script; seam metrics do not prove aesthetic continuity.",
+    "Five shots require real articulated motion and should use true video continuation rather than still warping.",
+    "No production Main branch modified."
+  ]
+}
