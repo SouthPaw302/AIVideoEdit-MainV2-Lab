@@ -135,7 +135,7 @@ jobs:
           import hashlib, json, os, subprocess
           from pathlib import Path
           out=Path(os.environ["OUT"])
-          mp4=out/"el_camion_fx_camera_review_60s.mp4"
+          mp4=out/"el_camion_fx_camera_review_30s.mp4"
           probe=json.loads(subprocess.check_output([
               "ffprobe","-v","error","-show_streams","-show_format","-of","json",str(mp4)
           ]))
