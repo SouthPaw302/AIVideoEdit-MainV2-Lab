@@ -262,5 +262,22 @@
     "ARCHIVED": [
       "archive_complete"
     ]
+  },
+  "release_gate_policy": {
+    "fail_closed": true,
+    "full_song_required": true,
+    "real_source_required": true,
+    "human_verified_comment_required": true,
+    "actual_export_inspection_required": true,
+    "production_contract_is_top_level_authority": true,
+    "technical_workflows_are_prerelease_only": true,
+    "source_commit_and_engine_commit_locked": true,
+    "audio_and_timeline_must_match_full_source": true,
+    "export_fx_ledger_and_review_hashes_must_match": true,
+    "final_master_archive_4k_blocked_without_pass": true,
+    "release_gate_report_file": "RELEASE_GATE.json",
+    "release_gate_implementation": "scripts/release_gate.py",
+    "human_approval_authority": "authenticated human GitHub issue comment identifying exact export and source SHA with complete normal-speed playback",
+    "never_autocertify_from_render": true
   }
 }
