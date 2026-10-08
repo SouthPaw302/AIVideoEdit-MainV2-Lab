@@ -1,0 +1,44 @@
+{
+  "schema": "aivideoedit.model-registry.v1",
+  "models": [
+    {
+      "id": "music-beat-onnx-v1",
+      "capability": "music_and_beat_analysis",
+      "purpose": "Beat/downbeat and tempo evidence for production timing.",
+      "runtime": "onnxruntime",
+      "provider": "Beat This!",
+      "source_repository": "mosynthkey/beat_this_cpp",
+      "source_commit": "07ab790a9ec2eda8093d52d249e3ec4f0510ee72",
+      "source_path": "onnx/beat_this.onnx",
+      "source_git_blob_sha1": "e2363cec9872bacf8867945b71ddaed879089995",
+      "source_size_bytes": 83077778,
+      "download_url": "https://raw.githubusercontent.com/mosynthkey/beat_this_cpp/07ab790a9ec2eda8093d52d249e3ec4f0510ee72/onnx/beat_this.onnx",
+      "upstream_repository": "CPJKU/beat_this",
+      "license": "MIT",
+      "version": "beat-this-final0-onnx14",
+      "artifact_path": ".aivideoedit/models/beat_this/beat_this.onnx",
+      "hardware": {
+        "required": "cpu",
+        "optional": "gpu"
+      },
+      "fallback": "music-beat-micro-dsp-v1",
+      "authority": "evidence_only",
+      "enabled": true
+    },
+    {
+      "id": "music-beat-micro-dsp-v1",
+      "capability": "music_and_beat_analysis",
+      "purpose": "Small deterministic CPU rhythm fallback for bounded verification.",
+      "runtime": "builtin_python",
+      "source": "general/reusable/tools/music_beat_worker.py",
+      "version": "1",
+      "artifact_path": null,
+      "hardware": {
+        "required": "cpu"
+      },
+      "fallback": null,
+      "authority": "evidence_only",
+      "enabled": true
+    }
+  ]
+}

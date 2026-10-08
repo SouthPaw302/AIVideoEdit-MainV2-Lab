@@ -1,0 +1,51 @@
+{
+  "schema": "aivideoedit.surgical-golden-state.v1",
+  "project": {
+    "branch": "song/golden-fixture",
+    "project_dir": "projects/golden-fixture",
+    "state": {
+      "stage": "SHOT_PROOFS_ACCEPTED",
+      "exact_next_action": "Tune camera amplitude only."
+    },
+    "operating_order": {
+      "exact_next_action": "Tune camera amplitude only.",
+      "canon_lock": {
+        "locked": true,
+        "picture_language": "Accepted living-scene world.",
+        "items": [
+          "hero identity",
+          "composition",
+          "timing"
+        ]
+      },
+      "accepted_baseline": {
+        "status": "accepted",
+        "file_or_locator": "blob://golden-master",
+        "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "user_acceptance_statement": "Keep this baseline and fix camera amplitude."
+      },
+      "refinement_scope": {
+        "active": true,
+        "goal": "Reduce camera amplitude.",
+        "allowed_changes": [
+          "camera amplitude"
+        ],
+        "forbidden_changes": [
+          "hero imagery",
+          "timing",
+          "picture language"
+        ],
+        "restart_authorized": false
+      },
+      "recut_scope": {
+        "active": false
+      }
+    }
+  },
+  "expected": {
+    "allowed_gate": "PASS",
+    "forbidden_gate": "DENY",
+    "jev_after_allowed_gate": "CONTINUE",
+    "harness_route_when_disabled": "authorized_sandbox_agent"
+  }
+}

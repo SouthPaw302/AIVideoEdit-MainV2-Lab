@@ -1,0 +1,73 @@
+name: MainV2 Micro Production
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - MainV2
+    paths:
+      - "bootstrap.py"
+      - "prototype/backend_gui/core_adapter.py"
+      - "prototype/backend_gui/production_project.py"
+      - "prototype/backend_gui/production_fx.py"
+      - "prototype/backend_gui/tool_api.py"
+      - "prototype/backend_gui/production_archive.py"
+      - "prototype/backend_gui/probes/mainv2_micro_production.py"
+      - "general/reusable/fx_v2/**"
+      - "general/reusable/AIVIDEOEDIT_OS_MANIFEST.json"
+      - "general/reusable/PRODUCTION_CONTRACT.json"
+      - "general/reusable/DIRECTOR_SUPERVISION.md"
+      - "general/reusable/tools/production_guard.py"
+      - "general/reusable/tools/recipe_execution_guard.py"
+      - "general/reusable/tools/director_checkpoint.py"
+      - "general/reusable/tools/execution_ledger.py"
+      - "projects/OPERATING_ORDER_TEMPLATE.json"
+      - ".github/workflows/mainv2-micro-production.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  micro-production:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      AIVE_PROBE_EVIDENCE: /tmp/aive-micro-production
+      AIVE_CORE_REF: MainV2
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install media runtime
+        run: |
+          if ! command -v ffmpeg >/dev/null 2>&1; then
+            sudo apt-get update -y
+            sudo apt-get install -y ffmpeg
+          fi
+          python -m pip install -r general/reusable/fx_v2/requirements-runtime.txt
+      - name: Assert validation branch
+        run: test "$(git branch --show-current)" = "MainV2"
+      - name: Run actual micro production
+        run: python prototype/backend_gui/probes/mainv2_micro_production.py
+      - name: Package compact evidence
+        if: always()
+        run: |
+          cd /tmp/aive-micro-production
+          tar -czf /tmp/mainv2-micro-production.tgz result.json stack.log 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mainv2-micro-production
+          path: /tmp/mainv2-micro-production.tgz
+          retention-days: 3
+      - name: Upload final micro-production video
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mainv2-micro-production-video
+          path: /tmp/aive-micro-production/final_video.mp4
+          if-no-files-found: error
+          retention-days: 3

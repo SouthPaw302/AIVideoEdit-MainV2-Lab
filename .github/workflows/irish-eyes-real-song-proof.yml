@@ -1,0 +1,129 @@
+name: MainV2 Lab — Irish Eyes real-song proof
+
+on:
+  push:
+    branches:
+      - song/irish-eyes-lab
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mainv2-irish-eyes-lab
+  cancel-in-progress: false
+
+jobs:
+  real-song-proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - name: Checkout lab song branch and complete MainV2 code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Verify source pin, scope, and no production write
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REPOSITORY" = "SouthPaw302/AIVideoEdit-MainV2-Lab"
+          test "$(git branch --show-current)" = "song/irish-eyes-lab"
+          python scripts/validate_contract.py
+          python - <<'PY'
+          import json
+          r=json.load(open(".lab/MIRROR_RECEIPT.json"))
+          p=json.load(open("SOURCE_LOCK.json"))
+          assert r["source_commit"] == p["source_sha"]
+          assert r["verified_source_files"] == 238
+          assert r["upstream_workflows_preserved"] == 13
+          assert r["source_file_bytes_equal"] is True
+          print("MAINV2 MIRROR GATE: PASS; real visual acceptance pending")
+          PY
+          git diff --exit-code origin/MainV2 -- bootstrap.py general/reusable prototype/backend_gui
+      - name: Install source production dependencies
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y ffmpeg
+          python -m pip install numpy onnxruntime opencv-python-headless
+          python -m pip install -r general/reusable/fx_v2/requirements-runtime.txt
+      - name: Compile MainV2 critical path
+        run: |
+          python -m py_compile bootstrap.py
+          python -m py_compile general/reusable/tools/music_beat_worker.py
+          python -m py_compile general/reusable/fx_v2/executor.py
+          python -m py_compile projects/irish-eyes-lab/run_lab_proof.py
+      - name: Provision real Beat This ONNX engine
+        run: python -m general.reusable.tools.model_provision music-beat-onnx-v1
+      - name: Boot pinned LAB MainV2 production authority
+        env:
+          AIVIDEOEDIT_VALIDATION_MODE: "1"
+          AIVIDEOEDIT_AUTHORITY_REF: "MainV2"
+        run: |
+          python bootstrap.py boot --repo-root "$GITHUB_WORKSPACE" --branch "song/irish-eyes-lab" --project "projects/irish-eyes-lab" --offline
+      - name: Assert pinned ONNX model survived bootstrap (no fallback)
+        run: |
+          python - <<'PY'
+          from general.reusable.tools.model_registry import ModelRegistry
+          r=ModelRegistry.load().resolve_capability("music_and_beat_analysis")
+          print(r.resolved, r.reason)
+          assert r.available and r.resolved == "music-beat-onnx-v1" and not r.used_fallback, "BOOTSTRAP WIPED ONNX MODEL"
+          PY
+          python -m pytest -q tests/test_lab_bootstrap_model_persistence.py
+      - name: Produce 30 seconds from REAL Irish Eyes music and source footage
+        env:
+          MN_PROOF_OUT: ${{ runner.temp }}/irish-eyes-lab
+          GH_TOKEN: ${{ github.token }}
+        run: python projects/irish-eyes-lab/run_lab_proof.py
+      - name: Probe real MP4 and record NO creative acceptance
+        if: success()
+        run: |
+          python scripts/inspect_render.py "${{ runner.temp }}/irish-eyes-lab/Mountain_Noir_Director_Proof_30s.mp4" "${{ runner.temp }}/irish-eyes-lab/technical_report.json"
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          p=Path(os.environ["RUNNER_TEMP"])/"irish-eyes-lab"/"technical_report.json"
+          j=json.loads(p.read_text())
+          assert j["human_visual_approval"] is False
+          assert j["production_complete"] is False
+          assert j["technical_render_status"] == "PASS"
+          print("TECHNICAL PROOF PASS — ARTISTIC REVIEW PENDING")
+          PY
+      - name: Preserve proof artifacts even when a gate fails
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: irish-eyes-lab-proof-${{ github.run_id }}
+          path: ${{ runner.temp }}/irish-eyes-lab/
+          retention-days: 30
+          if-no-files-found: warn
+      - name: Publish durable playable VIDEO for human review (not final release)
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          tag="lab-irish-eyes-proof-${GITHUB_RUN_ID}"
+          dir="${RUNNER_TEMP}/irish-eyes-lab"
+          gh release create "$tag" \
+            "$dir/Mountain_Noir_Director_Proof_30s.mp4" \
+            "$dir/result.json" \
+            "$dir/technical_report.json" \
+            "$dir/FX_LOCK.json" \
+            "$dir/PRODUCTION_EXECUTION_LEDGER.json" \
+            --prerelease \
+            --target "$GITHUB_SHA" \
+            --title "Irish Eyes — MainV2 LAB proof, human review pending" \
+            --notes "REAL SONG TEST ONLY. Produced by lab's pinned MainV2. Automated technical checks do not constitute visual acceptance. Human review is REQUIRED; no promotion to production Main."
+          echo "Proof uploaded to lab GitHub Releases as prerelease: $tag" >> "$GITHUB_STEP_SUMMARY"
+      - name: Report actual gate state
+        if: always()
+        shell: bash
+        run: |
+          echo "### MainV2 real music test" >> "$GITHUB_STEP_SUMMARY"
+          echo "TECHNICAL_RESULT: see video evidence and checks." >> "$GITHUB_STEP_SUMMARY"
+          echo "VISUAL_ACCEPTANCE: **PENDING HUMAN REVIEW**. This job cannot self-approve creativity." >> "$GITHUB_STEP_SUMMARY"

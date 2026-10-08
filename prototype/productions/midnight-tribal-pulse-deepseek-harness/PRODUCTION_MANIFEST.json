@@ -1,0 +1,51 @@
+{
+  "schema": "aivideoedit.deepseek-harness-production.v1",
+  "production_id": "midnight-tribal-pulse-deepseek-harness-test",
+  "host_branch": "prototype/deepseek-harness",
+  "main_mutation": false,
+  "harness_validation": {
+    "workflow_run_id": 35321432834,
+    "workflow_conclusion": "success",
+    "canonical_core_bootstrap": "PASS",
+    "harness_mcp_smoke_test": "PASS",
+    "prototype_module_compile": "PASS",
+    "canonical_core_branch": "main",
+    "canonical_main_commit": "5df7387e24c4dec7c1d8c8af07e03c3396f9d96b",
+    "core_mode": "isolated-canonical-main"
+  },
+  "direction": {
+    "direction_authority": "reference_led",
+    "production_mode": "hybrid",
+    "visual_reference_supplied": true,
+    "no_reference_gate_required": false,
+    "concept": "Non-literal midnight ritual/pilgrimage through one stable Mescalito dream-world; music drives intensity, color, depth and atmospheric motion."
+  },
+  "music": {
+    "duration_seconds": 264.024,
+    "estimated_bpm": 123.046875,
+    "structure_transition_seconds": [0,28,48,76,108,124,140,200,248,264]
+  },
+  "sources": {
+    "audio_drive_id": "1Oo1p3JqHpYuVt5sSfz9qWXrAqaDyEB5n",
+    "audio_sha256": "a6085dbcf4c5673407dbc715492f2f8c79a36ad519bc31d74572456c1182c44f",
+    "reference_video_drive_id": "10cjCocD5JRSdINr05a44ViSRq1NRvReN",
+    "reference_video_sha256": "e2b251b866a6a9f2ac4b329ade2ee4c30998d875a0791400d4328c51a69b1dbb"
+  },
+  "edit": {
+    "shot_count": 27,
+    "output": "1280x720@30",
+    "duration_seconds": 264.0,
+    "capabilities_used": ["source_video","extracted_frames","generated_stills","living_painting","living_still_fx","atmospheric_plate","reactive_plate","loop_media","transition_media"]
+  },
+  "qc": {
+    "decode_verification": "PASS",
+    "duration_match": "PASS",
+    "reference_world_continuity": "PASS",
+    "final_sha256": "bb1481db94f48f28ba8ea82e4ac3f50cb29efa885dde07821dec4c045f86caae"
+  },
+  "delivery": {
+    "drive_project_folder_id": "15gk6LSTR4FraShQ1xFDBYMKYGq3GoOSo",
+    "drive_final_id": "1siCAw3A3ApJvxxVXyLzYs_ACVCWu4Iwm",
+    "status": "finished_video_rendered_and_stored"
+  }
+}

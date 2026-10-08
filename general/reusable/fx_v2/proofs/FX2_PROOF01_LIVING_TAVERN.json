@@ -1,0 +1,30 @@
+{
+  "proof": "FX2_PROOF01_LIVING_TAVERN",
+  "source": "stormbound_tavern_celebration.png",
+  "fps": 24,
+  "frames": 72,
+  "duration_seconds": 3.0,
+  "size": [640, 360],
+  "camera": "locked; no shake",
+  "effects": [
+    "FX2-MOTION-002",
+    "FX2-MOTION-003",
+    "FX2-ATM-002",
+    "FX2-FIRE-001",
+    "FX2-FIRE-002",
+    "FX2-ATM-001",
+    "FX2-LIGHT-001",
+    "FX2-LIGHT-002",
+    "FX2-SURFACE-001"
+  ],
+  "mean_adjacent_gray_delta": 0.7818084898278561,
+  "p95_adjacent_gray_delta": 1.300980902777778,
+  "sha256": "0201fbe3918f477e26551df419aa02c0f3cfaa79f4466451d4d2a52c63605984",
+  "visual_qc": "KEEP AS ENGINE PROOF; full-resolution song integration still requires shot-specific ROI tuning",
+  "notes": [
+    "No camera shake was used; all visible movement is internal scene/environment motion.",
+    "Fire, smoke, embers, rain, water/reflection and light are independent layers.",
+    "The proof control envelope is synthetic and bounded only for isolated engine testing; production renders must use canonical song audio analysis.",
+    "Proof binary currently lives in the active render workspace; GitHub stores code, parameters, checksum and QC record."
+  ]
+}

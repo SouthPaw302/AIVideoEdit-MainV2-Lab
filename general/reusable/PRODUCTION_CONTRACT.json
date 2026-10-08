@@ -1,0 +1,266 @@
+{
+  "schema": "aivideoedit.production-contract.v3",
+  "authority": [
+    "current_user_instruction",
+    "active_song_branch_state",
+    "current_main"
+  ],
+  "default_denied_sources": [
+    "historical_chats",
+    "historical_summaries",
+    "unrelated_song_branches",
+    "prior_project_storyboards",
+    "prior_project_visual_dna",
+    "prior_project_media"
+  ],
+  "states": [
+    "INITIALIZED",
+    "SOURCE_INGESTED",
+    "REFERENCES_ANALYZED",
+    "APPROACH_ESTABLISHED",
+    "STORYBOARD_LOCKED",
+    "SHOT_PACKAGES_BUILT",
+    "SHOT_PROOFS_ACCEPTED",
+    "FX_LOCKED",
+    "ASSEMBLED",
+    "FINAL_QC_PASSED",
+    "ARCHIVED"
+  ],
+  "director_brain_policy": {
+    "current_version": 4,
+    "version_state_key": "director_brain_version",
+    "operating_order_file": "OPERATING_ORDER.json",
+    "new_projects_use_version": 4,
+    "legacy_projects_may_remain_unmigrated_until_explicitly_updated": true,
+    "direction_authorities": [
+      "reference_led",
+      "music_led",
+      "user_directed"
+    ],
+    "production_modes": [
+      "living_scene",
+      "cinematic",
+      "hybrid"
+    ],
+    "selection_rule": "direction authority and production mode are separate decisions and must be locked before production media generation",
+    "approval_creates_canon": true,
+    "accepted_baseline_rule": "an explicitly user-accepted full picture baseline must record locator, sha256, and acceptance statement and becomes protected production truth",
+    "accepted_source_library_rule": "media explicitly accepted by the current user as canonical source material must separately record role, locator, sha256, acceptance statement, content_reuse_authorized=true, and timeline_locked=false; source-library acceptance does not mean the complete edit is accepted",
+    "accepted_source_library_roles": [
+      "hero_library",
+      "shot_library",
+      "visual_world",
+      "reference_content"
+    ],
+    "refinement_rule": "when refinement_scope.active=true, change only allowed_changes, preserve forbidden_changes, and do not restart/reinterpret canon when restart_authorized=false",
+    "recut_rule": "when recut_scope.active=true, diagnose named defects first, use only allowed_changes, preserve forbidden_changes, keep accepted source canon intact, and do not silently replace the accepted source library",
+    "accepted_master_recovery_rule": "an accepted master is itself a recoverable source of truth and may be analyzed to reconstruct lost production structure",
+    "accepted_source_recovery_rule": "an accepted source library is canonical visual source truth and may be analyzed/extracted into traceable source-derived coverage while the timeline remains editable",
+    "local_repair_preference": true,
+    "sandbox_director_rule": "The sandbox agent is Director/Editor/VFX Supervisor and must inspect real intermediate media; the runner executes approved plans but does not silently choose artistic direction.",
+    "jev_rule": "Jev resolves Director intent to proven standard workflows, canonical tools and FX; Jev selection is not execution proof.",
+    "execution_proof_rule": "Selected systems receive credit only when downstream execution/consumption is recorded in PRODUCTION_EXECUTION_LEDGER.json.",
+    "director_checkpoints": [
+      "media_selection",
+      "representative_proof",
+      "rough_cut",
+      "fx_pass",
+      "final_review"
+    ]
+  },
+  "reference_policy": {
+    "short_video_max_seconds": 30,
+    "short_video_max_frames": 1800,
+    "short_video_rule": "extract_all_frames",
+    "long_video_rule": "meaningful_sampling_with_recorded_policy_ranges_and_coverage",
+    "images_rule": "inspect_all_supplied_images",
+    "reference_role_rule": "every visual reference must have an explicit authorized production role; style, motion-language, palette, composition, lighting, or effect references teach those properties only and do not authorize reuse of the reference subject, scene, source frames, or source footage as final-picture content unless the current user explicitly authorizes content reuse",
+    "reference_content_reuse_default": "denied_unless_current_user_explicitly_authorizes",
+    "accepted_source_library_conversion_rule": "a reference becomes an accepted source library only through explicit current-user content-reuse authorization plus accepted_source_library identity/hash; never infer this state from reference presence",
+    "no_visual_reference_rule": "before production media generation present at least three materially distinct numbered artistic-rendering routes in chat; each route must include a name, story interpretation, rendering/media treatment, production mode, and numbered mini-storyboard of at least three beats/frames; record all routes plus the current user's explicit selection/hybrid/modification in MEDIA_PLAN.json and lock the selection",
+    "no_visual_reference_min_options": 3,
+    "no_visual_reference_min_storyboard_beats": 3,
+    "no_visual_reference_decision_artifacts_rule": "concept/storyboard previews made solely for route selection are allowed before lock but are not production assets unless the selected direction explicitly adopts them"
+  },
+  "music_story_policy": {
+    "lyrics_status_must_be_resolved": true,
+    "lyrics_present_rule": "preserve verified lyrics in LYRICS.md; present lyrics are directing authority by default unless the current user explicitly excludes them",
+    "lyrics_exclusion_rule": "if the current user explicitly excludes present lyrics from directing, keep lyrics.status=present, record directing_use=excluded_by_current_user plus the current user instruction, omit lyrics from SCRIPT.basis and lyric_cue fields, and use music analysis as primary directing authority",
+    "no_lyrics_rule": "music analysis becomes the primary directing authority unless the current user supplies a stronger current direction; absence of lyrics never permits skipping deliberate production-mode selection",
+    "genre_rule": "if genre/song type cannot be identified confidently, ask the current user before approach/story lock and record the user's declaration as authoritative",
+    "minimum_genre_confidence_when_inferred": 0.65,
+    "music_analysis_required": [
+      "rhythm_or_pulse",
+      "tempo_or_non_metric_status",
+      "meter_or_groove",
+      "section_map",
+      "energy_curve",
+      "musical_cues",
+      "narrative_function"
+    ],
+    "script_rule": "after storyboard lock and before shot packages, create SCRIPT.md and machine-readable SCRIPT.json covering the complete target frame range; every script entry must map story action, visual media, animation behavior, music cues, lyric cue when applicable, and transition",
+    "preview_rule": "a request to keep chat light or suppress previews must never be interpreted as permission to replace required production imagery with procedural placeholders; if the generation runtime surfaces image previews, those previews are allowed as part of producing real media"
+  },
+  "media_evidence_policy": {
+    "metadata_only_shot_packages_forbidden": true,
+    "generated_capability_requires_generated_asset_evidence": true,
+    "shot_package_requires_media_evidence": true,
+    "source_derived_coverage_requires_provenance": true,
+    "source_derived_required_fields": [
+      "source_library_sha256",
+      "derivation",
+      "source_time_or_range"
+    ],
+    "generated_new_content_must_not_be_mislabeled_source_derived": true
+  },
+  "hero_library_policy": {
+    "manifest_file": "HERO_LIBRARY.json",
+    "tool": "general/reusable/tools/hero_library_extract.py",
+    "final_selection_rule": "quality/perceptual-composition diversity selection; uniform interval may seed candidates but must not be the final selection rule",
+    "empty_library_forbidden": true,
+    "near_duplicates_warn": true,
+    "semantic_claims_require_measurement_or_annotation": true
+  },
+  "render_recipe_policy": {
+    "manifest_file": "RENDER_RECIPE.json",
+    "creative_recipe_separate_from_backend": true,
+    "backend_substitution_requires": [
+      "recorded_backend_mapping",
+      "representative_equivalence_proof_pass",
+      "behavior_preserved",
+      "effects_visible",
+      "traceable_render_implementation"
+    ]
+  },
+  "recipe_execution_policy": {
+    "applies_to": "Director Brain v3 music-led living_scene and hybrid productions",
+    "execution_profile": "music_directed_section_assembly",
+    "required_artifacts": [
+      "MUSIC_CONTROL_MAP.json",
+      "SECTION_RENDER_MANIFEST.json",
+      "FX_APPLICATION_PROOF.json"
+    ],
+    "rule": "A selected recipe must be evidenced by section proofs, actual effect applications, assembly evidence, final effect coverage, and production execution receipts. Declared available or gate-approved effects alone are not execution evidence.",
+    "intentional_absence_rule": "A base, reactive, fill, or transition pass may be not_applicable only with a section-specific reason.",
+    "creative_waiver_rule": "Deliberate sparse treatment must be declared in the recipe variation policy; it may not be inferred from missing passes."
+  },
+  "project_local_fx_policy": {
+    "directory": "project_fx",
+    "gate": "general/reusable/fx_v2/project_local_fx_gate.py",
+    "canonical_authority_remains": "general/reusable/fx_v2",
+    "requires_real_implementation": true,
+    "requires_real_render_inputs": true,
+    "requires_visible_pixel_change": true,
+    "requires_proof_hash_qc_and_lock": true,
+    "placeholders_forbidden": true,
+    "promotion_to_canonical_is_separate": true
+  },
+  "refinement_qc_policy": {
+    "comparison_file": "REFINEMENT_QC.json",
+    "tool": "general/reusable/tools/refinement_qc_compare.py",
+    "preserve_before_and_after": true,
+    "required_evidence": [
+      "repetition_composition",
+      "runtime",
+      "black_freeze",
+      "framing_aspect",
+      "audio_sync",
+      "continuity_warnings",
+      "mode_aware_qc",
+      "source_canon_integrity"
+    ],
+    "metrics_are_evidence_not_direction": true
+  },
+  "asset_lifecycle_policy": {
+    "statuses": [
+      "exploratory",
+      "candidate",
+      "approved",
+      "canonical",
+      "derived",
+      "rejected",
+      "retired"
+    ],
+    "canonical_replacement_rule": "canonical assets may not be silently regenerated or replaced while canon_lock.locked=true"
+  },
+  "mode_aware_qc_policy": {
+    "rules_file": "general/reusable/MODE_AWARE_QC.md",
+    "director_brain_v2_requires_mode_aware_proofs": true,
+    "director_brain_v2_requires_mode_aware_final_qc": true,
+    "technical_pass_is_not_creative_pass": true
+  },
+  "delivery_mastering_policy": {
+    "separate_artistic_and_platform_master_when_packaging_changes": true,
+    "platform_packaging_must_not_overwrite_accepted_artistic_master": true
+  },
+  "creative_acceptance_policy": {
+    "technical_pass_is_not_artistic_acceptance": true,
+    "approval_creates_canon": true,
+    "current_user_rejection_rule": "an explicit current-user rejection of a proof, media set, visual direction, or final export invalidates any prior accepted/final-QC status for the affected material; mark affected assets/proofs rejected, clear dependent acceptance booleans, and roll the project back to the earliest stage that must be redone without disturbing unrelated accepted canon",
+    "rejected_media_must_not_be_promoted": true,
+    "accepted_work_must_be_preserved_outside_explicit_refinement_scope": true
+  },
+  "required_project_files": [
+    "PROJECT.md",
+    "STATUS.md",
+    "HANDOFF.md",
+    "PROJECT_STATE.json",
+    "SOURCE_AUTHORITY.json",
+    "REFERENCE_MANIFEST.json",
+    "MEDIA_PLAN.json",
+    "ASSET_MANIFEST.json",
+    "MUSIC_ANALYSIS.json",
+    "SCRIPT.md",
+    "SCRIPT.json",
+    "VISUAL_DNA.md",
+    "SHOT_LIST.md",
+    "RENDER_HISTORY.md",
+    "QC.md"
+  ],
+  "stage_requirements": {
+    "SOURCE_INGESTED": [
+      "source_ingest_complete"
+    ],
+    "REFERENCES_ANALYZED": [
+      "reference_policy_satisfied",
+      "reference_analysis_complete",
+      "music_analysis_complete",
+      "lyrics_status_resolved",
+      "genre_authority_resolved"
+    ],
+    "APPROACH_ESTABLISHED": [
+      "media_plan_valid",
+      "visual_approach_established",
+      "no_reference_visual_direction_gate_if_applicable",
+      "director_brain_v2_operating_order_if_applicable"
+    ],
+    "STORYBOARD_LOCKED": [
+      "storyboard_locked",
+      "script_locked",
+      "frame_followable_script",
+      "semantic_motion_regions_if_applicable"
+    ],
+    "SHOT_PACKAGES_BUILT": [
+      "shot_packages_built",
+      "media_evidence_verified"
+    ],
+    "SHOT_PROOFS_ACCEPTED": [
+      "shot_proofs_accepted",
+      "mode_aware_proofs_if_director_brain_v2"
+    ],
+    "FX_LOCKED": [
+      "fx_lock_verified"
+    ],
+    "ASSEMBLED": [
+      "assembly_complete"
+    ],
+    "FINAL_QC_PASSED": [
+      "final_qc_passed",
+      "mode_aware_final_qc_if_director_brain_v2",
+      "before_after_refinement_qc_if_recut_active"
+    ],
+    "ARCHIVED": [
+      "archive_complete"
+    ]
+  }
+}

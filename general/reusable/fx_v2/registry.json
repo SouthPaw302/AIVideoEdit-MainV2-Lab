@@ -1,0 +1,1588 @@
+{
+  "effects": {
+    "FX2-ATM-001": {
+      "family": "environment",
+      "gate_status": "approved",
+      "implementation": {
+        "kind": "runtime_apply"
+      },
+      "name": "advected_smoke",
+      "proofs": [
+        "FX2_PROOF02_LIVING_SCENE_CANONICAL"
+      ],
+      "quality": {
+        "max_global_shift_px": 2.5,
+        "source_delta_min": 0.05,
+        "temporal_delta_min": 0.02
+      },
+      "status": "improved"
+    },
+    "FX2-ATM-002": {
+      "family": "environment",
+      "gate_status": "approved",
+      "implementation": {
+        "kind": "runtime_apply"
+      },
+      "name": "rain_plane",
+      "proofs": [
+        "FX2_PROOF02_LIVING_SCENE_CANONICAL"
+      ],
+      "quality": {
+        "max_global_shift_px": 2.5,
+        "source_delta_min": 0.05,
+        "temporal_delta_min": 0.02
+      },
+      "status": "improved"
+    },
+    "FX2-ATM-003": {
+      "family": "environment",
+      "gate_status": "proof_required",
+      "implementation": {
+        "kind": "runtime_apply"
+      },
+      "name": "rain_glass",
+      "status": "new"
+    },
+    "FX2-ATM-004": {
+      "family": "environment",
+      "gate_status": "unavailable",
+      "implementation": {
+        "kind": "unpromoted",
+        "note": "Production-specific implementation must be generalized and proof-gated before canonical promotion."
+      },
+      "name": "sea_spray",
+      "status": "unpromoted"
+    },
+    "FX2-ATM-005": {
+      "family": "environment",
+      "gate_status": "proof_required",
+      "implementation": {
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/living_still_fx.py",
+        "symbol": "cloud_drift"
+      },
+      "name": "cloud_drift",
+      "notes": "Deterministic advected cloud/fog layer; use sky/distant-atmosphere ROI.",
+      "status": "new"
+    },
+    "FX2-ATM-006": {
+      "family": "environment",
+      "gate_status": "proof_required",
+      "implementation": {
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/living_still_fx.py",
+        "symbol": "star_field"
+      },
+      "name": "star_field",
+      "status": "new"
+    },
+    "FX2-ATM-007": {
+      "family": "environment",
+      "gate_status": "proof_required",
+      "implementation": {
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/living_still_fx.py",
+        "symbol": "snow_plane"
+      },
+      "name": "snow_plane",
+      "status": "new"
+    },
+    "FX2-ATM-008": {
+      "family": "environment",
+      "gate_status": "proof_required",
+      "implementation": {
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/living_still_fx.py",
+        "symbol": "bird_flock"
+      },
+      "name": "bird_flock",
+      "notes": "Small distant atmospheric flock silhouettes; not semantic object animation.",
+      "status": "new"
+    },
+    "FX2-ATM-021": {
+      "family": "environment",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "atmospheric_fog",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "atmospheric_fog",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-ATM-022": {
+      "family": "motion",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "forge_motion_furnace_sparks",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "forge_motion_furnace_sparks",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-ATM-023": {
+      "family": "surface",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "rain_puddle_ember_composite",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "rain_puddle_ember_composite",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-ATM-024": {
+      "family": "environment",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "smoke_memory_forms",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "smoke_memory_forms",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-ATM-025": {
+      "family": "surface",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "wet_road_rain_reflection",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "wet_road_rain_reflection",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-AUDIO-001": {
+      "family": "audio",
+      "gate_status": "proof_required",
+      "implementation": {
+        "kind": "adapter",
+        "path": "general/reusable/generative-engine/audio/reactive_core.py"
+      },
+      "name": "reactive_control_bus",
+      "notes": "Frame-aligned RMS/onset/low/mid/high controls with FFT bands, percentile normalization and smoothing.",
+      "status": "new"
+    },
+    "FX2-AUDIO-021": {
+      "family": "audio_reactive",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "rms_memory_modulation",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "rms_memory_modulation",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-CAMERA-021": {
+      "family": "spatial",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "corridor_push_focus_definition",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "corridor_push_focus_definition",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-CAMERA-022": {
+      "family": "spatial",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "loopable_eased_orbit",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "loopable_eased_orbit",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-CAMERA-023": {
+      "family": "spatial",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "narrative_camera_travel",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "narrative_camera_travel",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-CAMERA-024": {
+      "family": "motion",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "rack_focus_heat_pulse",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "rack_focus_heat_pulse",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-CAMERA-025": {
+      "family": "spatial",
+      "gate_status": "proof_required",
+      "implementation": {
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/matched_angle_viewpoint.py",
+        "symbol": "matched_angle_viewpoint"
+      },
+      "name": "matched_angle_viewpoint",
+      "notes": "Source-locked bounded planar viewpoint change with overscan and reflected borders. Generates/inpaints no pixels. Candidate requires neutral proof/QC before production approval.",
+      "status": "candidate"
+    },
+    "FX2-COMP-021": {
+      "family": "compositing",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "disocclusion_alpha_feather",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "disocclusion_alpha_feather",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-COMP-022": {
+      "family": "environment",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "parallax_fog_cloth_fire_decay",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "parallax_fog_cloth_fire_decay",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-COMP-023": {
+      "family": "environment",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "steam_fog_cloth_horizon_gold",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "steam_fog_cloth_horizon_gold",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-DISTORT-021": {
+      "family": "motion",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "heat_haze",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "heat_haze",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-FIRE-001": {
+      "family": "environment",
+      "gate_status": "approved",
+      "implementation": {
+        "kind": "runtime_apply"
+      },
+      "name": "living_flame",
+      "proofs": [
+        "FX2_PROOF02_LIVING_SCENE_CANONICAL"
+      ],
+      "quality": {
+        "max_global_shift_px": 2.5,
+        "source_delta_min": 0.1,
+        "temporal_delta_min": 0.05
+      },
+      "status": "new"
+    },
+    "FX2-FIRE-002": {
+      "family": "environment",
+      "gate_status": "approved",
+      "implementation": {
+        "kind": "runtime_apply"
+      },
+      "name": "embers",
+      "notes": "Canonical linear/rising ember mode. For orbit/swirl paths and audio-reactive particle speed/glow, use FX2-FIRE-003 until those modes are merged into the core runtime.",
+      "proofs": [
+        "FX2_PROOF02_LIVING_SCENE_CANONICAL"
+      ],
+      "quality": {
+        "max_global_shift_px": 2.5,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.02
+      },
+      "status": "improved"
+    },
+    "FX2-FIRE-003": {
+      "family": "environment",
+      "gate_status": "proof_required",
+      "implementation": {
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/material_reactive_layers.py",
+        "symbol": "orbital_embers"
+      },
+      "name": "orbital_embers",
+      "notes": "Deterministic orbital/swirl ember field. Energy and transient controls drive speed, glow and peak particle size. Proof metrics exist; binary repository proof must be stored before ordinary approved status.",
+      "proofs": [
+        "FX2_PROOF03_REACTIVE_MATERIAL_LAYERS"
+      ],
+      "status": "new"
+    },
+    "FX2-LIGHT-001": {
+      "family": "light",
+      "gate_status": "approved",
+      "implementation": {
+        "kind": "runtime_apply"
+      },
+      "name": "practical_light_breath",
+      "proofs": [
+        "FX2_PROOF02_LIVING_SCENE_CANONICAL"
+      ],
+      "quality": {
+        "max_global_shift_px": 2.5,
+        "source_delta_min": 0.05,
+        "temporal_delta_min": 0.05
+      },
+      "status": "improved"
+    },
+    "FX2-LIGHT-002": {
+      "family": "light",
+      "gate_status": "approved",
+      "implementation": {
+        "kind": "runtime_apply"
+      },
+      "name": "moving_light_field",
+      "proofs": [
+        "FX2_PROOF02_LIVING_SCENE_CANONICAL"
+      ],
+      "quality": {
+        "max_global_shift_px": 2.5,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.02
+      },
+      "status": "improved"
+    },
+    "FX2-LIGHT-003": {
+      "family": "light",
+      "gate_status": "proof_required",
+      "implementation": {
+        "kind": "adapter",
+        "path": "general/reusable/painterly-motion/video_fx/painterly_motion_extensions.py",
+        "symbol": "localized_specular_glint"
+      },
+      "name": "localized_glint",
+      "status": "ported"
+    },
+    "FX2-LIGHT-004": {
+      "family": "light",
+      "gate_status": "proof_required",
+      "implementation": {
+        "kind": "runtime_apply"
+      },
+      "name": "temporal_palette_migration",
+      "status": "new"
+    },
+    "FX2-LIGHT-005": {
+      "family": "light",
+      "gate_status": "proof_required",
+      "implementation": {
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/living_still_fx.py",
+        "symbol": "lens_bloom_flare"
+      },
+      "name": "lens_bloom_flare",
+      "status": "new"
+    },
+    "FX2-LIGHT-006": {
+      "family": "light",
+      "gate_status": "proof_required",
+      "implementation": {
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/living_still_fx.py",
+        "symbol": "sign_light_flicker"
+      },
+      "name": "sign_light_flicker",
+      "status": "new"
+    },
+    "FX2-LIGHT-021": {
+      "family": "light",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "candlelight_micro_loop",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "candlelight_micro_loop",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-LIGHT-022": {
+      "family": "light",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "ember_crack_light_reveal",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "ember_crack_light_reveal",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-LIGHT-023": {
+      "family": "light",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "firelight_breath",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "firelight_breath",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-LIGHT-024": {
+      "family": "light",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "radial_light_shafts",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "radial_light_shafts",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-LIGHT-025": {
+      "family": "light",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "temporal_grade_shift",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "temporal_grade_shift",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-LIGHT-026": {
+      "family": "surface",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "threshold_reflection_lamp_flicker",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "threshold_reflection_lamp_flicker",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-LIGHT-027": {
+      "family": "light",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "volumetric_light_shafts",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "volumetric_light_shafts",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-LIGHT-028": {
+      "family": "light",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "warm_halation_bloom",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "warm_halation_bloom",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-MOTION-001": {
+      "family": "motion",
+      "gate_status": "proof_required",
+      "implementation": {
+        "kind": "adapter",
+        "path": "general/reusable/painterly-motion/hybrid_painterly_fx.py",
+        "symbol": "depth_parallax"
+      },
+      "name": "depth_parallax",
+      "status": "ported"
+    },
+    "FX2-MOTION-002": {
+      "family": "motion",
+      "gate_status": "approved",
+      "implementation": {
+        "kind": "runtime_apply"
+      },
+      "name": "localized_living_flow",
+      "proofs": [
+        "FX2_PROOF02_LIVING_SCENE_CANONICAL"
+      ],
+      "quality": {
+        "max_global_shift_px": 2.5,
+        "source_delta_min": 0.05,
+        "temporal_delta_min": 0.02
+      },
+      "status": "new"
+    },
+    "FX2-MOTION-003": {
+      "family": "motion",
+      "gate_status": "approved",
+      "implementation": {
+        "kind": "runtime_apply"
+      },
+      "name": "water_flow",
+      "proofs": [
+        "FX2_PROOF02_LIVING_SCENE_CANONICAL"
+      ],
+      "quality": {
+        "max_global_shift_px": 2.5,
+        "source_delta_min": 0.05,
+        "temporal_delta_min": 0.02
+      },
+      "status": "new"
+    },
+    "FX2-MOTION-004": {
+      "family": "motion",
+      "gate_status": "proof_required",
+      "implementation": {
+        "kind": "adapter",
+        "path": "general/reusable/painterly-motion/video_fx/painterly_motion_extensions.py",
+        "symbol": "depth_focus_breath"
+      },
+      "name": "quiet_depth_breath",
+      "status": "new"
+    },
+    "FX2-MOTION-005": {
+      "family": "motion",
+      "gate_status": "proof_required",
+      "implementation": {
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/living_still_fx.py",
+        "symbol": "camera_drift"
+      },
+      "name": "camera_drift",
+      "notes": "Loop-safe conservative pan/tilt/zoom drift for living stills; image-space only.",
+      "status": "new"
+    },
+    "FX2-MOTION-021": {
+      "family": "motion",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "crowd_sway",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "crowd_sway",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-MOTION-022": {
+      "family": "motion",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "forest_breath",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "forest_breath",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-MOTION-023": {
+      "family": "motion",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "impact_pulse",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "impact_pulse",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-MOTION-024": {
+      "family": "motion",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "localized_micro_warp",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "localized_micro_warp",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-MOTION-025": {
+      "family": "motion",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "mesh_breath",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "mesh_breath",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-MOTION-026": {
+      "family": "motion",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "rotating_architecture_debris",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "rotating_architecture_debris",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-MOTION-027": {
+      "family": "motion",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "transient_warp",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "transient_warp",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-SPATIAL-001": {
+      "family": "spatial",
+      "gate_status": "proof_required",
+      "implementation": {
+        "kind": "adapter",
+        "path": "general/reusable/depth-parallax-25d/depth_parallax_25d.py"
+      },
+      "name": "hybrid_25d",
+      "status": "ported"
+    },
+    "FX2-SPATIAL-002": {
+      "family": "spatial",
+      "gate_status": "proof_required",
+      "implementation": {
+        "kind": "adapter",
+        "path": "general/reusable/painterly-motion/video_fx/tiny_nerf_volume.py"
+      },
+      "name": "tiny_nerf_atmosphere",
+      "status": "ported"
+    },
+    "FX2-SPATIAL-003": {
+      "claim_guard": "requires genuine splat geometry; never use for 2D Gaussian overlays",
+      "family": "spatial",
+      "gate_status": "conditional",
+      "implementation": {
+        "kind": "external",
+        "requires": "genuine 3D Gaussian splat geometry plus project-specific spatial preflight",
+        "tool": "playcanvas/supersplat"
+      },
+      "name": "supersplat_3dgs",
+      "status": "conditional"
+    },
+    "FX2-SPATIAL-004": {
+      "claim_guard": "2.5D image-space depth warp only; real depth preferred; synthetic fallback must remain labeled.",
+      "family": "spatial",
+      "gate_status": "proof_required",
+      "implementation": {
+        "kind": "adapter",
+        "path": "general/reusable/generative-engine/spatial/living_parallax.py"
+      },
+      "name": "streaming_living_parallax",
+      "status": "new"
+    },
+    "FX2-SPATIAL-021": {
+      "family": "spatial",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "pseudo_depth_field",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "pseudo_depth_field",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-SURFACE-001": {
+      "family": "surface",
+      "gate_status": "approved",
+      "implementation": {
+        "kind": "runtime_apply",
+        "method": "apply_canvas"
+      },
+      "name": "temporal_canvas_lock",
+      "proofs": [
+        "FX2_PROOF02_LIVING_SCENE_CANONICAL"
+      ],
+      "quality": {
+        "max_global_shift_px": 2.5,
+        "source_delta_min": 0.05,
+        "temporal_required": false
+      },
+      "status": "ported"
+    },
+    "FX2-SURFACE-002": {
+      "claim_guard": "Luminance-derived image-space material separation; not semantic segmentation or depth geometry.",
+      "family": "surface",
+      "gate_status": "proof_required",
+      "implementation": {
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/material_reactive_layers.py",
+        "symbol": "reactive_material_split"
+      },
+      "name": "reactive_material_split",
+      "notes": "Bright/hot and dark material receive independent bounded motion and bloom while composition stays anchored. Proof metrics exist; binary repository proof must be stored before ordinary approved status.",
+      "proofs": [
+        "FX2_PROOF03_REACTIVE_MATERIAL_LAYERS"
+      ],
+      "status": "new"
+    },
+    "FX2-SURFACE-003": {
+      "family": "surface",
+      "gate_status": "proof_required",
+      "implementation": {
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/living_still_fx.py",
+        "symbol": "reflection_shimmer"
+      },
+      "name": "reflection_shimmer",
+      "status": "new"
+    },
+    "FX2-SURFACE-021": {
+      "family": "surface",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "puddle_shimmer",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "puddle_shimmer",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-SURFACE-022": {
+      "family": "surface",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "water_region_displacement_shimmer",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "water_region_displacement_shimmer",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-SURFACE-023": {
+      "family": "surface",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "wet_reflection_ripple",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "wet_reflection_ripple",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-TRANS-001": {
+      "family": "transition",
+      "gate_status": "proof_required",
+      "implementation": {
+        "kind": "runtime_transition",
+        "method": "pigment_gate"
+      },
+      "name": "pigment_gate",
+      "status": "improved"
+    },
+    "FX2-TRANS-002": {
+      "family": "transition",
+      "gate_status": "proof_required",
+      "implementation": {
+        "kind": "runtime_transition",
+        "method": "reflection_gate"
+      },
+      "name": "reflection_gate",
+      "status": "new"
+    },
+    "FX2-TRANS-003": {
+      "family": "transition",
+      "gate_status": "proof_required",
+      "implementation": {
+        "kind": "runtime_transition",
+        "method": "light_peak_handoff"
+      },
+      "name": "light_peak_handoff",
+      "status": "new"
+    },
+    "FX2-TRANS-004": {
+      "family": "transition",
+      "gate_status": "proof_required",
+      "implementation": {
+        "kind": "runtime_transition",
+        "method": "doorway_depth_gate"
+      },
+      "name": "doorway_depth_gate",
+      "status": "new"
+    },
+    "FX2-TRANS-005": {
+      "family": "transition",
+      "gate_status": "proof_required",
+      "implementation": {
+        "kind": "runtime_transition",
+        "method": "ember_to_light"
+      },
+      "name": "ember_to_light",
+      "status": "new"
+    },
+    "FX2-TRANS-006": {
+      "family": "transition",
+      "gate_status": "proof_required",
+      "implementation": {
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/living_still_fx.py",
+        "symbol": "crossfade_dissolve"
+      },
+      "name": "crossfade_dissolve",
+      "notes": "Endpoint-exact cosine-eased dissolve for equal-sized frames.",
+      "status": "new"
+    },
+    "FX2-TRANS-021": {
+      "family": "transition",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "chroma_pigment_transport",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "chroma_pigment_transport",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-TRANS-022": {
+      "family": "transition",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "ember_to_sun",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "ember_to_sun",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-TRANS-023": {
+      "family": "transition",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "fire_to_lightning",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "fire_to_lightning",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-TRANS-024": {
+      "family": "transition",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "fog_pigment_travel",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "fog_pigment_travel",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-TRANS-025": {
+      "family": "transition",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "ghosted_memory_transition",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "ghosted_memory_transition",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-TRANS-026": {
+      "family": "transition",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "glint_to_orb",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "glint_to_orb",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-TRANS-027": {
+      "family": "transition",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "object_portal",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "object_portal",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-TRANS-028": {
+      "family": "transition",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "raindrop_to_ember",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "raindrop_to_ember",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-TRANS-029": {
+      "family": "surface",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "reflection_ash_dawn",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "reflection_ash_dawn",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-TRANS-030": {
+      "family": "transition",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "reflection_to_water",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "reflection_to_water",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-TRANS-031": {
+      "family": "transition",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "smoke_to_storm_clouds",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "smoke_to_storm_clouds",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-TRANS-032": {
+      "family": "transition",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "structural_morph_transition",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "structural_morph_transition",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-TRANS-033": {
+      "family": "transition",
+      "gate_status": "proof_required",
+      "implementation": {
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/threshold_prism_bleed.py",
+        "symbol": "apply_threshold_prism_bleed"
+      },
+      "name": "threshold_prism_bleed",
+      "notes": "Localized spectral threshold-edge compositor with restrained channel separation, rays/scatter and optional ghost plate. Stylized 2D/2.5D, not physical diffraction. Candidate requires neutral proof/QC before production approval.",
+      "status": "candidate"
+    },
+    "FX2-VIS-001": {
+      "family": "visualizer",
+      "gate_status": "proof_required",
+      "implementation": {
+        "kind": "adapter",
+        "path": "general/reusable/generative-engine/visualizers/reactive_field.py"
+      },
+      "name": "organic_reactive_field",
+      "notes": "CPU compositing plate; not claimed as projectM/MilkDrop compatibility.",
+      "status": "new"
+    },
+    "FX2-VIS-021": {
+      "family": "visualizer",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "feedback_plasma_gravity_inversion",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "feedback_plasma_gravity_inversion",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-VIS-022": {
+      "family": "visualizer",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "particle_tunnel",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "particle_tunnel",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-VIS-023": {
+      "family": "visualizer",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "radial_frequency_ring",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "radial_frequency_ring",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-VIS-024": {
+      "family": "visualizer",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "radial_waveform_ember_bursts",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "radial_waveform_ember_bursts",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-VIS-025": {
+      "family": "visualizer",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "runic_oscilloscope",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "runic_oscilloscope",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-VIS-026": {
+      "family": "visualizer",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "spectrum_energy_flame",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "spectrum_energy_flame",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    },
+    "FX2-VIS-027": {
+      "family": "visualizer",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "waveform_smoke_trails",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "name": "waveform_smoke_trails",
+      "notes": "Project-neutral standard effect. Canonical identity is the established neutral FX2 id and effect name.",
+      "proofs": [
+        "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY"
+      ],
+      "quality": {
+        "max_global_shift_px": 12.0,
+        "source_delta_min": 0.02,
+        "temporal_delta_min": 0.01
+      },
+      "status": "standard"
+    }
+  },
+  "gate_policy": "production renderers must pass precompile_gate.py and verify the generated fx.lock.json immediately before compile",
+  "runtime": "aivideoedit-fx-v2",
+  "schema_version": 4
+}

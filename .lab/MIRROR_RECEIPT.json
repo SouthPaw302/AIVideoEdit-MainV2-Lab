@@ -1,0 +1,23 @@
+{
+  "schema": "mainv2-lab.exact-mirror.v1",
+  "original_repository": "SouthPaw302/AIVideoEdit",
+  "original_branch": "MainV2",
+  "source_commit": "316fe96c7316d76d14308d5f27293e071aa20943",
+  "source_tree": "9320ca41a8faa5c5e3c996b6be2466f4c8bb9f4f",
+  "verified_source_files": 238,
+  "upstream_workflows_preserved": 13,
+  "upstream_workflows_location": ".lab/upstream-workflows (byte-identical, inert)",
+  "source_file_bytes_equal": true,
+  "lab_overlays": [
+    "SOURCE_LOCK.json",
+    "LAB_PROTOCOL.md",
+    "scripts/inspect_render.py",
+    "scripts/validate_contract.py",
+    "reviews/REVIEW_TEMPLATE.md",
+    ".github/workflows/lab-gate.yml",
+    ".github/workflows/seed-mainv2-mirror.yml",
+    ".lab/upstream-workflows/"
+  ],
+  "human_approved": false,
+  "production_released": false
+}

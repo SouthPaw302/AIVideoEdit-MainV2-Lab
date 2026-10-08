@@ -1,0 +1,1231 @@
+{
+  "overrides": "OPERATING_ORDER.standard_workflow_overrides may include/exclude neutral workflow IDs or names; current user direction remains highest authority.",
+  "schema": "aivideoedit.standard-workflows.v1",
+  "selection_policy": "Resolve from the active production mode and MEDIA_PLAN selected capabilities. Names and IDs are project-neutral; no production provenance participates in selection.",
+  "workflows": [
+    {
+      "category": "fx",
+      "id": "WF-FX-RESOLUTION",
+      "implementation": {
+        "backend_options": [
+          "python"
+        ],
+        "kind": "standard_recipe",
+        "steps": [
+          "describe accepted batch/scene/still semantics factually",
+          "resolve current canonical registry plus reusable recipes",
+          "exclude implausible/incompatible effects",
+          "record bounded stack and protected regions before FX authoring"
+        ]
+      },
+      "name": "deterministic_fx_recipe_resolution",
+      "select_if": {
+        "default": true
+      },
+      "status": "approved",
+      "verification": {
+        "checks": [
+          "neutral_identity",
+          "selection_rule_validated",
+          "requirements_declared",
+          "qc_contract_declared"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "category": "project_state",
+      "id": "WF-PROJECT-STATE",
+      "implementation": {
+        "backend_options": [
+          "python",
+          "ffmpeg",
+          "opencv"
+        ],
+        "kind": "standard_recipe",
+        "steps": [
+          "preserve reversible state",
+          "branch/version before destructive changes",
+          "record hashes and lifecycle"
+        ]
+      },
+      "name": "nondestructive_project_state_versioning",
+      "select_if": {
+        "default": true
+      },
+      "status": "approved",
+      "verification": {
+        "checks": [
+          "neutral_identity",
+          "selection_rule_validated",
+          "requirements_declared",
+          "qc_contract_declared"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "category": "performance",
+      "id": "WF-CACHE-INVALIDATION",
+      "implementation": {
+        "backend_options": [
+          "python",
+          "ffmpeg",
+          "opencv"
+        ],
+        "kind": "standard_recipe",
+        "steps": [
+          "cache derived media",
+          "invalidate when source/recipe hashes change",
+          "never treat cache as canon"
+        ]
+      },
+      "name": "proxy_cache_render_invalidation",
+      "select_if": {
+        "default": true
+      },
+      "status": "approved",
+      "verification": {
+        "checks": [
+          "neutral_identity",
+          "selection_rule_validated",
+          "requirements_declared",
+          "qc_contract_declared"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "category": "render",
+      "id": "WF-RENDER-DELIVERY",
+      "implementation": {
+        "backend_options": [
+          "python",
+          "ffmpeg",
+          "opencv"
+        ],
+        "kind": "standard_recipe",
+        "steps": [
+          "hash render inputs",
+          "use deterministic recipe",
+          "resume by shot/segment",
+          "verify final duration/hash"
+        ]
+      },
+      "name": "deterministic_resumable_render_delivery",
+      "select_if": {
+        "default": true
+      },
+      "status": "approved",
+      "verification": {
+        "checks": [
+          "neutral_identity",
+          "selection_rule_validated",
+          "requirements_declared",
+          "qc_contract_declared"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "category": "render",
+      "id": "WF-LOCALIZED-MASTER-REPAIR",
+      "implementation": {
+        "backend_options": [
+          "python",
+          "ffmpeg",
+          "opencv"
+        ],
+        "kind": "standard_recipe",
+        "steps": [
+          "preserve accepted master hash and audio stream",
+          "identify the defective frame range",
+          "re-render only approved affected visual inputs",
+          "verify patch dimensions, frame count and seam continuity",
+          "splice the visual patch and rerun full delivery QC"
+        ]
+      },
+      "name": "localized_master_repair",
+      "select_if": {
+        "manual_only": true
+      },
+      "status": "approved",
+      "verification": {
+        "checks": [
+          "accepted_master_preserved",
+          "range_limited_change",
+          "audio_unchanged",
+          "post_splice_full_qc"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "category": "qc",
+      "id": "WF-MACHINE-QC",
+      "implementation": {
+        "backend_options": [
+          "python",
+          "ffmpeg",
+          "opencv"
+        ],
+        "kind": "standard_recipe",
+        "steps": [
+          "validate frame/duration/audio",
+          "generate contact/evidence",
+          "run mode-aware QC",
+          "record PASS/FAIL"
+        ]
+      },
+      "name": "machine_readable_visual_delivery_qc",
+      "select_if": {
+        "default": true
+      },
+      "status": "approved",
+      "verification": {
+        "checks": [
+          "neutral_identity",
+          "selection_rule_validated",
+          "requirements_declared",
+          "qc_contract_declared"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "category": "audio",
+      "id": "WF-AUDIO-POST",
+      "implementation": {
+        "backend_options": [
+          "python",
+          "ffmpeg",
+          "opencv"
+        ],
+        "kind": "standard_recipe",
+        "steps": [
+          "preserve score authority",
+          "smooth ramps",
+          "mix ambience/dialogue/SFX",
+          "verify sync and loudness"
+        ]
+      },
+      "name": "professional_audio_post_and_qc",
+      "select_if": {
+        "default": true
+      },
+      "status": "approved",
+      "verification": {
+        "checks": [
+          "neutral_identity",
+          "selection_rule_validated",
+          "requirements_declared",
+          "qc_contract_declared"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "category": "analysis",
+      "id": "WF-REFERENCE-MOTION-CALIBRATION",
+      "implementation": {
+        "backend_options": [
+          "python",
+          "ffmpeg",
+          "opencv"
+        ],
+        "kind": "standard_recipe",
+        "steps": [
+          "measure reference motion",
+          "separate camera from internal motion",
+          "record bounded motion envelope"
+        ]
+      },
+      "name": "reference_motion_envelope_calibration",
+      "select_if": {
+        "capabilities_any": [
+          "accepted_motion_benchmark_video"
+        ]
+      },
+      "status": "approved",
+      "verification": {
+        "checks": [
+          "neutral_identity",
+          "selection_rule_validated",
+          "requirements_declared",
+          "qc_contract_declared"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "category": "cleanup",
+      "id": "WF-EDGE-REFRAME",
+      "implementation": {
+        "backend_options": [
+          "python",
+          "ffmpeg",
+          "opencv"
+        ],
+        "kind": "standard_recipe",
+        "steps": [
+          "detect contaminated edges",
+          "reframe/crop without identity drift",
+          "verify aspect and safe composition"
+        ]
+      },
+      "name": "edge_contamination_reframe",
+      "select_if": {
+        "capabilities_any": [
+          "source_video",
+          "conventional_video",
+          "extracted_frames"
+        ]
+      },
+      "status": "approved",
+      "verification": {
+        "checks": [
+          "neutral_identity",
+          "selection_rule_validated",
+          "requirements_declared",
+          "qc_contract_declared"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "category": "audio_analysis",
+      "id": "WF-AUDIO-EDIT-MAP",
+      "implementation": {
+        "backend_options": [
+          "python",
+          "ffmpeg",
+          "opencv"
+        ],
+        "kind": "standard_recipe",
+        "steps": [
+          "map structural sections",
+          "record beat/energy transitions",
+          "bind edit decisions to time/frame"
+        ]
+      },
+      "name": "audio_edit_map",
+      "select_if": {
+        "capabilities_any": [
+          "reactive_plate",
+          "loop_media"
+        ]
+      },
+      "status": "approved",
+      "verification": {
+        "checks": [
+          "neutral_identity",
+          "selection_rule_validated",
+          "requirements_declared",
+          "qc_contract_declared"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "category": "audio_analysis",
+      "id": "WF-AUDIO-REACTIVITY",
+      "implementation": {
+        "backend_options": [
+          "python",
+          "ffmpeg",
+          "opencv"
+        ],
+        "kind": "standard_recipe",
+        "steps": [
+          "derive RMS/onset/bands",
+          "normalize percentiles",
+          "smooth controls",
+          "bind controls to effect parameters"
+        ]
+      },
+      "name": "normalized_reactivity_controls",
+      "select_if": {
+        "capabilities_any": [
+          "reactive_plate"
+        ]
+      },
+      "status": "approved",
+      "verification": {
+        "checks": [
+          "neutral_identity",
+          "selection_rule_validated",
+          "requirements_declared",
+          "qc_contract_declared"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "category": "assembly",
+      "id": "WF-MUSIC-DIRECTED-SECTION-ASSEMBLY",
+      "implementation": {
+        "backend_options": [
+          "python",
+          "ffmpeg",
+          "opencv"
+        ],
+        "kind": "standard_recipe",
+        "steps": [
+          "lock frame-aligned music controls and contiguous sections",
+          "declare base/reactive/fill/transition passes per section",
+          "render and review section proofs before assembly",
+          "record effect application evidence against rendered outputs",
+          "assemble only from proved section handles"
+        ]
+      },
+      "name": "music_directed_section_assembly",
+      "select_if": {
+        "capabilities_any": [
+          "living_painting",
+          "living_still_fx",
+          "loop_media",
+          "reactive_plate"
+        ],
+        "modes_any": [
+          "living_scene",
+          "hybrid"
+        ]
+      },
+      "status": "approved",
+      "verification": {
+        "checks": [
+          "neutral_identity",
+          "section_and_music_control_contract",
+          "proof_before_assembly",
+          "effect_application_evidence"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "category": "qc",
+      "id": "WF-TEMPORAL-QC",
+      "implementation": {
+        "backend_options": [
+          "python",
+          "ffmpeg",
+          "opencv"
+        ],
+        "kind": "standard_recipe",
+        "steps": [
+          "scan freezes/black frames",
+          "measure repetition and temporal change",
+          "verify loop/join integrity"
+        ]
+      },
+      "name": "temporal_qc_scan",
+      "select_if": {
+        "capabilities_any": [
+          "living_painting",
+          "living_still_fx",
+          "loop_media",
+          "transition_media"
+        ]
+      },
+      "status": "approved",
+      "verification": {
+        "checks": [
+          "neutral_identity",
+          "selection_rule_validated",
+          "requirements_declared",
+          "qc_contract_declared"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "category": "restoration",
+      "id": "WF-REAL-FOOTAGE-RESTORATION",
+      "implementation": {
+        "backend_options": [
+          "python",
+          "ffmpeg",
+          "opencv"
+        ],
+        "kind": "standard_recipe",
+        "steps": [
+          "inspect source defects",
+          "restore without rewriting content",
+          "preserve camera energy and identity",
+          "compare pre/post evidence"
+        ]
+      },
+      "name": "cinematic_real_footage_restoration",
+      "select_if": {
+        "capabilities_any": [
+          "source_video",
+          "conventional_video"
+        ]
+      },
+      "status": "approved",
+      "verification": {
+        "checks": [
+          "neutral_identity",
+          "selection_rule_validated",
+          "requirements_declared",
+          "qc_contract_declared"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "category": "source_derived",
+      "id": "WF-SOURCE-DERIVED-LOOPS",
+      "implementation": {
+        "backend_options": [
+          "python",
+          "ffmpeg",
+          "opencv"
+        ],
+        "kind": "standard_recipe",
+        "steps": [
+          "extract approved source state",
+          "derive bounded loop",
+          "record source hash/time range",
+          "verify seam and canon integrity"
+        ]
+      },
+      "name": "source_derived_motion_loop",
+      "select_if": {
+        "capabilities_any": [
+          "accepted_source_library",
+          "canonical_hero_library",
+          "source_derived_coverage"
+        ]
+      },
+      "status": "approved",
+      "verification": {
+        "checks": [
+          "neutral_identity",
+          "selection_rule_validated",
+          "requirements_declared",
+          "qc_contract_declared"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "category": "qc",
+      "id": "WF-IDENTITY-SAFE-LOOP-25D-QC",
+      "implementation": {
+        "backend_options": [
+          "python",
+          "ffmpeg",
+          "opencv"
+        ],
+        "kind": "standard_recipe",
+        "steps": [
+          "protect identity/anatomy",
+          "bound depth/camera displacement",
+          "verify loop seam",
+          "reject topology drift"
+        ]
+      },
+      "name": "identity_safe_loop_25d_qc",
+      "select_if": {
+        "capabilities_any": [
+          "living_still_fx",
+          "depth_25d"
+        ]
+      },
+      "status": "approved",
+      "verification": {
+        "checks": [
+          "neutral_identity",
+          "selection_rule_validated",
+          "requirements_declared",
+          "qc_contract_declared"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "category": "assembly",
+      "id": "WF-LIVING-SCENE-ASSEMBLY",
+      "implementation": {
+        "backend_options": [
+          "python",
+          "ffmpeg",
+          "opencv"
+        ],
+        "kind": "standard_recipe",
+        "steps": [
+          "prepare reusable scene/loop segments",
+          "preserve entry/exit handles",
+          "assemble to music/script",
+          "avoid mechanical repetition"
+        ]
+      },
+      "name": "pre_rendered_reusable_scene_loop_assembly",
+      "select_if": {
+        "capabilities_any": [
+          "living_painting",
+          "living_still_fx",
+          "loop_media"
+        ],
+        "modes_any": [
+          "living_scene",
+          "hybrid"
+        ]
+      },
+      "status": "approved",
+      "verification": {
+        "checks": [
+          "neutral_identity",
+          "selection_rule_validated",
+          "requirements_declared",
+          "qc_contract_declared"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "category": "composition",
+      "id": "WF-PROFILE-DRIVEN-SCENE-TREATMENT",
+      "implementation": {
+        "backend_options": [
+          "python",
+          "ffmpeg",
+          "opencv"
+        ],
+        "kind": "standard_recipe",
+        "steps": [
+          "assign each section a neutral scene profile",
+          "combine bounded compositing, internal motion and camera behavior",
+          "bind intensity to the declared music controls",
+          "protect faces and identity-critical regions",
+          "prove the profile in its actual section output"
+        ]
+      },
+      "name": "profile_driven_living_scene_treatment",
+      "select_if": {
+        "capabilities_any": [
+          "living_painting",
+          "living_still_fx",
+          "layered_composite",
+          "reflection_echo"
+        ],
+        "modes_any": [
+          "living_scene",
+          "hybrid"
+        ]
+      },
+      "status": "approved",
+      "verification": {
+        "checks": [
+          "neutral_identity",
+          "profile_declared_per_section",
+          "internal_motion_precedes_camera_substitution",
+          "export_visible_proof"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "category": "assembly",
+      "id": "WF-LYRIC-LIVING-SCENE",
+      "implementation": {
+        "backend_options": [
+          "python",
+          "ffmpeg",
+          "opencv"
+        ],
+        "kind": "standard_recipe",
+        "steps": [
+          "map lyric/music spans",
+          "assign multiple approved images",
+          "apply living-scene motion",
+          "cut on narrative/music logic"
+        ]
+      },
+      "name": "lyric_timed_multi_image_living_scene_construction",
+      "select_if": {
+        "capabilities_any": [
+          "generated_stills",
+          "source_images",
+          "living_painting"
+        ],
+        "modes_any": [
+          "living_scene",
+          "hybrid"
+        ]
+      },
+      "status": "approved",
+      "verification": {
+        "checks": [
+          "neutral_identity",
+          "selection_rule_validated",
+          "requirements_declared",
+          "qc_contract_declared"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "category": "generated_cinema",
+      "id": "WF-SEQUENTIAL-GENERATED-CINEMA",
+      "implementation": {
+        "backend_options": [
+          "python",
+          "ffmpeg",
+          "opencv"
+        ],
+        "kind": "standard_recipe",
+        "steps": [
+          "lock start state",
+          "generate shot progression",
+          "validate terminal frame",
+          "chain continuity to next shot"
+        ]
+      },
+      "name": "sequential_generated_cinema_shot_architecture",
+      "select_if": {
+        "capabilities_any": [
+          "generated_stills",
+          "generated_support_imagery"
+        ],
+        "modes_any": [
+          "cinematic",
+          "hybrid"
+        ]
+      },
+      "status": "approved",
+      "verification": {
+        "checks": [
+          "neutral_identity",
+          "selection_rule_validated",
+          "requirements_declared",
+          "qc_contract_declared"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "category": "spatial",
+      "id": "WF-SCENE-GRAPH-25D",
+      "implementation": {
+        "backend_options": [
+          "python",
+          "ffmpeg",
+          "opencv"
+        ],
+        "kind": "standard_recipe",
+        "steps": [
+          "derive depth/planes",
+          "protect foreground identity",
+          "apply bounded image-space parallax",
+          "verify edge/disocclusion"
+        ]
+      },
+      "name": "scene_graph_25d",
+      "select_if": {
+        "capabilities_any": [
+          "depth_25d"
+        ]
+      },
+      "status": "approved",
+      "verification": {
+        "checks": [
+          "neutral_identity",
+          "selection_rule_validated",
+          "requirements_declared",
+          "qc_contract_declared"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "category": "spatial",
+      "id": "WF-NERF-PATH",
+      "implementation": {
+        "backend_options": [
+          "python",
+          "ffmpeg",
+          "opencv"
+        ],
+        "kind": "standard_recipe",
+        "steps": [
+          "require actual trained radiance field",
+          "validate capture/training evidence",
+          "author bounded camera path",
+          "render and QC"
+        ]
+      },
+      "name": "nerf_captured_scene_path",
+      "select_if": {
+        "capabilities_any": [
+          "nerf"
+        ]
+      },
+      "status": "approved",
+      "verification": {
+        "checks": [
+          "neutral_identity",
+          "selection_rule_validated",
+          "requirements_declared",
+          "qc_contract_declared"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "category": "spatial",
+      "id": "WF-GAUSSIAN-SPLAT-PATH",
+      "implementation": {
+        "backend_options": [
+          "python",
+          "ffmpeg",
+          "opencv"
+        ],
+        "kind": "standard_recipe",
+        "steps": [
+          "require genuine Gaussian geometry",
+          "run spatial preflight",
+          "author camera path",
+          "render and verify geometry"
+        ]
+      },
+      "name": "gaussian_splat_scene_path",
+      "select_if": {
+        "capabilities_any": [
+          "true_3dgs"
+        ]
+      },
+      "status": "approved",
+      "verification": {
+        "checks": [
+          "neutral_identity",
+          "selection_rule_validated",
+          "requirements_declared",
+          "qc_contract_declared"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "category": "compositing",
+      "id": "WF-LAYERED-COMPOSITING",
+      "implementation": {
+        "backend_options": [
+          "python",
+          "ffmpeg",
+          "opencv"
+        ],
+        "kind": "standard_recipe",
+        "steps": [
+          "separate semantic layers",
+          "preserve source plates",
+          "composite nondestructively",
+          "verify alpha/edge integrity"
+        ]
+      },
+      "name": "layered_nondestructive_compositing",
+      "select_if": {
+        "capabilities_any": [
+          "layered_composite",
+          "reflection_echo",
+          "atmospheric_plate",
+          "reactive_plate"
+        ]
+      },
+      "status": "approved",
+      "verification": {
+        "checks": [
+          "neutral_identity",
+          "selection_rule_validated",
+          "requirements_declared",
+          "qc_contract_declared"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "category": "compositing",
+      "id": "WF-MASK-MATTE-KEY",
+      "implementation": {
+        "backend_options": [
+          "python",
+          "ffmpeg",
+          "opencv"
+        ],
+        "kind": "standard_recipe",
+        "steps": [
+          "author masks/mattes",
+          "feather/edge inspect",
+          "preserve protected regions",
+          "verify alpha continuity"
+        ]
+      },
+      "name": "masks_mattes_alpha_keying",
+      "select_if": {
+        "capabilities_any": [
+          "layered_composite",
+          "reflection_echo"
+        ]
+      },
+      "status": "approved",
+      "verification": {
+        "checks": [
+          "neutral_identity",
+          "selection_rule_validated",
+          "requirements_declared",
+          "qc_contract_declared"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "category": "compositing",
+      "id": "WF-ROTOSCOPING",
+      "implementation": {
+        "backend_options": [
+          "python",
+          "ffmpeg",
+          "opencv"
+        ],
+        "kind": "standard_recipe",
+        "steps": [
+          "track subject/region",
+          "refine mask over time",
+          "protect anatomy/edges",
+          "QC temporal matte stability"
+        ]
+      },
+      "name": "rotoscoping",
+      "select_if": {
+        "capabilities_all": [
+          "source_video",
+          "layered_composite"
+        ]
+      },
+      "status": "approved",
+      "verification": {
+        "checks": [
+          "neutral_identity",
+          "selection_rule_validated",
+          "requirements_declared",
+          "qc_contract_declared"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "category": "tracking",
+      "id": "WF-TRACKING",
+      "implementation": {
+        "backend_options": [
+          "python",
+          "ffmpeg",
+          "opencv"
+        ],
+        "kind": "standard_recipe",
+        "steps": [
+          "choose planar/point/camera model",
+          "solve track",
+          "inspect drift",
+          "bind overlays/effects to solved motion"
+        ]
+      },
+      "name": "planar_point_camera_tracking",
+      "select_if": {
+        "capabilities_any": [
+          "source_video",
+          "conventional_video"
+        ]
+      },
+      "status": "approved",
+      "verification": {
+        "checks": [
+          "neutral_identity",
+          "selection_rule_validated",
+          "requirements_declared",
+          "qc_contract_declared"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "category": "cleanup",
+      "id": "WF-CLEANUP",
+      "implementation": {
+        "backend_options": [
+          "python",
+          "ffmpeg",
+          "opencv"
+        ],
+        "kind": "standard_recipe",
+        "steps": [
+          "identify bounded cleanup target",
+          "track/mask target",
+          "inpaint/replace",
+          "compare against source continuity"
+        ]
+      },
+      "name": "cleanup_object_removal_screen_replacement",
+      "select_if": {
+        "capabilities_any": [
+          "source_video",
+          "conventional_video"
+        ]
+      },
+      "status": "approved",
+      "verification": {
+        "checks": [
+          "neutral_identity",
+          "selection_rule_validated",
+          "requirements_declared",
+          "qc_contract_declared"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "category": "motion",
+      "id": "WF-STABILIZATION",
+      "implementation": {
+        "backend_options": [
+          "python",
+          "ffmpeg",
+          "opencv"
+        ],
+        "kind": "standard_recipe",
+        "steps": [
+          "measure source camera motion",
+          "remove defect motion only",
+          "preserve intentional energy",
+          "verify crop/edge safety"
+        ]
+      },
+      "name": "stabilization_natural_camera_energy",
+      "select_if": {
+        "capabilities_any": [
+          "source_video",
+          "conventional_video"
+        ]
+      },
+      "status": "approved",
+      "verification": {
+        "checks": [
+          "neutral_identity",
+          "selection_rule_validated",
+          "requirements_declared",
+          "qc_contract_declared"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "category": "fx",
+      "id": "WF-PROCEDURAL-PARTICLES",
+      "implementation": {
+        "backend_options": [
+          "python",
+          "ffmpeg",
+          "opencv"
+        ],
+        "kind": "standard_recipe",
+        "steps": [
+          "declare semantic ROI",
+          "author particle state",
+          "couple to environment/audio when motivated",
+          "verify visible bounded output"
+        ]
+      },
+      "name": "procedural_particle_effect_authoring",
+      "select_if": {
+        "capabilities_any": [
+          "atmospheric_plate",
+          "reactive_plate"
+        ]
+      },
+      "status": "approved",
+      "verification": {
+        "checks": [
+          "neutral_identity",
+          "selection_rule_validated",
+          "requirements_declared",
+          "qc_contract_declared"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "category": "fx",
+      "id": "WF-LENS-DISTORTION",
+      "implementation": {
+        "backend_options": [
+          "python",
+          "ffmpeg",
+          "opencv"
+        ],
+        "kind": "standard_recipe",
+        "steps": [
+          "declare lens/warp intent",
+          "bound geometry displacement",
+          "protect identity/topology",
+          "QC edges/crop"
+        ]
+      },
+      "name": "lens_warp_distortion_pipeline",
+      "select_if": {
+        "capabilities_any": [
+          "perspective_transform",
+          "living_still_fx"
+        ]
+      },
+      "status": "approved",
+      "verification": {
+        "checks": [
+          "neutral_identity",
+          "selection_rule_validated",
+          "requirements_declared",
+          "qc_contract_declared"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "category": "fx",
+      "id": "WF-DEPTH-LIGHT-OPS",
+      "implementation": {
+        "backend_options": [
+          "python",
+          "ffmpeg",
+          "opencv"
+        ],
+        "kind": "standard_recipe",
+        "steps": [
+          "apply operations to semantic regions",
+          "preserve linework/identity",
+          "couple light to source",
+          "verify no global pumping"
+        ]
+      },
+      "name": "glow_blur_sharpen_depth_light_operations",
+      "select_if": {
+        "capabilities_any": [
+          "living_painting",
+          "living_still_fx",
+          "atmospheric_plate"
+        ]
+      },
+      "status": "approved",
+      "verification": {
+        "checks": [
+          "neutral_identity",
+          "selection_rule_validated",
+          "requirements_declared",
+          "qc_contract_declared"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "category": "edit",
+      "id": "WF-RETIME",
+      "implementation": {
+        "backend_options": [
+          "python",
+          "ffmpeg",
+          "opencv"
+        ],
+        "kind": "standard_recipe",
+        "steps": [
+          "declare source/target timing",
+          "author curve",
+          "preserve sync/action readability",
+          "verify joins and cadence"
+        ]
+      },
+      "name": "speed_changes_retiming_curves",
+      "select_if": {
+        "capabilities_any": [
+          "conventional_video",
+          "loop_media"
+        ]
+      },
+      "status": "approved",
+      "verification": {
+        "checks": [
+          "neutral_identity",
+          "selection_rule_validated",
+          "requirements_declared",
+          "qc_contract_declared"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "category": "edit",
+      "id": "WF-NESTED-TIMELINES",
+      "implementation": {
+        "backend_options": [
+          "python",
+          "ffmpeg",
+          "opencv"
+        ],
+        "kind": "standard_recipe",
+        "steps": [
+          "group shot-level composites",
+          "preserve source traceability",
+          "nest without baking canon",
+          "verify duration propagation"
+        ]
+      },
+      "name": "compound_clips_nested_timelines",
+      "select_if": {
+        "modes_any": [
+          "cinematic",
+          "hybrid"
+        ]
+      },
+      "status": "approved",
+      "verification": {
+        "checks": [
+          "neutral_identity",
+          "selection_rule_validated",
+          "requirements_declared",
+          "qc_contract_declared"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "category": "look",
+      "id": "WF-WARM-NARRATIVE-LOOK",
+      "implementation": {
+        "backend_options": [
+          "python",
+          "ffmpeg",
+          "opencv"
+        ],
+        "kind": "standard_recipe",
+        "steps": [
+          "apply warm practical-led grade",
+          "preserve skin/identity",
+          "retain motivated contrast",
+          "QC against style contract"
+        ]
+      },
+      "name": "warm_narrative_treatment",
+      "select_if": {
+        "manual_only": true
+      },
+      "status": "approved",
+      "verification": {
+        "checks": [
+          "neutral_identity",
+          "selection_rule_validated",
+          "requirements_declared",
+          "qc_contract_declared"
+        ],
+        "status": "PASS"
+      }
+    }
+  ]
+}

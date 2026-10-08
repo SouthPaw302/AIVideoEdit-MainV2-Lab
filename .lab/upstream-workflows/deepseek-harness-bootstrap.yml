@@ -1,0 +1,74 @@
+name: DeepSeek Harness Prototype Bootstrap
+
+on:
+  push:
+    branches:
+      - prototype/deepseek-harness
+    paths:
+      - ".github/workflows/deepseek-harness-bootstrap.yml"
+      - "prototype/backend_gui/**"
+      - "bootstrap.py"
+      - "AGENTS.md"
+      - "PRIME_DIRECTIVE.md"
+      - "SYSTEM_INDEX.md"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  harness-bootstrap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: prototype/deepseek-harness
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Assert prototype isolation
+        shell: bash
+        run: |
+          test "$(git branch --show-current)" = "prototype/deepseek-harness"
+          echo "PASS: host branch is prototype/deepseek-harness"
+
+      - name: Install runtime dependencies
+        shell: bash
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y ffmpeg
+
+      - name: Bootstrap canonical core through prototype adapter
+        shell: bash
+        run: |
+          python - <<'PYCORE'
+          import json, sys
+          sys.path.insert(0, "prototype/backend_gui")
+          from core_adapter import CORE
+          result = CORE.bootstrap(offline=False)
+          print(json.dumps(result, indent=2, sort_keys=True))
+          if not result.get("bootstrapped"):
+              raise SystemExit("FAIL: canonical core bootstrap did not attest")
+          if result.get("host_branch") != "prototype/deepseek-harness":
+              raise SystemExit("FAIL: prototype host branch drifted")
+          if result.get("core_branch") != "main":
+              raise SystemExit("FAIL: canonical core was not bootstrapped as main")
+          PYCORE
+
+      - name: Run Harness MCP smoke test
+        run: python prototype/backend_gui/harness_selftest.py
+
+      - name: Compile prototype production modules
+        shell: bash
+        run: |
+          python -m py_compile             prototype/backend_gui/harness_tools.py             prototype/backend_gui/aivideo_mcp.py             prototype/backend_gui/tool_api.py             prototype/backend_gui/production_project.py             prototype/backend_gui/production_analysis.py             prototype/backend_gui/production_approach.py             prototype/backend_gui/production_operating_order.py             prototype/backend_gui/production_storyboard.py             prototype/backend_gui/production_shots.py             prototype/backend_gui/production_proofs.py             prototype/backend_gui/production_fx.py             prototype/backend_gui/production_assembly.py             prototype/backend_gui/production_final_qc.py
+
+      - name: Emit readiness summary
+        shell: bash
+        run: |
+          echo "DeepSeek Harness prototype bootstrap PASS"
+          echo "Host branch: $(git branch --show-current)"
+          echo "No main mutation performed."

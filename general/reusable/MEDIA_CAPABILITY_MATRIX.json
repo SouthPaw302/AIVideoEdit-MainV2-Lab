@@ -1,0 +1,30 @@
+{
+  "schema": "aivideoedit.media-capabilities.v2",
+  "capabilities": [
+    {"id":"source_video","kind":"source","requires":"supplied or authorized video"},
+    {"id":"extracted_frames","kind":"source-derived","requires":"reference video"},
+    {"id":"source_images","kind":"source","requires":"supplied or authorized images"},
+    {"id":"authorized_source_images","kind":"source","requires":"images explicitly supplied or authorized for the current production; provenance recorded"},
+    {"id":"accepted_source_library","kind":"source-canon","requires":"current-user acceptance with locator, sha256, content_reuse_authorized=true, and timeline_locked=false"},
+    {"id":"canonical_hero_library","kind":"source-derived","requires":"accepted source library plus HERO_LIBRARY.json with non-empty perceptually diverse selections and source/hash/diversity evidence"},
+    {"id":"source_derived_coverage","kind":"source-derived","requires":"accepted source library; each derived asset records source-library sha256, source time/range, and derivation; locked source canon is preserved"},
+    {"id":"generated_stills","kind":"generated","requires":"established visual/media approach; locked identity when applicable"},
+    {"id":"recovered_generated_stills","kind":"generated-recovered","requires":"previously generated stills with recoverable provenance, hashes, and explicit authority for reuse in the current production"},
+    {"id":"generated_support_imagery","kind":"generated","requires":"established visual/media approach"},
+    {"id":"accepted_motion_benchmark_video","kind":"reference-motion","requires":"motion/style benchmark explicitly accepted for reference use; content reuse remains separately authorized"},
+    {"id":"living_painting","kind":"animated_image","requires":"source or locked generated imagery"},
+    {"id":"living_still_fx","kind":"animated_image_fx","requires":"source or locked generated imagery; deterministic or recorded effect parameters; motion/loop/export proof before acceptance"},
+    {"id":"layered_composite","kind":"composite","requires":"layers/masks/alpha as appropriate"},
+    {"id":"reflection_echo","kind":"composite_fx","requires":"authored reflected/echoed image-space treatment with bounded geometry, opacity continuity, and export-visible proof"},
+    {"id":"depth_25d","kind":"spatial","requires":"explicit depth map or segmented planes; truthful bounded image-space motion"},
+    {"id":"perspective_transform","kind":"spatial_transform","requires":"bounded perspective or projective transform with no false claim of true 3D geometry; endpoint and crop QC"},
+    {"id":"atmospheric_plate","kind":"procedural","requires":"motivated environment/light/particle design"},
+    {"id":"reactive_plate","kind":"procedural","requires":"measured song controls when music-reactive"},
+    {"id":"loop_media","kind":"temporal","requires":"entry/exit/seam QC and intended musical role"},
+    {"id":"transition_media","kind":"temporal","requires":"authored real-duration proof and identity/exposure continuity QC"},
+    {"id":"nerf","kind":"spatial","requires":"actual trained neural radiance field and proof"},
+    {"id":"true_3dgs","kind":"spatial","requires":"real Gaussian splat geometry plus project preflight/proof"},
+    {"id":"conventional_video","kind":"video","requires":"authorized footage or rendered production shot"},
+    {"id":"analysis_qc_media","kind":"analysis","requires":"production-analysis or verification purpose"}
+  ]
+}

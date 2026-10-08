@@ -1,0 +1,382 @@
+{
+  "schema": "aivideoedit.fx-recipes.v1",
+  "policy": {
+    "selection_order": [
+      "approved_canonical_fx",
+      "approved_reusable_recipe",
+      "proof_required_existing_fx",
+      "project_local_candidate",
+      "new_fx_only_if_needed"
+    ],
+    "max_default_effects": 6,
+    "internal_scene_motion_first": true,
+    "protect_identity_regions": true,
+    "transition_must_finish_on_destination": true
+  },
+  "recipes": [
+    {
+      "id": "RCP-FIRELIT-INTERIOR",
+      "name": "firelit_interior_living_scene",
+      "priority": 90,
+      "select_if": {
+        "any": [
+          "fire",
+          "hearth",
+          "candle",
+          "forge",
+          "tavern"
+        ],
+        "none": [
+          "underwater"
+        ]
+      },
+      "effects": [
+        "FX2-FIRE-001",
+        "FX2-LIGHT-023",
+        "FX2-FIRE-002",
+        "FX2-ATM-001",
+        "FX2-LIGHT-028"
+      ],
+      "protect": [
+        "face",
+        "hands",
+        "anatomy",
+        "instrument",
+        "critical_props"
+      ],
+      "steps": [
+        "localize flame to visible fire source",
+        "keep firelight source-motivated",
+        "confine smoke/embers to plausible regions",
+        "protect identity before broad motion"
+      ]
+    },
+    {
+      "id": "RCP-RAINY-WATERFRONT",
+      "name": "rainy_waterfront_atmosphere",
+      "priority": 88,
+      "select_if": {
+        "all": [
+          "rain"
+        ],
+        "any": [
+          "water",
+          "harbor",
+          "coast",
+          "street",
+          "wet_ground"
+        ]
+      },
+      "effects": [
+        "FX2-ATM-002",
+        "FX2-ATM-021",
+        "FX2-MOTION-003",
+        "FX2-SURFACE-023",
+        "FX2-LIGHT-002"
+      ],
+      "protect": [
+        "face",
+        "hands",
+        "anatomy",
+        "critical_props"
+      ],
+      "steps": [
+        "rain only where physically plausible",
+        "water motion only on water/wet reflective regions",
+        "fog remains depth-limited",
+        "light events remain source-motivated"
+      ]
+    },
+    {
+      "id": "RCP-GHOSTED-OBJECT",
+      "name": "ghosted_narrative_object_overlay",
+      "priority": 96,
+      "select_if": {
+        "any": [
+          "memory",
+          "ancestry",
+          "dream",
+          "foreshadow",
+          "symbolic_object",
+          "ghost_overlay"
+        ]
+      },
+      "effects": [
+        "FX2-TRANS-025",
+        "FX2-COMP-021",
+        "FX2-ATM-021",
+        "FX2-LIGHT-002"
+      ],
+      "protect": [
+        "base_subject_identity"
+      ],
+      "steps": [
+        "isolate secondary object or scene fragment with alpha",
+        "animate overlay independently with restrained drift/parallax",
+        "share atmosphere/light with base plate",
+        "use opacity as narrative emphasis, not a generic dissolve",
+        "fade or hand off cleanly without snapping back"
+      ]
+    },
+    {
+      "id": "RCP-TRANSPARENT-HANDOFF",
+      "name": "layered_transparent_scene_handoff",
+      "priority": 94,
+      "select_if": {
+        "any": [
+          "transparent_handoff",
+          "memory_transition",
+          "scene_handoff",
+          "alpha_transition"
+        ]
+      },
+      "effects": [
+        "FX2-COMP-021",
+        "FX2-TRANS-025",
+        "FX2-LIGHT-002",
+        "FX2-ATM-021"
+      ],
+      "protect": [
+        "identity",
+        "architecture_lock",
+        "horizon_lock"
+      ],
+      "steps": [
+        "preserve base composition",
+        "introduce masked alpha variation",
+        "animate secondary layer independently",
+        "unify with shared light/atmosphere",
+        "transfer dominance to destination",
+        "finish fully on destination before cut"
+      ]
+    },
+    {
+      "id": "RCP-PROTECTED-ENVIRONMENT",
+      "name": "protected_subject_environmental_motion",
+      "priority": 92,
+      "select_if": {
+        "any": [
+          "protected_subject",
+          "crowd",
+          "architecture",
+          "room_motion",
+          "environment_motion"
+        ]
+      },
+      "effects": [
+        "FX2-MOTION-002",
+        "FX2-COMP-021",
+        "FX2-MOTION-026"
+      ],
+      "protect": [
+        "face",
+        "hands",
+        "anatomy",
+        "instrument",
+        "hero_identity",
+        "critical_props"
+      ],
+      "steps": [
+        "derive explicit protect mask",
+        "move only surrounding scene regions",
+        "prevent topology drift inside protected mask",
+        "QC first/last frame and highest-motion frame"
+      ]
+    },
+    {
+      "id": "RCP-LONG-HOLD",
+      "name": "long_hold_scene_evolution",
+      "priority": 86,
+      "select_if": {
+        "any": [
+          "long_hold",
+          "hero_hold",
+          "scene_evolution"
+        ]
+      },
+      "effects": [
+        "FX2-MOTION-002",
+        "FX2-LIGHT-002",
+        "FX2-ATM-021",
+        "FX2-CAMERA-023"
+      ],
+      "protect": [
+        "identity",
+        "critical_geometry"
+      ],
+      "steps": [
+        "start with internal material motion",
+        "add atmosphere/light evolution",
+        "use transparent overlay when narratively motivated",
+        "camera movement remains restrained and last",
+        "change major composition only after internal evolution is exhausted"
+      ]
+    },
+    {
+      "id": "RCP-ARTIFACT-SALVAGE",
+      "name": "localized_artifact_salvage",
+      "priority": 99,
+      "select_if": {
+        "any": [
+          "artifact_repair",
+          "localized_artifact",
+          "salvage"
+        ]
+      },
+      "effects": [
+        "FX2-COMP-021",
+        "FX2-LIGHT-028",
+        "FX2-ATM-021",
+        "FX2-CAMERA-024"
+      ],
+      "protect": [
+        "all_accepted_composition_outside_repair_roi"
+      ],
+      "steps": [
+        "evaluate crop/reframe first",
+        "mask repair ROI",
+        "try motivated light/fog/shadow/overlay/depth occlusion",
+        "preserve accepted composition",
+        "regenerate only if localized salvage fails"
+      ]
+    },
+    {
+      "id": "RCP-INSTRUMENT-AXIS",
+      "name": "instrument_axis_audio_visualizer",
+      "priority": 82,
+      "select_if": {
+        "all": [
+          "instrument"
+        ],
+        "any": [
+          "audio_reactive",
+          "visualizer",
+          "performance"
+        ]
+      },
+      "effects": [
+        "FX2-VIS-025",
+        "FX2-AUDIO-021",
+        "FX2-LIGHT-002"
+      ],
+      "protect": [
+        "performer_face",
+        "hands",
+        "instrument_geometry"
+      ],
+      "steps": [
+        "align reactive trace to existing instrument or object axis",
+        "drive intensity from preserved audio controls",
+        "avoid generic fullscreen waveform",
+        "keep geometry stable"
+      ]
+    },
+    {
+      "id": "RCP-TEMPORAL-PAINTING",
+      "name": "temporal_painting_evolution",
+      "priority": 84,
+      "select_if": {
+        "any": [
+          "dusk_to_night",
+          "temporal_painting",
+          "time_shift",
+          "day_to_night"
+        ]
+      },
+      "effects": [
+        "FX2-LIGHT-025",
+        "FX2-LIGHT-001",
+        "FX2-SURFACE-023"
+      ],
+      "protect": [
+        "identity",
+        "architecture"
+      ],
+      "steps": [
+        "migrate palette gradually",
+        "grow practical/window light only where sources exist",
+        "evolve reflections consistently",
+        "avoid single global grade jump"
+      ]
+    },
+    {
+      "id": "RCP-PIGMENT-TRAVEL",
+      "name": "pigment_mask_scene_transport",
+      "priority": 80,
+      "select_if": {
+        "any": [
+          "pigment",
+          "paint_transition",
+          "wet_paint",
+          "textile_transition"
+        ]
+      },
+      "effects": [
+        "FX2-TRANS-021",
+        "FX2-TRANS-024",
+        "FX2-COMP-021"
+      ],
+      "protect": [
+        "identity_until_handoff"
+      ],
+      "steps": [
+        "derive stable low-frequency transport mask",
+        "allow chroma/pigment migration before replacement",
+        "soften handoff with bounded bloom/fog",
+        "finish on destination"
+      ]
+    },
+    {
+      "id": "RCP-MULTIPLANE",
+      "name": "transparent_multiplane_cutout_composition",
+      "priority": 89,
+      "select_if": {
+        "any": [
+          "multiplane",
+          "foreground_cutout",
+          "parallax",
+          "depth_layers"
+        ]
+      },
+      "effects": [
+        "FX2-SPATIAL-021",
+        "FX2-COMP-021",
+        "FX2-CAMERA-023"
+      ],
+      "protect": [
+        "face",
+        "hands",
+        "identity",
+        "linework"
+      ],
+      "steps": [
+        "keep accepted hero as untouched base plate",
+        "isolate real foreground/midground layers with alpha",
+        "move foreground more than midground; background near-locked",
+        "avoid destructive inpainting unless explicitly proven"
+      ]
+    },
+    {
+      "id": "RCP-JITTER-SUPPRESSION",
+      "name": "pre_fx_global_jitter_suppression",
+      "priority": 78,
+      "select_if": {
+        "any": [
+          "jitter",
+          "unstable_source_motion",
+          "global_translation_noise"
+        ]
+      },
+      "effects": [],
+      "protect": [
+        "intended_slow_camera_travel"
+      ],
+      "steps": [
+        "estimate high-frequency global translation",
+        "separate slow intentional travel from frame-to-frame jitter",
+        "apply bounded correction before creative FX",
+        "QC borders and subject stability"
+      ]
+    }
+  ]
+}

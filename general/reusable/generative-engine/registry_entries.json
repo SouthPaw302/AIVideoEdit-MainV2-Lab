@@ -1,0 +1,37 @@
+{
+  "schema_version": 2,
+  "updated": "2026-09-06",
+  "role": "legacy_alias_map_only",
+  "canonical_registry_target": "../fx_v2/registry.json",
+  "notes": "This file is not a second registry. The canonical callable IDs live in general/reusable/fx_v2/registry.json. Historical prototype IDs below are aliases retained for recovery and old-document lookup only.",
+  "aliases": [
+    {
+      "legacy_id": "SYS-AUDIO-REACTIVE-001",
+      "canonical_id": "FX2-AUDIO-001",
+      "name": "Unified frame-aligned visual control bus",
+      "implementation": "audio/reactive_core.py",
+      "evidence": "PLAN.md#smoke-test-record"
+    },
+    {
+      "legacy_id": "VIS-GEN-001",
+      "canonical_id": "FX2-VIS-001",
+      "name": "Organic audio-reactive generative field",
+      "implementation": "visualizers/reactive_field.py",
+      "evidence": "PLAN.md#smoke-test-record"
+    },
+    {
+      "legacy_id": "DF-25D-001",
+      "canonical_id": "FX2-SPATIAL-004",
+      "name": "Streaming continuous soft-depth living parallax",
+      "implementation": "spatial/living_parallax.py",
+      "evidence": "PLAN.md#smoke-test-record",
+      "notes": "Real depth preferred. Synthetic radial depth remains fallback/proof mode only. This does not replace IE-SPATIAL-001 or SYS-SPATIAL-003 historical lineage."
+    }
+  ],
+  "not_duplicated": [
+    {
+      "id": "SYS-SPATIAL-001",
+      "reason": "Existing 3D Gaussian Splatting / SuperSplat system capability remains canonical; callable conditional integration is FX2-SPATIAL-003."
+    }
+  ]
+}

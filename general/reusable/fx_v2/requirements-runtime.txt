@@ -1,0 +1,3 @@
+# Required by general/reusable/fx_v2/runtime.py and precompile_gate.py
+numpy>=1.26,<3
+opencv-python-headless>=4.8,<5
