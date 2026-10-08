@@ -24,7 +24,7 @@ jobs:
     env:
       GH_TOKEN: ${{ github.token }}
       REPO: ${{ github.repository }}
-      OUT: ${{ runner.temp }}/camion-fx-assembly
+      OUT: ${{ github.workspace }}/.camion-fx-assembly
     steps:
       - name: Checkout isolated song branch and production manifests
         uses: actions/checkout@v4
