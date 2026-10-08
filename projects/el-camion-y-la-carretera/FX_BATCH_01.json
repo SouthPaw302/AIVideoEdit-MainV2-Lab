@@ -1,0 +1,305 @@
+{
+  "schema": "aivideoedit.fx-animation-batch.v1",
+  "project": "el-camion-y-la-carretera",
+  "route": "La Carretera Recuerda",
+  "batch": 1,
+  "fps": 24,
+  "seconds": 2,
+  "width": 640,
+  "height": 360,
+  "loop_policy": "Frame 00 to final frame equal; last-eight-frame gradual loop closure; derivative frames from immutable originals; QC is human pending.",
+  "source_status": "10_IMAGES_IMPORT_LOCKED",
+  "artistic_status": "UNREVIEWED",
+  "shots": [
+    {
+      "shot_id": "EC-01",
+      "source": "media/batch_01/source/EC-01.png",
+      "git_blob_sha": "1d265bde09f727c71669dba497e92868cf374aa0",
+      "source_sha256": "377c67ef530d4353a648fe9787a547c4c09f50ebb8e900178c5236f64871ad26",
+      "source_drive_id": "1W0ogG3Fu3BKObNX3a1-zEb_QaJ95IIxm",
+      "fx": [
+        {
+          "id": "FX2-ATM-002",
+          "params": {
+            "roi": [
+              0,
+              0,
+              1,
+              0.93
+            ],
+            "strength": 0.3
+          }
+        },
+        {
+          "id": "FX2-ATM-001",
+          "params": {
+            "roi": [
+              0.1,
+              0.2,
+              1,
+              0.65
+            ],
+            "strength": 0.2
+          }
+        }
+      ],
+      "motion_scope": "environment_or_practical_light_only",
+      "requires_true_continuation": false
+    },
+    {
+      "shot_id": "EC-02",
+      "source": "media/batch_01/source/EC-02.png",
+      "git_blob_sha": "284f6b6b82101392b1d020bdd21347a610e19d10",
+      "source_sha256": "c5c0b5841946f13fe7ebeb50d4a5361a3230c7a51550c032dbeb98a87bcbe804",
+      "source_drive_id": "1dZJQ5QnGSODWOsjA_0C_9xPlQoVLZ3Wi",
+      "fx": [
+        {
+          "id": "FX2-LIGHT-001",
+          "params": {
+            "roi": [
+              0.25,
+              0.26,
+              0.9,
+              0.78
+            ],
+            "strength": 0.72
+          }
+        }
+      ],
+      "motion_scope": "environment_or_practical_light_only",
+      "requires_true_continuation": true
+    },
+    {
+      "shot_id": "EC-03",
+      "source": "media/batch_01/source/EC-03.png",
+      "git_blob_sha": "0bd2159acd25733074fb47056a3c77ac6112bdf8",
+      "source_sha256": "ad28619d881a5d69351fdcf1ac9b4f982004195585c60036193747c35c242433",
+      "source_drive_id": "148wT6t9H1cCc9jgZ6L3QFwlqEa8o7gM2",
+      "fx": [
+        {
+          "id": "FX2-ATM-002",
+          "params": {
+            "roi": [
+              0,
+              0,
+              1,
+              1
+            ],
+            "strength": 0.24
+          }
+        },
+        {
+          "id": "FX2-MOTION-003",
+          "params": {
+            "roi": [
+              0,
+              0.74,
+              1,
+              1
+            ],
+            "strength": 0.11
+          }
+        }
+      ],
+      "motion_scope": "environment_or_practical_light_only",
+      "requires_true_continuation": true
+    },
+    {
+      "shot_id": "EC-04",
+      "source": "media/batch_01/source/EC-04.png",
+      "git_blob_sha": "132f8af6f1cd2371de1bef640dec4cbed647a0c3",
+      "source_sha256": "39badac34456b2dd444a4f3a529079702502d1599b41e87bc8951a45ae5ff446",
+      "source_drive_id": "1XOKhk7I0K5Fm0C5wZg_ts4rldrDqPKi9",
+      "fx": [
+        {
+          "id": "FX2-ATM-002",
+          "params": {
+            "roi": [
+              0.2,
+              0.07,
+              0.95,
+              0.81
+            ],
+            "strength": 0.2
+          }
+        }
+      ],
+      "motion_scope": "environment_or_practical_light_only",
+      "requires_true_continuation": true
+    },
+    {
+      "shot_id": "EC-05",
+      "source": "media/batch_01/source/EC-05.png",
+      "git_blob_sha": "6f5b8fa11fc39ce5f1cbd32434f6fedaaa3d02fd",
+      "source_sha256": "7cc1b0c6767426af092da8bfbcc1d753534ad451dd748d7e2d647bbcce833633",
+      "source_drive_id": "1Hz3gxfLtnq7ylnebtV_jnGPhdZ58aT0w",
+      "fx": [
+        {
+          "id": "FX2-LIGHT-001",
+          "params": {
+            "roi": [
+              0.12,
+              0.18,
+              0.84,
+              0.9
+            ],
+            "strength": 0.68
+          }
+        }
+      ],
+      "motion_scope": "environment_or_practical_light_only",
+      "requires_true_continuation": false
+    },
+    {
+      "shot_id": "EC-06",
+      "source": "media/batch_01/source/EC-06.png",
+      "git_blob_sha": "27ad94fdcd0f73f8f1854bce6a09d7881d68acbc",
+      "source_sha256": "f88f1adfbc0b21a415bf7b8746a12ece2976a5cccb2f45831df63b4531365fe3",
+      "source_drive_id": "1t2wY59tRbyA4TBx85OiH974sYE82lp_F",
+      "fx": [
+        {
+          "id": "FX2-ATM-001",
+          "params": {
+            "roi": [
+              0,
+              0.17,
+              1,
+              0.81
+            ],
+            "strength": 0.62
+          }
+        }
+      ],
+      "motion_scope": "environment_or_practical_light_only",
+      "requires_true_continuation": false
+    },
+    {
+      "shot_id": "EC-07",
+      "source": "media/batch_01/source/EC-07.png",
+      "git_blob_sha": "3a186e9609ec63cb7e60eb29ee3c041ae3dbe9bf",
+      "source_sha256": "3c567beaf3d1f1731083513e74c567051d5e81ebcfb3f6016810ece8bd7c9835",
+      "source_drive_id": "1_13QPg0y57xSLELqbY0C9bmiunNL0mCm",
+      "fx": [
+        {
+          "id": "FX2-ATM-002",
+          "params": {
+            "roi": [
+              0,
+              0,
+              1,
+              1
+            ],
+            "strength": 0.24
+          }
+        },
+        {
+          "id": "FX2-LIGHT-001",
+          "params": {
+            "roi": [
+              0.1,
+              0.01,
+              0.94,
+              0.64
+            ],
+            "strength": 0.45
+          }
+        }
+      ],
+      "motion_scope": "environment_or_practical_light_only",
+      "requires_true_continuation": true
+    },
+    {
+      "shot_id": "EC-08",
+      "source": "media/batch_01/source/EC-08.png",
+      "git_blob_sha": "164f03670e492fcf7e7ed16054027e52c6642ab7",
+      "source_sha256": "eb3a9167937075bcf64cf0d9f1a405670bafd780d813a92e334605a06133b08b",
+      "source_drive_id": "18p9nqdLKoC6Hrxse1wdR_HtRkO8hDyFL",
+      "fx": [
+        {
+          "id": "FX2-ATM-001",
+          "params": {
+            "roi": [
+              0.22,
+              0.1,
+              0.52,
+              0.68
+            ],
+            "strength": 0.56
+          }
+        },
+        {
+          "id": "FX2-LIGHT-001",
+          "params": {
+            "roi": [
+              0.07,
+              0.11,
+              0.68,
+              0.77
+            ],
+            "strength": 0.24
+          }
+        }
+      ],
+      "motion_scope": "environment_or_practical_light_only",
+      "requires_true_continuation": false
+    },
+    {
+      "shot_id": "EC-09",
+      "source": "media/batch_01/source/EC-09.png",
+      "git_blob_sha": "e5d74235a9f6bfeb95524cabaf6f09a82f8f2af1",
+      "source_sha256": "f0a2ce38538e6aa5a4fb166d3d70be0b402424bc4de5d7d78119ef922017eecd",
+      "source_drive_id": "1NP9W8OFirs-RP6u4wMEfGvxfMJ65UsqY",
+      "fx": [
+        {
+          "id": "FX2-ATM-002",
+          "params": {
+            "roi": [
+              0.11,
+              0.05,
+              0.9,
+              0.86
+            ],
+            "strength": 0.17
+          }
+        }
+      ],
+      "motion_scope": "environment_or_practical_light_only",
+      "requires_true_continuation": false
+    },
+    {
+      "shot_id": "EC-10",
+      "source": "media/batch_01/source/EC-10.png",
+      "git_blob_sha": "8af3909f5281377c6d6d0396719047ebf5feaa9e",
+      "source_sha256": "a63826d16119593eeadbf39a4e10b5ad4dde659844129b29956f1f7bac3af2db",
+      "source_drive_id": "1-78hZMFPFqPb5vPW7XkKZXz-eQBYigWf",
+      "fx": [
+        {
+          "id": "FX2-ATM-002",
+          "params": {
+            "roi": [
+              0,
+              0,
+              1,
+              1
+            ],
+            "strength": 0.28
+          }
+        },
+        {
+          "id": "FX2-ATM-001",
+          "params": {
+            "roi": [
+              0.06,
+              0.12,
+              1,
+              0.72
+            ],
+            "strength": 0.26
+          }
+        }
+      ],
+      "motion_scope": "environment_or_practical_light_only",
+      "requires_true_continuation": true
+    }
+  ]
+}
