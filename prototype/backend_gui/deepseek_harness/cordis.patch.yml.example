@@ -1,0 +1,20 @@
+# Example DeepSeek Harness profile patch.
+# Replace /absolute/path/to/AIVideoEdit before use.
+- id: mcp-aivideoedit
+  name: '@deepseek-ai/dsh-mcp-client'
+  config:
+    serverName: aivideo
+    transport: stdio
+    command: python
+    args:
+      - prototype/backend_gui/aivideo_mcp.py
+    env: {}
+    cwd: /absolute/path/to/AIVideoEdit
+    toolCallTimeoutMs: 300000
+    failOnStartupError: false
+    maxInstructionBytes: 32768
+    reconnect:
+      enabled: true
+      initialDelayMs: 500
+      maxDelayMs: 30000
+      maxAttempts: 10

@@ -1,0 +1,31 @@
+{
+  "proof": "FX2_PROOF03_REACTIVE_MATERIAL_LAYERS",
+  "schema_version": 2,
+  "purpose": "Deterministic neutral proof for luminance-split material motion and orbital audio-reactive embers.",
+  "source": "repository-generated deterministic synthetic high-contrast scene",
+  "source_provenance": "generated entirely by proof harness; no production or external media",
+  "runtime_path": "general/reusable/fx_v2/material_reactive_layers.py",
+  "artifact_path": "general/reusable/fx_v2/proofs/FX2_PROOF03_REACTIVE_MATERIAL_LAYERS.mp4",
+  "sha256": "00461f8220830d10b53f05a45bff1f8e62a1d9690321dc29b48eaaaa22bb988c",
+  "contact_sheet_path": "general/reusable/fx_v2/proofs/FX2_PROOF03_REACTIVE_MATERIAL_LAYERS_contact_sheet.jpg",
+  "contact_sheet_sha256": "e12d91548a11398ac641d0eb437ed33f47c9c815ab4f7423ab510b20f9d035e1",
+  "fps": 24,
+  "frames": 144,
+  "duration_seconds": 6.0,
+  "size": [640, 360],
+  "camera": "locked; no camera transform or shake",
+  "effects": ["FX2-SURFACE-002", "FX2-FIRE-003"],
+  "mean_adjacent_frame_delta": 0.7239259785353535,
+  "p95_adjacent_frame_delta": 1.3995522280092594,
+  "decoded_frames": 144,
+  "black_frames": 0,
+  "visual_qc": "PASS ENGINE PROOF; bright and dark material move independently while composition remains anchored; orbital embers show deterministic swirl and control-driven intensity.",
+  "approval_scope": "engine_runtime_only",
+  "approval_basis": [
+    "actual MP4 bytes generated deterministically in the promotion workspace",
+    "locked camera demonstrates internal material motion",
+    "contact sheet confirms identity/composition remains stable while material changes",
+    "zero black frames"
+  ],
+  "promotion_note": "Binary proof artifacts are intentionally not marked canonical until repository byte storage is completed; registry entries remain proof_required."
+}

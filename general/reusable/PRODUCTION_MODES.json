@@ -1,0 +1,29 @@
+{
+  "schema": "aivideoedit.production-modes.v2",
+  "direction_authorities": ["reference_led","music_led","user_directed"],
+  "production_modes": {
+    "living_scene": {
+      "description": "Stable authored composition with independent internal motion; camera is secondary.",
+      "required_proof_focus": ["internal_motion_visible","material_motion_independent","identity_stable","camera_restrained","loop_or_join_clean"]
+    },
+    "cinematic": {
+      "description": "Evolving film with deliberate action, coverage, shot progression, continuity, and cinematic pacing.",
+      "required_proof_focus": ["story_action_readable","coverage_sufficient","continuity_controlled","shot_progression_present","pacing_music_directed"]
+    },
+    "hybrid": {
+      "description": "Deliberate mix of living-scene, source-derived, conventional cinematic and bounded generated-continuation shots inside one coherent visual world.",
+      "required_proof_focus": ["section_mode_declared","mode_specific_qc_passed","visual_world_coherent","method_transitions_intentional","complexity_serves_film"]
+    }
+  },
+  "shot_behaviors": {
+    "LIVING_STILL": {"requires":["canonical_source","semantic_motion_plan","protected_regions"]},
+    "SOURCE_DERIVED": {"requires":["canonical_source","source_provenance"]},
+    "CINEMATIC_COVERAGE": {"requires":["continuity_plan","staging_plan"]},
+    "GENERATED_CONTINUATION": {
+      "requires":["canonical_start_hash","immutable_anchors","allowed_action_envelope","camera_envelope","environment_force_state","duration","fps","audio_policy","terminal_frame_policy"],
+      "qc":["identity_stable","world_topology_stable","temporal_motion_real","camera_within_envelope","environment_coherent","terminal_frame_valid"]
+    }
+  },
+  "generated_audio_policies": ["keep","duck","replace","isolate_sfx","isolate_ambience","discard"],
+  "selection_rule": "record direction_authority and production_mode in OPERATING_ORDER.json; declare shot_behavior per shot before final render"
+}

@@ -1,0 +1,14 @@
+{
+  "effect_aliases": "general/reusable/fx_v2/effect_aliases.json",
+  "effect_authority": "general/reusable/fx_v2/registry.json",
+  "effect_name_authority": "general/reusable/fx_v2/effect_name_registry.json",
+  "policy": "Capabilities are identified and selected only by neutral effect/workflow names and IDs. Production provenance is not a runtime identity or selection input.",
+  "schema": "aivideoedit.capability-index.v2",
+  "status": "compatibility_index",
+  "verification": {
+    "effects": "python general/reusable/fx_v2/verify_promoted_effects.py",
+    "workflow_guard": "python general/reusable/tools/workflow_guard.py --branch <branch>",
+    "workflows": "python general/reusable/tools/workflow_resolver.py --verify --json"
+  },
+  "workflow_authority": "general/reusable/STANDARD_WORKFLOW_REGISTRY.json"
+}

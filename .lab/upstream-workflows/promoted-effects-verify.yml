@@ -1,0 +1,39 @@
+name: AIVideoEdit Promoted Effects Verification
+
+on:
+  pull_request:
+    paths:
+      - 'general/reusable/fx_v2/**'
+      - '.github/workflows/promoted-effects-verify.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'general/reusable/fx_v2/**'
+      - '.github/workflows/promoted-effects-verify.yml'
+  workflow_dispatch:
+
+jobs:
+  verify-promoted-effects:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install verification dependencies
+        run: pip install --disable-pip-version-check numpy opencv-python-headless pytest
+      - name: Run promoted effect tests
+        run: pytest -q general/reusable/fx_v2/tests/test_promoted_effects.py
+      - name: Rebuild verification metrics
+        run: python general/reusable/fx_v2/verify_promoted_effects.py > /tmp/promoted-effects-verification.json
+      - name: Validate committed verification coverage
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          committed=json.loads(Path('general/reusable/fx_v2/proofs/FX2_PROOF04_PROMOTED_EFFECT_LIBRARY.verification.json').read_text())
+          rebuilt=json.loads(Path('/tmp/promoted-effects-verification.json').read_text())
+          assert committed['effect_count']==rebuilt['effect_count']==52
+          assert committed['legacy_alias_count']==rebuilt['legacy_alias_count']==71
+          assert rebuilt['result']=='PASS'
+          PY

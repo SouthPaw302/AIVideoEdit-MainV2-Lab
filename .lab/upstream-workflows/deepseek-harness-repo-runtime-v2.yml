@@ -1,0 +1,133 @@
+name: DeepSeek Harness Actual Repo Runtime V2
+
+on:
+  push:
+    branches:
+      - prototype/deepseek-harness
+    paths:
+      - ".github/workflows/deepseek-harness-repo-runtime-v2.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  actual-repo-runtime:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: prototype/deepseek-harness
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Assert branch isolation
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git branch --show-current)" = "prototype/deepseek-harness"
+          echo "PASS branch=prototype/deepseek-harness"
+
+      - name: Install runtime dependencies
+        shell: bash
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y ffmpeg curl
+
+      - name: Start actual AIVideoEdit stack
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd prototype/backend_gui
+          AIVE_HOST=127.0.0.1 AIVE_PORT=8080 python stack.py > /tmp/aive-stack.log 2>&1 &
+          echo $! > /tmp/aive-stack.pid
+          for i in $(seq 1 40); do
+            if curl -fsS http://127.0.0.1:8080/api/system >/tmp/system-pre.json; then
+              break
+            fi
+            sleep 1
+          done
+          curl -fsS http://127.0.0.1:8080/api/system | tee /tmp/system-pre.json
+
+      - name: Bootstrap canonical main through live Tool API
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fsS -X POST http://127.0.0.1:8080/api/tools/call             -H 'Content-Type: application/json'             --data '{"name":"core.bootstrap","arguments":{"offline":false}}'             | tee /tmp/core-bootstrap.json
+          python - <<'PY'
+          import json
+          d=json.load(open('/tmp/core-bootstrap.json'))
+          r=d.get('result') or {}
+          assert d.get('ok') is True, d
+          assert r.get('bootstrapped') is True, r
+          assert r.get('host_branch') == 'prototype/deepseek-harness', r
+          assert r.get('core_branch') == 'main', r
+          print('PASS live core.bootstrap')
+          PY
+
+      - name: Create production through live Tool API
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fsS -X POST http://127.0.0.1:8080/api/tools/call             -H 'Content-Type: application/json'             --data '{"name":"project.create","arguments":{"name":"Midnight Tribal Pulse Repo Runtime"}}'             | tee /tmp/project-create.json
+          python - <<'PY'
+          import json
+          d=json.load(open('/tmp/project-create.json'))
+          assert d.get('ok') is True, d
+          pid=d['result']['project']['id']
+          open('/tmp/project-id','w').write(pid)
+          print('project_id='+pid)
+          PY
+          PID="$(cat /tmp/project-id)"
+          curl -fsS -X POST http://127.0.0.1:8080/api/tools/call             -H 'Content-Type: application/json'             --data "{"name":"production.initialize","arguments":{"project_id":"$PID"}}"             | tee /tmp/production-initialize.json
+          curl -fsS -X POST http://127.0.0.1:8080/api/tools/call             -H 'Content-Type: application/json'             --data "{"name":"production.status","arguments":{"project_id":"$PID"}}"             | tee /tmp/production-status.json
+          python - <<'PY'
+          import json
+          init=json.load(open('/tmp/production-initialize.json'))
+          status=json.load(open('/tmp/production-status.json'))
+          assert init.get('ok') is True, init
+          assert status.get('ok') is True, status
+          r=status['result']
+          assert r.get('initialized') is True, r
+          assert r.get('branch','').startswith('song/'), r
+          assert r.get('stage') == 'INITIALIZED', r
+          print('PASS live production.initialize/status')
+          PY
+
+      - name: Exercise Harness and Director context on live runtime
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fsS http://127.0.0.1:8080/api/tools | tee /tmp/tools.json
+          curl -fsS -X POST http://127.0.0.1:8080/api/tools/call             -H 'Content-Type: application/json'             --data '{"name":"harness.status","arguments":{}}'             | tee /tmp/harness-status.json
+          python - <<'PY'
+          import json
+          tools=json.load(open('/tmp/tools.json'))
+          names=[x.get('name') for x in tools.get('tools',[])]
+          required=['production.initialize','production.analyze','approach.set_capabilities','storyboard.set','shots.build_packages','proofs.record','fx.lock','assembly.run','final_qc.run_technical','archive.build']
+          missing=[x for x in required if x not in names]
+          assert not missing, missing
+          h=json.load(open('/tmp/harness-status.json'))
+          assert h.get('ok') is True, h
+          print('PASS actual stack + Tool API + Harness surface')
+          PY
+
+      - name: Run repository self-tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          python prototype/backend_gui/selftest.py
+          python prototype/backend_gui/harness_selftest.py
+
+      - name: Final runtime snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fsS http://127.0.0.1:8080/api/system | tee /tmp/system-final.json
+          echo "--- stack log tail ---"
+          tail -120 /tmp/aive-stack.log || true
+          echo "PASS: actual repository runtime executed on prototype/deepseek-harness"

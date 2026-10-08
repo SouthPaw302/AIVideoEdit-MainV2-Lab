@@ -1,0 +1,21 @@
+{
+  "schema": "aivideoedit.scene-effects.v2",
+  "status": "experimental_unpromoted",
+  "rule": "Effects are optional tools. They may not override Zero-Drift, scene continuity, or the existing FX2 promotion and proof gates.",
+  "effects": [
+    {"id":"organic_warp","family":"transition","gate_status":"proof_required","description":"organic noise warp with luminous edge"},
+    {"id":"ember_burn","family":"transition","gate_status":"proof_required","description":"ridged burn/reveal with heat glow"},
+    {"id":"whip_pan","family":"transition","gate_status":"proof_required","description":"horizontal motion-blur transition"},
+    {"id":"iris_glow","family":"transition","gate_status":"proof_required","description":"circular iris wipe with luminous edge"},
+    {"id":"ripple_waves","family":"transition","gate_status":"proof_required","description":"concentric ripple distortion"},
+    {"id":"gravity_lens","family":"transition","gate_status":"proof_required","description":"gravity-style lens warp with chromatic fringe"},
+    {"id":"cinematic_zoom","family":"transition","gate_status":"proof_required","description":"radial zoom-blur transition"},
+    {"id":"chromatic_split","family":"transition","gate_status":"proof_required","description":"RGB channel separation transition"},
+    {"id":"digital_glitch","family":"transition","gate_status":"proof_required","description":"block displacement and scanline glitch"},
+    {"id":"vortex_warp","family":"transition","gate_status":"proof_required","description":"spiral noise warp"},
+    {"id":"heat_shimmer","family":"transition","gate_status":"proof_required","description":"thermal shimmer distortion"},
+    {"id":"white_flash","family":"transition","gate_status":"proof_required","description":"flash-through-white reveal"},
+    {"id":"morph_warp","family":"transition","gate_status":"proof_required","description":"noise-driven scene morph"},
+    {"id":"light_leak","family":"transition","gate_status":"proof_required","description":"warm cinematic light leak transition"}
+  ]
+}

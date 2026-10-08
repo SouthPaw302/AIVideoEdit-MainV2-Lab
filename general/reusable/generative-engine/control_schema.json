@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "aivideoedit.reactive-controls.v1",
+  "title": "AIVideoEdit Reactive Control Bus",
+  "type": "object",
+  "required": ["schema", "fps", "frames"],
+  "properties": {
+    "schema": {"const": "aivideoedit.reactive-controls.v1"},
+    "fps": {"type": "number", "exclusiveMinimum": 0},
+    "frames": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["time", "rms_n", "onset_n", "low_n", "mid_n", "high_n"],
+        "properties": {
+          "time": {"type": "number", "minimum": 0},
+          "rms_n": {"type": "number", "minimum": 0, "maximum": 1},
+          "onset_n": {"type": "number", "minimum": 0, "maximum": 1},
+          "low_n": {"type": "number", "minimum": 0, "maximum": 1},
+          "mid_n": {"type": "number", "minimum": 0, "maximum": 1},
+          "high_n": {"type": "number", "minimum": 0, "maximum": 1}
+        }
+      }
+    }
+  }
+}

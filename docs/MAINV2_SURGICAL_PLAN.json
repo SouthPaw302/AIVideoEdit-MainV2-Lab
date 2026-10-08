@@ -1,0 +1,31 @@
+{
+  "plan": "AIVideoEdit Surgical Intelligence Integration",
+  "branch": "MainV2",
+  "source_main_commit": "9fc16c16eae69514bf959170f96d6eb5ad4d9e56",
+  "rules": [
+    "No rewrite of AIVideoEdit.",
+    "No Docker or container dependency.",
+    "No new deployment architecture without explicit approval.",
+    "One bounded capability at a time.",
+    "Every step independently testable.",
+    "Existing production contracts, guards, canon, FX system and branch model remain authoritative."
+  ],
+  "steps": [
+    "1 Harden Boot",
+    "2 Runtime Gatekeeper",
+    "3 Model Registry",
+    "4 First ONNX Worker: music_and_beat_analysis",
+    "5 Jev Decision Hook",
+    "6 Optional DeepSeek Harness",
+    "7 Regression Verification",
+    "8 Remote Tool Bridge only after core stack is proven"
+  ],
+  "execution_model": {
+    "source_of_truth": "GitHub",
+    "remote_execution": "GitHub Actions when needed",
+    "large_outputs": "Artifacts/blob storage",
+    "operator": "authorized sandbox agent",
+    "production_api": "existing AIVideoEdit Tool API / MCP",
+    "containers": "not part of core stack"
+  }
+}

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AIVideoEdit Studio</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/workflow.css" />
+</head>
+<body>
+  <main class="studio-shell">
+    <header class="appbar">
+      <div class="brand"><span class="brand-mark">AIVE</span><div><strong>AIVideoEdit</strong><small>Studio</small></div></div>
+      <div class="project-switch"><select id="project" aria-label="Current project"></select><button id="newProject" class="ghost">+ Project</button></div>
+      <div class="app-status"><span id="stageChip" class="stage-chip">Project</span><span id="health" class="health">Starting…</span><button id="topNextAction" class="primary-action">Next step</button></div>
+    </header>
+
+    <nav id="stageRail" class="stage-rail" aria-label="Production stages">
+      <button data-studio-stage="media" class="rail-step active"><b>1</b><span>Media</span></button>
+      <button data-studio-stage="direction" class="rail-step"><b>2</b><span>Direction</span></button>
+      <button data-studio-stage="storyboard" class="rail-step"><b>3</b><span>Storyboard</span></button>
+      <button data-studio-stage="shots" class="rail-step"><b>4</b><span>Shots</span></button>
+      <button data-studio-stage="assemble" class="rail-step"><b>5</b><span>Assemble</span></button>
+      <button data-studio-stage="finish" class="rail-step"><b>6</b><span>Finish</span></button>
+    </nav>
+
+    <section id="nextAction" class="next-banner">
+      <div><span class="kicker">NEXT STEP</span><h2 id="nextActionTitle">Add your first media file</h2><p id="nextActionText">Choose a video, song, or image to begin.</p></div>
+      <div class="next-buttons"><button id="prepareProject" class="soft">Prepare all</button><button id="syncProject" class="soft" hidden>Back up</button><button id="nextActionButton" hidden>Continue</button></div>
+    </section>
+
+    <section class="workspace-grid">
+      <aside class="media-library panel">
+        <div class="panel-head"><div><span class="kicker">LIBRARY</span><h3>Media</h3></div><button id="refreshAssets" class="icon-button" title="Refresh">↻</button></div>
+        <label class="drop-add"><span>+ Add media</span><input id="mediaFile" type="file" accept="video/*,audio/*,image/*"></label>
+        <button id="upload" class="full">Add to project</button><p id="uploadMessage" class="micro"></p>
+        <div id="assets" class="assets"></div>
+      </aside>
+
+      <section class="creative-stage panel">
+        <div id="surface-media" class="stage-surface active">
+          <div id="emptyInspector" class="stage-empty"><span class="big-icon">▶</span><h2>Select media</h2><p>Choose something from the library to preview and prepare it.</p></div>
+          <div id="assetInspector" hidden>
+            <div class="panel-head"><div><span class="kicker">MEDIA</span><h2 id="assetTitle">Media</h2><p id="assetSubtitle" class="muted"></p></div><span id="qcBadge" class="pill">NOT CHECKED</span></div>
+            <div id="preview" class="preview"></div><div id="metadata" class="metadata"></div>
+            <div class="operation-bar"><button data-op="make_proxy">Make preview</button><button data-op="extract_review_frames" class="soft">Review frames</button><button data-op="qc_media" class="soft">Check media</button><button id="deleteAsset" class="danger">Remove</button></div>
+            <div id="reviewFrames" class="review-frames"></div>
+          </div>
+        </div>
+
+        <div id="surface-direction" class="stage-surface">
+          <div class="surface-head"><div><span class="kicker">CREATIVE DIRECTION</span><h2>Choose the visual language</h2><p>Set what the film is allowed to use and lock the artistic route before production media is created.</p></div><span id="directionState" class="state-pill">Not set</span></div>
+          <div id="directorModeCard" class="director-mode-card"><div><span class="kicker">DIRECTOR MODE</span><strong id="directorModeLabel">Legacy / not configured</strong><small id="directorModeMeta">Choose how the film is directed and what kind of motion language it uses.</small></div><button id="configureDirector" class="soft">Configure</button></div>
+          <div id="directionSummary" class="surface-body empty-surface">Connect the production engine and analyze the song to begin.</div>
+          <div class="surface-actions"><button id="directionApproach">Set approach</button><button id="directionRoutes" class="soft">Visual routes</button><button id="directionChoose" class="soft">Choose route</button></div>
+        </div>
+
+        <div id="surface-storyboard" class="stage-surface">
+          <div class="surface-head"><div><span class="kicker">STORYBOARD</span><h2>Shape the whole song</h2><p>Every shot spans a real section of the timeline and carries picture, motion, music, and transition intent.</p></div><span id="storyboardState" class="state-pill">Not built</span></div>
+          <div id="storyboardVisual" class="storyboard-visual empty-surface">The timeline will appear here after the creative approach is established.</div>
+          <div class="surface-actions"><button id="storyboardOpen">Open storyboard editor</button></div>
+        </div>
+
+        <div id="surface-shots" class="stage-surface">
+          <div class="surface-head"><div><span class="kicker">SHOTS</span><h2>Prepare real media for every shot</h2><p>Assign source or generated assets to each scripted shot. Missing media cannot advance.</p></div><span id="shotsState" class="state-pill">Waiting</span></div>
+          <div id="shotsGrid" class="shots-grid empty-surface">Lock the storyboard to unlock shot preparation.</div>
+          <div class="surface-actions"><button id="saveShotPackages">Build shot packages</button><button id="refreshShots" class="soft">Refresh</button></div>
+        </div>
+
+        <div id="surface-assemble" class="stage-surface">
+          <div class="surface-head"><div><span class="kicker">ASSEMBLE</span><h2>Turn accepted shots into the film</h2><p>Proofs, FX lock, and assembly remain separate gates so a render cannot silently become accepted production state.</p></div><span id="assembleState" class="state-pill">Waiting</span></div>
+          <div id="assembleBody" class="surface-body empty-surface">Accepted shot proofs and a verified FX lock are required before assembly.</div>
+          <div class="surface-actions"><button id="runAssembly">Assemble workprint</button><button id="verifyFx" class="soft">Verify FX</button></div>
+        </div>
+
+        <div id="surface-finish" class="stage-surface">
+          <div class="surface-head"><div><span class="kicker">FINISH</span><h2>Review, accept, archive</h2><p>Technical QC and creative acceptance are intentionally separate.</p></div><span id="finishState" class="state-pill">Waiting</span></div>
+          <div id="finishBody" class="surface-body empty-surface">Assemble the workprint before final review.</div>
+          <div class="surface-actions"><button id="runFinalQc">Run technical QC</button><button id="archiveProject" class="soft">Archive</button></div>
+        </div>
+      </section>
+
+      <aside class="context-panel panel">
+        <div class="context-section"><span class="kicker">PRODUCTION</span><h3 id="contextStage">Project</h3><p id="productionStatus">Not connected to the production engine yet.</p><p id="approachStatus" class="micro" hidden></p><p id="storyboardStatus" class="micro" hidden></p></div>
+        <div class="context-section engine-card"><div class="panel-head"><div><span class="kicker">ENGINE</span><h3>Production engine</h3></div><span id="engineDot" class="engine-dot"></span></div><p id="coreStatus" class="micro">Checking…</p><div id="coreDetails" class="micro"></div><div class="stack-actions"><button id="loadCore" class="soft">Load engine</button><button id="startProjectEngine" class="soft">Connect project</button><button id="syncProductionAssets" class="soft" hidden>Sync media</button><button id="analyzeProduction" class="soft" hidden>Analyze song</button><button id="songContext" class="soft" hidden>Song context</button><button id="setApproach" class="soft" hidden>Set approach</button><button id="setRoutes" class="soft" hidden>Visual routes</button><button id="selectRoute" class="soft" hidden>Choose route</button><button id="storyboardEditor" class="soft" hidden>Storyboard</button><button id="advanceProduction" hidden>Continue</button><button id="verifyProjectEngine" class="soft" hidden>Verify</button></div></div>
+        <div class="context-section"><div class="panel-head"><div><span class="kicker">BACKGROUND</span><h3>Jobs</h3></div><button id="refreshJobs" class="icon-button">↻</button></div><div id="jobs" class="jobs"></div></div>
+      </aside>
+    </section>
+
+    <section id="productionStrip" class="production-strip" hidden><div><span class="kicker">PRODUCTION TIMELINE</span><strong id="stripLabel">Storyboard</strong></div><div id="stripTimeline" class="strip-track"></div></section>
+
+    <details class="system-drawer panel"><summary><span><strong>System activity</strong><small>Workers, storage, canonical tools, diagnostics</small></span><span>Show</span></summary><div class="system-grid"><section><div class="panel-head"><h3>Computer tools</h3><button id="runJob" class="soft">Test video engine</button></div><div id="capabilities" class="stack"></div><div id="systemStats" class="micro"></div></section><section><h3>Architecture</h3><p class="micro">Browser Studio and external agents use the same provider-neutral Tool API. Production guards remain authoritative.</p></section><section><h3>Agent harness</h3><p id="harnessStatus" class="micro">Checking optional bridge…</p><div id="harnessDetails" class="micro"></div></section></div></details>
+  </main>
+
+  <dialog id="projectDialog"><form method="dialog"><h3>Create a project</h3><label>Project name<input id="newProjectName" placeholder="My music video" maxlength="100"></label><div class="dialog-actions"><button value="cancel" class="soft">Cancel</button><button id="createProject" value="default">Create</button></div></form></dialog>
+  <dialog id="songContextDialog"><form method="dialog"><h3>Song context</h3><p>Studio asks instead of guessing creative authority.</p><label>Genre<input id="songGenre" placeholder="Trip-hop, folk noir, ambient…" maxlength="120"></label><label>Lyrics<select id="lyricsStatus"><option value="absent">No lyrics</option><option value="present">Lyrics are present</option></select></label><label id="lyricsTextLabel" hidden>Lyrics<textarea id="lyricsText" rows="10"></textarea></label><div class="dialog-actions"><button value="cancel" class="soft">Cancel</button><button id="saveSongContext">Save context</button></div></form></dialog>
+  <dialog id="approachDialog"><form method="dialog"><h3>Creative approach</h3><p>Choose the production capabilities this film may use.</p><div id="approachCapabilities" class="capability-groups"></div><label>Approach summary<textarea id="approachSummary" rows="5"></textarea></label><div class="dialog-actions"><button value="cancel" class="soft">Cancel</button><button id="saveApproach">Save approach</button></div></form></dialog>
+  <dialog id="routesDialog"><form method="dialog"><h3>Visual directions</h3><p>Three materially different routes are required when no visual reference exists.</p><div id="routeForms"></div><div class="dialog-actions"><button value="cancel" class="soft">Cancel</button><button id="saveRoutes">Save routes</button></div></form></dialog>
+  <dialog id="routeSelectionDialog"><form method="dialog"><h3>Choose visual direction</h3><div id="routeChoices" class="stack"></div><label>Your instruction<textarea id="routeInstruction" rows="4"></textarea></label><div class="dialog-actions"><button value="cancel" class="soft">Cancel</button><button id="saveRouteSelection">Lock direction</button></div></form></dialog>
+  <dialog id="storyboardDialog"><form method="dialog"><h3>Production storyboard</h3><div class="toolbar"><label>FPS<input id="storyboardFps" type="number" min="1" max="240" step="1" value="30"></label><label>Summary<input id="storyboardSummary"></label><button id="addStoryboardRow" type="button" class="soft">+ Shot</button></div><div id="storyboardRows"></div><label>Lock instruction<textarea id="storyboardLockInstruction" rows="3"></textarea></label><div class="dialog-actions"><button value="cancel" class="soft">Cancel</button><button id="saveStoryboard" type="button" class="soft">Save draft</button><button id="lockStoryboard" type="button">Save & lock</button></div></form></dialog>
+  <dialog id="directorDialog"><form method="dialog"><h3>Director mode</h3><p>Choose the directing authority and production behavior. This enables Director Brain v3 for the project.</p><label>Direction authority<select id="directionAuthority"><option value="music_led">Music-led</option><option value="reference_led">Reference-led</option><option value="user_directed">User-directed</option></select></label><label>Production mode<select id="productionMode"><option value="cinematic">Cinematic</option><option value="living_scene">Living scene</option><option value="hybrid">Hybrid</option></select></label><label>Mission<textarea id="directorMission" rows="3" placeholder="What this film is trying to accomplish"></textarea></label><label>Current direction<textarea id="directorCurrentDirection" rows="3" placeholder="The current creative instruction"></textarea></label><label>Exact next action<input id="directorNextAction" placeholder="Build the visual direction options"></label><div class="dialog-actions"><button value="cancel" class="soft">Cancel</button><button id="saveDirectorMode" type="button">Enable Director Brain v3</button></div></form></dialog>
+
+  <script src="/app.js"></script>
+  <script src="/storyboard.js"></script>
+  <script src="/studio.js"></script>
+  <script src="/workflow_ui.js"></script>
+  <script src="/production_ui.js"></script>
+</body>
+</html>

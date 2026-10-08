@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "aivideoedit.storage-manifest.v1",
+  "title": "AIVideoEdit GitHub Release Storage Manifest",
+  "type": "object",
+  "required": [
+    "schema",
+    "provider",
+    "repository",
+    "song_slug",
+    "branch",
+    "release_tag",
+    "release_url",
+    "assets"
+  ],
+  "properties": {
+    "schema": {
+      "const": "aivideoedit.storage-manifest.v1"
+    },
+    "provider": {
+      "const": "github_releases"
+    },
+    "repository": {
+      "type": "string"
+    },
+    "song_slug": {
+      "type": "string",
+      "minLength": 1
+    },
+    "branch": {
+      "type": "string",
+      "pattern": "^song/.+"
+    },
+    "release_tag": {
+      "type": "string",
+      "pattern": "^media-.+"
+    },
+    "release_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "category",
+          "asset_name",
+          "original_name",
+          "sha256",
+          "bytes",
+          "uploaded_at_utc"
+        ],
+        "properties": {
+          "category": {
+            "enum": [
+              "source",
+              "generated",
+              "proofs",
+              "final",
+              "qc",
+              "archive"
+            ]
+          },
+          "asset_name": {
+            "type": "string"
+          },
+          "original_name": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "uploaded_at_utc": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,232 @@
+{
+  "authority_ref": "main",
+  "files": [
+    {
+      "path": "bootstrap.py",
+      "role": "portable_current_main_loader"
+    },
+    {
+      "path": "AGENTS.md",
+      "role": "universal_agent_entry"
+    },
+    {
+      "path": ".github/copilot-instructions.md",
+      "role": "copilot_agent_entry"
+    },
+    {
+      "path": "CLAUDE.md",
+      "role": "claude_agent_entry"
+    },
+    {
+      "path": "PRIME_DIRECTIVE.md",
+      "role": "universal_director_law"
+    },
+    {
+      "path": "SOUL.md",
+      "role": "permanent_project_identity"
+    },
+    {
+      "path": "README.md",
+      "role": "repository_entry"
+    },
+    {
+      "path": "AGENT_HANDOFF.md",
+      "role": "handoff_contract"
+    },
+    {
+      "path": "BIBLE.md",
+      "role": "system_doctrine"
+    },
+    {
+      "path": "SYSTEM_INDEX.md",
+      "role": "system_index"
+    },
+    {
+      "path": "projects/PROJECT_TEMPLATE.md",
+      "role": "production_template"
+    },
+    {
+      "path": "projects/OPERATING_ORDER_TEMPLATE.json",
+      "role": "project_director_brief_template"
+    },
+    {
+      "path": "general/reusable/PRODUCTION_CONTRACT.json",
+      "role": "machine_contract"
+    },
+    {
+      "path": "general/reusable/PRODUCTION_MODES.json",
+      "role": "machine_director_modes"
+    },
+    {
+      "path": "general/reusable/PRODUCTION_MODES.md",
+      "role": "human_director_modes"
+    },
+    {
+      "path": "general/reusable/DOCTRINE_LIVING_SCENE.md",
+      "role": "living_scene_doctrine"
+    },
+    {
+      "path": "general/reusable/RECUT_REFINEMENT.md",
+      "role": "canonical_source_recut_doctrine"
+    },
+    {
+      "path": "general/reusable/MODE_AWARE_QC.md",
+      "role": "mode_aware_qc_contract"
+    },
+    {
+      "path": "general/reusable/DRIFT_TESTS.md",
+      "role": "director_drift_test_contract"
+    },
+    {
+      "path": "general/reusable/NARRATIVE_CONTRACT.md",
+      "role": "directing_music_media_contract"
+    },
+    {
+      "path": "general/reusable/MEDIA_CAPABILITY_MATRIX.json",
+      "role": "media_capabilities"
+    },
+    {
+      "path": "general/reusable/PRODUCTION_PIPELINE.md",
+      "role": "production_pipeline"
+    },
+    {
+      "path": "general/reusable/STYLE_CONTRACT.md",
+      "role": "style_contract"
+    },
+    {
+      "path": "general/reusable/LESSONS.md",
+      "role": "reusable_lessons"
+    },
+    {
+      "path": "general/reusable/fx_v2/registry.json",
+      "role": "fx_registry"
+    },
+    {
+      "path": "general/reusable/fx_v2/living_still_fx.py",
+      "role": "living_still_fx_runtime"
+    },
+    {
+      "path": "general/reusable/fx_v2/verify_living_still_fx.py",
+      "role": "living_still_fx_verifier"
+    },
+    {
+      "path": "general/reusable/fx_v2/PRECOMPILE_FX_GATE.md",
+      "role": "fx_gate_contract"
+    },
+    {
+      "path": "general/reusable/fx_v2/project_local_fx_gate.py",
+      "role": "project_local_fx_gate"
+    },
+    {
+      "path": "general/reusable/storage/README.md",
+      "role": "media_storage_contract"
+    },
+    {
+      "path": "general/reusable/storage/STORAGE_MANIFEST.schema.json",
+      "role": "media_storage_schema"
+    },
+    {
+      "path": "general/reusable/storage/github_release_storage.py",
+      "role": "media_storage_runtime"
+    },
+    {
+      "path": "general/reusable/tools/production_guard.py",
+      "role": "fail_closed_production_guard"
+    },
+    {
+      "path": "general/reusable/tools/narrative_guard.py",
+      "role": "fail_closed_directing_guard"
+    },
+    {
+      "path": "general/reusable/tools/recut_guard.py",
+      "role": "fail_closed_recut_guard"
+    },
+    {
+      "path": "general/reusable/tools/hero_library_extract.py",
+      "role": "canonical_hero_library_extractor"
+    },
+    {
+      "path": "general/reusable/tools/export_variety_qc.py",
+      "role": "export_variety_qc"
+    },
+    {
+      "path": "general/reusable/tools/refinement_qc_compare.py",
+      "role": "before_after_refinement_qc"
+    },
+    {
+      "path": "general/reusable/tools/test_director_brain.py",
+      "role": "director_brain_regression_test"
+    },
+    {
+      "path": "general/reusable/tools/test_recut_system.py",
+      "role": "recut_regression_test"
+    },
+    {
+      "path": "general/reusable/tools/README.md",
+      "role": "tool_index"
+    },
+    {
+      "path": "general/reusable/fx_v2/promoted_effects.py",
+      "role": "neutral_standard_effect_runtime"
+    },
+    {
+      "path": "general/reusable/fx_v2/verify_standard_effects.py",
+      "role": "neutral_standard_effect_verifier"
+    },
+    {
+      "path": "general/reusable/fx_v2/effect_aliases.json",
+      "role": "neutral_effect_alias_compatibility"
+    },
+    {
+      "path": "general/reusable/STANDARD_WORKFLOW_REGISTRY.json",
+      "role": "neutral_standard_workflow_registry"
+    },
+    {
+      "path": "general/reusable/STANDARD_WORKFLOWS.md",
+      "role": "neutral_standard_workflow_contract"
+    },
+    {
+      "path": "general/reusable/tools/workflow_resolver.py",
+      "role": "standard_workflow_resolver"
+    },
+    {
+      "path": "general/reusable/tools/workflow_guard.py",
+      "role": "fail_closed_standard_workflow_guard"
+    },
+    {
+      "path": "general/reusable/tools/recipe_execution_guard.py",
+      "role": "fail_closed_recipe_execution_guard"
+    },
+    {
+      "path": "general/reusable/fx_v2/effect_name_registry.json",
+      "role": "neutral_standard_effect_name_registry"
+    },
+    {
+      "path": "general/reusable/fx_v2/verify_promoted_effects.py",
+      "role": "neutral_standard_effect_verifier"
+    },
+    {
+      "path": "general/reusable/DIRECTOR_SUPERVISION.md",
+      "role": "sandbox_director_execution_contract"
+    },
+    {
+      "path": "general/reusable/tools/execution_ledger.py",
+      "role": "production_execution_receipt_ledger"
+    },
+    {
+      "path": "general/reusable/tools/director_checkpoint.py",
+      "role": "sandbox_director_checkpoint_gate"
+    },
+    {
+      "path": "general/reusable/fx_v2/executor.py",
+      "role": "canonical_fx_execution_boundary"
+    },
+    {
+      "path": "general/reusable/fx_v2/execution_guard.py",
+      "role": "fail_closed_fx_execution_guard"
+    }
+  ],
+  "purpose": "Critical files whose exact current-main hashes are attested at every agent-session bootstrap. The bootstrap materializes the entire main branch, not only this list.",
+  "repository": "SouthPaw302/AIVideoEdit",
+  "schema": "aivideoedit.os-manifest.v2"
+}

@@ -1,0 +1,142 @@
+{
+  "proof": "FX2_PROOF02_LIVING_SCENE_CANONICAL",
+  "schema_version": 2,
+  "purpose": "Canonical byte-verifiable reproducible proof for approved FX2 runtime effects.",
+  "source": "repository-generated deterministic synthetic verification scene",
+  "source_provenance": "generated entirely by this proof generator; no external source media",
+  "generator_path": "general/reusable/fx_v2/tools/generate_canonical_proof02.py",
+  "generator_sha256": "a0208f34921d5a1fb3961c40fa82ebf064a100b7f84827bb34963668783980f7",
+  "source_commit": "f4fe7a5e383647b3653d6f423a5527e60212b5ac",
+  "runtime_path": "general/reusable/fx_v2/runtime.py",
+  "runtime_sha256": "6cfdf3ba68c1f79015c1f1b26174d4e3ca4de7b75b06b5ad9811580f5bc2cfa4",
+  "registry_path": "general/reusable/fx_v2/registry.json",
+  "registry_sha256_at_generation": "07050715227dee2913a6cd25435cab33d4a2a17af171090a4fd717c94d159db6",
+  "artifact_path": "general/reusable/fx_v2/proofs/FX2_PROOF02_LIVING_SCENE_CANONICAL.mp4",
+  "sha256": "95119228f958e7a5905daf2de812833b6b9197d2e5b9650134a618f43f203114",
+  "contact_sheet_path": "general/reusable/fx_v2/proofs/FX2_PROOF02_LIVING_SCENE_CANONICAL_contact_sheet.jpg",
+  "contact_sheet_sha256": "0e57e0e2f087860f08df67b2ea6724799fb7d9fc96330eb490c146cef606f1b7",
+  "fps": 24,
+  "frames": 216,
+  "duration_seconds": 9.0,
+  "size": [
+    640,
+    360
+  ],
+  "camera": "locked; no camera transform or shake",
+  "effects": [
+    "FX2-MOTION-002",
+    "FX2-MOTION-003",
+    "FX2-ATM-001",
+    "FX2-ATM-002",
+    "FX2-FIRE-001",
+    "FX2-FIRE-002",
+    "FX2-LIGHT-001",
+    "FX2-LIGHT-002",
+    "FX2-SURFACE-001"
+  ],
+  "effect_parameters": [
+    {
+      "id": "FX2-MOTION-002",
+      "roi": [
+        0.06,
+        0.08,
+        0.62,
+        0.72
+      ],
+      "strength": 0.85
+    },
+    {
+      "id": "FX2-MOTION-003",
+      "roi": [
+        0.0,
+        0.67,
+        1.0,
+        1.0
+      ],
+      "strength": 0.8,
+      "reflect": true
+    },
+    {
+      "id": "FX2-ATM-001",
+      "roi": [
+        0.0,
+        0.0,
+        1.0,
+        0.78
+      ],
+      "strength": 0.7
+    },
+    {
+      "id": "FX2-ATM-002",
+      "roi": [
+        0.0,
+        0.0,
+        1.0,
+        0.82
+      ],
+      "strength": 0.75
+    },
+    {
+      "id": "FX2-FIRE-001",
+      "roi": [
+        0.68,
+        0.43,
+        0.92,
+        0.94
+      ],
+      "strength": 0.95
+    },
+    {
+      "id": "FX2-FIRE-002",
+      "roi": [
+        0.58,
+        0.14,
+        0.98,
+        0.94
+      ],
+      "strength": 0.85
+    },
+    {
+      "id": "FX2-LIGHT-001",
+      "roi": [
+        0.6,
+        0.22,
+        0.98,
+        0.98
+      ],
+      "strength": 1.0
+    },
+    {
+      "id": "FX2-LIGHT-002",
+      "origin": [
+        0.78,
+        0.23
+      ],
+      "strength": 1.0
+    },
+    {
+      "id": "FX2-SURFACE-001",
+      "key": "proof02-canvas",
+      "strength": 0.9
+    }
+  ],
+  "mean_adjacent_frame_delta": 0.448946604489664,
+  "p95_adjacent_frame_delta": 1.674864293981481,
+  "decoded_frames": 216,
+  "black_frames": 0,
+  "visual_qc": "PASS ENGINE PROOF; byte-verifiable isolated and combined runtime proof. Artistic production shots still require separate human visual QC.",
+  "qc_notes": [
+    "First second is an unmodified baseline.",
+    "Each approved runtime effect is then shown in isolation with a locked camera.",
+    "Final segment applies the complete approved stack with bounded synthetic control values.",
+    "Synthetic controls are for isolated engine verification only; production films must use canonical song analysis."
+  ],
+  "approval_scope": "engine_runtime_only",
+  "approval_basis": [
+    "actual MP4 bytes are stored on main and match the declared SHA-256",
+    "all 216 frames decode at 640x360 / 24 fps with zero black frames",
+    "each approved runtime FX ID has its own isolated segment with locked camera",
+    "the final segment applies the complete approved runtime stack",
+    "main CI independently reruns pixel/temporal smoke tests and deterministic output fingerprints"
+  ]
+}

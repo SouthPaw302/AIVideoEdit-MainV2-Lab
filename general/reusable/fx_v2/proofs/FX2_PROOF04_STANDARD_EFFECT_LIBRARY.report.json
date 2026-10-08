@@ -1,0 +1,437 @@
+{
+  "alias_count": 71,
+  "criteria": {
+    "deterministic": true,
+    "source_delta_min": 0.02,
+    "temporal_delta_min": 0.005
+  },
+  "effect_count": 52,
+  "effects": [
+    {
+      "global_shift_px_max": 0.173864,
+      "name": "pseudo_depth_field",
+      "result": "PASS",
+      "sample_output_sha256": "77c0bcd3451d8813268fff21f071666547145501125ba539bec5483fe38e6bb6",
+      "source_delta_max": 1.440145,
+      "temporal_delta_max": 2.739745
+    },
+    {
+      "global_shift_px_max": 0.224999,
+      "name": "localized_micro_warp",
+      "result": "PASS",
+      "sample_output_sha256": "2a8390099173f1b842bbb629fb0481ff9d31bbb3d7c0eb7043ec2b7a8aaaf4dc",
+      "source_delta_max": 0.356522,
+      "temporal_delta_max": 0.548519
+    },
+    {
+      "global_shift_px_max": 0.380655,
+      "name": "mesh_breath",
+      "result": "PASS",
+      "sample_output_sha256": "15188ae801e1e383d34214fb1bcfc1a358a4b857e19439abaa34aa86bf25fa60",
+      "source_delta_max": 1.561476,
+      "temporal_delta_max": 2.918918
+    },
+    {
+      "global_shift_px_max": 0.403617,
+      "name": "transient_warp",
+      "result": "PASS",
+      "sample_output_sha256": "4dd7951c7b7c9bc3267e4f9a54199134f8e3aa1ce136eaff7d1cfed8288800f4",
+      "source_delta_max": 0.842303,
+      "temporal_delta_max": 1.486209
+    },
+    {
+      "global_shift_px_max": 3.052158,
+      "name": "narrative_camera_travel",
+      "result": "PASS",
+      "sample_output_sha256": "f45bc14b35d5ae43a95c94696d825c0725d99a49ef72fb981d749502253d56cc",
+      "source_delta_max": 4.153247,
+      "temporal_delta_max": 4.59217
+    },
+    {
+      "global_shift_px_max": 0.009286,
+      "name": "firelight_breath",
+      "result": "PASS",
+      "sample_output_sha256": "2aed25fedc88b2d9874e44ed86450cc227414ab88c6fcacb31644eac327491cb",
+      "source_delta_max": 2.474606,
+      "temporal_delta_max": 1.131476
+    },
+    {
+      "global_shift_px_max": 0.068666,
+      "name": "wet_reflection_ripple",
+      "result": "PASS",
+      "sample_output_sha256": "55114620a12c3740fa0edbfbd03430b879b10b18395690495272748da41822b7",
+      "source_delta_max": 0.151499,
+      "temporal_delta_max": 0.239925
+    },
+    {
+      "global_shift_px_max": 0.068666,
+      "name": "puddle_shimmer",
+      "result": "PASS",
+      "sample_output_sha256": "55114620a12c3740fa0edbfbd03430b879b10b18395690495272748da41822b7",
+      "source_delta_max": 0.151499,
+      "temporal_delta_max": 0.239925
+    },
+    {
+      "global_shift_px_max": 0.184443,
+      "name": "heat_haze",
+      "result": "PASS",
+      "sample_output_sha256": "777150e3295e88a4ff151d2fd092abab2f8a096f0ceec7c2ddfcc6396aad4d1f",
+      "source_delta_max": 0.315446,
+      "temporal_delta_max": 0.531991
+    },
+    {
+      "global_shift_px_max": 0.025391,
+      "name": "volumetric_light_shafts",
+      "result": "PASS",
+      "sample_output_sha256": "1f34f44b703590d22f6fdcfba710ccf4e84edf3e9dd164ba2657dc14015cc76c",
+      "source_delta_max": 2.556354,
+      "temporal_delta_max": 4.817818
+    },
+    {
+      "global_shift_px_max": 0.025391,
+      "name": "radial_light_shafts",
+      "result": "PASS",
+      "sample_output_sha256": "1f34f44b703590d22f6fdcfba710ccf4e84edf3e9dd164ba2657dc14015cc76c",
+      "source_delta_max": 2.556354,
+      "temporal_delta_max": 4.817818
+    },
+    {
+      "global_shift_px_max": 0.018725,
+      "name": "chroma_pigment_transport",
+      "result": "PASS",
+      "sample_output_sha256": "35817dd10c845b3ec8181ed2cc5ff639f885002eefba7fabb1d02d0c785e11db",
+      "source_delta_max": 10.816204,
+      "temporal_delta_max": 10.849201
+    },
+    {
+      "global_shift_px_max": 0.020157,
+      "name": "fog_pigment_travel",
+      "result": "PASS",
+      "sample_output_sha256": "17834e54b20fab582a174e8acd4d57402c7b7d8dddba1caba8daef55d984674d",
+      "source_delta_max": 11.532078,
+      "temporal_delta_max": 11.116348
+    },
+    {
+      "global_shift_px_max": 0.024899,
+      "name": "object_portal",
+      "result": "PASS",
+      "sample_output_sha256": "10e897d1af914e3a8e915af2650f720ef3097525e7693857ae1c31fdc0f11d0f",
+      "source_delta_max": 5.321244,
+      "temporal_delta_max": 2.048825
+    },
+    {
+      "global_shift_px_max": 0.015095,
+      "name": "warm_halation_bloom",
+      "result": "PASS",
+      "sample_output_sha256": "59e25fb898c1e532d0ea0e1788cb45ad8744ffa0aff0ccce04069be24ed45d7a",
+      "source_delta_max": 10.489334,
+      "temporal_delta_max": 18.175278
+    },
+    {
+      "global_shift_px_max": 0.068666,
+      "name": "water_region_displacement_shimmer",
+      "result": "PASS",
+      "sample_output_sha256": "55114620a12c3740fa0edbfbd03430b879b10b18395690495272748da41822b7",
+      "source_delta_max": 0.151499,
+      "temporal_delta_max": 0.239925
+    },
+    {
+      "global_shift_px_max": 0.023194,
+      "name": "rms_memory_modulation",
+      "result": "PASS",
+      "sample_output_sha256": "37a1f519d4d8ce031a54cb54ee52e633a958ee3a9fea42358ec90c00f981fe39",
+      "source_delta_max": 4.403281,
+      "temporal_delta_max": 7.891395
+    },
+    {
+      "global_shift_px_max": 0.08601,
+      "name": "disocclusion_alpha_feather",
+      "result": "PASS",
+      "sample_output_sha256": "b02545630159b80ca75fc0c70b93497ba58291b75112443f431a13dff26368cc",
+      "source_delta_max": 0.649277,
+      "temporal_delta_max": 0.763877
+    },
+    {
+      "global_shift_px_max": 1.549328,
+      "name": "loopable_eased_orbit",
+      "result": "PASS",
+      "sample_output_sha256": "eca12297450117d894b27dd23d0acf8d39331509ce37056bed28054c82913a52",
+      "source_delta_max": 3.197269,
+      "temporal_delta_max": 5.83235
+    },
+    {
+      "global_shift_px_max": 0.035075,
+      "name": "rain_puddle_ember_composite",
+      "result": "PASS",
+      "sample_output_sha256": "0d7835f51918830cdb014d4bca7177ff36c0fcb92394a29d5831a602a9fc854a",
+      "source_delta_max": 1.154462,
+      "temporal_delta_max": 2.184902
+    },
+    {
+      "global_shift_px_max": 0.061334,
+      "name": "threshold_reflection_lamp_flicker",
+      "result": "PASS",
+      "sample_output_sha256": "8141a3ce90349a45bdcd563487e67f70705c9e519a8cf371da6234a4d23d957b",
+      "source_delta_max": 1.553594,
+      "temporal_delta_max": 0.872899
+    },
+    {
+      "global_shift_px_max": 0.208064,
+      "name": "forge_motion_furnace_sparks",
+      "result": "PASS",
+      "sample_output_sha256": "7a30fe8e9b89e3424aace3d157f092007ae9f8a6eee552d0aa2792d929ac604a",
+      "source_delta_max": 3.834745,
+      "temporal_delta_max": 1.191869
+    },
+    {
+      "global_shift_px_max": 0.019241,
+      "name": "smoke_memory_forms",
+      "result": "PASS",
+      "sample_output_sha256": "7ed396f13818511eb7e676be0f386fc986c1a015fbcbaa99d6374b0421c978e6",
+      "source_delta_max": 3.793015,
+      "temporal_delta_max": 2.340353
+    },
+    {
+      "global_shift_px_max": 0.027664,
+      "name": "ember_crack_light_reveal",
+      "result": "PASS",
+      "sample_output_sha256": "bad3f97d4ec21a274ecf3f643819a83d20f987dd11731677e7dad1049789ad03",
+      "source_delta_max": 1.769803,
+      "temporal_delta_max": 3.410648
+    },
+    {
+      "global_shift_px_max": 0.18049,
+      "name": "parallax_fog_cloth_fire_decay",
+      "result": "PASS",
+      "sample_output_sha256": "a6a5f92c968417617a27b0a9fe7d773b334d16150b0ee5bbfd7fb9200c92eb3f",
+      "source_delta_max": 3.058194,
+      "temporal_delta_max": 3.688738
+    },
+    {
+      "global_shift_px_max": 0.212876,
+      "name": "steam_fog_cloth_horizon_gold",
+      "result": "PASS",
+      "sample_output_sha256": "902ea35c8bf2d6ea5bdbf56a42de1658a2d236570d846b7c4de0f86c53ef49df",
+      "source_delta_max": 8.945498,
+      "temporal_delta_max": 7.247633
+    },
+    {
+      "global_shift_px_max": 1.035358,
+      "name": "rotating_architecture_debris",
+      "result": "PASS",
+      "sample_output_sha256": "1e819ca8cd35a26eb2d8ebebc30e40569242b39f7aa3c119fc2d989f7494901b",
+      "source_delta_max": 4.047714,
+      "temporal_delta_max": 6.871887
+    },
+    {
+      "global_shift_px_max": 0.223108,
+      "name": "corridor_push_focus_definition",
+      "result": "PASS",
+      "sample_output_sha256": "624f3fba5e3064fcf35b3c2c95c6bbae03752290f2e9841d85ca96aa37af24b4",
+      "source_delta_max": 3.173947,
+      "temporal_delta_max": 2.991991
+    },
+    {
+      "global_shift_px_max": 0.095906,
+      "name": "reflection_ash_dawn",
+      "result": "PASS",
+      "sample_output_sha256": "fb964e44da4993c6ed82edafea457d25224583214ec53c8e06f0131da4f051b2",
+      "source_delta_max": 10.608148,
+      "temporal_delta_max": 9.729786
+    },
+    {
+      "global_shift_px_max": 0.060369,
+      "name": "radial_waveform_ember_bursts",
+      "result": "PASS",
+      "sample_output_sha256": "0760043ae2cf5940394cab056aaaa251ad69f8890e372f1e5394fc0411c07ef8",
+      "source_delta_max": 1.160631,
+      "temporal_delta_max": 2.184659
+    },
+    {
+      "global_shift_px_max": 0.015125,
+      "name": "temporal_grade_shift",
+      "result": "PASS",
+      "sample_output_sha256": "24c78921c1b345287b7b61033c27df45a452ccbe28df7ef2795c651b071f824b",
+      "source_delta_max": 10.736007,
+      "temporal_delta_max": 12.914115
+    },
+    {
+      "global_shift_px_max": 0.060714,
+      "name": "rack_focus_heat_pulse",
+      "result": "PASS",
+      "sample_output_sha256": "2a4a22e0a2100f578ee11320f7d5ecd8ce151341dcf48811d8acd9ea103ebd64",
+      "source_delta_max": 4.201175,
+      "temporal_delta_max": 3.02
+    },
+    {
+      "global_shift_px_max": 0.055343,
+      "name": "runic_oscilloscope",
+      "result": "PASS",
+      "sample_output_sha256": "84de4d78e8c8d173eaf4609ebd36f8612cd67f14e35001961d37fa7a28786cf5",
+      "source_delta_max": 0.751603,
+      "temporal_delta_max": 1.441215
+    },
+    {
+      "global_shift_px_max": 0.066801,
+      "name": "radial_frequency_ring",
+      "result": "PASS",
+      "sample_output_sha256": "4050157886c427a4b1f63c06168bdeb7412691459d43bd5fb0711ed5ada7671f",
+      "source_delta_max": 0.943646,
+      "temporal_delta_max": 1.79728
+    },
+    {
+      "global_shift_px_max": 0.057673,
+      "name": "spectrum_energy_flame",
+      "result": "PASS",
+      "sample_output_sha256": "8c01b23fb7c2329dfbaa88212ec2c3c38e2878d17813b523adc0a6a3eef23118",
+      "source_delta_max": 2.523779,
+      "temporal_delta_max": 4.862031
+    },
+    {
+      "global_shift_px_max": 0.042241,
+      "name": "waveform_smoke_trails",
+      "result": "PASS",
+      "sample_output_sha256": "a6a992a9975d0b7e66d48ca2dc1de0fa928378d422a5c5c848a6f6ea5aceeed4",
+      "source_delta_max": 2.426117,
+      "temporal_delta_max": 2.597882
+    },
+    {
+      "global_shift_px_max": 0.04394,
+      "name": "particle_tunnel",
+      "result": "PASS",
+      "sample_output_sha256": "e8d5cd9e2191509399ab06e2c886891fb459656b504f94f88a55d40b3798c1fc",
+      "source_delta_max": 0.484155,
+      "temporal_delta_max": 0.951007
+    },
+    {
+      "global_shift_px_max": 2.076817,
+      "name": "feedback_plasma_gravity_inversion",
+      "result": "PASS",
+      "sample_output_sha256": "bc21cc2d1e476bccbc40a74888f5001f5e2d10961b989480b4e5c8449ee1824d",
+      "source_delta_max": 43.019578,
+      "temporal_delta_max": 80.311319
+    },
+    {
+      "global_shift_px_max": 0.046144,
+      "name": "raindrop_to_ember",
+      "result": "PASS",
+      "sample_output_sha256": "a9f70ccc7ba20f54eee86208a2527148e600688263b1d978b480a657ad3043be",
+      "source_delta_max": 0.959583,
+      "temporal_delta_max": 1.867361
+    },
+    {
+      "global_shift_px_max": 0.020564,
+      "name": "ember_to_sun",
+      "result": "PASS",
+      "sample_output_sha256": "a3ca9b01b9bbe2667a1a5e7959757c7cbe27c5c8be0c8271187970193b86130b",
+      "source_delta_max": 4.346701,
+      "temporal_delta_max": 4.583397
+    },
+    {
+      "global_shift_px_max": 3.738279,
+      "name": "structural_morph_transition",
+      "result": "PASS",
+      "sample_output_sha256": "67273e0e512b5ce48696d47c1489bd03f1c1e47c55c1482cc02e72cf80a3e692",
+      "source_delta_max": 82.193929,
+      "temporal_delta_max": 80.992431
+    },
+    {
+      "global_shift_px_max": 0.03226,
+      "name": "smoke_to_storm_clouds",
+      "result": "PASS",
+      "sample_output_sha256": "825117ee21810f15d63af8e89fb932b37a5ec6305311d00e70b40e37cc84571a",
+      "source_delta_max": 79.977448,
+      "temporal_delta_max": 76.203299
+    },
+    {
+      "global_shift_px_max": 0.068666,
+      "name": "reflection_to_water",
+      "result": "PASS",
+      "sample_output_sha256": "55114620a12c3740fa0edbfbd03430b879b10b18395690495272748da41822b7",
+      "source_delta_max": 0.151499,
+      "temporal_delta_max": 0.239925
+    },
+    {
+      "global_shift_px_max": 0.05189,
+      "name": "fire_to_lightning",
+      "result": "PASS",
+      "sample_output_sha256": "4b6ade0f629a5be044136841c370d03d3215045eb3df271313423ce29c100339",
+      "source_delta_max": 81.385538,
+      "temporal_delta_max": 80.30136
+    },
+    {
+      "global_shift_px_max": 0.019209,
+      "name": "glint_to_orb",
+      "result": "PASS",
+      "sample_output_sha256": "eb03ab41748a12d481d3cfa8665e1386317e5ab214134212f7301987578f43fe",
+      "source_delta_max": 82.586458,
+      "temporal_delta_max": 79.496834
+    },
+    {
+      "global_shift_px_max": 0.038597,
+      "name": "wet_road_rain_reflection",
+      "result": "PASS",
+      "sample_output_sha256": "4aee473c1b11d19bed9b591928415a8d85040a8a22157bdd64df58e86dcbc37b",
+      "source_delta_max": 1.310359,
+      "temporal_delta_max": 2.435926
+    },
+    {
+      "global_shift_px_max": 0.011207,
+      "name": "candlelight_micro_loop",
+      "result": "PASS",
+      "sample_output_sha256": "3aca605dc4c7601e61f454f2b0e6a46e621e8cb33ecb3ac91432017ed95943b5",
+      "source_delta_max": 1.185457,
+      "temporal_delta_max": 0.54055
+    },
+    {
+      "global_shift_px_max": 0.01927,
+      "name": "atmospheric_fog",
+      "result": "PASS",
+      "sample_output_sha256": "017b7eec28f8618309a081969682db052d7fd80cd95ddec7fa572f6cde752ad3",
+      "source_delta_max": 2.756186,
+      "temporal_delta_max": 2.260503
+    },
+    {
+      "global_shift_px_max": 0.370518,
+      "name": "ghosted_memory_transition",
+      "result": "PASS",
+      "sample_output_sha256": "5e3065407e4949b982f01cd11dda147920faae6196f3e887140f963776ea9ae9",
+      "source_delta_max": 33.643368,
+      "temporal_delta_max": 16.774699
+    },
+    {
+      "global_shift_px_max": 0.939793,
+      "name": "crowd_sway",
+      "result": "PASS",
+      "sample_output_sha256": "989026c5ec6e3e7a1389fdc984308f86ebb58bb65725aced833b38388ed160a6",
+      "source_delta_max": 1.278941,
+      "temporal_delta_max": 2.435069
+    },
+    {
+      "global_shift_px_max": 0.216973,
+      "name": "forest_breath",
+      "result": "PASS",
+      "sample_output_sha256": "ea7a6c04148474962f4151cd83ff958b3b5c6fd1875c9d06778db229fe63965a",
+      "source_delta_max": 1.377674,
+      "temporal_delta_max": 1.360394
+    },
+    {
+      "global_shift_px_max": 0.192608,
+      "name": "impact_pulse",
+      "result": "PASS",
+      "sample_output_sha256": "4ec8434e0d1addb1bcafeb378e54f802adbe1504b13fba06ff65cf2762c80fa1",
+      "source_delta_max": 1.659016,
+      "temporal_delta_max": 2.790255
+    }
+  ],
+  "failures": [],
+  "fps_basis": 24,
+  "result": "PASS",
+  "runtime": "aivideoedit-fx-v2",
+  "sample_frames_per_effect": 4,
+  "sample_size": [
+    320,
+    180
+  ],
+  "schema": "aivideoedit.standard-effects-verification.v1"
+}

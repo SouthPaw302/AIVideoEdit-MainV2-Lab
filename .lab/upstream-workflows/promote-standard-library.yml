@@ -1,0 +1,56 @@
+name: Promote Neutral Standard Capability Library
+
+on:
+  pull_request:
+    paths:
+      - "general/reusable/fx_v2/promoted_effects.py"
+      - "general/reusable/fx_v2/verify_standard_effects.py"
+      - "general/reusable/tools/workflow_resolver.py"
+      - "general/reusable/tools/workflow_guard.py"
+      - "general/reusable/tools/promote_standard_library.py"
+      - ".github/workflows/promote-standard-library.yml"
+      - "general/reusable/CANONICAL_EFFECT_REGISTRY.json"
+      - "general/reusable/STANDARD_WORKFLOW_REGISTRY.json"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  promote-and-verify:
+    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install verification runtime
+        run: python -m pip install --upgrade pip numpy opencv-python-headless
+      - name: Generate neutral effect/workflow registries and proof records
+        run: python general/reusable/tools/promote_standard_library.py
+      - name: Verify every standardized effect
+        run: python general/reusable/fx_v2/verify_standard_effects.py
+      - name: Verify workflow registry and selection scenarios
+        run: python general/reusable/tools/workflow_resolver.py --verify --json
+      - name: Compile generated Python
+        run: python -m compileall -q bootstrap.py general/reusable
+      - name: Commit generated canonical system state to PR branch
+        if: github.event_name == 'pull_request'
+        run: |
+          # GitHub Apps cannot self-update existing workflow definitions without
+          # workflows permission. Keep workflow wiring out of this generated commit;
+          # connector-authored workflow changes remain separately reviewable.
+          git checkout -- .github/workflows/fx-v2-precompile-gate.yml
+          if git diff --quiet; then
+            echo "No generated changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add bootstrap.py AGENTS.md SYSTEM_INDEX.md general/reusable
+          git commit -m "Generate neutral standard effect and workflow library"
+          git push origin HEAD:${GITHUB_HEAD_REF}

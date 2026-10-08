@@ -1,0 +1,17 @@
+{
+  "project": "leave-it-by-the-door-v3-core",
+  "runtime": "aivideoedit-fx-v2",
+  "seed": 302,
+  "effects": [
+    {"id":"FX2-MOTION-002","strength":0.80},
+    {"id":"FX2-MOTION-003","strength":0.80,"reflect":true},
+    {"id":"FX2-ATM-001","strength":0.82},
+    {"id":"FX2-ATM-002","strength":0.72},
+    {"id":"FX2-FIRE-001","strength":0.90},
+    {"id":"FX2-FIRE-002","strength":0.78},
+    {"id":"FX2-LIGHT-001","strength":0.88},
+    {"id":"FX2-LIGHT-002","strength":0.82},
+    {"id":"FX2-SURFACE-001","strength":0.58}
+  ],
+  "transitions": []
+}

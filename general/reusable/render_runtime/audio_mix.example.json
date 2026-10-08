@@ -1,0 +1,59 @@
+{
+  "schema": "aivideoedit.audio-mix.v1",
+  "tracks": [
+    {
+      "id": "music-bed",
+      "role": "music",
+      "start": 0.0,
+      "duration": 60.0,
+      "volume": 0.82,
+      "fx_chain": {
+        "version": 1,
+        "nodes": [
+          {
+            "type": "limiter",
+            "id": "n1",
+            "label": "Final ceiling",
+            "params": {"limit": -1.0, "attack": 5, "release": 80, "level_out": 0}
+          }
+        ]
+      }
+    },
+    {"id": "vo-intro", "role": "voice", "start": 5.0, "duration": 7.5, "volume": 1.0},
+    {"id": "vo-body", "role": "voice", "start": 18.0, "duration": 16.0, "volume": 1.0}
+  ],
+  "groups": [
+    {
+      "id": "voiceover",
+      "label": "Voiceover",
+      "members": ["vo-intro", "vo-body"],
+      "volume": 1.0,
+      "fx_chain": {
+        "version": 1,
+        "nodes": [
+          {
+            "type": "highpass",
+            "id": "n1",
+            "label": "Rumble control",
+            "params": {"frequency": 80, "q": 0.707, "poles": "2"}
+          },
+          {
+            "type": "compressor",
+            "id": "n2",
+            "label": "Voice evenness",
+            "params": {"threshold": -18, "ratio": 3}
+          }
+        ]
+      }
+    }
+  ],
+  "ducking": [
+    {
+      "target": "music-bed",
+      "sources": ["voiceover"],
+      "depth": 0.45,
+      "attack": 0.15,
+      "release": 0.4
+    }
+  ]
+}
