@@ -66,7 +66,7 @@ jobs:
       - name: Run original MainV2 surgical regression
         run: python general/reusable/tools/surgical_verify.py --json-out /tmp/mainv2-lab-surgical.json
       - name: Run inherited FX and camera tests
-        run: pytest -q general/reusable/fx_v2/tests/test_camera_fx.py general/reusable/fx_v2/tests/test_fx_resolver.py
+        run: python -m pytest -q general/reusable/fx_v2/tests/test_camera_fx.py general/reusable/fx_v2/tests/test_fx_resolver.py
       - name: Run actual FX precompile and lock verification
         run: |
           python general/reusable/fx_v2/precompile_gate.py --engine-test --manifest general/reusable/fx_v2/examples/approved-runtime-core.fx.json --lock-out /tmp/mainv2-lab-fx-lock.json
