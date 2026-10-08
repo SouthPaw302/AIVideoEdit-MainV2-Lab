@@ -1,0 +1,124 @@
+name: Song Branch — REAL Music Film Render
+
+on:
+  push:
+    branches: [song/el-camion-y-la-carretera]
+    paths:
+      - projects/el-camion-y-la-carretera/RENDER_JOB.json
+      - .github/workflows/song-real-render.yml
+  workflow_dispatch:
+    inputs:
+      require_onnx:
+        description: "Require the pinned Beat This ONNX model"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: song-real-render-el-camion-y-la-carretera
+  cancel-in-progress: true
+
+jobs:
+  real-render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      SOURCE_REF: song/el-camion-y-la-carretera
+      MANIFEST: projects/el-camion-y-la-carretera/RENDER_JOB.json
+      REQUIRE_ONNX: ${{ github.event_name == 'push' && '1' || inputs.require_onnx && '1' || '0' }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Check out complete MainV2 Lab production engine
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: engine
+          fetch-depth: 0
+      - name: Check out authorized song production inputs
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          path: source
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install real audio/video, FX and ONNX dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! command -v ffmpeg >/dev/null 2>&1; then
+            sudo apt-get update -y
+            sudo apt-get install -y ffmpeg
+          fi
+          python -m pip install --disable-pip-version-check numpy opencv-python-headless onnxruntime
+          python -m pip install --disable-pip-version-check -r engine/general/reusable/fx_v2/requirements-runtime.txt
+      - name: Verify and boot lab main
+        shell: bash
+        working-directory: engine
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REPOSITORY" = "SouthPaw302/AIVideoEdit-MainV2-Lab"
+          python scripts/validate_contract.py
+          python bootstrap.py boot --repo-root "$PWD" --branch main --offline
+      - name: Provision pinned Beat This ONNX
+        if: env.REQUIRE_ONNX == '1'
+        working-directory: engine
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m general.reusable.tools.model_provision music-beat-onnx-v1
+          python - <<'PY'
+          from general.reusable.tools.model_registry import ModelRegistry
+          r=ModelRegistry.load().resolve_capability("music_and_beat_analysis")
+          assert r.available and r.resolved == "music-beat-onnx-v1" and not r.used_fallback, r.reason
+          print("PINNED ONNX MODEL: PASS")
+          PY
+      - name: Render verified picture and original audio with canonical FX
+        working-directory: engine
+        run: |
+          set -euo pipefail
+          test -f "../source/$MANIFEST"
+          args=()
+          if [ "$REQUIRE_ONNX" = '1' ]; then args+=(--require-onnx); fi
+          python scripts/render_real_music_film.py --manifest "../source/$MANIFEST" --input-root ../source --out "$RUNNER_TEMP/aive-real-film" "${args[@]}"
+          test -s "$RUNNER_TEMP/aive-real-film/real_music_film.mp4"
+          test -s "$RUNNER_TEMP/aive-real-film/render_receipt.json"
+      - name: Enforce technical-only prerelease status
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          root=Path(os.environ["RUNNER_TEMP"])/"aive-real-film"
+          data=json.loads((root/"render_receipt.json").read_text())
+          assert data["status"] == "TECHNICAL_RENDER_PASS_VISUAL_REVIEW_PENDING"
+          assert data["human_visual_approval"] is False
+          assert data["production_complete"] is False
+          assert data["render_bytes"] > 100000
+          assert data["audio_sha256"] == "6789e6f3ea52501a0d4a151296a6ef7f8abc8516acd1f6cec959213a028ec0d9"
+          assert data["render_frames"] == 720
+          assert data["fx"]["effects"]
+          assert data["jev"]["decision"] in ("PASS", "CONTINUE")
+          assert (root/"contact_sheet.jpg").is_file()
+          print("REAL RENDER PROOF: PASS; HUMAN VISUAL REVIEW STILL REQUIRED")
+          PY
+      - name: Upload actual MP4 and receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: el-camion-batch03-real-${{ github.run_id }}
+          path: ${{ runner.temp }}/aive-real-film/
+          retention-days: 30
+          if-no-files-found: warn
+      - name: Publish review-only prerelease
+        if: success()
+        shell: bash
+        run: |
+          set -euo pipefail
+          root="$RUNNER_TEMP/aive-real-film"
+          gh release create "el-camion-real-${GITHUB_RUN_ID}" "$root/real_music_film.mp4" "$root/render_receipt.json" "$root/contact_sheet.jpg" "$root/PRODUCTION_EXECUTION_LEDGER.json" "$root/FX_LOCK.json" "$root/JEV_DECISION.json" --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --prerelease --title "El camión — Batch 03 real render, review pending" --notes "Original attached WAV and approved Batch 03 source stills. Technical prerelease only; independent visual review and final archive remain separate gates."
+
