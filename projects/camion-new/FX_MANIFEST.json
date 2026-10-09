@@ -1,0 +1,8 @@
+{
+  "schema": "aivideoedit.fx-manifest.v1",
+  "project": "camion-new",
+  "branch": "song/camion-new",
+  "effects": ["narrative_camera_travel", "corridor_push_focus_definition", "rack_focus_heat_pulse", "loopable_eased_orbit", "pseudo_depth_field", "atmospheric_fog", "fog_pigment_travel", "forest_breath", "wet_road_rain_reflection", "puddle_shimmer", "wet_reflection_ripple", "ghosted_memory_transition", "reflection_ash_dawn", "smoke_memory_forms", "threshold_reflection_lamp_flicker", "temporal_grade_shift", "rms_memory_modulation", "radial_waveform_ember_bursts", "impact_pulse", "localized_micro_warp", "warm_halation_bloom", "structural_morph_transition", "transient_warp", "reflection_to_water", "ember_to_sun", "fire_to_lightning"],
+  "transitions": ["FX2-TRANS-021", "FX2-TRANS-023", "FX2-TRANS-024", "FX2-TRANS-025", "FX2-TRANS-026", "FX2-TRANS-028", "FX2-TRANS-029", "FX2-TRANS-030", "FX2-TRANS-031", "FX2-TRANS-032"],
+  "status": "PLANNED_NOT_LOCKED"
+}

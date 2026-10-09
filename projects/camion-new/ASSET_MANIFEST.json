@@ -1,0 +1,13 @@
+{
+  "schema": "aivideoedit.asset-manifest.v1",
+  "assets": [
+    {"id": "audio-original", "kind": "source_audio", "origin": "ingested", "lifecycle_status": "canonical", "locator": "source__El camión y el Camino (Remastered x2).wav", "sha256": "6789e6f3ea52501a0d4a151296a6ef7f8abc8516acd1f6cec959213a028ec0d9", "duration_seconds": 282.84},
+    {"id": "storyboard-batch01", "kind": "recovered_generated_stills", "origin": "generated", "lifecycle_status": "approved", "locator": "generated__batch01-artifact", "count": 90, "provenance": "local scan of batch01-artifact; base frames only"},
+    {"id": "storyboard-batch02", "kind": "recovered_generated_stills", "origin": "generated", "lifecycle_status": "candidate", "locator": "generated__batch02-artifact", "count": 90, "provenance": "local scan of batch02-artifact; visual lock pending"},
+    {"id": "storyboard-batch03", "kind": "recovered_generated_stills", "origin": "generated", "lifecycle_status": "candidate", "locator": "generated__batch03-artifact", "count": 90, "provenance": "local scan of batch03-artifact; visual lock pending"},
+    {"id": "runner-fx-loops", "kind": "loop_media", "origin": "derived", "lifecycle_status": "candidate", "locator": "generated__approved_runner_loops", "count": 30, "provenance": "GitHub Actions batch 1/2/3 artifacts; exact per-file hashes to be published in storage manifest"}
+  ],
+  "planned_new_picture_count": 0,
+  "audio_status": "SOURCE_WAV_VERIFIED_STORAGE_PENDING",
+  "picture_status": "RECOVERED_GENERATED_STILLS_AND_RUNNER_FX_SCANNED_NOT_YET_STORED"
+}

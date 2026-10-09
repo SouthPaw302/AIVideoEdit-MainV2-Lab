@@ -1,0 +1,51 @@
+{
+  "schema": "aivideoedit.operating-order.v1",
+  "mission": "Make a complete Spanish-language Mountain Noir music film for El Camión y la Carretera from the verified original WAV, exact lyrics, approved storyboard coverage, and traceable runner FX.",
+  "direction_authority": "user_directed",
+  "production_mode": "hybrid",
+  "canon_lock": {
+    "locked": false,
+    "picture_language": "Nocturnal Mountain Noir road film: wet asphalt, cab reflections, mountain distance, memory intrusions, restrained camera travel, and dawn release.",
+    "items": []
+  },
+  "accepted_baseline": {
+    "status": "none",
+    "file_or_locator": null,
+    "sha256": null,
+    "user_acceptance_statement": null
+  },
+  "accepted_source_library": {
+    "status": "none",
+    "role": null,
+    "file_or_locator": null,
+    "sha256": null,
+    "user_acceptance_statement": null,
+    "content_reuse_authorized": false,
+    "timeline_locked": false
+  },
+  "refinement_scope": {
+    "active": false,
+    "goal": null,
+    "allowed_changes": [],
+    "forbidden_changes": ["touching main", "promoting an unreviewed export to canon"],
+    "restart_authorized": true
+  },
+  "recut_scope": {
+    "active": false,
+    "named_defects": [],
+    "allowed_changes": [],
+    "forbidden_changes": [],
+    "source_replacement_authorized": false
+  },
+  "current_user_direction": "Use the same style as @MountainNoir, but in Spanish; include the verified song, storyboard, camera work, loops, GIF/MP4 FX, transitions, and a restrained title pause.",
+  "exact_next_action": "Initialize storage on song/camion-new, publish verified media, then lock storyboard and frame-followable script.",
+  "director_supervision": {
+    "required": true,
+    "reviewer_role": "sandbox_director",
+    "checkpoint_file": "DIRECTOR_CHECKPOINTS.json",
+    "execution_ledger_file": "PRODUCTION_EXECUTION_LEDGER.json",
+    "checkpoints": ["media_selection", "representative_proof", "rough_cut", "fx_pass", "final_review"],
+    "runner_may_choose_art_direction": false,
+    "technical_pass_is_creative_pass": false
+  }
+}

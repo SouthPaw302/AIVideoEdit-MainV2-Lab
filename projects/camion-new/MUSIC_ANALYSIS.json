@@ -1,0 +1,18 @@
+{
+  "schema": "aivideoedit.music-analysis.v1",
+  "analysis_complete": true,
+  "lyrics": {"status": "present", "source": "verified Drive document and user-supplied exact text", "text_file": "LYRICS.md", "directing_use": "required"},
+  "genre": {"status": "user_confirmed", "label": "Spanish-language Mountain Noir roots road ballad", "source": "current_user_instruction", "confidence": 1.0, "user_declaration": "its the same style as @MountainNoir but in Spanish."},
+  "rhythm": {"tempo_status": "measured", "tempo_bpm": 184.5703, "pulse_description": "Measured machine pulse map with a driving 4/4 roots-road feel, sustained high-energy middle, and late release toward dawn.", "meter_or_groove": "Spanish-language Mountain Noir roots groove in 4/4; canonical audio-map timing governs beat and phrase placement."},
+  "analysis_source": {"tool": "general/reusable/tools/audio_map.py", "map_file": "audio_map.json", "map_sha256": "af4d8d4ca46159df3fb28d576dbf82a8ac81ce51909d6c35a87bc43b28997325", "audio_sha256": "6789e6f3ea52501a0d4a151296a6ef7f8abc8516acd1f6cec959213a028ec0d9", "duration_seconds": 282.84},
+  "sections": [
+    {"id": "A", "start_seconds": 0.0, "end_seconds": 32.0, "energy": "low-to-rising", "musical_cues": ["opening pulse", "first surges at 11 and 16 seconds"], "narrative_function": "establish the night road and the first memory question"},
+    {"id": "B", "start_seconds": 32.0, "end_seconds": 58.0, "energy": "rising-to-release", "musical_cues": ["surge at 32", "strong lift at 43", "drop at 58"], "narrative_function": "commit the traveler to the road and reveal absence"},
+    {"id": "C", "start_seconds": 58.0, "end_seconds": 106.0, "energy": "high", "musical_cues": ["re-entry at 60", "sustained high band from 67"], "narrative_function": "expand the road world and let memory become physical"},
+    {"id": "D", "start_seconds": 106.0, "end_seconds": 166.0, "energy": "high-and-driving", "musical_cues": ["continuous high-energy passage", "camera travel and layered weather"], "narrative_function": "cross the emotional center without losing forward motion"},
+    {"id": "E", "start_seconds": 166.0, "end_seconds": 204.0, "energy": "high-with-memory-turn", "musical_cues": ["surges at 166 and 172", "late turn at 204"], "narrative_function": "bring the remembered name and unsent words to the surface"},
+    {"id": "F", "start_seconds": 204.0, "end_seconds": 220.0, "energy": "quieting", "musical_cues": ["reduced energy", "breath before final lift"], "narrative_function": "make room for truth rather than another spectacle"},
+    {"id": "G", "start_seconds": 220.0, "end_seconds": 270.0, "energy": "final-surge", "musical_cues": ["surge at 220", "strong continuation through 269"], "narrative_function": "turn the journey toward acceptance and open distance"},
+    {"id": "H", "start_seconds": 270.0, "end_seconds": 282.84, "energy": "high-to-release", "musical_cues": ["last sustained drive", "closing release"], "narrative_function": "arrive at first light and leave the road unresolved but real"}
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "schema": "aivideoedit.storage-manifest.v1",
+  "provider": "github_releases",
+  "repository": "SouthPaw302/AIVideoEdit-MainV2-Lab",
+  "song_slug": "camion-new",
+  "branch": "song/camion-new",
+  "release_tag": "media-camion-new",
+  "release_url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/tag/media-camion-new",
+  "assets": [],
+  "status": "PENDING_INITIALIZATION"
+}
