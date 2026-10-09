@@ -124,17 +124,12 @@ def main() -> int:
         if not project_id:
             raise RuntimeError("live Tool API did not create a director-gate project")
         production = tool(proc, 7, "production.initialize", {"project_id": project_id})
-        tool(proc, 8, "operating.configure_v3", {
-            "project_id": project_id,
-            "direction_authority": order["direction_authority"],
-            "production_mode": order["production_mode"],
-            "mission": order["mission"],
-            "current_user_direction": direction,
-            "exact_next_action": "Render the branch-only Spanish Mountain Noir candidate through verified parallel shards.",
-        })
-        harness_status = tool(proc, 9, "harness.status", {})
-        context = tool(proc, 10, "harness.context", {"project_id": project_id})
-        specialist = tool(proc, 11, "harness.specialist_fixture", {
+        # The live bridge project is an isolated Harness workspace. Creative
+        # direction remains authoritative in the already locked branch package;
+        # configuring a second provisional project would violate the stage gate.
+        harness_status = tool(proc, 8, "harness.status", {})
+        context = tool(proc, 9, "harness.context", {"project_id": project_id})
+        specialist = tool(proc, 10, "harness.specialist_fixture", {
             "task": "Director review: enforce Spanish Mountain Noir continuity, restrained camera travel, authored transitions, and no 4K promotion before visual approval.",
             "evidence": {
                 "user_direction": direction,
@@ -143,7 +138,7 @@ def main() -> int:
                 "manifest_sha256": sha(manifest_path),
             },
         })
-        fx_resolution = tool(proc, 12, "harness.fx_resolve", {
+        fx_resolution = tool(proc, 11, "harness.fx_resolve", {
             "project_id": project_id,
             "level": "scene",
             "environment": ["night road", "mountain distance", "wet asphalt", "cab interior"],
