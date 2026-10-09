@@ -34,9 +34,8 @@ def main() -> int:
     lock_path = args.director_gate.parent / "FX_LOCK.json"
     if not lock_path.is_file() or canonical.digest(lock_path) != gate.get("fx_lock_sha256"):
         raise RuntimeError("shared canonical FX lock is missing or changed")
-    locked = json.loads(lock_path.read_text(encoding="utf-8"))
-    locked_effects = {str(x.get("id")) for x in locked.get("effects", []) if isinstance(x, dict)}
-    locked_transitions = {str(x.get("id")) for x in locked.get("transitions", []) if isinstance(x, dict)}
+    locked_effects = {str(x.get("id")) for x in gate.get("effects", []) if isinstance(x, dict)}
+    locked_transitions = {str(x.get("id")) for x in gate.get("transitions", []) if isinstance(x, dict)}
     for shot in manifest["shots"]:
         for spec in shot.get("fx", []):
             if str(spec.get("id")) not in locked_effects:
