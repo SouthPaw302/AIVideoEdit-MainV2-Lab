@@ -1,0 +1,18 @@
+{
+  "schema": "aivideoedit.shot-package.v1",
+  "shot_id": "INTRO-TITLE",
+  "project_id": "camion-new",
+  "branch": "song/camion-new",
+  "status": "BUILT_MEDIA_EVIDENCE_PENDING_PROOF",
+  "media_evidence": [
+    {
+      "path": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/generated__montananegra_title.png",
+      "uri": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/generated__montananegra_title.png",
+      "sha256": "780fe9da2995302fc0c46455f75e0b33a0c48528c7c264a5636a86249dc60e22",
+      "status": "ingested",
+      "role": "title_card",
+      "bytes": 508831
+    }
+  ],
+  "source_authority": "projects/camion-new/SOURCE_AUTHORITY.json"
+}

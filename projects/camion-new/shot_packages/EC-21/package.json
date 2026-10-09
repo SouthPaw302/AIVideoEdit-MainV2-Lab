@@ -1,0 +1,18 @@
+{
+  "schema": "aivideoedit.shot-package.v1",
+  "shot_id": "EC-21",
+  "project_id": "camion-new",
+  "branch": "song/camion-new",
+  "status": "BUILT_MEDIA_EVIDENCE_PENDING_PROOF",
+  "media_evidence": [
+    {
+      "path": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/generated__EC-21_FX_loop_24fps.mp4",
+      "uri": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/generated__EC-21_FX_loop_24fps.mp4",
+      "sha256": "ceacfec77e8146306f4b11516baff53b25520810575898711495226b8cfa56b6",
+      "status": "ingested",
+      "role": "runner_fx_loop",
+      "bytes": 93151
+    }
+  ],
+  "source_authority": "projects/camion-new/SOURCE_AUTHORITY.json"
+}

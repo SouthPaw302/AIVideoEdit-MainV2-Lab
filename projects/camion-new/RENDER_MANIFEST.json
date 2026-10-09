@@ -1,0 +1,674 @@
+{
+  "schema": "aivideoedit.real-render.v1",
+  "production_id": "camion-new-full-song-candidate",
+  "render_authorization": "explicit_user_render_request",
+  "audio": {
+    "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/source__El_camion_y_el_Camino_Remastered_x2.wav",
+    "sha256": "6789e6f3ea52501a0d4a151296a6ef7f8abc8516acd1f6cec959213a028ec0d9",
+    "start_seconds": 0
+  },
+  "output": {
+    "fps": 24,
+    "width": 1920,
+    "height": 1080
+  },
+  "fx_seed": 302,
+  "shots": [
+    {
+      "id": "INTRO-TITLE",
+      "source": {
+        "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/generated__montananegra_title.png",
+        "sha256": "780fe9da2995302fc0c46455f75e0b33a0c48528c7c264a5636a86249dc60e22",
+        "media_role": "real_source"
+      },
+      "duration_seconds": 2.5,
+      "fit": "cover",
+      "fx": [],
+      "transition_out": "FX2-TRANS-024",
+      "transition_seconds": 0.8
+    },
+    {
+      "id": "EC-01",
+      "source": {
+        "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/generated__EC-01_FX_loop_24fps.mp4",
+        "sha256": "9c81fa540c588cea0377c4ff95b322cd66ac3bb90d01574db041cb1da5a85391",
+        "media_role": "real_source"
+      },
+      "duration_seconds": 9,
+      "fit": "cover",
+      "loop": true,
+      "fx": [
+        {
+          "id": "narrative_camera_travel"
+        },
+        {
+          "id": "corridor_push_focus_definition"
+        }
+      ],
+      "transition_out": "FX2-TRANS-026",
+      "transition_seconds": 0.8
+    },
+    {
+      "id": "EC-02",
+      "source": {
+        "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/generated__EC-02_FX_loop_24fps.mp4",
+        "sha256": "22af48c7bf2907fee18aa8d3c8b187bc9f0709a8ea2f76bc74d2c61890207f21",
+        "media_role": "real_source"
+      },
+      "duration_seconds": 9,
+      "fit": "cover",
+      "loop": true,
+      "fx": [
+        {
+          "id": "corridor_push_focus_definition"
+        },
+        {
+          "id": "rack_focus_heat_pulse"
+        }
+      ],
+      "transition_out": "FX2-TRANS-025",
+      "transition_seconds": 0.8
+    },
+    {
+      "id": "EC-03",
+      "source": {
+        "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/generated__EC-03_FX_loop_24fps.mp4",
+        "sha256": "de5fe6c85bdb26060512fa4d4bf3c850cad76613411989ac8539252153e142e5",
+        "media_role": "real_source"
+      },
+      "duration_seconds": 9,
+      "fit": "cover",
+      "loop": true,
+      "fx": [
+        {
+          "id": "rack_focus_heat_pulse"
+        },
+        {
+          "id": "loopable_eased_orbit"
+        }
+      ],
+      "transition_out": "FX2-TRANS-032",
+      "transition_seconds": 0.8
+    },
+    {
+      "id": "EC-04",
+      "source": {
+        "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/generated__EC-04_FX_loop_24fps.mp4",
+        "sha256": "cd6d1519ee5c92dbb9c808e688c48011d25086290b1eb3970402fa6dda1f275b",
+        "media_role": "real_source"
+      },
+      "duration_seconds": 9,
+      "fit": "cover",
+      "loop": true,
+      "fx": [
+        {
+          "id": "loopable_eased_orbit"
+        },
+        {
+          "id": "pseudo_depth_field"
+        }
+      ],
+      "transition_out": "FX2-TRANS-029",
+      "transition_seconds": 0.8
+    },
+    {
+      "id": "EC-05",
+      "source": {
+        "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/generated__EC-05_FX_loop_24fps.mp4",
+        "sha256": "18839e48ae9eeaae24b07f37725e8cace166e40c572b5f8fd02a499472446ab1",
+        "media_role": "real_source"
+      },
+      "duration_seconds": 9,
+      "fit": "cover",
+      "loop": true,
+      "fx": [
+        {
+          "id": "pseudo_depth_field"
+        },
+        {
+          "id": "atmospheric_fog"
+        }
+      ],
+      "transition_out": "FX2-TRANS-030",
+      "transition_seconds": 0.8
+    },
+    {
+      "id": "EC-06",
+      "source": {
+        "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/generated__EC-06_FX_loop_24fps.mp4",
+        "sha256": "38e7260c0ee2fa4fdf5806a53081b1919ce5ce85a9f51f896ce796b329e70969",
+        "media_role": "real_source"
+      },
+      "duration_seconds": 9,
+      "fit": "cover",
+      "loop": true,
+      "fx": [
+        {
+          "id": "atmospheric_fog"
+        },
+        {
+          "id": "fog_pigment_travel"
+        }
+      ],
+      "transition_out": "FX2-TRANS-021",
+      "transition_seconds": 0.8
+    },
+    {
+      "id": "EC-07",
+      "source": {
+        "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/generated__EC-07_FX_loop_24fps.mp4",
+        "sha256": "93e62216393f8d6ed8e83c6b9b0258c83dd38cc52dd08bfe906a7a8ad5beed95",
+        "media_role": "real_source"
+      },
+      "duration_seconds": 9,
+      "fit": "cover",
+      "loop": true,
+      "fx": [
+        {
+          "id": "fog_pigment_travel"
+        },
+        {
+          "id": "forest_breath"
+        }
+      ],
+      "transition_out": "FX2-TRANS-031",
+      "transition_seconds": 0.8
+    },
+    {
+      "id": "EC-08",
+      "source": {
+        "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/generated__EC-08_FX_loop_24fps.mp4",
+        "sha256": "832299b1a592eb750bd00fa620ccbd77d8f9d5dc7601f33cf737fb1d3b9939b9",
+        "media_role": "real_source"
+      },
+      "duration_seconds": 9,
+      "fit": "cover",
+      "loop": true,
+      "fx": [
+        {
+          "id": "forest_breath"
+        },
+        {
+          "id": "wet_road_rain_reflection"
+        }
+      ],
+      "transition_out": "FX2-TRANS-028",
+      "transition_seconds": 0.8
+    },
+    {
+      "id": "EC-09",
+      "source": {
+        "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/generated__EC-09_FX_loop_24fps.mp4",
+        "sha256": "67cb25d24377ab9e36cf628c28d2ea9b9064d07e9c9c131d2609a17b2028d0d7",
+        "media_role": "real_source"
+      },
+      "duration_seconds": 9,
+      "fit": "cover",
+      "loop": true,
+      "fx": [
+        {
+          "id": "wet_road_rain_reflection"
+        },
+        {
+          "id": "puddle_shimmer"
+        }
+      ],
+      "transition_out": "FX2-TRANS-023",
+      "transition_seconds": 0.8
+    },
+    {
+      "id": "EC-10",
+      "source": {
+        "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/generated__EC-10_FX_loop_24fps.mp4",
+        "sha256": "7cda41298235c02c72470f63495cec0cbd3f7988a6cef7b22cc4178a42e62dfc",
+        "media_role": "real_source"
+      },
+      "duration_seconds": 9,
+      "fit": "cover",
+      "loop": true,
+      "fx": [
+        {
+          "id": "puddle_shimmer"
+        },
+        {
+          "id": "wet_reflection_ripple"
+        }
+      ],
+      "transition_out": "FX2-TRANS-024",
+      "transition_seconds": 0.8
+    },
+    {
+      "id": "EC-11",
+      "source": {
+        "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/generated__EC-11_FX_loop_24fps.mp4",
+        "sha256": "c1dbeffd5eb4f059952588ba069ca3392ec4820949da2153b78ddd13bd10c07e",
+        "media_role": "real_source"
+      },
+      "duration_seconds": 9,
+      "fit": "cover",
+      "loop": true,
+      "fx": [
+        {
+          "id": "wet_reflection_ripple"
+        },
+        {
+          "id": "ghosted_memory_transition"
+        }
+      ],
+      "transition_out": "FX2-TRANS-026",
+      "transition_seconds": 0.8
+    },
+    {
+      "id": "EC-12",
+      "source": {
+        "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/generated__EC-12_FX_loop_24fps.mp4",
+        "sha256": "3df9c832b11f70c472713c6887ede9978750341d90313663616ed77563499a86",
+        "media_role": "real_source"
+      },
+      "duration_seconds": 9,
+      "fit": "cover",
+      "loop": true,
+      "fx": [
+        {
+          "id": "ghosted_memory_transition"
+        },
+        {
+          "id": "reflection_ash_dawn"
+        }
+      ],
+      "transition_out": "FX2-TRANS-025",
+      "transition_seconds": 0.8
+    },
+    {
+      "id": "EC-13",
+      "source": {
+        "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/generated__EC-13_FX_loop_24fps.mp4",
+        "sha256": "c576f2d7b594a330e53269caeb9838b4016f2d2c9690d9012f81bc588ccb17f4",
+        "media_role": "real_source"
+      },
+      "duration_seconds": 9,
+      "fit": "cover",
+      "loop": true,
+      "fx": [
+        {
+          "id": "reflection_ash_dawn"
+        },
+        {
+          "id": "smoke_memory_forms"
+        }
+      ],
+      "transition_out": "FX2-TRANS-032",
+      "transition_seconds": 0.8
+    },
+    {
+      "id": "EC-14",
+      "source": {
+        "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/generated__EC-14_FX_loop_24fps.mp4",
+        "sha256": "b7348107162bb1c6882b2052cb44d2fb514b6366ce0a9e92d22ad1fb7aefc383",
+        "media_role": "real_source"
+      },
+      "duration_seconds": 9,
+      "fit": "cover",
+      "loop": true,
+      "fx": [
+        {
+          "id": "smoke_memory_forms"
+        },
+        {
+          "id": "threshold_reflection_lamp_flicker"
+        }
+      ],
+      "transition_out": "FX2-TRANS-029",
+      "transition_seconds": 0.8
+    },
+    {
+      "id": "EC-15",
+      "source": {
+        "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/generated__EC-15_FX_loop_24fps.mp4",
+        "sha256": "219394bd0adf5ac3cff128a504c66fd3e43e168abe4651ef60b8ba696cbde2ca",
+        "media_role": "real_source"
+      },
+      "duration_seconds": 9,
+      "fit": "cover",
+      "loop": true,
+      "fx": [
+        {
+          "id": "threshold_reflection_lamp_flicker"
+        },
+        {
+          "id": "temporal_grade_shift"
+        }
+      ],
+      "transition_out": "FX2-TRANS-030",
+      "transition_seconds": 0.8
+    },
+    {
+      "id": "EC-16",
+      "source": {
+        "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/generated__EC-16_FX_loop_24fps.mp4",
+        "sha256": "356108cda2f6b5df158f4037a87bbf3619d8a6ef7099ac32ccf01cd355d070d0",
+        "media_role": "real_source"
+      },
+      "duration_seconds": 9,
+      "fit": "cover",
+      "loop": true,
+      "fx": [
+        {
+          "id": "temporal_grade_shift"
+        },
+        {
+          "id": "rms_memory_modulation"
+        }
+      ],
+      "transition_out": "FX2-TRANS-021",
+      "transition_seconds": 0.8
+    },
+    {
+      "id": "EC-17",
+      "source": {
+        "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/generated__EC-17_FX_loop_24fps.mp4",
+        "sha256": "33b289cfee86e291e5da950cc440b2ab96d8e6bf81e1cc31411e1f27488b0bc0",
+        "media_role": "real_source"
+      },
+      "duration_seconds": 9,
+      "fit": "cover",
+      "loop": true,
+      "fx": [
+        {
+          "id": "rms_memory_modulation"
+        },
+        {
+          "id": "radial_waveform_ember_bursts"
+        }
+      ],
+      "transition_out": "FX2-TRANS-031",
+      "transition_seconds": 0.8
+    },
+    {
+      "id": "EC-18",
+      "source": {
+        "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/generated__EC-18_FX_loop_24fps.mp4",
+        "sha256": "d8ad243529ca9e67a326b1f86c0fd0dcef3d526f69d0a655aac64b447eb80e58",
+        "media_role": "real_source"
+      },
+      "duration_seconds": 9,
+      "fit": "cover",
+      "loop": true,
+      "fx": [
+        {
+          "id": "radial_waveform_ember_bursts"
+        },
+        {
+          "id": "impact_pulse"
+        }
+      ],
+      "transition_out": "FX2-TRANS-028",
+      "transition_seconds": 0.8
+    },
+    {
+      "id": "EC-19",
+      "source": {
+        "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/generated__EC-19_FX_loop_24fps.mp4",
+        "sha256": "7a1ffa1b54e845e1f359956f35df3bffb0db655872f338b274955c1b5b622e42",
+        "media_role": "real_source"
+      },
+      "duration_seconds": 9,
+      "fit": "cover",
+      "loop": true,
+      "fx": [
+        {
+          "id": "impact_pulse"
+        },
+        {
+          "id": "localized_micro_warp"
+        }
+      ],
+      "transition_out": "FX2-TRANS-023",
+      "transition_seconds": 0.8
+    },
+    {
+      "id": "EC-20",
+      "source": {
+        "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/generated__EC-20_FX_loop_24fps.mp4",
+        "sha256": "cf993f6809e60f3c2d21eb67643f9c68c9654691e64e5267c56e807c37d45e3b",
+        "media_role": "real_source"
+      },
+      "duration_seconds": 9,
+      "fit": "cover",
+      "loop": true,
+      "fx": [
+        {
+          "id": "localized_micro_warp"
+        },
+        {
+          "id": "warm_halation_bloom"
+        }
+      ],
+      "transition_out": "FX2-TRANS-024",
+      "transition_seconds": 0.8
+    },
+    {
+      "id": "EC-21",
+      "source": {
+        "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/generated__EC-21_FX_loop_24fps.mp4",
+        "sha256": "ceacfec77e8146306f4b11516baff53b25520810575898711495226b8cfa56b6",
+        "media_role": "real_source"
+      },
+      "duration_seconds": 9,
+      "fit": "cover",
+      "loop": true,
+      "fx": [
+        {
+          "id": "warm_halation_bloom"
+        },
+        {
+          "id": "structural_morph_transition"
+        }
+      ],
+      "transition_out": "FX2-TRANS-026",
+      "transition_seconds": 0.8
+    },
+    {
+      "id": "EC-22",
+      "source": {
+        "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/generated__EC-22_FX_loop_24fps.mp4",
+        "sha256": "d76c60204c61917ed21c881759b835870c449636029412548ddaa0d42191b89f",
+        "media_role": "real_source"
+      },
+      "duration_seconds": 9,
+      "fit": "cover",
+      "loop": true,
+      "fx": [
+        {
+          "id": "structural_morph_transition"
+        },
+        {
+          "id": "transient_warp"
+        }
+      ],
+      "transition_out": "FX2-TRANS-025",
+      "transition_seconds": 0.8
+    },
+    {
+      "id": "EC-23",
+      "source": {
+        "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/generated__EC-23_FX_loop_24fps.mp4",
+        "sha256": "badbe5f74cdfd7cde0b6418f801f7a98f9b55382ad641f392639948f71e22620",
+        "media_role": "real_source"
+      },
+      "duration_seconds": 9,
+      "fit": "cover",
+      "loop": true,
+      "fx": [
+        {
+          "id": "transient_warp"
+        },
+        {
+          "id": "reflection_to_water"
+        }
+      ],
+      "transition_out": "FX2-TRANS-032",
+      "transition_seconds": 0.8
+    },
+    {
+      "id": "EC-24",
+      "source": {
+        "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/generated__EC-24_FX_loop_24fps.mp4",
+        "sha256": "cc88f259af7a31acee90d634fd8430f987ba21d8899ab21a62c3ecae06a6a10d",
+        "media_role": "real_source"
+      },
+      "duration_seconds": 9,
+      "fit": "cover",
+      "loop": true,
+      "fx": [
+        {
+          "id": "reflection_to_water"
+        },
+        {
+          "id": "ember_to_sun"
+        }
+      ],
+      "transition_out": "FX2-TRANS-029",
+      "transition_seconds": 0.8
+    },
+    {
+      "id": "EC-25",
+      "source": {
+        "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/generated__EC-25_FX_loop_24fps.mp4",
+        "sha256": "150365aac75299e9256ca8973fb7cb37e1ac2cd5f469803b6ee71cec65374b92",
+        "media_role": "real_source"
+      },
+      "duration_seconds": 9,
+      "fit": "cover",
+      "loop": true,
+      "fx": [
+        {
+          "id": "ember_to_sun"
+        },
+        {
+          "id": "fire_to_lightning"
+        }
+      ],
+      "transition_out": "FX2-TRANS-030",
+      "transition_seconds": 0.8
+    },
+    {
+      "id": "EC-26",
+      "source": {
+        "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/generated__EC-26_FX_loop_24fps.mp4",
+        "sha256": "232c77682ef994fd4fb243164220c982b93f1eb904745186ec10a0833d3b2dc2",
+        "media_role": "real_source"
+      },
+      "duration_seconds": 9,
+      "fit": "cover",
+      "loop": true,
+      "fx": [
+        {
+          "id": "fire_to_lightning"
+        },
+        {
+          "id": "narrative_camera_travel"
+        }
+      ],
+      "transition_out": "FX2-TRANS-021",
+      "transition_seconds": 0.8
+    },
+    {
+      "id": "EC-27",
+      "source": {
+        "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/generated__EC-27_FX_loop_24fps.mp4",
+        "sha256": "2588cb6a73503134c94a08cc3fed3ef7fdbc38a85bd481a78f59ab812fa0edd1",
+        "media_role": "real_source"
+      },
+      "duration_seconds": 9,
+      "fit": "cover",
+      "loop": true,
+      "fx": [
+        {
+          "id": "narrative_camera_travel"
+        },
+        {
+          "id": "corridor_push_focus_definition"
+        }
+      ],
+      "transition_out": "FX2-TRANS-031",
+      "transition_seconds": 0.8
+    },
+    {
+      "id": "EC-28",
+      "source": {
+        "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/generated__EC-28_FX_loop_24fps.mp4",
+        "sha256": "857b2426ebce138e160b796e13be51a8cb4e126d0c019fe9a59e01c1cd4fc6f4",
+        "media_role": "real_source"
+      },
+      "duration_seconds": 9,
+      "fit": "cover",
+      "loop": true,
+      "fx": [
+        {
+          "id": "corridor_push_focus_definition"
+        },
+        {
+          "id": "rack_focus_heat_pulse"
+        }
+      ],
+      "transition_out": "FX2-TRANS-028",
+      "transition_seconds": 0.8
+    },
+    {
+      "id": "EC-29",
+      "source": {
+        "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/generated__EC-29_FX_loop_24fps.mp4",
+        "sha256": "af2fdd0b12e66eb8832a343002ff2a1b486be38f9082adfcf34cf49e75674fd9",
+        "media_role": "real_source"
+      },
+      "duration_seconds": 9,
+      "fit": "cover",
+      "loop": true,
+      "fx": [
+        {
+          "id": "rack_focus_heat_pulse"
+        },
+        {
+          "id": "loopable_eased_orbit"
+        }
+      ],
+      "transition_out": "FX2-TRANS-023",
+      "transition_seconds": 0.8
+    },
+    {
+      "id": "EC-30",
+      "source": {
+        "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/generated__EC-30_FX_loop_24fps.mp4",
+        "sha256": "f198239851099324b1fc8e98288712c86e7a46de4023ead3d427abd66f346444",
+        "media_role": "real_source"
+      },
+      "duration_seconds": 15.333333333333334,
+      "fit": "cover",
+      "loop": true,
+      "fx": [
+        {
+          "id": "loopable_eased_orbit"
+        },
+        {
+          "id": "pseudo_depth_field"
+        }
+      ],
+      "transition_out": "FX2-TRANS-024",
+      "transition_seconds": 0.8
+    },
+    {
+      "id": "OUTRO-ENDCARD",
+      "source": {
+        "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/generated__montananegra_outro.png",
+        "sha256": "9578ab94300929f123c51534e4799c4c1510107fdc642aba4d4a9530574fcb65",
+        "media_role": "real_source"
+      },
+      "duration_seconds": 4,
+      "fit": "cover",
+      "fx": []
+    }
+  ],
+  "human_visual_review": "REQUIRED_NOT_AUTOMATIC",
+  "deliverable": "full source-length Spanish Mountain Noir candidate; title pause, camera motion, runner FX loops, canonical FX, authored transitions, and outro"
+}

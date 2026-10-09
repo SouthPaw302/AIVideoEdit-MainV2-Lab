@@ -1,11 +1,11 @@
 # Status
 
 - Branch: `song/camion-new`
-- Stage: `APPROACH_ESTABLISHED`
-- Source WAV: scanned and hash-verified locally; storage publication pending.
+- Stage: `SHOT_PACKAGES_BUILT`
+- Source WAV: scanned, hash-verified, and published to `media-camion-new`.
 - Lyrics: 40 lines verified against the Drive document.
 - Storyboard coverage: 270 base frames across batches 1–3; review duplicates excluded from canon.
-- FX coverage: runner loops from batches 1–3 retained; canonical FX and transition capabilities selected for the next gates.
+- FX coverage: runner loops from batches 1–3 retained and published; canonical FX and transition capabilities are bound in the render manifest.
 - Main: untouched.
 
-The Actions render is intentionally not dispatched until the branch package and byte-addressable media storage are present.
+The branch package and byte-addressable media storage are present. The next Action is the full source-length candidate render; technical PASS will still require human visual review.

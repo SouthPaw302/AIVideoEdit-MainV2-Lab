@@ -6,6 +6,237 @@
   "branch": "song/camion-new",
   "release_tag": "media-camion-new",
   "release_url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/tag/media-camion-new",
-  "assets": [],
-  "status": "PENDING_INITIALIZATION"
+  "assets": [
+    {
+      "category": "generated",
+      "asset_name": "generated__EC-01_FX_loop_24fps.mp4",
+      "original_name": "EC-01_FX_loop_24fps.mp4",
+      "sha256": "9c81fa540c588cea0377c4ff95b322cd66ac3bb90d01574db041cb1da5a85391",
+      "bytes": 125209
+    },
+    {
+      "category": "generated",
+      "asset_name": "generated__EC-02_FX_loop_24fps.mp4",
+      "original_name": "EC-02_FX_loop_24fps.mp4",
+      "sha256": "22af48c7bf2907fee18aa8d3c8b187bc9f0709a8ea2f76bc74d2c61890207f21",
+      "bytes": 74958
+    },
+    {
+      "category": "generated",
+      "asset_name": "generated__EC-03_FX_loop_24fps.mp4",
+      "original_name": "EC-03_FX_loop_24fps.mp4",
+      "sha256": "de5fe6c85bdb26060512fa4d4bf3c850cad76613411989ac8539252153e142e5",
+      "bytes": 103633
+    },
+    {
+      "category": "generated",
+      "asset_name": "generated__EC-04_FX_loop_24fps.mp4",
+      "original_name": "EC-04_FX_loop_24fps.mp4",
+      "sha256": "cd6d1519ee5c92dbb9c808e688c48011d25086290b1eb3970402fa6dda1f275b",
+      "bytes": 97012
+    },
+    {
+      "category": "generated",
+      "asset_name": "generated__EC-05_FX_loop_24fps.mp4",
+      "original_name": "EC-05_FX_loop_24fps.mp4",
+      "sha256": "18839e48ae9eeaae24b07f37725e8cace166e40c572b5f8fd02a499472446ab1",
+      "bytes": 67482
+    },
+    {
+      "category": "generated",
+      "asset_name": "generated__EC-06_FX_loop_24fps.mp4",
+      "original_name": "EC-06_FX_loop_24fps.mp4",
+      "sha256": "38e7260c0ee2fa4fdf5806a53081b1919ce5ce85a9f51f896ce796b329e70969",
+      "bytes": 89959
+    },
+    {
+      "category": "generated",
+      "asset_name": "generated__EC-07_FX_loop_24fps.mp4",
+      "original_name": "EC-07_FX_loop_24fps.mp4",
+      "sha256": "93e62216393f8d6ed8e83c6b9b0258c83dd38cc52dd08bfe906a7a8ad5beed95",
+      "bytes": 127471
+    },
+    {
+      "category": "generated",
+      "asset_name": "generated__EC-08_FX_loop_24fps.mp4",
+      "original_name": "EC-08_FX_loop_24fps.mp4",
+      "sha256": "832299b1a592eb750bd00fa620ccbd77d8f9d5dc7601f33cf737fb1d3b9939b9",
+      "bytes": 56234
+    },
+    {
+      "category": "generated",
+      "asset_name": "generated__EC-09_FX_loop_24fps.mp4",
+      "original_name": "EC-09_FX_loop_24fps.mp4",
+      "sha256": "67cb25d24377ab9e36cf628c28d2ea9b9064d07e9c9c131d2609a17b2028d0d7",
+      "bytes": 89013
+    },
+    {
+      "category": "generated",
+      "asset_name": "generated__EC-10_FX_loop_24fps.mp4",
+      "original_name": "EC-10_FX_loop_24fps.mp4",
+      "sha256": "7cda41298235c02c72470f63495cec0cbd3f7988a6cef7b22cc4178a42e62dfc",
+      "bytes": 130112
+    },
+    {
+      "category": "generated",
+      "asset_name": "generated__EC-11_FX_loop_24fps.mp4",
+      "original_name": "EC-11_FX_loop_24fps.mp4",
+      "sha256": "c1dbeffd5eb4f059952588ba069ca3392ec4820949da2153b78ddd13bd10c07e",
+      "bytes": 98861
+    },
+    {
+      "category": "generated",
+      "asset_name": "generated__EC-12_FX_loop_24fps.mp4",
+      "original_name": "EC-12_FX_loop_24fps.mp4",
+      "sha256": "3df9c832b11f70c472713c6887ede9978750341d90313663616ed77563499a86",
+      "bytes": 85079
+    },
+    {
+      "category": "generated",
+      "asset_name": "generated__EC-13_FX_loop_24fps.mp4",
+      "original_name": "EC-13_FX_loop_24fps.mp4",
+      "sha256": "c576f2d7b594a330e53269caeb9838b4016f2d2c9690d9012f81bc588ccb17f4",
+      "bytes": 77094
+    },
+    {
+      "category": "generated",
+      "asset_name": "generated__EC-14_FX_loop_24fps.mp4",
+      "original_name": "EC-14_FX_loop_24fps.mp4",
+      "sha256": "b7348107162bb1c6882b2052cb44d2fb514b6366ce0a9e92d22ad1fb7aefc383",
+      "bytes": 105057
+    },
+    {
+      "category": "generated",
+      "asset_name": "generated__EC-15_FX_loop_24fps.mp4",
+      "original_name": "EC-15_FX_loop_24fps.mp4",
+      "sha256": "219394bd0adf5ac3cff128a504c66fd3e43e168abe4651ef60b8ba696cbde2ca",
+      "bytes": 68899
+    },
+    {
+      "category": "generated",
+      "asset_name": "generated__EC-16_FX_loop_24fps.mp4",
+      "original_name": "EC-16_FX_loop_24fps.mp4",
+      "sha256": "356108cda2f6b5df158f4037a87bbf3619d8a6ef7099ac32ccf01cd355d070d0",
+      "bytes": 89371
+    },
+    {
+      "category": "generated",
+      "asset_name": "generated__EC-17_FX_loop_24fps.mp4",
+      "original_name": "EC-17_FX_loop_24fps.mp4",
+      "sha256": "33b289cfee86e291e5da950cc440b2ab96d8e6bf81e1cc31411e1f27488b0bc0",
+      "bytes": 68658
+    },
+    {
+      "category": "generated",
+      "asset_name": "generated__EC-18_FX_loop_24fps.mp4",
+      "original_name": "EC-18_FX_loop_24fps.mp4",
+      "sha256": "d8ad243529ca9e67a326b1f86c0fd0dcef3d526f69d0a655aac64b447eb80e58",
+      "bytes": 104947
+    },
+    {
+      "category": "generated",
+      "asset_name": "generated__EC-19_FX_loop_24fps.mp4",
+      "original_name": "EC-19_FX_loop_24fps.mp4",
+      "sha256": "7a1ffa1b54e845e1f359956f35df3bffb0db655872f338b274955c1b5b622e42",
+      "bytes": 119857
+    },
+    {
+      "category": "generated",
+      "asset_name": "generated__EC-20_FX_loop_24fps.mp4",
+      "original_name": "EC-20_FX_loop_24fps.mp4",
+      "sha256": "cf993f6809e60f3c2d21eb67643f9c68c9654691e64e5267c56e807c37d45e3b",
+      "bytes": 94669
+    },
+    {
+      "category": "generated",
+      "asset_name": "generated__EC-21_FX_loop_24fps.mp4",
+      "original_name": "EC-21_FX_loop_24fps.mp4",
+      "sha256": "ceacfec77e8146306f4b11516baff53b25520810575898711495226b8cfa56b6",
+      "bytes": 93151
+    },
+    {
+      "category": "generated",
+      "asset_name": "generated__EC-22_FX_loop_24fps.mp4",
+      "original_name": "EC-22_FX_loop_24fps.mp4",
+      "sha256": "d76c60204c61917ed21c881759b835870c449636029412548ddaa0d42191b89f",
+      "bytes": 83409
+    },
+    {
+      "category": "generated",
+      "asset_name": "generated__EC-23_FX_loop_24fps.mp4",
+      "original_name": "EC-23_FX_loop_24fps.mp4",
+      "sha256": "badbe5f74cdfd7cde0b6418f801f7a98f9b55382ad641f392639948f71e22620",
+      "bytes": 94207
+    },
+    {
+      "category": "generated",
+      "asset_name": "generated__EC-24_FX_loop_24fps.mp4",
+      "original_name": "EC-24_FX_loop_24fps.mp4",
+      "sha256": "cc88f259af7a31acee90d634fd8430f987ba21d8899ab21a62c3ecae06a6a10d",
+      "bytes": 71821
+    },
+    {
+      "category": "generated",
+      "asset_name": "generated__EC-25_FX_loop_24fps.mp4",
+      "original_name": "EC-25_FX_loop_24fps.mp4",
+      "sha256": "150365aac75299e9256ca8973fb7cb37e1ac2cd5f469803b6ee71cec65374b92",
+      "bytes": 104581
+    },
+    {
+      "category": "generated",
+      "asset_name": "generated__EC-26_FX_loop_24fps.mp4",
+      "original_name": "EC-26_FX_loop_24fps.mp4",
+      "sha256": "232c77682ef994fd4fb243164220c982b93f1eb904745186ec10a0833d3b2dc2",
+      "bytes": 89325
+    },
+    {
+      "category": "generated",
+      "asset_name": "generated__EC-27_FX_loop_24fps.mp4",
+      "original_name": "EC-27_FX_loop_24fps.mp4",
+      "sha256": "2588cb6a73503134c94a08cc3fed3ef7fdbc38a85bd481a78f59ab812fa0edd1",
+      "bytes": 91798
+    },
+    {
+      "category": "generated",
+      "asset_name": "generated__EC-28_FX_loop_24fps.mp4",
+      "original_name": "EC-28_FX_loop_24fps.mp4",
+      "sha256": "857b2426ebce138e160b796e13be51a8cb4e126d0c019fe9a59e01c1cd4fc6f4",
+      "bytes": 87204
+    },
+    {
+      "category": "generated",
+      "asset_name": "generated__EC-29_FX_loop_24fps.mp4",
+      "original_name": "EC-29_FX_loop_24fps.mp4",
+      "sha256": "af2fdd0b12e66eb8832a343002ff2a1b486be38f9082adfcf34cf49e75674fd9",
+      "bytes": 97447
+    },
+    {
+      "category": "generated",
+      "asset_name": "generated__EC-30_FX_loop_24fps.mp4",
+      "original_name": "EC-30_FX_loop_24fps.mp4",
+      "sha256": "f198239851099324b1fc8e98288712c86e7a46de4023ead3d427abd66f346444",
+      "bytes": 98735
+    },
+    {
+      "category": "generated",
+      "asset_name": "generated__montananegra_outro.png",
+      "original_name": "montananegra_outro.png",
+      "sha256": "9578ab94300929f123c51534e4799c4c1510107fdc642aba4d4a9530574fcb65",
+      "bytes": 501611
+    },
+    {
+      "category": "generated",
+      "asset_name": "generated__montananegra_title.png",
+      "original_name": "montananegra_title.png",
+      "sha256": "780fe9da2995302fc0c46455f75e0b33a0c48528c7c264a5636a86249dc60e22",
+      "bytes": 508831
+    },
+    {
+      "category": "source",
+      "asset_name": "source__El_camion_y_el_Camino_Remastered_x2.wav",
+      "original_name": "El_camion_y_el_Camino_Remastered_x2.wav",
+      "sha256": "6789e6f3ea52501a0d4a151296a6ef7f8abc8516acd1f6cec959213a028ec0d9",
+      "bytes": 54319130
+    }
+  ]
 }
