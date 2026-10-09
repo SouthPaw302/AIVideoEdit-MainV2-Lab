@@ -122,7 +122,7 @@ def main() -> int:
         "model": "beat_this_onnx",
         "director_harness_receipt_sha256": sha(args.gate_dir / "DIRECTOR_HARNESS_RECEIPT.json"),
         "fx_lock_sha256": sha(lock),
-        "fx": {"effects": json.loads(lock.read_text(encoding="utf-8")).get("effects", []), "transitions": json.loads(lock.read_text(encoding="utf-8")).get("transitions", [])},
+        "fx": {"effects": gate.get("effects", []), "transitions": gate.get("transitions", [])},
         "shards": [{"start_index": s, "end_index": e, "receipt": r.get("video_sha256")} for s, e, r, _ in records],
         "jev": gate.get("jev"),
         "harness_route": gate.get("harness_route"),
