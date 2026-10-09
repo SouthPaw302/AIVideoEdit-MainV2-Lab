@@ -1,0 +1,12 @@
+{
+  "schema": "aivideoedit.asset-manifest.v1",
+  "assets": [
+    {"id": "audio-original", "kind": "source_audio", "origin": "ingested", "lifecycle_status": "canonical", "locator": "source__El camión y el Camino (Remastered x2).wav", "sha256": "6789e6f3ea52501a0d4a151296a6ef7f8abc8516acd1f6cec959213a028ec0d9", "duration_seconds": 282.84},
+    {"id": "real-footage-library", "kind": "real_source_footage", "origin": "accepted_source_library", "lifecycle_status": "approved", "locator": "E:/Videos/00 Video Library Database/2026-07-30/E_Videos_Technical_Catalog.csv", "count": 7, "provenance": "Seven selected non-Puerto-Rico clips; exact source hashes are recorded in RENDER_MANIFEST.json"},
+    {"id": "runner-fx-loops", "kind": "loop_media", "origin": "derived", "lifecycle_status": "candidate", "locator": "GitHub release media-camion-new", "count": 30, "provenance": "GitHub Actions batches 1/2/3; used as registered capability evidence and not as picture replacement"},
+    {"id": "title-end-cards", "kind": "branded_text_cards", "origin": "approved_existing_asset", "lifecycle_status": "approved", "locator": "GitHub release media-camion-new", "count": 2, "provenance": "Existing @MontanaNegra title and end card; held for the extended intro/outro beats"}
+  ],
+  "planned_new_picture_count": 7,
+  "audio_status": "SOURCE_WAV_VERIFIED_AND_STORED",
+  "picture_status": "REAL_FOOTAGE_SELECTED_HASH_VERIFIED_LOCAL_EXTERNAL_LIBRARY"
+}

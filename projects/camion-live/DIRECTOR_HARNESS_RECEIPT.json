@@ -1,0 +1,306 @@
+{
+  "schema": "aivideoedit.director-harness-receipt.v1",
+  "branch": "song/camion-new",
+  "source_project": "C:\\Users\\User\\Documents\\Codex\\2026-10-08\\the-new-github-actions-run-has\\work\\camion-live-repo\\projects\\camion-live",
+  "manifest_sha256": "44543534974dceeb05e70b9daf6c1f77cbfcb92f285d7155f5abdb63b9527b62",
+  "director_input": "Use the same style as @MountainNoir, but in Spanish; use the selected real E: footage, color-correct the whole film, add camera work, loops, GIF/MP4 FX, authored transitions, and a long professional title pause plus long professional end card.",
+  "route_name": "La Carretera Recuerda",
+  "core": {
+    "boot": {
+      "bootstrapped": true,
+      "capability_count": 25,
+      "contract_schema": "aivideoedit.production-contract.v3",
+      "core_branch": "main",
+      "core_repo": "E:\\Camion Live Render\\gate-final\\harness-runtime\\core\\repo",
+      "fx_count": 91,
+      "guard_result": "PASS",
+      "host_branch": "song/camion-live",
+      "host_repo": "C:\\Users\\User\\Documents\\Codex\\2026-10-08\\the-new-github-actions-run-has\\work\\camion-live-repo",
+      "main_commit": "c2d20d888316e6fdcbcfe23bed508867c711149f",
+      "mode": "isolated-canonical-main",
+      "ok": true,
+      "os_root": "E:\\Camion Live Render\\gate-final\\harness-runtime\\core\\repo\\.aivideoedit\\os",
+      "phase": "boot",
+      "production_states": [
+        "INITIALIZED",
+        "SOURCE_INGESTED",
+        "REFERENCES_ANALYZED",
+        "APPROACH_ESTABLISHED",
+        "STORYBOARD_LOCKED",
+        "SHOT_PACKAGES_BUILT",
+        "SHOT_PROOFS_ACCEPTED",
+        "FX_LOCKED",
+        "ASSEMBLED",
+        "FINAL_QC_PASSED",
+        "ARCHIVED"
+      ],
+      "requested_core_ref": "main",
+      "returncode": 0,
+      "session_id": "ac2126bb-0ca0-48c7-8705-9a8e97f4001d",
+      "stderr": "",
+      "stdout": "AIVideoEdit production contract: PASS\nAIVideoEdit recut contract: PASS\nAIVideoEdit standard workflow contract: PASS\nAIVideoEdit OS BOOTSTRAP: PASS\nmain=c2d20d888316e6fdcbcfe23bed508867c711149f\nbranch=main\nos=E:\\Camion Live Render\\gate-final\\harness-runtime\\core\\repo\\.aivideoedit\\os\nsession=E:\\Camion Live Render\\gate-final\\harness-runtime\\core\\repo\\.aivideoedit\\session.json\nboot_capsule=E:\\Camion Live Render\\gate-final\\harness-runtime\\core\\repo\\.aivideoedit\\boot_capsule.json\nsession_attestation=E:\\Camion Live Render\\gate-final\\harness-runtime\\core\\repo\\.aivideoedit\\session_attestation.json\nsecond_brain=E:\\Camion Live Render\\gate-final\\harness-runtime\\core\\repo\\.aivideoedit\\SECOND_BRAIN.md\n"
+    },
+    "main_commit": "c2d20d888316e6fdcbcfe23bed508867c711149f"
+  },
+  "harness": {
+    "status": {
+      "bridge": "mcp-stdio",
+      "bridge_ready": true,
+      "canonical_core": {
+        "bootstrapped": true,
+        "capability_count": 25,
+        "contract_schema": "aivideoedit.production-contract.v3",
+        "core_branch": "main",
+        "core_repo": "E:\\Camion Live Render\\gate-final\\harness-runtime\\core\\repo",
+        "fx_count": 91,
+        "guard_result": "PASS",
+        "host_branch": "song/camion-live",
+        "host_repo": "C:\\Users\\User\\Documents\\Codex\\2026-10-08\\the-new-github-actions-run-has\\work\\camion-live-repo",
+        "main_commit": "c2d20d888316e6fdcbcfe23bed508867c711149f",
+        "mode": "isolated-canonical-main",
+        "ok": true,
+        "os_root": "E:\\Camion Live Render\\gate-final\\harness-runtime\\core\\repo\\.aivideoedit\\os",
+        "production_states": [
+          "INITIALIZED",
+          "SOURCE_INGESTED",
+          "REFERENCES_ANALYZED",
+          "APPROACH_ESTABLISHED",
+          "STORYBOARD_LOCKED",
+          "SHOT_PACKAGES_BUILT",
+          "SHOT_PROOFS_ACCEPTED",
+          "FX_LOCKED",
+          "ASSEMBLED",
+          "FINAL_QC_PASSED",
+          "ARCHIVED"
+        ],
+        "requested_core_ref": "main",
+        "session_id": "ac2126bb-0ca0-48c7-8705-9a8e97f4001d"
+      },
+      "dsh_installed": false,
+      "enabled": true,
+      "launcher": "C:\\Program Files\\nodejs\\npx.CMD",
+      "npx_available": true,
+      "ok": true,
+      "policy": {
+        "guard_bypass": false,
+        "main_mutation": false,
+        "production_authority": "canonical-aivideoedit-core",
+        "project_context_required": true
+      },
+      "schema": "aivideoedit.harness-status.v1"
+    },
+    "context": {
+      "active_jobs": [],
+      "agent_rules": [
+        "Treat the current project branch and current explicit user instruction as project authority.",
+        "Run through existing AIVideoEdit tools; do not bypass canonical production guards.",
+        "Harness is optional orchestration only; AIVideoEdit production state remains authoritative.",
+        "Refresh harness.context after a stage-changing operation before choosing the next action.",
+        "Resolve FX through harness.fx_resolve before authoring batch/scene/still FX requirements and after material scene changes."
+      ],
+      "assets": {
+        "count": 0,
+        "items": [],
+        "ready": 0
+      },
+      "director": {
+        "accepted_baseline": null,
+        "accepted_source_library": null,
+        "canon_lock": null,
+        "current_user_direction": null,
+        "direction_authority": null,
+        "director_brain_version": null,
+        "exact_next_action": null,
+        "mission": null,
+        "production_mode": null,
+        "recut_scope": null,
+        "refinement_scope": null
+      },
+      "production": {
+        "branch": "song/camion-new-spanish-mountain-noir-director-gate",
+        "guard_pass": true,
+        "initialized": true,
+        "main_commit": "c2d20d888316e6fdcbcfe23bed508867c711149f",
+        "next_stage": "SOURCE_INGESTED",
+        "stage": "INITIALIZED"
+      },
+      "project": {
+        "id": "camion-new-spanish-mountain-noir-director-gate",
+        "name": "Camion New \u2014 Spanish Mountain Noir Director Gate"
+      },
+      "schema": "aivideoedit.harness-context.v1"
+    },
+    "specialist": {
+      "authority": "advisory_only",
+      "evidence_keys": [
+        "manifest_sha256",
+        "production_mode",
+        "route",
+        "user_direction"
+      ],
+      "production_mutation": false,
+      "schema": "aivideoedit.harness-specialist-fixture.v1",
+      "status": "COMPLETE",
+      "task": "Director review: enforce Spanish Mountain Noir continuity, restrained camera travel, authored transitions, and no 4K promotion before visual approval."
+    },
+    "fx_resolution": {
+      "agent_rule": "Use this resolution before authoring FX requirements; directorial judgment may remove an effect but must not silently substitute unregistered project-local behavior.",
+      "production": {
+        "branch": "song/camion-new-spanish-mountain-noir-director-gate",
+        "main_commit": "c2d20d888316e6fdcbcfe23bed508867c711149f",
+        "stage": "INITIALIZED"
+      },
+      "project": {
+        "id": "camion-new-spanish-mountain-noir-director-gate",
+        "name": "Camion New \u2014 Spanish Mountain Noir Director Gate"
+      },
+      "resolution": {
+        "composition_steps": [],
+        "effects": [
+          {
+            "family": "environment",
+            "gate_status": "approved",
+            "id": "FX2-ATM-002",
+            "name": "rain_plane",
+            "reason": "semantic:rain"
+          },
+          {
+            "family": "environment",
+            "gate_status": "approved",
+            "id": "FX2-ATM-021",
+            "name": "atmospheric_fog",
+            "reason": "semantic:fog"
+          },
+          {
+            "family": "surface",
+            "gate_status": "approved",
+            "id": "FX2-SURFACE-023",
+            "name": "wet_reflection_ripple",
+            "reason": "semantic:reflection"
+          }
+        ],
+        "level": "scene",
+        "protect": [],
+        "recipes": [],
+        "rejected": [],
+        "requires_proof": false,
+        "schema": "aivideoedit.fx-resolution.v1",
+        "selection_policy": [
+          "approved_canonical_fx",
+          "approved_reusable_recipe",
+          "proof_required_existing_fx",
+          "project_local_candidate",
+          "new_fx_only_if_needed"
+        ],
+        "source": {
+          "recipes": "E:\\Camion Live Render\\gate-final\\harness-runtime\\projects\\camion-new-spanish-mountain-noir-director-gate\\engine\\.aivideoedit\\os\\general\\reusable\\fx_v2\\recipes.json",
+          "registry": "E:\\Camion Live Render\\gate-final\\harness-runtime\\projects\\camion-new-spanish-mountain-noir-director-gate\\engine\\.aivideoedit\\os\\general\\reusable\\fx_v2\\registry.json"
+        },
+        "tokens": [
+          "absence",
+          "authored_transitions",
+          "cab_interior",
+          "cinematic",
+          "dawn_release",
+          "empty_passenger_seat",
+          "fog",
+          "glass_reflection",
+          "headlights",
+          "hybrid",
+          "living_still_motion",
+          "memory_atmosphere",
+          "mountain_distance",
+          "mountain_horizon",
+          "mountain_noir",
+          "night_road",
+          "no_arbitrary_style_drift",
+          "no_unregistered_fx",
+          "preserve_subject_identity",
+          "rain",
+          "reflection",
+          "restrained_camera_travel",
+          "road",
+          "road_surface",
+          "spanish_language",
+          "truck",
+          "warm_light",
+          "wet_asphalt"
+        ]
+      },
+      "schema": "aivideoedit.harness-fx-resolution.v1"
+    }
+  },
+  "jev": {
+    "schema": "aivideoedit.jev-decision.v1",
+    "decision": "CONTINUE",
+    "reason": "all declared evidence passes and next action is permitted"
+  },
+  "harness_route": {
+    "schema": "aivideoedit.harness-route.v1",
+    "route": "none",
+    "reason": "Jev did not request escalation"
+  },
+  "music_evidence_sha256": "aa1ade4a67bbfb934aa4d521d6dd7cc87e64b74b1ecc3358e2e7b1ca1aefb64e",
+  "fx_lock_sha256": "a376802b3eb03e98c1f9712aa1ada5e51ad2af3478c87121d294e88352c860fa",
+  "effects": [
+    {
+      "id": "FX2-LIGHT-025"
+    },
+    {
+      "id": "FX2-CAMERA-023"
+    },
+    {
+      "id": "FX2-ATM-021"
+    },
+    {
+      "id": "FX2-CAMERA-021"
+    },
+    {
+      "id": "FX2-SURFACE-023"
+    },
+    {
+      "id": "FX2-COMP-021"
+    },
+    {
+      "id": "FX2-CAMERA-022"
+    },
+    {
+      "id": "FX2-MOTION-022"
+    },
+    {
+      "id": "FX2-COMP-023"
+    },
+    {
+      "id": "FX2-SURFACE-022"
+    }
+  ],
+  "transitions": [
+    {
+      "id": "FX2-TRANS-024"
+    },
+    {
+      "id": "FX2-TRANS-025"
+    },
+    {
+      "id": "FX2-TRANS-026"
+    },
+    {
+      "id": "FX2-TRANS-028"
+    },
+    {
+      "id": "FX2-TRANS-029"
+    },
+    {
+      "id": "FX2-TRANS-030"
+    },
+    {
+      "id": "FX2-TRANS-031"
+    },
+    {
+      "id": "FX2-TRANS-032"
+    }
+  ],
+  "parallel_shards": 4,
+  "human_visual_approval": false,
+  "production_complete": false
+}

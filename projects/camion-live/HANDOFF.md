@@ -1,0 +1,5 @@
+# Director handoff
+
+Boot and validate the current MainV2 Lab OS against `song/camion-live`. The user confirmed the genre/style authority as: “the same style as @MountainNoir but in Spanish.” Use the verified original WAV and exact lyrics as story authority. Use the selected real E: footage as the picture source, the existing branded title/end-card assets for the long intro/outro, and runner FX loops/transitions only with their recorded provenance. Do not use Puerto Rico or family footage. Do not overwrite the E: originals.
+
+Next order: run `.github/workflows/mainv2-director-parallel-real-render.yml` from `song/camion-live` when the selected real media is available to the runner. It boots the immutable MainV2 `main` engine, runs the live Director/Harness/JEV/FX/ONNX gate, fans out four verified picture shards, and muxes the original WAV once. For the local E: execution path, use the same scripts with E: as the read-only input root. Inspect the actual export, then run the mode-aware proof, FX lock, assembly, and final QC gates. Technical PASS is not human visual approval.

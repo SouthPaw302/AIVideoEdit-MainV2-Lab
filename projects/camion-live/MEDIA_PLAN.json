@@ -1,0 +1,35 @@
+{
+  "schema": "aivideoedit.media-plan.v1",
+  "user_approach_established": true,
+  "direction_authority": "user_directed",
+  "production_mode": "hybrid",
+  "picture_source": "selected_real_E_drive_footage_plus_runner_fx_loops",
+  "selected_capabilities": ["real_footage", "global_color_grade", "narrative_camera_travel", "loop_media", "transition_media", "atmospheric_fx", "analysis_qc_media"],
+  "visual_direction_gate": {
+    "required": true,
+    "presented_in_chat": true,
+    "options": [
+      {"number": 1, "name": "La Ruta Real", "story_approach": "A grounded night drive toward daylight.", "rendering_route": "Cinematic road and cab coverage with motivated camera travel.", "production_mode": "cinematic", "storyboard": [{"number":1,"description":"Engine and rain establish the world"},{"number":2,"description":"The road carries the memory"},{"number":3,"description":"Dawn resolves the crossing"}]},
+      {"number": 2, "name": "La Carretera Recuerda", "story_approach": "The empty passenger seat and reflections carry absence through the journey.", "rendering_route": "Hybrid cinematic coverage with restrained living memory, layered weather, parallax and authored transitions.", "production_mode": "hybrid", "storyboard": [{"number":1,"description":"Rain and reflections open the memory"},{"number":2,"description":"The journey tightens around the absent presence"},{"number":3,"description":"Morning releases the traveler"}]},
+      {"number": 3, "name": "La Noche Vive", "story_approach": "The highway becomes a breathing landscape around a nearly hidden traveler.", "rendering_route": "Living-still FX, bounded depth motion, and musical atmosphere as the primary picture language.", "production_mode": "living_scene", "storyboard": [{"number":1,"description":"Dark road breathes under weather"},{"number":2,"description":"Lights and fog pulse with the song"},{"number":3,"description":"First light opens the horizon"}]}
+    ],
+    "user_selection": {
+      "status": "selected",
+      "selected_option_numbers": [2],
+      "recorded_user_instruction": "I like 2; use the same style as @MountainNoir but in Spanish. Use the selected real E: footage and professional long intro/outro.",
+      "route_name": "La Carretera Recuerda"
+    },
+    "locked": true
+  },
+  "coverage": {
+    "base_storyboard_frames": 0,
+    "review_duplicates_excluded": 0,
+    "real_source_clip_count": 7,
+    "excluded_regions": ["Puerto Rico", "children/family footage"],
+    "intro_seconds": 12,
+    "outro_seconds": 20,
+    "runner_fx_loop_count": 30,
+    "source_length_seconds": 282.84,
+    "target_fps": 24
+  }
+}

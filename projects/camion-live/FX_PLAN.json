@@ -1,0 +1,15 @@
+{
+  "schema": "aivideoedit.fx-plan.v1",
+  "project": "camion-live",
+  "branch": "song/camion-live",
+  "policy": "canonical MainV2 FX only; every applied effect must appear in execution evidence",
+  "passes": [
+    {"name": "camera", "capabilities": ["narrative_camera_travel", "corridor_push_focus_definition", "rack_focus_heat_pulse", "loopable_eased_orbit", "pseudo_depth_field"]},
+    {"name": "atmosphere", "capabilities": ["atmospheric_fog", "fog_pigment_travel", "forest_breath", "wet_road_rain_reflection", "puddle_shimmer", "wet_reflection_ripple"]},
+    {"name": "memory", "capabilities": ["ghosted_memory_transition", "reflection_ash_dawn", "smoke_memory_forms", "threshold_reflection_lamp_flicker", "temporal_grade_shift"]},
+    {"name": "energy", "capabilities": ["rms_memory_modulation", "radial_waveform_ember_bursts", "impact_pulse", "localized_micro_warp", "warm_halation_bloom"]},
+    {"name": "transitions", "capabilities": ["structural_morph_transition", "transient_warp", "reflection_to_water", "ember_to_sun", "fire_to_lightning"]}
+  ],
+  "runner_media": {"loop_count": 30, "source": "batches 1-3 approved runner artifacts", "status": "available_as_registered_capability"},
+  "lock_status": "NOT_LOCKED"
+}

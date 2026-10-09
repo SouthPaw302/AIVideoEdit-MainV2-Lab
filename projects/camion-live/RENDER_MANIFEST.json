@@ -1,0 +1,107 @@
+{
+  "schema": "aivideoedit.real-render.v1",
+  "production_id": "camion-live-real-footage-full-song-candidate",
+  "render_authorization": "explicit_user_render_request",
+  "picture_authority": "selected real footage from the indexed E: library; originals are read-only",
+  "color_grade": {
+    "policy": "global Mountain Noir continuity grade across every picture shot",
+    "canonical_fx": "FX2-LIGHT-025",
+    "notes": "Keep night blue/amber separation, protect highlights, and let the final mountain and water shots open toward dawn."
+  },
+  "audio": {
+    "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/source__El_camion_y_el_Camino_Remastered_x2.wav",
+    "sha256": "6789e6f3ea52501a0d4a151296a6ef7f8abc8516acd1f6cec959213a028ec0d9",
+    "start_seconds": 0
+  },
+  "output": {"fps": 24, "width": 1920, "height": 1080},
+  "fx_seed": 302,
+  "shots": [
+    {
+      "id": "INTRO-TITLE-LONG",
+      "source": {"url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/generated__montananegra_title.png", "sha256": "780fe9da2995302fc0c46455f75e0b33a0c48528c7c264a5636a86249dc60e22", "media_role": "approved_branded_title_card"},
+      "duration_seconds": 12,
+      "fit": "cover",
+      "fx": [{"id": "FX2-LIGHT-025"}],
+      "transition_out": "FX2-TRANS-024",
+      "transition_seconds": 1.25
+    },
+    {
+      "id": "REAL-NIGHT-DRIVE-001",
+      "source": {"path": "Videos/04 Travel/Road Trips/10-17-2021 Night Drive/DJI_0592_001.MP4", "sha256": "2135b1ce4524eea857c1907e669303fde9766788c7340ef1fa125fc74d1bec6d", "media_role": "real_source_footage"},
+      "source_start_seconds": 24,
+      "duration_seconds": 34,
+      "fit": "cover",
+      "fx": [{"id": "FX2-LIGHT-025"}, {"id": "FX2-CAMERA-023"}, {"id": "FX2-ATM-021"}],
+      "transition_out": "FX2-TRANS-025",
+      "transition_seconds": 0.9
+    },
+    {
+      "id": "REAL-NIGHT-DRIVE-002",
+      "source": {"path": "Videos/04 Travel/Road Trips/10-17-2021 Night Drive/DJI_0592_002.MP4", "sha256": "c0e671f270fcdc4a4448e0190292ec1618d07618c7be519f988973984766980d", "media_role": "real_source_footage"},
+      "source_start_seconds": 78,
+      "duration_seconds": 32,
+      "fit": "cover",
+      "fx": [{"id": "FX2-LIGHT-025"}, {"id": "FX2-CAMERA-021"}, {"id": "FX2-SURFACE-023"}],
+      "transition_out": "FX2-TRANS-026",
+      "transition_seconds": 0.9
+    },
+    {
+      "id": "REAL-VSTAR-RIDE-001",
+      "source": {"path": "Videos/02 Motorcycle Rides/10-13-2022 Driving Vstar/DJI_0911_001.MP4", "sha256": "92a4a95debd740946ad40665b421dc7492acf8fa75c040eec4c3e91077cdc4f0", "media_role": "real_source_footage"},
+      "source_start_seconds": 42,
+      "duration_seconds": 42,
+      "fit": "cover",
+      "fx": [{"id": "FX2-LIGHT-025"}, {"id": "FX2-CAMERA-023"}, {"id": "FX2-COMP-021"}],
+      "transition_out": "FX2-TRANS-028",
+      "transition_seconds": 1.0
+    },
+    {
+      "id": "REAL-VSTAR-RIDE-002",
+      "source": {"path": "Videos/02 Motorcycle Rides/10-13-2022 Driving Vstar/DJI_0912_001.MP4", "sha256": "4710f29334c7e17cea30c1d6364669ee9f5e59218bec77d8ecb006c4d5af00f2", "media_role": "real_source_footage"},
+      "source_start_seconds": 96,
+      "duration_seconds": 40,
+      "fit": "cover",
+      "fx": [{"id": "FX2-LIGHT-025"}, {"id": "FX2-CAMERA-022"}, {"id": "FX2-MOTION-022"}],
+      "transition_out": "FX2-TRANS-029",
+      "transition_seconds": 1.0
+    },
+    {
+      "id": "REAL-LAKE-AERIAL-001",
+      "source": {"path": "Videos/03 Drone and Aerial/6-30-2022 Landscape Aerials/DJI_0633.MP4", "sha256": "9dd98d08ee981a67679a58bc11f95b25db8be7e033adf4bbde660c98eacda3e2", "media_role": "real_source_footage"},
+      "source_start_seconds": 34,
+      "duration_seconds": 28,
+      "fit": "cover",
+      "fx": [{"id": "FX2-LIGHT-025"}, {"id": "FX2-CAMERA-022"}, {"id": "FX2-COMP-023"}],
+      "transition_out": "FX2-TRANS-030",
+      "transition_seconds": 1.0
+    },
+    {
+      "id": "REAL-LAKE-AERIAL-002",
+      "source": {"path": "Videos/03 Drone and Aerial/Drone Boat Ride 7-10-2024/DJI_0001.MP4", "sha256": "93463ea76d72feb7ff7c1ca7f6a4dbfbfb0021a2a1454143d907c22524af6a3a", "media_role": "real_source_footage"},
+      "source_start_seconds": 68,
+      "duration_seconds": 38,
+      "fit": "cover",
+      "fx": [{"id": "FX2-LIGHT-025"}, {"id": "FX2-MOTION-022"}, {"id": "FX2-SURFACE-022"}],
+      "transition_out": "FX2-TRANS-031",
+      "transition_seconds": 1.0
+    },
+    {
+      "id": "REAL-MOUNTAIN-AERIAL-001",
+      "source": {"path": "Videos/10 Mixed and Unsorted/3-21-2022 Mountain Views/DJI_0526.MP4", "sha256": "513036553ec76d6a58554b0ba172c8a167cc498a3d3ab9f863bb170a8a2c360e", "media_role": "real_source_footage"},
+      "source_start_seconds": 30,
+      "duration_seconds": 36.833333333333336,
+      "fit": "cover",
+      "fx": [{"id": "FX2-LIGHT-025"}, {"id": "FX2-CAMERA-023"}, {"id": "FX2-COMP-021"}],
+      "transition_out": "FX2-TRANS-032",
+      "transition_seconds": 1.25
+    },
+    {
+      "id": "OUTRO-ENDCARD-LONG",
+      "source": {"url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/generated__montananegra_outro.png", "sha256": "9578ab94300929f123c51534e4799c4c1510107fdc642aba4d4a9530574fcb65", "media_role": "approved_branded_end_card"},
+      "duration_seconds": 20,
+      "fit": "cover",
+      "fx": [{"id": "FX2-LIGHT-025"}],
+      "transition_seconds": 0
+    }
+  ]
+}

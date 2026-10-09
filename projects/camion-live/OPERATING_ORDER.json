@@ -1,0 +1,51 @@
+{
+  "schema": "aivideoedit.operating-order.v1",
+  "mission": "Make a complete Spanish-language Mountain Noir music film for El Camión y la Carretera from the verified original WAV, exact lyrics, selected real road and mountain footage, and traceable runner FX.",
+  "direction_authority": "user_directed",
+  "production_mode": "hybrid",
+  "canon_lock": {
+    "locked": true,
+    "picture_language": "A real-footage road film: night drive, windshield reflections, mountain distance, lake air, camera travel, authored transitions, and a gradual dawn release.",
+    "items": ["no Puerto Rico footage", "no children or family footage", "protect original E: media", "real footage remains the picture source"]
+  },
+  "accepted_baseline": {
+    "status": "none",
+    "file_or_locator": null,
+    "sha256": null,
+    "user_acceptance_statement": null
+  },
+  "accepted_source_library": {
+    "status": "accepted",
+    "role": "hero_library",
+    "file_or_locator": "E:/Videos/00 Video Library Database/2026-07-30/E_Videos_Technical_Catalog.csv",
+    "sha256": null,
+    "user_acceptance_statement": "Use the selected non-Puerto-Rico real footage from E: for this production.",
+    "content_reuse_authorized": true,
+    "timeline_locked": false
+  },
+  "refinement_scope": {
+    "active": false,
+    "goal": null,
+    "allowed_changes": [],
+    "forbidden_changes": ["touching main", "promoting an unreviewed export to canon"],
+    "restart_authorized": true
+  },
+  "recut_scope": {
+    "active": false,
+    "named_defects": [],
+    "allowed_changes": [],
+    "forbidden_changes": [],
+    "source_replacement_authorized": false
+  },
+  "current_user_direction": "Use the same style as @MountainNoir, but in Spanish; use the selected real E: footage, color-correct the whole film, add camera work, loops, GIF/MP4 FX, authored transitions, and a long professional title pause plus long professional end card.",
+  "exact_next_action": "Run the Director-gated parallel candidate render from song/camion-live using the read-only MainV2 main engine, then inspect the complete export before any creative acceptance.",
+  "director_supervision": {
+    "required": true,
+    "reviewer_role": "sandbox_director",
+    "checkpoint_file": "DIRECTOR_CHECKPOINTS.json",
+    "execution_ledger_file": "PRODUCTION_EXECUTION_LEDGER.json",
+    "checkpoints": ["media_selection", "representative_proof", "rough_cut", "fx_pass", "final_review"],
+    "runner_may_choose_art_direction": false,
+    "technical_pass_is_creative_pass": false
+  }
+}

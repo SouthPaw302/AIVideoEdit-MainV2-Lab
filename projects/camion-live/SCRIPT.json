@@ -1,0 +1,17 @@
+{
+  "schema": "aivideoedit.script.v1",
+  "project": "camion-live",
+  "basis": ["LYRICS.md", "MUSIC_ANALYSIS.json", "RENDER_MANIFEST.json", "current_user_direction"],
+  "target_fps": 24,
+  "entries": [
+    {"shot_id":"INTRO-TITLE-LONG","start_frame":0,"end_frame":287,"production_mode":"hybrid","story_action":"Hold the approved title card as a deliberate professional opening pause.","visual_media":"Existing branded title card.","animation_behavior":"Subtle grade breathing only.","music_cues":["opening pulse"],"transition":"fog-pigment handoff"},
+    {"shot_id":"REAL-NIGHT-DRIVE-001","start_frame":288,"end_frame":1103,"production_mode":"hybrid","story_action":"Commit the traveler to the night road.","visual_media":"E: DJI_0592_001.MP4.","animation_behavior":"Narrative camera travel, restrained atmosphere, continuity grade.","music_cues":["rising opening"],"transition":"ghosted memory handoff"},
+    {"shot_id":"REAL-NIGHT-DRIVE-002","start_frame":1104,"end_frame":1871,"production_mode":"hybrid","story_action":"Carry the road through windshield and reflection continuity.","visual_media":"E: DJI_0592_002.MP4.","animation_behavior":"Definition push, wet-surface shimmer, continuity grade.","music_cues":["first sustained drive"],"transition":"glint-to-orb handoff"},
+    {"shot_id":"REAL-VSTAR-RIDE-001","start_frame":1872,"end_frame":2879,"production_mode":"hybrid","story_action":"Broaden the forward motion without losing the human road scale.","visual_media":"E: DJI_0911_001.MP4.","animation_behavior":"Bounded push, compositing depth, continuity grade.","music_cues":["high middle"],"transition":"raindrop-to-ember handoff"},
+    {"shot_id":"REAL-VSTAR-RIDE-002","start_frame":2880,"end_frame":3839,"production_mode":"hybrid","story_action":"Let sustained travel carry the emotional center.","visual_media":"E: DJI_0912_001.MP4.","animation_behavior":"Micro-orbit, forest breath, continuity grade.","music_cues":["high-and-driving"],"transition":"reflection-ash handoff"},
+    {"shot_id":"REAL-LAKE-AERIAL-001","start_frame":3840,"end_frame":4511,"production_mode":"hybrid","story_action":"Give the song a truthful breath over water and distance.","visual_media":"E: DJI_0633.MP4.","animation_behavior":"Soft aerial continuity, steam/fog composite, dawn grade.","music_cues":["quieting passage"],"transition":"reflection-to-water"},
+    {"shot_id":"REAL-LAKE-AERIAL-002","start_frame":4512,"end_frame":5423,"production_mode":"hybrid","story_action":"Open the frame toward acceptance.","visual_media":"E: DJI_0001.MP4.","animation_behavior":"Water shimmer, measured travel, continuity grade.","music_cues":["final surge"],"transition":"smoke-to-storm-cloud handoff"},
+    {"shot_id":"REAL-MOUNTAIN-AERIAL-001","start_frame":5424,"end_frame":6307,"production_mode":"hybrid","story_action":"Move from blue hour toward first light and mountain distance.","visual_media":"E: DJI_0526.MP4.","animation_behavior":"Narrative camera travel, dawn grade shift, restrained transition.","music_cues":["closing release"],"transition":"structural dawn dissolve"},
+    {"shot_id":"OUTRO-ENDCARD-LONG","start_frame":6308,"end_frame":6787,"production_mode":"hybrid","story_action":"Close with the approved end card and professional breathing room.","visual_media":"Existing branded end card.","animation_behavior":"Subtle grade breathing; clean stop.","music_cues":["post-song close"],"transition":"none"}
+  ]
+}

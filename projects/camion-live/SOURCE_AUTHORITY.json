@@ -1,0 +1,35 @@
+{
+  "schema": "aivideoedit.source-authority.v1",
+  "title": "El Camión y la Carretera",
+  "user_authorized_inputs": [
+    "original WAV master",
+    "verified exact 40-line lyrics",
+    "seven selected non-Puerto-Rico real footage clips from the indexed E: library",
+    "canonical Mountain Noir style direction in Spanish"
+  ],
+  "picture_inputs": [
+    "the seven hash-verified real source clips listed in RENDER_MANIFEST.json",
+    "runner-produced FX loop capability and canonical FX transitions with provenance",
+    "existing approved @MontanaNegra title and end-card assets",
+    "canonical MainV2 FX and transition capabilities"
+  ],
+  "denied": ["deleted branch final MP4 picture", "Puerto Rico footage", "children or family footage", "unreviewed technical proof as final master", "touching main"],
+  "audio": {
+    "status": "SOURCE_IDENTIFIED_LOCAL_SHA_VERIFIED",
+    "file_name": "El camión y el Camino (Remastered x2).wav",
+    "local_locator": "C:/Users/User/Downloads/El camión y el Camino (Remastered x2).wav",
+    "sha256": "6789e6f3ea52501a0d4a151296a6ef7f8abc8516acd1f6cec959213a028ec0d9",
+    "duration_seconds": 282.84,
+    "sample_rate": 48000,
+    "channels": 2,
+    "codec": "pcm_s16le",
+    "note": "Exact supplied WAV; no padded intro/outro audio is accepted. Visual title pause must not alter source audio duration."
+  },
+  "lyrics": {
+    "status": "VERIFIED_USER_SUPPLIED_AND_DRIVE_TEXT",
+    "complete": true,
+    "line_count": 40,
+    "drive_id": "1bnVudELIXpNCs_Yv2wc4waQgQazLtE3CW2K24o-ukTU"
+  },
+  "source_gate": "SOURCES_IDENTIFIED_AND_ANALYZED; LOCAL_EXTERNAL_SOURCE_HASHES_VERIFIED"
+}

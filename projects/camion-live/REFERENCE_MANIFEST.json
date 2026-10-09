@@ -1,0 +1,16 @@
+{
+  "schema": "aivideoedit.reference-manifest.v1",
+  "references": [
+    {
+      "id": "mountain-noir-spanish-style",
+      "source": "@MountainNoir",
+      "role": "style_authority",
+      "authorized_properties": ["atmosphere", "cinematic restraint", "roots-music identity", "night-road memory language"],
+      "content_reuse_authorized": false,
+      "note": "Style direction only; no external picture is reused."
+    }
+  ],
+  "visual_references_supplied": false,
+  "content_reuse_authorized": false,
+  "reference_policy_satisfied": true
+}
