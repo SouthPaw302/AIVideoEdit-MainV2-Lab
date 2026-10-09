@@ -39,10 +39,10 @@
       "loop": true,
       "fx": [
         {
-          "id": "narrative_camera_travel"
+          "id": "FX2-CAMERA-023"
         },
         {
-          "id": "corridor_push_focus_definition"
+          "id": "FX2-CAMERA-021"
         }
       ],
       "transition_out": "FX2-TRANS-026",
@@ -60,10 +60,10 @@
       "loop": true,
       "fx": [
         {
-          "id": "corridor_push_focus_definition"
+          "id": "FX2-CAMERA-021"
         },
         {
-          "id": "rack_focus_heat_pulse"
+          "id": "FX2-CAMERA-024"
         }
       ],
       "transition_out": "FX2-TRANS-025",
@@ -81,10 +81,10 @@
       "loop": true,
       "fx": [
         {
-          "id": "rack_focus_heat_pulse"
+          "id": "FX2-CAMERA-024"
         },
         {
-          "id": "loopable_eased_orbit"
+          "id": "FX2-CAMERA-022"
         }
       ],
       "transition_out": "FX2-TRANS-032",
@@ -102,10 +102,10 @@
       "loop": true,
       "fx": [
         {
-          "id": "loopable_eased_orbit"
+          "id": "FX2-CAMERA-022"
         },
         {
-          "id": "pseudo_depth_field"
+          "id": "FX2-SPATIAL-021"
         }
       ],
       "transition_out": "FX2-TRANS-029",
@@ -123,10 +123,10 @@
       "loop": true,
       "fx": [
         {
-          "id": "pseudo_depth_field"
+          "id": "FX2-SPATIAL-021"
         },
         {
-          "id": "atmospheric_fog"
+          "id": "FX2-ATM-021"
         }
       ],
       "transition_out": "FX2-TRANS-030",
@@ -144,10 +144,10 @@
       "loop": true,
       "fx": [
         {
-          "id": "atmospheric_fog"
+          "id": "FX2-ATM-021"
         },
         {
-          "id": "fog_pigment_travel"
+          "id": "FX2-TRANS-024"
         }
       ],
       "transition_out": "FX2-TRANS-021",
@@ -165,10 +165,10 @@
       "loop": true,
       "fx": [
         {
-          "id": "fog_pigment_travel"
+          "id": "FX2-TRANS-024"
         },
         {
-          "id": "forest_breath"
+          "id": "FX2-MOTION-022"
         }
       ],
       "transition_out": "FX2-TRANS-031",
@@ -186,10 +186,10 @@
       "loop": true,
       "fx": [
         {
-          "id": "forest_breath"
+          "id": "FX2-MOTION-022"
         },
         {
-          "id": "wet_road_rain_reflection"
+          "id": "FX2-ATM-025"
         }
       ],
       "transition_out": "FX2-TRANS-028",
@@ -207,10 +207,10 @@
       "loop": true,
       "fx": [
         {
-          "id": "wet_road_rain_reflection"
+          "id": "FX2-ATM-025"
         },
         {
-          "id": "puddle_shimmer"
+          "id": "FX2-SURFACE-021"
         }
       ],
       "transition_out": "FX2-TRANS-023",
@@ -228,10 +228,10 @@
       "loop": true,
       "fx": [
         {
-          "id": "puddle_shimmer"
+          "id": "FX2-SURFACE-021"
         },
         {
-          "id": "wet_reflection_ripple"
+          "id": "FX2-SURFACE-023"
         }
       ],
       "transition_out": "FX2-TRANS-024",
@@ -249,10 +249,10 @@
       "loop": true,
       "fx": [
         {
-          "id": "wet_reflection_ripple"
+          "id": "FX2-SURFACE-023"
         },
         {
-          "id": "ghosted_memory_transition"
+          "id": "FX2-TRANS-025"
         }
       ],
       "transition_out": "FX2-TRANS-026",
@@ -270,10 +270,10 @@
       "loop": true,
       "fx": [
         {
-          "id": "ghosted_memory_transition"
+          "id": "FX2-TRANS-025"
         },
         {
-          "id": "reflection_ash_dawn"
+          "id": "FX2-TRANS-029"
         }
       ],
       "transition_out": "FX2-TRANS-025",
@@ -291,10 +291,10 @@
       "loop": true,
       "fx": [
         {
-          "id": "reflection_ash_dawn"
+          "id": "FX2-TRANS-029"
         },
         {
-          "id": "smoke_memory_forms"
+          "id": "FX2-ATM-024"
         }
       ],
       "transition_out": "FX2-TRANS-032",
@@ -312,10 +312,10 @@
       "loop": true,
       "fx": [
         {
-          "id": "smoke_memory_forms"
+          "id": "FX2-ATM-024"
         },
         {
-          "id": "threshold_reflection_lamp_flicker"
+          "id": "FX2-LIGHT-026"
         }
       ],
       "transition_out": "FX2-TRANS-029",
@@ -333,10 +333,10 @@
       "loop": true,
       "fx": [
         {
-          "id": "threshold_reflection_lamp_flicker"
+          "id": "FX2-LIGHT-026"
         },
         {
-          "id": "temporal_grade_shift"
+          "id": "FX2-LIGHT-025"
         }
       ],
       "transition_out": "FX2-TRANS-030",
@@ -354,10 +354,10 @@
       "loop": true,
       "fx": [
         {
-          "id": "temporal_grade_shift"
+          "id": "FX2-LIGHT-025"
         },
         {
-          "id": "rms_memory_modulation"
+          "id": "FX2-AUDIO-021"
         }
       ],
       "transition_out": "FX2-TRANS-021",
@@ -375,10 +375,10 @@
       "loop": true,
       "fx": [
         {
-          "id": "rms_memory_modulation"
+          "id": "FX2-AUDIO-021"
         },
         {
-          "id": "radial_waveform_ember_bursts"
+          "id": "FX2-VIS-024"
         }
       ],
       "transition_out": "FX2-TRANS-031",
@@ -396,10 +396,10 @@
       "loop": true,
       "fx": [
         {
-          "id": "radial_waveform_ember_bursts"
+          "id": "FX2-VIS-024"
         },
         {
-          "id": "impact_pulse"
+          "id": "FX2-MOTION-023"
         }
       ],
       "transition_out": "FX2-TRANS-028",
@@ -417,10 +417,10 @@
       "loop": true,
       "fx": [
         {
-          "id": "impact_pulse"
+          "id": "FX2-MOTION-023"
         },
         {
-          "id": "localized_micro_warp"
+          "id": "FX2-MOTION-024"
         }
       ],
       "transition_out": "FX2-TRANS-023",
@@ -438,10 +438,10 @@
       "loop": true,
       "fx": [
         {
-          "id": "localized_micro_warp"
+          "id": "FX2-MOTION-024"
         },
         {
-          "id": "warm_halation_bloom"
+          "id": "FX2-LIGHT-028"
         }
       ],
       "transition_out": "FX2-TRANS-024",
@@ -459,10 +459,10 @@
       "loop": true,
       "fx": [
         {
-          "id": "warm_halation_bloom"
+          "id": "FX2-LIGHT-028"
         },
         {
-          "id": "structural_morph_transition"
+          "id": "FX2-TRANS-032"
         }
       ],
       "transition_out": "FX2-TRANS-026",
@@ -480,10 +480,10 @@
       "loop": true,
       "fx": [
         {
-          "id": "structural_morph_transition"
+          "id": "FX2-TRANS-032"
         },
         {
-          "id": "transient_warp"
+          "id": "FX2-MOTION-027"
         }
       ],
       "transition_out": "FX2-TRANS-025",
@@ -501,10 +501,10 @@
       "loop": true,
       "fx": [
         {
-          "id": "transient_warp"
+          "id": "FX2-MOTION-027"
         },
         {
-          "id": "reflection_to_water"
+          "id": "FX2-TRANS-030"
         }
       ],
       "transition_out": "FX2-TRANS-032",
@@ -522,10 +522,10 @@
       "loop": true,
       "fx": [
         {
-          "id": "reflection_to_water"
+          "id": "FX2-TRANS-030"
         },
         {
-          "id": "ember_to_sun"
+          "id": "FX2-TRANS-022"
         }
       ],
       "transition_out": "FX2-TRANS-029",
@@ -543,10 +543,10 @@
       "loop": true,
       "fx": [
         {
-          "id": "ember_to_sun"
+          "id": "FX2-TRANS-022"
         },
         {
-          "id": "fire_to_lightning"
+          "id": "FX2-TRANS-023"
         }
       ],
       "transition_out": "FX2-TRANS-030",
@@ -564,10 +564,10 @@
       "loop": true,
       "fx": [
         {
-          "id": "fire_to_lightning"
+          "id": "FX2-TRANS-023"
         },
         {
-          "id": "narrative_camera_travel"
+          "id": "FX2-CAMERA-023"
         }
       ],
       "transition_out": "FX2-TRANS-021",
@@ -585,10 +585,10 @@
       "loop": true,
       "fx": [
         {
-          "id": "narrative_camera_travel"
+          "id": "FX2-CAMERA-023"
         },
         {
-          "id": "corridor_push_focus_definition"
+          "id": "FX2-CAMERA-021"
         }
       ],
       "transition_out": "FX2-TRANS-031",
@@ -606,10 +606,10 @@
       "loop": true,
       "fx": [
         {
-          "id": "corridor_push_focus_definition"
+          "id": "FX2-CAMERA-021"
         },
         {
-          "id": "rack_focus_heat_pulse"
+          "id": "FX2-CAMERA-024"
         }
       ],
       "transition_out": "FX2-TRANS-028",
@@ -627,10 +627,10 @@
       "loop": true,
       "fx": [
         {
-          "id": "rack_focus_heat_pulse"
+          "id": "FX2-CAMERA-024"
         },
         {
-          "id": "loopable_eased_orbit"
+          "id": "FX2-CAMERA-022"
         }
       ],
       "transition_out": "FX2-TRANS-023",
@@ -648,10 +648,10 @@
       "loop": true,
       "fx": [
         {
-          "id": "loopable_eased_orbit"
+          "id": "FX2-CAMERA-022"
         },
         {
-          "id": "pseudo_depth_field"
+          "id": "FX2-SPATIAL-021"
         }
       ],
       "transition_out": "FX2-TRANS-024",
