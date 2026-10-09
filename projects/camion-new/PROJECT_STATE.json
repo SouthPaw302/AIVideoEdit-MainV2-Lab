@@ -23,7 +23,7 @@
   "final_qc_passed": false,
   "mode_aware_qc_passed": false,
   "archive_complete": false,
-  "exact_next_action": "Run the branch-only real render with require_onnx=true, then inspect the full candidate before FX lock and assembly acceptance.",
+  "exact_next_action": "Run the Director-gated parallel real render from the branch workflow, inspect the full candidate, then advance only through proof, FX lock, assembly, and final QC.",
   "updated_at": "2026-10-08",
   "director_progress": {
     "source_audio": "verified original WAV; 282.84 seconds; 48 kHz stereo PCM16",

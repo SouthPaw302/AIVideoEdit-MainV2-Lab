@@ -38,7 +38,7 @@
     "source_replacement_authorized": false
   },
   "current_user_direction": "Use the same style as @MountainNoir, but in Spanish; include the verified song, storyboard, camera work, loops, GIF/MP4 FX, transitions, and a restrained title pause.",
-  "exact_next_action": "Initialize storage on song/camion-new, publish verified media, then lock storyboard and frame-followable script.",
+  "exact_next_action": "Run the Director-gated parallel candidate render from song/camion-new using the read-only MainV2 main engine, then inspect the complete export before any creative acceptance.",
   "director_supervision": {
     "required": true,
     "reviewer_role": "sandbox_director",

@@ -1,5 +1,5 @@
 # Render history
 
-No render has been dispatched from `song/camion-new` yet. Prior technical runs belong to the deleted production branch and are not accepted as this branch's render authority.
+The first three branch-only real-render attempts were rejected before completion while correcting canonical FX IDs and transition/effect namespace collisions. Run `37873177058` was deliberately cancelled after confirming that the serial renderer did not consume the live Director/Harness path; it produced no accepted candidate.
 
-First render target: full source-length candidate using the exact original WAV, verified media storage, locked manifest, canonical FX lock, and MainV2 engine checked out from `main` read-only by the workflow.
+Next render target: full source-length candidate through the Director-gated parallel workflow using the exact original WAV, verified media storage, shared canonical FX lock, four picture shards with boundary transitions, and MainV2 engine checked out from `main` read-only by every job.

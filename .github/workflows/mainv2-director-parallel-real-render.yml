@@ -1,0 +1,274 @@
+name: MainV2 Lab — Director-gated Parallel REAL Music Film Render
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_ref:
+        description: "Authorized production branch; main is forbidden"
+        type: string
+        required: true
+        default: song/camion-new
+      project:
+        description: "Branch project directory"
+        type: string
+        required: true
+        default: projects/camion-new
+      manifest:
+        description: "Branch-relative real render manifest"
+        type: string
+        required: true
+        default: projects/camion-new/RENDER_MANIFEST.json
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mainv2-director-parallel-real-render-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  SOURCE_REF: ${{ inputs.source_ref }}
+  PROJECT: ${{ inputs.project }}
+  MANIFEST: ${{ inputs.manifest }}
+  GH_TOKEN: ${{ github.token }}
+
+jobs:
+  director-gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check out immutable MainV2 engine from main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: engine
+          fetch-depth: 0
+
+      - name: Check out authorized production branch only
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.SOURCE_REF }}
+          path: source
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install render and harness dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$SOURCE_REF" != "main"
+          case "$SOURCE_REF" in song/*) ;; *) echo "production must run from song/* branch"; exit 1 ;; esac
+          sudo apt-get update -y
+          sudo apt-get install -y ffmpeg
+          python -m pip install --disable-pip-version-check numpy opencv-python-headless onnxruntime
+          python -m pip install --disable-pip-version-check -r engine/general/reusable/fx_v2/requirements-runtime.txt
+
+      - name: Verify and boot exact canonical MainV2 main engine
+        working-directory: engine
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REPOSITORY" = "SouthPaw302/AIVideoEdit-MainV2-Lab"
+          python scripts/validate_contract.py
+          python bootstrap.py boot --repo-root "$PWD" --branch main --offline
+          python - <<'PY'
+          import json
+          p=json.load(open('.aivideoedit/session.json'))
+          assert p['branch']=='main'
+          print('CANONICAL MAIN ENGINE BOOT: PASS')
+          print('MAIN COMMIT:', p.get('os_main_commit'))
+          PY
+
+      - name: Run live Director input, Harness bridge, JEV, FX resolution and pinned ONNX gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          python source/scripts/director_harness_gate.py \
+            --source-root "$PWD/source" \
+            --engine-root "$PWD/engine" \
+            --project "$PWD/source/$PROJECT" \
+            --manifest "$PWD/source/$MANIFEST" \
+            --out "$RUNNER_TEMP/director-gate"
+
+      - name: Retain director and canonical gate receipts
+        uses: actions/upload-artifact@v4
+        with:
+          name: director-gate
+          path: ${{ runner.temp }}/director-gate/
+          retention-days: 30
+
+  render-shard:
+    needs: director-gate
+    if: needs.director-gate.result == 'success'
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - shard: 0
+            start: 0
+            end: 8
+          - shard: 1
+            start: 8
+            end: 16
+          - shard: 2
+            start: 16
+            end: 24
+          - shard: 3
+            start: 24
+            end: 32
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check out immutable MainV2 engine from main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: engine
+          fetch-depth: 0
+
+      - name: Check out authorized production branch only
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.SOURCE_REF }}
+          path: source
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install shard dependencies and boot canonical main
+        working-directory: engine
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$SOURCE_REF" != "main"
+          sudo apt-get update -y
+          sudo apt-get install -y ffmpeg
+          python -m pip install --disable-pip-version-check numpy opencv-python-headless
+          python -m pip install --disable-pip-version-check -r general/reusable/fx_v2/requirements-runtime.txt
+          python bootstrap.py boot --repo-root "$PWD" --branch main --offline
+
+      - name: Download live Director/Harness gate
+        uses: actions/download-artifact@v4
+        with:
+          name: director-gate
+          path: ${{ runner.temp }}/director-gate
+
+      - name: Prepare exact timeline shard
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/shard"
+          python source/scripts/prepare_render_shard.py \
+            --manifest "source/$MANIFEST" \
+            --start "${{ matrix.start }}" \
+            --end "${{ matrix.end }}" \
+            --out "$RUNNER_TEMP/shard/manifest.json"
+
+      - name: Render shard with canonical FX and boundary transitions
+        shell: bash
+        run: |
+          set -euo pipefail
+          python source/scripts/render_real_music_film_shard.py \
+            --manifest "$RUNNER_TEMP/shard/manifest.json" \
+            --input-root "$PWD/source" \
+            --engine-root "$PWD/engine" \
+            --director-gate "$RUNNER_TEMP/director-gate/DIRECTOR_HARNESS_RECEIPT.json" \
+            --out "$RUNNER_TEMP/shard/output"
+
+      - name: Upload verified picture shard
+        uses: actions/upload-artifact@v4
+        with:
+          name: render-shard-${{ matrix.shard }}
+          path: ${{ runner.temp }}/shard/
+          retention-days: 30
+
+  assemble:
+    needs: [director-gate, render-shard]
+    if: needs.director-gate.result == 'success' && needs.render-shard.result == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check out immutable MainV2 engine from main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: engine
+          fetch-depth: 0
+
+      - name: Check out authorized production branch only
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.SOURCE_REF }}
+          path: source
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install assembly dependencies and boot canonical main
+        working-directory: engine
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$SOURCE_REF" != "main"
+          sudo apt-get update -y
+          sudo apt-get install -y ffmpeg
+          python -m pip install --disable-pip-version-check numpy opencv-python-headless
+          python -m pip install --disable-pip-version-check -r general/reusable/fx_v2/requirements-runtime.txt
+          python bootstrap.py boot --repo-root "$PWD" --branch main --offline
+
+      - name: Download Director/Harness gate and all parallel shards
+        uses: actions/download-artifact@v4
+        with:
+          pattern: director-gate
+          path: ${{ runner.temp }}/director-gate
+          merge-multiple: true
+
+      - name: Download all verified picture shards
+        uses: actions/download-artifact@v4
+        with:
+          pattern: render-shard-*
+          path: ${{ runner.temp }}/shards
+          merge-multiple: false
+
+      - name: Assemble and mux original WAV once
+        shell: bash
+        run: |
+          set -euo pipefail
+          python source/scripts/assemble_parallel_music_film.py \
+            --manifest "source/$MANIFEST" \
+            --input-root "$PWD/source" \
+            --engine-root "$PWD/engine" \
+            --gate-dir "$RUNNER_TEMP/director-gate" \
+            --shards-dir "$RUNNER_TEMP/shards" \
+            --out "$RUNNER_TEMP/final"
+
+      - name: Retain actual MP4 and all receipts
+        uses: actions/upload-artifact@v4
+        with:
+          name: mainv2-parallel-real-film-${{ github.run_id }}
+          path: ${{ runner.temp }}/final/
+          retention-days: 30
+
+      - name: Publish durable review-only MP4
+        shell: bash
+        run: |
+          set -euo pipefail
+          root="$RUNNER_TEMP/final"
+          gh release create "lab-parallel-real-film-${GITHUB_RUN_ID}" \
+            "$root/real_music_film.mp4" \
+            "$root/render_receipt.json" \
+            "$root/contact_sheet.jpg" \
+            "$root/PRODUCTION_EXECUTION_LEDGER.json" \
+            "$root/DIRECTOR_HARNESS_RECEIPT.json" \
+            --repo "$GITHUB_REPOSITORY" \
+            --target "$GITHUB_SHA" \
+            --prerelease \
+            --title "AIVideoEdit Lab — Director-gated parallel REAL film render" \
+            --notes "Branch-only Spanish Mountain Noir candidate. Canonical main engine booted read-only; live Director/Harness/JEV/FX/ONNX gate passed; parallel shards assembled; human visual approval still required."

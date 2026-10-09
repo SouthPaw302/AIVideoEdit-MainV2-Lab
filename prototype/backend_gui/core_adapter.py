@@ -95,8 +95,25 @@ class CoreAdapter:
             target = f"origin/{ref}"
             check = _run(["git", "rev-parse", "--verify", target], CORE_REPO, timeout=30)
             if check.returncode != 0:
-                target = ref
-            return _run(["git", "checkout", "--detach", target], CORE_REPO, timeout=60)
+                host_ref = _run(
+                    ["git", "-C", str(HOST_REPO), "rev-parse", f"refs/remotes/origin/{ref}"],
+                    HOST_REPO,
+                    timeout=30,
+                )
+                if host_ref.returncode == 0 and host_ref.stdout.strip():
+                    target = host_ref.stdout.strip()
+                    check = _run(["git", "cat-file", "-e", f"{target}^{{commit}}"], CORE_REPO, timeout=30)
+                if check.returncode == 0:
+                    return _run(["git", "checkout", "-B", ref, target], CORE_REPO, timeout=60)
+                fetched = _run(
+                    ["git", "fetch", "origin", f"refs/heads/{ref}:refs/remotes/origin/{ref}"],
+                    CORE_REPO,
+                    timeout=120,
+                )
+                check = _run(["git", "rev-parse", "--verify", target], CORE_REPO, timeout=30)
+                if check.returncode != 0 and fetched.returncode != 0:
+                    target = "FETCH_HEAD" if ref == "main" else ref
+            return _run(["git", "checkout", "-B", ref, target], CORE_REPO, timeout=60)
 
         if not HOST_BOOTSTRAP.is_file():
             raise RuntimeError("host bootstrap.py not found")

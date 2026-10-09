@@ -8,4 +8,4 @@
 - FX coverage: runner loops from batches 1–3 retained and published; canonical FX and transition capabilities are bound in the render manifest.
 - Main: untouched.
 
-The branch package and byte-addressable media storage are present. The next Action is the full source-length candidate render; technical PASS will still require human visual review.
+The branch package and byte-addressable media storage are present. The next Action is the Director-gated parallel full source-length candidate render; technical PASS will still require human visual review.
