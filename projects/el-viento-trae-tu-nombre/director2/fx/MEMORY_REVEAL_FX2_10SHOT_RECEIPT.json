@@ -1,0 +1,116 @@
+{
+  "schema": "aivideoedit.director2.fx2.memory-reveal.v1",
+  "production_id": "el-viento-lab-new-director",
+  "date_utc": "2026-10-10",
+  "work_branch": "song/el-viento-trae-tu-nombre",
+  "immutable_main_os_sha": "900e3e5749ed6fa13ad91524975a9e64661e6649",
+  "runtime_from_current_main": {
+    "github_actions_run_id": 38043951458,
+    "run_url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38043951458",
+    "source": "actual general/reusable/fx_v2/executor.py, registry.json, runtime.py and promoted_effects.py",
+    "local_code_changes": "none; memoized dynamic module imports in driver only"
+  },
+  "registry_verification": {
+    "status": "PASS",
+    "promoted_effects_tested": 52,
+    "legacy_aliases_verified": 71,
+    "aggregate_sample_sha256": "eb1f8c8d86aef3306a345eaed4d5e55fc0e50c8c6642b2839eefc459c8fb3e06"
+  },
+  "execution": {
+    "status": "ACTUAL_FX2_EXECUTOR_LOCAL_PREVIEW",
+    "distinct_approved_ids_executed": 13,
+    "fx2_ids": [
+      "FX2-ATM-002",
+      "FX2-ATM-021",
+      "FX2-CAMERA-023",
+      "FX2-COMP-023",
+      "FX2-LIGHT-021",
+      "FX2-LIGHT-023",
+      "FX2-LIGHT-024",
+      "FX2-LIGHT-025",
+      "FX2-LIGHT-026",
+      "FX2-LIGHT-027",
+      "FX2-LIGHT-028",
+      "FX2-SURFACE-022",
+      "FX2-TRANS-027"
+    ],
+    "ledger_events": 62,
+    "executed_events": 49,
+    "consumed_events": 13,
+    "execution_ledger_in_archive": true,
+    "canonical_project_precompile_lock": "NOT_CLAIMED",
+    "runner_based_render": "NOT_CLAIMED"
+  },
+  "output": {
+    "role": "DIRECTOR_TECHNIQUE_PROOF_ONLY",
+    "reel_name": "Director2_Canonical_FX2_LowRes_to_HiRes_Memory_10Shots_25s.mp4",
+    "sha256": "9d33f20c0a42e60ecf36e2417830f88cbd486077b243e25c278c39553bd80614",
+    "duration_seconds": 25,
+    "frames": 600,
+    "fps": 24,
+    "dimensions": [
+      640,
+      360
+    ],
+    "video": "H264",
+    "audio": "AAC",
+    "song_master_sha256": "8d967101c875868b64207bd43bfbc507c0a958989bbc560c2edb0024b15877cb",
+    "song_excerpt_offset_seconds": 43.008,
+    "decoded_audio_reference_correlation": 0.99988,
+    "decoded_audio_lag_ms": 0,
+    "blackdetect_over_0_4sec": "NO_BLACK_SEGMENTS",
+    "normal_speed_full_director_screening": "PENDING"
+  },
+  "shot_count": 10,
+  "shot_ids": [
+    "B01-S05",
+    "B01-S07",
+    "B01-S08",
+    "B01-S09",
+    "B01-S10",
+    "B02-S14",
+    "B02-S15",
+    "B02-S16",
+    "B02-S17",
+    "B02-S18"
+  ],
+  "source_truth": {
+    "low_source_effective_resolution": [
+      320,
+      180
+    ],
+    "high_source_dimensions_min": [
+      1280,
+      720
+    ],
+    "technique": "canonical FX2 authored low-res zoom plus object-portal transition to different real hi-res source frame",
+    "same_image_superresolution": false,
+    "editorial_alternative_treats_lowres_as_memory": true,
+    "visual_review_note": "10 clips use 4 high-res destinations, some repeated: technique proof, not distinct final story coverage"
+  },
+  "durability": {
+    "drive_folder_id": "1_NhFmJKcMhgv65VioXLdzq5yeswXYdNc",
+    "drive_zip_id": "10bSu7eWhuL0EtyjChxm1bWvTK_NZimKm",
+    "drive_zip_url": "https://drive.google.com/file/d/10bSu7eWhuL0EtyjChxm1bWvTK_NZimKm/view",
+    "zip_sha256": "f499044b20851984626df33ae4ab2e098e5d97e45dacaef0dcef9c39aa1e2a87",
+    "contact_sheet_id": "1fXru6cKZB2gp4wU_C_e-_cDqmjpUZ4N1",
+    "contact_sheet_url": "https://drive.google.com/file/d/1fXru6cKZB2gp4wU_C_e-_cDqmjpUZ4N1/view",
+    "contact_sha256": "1c04d48248b2150a59189254b3276800e02e279b07622eaa5b6fee2b0cc6be95"
+  },
+  "gating": {
+    "creative_acceptance": false,
+    "full_new_film_rendered": false,
+    "remaining": [
+      "Distinct high-res destination coverage per story shot instead of repeated anchor plates",
+      "Human/Director normal-speed visual screening on current candidate",
+      "Current-main FX precompile + Director supervision checkpoints on the actual full new render",
+      "Authenticated runner staging of real audio and image bytes",
+      "Final music-film 154.48s render and visual QC"
+    ]
+  },
+  "preservation": [
+    "No writes to protected main",
+    "No edits to historical Route 4 film/master",
+    "No reinterpretation of low source pixels as restored high fidelity"
+  ]
+}
