@@ -1,0 +1,106 @@
+{
+  "schema": "aivideoedit.director2.provisional-replacement-handoff.v1",
+  "created_utc": "2026-10-10",
+  "producer": "Director2",
+  "production_id": "el-viento-lab-new-director",
+  "branch": "song/el-viento-trae-tu-nombre",
+  "source_parent_sha": "294061e411748300dcbb5452f2a1193aa8353c08",
+  "main_engine_sha": "900e3e5749ed6fa13ad91524975a9e64661e6649",
+  "actual_activity": "12 provisional new-image replacements (six B01, six B02); 12 bounded ROI motion loops; two 12s QC reels with real WAV",
+  "original_master_sha256": "4ecba2862c84b5a64bd5001eae308374c18c77cef6bafe815ab11a08b20548a7",
+  "song_wav_sha256": "8d967101c875868b64207bd43bfbc507c0a958989bbc560c2edb0024b15877cb",
+  "Drive_destination": "https://drive.google.com/drive/folders/1_NhFmJKcMhgv65VioXLdzq5yeswXYdNc",
+  "artifacts": [
+    {
+      "role": "replacement_stills_provisional",
+      "file_name": "Director2_Replacement_12_Stills_PROVISIONAL.zip",
+      "sha256": "b01e65ba534914bbcb090561b47bdc8846bf64c2fd6fb9fc8c23d942a71d8e98",
+      "bytes": 21963434,
+      "url": "https://drive.google.com/file/d/1IFjT4IcgItiPDZHFWqkL7w75RT__UBxa/view",
+      "description": "Includes 12 stills, 12 preFX copies, contact and per-shot SHA256 manifest."
+    },
+    {
+      "role": "bounded_fx_proof_not_canonical",
+      "file_name": "Director2_Replacement_12_FX_PROOFS.zip",
+      "sha256": "06c0ca6b99f5a1136fac75b517c39bb0d4e533a845199f30eb5019202872836a",
+      "bytes": 15232177,
+      "url": "https://drive.google.com/file/d/1AC0GbQ9pskrJ0C8ri6UJeZNx6BPd4g27/view",
+      "description": "Includes 12 static FX variants and 12 2-second 24fps MP4 proofs; per-shot hashes and QC evidence in archive."
+    },
+    {
+      "role": "b01_fx_contact",
+      "file_name": "Director2_B01_Six_Replacement_FX_Review_12s.mp4",
+      "sha256": "21928b73c677ed7285fb4cae10e5f224aa17e503231a6bdc016302a373cf6bd5",
+      "bytes": 1394417,
+      "url": "https://drive.google.com/file/d/1jyZyCkegCHeGfU2hlpM5hZEyHb_LJW6v/view",
+      "duration_seconds": 12,
+      "audio_master_time_offset_seconds": 29
+    },
+    {
+      "role": "b02_fx_contact",
+      "file_name": "Director2_B02_Six_Replacement_FX_Review_12s.mp4",
+      "sha256": "44e3eb7221b310d537fe977c63ad6e5cbeadef41e91dab319ff1ea379751c7ee",
+      "bytes": 1207691,
+      "url": "https://drive.google.com/file/d/1Xgvru9WTWJH1c4wBgbTcdkwZM18vWQpM/view",
+      "duration_seconds": 12,
+      "audio_master_time_offset_seconds": 96
+    }
+  ],
+  "target_replacements": [
+    "B01-S05",
+    "B01-S06",
+    "B01-S07",
+    "B01-S08",
+    "B01-S09",
+    "B01-S10",
+    "B02-S14",
+    "B02-S15",
+    "B02-S16",
+    "B02-S17",
+    "B02-S18",
+    "B02-S19"
+  ],
+  "native_res_candidates": [
+    "B01-S06",
+    "B02-S19"
+  ],
+  "low_native_res_hold": [
+    "B01-S05",
+    "B01-S07",
+    "B01-S08",
+    "B01-S09",
+    "B01-S10",
+    "B02-S14",
+    "B02-S15",
+    "B02-S16",
+    "B02-S17",
+    "B02-S18"
+  ],
+  "quality_warning": "10 sources were extracted from generated storyboard grids at an effective ~320x180 pixels, output resized to 1280x720. These are useful EDITORIAL PREVIEWS but do not satisfy full-resolution picture gates. Do not silently promote this set to final. No historical painterly master pixels were reused in these twelve candidates.",
+  "motion_proof": {
+    "loops": 12,
+    "all_48_frames_24fps": true,
+    "source_640x360_preview": true,
+    "fx_implementation": "Exploratory Python/OpenCV localized regions, NOT canonical FX2 executor",
+    "music_original_audio_continuity": "Twelve-second review reels muxed with extracted segments of verified 154.48s WAV; not complete edit",
+    "actual_reel_codecs": "h264_aac",
+    "black_frame_claim": "not made; visual QC remains open"
+  },
+  "creative_issues": [
+    "B01-S05 sailor identity not definitively locked across age periods",
+    "B01-S06 shares underlying full-res new-film plate with earlier coverage; more composition variety needed",
+    "B02-S15 represents prayer memory rather than physically walking home; title revised in package",
+    "Existing user-approved new independent film still lacks authentic high-resolution replacements for ten shots",
+    "No full-normal-speed 154s creative final review on new source images"
+  ],
+  "approval": {
+    "technical_media_decode": "PASS for clips",
+    "director_full_film": "NOT_ACHIEVED",
+    "artistic_lock": false,
+    "upscale_equivalent_to_new_native_res": false,
+    "runner_authenticated_media_staging": "NOT_PROVEN",
+    "production_final_release": "NOT_AUTHORIZED"
+  },
+  "preservation": "Only song branch; no main write, no archive/previous film overwrites. Batch 01/02 original archives remain unchanged.",
+  "next_action": "Secure truly native-resolution single-scene plates for 10 held images, Director review per batch, execute canonical FX2 masks/receipts, then authenticate stage on runner and create real full-song manifest."
+}
