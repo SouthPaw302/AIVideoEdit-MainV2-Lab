@@ -1,1 +1,22 @@
-{"schema":"aivideoedit.director-checkpoints.v1","media_selection":{"status":"complete","note":"WAV, lyrics, storyboard batches, and runner FX inventory scanned."},"representative_proof":{"status":"pending"},"rough_cut":{"status":"pending"},"fx_pass":{"status":"pending"},"final_review":{"status":"pending"}}
+{
+  "schema": "aivideoedit.director-checkpoints.v1",
+  "media_selection": {
+    "status": "complete",
+    "note": "WAV, lyrics, storyboard batches, and runner FX inventory scanned."
+  },
+  "representative_proof": {
+    "status": "candidate01_inspected_rejected",
+    "note": "Contact sheet / sampled-frame review; shot motion inspection required for Candidate02"
+  },
+  "rough_cut": {
+    "status": "candidate01_director_rejected",
+    "note": "Candidate02 bounded retiming prepared; full A/V Director review still required"
+  },
+  "fx_pass": {
+    "status": "audit_pending_visible_effect_verification",
+    "note": "Execution ledger alone not proof of visible FX"
+  },
+  "final_review": {
+    "status": "pending_candidate02_real_export"
+  }
+}

@@ -15,36 +15,68 @@
     "user_acceptance_statement": null
   },
   "accepted_source_library": {
-    "status": "none",
-    "role": null,
-    "file_or_locator": null,
-    "sha256": null,
-    "user_acceptance_statement": null,
-    "content_reuse_authorized": false,
+    "status": "accepted_for_reuse_not_final_release",
+    "role": "director_revision_source_library",
+    "file_or_locator": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38009381129",
+    "sha256": "fea3ec58e8bda229e72fab816370a716dbae92911c3ad55e36c3d7e58ae85512",
+    "user_acceptance_statement": "No problem keep it and fix the issues.",
+    "content_reuse_authorized": true,
     "timeline_locked": false
   },
   "refinement_scope": {
-    "active": false,
-    "goal": null,
-    "allowed_changes": [],
-    "forbidden_changes": ["touching main", "promoting an unreviewed export to canon"],
-    "restart_authorized": true
+    "active": true,
+    "goal": "Repair the actual Candidate 01 picture with a bounded recut; preserve all approved original sources.",
+    "allowed_changes": [
+      "shot_timing",
+      "editing_pacing",
+      "existing_canonical_fx_and_transitions",
+      "visual_quality_repair"
+    ],
+    "forbidden_changes": [
+      "touching main",
+      "replacing original footage",
+      "changing original WAV or hash",
+      "unapproved identity geometry or horizon drift",
+      "promoting an unreviewed export to canon"
+    ],
+    "restart_authorized": false
   },
   "recut_scope": {
-    "active": false,
-    "named_defects": [],
-    "allowed_changes": [],
-    "forbidden_changes": [],
+    "active": true,
+    "named_defects": [
+      "uniform_nine_second_pacing",
+      "repeated_low_motion_compositions",
+      "underdeveloped_absence_and_memory",
+      "weak_dawn_payoff",
+      "unmatched_script_frame_ranges"
+    ],
+    "allowed_changes": [
+      "retime_existing_shots",
+      "script_frame_alignment",
+      "recheck_canonical_fx",
+      "bounded_transition_repair"
+    ],
+    "forbidden_changes": [
+      "source_asset_replacement",
+      "original_AIVideoEdit_mutation",
+      "final_artistic_autoacceptance"
+    ],
     "source_replacement_authorized": false
   },
   "current_user_direction": "Use the same style as @MountainNoir, but in Spanish; include the verified song, storyboard, camera work, loops, GIF/MP4 FX, transitions, and a restrained title pause.",
-  "exact_next_action": "Run the Director-gated parallel candidate render from song/camion-new using the read-only MainV2 main engine, then inspect the complete export before any creative acceptance.",
+  "exact_next_action": "Render Candidate 02 from revised source-locked manifest; inspect full output scene by scene and get explicit human visual acceptance before declaring production complete.",
   "director_supervision": {
     "required": true,
     "reviewer_role": "sandbox_director",
     "checkpoint_file": "DIRECTOR_CHECKPOINTS.json",
     "execution_ledger_file": "PRODUCTION_EXECUTION_LEDGER.json",
-    "checkpoints": ["media_selection", "representative_proof", "rough_cut", "fx_pass", "final_review"],
+    "checkpoints": [
+      "media_selection",
+      "representative_proof",
+      "rough_cut",
+      "fx_pass",
+      "final_review"
+    ],
     "runner_may_choose_art_direction": false,
     "technical_pass_is_creative_pass": false
   }

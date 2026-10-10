@@ -1,0 +1,56 @@
+name: Director Candidate 02 — source-locked recovery kickoff
+on:
+  push:
+    branches:
+      - song/camion-new
+    paths:
+      - projects/camion-new/RENDER_MANIFEST.json
+permissions:
+  contents: read
+  actions: write
+concurrency:
+  group: camion-candidate02-kickoff
+  cancel-in-progress: false
+jobs:
+  verify-and-dispatch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Verify bounded recut against immutable Candidate 01 source
+        run: |
+          python - <<'PY'
+          import json, subprocess
+          path="projects/camion-new/RENDER_MANIFEST.json"
+          old=json.loads(subprocess.check_output(["git","show","79e76b351ff92cb8928a704a0d7ab236b51ffec5:"+path]))
+          new=json.load(open(path))
+          assert len(old["shots"])==len(new["shots"])==32
+          assert old["audio"]==new["audio"], "canonical soundtrack was modified"
+          assert old["output"]==new["output"], "output profile was modified"
+          assert old.get("fx_seed")==new.get("fx_seed"), "FX seed changed"
+          for before, after in zip(old["shots"],new["shots"]):
+            for key in set(before)|set(after):
+              if key != "duration_seconds":
+                assert before.get(key)==after.get(key), f"unapproved source/FX change in {before['id']}: {key}"
+            assert round(after["duration_seconds"]*24)>0, "invalid shot duration"
+            assert abs(after["duration_seconds"]*24-round(after["duration_seconds"]*24))<1e-6, "nonintegral frame count"
+          frames=sum(round(s["duration_seconds"]*24) for s in new["shots"])
+          assert frames==6788,(frames,"full-song frame count changed")
+          assert new["production_id"]=="camion-new-full-song-candidate-02"
+          script=json.load(open("projects/camion-new/SCRIPT.json"))
+          assert script["total_frames"]==frames
+          assert script["entries"][0]["start_frame"]==0
+          assert script["entries"][-1]["end_frame"]==frames-1
+          print("DIRECTOR SOURCE-LOCKED RECUT: PASS, frames",frames)
+          PY
+      - name: Dispatch full canonical Director-gated render on Lab main
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh workflow run mainv2-director-parallel-real-render.yml --ref main \
+            -f source_ref=song/camion-new \
+            -f project=projects/camion-new \
+            -f manifest=projects/camion-new/RENDER_MANIFEST.json
+          echo "Candidate 02 render dispatched; this kickoff is not visual acceptance."
