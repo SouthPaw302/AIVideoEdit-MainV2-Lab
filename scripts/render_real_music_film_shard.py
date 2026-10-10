@@ -11,7 +11,11 @@ from pathlib import Path
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--manifest", type=Path, required=True)
+    ap.add_argument("--staged-manifest", type=Path, required=True)
+    ap.add_argument("--lineage", type=Path, required=True)
     ap.add_argument("--input-root", type=Path, required=True)
+    ap.add_argument("--source-root", type=Path, required=True)
+    ap.add_argument("--project", type=Path, required=True)
     ap.add_argument("--engine-root", type=Path, required=True)
     ap.add_argument("--director-gate", type=Path, required=True)
     ap.add_argument("--out", type=Path, required=True)
@@ -19,11 +23,16 @@ def main() -> int:
     engine = args.engine_root.resolve()
     sys.path.insert(0, str(engine))
     from scripts import render_real_music_film as canonical
+    from scripts.render_lineage import receipt_identity, verify_bundle
     import cv2
     from general.reusable.fx_v2.executor import FXExecutor
     from general.reusable.fx_v2.runtime import FXContext
     from general.reusable.tools.execution_ledger import record
 
+    lineage = verify_bundle(
+        args.lineage, args.staged_manifest, args.input_root,
+        source_root=args.source_root, engine_root=engine, project=args.project,
+    )
     manifest = json.loads(args.manifest.read_text(encoding="utf-8"))
     fps, width, height, counts = canonical.validate_manifest(manifest)
     gate = json.loads(args.director_gate.read_text(encoding="utf-8"))
@@ -31,6 +40,8 @@ def main() -> int:
         raise RuntimeError("director/harness receipt is missing or invalid")
     if gate.get("jev", {}).get("decision") not in {"PASS", "CONTINUE"}:
         raise RuntimeError("director/harness gate did not authorize shard rendering")
+    from scripts.render_lineage import require_receipt_identity
+    require_receipt_identity(gate, lineage, args.lineage)
     lock_path = args.director_gate.parent / "FX_LOCK.json"
     if not lock_path.is_file() or canonical.digest(lock_path) != gate.get("fx_lock_sha256"):
         raise RuntimeError("shared canonical FX lock is missing or changed")
@@ -104,7 +115,7 @@ def main() -> int:
         raise RuntimeError("shard geometry or decode verification failed")
     receipt = {
         "schema": "aivideoedit.real-render-shard-receipt.v1",
-        "production_id": manifest.get("production_id"),
+        "production_id": lineage.get("production_id"),
         "start_index": (manifest.get("shard") or {}).get("start_index"),
         "end_index": (manifest.get("shard") or {}).get("end_index"),
         "start_frame": (manifest.get("shard") or {}).get("start_frame"),
@@ -117,9 +128,17 @@ def main() -> int:
         "video_bytes": target.stat().st_size,
         "fx_lock_sha256": canonical.digest(lock_path),
         "director_harness_receipt_sha256": canonical.digest(args.director_gate),
-        "audio_sha256": gate.get("music_evidence_sha256"),
+        "music_evidence_sha256": gate.get("music_evidence_sha256"),
+        "audio_sha256": canonical.digest(audio),
+        "clip_sha256": {
+            shot["id"]: canonical.digest(source)
+            for shot, source in zip(manifest["shots"], sources)
+        },
+        "shard_manifest_sha256": canonical.digest(args.manifest),
+        "ledger_sha256": canonical.digest(ledger),
         "human_visual_approval": False,
         "production_complete": False,
+        **receipt_identity(lineage, args.lineage),
     }
     (args.out / "shard_receipt.json").write_text(json.dumps(receipt, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(receipt, indent=2))
