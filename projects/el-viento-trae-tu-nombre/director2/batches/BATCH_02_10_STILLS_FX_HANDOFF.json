@@ -1,0 +1,185 @@
+{
+  "schema": "aivideoedit.director2.batch10.handoff.v1",
+  "date_utc": "2026-10-10",
+  "production_id": "el-viento-lab-new-director",
+  "batch_id": "B02",
+  "branch": "song/el-viento-trae-tu-nombre",
+  "base_commit": "a3f3a7e944afcc7c075c9b5c189a3b8536492c35",
+  "main_os_sha": "900e3e5749ed6fa13ad91524975a9e64661e6649",
+  "director_os_boot_run": 38038907861,
+  "audio_master": {
+    "drive_id": "1M6uRTeYejXxn2rSDkTJu5H0_LiWrdwN4",
+    "sha256": "8d967101c875868b64207bd43bfbc507c0a958989bbc560c2edb0024b15877cb",
+    "seconds": 154.48
+  },
+  "picture_timeline_seconds": [
+    72,
+    154.48
+  ],
+  "sources": {
+    "count": 10,
+    "unique_source_file_count": 10,
+    "new_film_derived": 4,
+    "historical_source_derived_held": 6,
+    "panel_collage_files_count": 0,
+    "source_manifest_path_in_zip": "05_review/BATCH_02_MANIFEST.json"
+  },
+  "fx": {
+    "variant_images": 10,
+    "prefx_copies": 10,
+    "loops": 10,
+    "duration_seconds_per_loop": 2,
+    "frame_count_per_loop": 48,
+    "fps": 24,
+    "mechanism": "bounded physically motivated local ROI: water, lantern, atmospheric, surface",
+    "canonical_fx_names_used_as_references_only": [
+      "water_region_displacement_shimmer",
+      "warm_halation_bloom",
+      "atmospheric_fog",
+      "localized_micro_warp"
+    ],
+    "executed_via_canonical_main_fx2_executor": false,
+    "canonical_precompile_gate_claimed": false
+  },
+  "archives": [
+    {
+      "role": "ten_stills",
+      "name": "El_Viento_Director2_Batch02_Stills_Archive.zip",
+      "drive_id": "1jmYOrg16VXSVehfYoPrp58VwJScHe9FW",
+      "url": "https://drive.google.com/file/d/1jmYOrg16VXSVehfYoPrp58VwJScHe9FW/view",
+      "size_bytes": 28572968,
+      "sha256": "d3c0ffecfa831e0d646840cd80bfdfcba11ef9b5204882605d8d5901886c7eed"
+    },
+    {
+      "role": "ten_fx_variants_and_loops",
+      "name": "El_Viento_Director2_Batch02_FX_Archive.zip",
+      "drive_id": "1sXIydtqOEX1Y_hIKAyZyfmaeg2A465yY",
+      "url": "https://drive.google.com/file/d/1sXIydtqOEX1Y_hIKAyZyfmaeg2A465yY/view",
+      "size_bytes": 17351342,
+      "sha256": "b644d108f2f75ca35ec001eb7eed6ec3e9e86069c20a5aa13e08a284898c19d9"
+    }
+  ],
+  "review_reel": {
+    "name": "El_Viento_Director2_Batch02_Review_With_Music.mp4",
+    "drive_id": "1nJ-o8uv4PDUQ-catpVhDgSMEsFUzYYTq",
+    "url": "https://drive.google.com/file/d/1nJ-o8uv4PDUQ-catpVhDgSMEsFUzYYTq/view",
+    "duration_seconds": 20,
+    "source_song_offset_seconds": 72,
+    "frames": 480,
+    "width": 640,
+    "height": 360,
+    "fps": 24,
+    "audio_codec": "AAC",
+    "video_codec": "H264",
+    "size_bytes": 1186913,
+    "sha256": "74f434c839ee2b3c7a5d5c5e0ceb3c05fa9774ff0a6e59c65b1fd1b62c7dc0b4"
+  },
+  "technical_qc": {
+    "all_loops_decode_48_frames": true,
+    "frame_rate_24": true,
+    "review_reel_20s_480frames": true,
+    "review_reel_audio_present": true,
+    "blackdetect_segments_over_0_2s": 0,
+    "loop_seam_mean_abs_delta_max": 0.272,
+    "fx_execution_receipts": "EXPLORATORY_LOCAL_RENDER_ONLY",
+    "old_media_artistic_rejection_list": [
+      "B02-S14",
+      "B02-S15",
+      "B02-S16",
+      "B02-S17",
+      "B02-S18",
+      "B02-S19"
+    ],
+    "source_character_world_match": "FAIL_FOR_HISTORICAL",
+    "user_visual_acceptance": false
+  },
+  "records": [
+    {
+      "shot_id": "B02-S11",
+      "scene": "A voice carried by the sea",
+      "source": "new-film source-derived reframe",
+      "creative_gate": "REVIEW_PENDING",
+      "timeline_seconds": "72–80"
+    },
+    {
+      "shot_id": "B02-S12",
+      "scene": "The letter never sent",
+      "source": "new-film source-derived closeup",
+      "creative_gate": "REVIEW_PENDING",
+      "timeline_seconds": "80–88"
+    },
+    {
+      "shot_id": "B02-S13",
+      "scene": "An island marked on linen",
+      "source": "new generated tactile map prop source",
+      "creative_gate": "REVIEW_PENDING",
+      "timeline_seconds": "88–96"
+    },
+    {
+      "shot_id": "B02-S14",
+      "scene": "The lost crossing",
+      "source": "old film 90s source-derived",
+      "creative_gate": "REPLACE",
+      "timeline_seconds": "96–104"
+    },
+    {
+      "shot_id": "B02-S15",
+      "scene": "Where every road returns",
+      "source": "old film 98s source-derived",
+      "creative_gate": "REPLACE",
+      "timeline_seconds": "104–112"
+    },
+    {
+      "shot_id": "B02-S16",
+      "scene": "Memory in the wind",
+      "source": "old film 106s source-derived",
+      "creative_gate": "REPLACE_BURNED_IN_TEXT",
+      "timeline_seconds": "112–120"
+    },
+    {
+      "shot_id": "B02-S17",
+      "scene": "The absent years",
+      "source": "old film 114s source-derived",
+      "creative_gate": "REPLACE",
+      "timeline_seconds": "120–128"
+    },
+    {
+      "shot_id": "B02-S18",
+      "scene": "The generations between",
+      "source": "old film 122s source-derived",
+      "creative_gate": "REPLACE",
+      "timeline_seconds": "128–136"
+    },
+    {
+      "shot_id": "B02-S19",
+      "scene": "The harbor remembers",
+      "source": "old film 130s source-derived",
+      "creative_gate": "REPLACE",
+      "timeline_seconds": "136–145"
+    },
+    {
+      "shot_id": "B02-S20",
+      "scene": "Last light before dawn",
+      "source": "new-film source-derived fort reframe",
+      "creative_gate": "REVIEW_PENDING",
+      "timeline_seconds": "145–154.48"
+    }
+  ],
+  "batch1_hold_ids": [
+    "B01-S05",
+    "B01-S06",
+    "B01-S07",
+    "B01-S08",
+    "B01-S09",
+    "B01-S10"
+  ],
+  "total_held_visual_shots_after_b02": 12,
+  "production_gate": "TECHNICAL_PROOF_PASS_BUT_DIRECTOR_CREATIVE_HOLD",
+  "next_action": "Replace six B01 and six B02 historical source shots with independent clean 16:9 cinematic identity-matched plates; complete real stage sequencing, canonical FX2 precompile and execution, original WAV authentication in GitHub runner, and full normal-speed director review. Do not render a fake 154s final from held references.",
+  "prohibitions": [
+    "Do not write to protected main",
+    "Do not overwrite old accepted film",
+    "Do not claim canonical effects from experimental OpenCV output",
+    "Do not claim artistic approval from GitHub Action success"
+  ]
+}
