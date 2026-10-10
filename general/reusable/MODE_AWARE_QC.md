@@ -57,5 +57,8 @@ When `accepted_source_library.status=accepted` and a recut is active, preserve a
 
 The post-edit source/canon integrity result must PASS before final recut acceptance. Numerical metrics are evidence, not the director: do not trade away artistic quality merely to improve a score.
 
+## Source fidelity, real motion, and finished-delivery checks
+The canonical `DIRECTOR_SCAN_CANON.md` extends each mode-specific QC with investigation of source inventory (including archived FX/stills/video), content hashes and duplicates, effective source resolution, repeated short FX proofs, semantic internal motion versus pan/zoom, correct FX context/masks, music-control consumption, entire edit, and actual current-version playback. Intro/outro/branding and audio mastering are first-class inspection surfaces; accepted artistic picture and subsequent platform mastering remain separate. Preserve an accurate statement of viewing scope; samples and triptychs alone are not a full normal-speed screening.
+
 ## Acceptance rule
 Technical pass never creates artistic acceptance. User acceptance may lock a baseline or may separately authorize a canonical source library. A locked baseline protects the complete edit. An accepted source library protects its approved source pixels/world while keeping the timeline editable. Later QC must verify the correct protection rule for the active workflow.

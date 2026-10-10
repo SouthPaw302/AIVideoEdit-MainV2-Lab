@@ -10,6 +10,12 @@ Permanent-system index only. No active production names or unrelated song links 
 - `.aivideoedit/session.json` — ephemeral bootstrap attestation; never committed.
 - `.aivideoedit/SECOND_BRAIN.md` — ephemeral generated branch/session context; never committed. Director Brain v2 surfaces mode, canon, accepted baseline, accepted source library, baseline refinement, recut scope, forbidden changes, and next action.
 
+## Canonical Director visual scan
+- `general/reusable/DIRECTOR_SCAN_CANON.md` — evidence-first Director audit of original sources/FX proofs, effective output fidelity, real semantic motion, scene-appropriate effects, music, full-timeline integrity, finishing, playback and accepted-baseline protection.
+- `general/reusable/DIRECTOR_SCAN_RECORD.schema.json` — project-neutral machine record for per-candidate evidence and named caveats; never an automated creative approval.
+- `general/reusable/tools/director_scan_gate.py` — fail-closed structural evidence validation, deliberately separate from human film acceptance and `RELEASE_GATE.json`.
+- `general/reusable/tools/test_director_scan_gate.py` — regression tests against false green receipts and contradictory claims.
+
 ## Director Brain v2
 - `general/reusable/PRODUCTION_MODES.md` / `.json` — separates direction authority from production mode and defines `living_scene`, `cinematic`, and `hybrid`.
 - `projects/OPERATING_ORDER_TEMPLATE.json` — project-level directing brief template; keeps complete-edit baseline acceptance separate from canonical source-library acceptance.

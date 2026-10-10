@@ -1,0 +1,516 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AIVideoEdit Director scan evidence record",
+  "description": "Machine-validatable audit of actual visual/audio evidence. Not a creative or human approval mechanism.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "candidate",
+    "scope",
+    "viewing",
+    "checks",
+    "verdict"
+  ],
+  "properties": {
+    "schema": {
+      "const": "aivideoedit.director-scan.v1"
+    },
+    "candidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "locator",
+        "sha256",
+        "branch",
+        "commit_sha"
+      ],
+      "properties": {
+        "locator": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "branch": {
+          "type": "string",
+          "minLength": 1
+        },
+        "commit_sha": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        },
+        "fps": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "frames": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "duration_seconds": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      }
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "user_instruction",
+        "mode",
+        "allowed_changes",
+        "forbidden_changes"
+      ],
+      "properties": {
+        "user_instruction": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mode": {
+          "enum": [
+            "new_production",
+            "proof",
+            "recovery",
+            "baseline_refinement",
+            "finishing",
+            "delivery"
+          ]
+        },
+        "accepted_baseline_sha256": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "allowed_changes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "forbidden_changes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "viewing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "method",
+        "reviewer",
+        "entire_normal_speed"
+      ],
+      "properties": {
+        "method": {
+          "enum": [
+            "none",
+            "sampled",
+            "segments",
+            "full_normal_speed"
+          ]
+        },
+        "reviewer": {
+          "type": "string"
+        },
+        "entire_normal_speed": {
+          "type": "boolean"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "checks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "inventory",
+        "duplicates_and_provenance",
+        "source_fidelity",
+        "semantic_motion",
+        "fx_actual_and_relevance",
+        "music_and_audio",
+        "full_timeline",
+        "baseline_comparison",
+        "intro_outro_brand",
+        "delivery_playability",
+        "handoff_and_caveats"
+      ],
+      "properties": {
+        "inventory": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "evidence",
+            "notes"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "pass",
+                "warn",
+                "fail",
+                "not_applicable"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "notes": {
+              "type": "string"
+            }
+          }
+        },
+        "duplicates_and_provenance": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "evidence",
+            "notes"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "pass",
+                "warn",
+                "fail",
+                "not_applicable"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "notes": {
+              "type": "string"
+            }
+          }
+        },
+        "source_fidelity": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "evidence",
+            "notes"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "pass",
+                "warn",
+                "fail",
+                "not_applicable"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "notes": {
+              "type": "string"
+            }
+          }
+        },
+        "semantic_motion": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "evidence",
+            "notes"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "pass",
+                "warn",
+                "fail",
+                "not_applicable"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "notes": {
+              "type": "string"
+            }
+          }
+        },
+        "fx_actual_and_relevance": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "evidence",
+            "notes"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "pass",
+                "warn",
+                "fail",
+                "not_applicable"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "notes": {
+              "type": "string"
+            }
+          }
+        },
+        "music_and_audio": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "evidence",
+            "notes"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "pass",
+                "warn",
+                "fail",
+                "not_applicable"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "notes": {
+              "type": "string"
+            }
+          }
+        },
+        "full_timeline": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "evidence",
+            "notes"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "pass",
+                "warn",
+                "fail",
+                "not_applicable"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "notes": {
+              "type": "string"
+            }
+          }
+        },
+        "baseline_comparison": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "evidence",
+            "notes"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "pass",
+                "warn",
+                "fail",
+                "not_applicable"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "notes": {
+              "type": "string"
+            }
+          }
+        },
+        "intro_outro_brand": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "evidence",
+            "notes"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "pass",
+                "warn",
+                "fail",
+                "not_applicable"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "notes": {
+              "type": "string"
+            }
+          }
+        },
+        "delivery_playability": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "evidence",
+            "notes"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "pass",
+                "warn",
+                "fail",
+                "not_applicable"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "notes": {
+              "type": "string"
+            }
+          }
+        },
+        "handoff_and_caveats": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "evidence",
+            "notes"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "pass",
+                "warn",
+                "fail",
+                "not_applicable"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "notes": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "verdict": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "technical",
+        "artistic",
+        "authenticated_release",
+        "caveats",
+        "notes"
+      ],
+      "properties": {
+        "technical": {
+          "enum": [
+            "pass",
+            "fail",
+            "pending"
+          ]
+        },
+        "artistic": {
+          "enum": [
+            "pending",
+            "repair_required",
+            "accepted_with_caveats",
+            "accepted"
+          ]
+        },
+        "authenticated_release": {
+          "enum": [
+            "not_checked",
+            "pending",
+            "pass"
+          ]
+        },
+        "caveats": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

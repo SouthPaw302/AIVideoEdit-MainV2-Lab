@@ -1,0 +1,24 @@
+name: Director Scan Canon — regression
+on:
+  pull_request:
+    paths:
+      - 'general/reusable/DIRECTOR_SCAN_CANON.md'
+      - 'general/reusable/DIRECTOR_SCAN_RECORD.schema.json'
+      - 'general/reusable/tools/director_scan_gate.py'
+      - 'general/reusable/tools/test_director_scan_gate.py'
+      - '.github/workflows/director-scan-canon-verify.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  director-scan-canon:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Verify fail-closed director-scan evidence behavior
+        run: python -m unittest discover -s general/reusable/tools -p test_director_scan_gate.py -v
+      - name: Validate machine-readable scan record schema JSON
+        run: python -m json.tool general/reusable/DIRECTOR_SCAN_RECORD.schema.json > /dev/null

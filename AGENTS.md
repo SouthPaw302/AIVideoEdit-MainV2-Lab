@@ -74,6 +74,10 @@ A supplied reference can lead any of the three production modes. Never assume â€
 - For a Director Brain v3 project, do not perform an action outside `refinement_scope.allowed_changes` while baseline refinement is active unless the current user updates authorization.
 - For an active source-library recut, do not act outside `recut_scope.allowed_changes`, do not violate `forbidden_changes`, and do not replace source canon when `source_replacement_authorized=false`.
 
+## Mandatory Director source-to-export scan
+
+Before declaring any actual proof, candidate, finished edit, or delivery visually successful, read `general/reusable/DIRECTOR_SCAN_CANON.md` from the **bootstrapped current-main OS** and perform the relevant evidence-backed checks against real source bytes and the actual exported media. This includes all alternate assets/FX in durable storage, original-vs-FX fidelity, short-loop repetition, semantic motion vs camera tricks, scene-appropriate executed FX, music/audio controls, full timeline, canon-preserving comparisons, intro/outro/branding, and a playable **current** revision. Use a branch-local `DIRECTOR_SCAN.json` and `general/reusable/tools/director_scan_gate.py` when recording a scan. The scan validator is not a creative approval or authenticated final-release gate; claim only the viewing actually performed.
+
 ## Non-negotiable sequence
 Source ingest -> reference + music analysis -> resolve lyrics status -> resolve genre authority -> choose direction authority + production mode -> visual/media approach -> storyboard -> frame-followable video script -> shot packages with real media evidence -> short finished mode-aware proofs -> FX lock -> assembly -> actual-export mode-aware QC -> archive.
 

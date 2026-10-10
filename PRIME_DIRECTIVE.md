@@ -77,7 +77,11 @@ A successful creative recipe may move between proof and production backends only
 
 Video-generation providers are interchangeable render backends, not directing authorities. Prompts and provider-specific controls must be compiled from the same canonical shot contract so changing providers does not change story, identity, geography, or approved visual intent.
 
-## 11. Resume before inventing
+## 11. Director scan before acceptance or finishing
+
+Before calling a production proof, new candidate, finished picture, or delivery successful, apply the current-main `general/reusable/DIRECTOR_SCAN_CANON.md`. Inventory original and derived media (including alternate Drive/release folders and archived FX), compare hashes and effective source resolution, inspect genuine per-shot motion and actual executed FX, compare the **whole** export with script/music/canon, and verify audio, opening/closing, brand and playback of the correct version. Camera motion does not replace articulated action; a short low-resolution FX loop is not finished high-resolution footage; a technical PASS is not a creative PASS. Explicitly state the portion actually viewed; sampled review never authorizes a claim of whole-film normal-speed playback. Preserve any accepted baseline, use a separate finishing master, and never let platform packaging silently rewrite accepted picture or audio. The authenticated release gate remains separate.
+
+## 12. Resume before inventing
 At the beginning of every production session:
 1. Bootstrap exact current `main`.
 2. Read this Prime Directive.
