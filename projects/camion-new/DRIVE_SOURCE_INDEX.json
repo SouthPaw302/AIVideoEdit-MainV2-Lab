@@ -1,0 +1,90 @@
+{
+  "schema": "mainv2lab.drive-media-inventory.v1",
+  "production": "El Camión y la Carretera",
+  "source_branch": "song/camion-new",
+  "policy": "Original high-resolution stills in private connected Google Drive are primary source; FX GIF/MP4/derived PNGs are proofs and derived effects, not substitute high-resolution masters. Preserve source hashes, location privacy, and human review.",
+  "original_stills": {
+    "count": 30,
+    "format": "PNG",
+    "batch_names": [
+      "02 Media Batch 01 — Shots 01-10",
+      "03 Media Batch 02 — Shots 11-20",
+      "04 Media Batch 03 — Shots 21-30"
+    ],
+    "filename_pattern": "EC-{two_digit_id}*.png",
+    "dimensions_sample_verified": {
+      "EC-05": [
+        1672,
+        941
+      ],
+      "EC-22": [
+        1672,
+        941
+      ]
+    }
+  },
+  "fx_archives": [
+    {
+      "batch": 1,
+      "name": "El_Camion_Batch_01_FX_GIF_MP4_Proofs.zip",
+      "sha256": "a8c18e18c04b1b4d6e7b36dba484c3169ea0173db9528f0d668df49fc55e38e3",
+      "shot_range": "EC-01..EC-10"
+    },
+    {
+      "batch": 2,
+      "name": "El_Camion_Batch_02_FX_GIF_MP4_Proofs.zip",
+      "sha256": "21c741ae7a7f2539dae8f59e65a3e91c6300870ede2841959d6f76c90eed4530",
+      "shot_range": "EC-11..EC-20"
+    },
+    {
+      "batch": 3,
+      "name": "Batch03_FX_Artifact_run-37757150942.zip",
+      "sha256": "e1a8ca5a05cc41f3ab50934ed7ffbc6b1bcad2ea4673a5679c508899c8826add",
+      "shot_range": "EC-21..EC-30"
+    }
+  ],
+  "fx_proofs": {
+    "loop_mp4_count": 30,
+    "gif_count": 30,
+    "derived_png_count": 270,
+    "execution_ledger_count": 30,
+    "proof_loop_duration_s": 2,
+    "proof_loop_dimensions": [
+      640,
+      360
+    ]
+  },
+  "extra_video": [
+    {
+      "shot_id": "EC-03",
+      "name": "EC-03_Gemini_True_Motion_10s.mp4",
+      "status": "available_private_drive_not_in_current_render"
+    },
+    {
+      "shot_id": "EC-04",
+      "name": "EC-04_Gemini_Wiper_True_Motion_10s.mp4",
+      "status": "available_private_drive_not_in_current_render"
+    }
+  ],
+  "qc_flags": {
+    "batch3_human_visual_acceptance": "PENDING",
+    "batch3_true_video_required": [
+      "EC-22",
+      "EC-24",
+      "EC-25",
+      "EC-26",
+      "EC-28",
+      "EC-30"
+    ]
+  },
+  "current_render": {
+    "uses_fx_proof_loops": true,
+    "loops_repeated_beyond_source_duration": true,
+    "upscaled_to": [
+      1920,
+      1080
+    ],
+    "status": "visual_qc_not_accepted"
+  },
+  "guard": "Never allow an FX proof loop to silently claim to be a full-resolution finished picture; require source-led high-resolution pass and explicit true-video treatment where flagged."
+}

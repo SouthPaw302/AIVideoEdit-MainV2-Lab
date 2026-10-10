@@ -1,0 +1,42 @@
+name: Director — Drive FX Source Resolution Audit
+on:
+  push:
+    branches:
+      - song/camion-new
+    paths:
+      - projects/camion-new/DRIVE_SOURCE_INDEX.json
+      - scripts/director_fx_source_audit.py
+      - .github/workflows/director-drive-fx-audit.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit-fx-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python -m pip install --disable-pip-version-check numpy opencv-python-headless
+      - name: Stage all 30 existing FX proof loops from verified public media release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/fxproofs"
+          gh release download media-camion-new --repo "$GITHUB_REPOSITORY" \
+            --pattern 'generated__EC-*_FX_loop_24fps.mp4' --dir "$RUNNER_TEMP/fxproofs"
+          test "$(find "$RUNNER_TEMP/fxproofs" -name 'generated__EC-*_FX_loop_24fps.mp4' | wc -l)" -eq 30
+      - name: Audit dimensions, SHA provenance, source durations and visible motion
+        run: |
+          python scripts/director_fx_source_audit.py \
+            --manifest projects/camion-new/RENDER_MANIFEST.json \
+            --inventory projects/camion-new/DRIVE_SOURCE_INDEX.json \
+            --media-dir "$RUNNER_TEMP/fxproofs" \
+            --output "$RUNNER_TEMP/director-audit/REPORT.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: director-drive-fx-source-audit
+          path: ${{ runner.temp }}/director-audit/REPORT.json
+          retention-days: 30
