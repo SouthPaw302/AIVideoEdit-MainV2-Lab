@@ -21,13 +21,13 @@
 Before calling a real production aesthetically complete, follow `general/reusable/DIRECTOR_SCAN_CANON.md`. Audit **all** approved originals, archived GIF/MP4/PNG FX variations and alternate motion clips, their native dimensions and SHA, source/shot duration compatibility, shot-level semantic motion, FX relevance and measured music controls. Inspect actual intro/outro and final cut, compare to the accepted baseline, log what was watched, and provide a playable link to the **exact** current candidate. Use `DIRECTOR_SCAN.json` plus the current-main evidence validator for auditable handoffs. This is additive to—not a replacement for—release-gate authentication.
 
 ## Actual render automation
-GitHub Actions → **MainV2 Lab — REAL Music Film Render** → Run workflow.
+GitHub Actions → **AIVideoEdit — Canonical Production Candidate (Director + Parallel)** → Run workflow.
 
 - **source_ref:** repository branch containing the approved manifest and local input assets (typically `song/<slug>`; use `main` for the pinned real-source fixture).
 - **manifest:** repository-relative JSON path (for example `projects/my-song/RENDER_JOB.json`).
 - **require_onnx:** true means the pinned, byte-verified Beat This ONNX model must perform real inference; fallback stops the job.
 
-The workflow checks out **lab main** as the engine and source_ref separately as read-only project inputs. It boots its own main, validates provenance, runs music inference when requested, locks the FX manifest, executes selected FX, renders real source picture to H.264/AAC MP4 with the original audio, ffprobes and decodes the output, writes frame/source/render SHA-256 evidence, and uploads the actual MP4. A successful proof is also published as a **prerelease** on **this lab repo** for independent review, never as a published accepted film.
+The workflow resolves **lab main** and `source_ref` exactly once, stages the source bytes into one content-addressed bundle, and gives every dynamic shard the same immutable source/engine/project/manifest/toolchain identity. It boots canonical main, runs Director/Harness/JEV/FX/ONNX gates, renders real source picture to H.264/AAC with the original audio, verifies every shard and fan-in, and uploads the actual MP4. A separate least-privilege publish job creates a **prerelease** on **this lab repo** for independent review, never an accepted film.
 
 The initial fixture `.lab/fixtures/irish-eyes-real-source-30s.json` uses verified **real** Irish Eyes WAV + 3 source-shot video releases with actual SHA-256s. It is a **30-second technical integration film**, not a complete long-form production or artistic acceptance. Real production manifests can supply an arbitrary approved shot timeline up to one hour per job; content coverage and independent approval remain required.
 
@@ -58,6 +58,6 @@ Media may instead specify `url` as a direct HTTPS link with the **exact** SHA-25
 - **MainV2 Surgical Verification** validates the new stack and regressions.
 - **AIVideoEdit Production Contract** enforces the inherited OS gates.
 - **AIVideoEdit Main System Verification**, **AIVideoEdit Promoted Effects Verification**, and **verify-living-still-fx** prove reusable FX and reject unapproved effects.
-- **MainV2 ONNX Checkpoint**, **MainV2 Micro Production**, **DeepSeek Harness** workflows and neutral-library/proof generation are opt-in verification jobs. The micro probe is **synthetic technical smoke**, never a completed movie.
+- **Compatibility — Single-runner technical proof**, **MainV2 ONNX Checkpoint**, **MainV2 Micro Production**, **DeepSeek Harness**, project-specific proof workflows and neutral-library generation are opt-in compatibility/verification jobs. They are not alternate production entrypoints. The micro probe is **synthetic technical smoke**, never a completed movie.
 - The full real-render job is the actual media output path; its `real_music_film.mp4`, `render_receipt.json`, `FX_LOCK.json`, `PRODUCTION_EXECUTION_LEDGER.json`, optional `MUSIC_BEAT_EVIDENCE.json`, and contact sheet provide evidence. Technical PASS is not human VISUAL_ACCEPTED.
 - Do not add background auto-renders or uncontrolled workflow writes to main. No generated asset can be called canonical until director approval and provenance have been recorded.

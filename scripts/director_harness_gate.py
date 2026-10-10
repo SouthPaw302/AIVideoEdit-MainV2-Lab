@@ -65,6 +65,7 @@ def main() -> int:
     ap.add_argument("--manifest", type=Path, required=True)
     ap.add_argument("--lineage", type=Path, required=True)
     ap.add_argument("--media-root", type=Path, required=True)
+    ap.add_argument("--shard-plan", type=Path, required=True)
     ap.add_argument("--out", type=Path, required=True)
     args = ap.parse_args()
 
@@ -74,6 +75,7 @@ def main() -> int:
     manifest_path = args.manifest.resolve()
     lineage_path = args.lineage.resolve()
     media_root = args.media_root.resolve()
+    shard_plan_path = args.shard_plan.resolve()
     out = args.out.resolve()
     out.mkdir(parents=True, exist_ok=True)
 
@@ -85,9 +87,9 @@ def main() -> int:
     if any(not isinstance(x, dict) or not x for x in required):
         raise RuntimeError("director package, music analysis, or render manifest is missing")
     direction = str(order.get("current_user_direction") or "")
-    if "mountainnoir" not in direction.casefold() or "spanish" not in direction.casefold():
-        raise RuntimeError("live Director gate did not receive the Spanish Mountain Noir instruction")
-    if order.get("direction_authority") != "user_directed" or order.get("production_mode") != "hybrid":
+    if not direction.strip():
+        raise RuntimeError("live Director gate did not receive current user direction")
+    if order.get("direction_authority") != "user_directed" or order.get("production_mode") not in {"living_scene", "cinematic", "hybrid"}:
         raise RuntimeError("unexpected Director authority or production mode")
     if manifest.get("render_authorization") != "explicit_user_render_request":
         raise RuntimeError("render authorization is not explicit")
@@ -101,6 +103,22 @@ def main() -> int:
         original_manifest=manifest_path,
     )
     staged_manifest = read(staged_manifest_path, {})
+    shard_plan = read(shard_plan_path, {})
+    from scripts.plan_render_shards import validate_plan
+    validate_plan(shard_plan, len(manifest["shots"]))
+
+    context_spec = plan.get("director_context") if isinstance(plan.get("director_context"), dict) else {}
+
+    def context_list(name: str, fallback: list[str]) -> list[str]:
+        value = context_spec.get(name)
+        if isinstance(value, list):
+            cleaned = [str(item).strip() for item in value if str(item).strip()]
+            if cleaned:
+                return cleaned[:24]
+        return fallback
+
+    route_name = str((plan.get("visual_direction_gate") or {}).get("user_selection", {}).get("route_name") or "authored production")
+    production_id = str(manifest.get("production_id") or project.name)
 
     # Use the exact main checkout as the authority for model, JEV, FX, and the
     # live MCP bridge.  The bridge's runtime is isolated and never writes main.
@@ -133,7 +151,7 @@ def main() -> int:
         boot = tool(proc, 5, "core.bootstrap", {"offline": True})
         if not boot.get("bootstrapped") or boot.get("requested_core_ref") != "main":
             raise RuntimeError("isolated canonical main core did not boot: " + json.dumps(boot)[-2400:])
-        project_result = tool(proc, 6, "project.create", {"name": "Camion New — Spanish Mountain Noir Director Gate"})
+        project_result = tool(proc, 6, "project.create", {"name": production_id + " — Director Gate"})
         project_id = str((project_result.get("project") or {}).get("id") or "")
         if not project_id:
             raise RuntimeError("live Tool API did not create a director-gate project")
@@ -144,10 +162,10 @@ def main() -> int:
         harness_status = tool(proc, 8, "harness.status", {})
         context = tool(proc, 9, "harness.context", {"project_id": project_id})
         specialist = tool(proc, 10, "harness.specialist_fixture", {
-            "task": "Director review: enforce Spanish Mountain Noir continuity, restrained camera travel, authored transitions, and no 4K promotion before visual approval.",
+            "task": "Director review: enforce the current user direction, shot continuity, authored motion/transitions, source fidelity, and no release promotion before visual approval. Direction: " + direction,
             "evidence": {
                 "user_direction": direction,
-                "route": (plan.get("visual_direction_gate") or {}).get("user_selection", {}).get("route_name"),
+                "route": route_name,
                 "production_mode": order["production_mode"],
                 "manifest_sha256": sha(manifest_path),
             },
@@ -155,13 +173,13 @@ def main() -> int:
         fx_resolution = tool(proc, 11, "harness.fx_resolve", {
             "project_id": project_id,
             "level": "scene",
-            "environment": ["night road", "mountain distance", "wet asphalt", "cab interior"],
-            "materials": ["rain", "glass reflection", "fog", "warm light", "road surface"],
-            "objects": ["truck", "empty passenger seat", "headlights", "mountain horizon"],
-            "needs": ["restrained camera travel", "living still motion", "memory atmosphere", "authored transitions"],
-            "motifs": ["road", "reflection", "absence", "dawn release"],
-            "tags": ["mountain-noir", "spanish-language", "cinematic", "hybrid"],
-            "constraints": ["preserve subject identity", "no arbitrary style drift", "no unregistered FX"],
+            "environment": context_list("environment", [route_name]),
+            "materials": context_list("materials", ["source-defined materials"]),
+            "objects": context_list("objects", ["manifest-authorized subjects"]),
+            "needs": context_list("needs", ["authored camera motion", "continuity", "authored transitions"]),
+            "motifs": context_list("motifs", [production_id]),
+            "tags": context_list("tags", [order["production_mode"], "user-directed"]),
+            "constraints": context_list("constraints", ["preserve subject identity", "preserve source fidelity", "no unregistered FX"]),
             "max_effects": 12,
         })
 
@@ -207,11 +225,11 @@ def main() -> int:
             raise RuntimeError("canonical FX lock is empty")
         receipt = {
             "schema": "aivideoedit.director-harness-receipt.v1",
-            "branch": os.environ.get("GITHUB_REF_NAME") or "song/camion-new",
+            "branch": os.environ.get("SOURCE_REF") or os.environ.get("GITHUB_REF_NAME") or "production/unknown",
             "source_project": str(project),
             "manifest_sha256": sha(manifest_path),
             "director_input": direction,
-            "route_name": (plan.get("visual_direction_gate") or {}).get("user_selection", {}).get("route_name"),
+            "route_name": route_name,
             "core": {"boot": boot, "main_commit": boot.get("main_commit") or core.get("main_commit")},
             "harness": {"status": harness_status, "context": context, "specialist": specialist, "fx_resolution": fx_resolution},
             "jev": jev,
@@ -220,7 +238,9 @@ def main() -> int:
             "fx_lock_sha256": sha(lock),
             "effects": effects,
             "transitions": transitions,
-            "parallel_shards": 4,
+            "parallel_shards": len(shard_plan["include"]),
+            "shard_plan": shard_plan["include"],
+            "shard_plan_sha256": sha(shard_plan_path),
             "human_visual_approval": False,
             "production_complete": False,
             **receipt_identity(lineage, lineage_path),
