@@ -1,0 +1,47 @@
+{
+  "schema": "aivideoedit.motion-library.v1",
+  "refinement_id": "route4-two-heroes",
+  "batch_id": "BATCH-03",
+  "status": "loop_library_created_drive_backed",
+  "drive_folder": {
+    "id": "1en2MyFDVimTfYDXKQFU-qHOktBmtkry8",
+    "url": "https://drive.google.com/drive/folders/1en2MyFDVimTfYDXKQFU-qHOktBmtkry8"
+  },
+  "archive": {
+    "name": "El_Viento_Batch03_Loops_GIFs.zip",
+    "drive_id": "1GjAtmZ2tcOfOUyoGnOmfZ8Hpptio5OV8",
+    "sha256": "ead21f52b5b6979d54afe1f45544d2848222eaeaa82c81cdf7b7f7817804c536"
+  },
+  "motion_profile": {
+    "duration_seconds": 6,
+    "fps": 24,
+    "resolution": "1920x1080",
+    "loop_type": "periodic bounded camera drift"
+  },
+  "assets": [
+    {
+      "shot_id": "R4-B03-S01",
+      "loop": "01_stone_map_loop_6s_1080p.mp4",
+      "gif": "01_stone_map_loop_preview.gif",
+      "sha256": "daf864ff9149e8ae4a968c0c5d4c17395dc03d88a7043d2794b742fefc0883db"
+    },
+    {
+      "shot_id": "R4-B03-S02",
+      "loop": "02_touching_map_loop_6s_1080p.mp4",
+      "gif": "02_touching_map_loop_preview.gif",
+      "sha256": "c35f9a713062427642af41cf701a7aee211d92965c8e5adf92202cca9a7da63a"
+    },
+    {
+      "shot_id": "R4-B03-S03",
+      "loop": "03_portal_city_loop_6s_1080p.mp4",
+      "gif": "03_portal_city_loop_preview.gif",
+      "sha256": "0cb1879accbad0e2dfa988ee34c7d80c4c2b849aca4d03b78171d01185ae1bed"
+    },
+    {
+      "shot_id": "R4-B03-S04",
+      "loop": "04_embroidered_thread_loop_6s_1080p.mp4",
+      "gif": "04_embroidered_thread_loop_preview.gif",
+      "sha256": "816369c7aa8e7dec1a5ee5dc7b51285264530a4df55a127a80250a34a73b92e9"
+    }
+  ]
+}

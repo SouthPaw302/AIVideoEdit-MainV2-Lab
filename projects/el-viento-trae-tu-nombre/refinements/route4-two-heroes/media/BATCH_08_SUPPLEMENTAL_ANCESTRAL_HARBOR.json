@@ -1,0 +1,42 @@
+{
+  "schema": "aivideoedit.media-batch.v1",
+  "batch_id": "BATCH-08-SUPPLEMENTAL-ANCESTRAL-HARBOR",
+  "status": "pre_fx_motion_complete_drive_verified",
+  "role": "supplemental_story_fx_media",
+  "timeline_assignment": "not_locked",
+  "still_archive": {
+    "drive_id": "1Tbg3P5csof0XroZVVkt3Rgn78RAwNsth",
+    "sha256": "b888db6118385ef7937693cb53b45bdbe7608e5146368bf90479b73734709402",
+    "count": 10
+  },
+  "selected_assets": [
+    "threads_of_dawn_over_the_harbor.png",
+    "moonlit_harbor_of_golden_threads.png",
+    "ancestors_beneath_the_starry_sea.png",
+    "golden_threads_of_the_ancestral_harbor.png"
+  ],
+  "alternates": [
+    "lanterns_over_the_twilight_harbor.png",
+    "candlelit_map_of_ancestral_harbor.png",
+    "map_to_harbor_threads_of_time.png",
+    "echoes_beneath_the_moonlit_harbor.png",
+    "luminous_thread_of_memory.png",
+    "fateful_lights_over_the_night_harbor.png"
+  ],
+  "loop_archive": {
+    "drive_id": "1Pw38jKORh6UBrO4QMQSy2eeafWJ5JQJA",
+    "sha256": "90c3d61e49816ac7d390f4405f426e3ea2b41c8c59f94f0ebab3f99461cdd239"
+  },
+  "motion_archive": {
+    "drive_id": "1JCFNqKwCVpy2UAEQbDFQswO9biOXp_o5",
+    "sha256": "a22cea89c8e46f4cfd0d8733458c8401e190ec8aea2a56414ff811cf74f354c2"
+  },
+  "motion_profile": {
+    "selected_count": 4,
+    "duration_seconds": 6,
+    "fps": 24,
+    "resolution": "1920x1080",
+    "style": "restrained bounded camera motion"
+  },
+  "next_step": "Batch 08 is parked before FX gate/review. Timeline placement remains supplemental until explicitly assigned."
+}

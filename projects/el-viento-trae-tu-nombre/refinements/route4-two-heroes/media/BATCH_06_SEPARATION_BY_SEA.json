@@ -1,0 +1,72 @@
+{
+  "schema": "aivideoedit.media-batch.v1",
+  "batch_id": "BATCH-06-SEPARATION-BY-SEA",
+  "status": "drive_verified",
+  "drive_folder": {
+    "id": "1K2bSMRVDUfw3PFXvl3zsbh1iCz7BkQmy",
+    "url": "https://drive.google.com/drive/folders/1K2bSMRVDUfw3PFXvl3zsbh1iCz7BkQmy"
+  },
+  "assets": [
+    {
+      "index": 1,
+      "name": "01_moonlit_fortress_pair.png",
+      "drive_id": "15NU3zSnuB-gSWiMZpuKctKQKeOd54t0c",
+      "drive_url": "https://drive.google.com/file/d/15NU3zSnuB-gSWiMZpuKctKQKeOd54t0c/view"
+    },
+    {
+      "index": 2,
+      "name": "02_harbor_memory_pair.png",
+      "drive_id": "1J4ba6GNE7YbPyvBt3NIcvNzVL3y3Vm0P",
+      "drive_url": "https://drive.google.com/file/d/1J4ba6GNE7YbPyvBt3NIcvNzVL3y3Vm0P/view"
+    },
+    {
+      "index": 3,
+      "name": "03_thread_compass_pair.png",
+      "drive_id": "1-ae5jNbWub30iNyND3XnZ-LBz9m1VlYm",
+      "drive_url": "https://drive.google.com/file/d/1-ae5jNbWub30iNyND3XnZ-LBz9m1VlYm/view"
+    },
+    {
+      "index": 4,
+      "name": "04_fortress_harbor_pair.png",
+      "drive_id": "1UryNw1cLsNLUSj9Z-7pHKesYc6iW-VGI",
+      "drive_url": "https://drive.google.com/file/d/1UryNw1cLsNLUSj9Z-7pHKesYc6iW-VGI/view"
+    },
+    {
+      "index": 5,
+      "name": "05_relic_harbor_pair.png",
+      "drive_id": "1kUoZDqy9r9cSynbqeTlaqiOtn1qz0pug",
+      "drive_url": "https://drive.google.com/file/d/1kUoZDqy9r9cSynbqeTlaqiOtn1qz0pug/view"
+    },
+    {
+      "index": 6,
+      "name": "06_ancestral_thread_pair.png",
+      "drive_id": "1-t0KDmvePEWfCat_cO4h7VcU0388CIO9",
+      "drive_url": "https://drive.google.com/file/d/1-t0KDmvePEWfCat_cO4h7VcU0388CIO9/view"
+    },
+    {
+      "index": 7,
+      "name": "07_map_harbor_pair.png",
+      "drive_id": "1-4ouk9xtSVjZsZUocz4dZsn4KsniuNzA",
+      "drive_url": "https://drive.google.com/file/d/1-4ouk9xtSVjZsZUocz4dZsn4KsniuNzA/view"
+    },
+    {
+      "index": 8,
+      "name": "08_dusk_pair_fort.png",
+      "drive_id": "12aqhMj8Rywc7E-mLzg6OOuYX2pTjPIs_",
+      "drive_url": "https://drive.google.com/file/d/12aqhMj8Rywc7E-mLzg6OOuYX2pTjPIs_/view"
+    },
+    {
+      "index": 9,
+      "name": "09_relic_memory_pair.png",
+      "drive_id": "16pKJW0HmurSEg_nW5_Zv4q8v-oUx1Nn8",
+      "drive_url": "https://drive.google.com/file/d/16pKJW0HmurSEg_nW5_Zv4q8v-oUx1Nn8/view"
+    },
+    {
+      "index": 10,
+      "name": "10_map_thread_pair.png",
+      "drive_id": "18r4lvZQBI3rGhs5Rb74haJq5om20g8lO",
+      "drive_url": "https://drive.google.com/file/d/18r4lvZQBI3rGhs5Rb74haJq5om20g8lO/view"
+    }
+  ],
+  "next_batch": "BATCH-06-FX-VARIATIONS"
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "aivideoedit.motion-variants.v1",
+  "refinement_id": "route4-two-heroes",
+  "batch_id": "BATCH-01",
+  "status": "drive_verified_pre_fx",
+  "scope": "pre-gate movement only",
+  "source_motion_library": "motion/BATCH_01_LOOP_LIBRARY.json",
+  "drive_folder": {
+    "id": "1EGIxWmpzrPwsAAQOkl9j_v4kMEec8RFs",
+    "url": "https://drive.google.com/drive/folders/1EGIxWmpzrPwsAAQOkl9j_v4kMEec8RFs"
+  },
+  "rules": [
+    "no subject morphing",
+    "no geometry generation",
+    "no transition effects",
+    "no canonical FX IDs claimed",
+    "movement limited to tiny periodic camera/parallax drift and light breathing",
+    "hero identity, architecture, horizon and thread silhouette protected"
+  ],
+  "assets": [
+    {
+      "shot_id": "R4-B01-S01",
+      "name": "01_motion_variant.mp4",
+      "drive_id": "1oJME6jkvqJAYGqQkY3WgSrovCKOmNSsI",
+      "sha256": "5cd4a21ea6c9b4de412dc7794f7ac36e41519064c8277195d2a4a590d45177f9",
+      "duration": 6,
+      "fps": 24,
+      "frames": 144
+    },
+    {
+      "shot_id": "R4-B01-S02",
+      "name": "02_motion_variant.mp4",
+      "drive_id": "14IQU7PJ-ZyeKHMobgESItWeLmO2fw0tN",
+      "sha256": "fa41d6ba514f5b2367bb86b60e3220a633dda90d14fb43a22b4814337b4b0ffd",
+      "duration": 6,
+      "fps": 24,
+      "frames": 144
+    },
+    {
+      "shot_id": "R4-B01-S03",
+      "name": "03_motion_variant.mp4",
+      "drive_id": "1xzau2NjZUnFhgJaSuotqYCG32RFPQGKE",
+      "sha256": "f8784225650fe61a20e7c85b5fc1b9d3b321ce8f5f1df19861036e7e2e4ed8ae",
+      "duration": 6,
+      "fps": 24,
+      "frames": 144
+    },
+    {
+      "shot_id": "R4-B01-S04",
+      "name": "04_motion_variant.mp4",
+      "drive_id": "1eR4GzVC38-_0FeDUsVHjlc7ML6aYCYhH",
+      "sha256": "b77a140fc7ad23214993766a8362b99d6b77cf0b2b8b939eef76b7610036bed1",
+      "duration": 6,
+      "fps": 24,
+      "frames": 144
+    }
+  ],
+  "archive": {
+    "name": "El_Viento_Batch01_PreFX_Motion_Variants.zip",
+    "drive_id": "1S9zxTnJUxrWbDDKwbNY0D3Wu36IGG_1C",
+    "sha256": "1d4a4b389250e072aceb213165025c8cefd273500eb5e68f40fa7ec4ae5b61e4"
+  },
+  "next_step": "Hold here. Review/compare clean loops versus pre-FX motion variants. FX gates and canonical effect assignment come next; do not stack further movement before that review."
+}

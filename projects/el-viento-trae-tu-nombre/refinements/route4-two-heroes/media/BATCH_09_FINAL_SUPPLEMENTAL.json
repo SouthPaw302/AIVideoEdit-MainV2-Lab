@@ -1,0 +1,55 @@
+{
+  "schema": "aivideoedit.media-batch.v1",
+  "batch_id": "BATCH-09-FINAL-SUPPLEMENTAL",
+  "status": "pre_fx_motion_complete_drive_verified",
+  "role": "final_supplemental_story_fx_media",
+  "timeline_assignment": "not_locked",
+  "still_archive": {
+    "drive_id": "1Nm2Mx6JmUDWzJR7cdlwlWH0jYQUlZVPJ",
+    "sha256": "81a3a11cdda46fc88126c2e6bf5204be6f8fe9b4581b2dc765646802a6c56509",
+    "count": 10
+  },
+  "selected_assets": [
+    {
+      "source": "batch09_01.png",
+      "role": "selected"
+    },
+    {
+      "source": "batch09_02.png",
+      "role": "selected"
+    },
+    {
+      "source": "batch09_08.png",
+      "role": "selected"
+    },
+    {
+      "source": "batch09_09.png",
+      "role": "selected"
+    }
+  ],
+  "alternates": [
+    "batch09_03.png",
+    "batch09_04.png",
+    "batch09_05.png",
+    "batch09_06.png",
+    "batch09_07.png",
+    "batch09_10.png"
+  ],
+  "qc_note": "Selected four preserve the established harbor/sea/ancestral-thread language and avoid collage/map-heavy drift.",
+  "loop_archive": {
+    "drive_id": "1Xg8_b80ng1tkmkHQm8h-B8SOOs8MFn11",
+    "sha256": "658614ea203566c806e92ce7ae047c8f288bef24e3d56c972a13873e46ec1c0f"
+  },
+  "motion_archive": {
+    "drive_id": "1paJLmOZd62ce_0L5g6mOLfIL4LXBcvBq",
+    "sha256": "22a8257977b662384949fde7fe3456632712f40870b438541655510d1f17c105"
+  },
+  "motion_profile": {
+    "selected_count": 4,
+    "duration_seconds": 6,
+    "fps": 24,
+    "resolution": "1920x1080",
+    "style": "restrained bounded camera motion"
+  },
+  "next_step": "Batch 09 is parked before FX gate/review. This is the final supplemental batch; no Batch 10 should be created unless explicitly requested."
+}

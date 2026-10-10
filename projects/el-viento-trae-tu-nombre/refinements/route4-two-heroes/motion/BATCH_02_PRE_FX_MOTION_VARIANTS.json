@@ -1,0 +1,46 @@
+{
+  "schema": "aivideoedit.motion-variants.v1",
+  "refinement_id": "route4-two-heroes",
+  "batch_id": "BATCH-02",
+  "status": "drive_verified_pre_fx",
+  "scope": "pre-gate movement only",
+  "drive_folder": {
+    "id": "1VDJnZ-m4wXtsznG6rRWNTH4Aueq-pArh",
+    "url": "https://drive.google.com/drive/folders/1VDJnZ-m4wXtsznG6rRWNTH4Aueq-pArh"
+  },
+  "archive": {
+    "name": "El_Viento_Batch02_PreFX_Motion_Variants.zip",
+    "drive_id": "107tO2C4WzwBbxfjAqD71GHQFIJ2mDVSO",
+    "sha256": "c2fa2fe9a8d13a2702110fe3ae38c6151dbfbe3dd5fa178694a4ed8e82552bb3"
+  },
+  "rules": [
+    "no subject morphing",
+    "no geometry generation",
+    "no transition effects",
+    "no canonical FX IDs claimed",
+    "light movement only"
+  ],
+  "assets": [
+    {
+      "shot_id": "R4-B02-S01",
+      "name": "01_male_map_motion_variant.mp4",
+      "sha256": "7026fd4c2f87e3d0dd93e645670c7989ec304d7e03c198241cf47207d3212730"
+    },
+    {
+      "shot_id": "R4-B02-S02",
+      "name": "02_female_parapet_motion_variant.mp4",
+      "sha256": "9a14a5d80384774590f12348c8a2c86a38e57716077d8b6d10c28d61bd0b3819"
+    },
+    {
+      "shot_id": "R4-B02-S03",
+      "name": "03_duo_harbor_motion_variant.mp4",
+      "sha256": "1ee745e48489050980b76e0a7f8cc288129e724a8285f7e9d717d1aae3c453eb"
+    },
+    {
+      "shot_id": "R4-B02-S04",
+      "name": "04_duo_fortress_motion_variant.mp4",
+      "sha256": "8e121a8a0f4a120706ba4f07bc137b00ca85ff9070c0cc02df66bcc8573a3ff6"
+    }
+  ],
+  "next_step": "Stop here before FX gates."
+}

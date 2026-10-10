@@ -1,0 +1,48 @@
+{
+  "schema": "aivideoedit.motion-library.v1",
+  "refinement_id": "route4-two-heroes",
+  "batch_id": "BATCH-02",
+  "status": "loop_library_created_drive_backed",
+  "source_lock": "shot_locks/BATCH_02_DISTANCE_AND_ORIGIN.json",
+  "drive_folder": {
+    "id": "18KeBKOLTU4c67AvpmGe4fqMbKFnFs9hM",
+    "url": "https://drive.google.com/drive/folders/18KeBKOLTU4c67AvpmGe4fqMbKFnFs9hM"
+  },
+  "archive": {
+    "name": "El_Viento_Batch02_Loops_GIFs.zip",
+    "drive_id": "1Xq1yJMrDUA_WrPeTWnebG2Z1NbkLjEPD",
+    "sha256": "8f1bb8c79fb1b3263a85b66146572d9461cd65bccf98e9d2ef899aa735920bfd"
+  },
+  "motion_profile": {
+    "duration_seconds": 6,
+    "fps": 24,
+    "resolution": "1920x1080",
+    "loop_type": "periodic bounded camera drift"
+  },
+  "assets": [
+    {
+      "shot_id": "R4-B02-S01",
+      "loop": "01_male_map_loop_6s_1080p.mp4",
+      "gif": "01_male_map_loop_preview.gif",
+      "sha256": "e1b3ca8de849798f6e1136e472c1ad96c4ac1d1d4c07ceddd13fb04c60cfc6ed"
+    },
+    {
+      "shot_id": "R4-B02-S02",
+      "loop": "02_female_parapet_loop_6s_1080p.mp4",
+      "gif": "02_female_parapet_loop_preview.gif",
+      "sha256": "1112f4ee4b9cf0978b91f48dd7ec7f001b5c6b41c9700fca6a6d323734f05634"
+    },
+    {
+      "shot_id": "R4-B02-S03",
+      "loop": "03_duo_harbor_loop_6s_1080p.mp4",
+      "gif": "03_duo_harbor_loop_preview.gif",
+      "sha256": "3ad7cd7dbe19b3245cb2869988d763991556a084d555e5dce70c4796355018d8"
+    },
+    {
+      "shot_id": "R4-B02-S04",
+      "loop": "04_duo_fortress_loop_6s_1080p.mp4",
+      "gif": "04_duo_fortress_loop_preview.gif",
+      "sha256": "57f134aa433c15f097d1bef563a13910f369e16beb7a8e4137942bd7c3383662"
+    }
+  ]
+}

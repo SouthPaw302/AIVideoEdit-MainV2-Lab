@@ -1,0 +1,66 @@
+{
+  "schema": "aivideoedit.media-batch.v1",
+  "batch_id": "BATCH-06-FX-VARIATIONS",
+  "status": "optional_partial_library_drive_verified",
+  "role": "optional_fx_alternative_stills",
+  "completed_count": 8,
+  "target_count": 10,
+  "drive_folder": {
+    "id": "1TKfTizo5NmpBlcGexx4JJsBR4Bhn7BHd",
+    "url": "https://drive.google.com/drive/folders/1TKfTizo5NmpBlcGexx4JJsBR4Bhn7BHd"
+  },
+  "assets": [
+    {
+      "index": 1,
+      "name": "01_fortress_ancestral_harbor.png",
+      "drive_id": "1-Qi-4phO8hNbch29Ef9a3AvBcOrWp-JP",
+      "drive_url": "https://drive.google.com/file/d/1-Qi-4phO8hNbch29Ef9a3AvBcOrWp-JP/view"
+    },
+    {
+      "index": 2,
+      "name": "02_golden_thread_harbor.png",
+      "drive_id": "18HxF1OYzHxtXK_fNiTM0jGo5lxojswRb",
+      "drive_url": "https://drive.google.com/file/d/18HxF1OYzHxtXK_fNiTM0jGo5lxojswRb/view"
+    },
+    {
+      "index": 3,
+      "name": "03_illuminated_map_fortress.png",
+      "drive_id": "1g9IuQQHYOBoOu1005hCBsiNONKyWFi6v",
+      "drive_url": "https://drive.google.com/file/d/1g9IuQQHYOBoOu1005hCBsiNONKyWFi6v/view"
+    },
+    {
+      "index": 4,
+      "name": "04_harbor_memory_poster.png",
+      "drive_id": "1b_fMjgSopIsLTRWTaTaWzaxgN3oa_fac",
+      "drive_url": "https://drive.google.com/file/d/1b_fMjgSopIsLTRWTaTaWzaxgN3oa_fac/view"
+    },
+    {
+      "index": 5,
+      "name": "05_ancestral_harbor_layers.png",
+      "drive_id": "1QS-l2NTRDyYKy4YBbRbIahzKixDxwAIm",
+      "drive_url": "https://drive.google.com/file/d/1QS-l2NTRDyYKy4YBbRbIahzKixDxwAIm/view"
+    },
+    {
+      "index": 6,
+      "name": "06_map_route_memory.png",
+      "drive_id": "1AvKem-iKSj3VD6lop0u433jU00CvRruZ",
+      "drive_url": "https://drive.google.com/file/d/1AvKem-iKSj3VD6lop0u433jU00CvRruZ/view"
+    },
+    {
+      "index": 7,
+      "name": "07_pendant_ancestral_sky.png",
+      "drive_id": "1S-HyFGeQ8TdEqKW7BQbb0RtOoox3gmwI",
+      "drive_url": "https://drive.google.com/file/d/1S-HyFGeQ8TdEqKW7BQbb0RtOoox3gmwI/view"
+    },
+    {
+      "index": 8,
+      "name": "08_ancestral_thread_horizon.png",
+      "drive_id": "1cGRMXBWZaoG5FiEHkcygHVRdK6HQwtzZ",
+      "drive_url": "https://drive.google.com/file/d/1cGRMXBWZaoG5FiEHkcygHVRdK6HQwtzZ/view"
+    }
+  ],
+  "note": "Eight optional FX stills already exist and are Drive-backed. Assets 09-10 were never generated due to the image-generation limit. They are not required for the current six-batch song lock.",
+  "resume_rule": "Do not generate 09-10 automatically. Only complete them if the user explicitly asks for more Batch 06 FX alternatives.",
+  "canon_note": "Preserve Route 4 two-hero Island Dream / Ancestral Memory continuity. Same heroes, fort/harbor/island world and luminous thread. No invented unrelated culture.",
+  "downstream": "No Batch 07 is currently part of the locked song timeline. Batch 06 ends the song at 112.680 seconds."
+}

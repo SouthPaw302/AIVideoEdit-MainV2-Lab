@@ -1,0 +1,87 @@
+{
+  "schema": "aivideoedit.media-batch.v1",
+  "batch_id": "BATCH-07-ANCESTRAL-PRESENCE",
+  "status": "pre_fx_motion_complete_drive_verified",
+  "role": "supplemental_story_fx_media",
+  "timeline_assignment": "not_locked",
+  "drive_folder": {
+    "id": "184eIrrhlL2Ie4ZaxDAduBmNgPyK56nmW",
+    "url": "https://drive.google.com/drive/folders/184eIrrhlL2Ie4ZaxDAduBmNgPyK56nmW"
+  },
+  "selected_assets": [
+    {
+      "index": 1,
+      "name": "moonlit_harbor_of_ancestors.png",
+      "role": "selected"
+    },
+    {
+      "index": 2,
+      "name": "ancestral_threads_across_the_sea.png",
+      "role": "selected"
+    },
+    {
+      "index": 5,
+      "name": "golden_threads_of_ancestral_harbor.png",
+      "role": "selected"
+    },
+    {
+      "index": 9,
+      "name": "ancestral_light_over_the_harbor.png",
+      "role": "selected"
+    }
+  ],
+  "alternates": [
+    "lanterns_of_the_forgotten_shore.png",
+    "harbor_of_echoes_at_twilight.png",
+    "candlelit_map_of_lost_memories.png",
+    "celestial_harbor_of_ancestral_stars.png",
+    "twilight_lovers_above_the_enchanted_sea.png",
+    "golden_threads_of_destiny.png"
+  ],
+  "qc_note": "Selected four preserve the Route 4 harbor/sea/ancestor/thread language most directly. More abstract/celestial/map-heavy stills remain as alternates.",
+  "loop_archive": {
+    "drive_folder_id": "1f6bsEvBqexE8gLd3HKnCXiCGFq_PJDlU",
+    "drive_id": "1E9MJu_wugcY0-7MwvqSNbRkjLRVyQnMo",
+    "name": "El_Viento_Batch07_Loops_GIFs.zip",
+    "sha256": "b0399671505c0d3e24679bf0148b33cdf94b7ae22823a5619807c02528979d9d"
+  },
+  "motion_archive": {
+    "drive_folder_id": "1LGQundvWhsEeYuMyRIA1rZJ_ZmyJGCne",
+    "drive_id": "1ruLyHIcTFwao3i6KvBdUK4HM72vwC_xr",
+    "name": "El_Viento_Batch07_PreFX_Motion_Variants.zip",
+    "sha256": "10406f8438f98006fce3a89c4eccd588dd447140d749a423400ced8a527205ea"
+  },
+  "motion_profile": {
+    "duration_seconds": 6,
+    "fps": 24,
+    "resolution": "1920x1080",
+    "selected_count": 4
+  },
+  "assets_motion": [
+    {
+      "slot": 1,
+      "source": "moonlit_harbor_of_ancestors.png",
+      "loop_sha256": "0a03dac9399955f702f3560efbc37ea2cf4ef1b2c868dba98ed493a6b98e10e9",
+      "motion_sha256": "552c302ad821e8b4077118c65ae23b95ce339fa3779805ac6a564b39bb65b53c"
+    },
+    {
+      "slot": 2,
+      "source": "ancestral_threads_across_the_sea.png",
+      "loop_sha256": "9980f24c2621f2f161e2eb52b21ba9dabd81c09f29ad5e2a7806451a211de8e0",
+      "motion_sha256": "45294a9da75e6579f2982b8b56f288e01ab184c6241db59db5bf6be533649e6f"
+    },
+    {
+      "slot": 3,
+      "source": "golden_threads_of_ancestral_harbor.png",
+      "loop_sha256": "a918d9591faff0c87c03d2cc76998cb83c1945eb80ccd123e1c23857ab36b51e",
+      "motion_sha256": "6714a14335390bafcbcd030f1e97620f426c039287906c609b961dd69c7eb8be"
+    },
+    {
+      "slot": 4,
+      "source": "ancestral_light_over_the_harbor.png",
+      "loop_sha256": "637b6c2a2aef834337676ee157cf6a98f17a78df8b2e8bfac9d39afe36b4b9e3",
+      "motion_sha256": "8fdb0068cb3fbdf22d673964782bc6b2af93d8f26d2dfbf2ae9e787c49cf0b6c"
+    }
+  ],
+  "next_step": "Batch 07 is parked before FX gate/review. Timeline placement remains supplemental until explicitly assigned."
+}

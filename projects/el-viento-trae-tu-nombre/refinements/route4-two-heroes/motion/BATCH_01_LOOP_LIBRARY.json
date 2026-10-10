@@ -1,0 +1,64 @@
+{
+  "schema": "aivideoedit.motion-library.v1",
+  "refinement_id": "route4-two-heroes",
+  "batch_id": "BATCH-01",
+  "status": "loop_library_created_drive_backed",
+  "source_lock": "BATCH_01_OPENING_REMEMBRANCE.json",
+  "drive_folder": {
+    "id": "1rN87tORAn6YuPnMuzTEvWvORJmsUSCjK",
+    "url": "https://drive.google.com/drive/folders/1rN87tORAn6YuPnMuzTEvWvORJmsUSCjK"
+  },
+  "archive": {
+    "name": "El_Viento_Batch01_Loops_GIFs.zip",
+    "drive_id": "1iqr5GUquRItE9jjgfa8WzcJN7LQPVBh5",
+    "sha256": "0a4b9190810109641b6ff77c23dac767a6d12a074d64e91681e13fa445d4867d"
+  },
+  "motion_profile": {
+    "duration_seconds": 6,
+    "fps": 24,
+    "resolution": "1920x1080",
+    "loop_type": "periodic bounded camera drift",
+    "behavior": [
+      "micro push/pull",
+      "subtle lateral drift",
+      "subtle light breathing",
+      "no subject morphing",
+      "no generated geometry"
+    ]
+  },
+  "assets": [
+    {
+      "shot_id": "R4-B01-S01",
+      "source": "01_fortress_hero_at_sunset.png",
+      "loop": "01_loop_6s_1080p.mp4",
+      "gif": "01_loop_preview.gif"
+    },
+    {
+      "shot_id": "R4-B01-S02",
+      "source": "02_rainlit_harbor_romance.png",
+      "loop": "02_loop_6s_1080p.mp4",
+      "gif": "02_loop_preview.gif"
+    },
+    {
+      "shot_id": "R4-B01-S03",
+      "source": "03_memory_gate_of_gold_and_rain.png",
+      "loop": "03_loop_6s_1080p.mp4",
+      "gif": "03_loop_preview.gif"
+    },
+    {
+      "shot_id": "R4-B01-S04",
+      "source": "04_threads_of_memory_at_sunset.png",
+      "loop": "04_loop_6s_1080p.mp4",
+      "gif": "04_loop_preview.gif"
+    }
+  ],
+  "alternates_not_yet_looped": [
+    "05_glowing_thread_across_harbor.png",
+    "06_threads_of_time_hearts_of_gold.png",
+    "07_threads_across_twilight_coast.png",
+    "08_threads_through_time_by_sea.png",
+    "09_tapestry_world.png",
+    "10_threads_of_destiny_at_sunset.png"
+  ],
+  "next_step": "Create Batch 01 movement-effect variants from these four loops using the approved/new movement method, then compare against the clean loops before applying the heavier FX proof stack."
+}
