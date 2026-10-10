@@ -1,0 +1,41 @@
+name: "Director2 — Canonical FX Runtime Package"
+on:
+  push:
+    branches:
+      - song/el-viento-trae-tu-nombre
+    paths:
+      - .github/workflows/director2-canonical-fx-package.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  package-main-fx:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout immutable verified main (read-only)
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: 900e3e5749ed6fa13ad91524975a9e64661e6649
+          path: engine
+          persist-credentials: false
+      - name: Package FX V2 runtime and registry from protected main
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git -C engine rev-parse HEAD)" = 900e3e5749ed6fa13ad91524975a9e64661e6649
+          mkdir -p export
+          cp -a engine/general export/general
+          cp -a engine/scripts export/scripts
+          cp -a engine/bootstrap.py export/bootstrap.py
+          find export -type f -name '*.pyc' -delete
+          printf '{"schema":"director2.canonical-fx-runtime.v1","main_sha":"900e3e5749ed6fa13ad91524975a9e64661e6649","purpose":"source-verified local Director2 FX proof generation; does not authorize final film"}\n' > export/RUNTIME_ORIGIN.json
+          (cd export && zip -q -r ../director2-canonical-main-fx.zip .)
+          sha256sum director2-canonical-main-fx.zip
+      - name: Export immutable MainV2 FX runtime
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: director2-main-fx-runtime
+          path: director2-canonical-main-fx.zip
+          retention-days: 7
+          if-no-files-found: error
