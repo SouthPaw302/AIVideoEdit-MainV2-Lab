@@ -5,11 +5,33 @@ let systemState = null;
 let coreState = null;
 let productionState = null;
 let approachState = null;
+let studioAuthPromise = null;
 
-async function api(url, options) {
-  const res = await fetch(url, options);
+async function establishStudioSession() {
+  if (studioAuthPromise) return studioAuthPromise;
+  studioAuthPromise = (async () => {
+    const token = window.prompt('Enter the AIVideoEdit Studio access token.');
+    if (!token) throw new Error('Studio authorization is required.');
+    const res = await fetch('/api/auth/session', {
+      method: 'POST', credentials: 'same-origin',
+      headers: {'Authorization': `Bearer ${token}`}
+    });
+    let body = null;
+    try { body = await res.json(); } catch (_) {}
+    if (!res.ok) throw new Error(body?.error || 'Studio authorization failed.');
+  })();
+  try { await studioAuthPromise; } finally { studioAuthPromise = null; }
+}
+
+async function api(url, options = {}, retryAuth = true) {
+  const request = {...options, credentials: 'same-origin'};
+  const res = await fetch(url, request);
   let body = null;
   try { body = await res.json(); } catch (_) {}
+  if (res.status === 401 && body?.auth_required && retryAuth) {
+    await establishStudioSession();
+    return api(url, options, false);
+  }
   if (!res.ok) throw new Error(body?.error || `${res.status} ${res.statusText}`);
   return body;
 }
