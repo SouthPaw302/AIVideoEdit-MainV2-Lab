@@ -1,0 +1,115 @@
+{
+  "schema": "aivideoedit.director-proof-receipt.v1",
+  "production_id": "el-viento-lab-new-director",
+  "version": "director2",
+  "status": "TECHNICAL_PROOF_RENDERED__DIRECTOR_VISUAL_REVIEW_PENDING",
+  "created_date_utc": "2026-10-10",
+  "production_branch": "song/el-viento-trae-tu-nombre",
+  "source_branch_sha": "804f362e7f9e09b82a9889d221e63555ff10dc1f",
+  "canonical_main_sha": "900e3e5749ed6fa13ad91524975a9e64661e6649",
+  "director_boot": {
+    "status": "PASS",
+    "run_id": 38038907861,
+    "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38038907861"
+  },
+  "source_audio": {
+    "name": "El Viento trae tu nombre.wav",
+    "duration_seconds": 154.48,
+    "drive_id": "1M6uRTeYejXxn2rSDkTJu5H0_LiWrdwN4",
+    "sha256": "8d967101c875868b64207bd43bfbc507c0a958989bbc560c2edb0024b15877cb"
+  },
+  "proof": {
+    "name": "El_Viento_Director2_15s_Proof.mp4",
+    "duration_seconds": 15,
+    "frames": 360,
+    "fps": 24,
+    "width": 960,
+    "height": 540,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "size_bytes": 956571,
+    "sha256": "8406f98dca2af143b051032cd9765a8f858179939861c0971262471512626b1d",
+    "drive_id": "1AW6rIJn5eHWKskKOWR9d9GzpVsfETIDw",
+    "drive_url": "https://drive.google.com/file/d/1AW6rIJn5eHWKskKOWR9d9GzpVsfETIDw/view?usp=drivesdk",
+    "generated_by": "LOCAL_SANDBOX_FFMPEG_OPENCV__NOT_PARALLEL_GITHUB_RUNNER",
+    "human_approved": false,
+    "final_film": false
+  },
+  "shots": [
+    {
+      "shot_id": "B01-S01",
+      "range_seconds": [
+        0,
+        8
+      ],
+      "source_kind": "previous_accepted_for_proof_generated_still_and_local_motion_proof",
+      "input_video_sha256": "985501f20e0acf40c7ca1bb64a77eb19c4a0f2e65d00471a0141204983f1c3b5",
+      "source_still_drive_id": "1ooguf49na8WdS17veXGPOtNpTRvDrYVY",
+      "input_video_drive_id": "1zkannvNYH2McA39pd31H55GZb3BcuvAd",
+      "scene": "2026 storm fort, lantern and sealed letter",
+      "motion": "localized ocean displacement and practical lantern light",
+      "protected": "fort architecture, stones, envelope and lamp geometry"
+    },
+    {
+      "shot_id": "B01-S02",
+      "range_seconds": [
+        8,
+        15
+      ],
+      "source_kind": "newly_generated_image_derived_crop",
+      "source_note": "Second image was generated for Director2; the title-lettering area was excluded by a static crop. Only letter bundle, woman's sleeve and lantern occupy the close frame.",
+      "source_still_sha256": "e8f7bd0ffe16c58e0c0c956efc34ba36cd53edcb35dd796bff81ef7a6c5b0651",
+      "source_still_drive_id": "18qNdfuWAgqDgDAFaY2q3aCtTkIwSnuza",
+      "fx_video_sha256": "2d11e7526f668cad6419396bda66c82b8c9607b269a76c8c4ff23bb5443380dc",
+      "scene": "1980 memory: undelivered letters and lantern at harbor parapet",
+      "motion": "tiny isolated lantern flicker and distant water motion only",
+      "protected": "body, hands, letter geometry; no implied animated hand lift",
+      "creative_change_from_initial_plan": "Close letter-and-lantern memory insert replaces proposed hand-lift action in this 15s proof ONLY; later canonical production plan remains subject to Director/user visual approval."
+    }
+  ],
+  "contact_sheet": {
+    "drive_id": "1rsebcWDfdsvL9e0owDw1M5Z0upMSP9Kv",
+    "url": "https://drive.google.com/file/d/1rsebcWDfdsvL9e0owDw1M5Z0upMSP9Kv/view?usp=drivesdk",
+    "sample_times_seconds": [
+      0.5,
+      4,
+      7.5,
+      8.5,
+      11.5,
+      14.5
+    ]
+  },
+  "qc": {
+    "checks": {
+      "duration": "PASS",
+      "resolution_fps": "PASS",
+      "playable_video": "PASS",
+      "audio_track_present": "PASS",
+      "blackdetect_over_0_4_seconds": "NO_BLACK_SEGMENTS_FOUND",
+      "source_audio_sha256": "PASS",
+      "drive_uploaded_byte_count_matches_local": "PASS"
+    },
+    "inspected_visual_scope": "six spaced contact frames and the two source stills; not a full normal-speed director screening",
+    "artistic_acceptance": "PENDING",
+    "canonical_fx_executor_execution_receipts": "NOT_CLAIMED",
+    "runner_authenticated_staging": "NOT_PROVEN"
+  },
+  "full_film": {
+    "status": "NOT_RENDERED",
+    "target_audio_seconds": 154.48,
+    "remaining_gates": [
+      "new song-specific complete script and new source shot coverage",
+      "FX-gated batches of verified real media",
+      "authenticated GitHub Actions staging and SHA verification",
+      "director harness and FX execution receipts",
+      "short real runner proof before parallel 154s render",
+      "full normal-speed director and human review"
+    ]
+  },
+  "preservation": {
+    "no_change_to_main": true,
+    "previous_route4_and_published_master_untouched": true,
+    "no_metadata_only_shot_claim": true
+  },
+  "notes": "A technical proof is not a Director Brain stage promotion and not user artistic approval. PROJECT_STATE.json remains in its guarded initial state until new production's stage evidence is complete."
+}
