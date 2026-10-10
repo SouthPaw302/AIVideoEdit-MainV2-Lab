@@ -1,0 +1,147 @@
+{
+  "schema": "aivideoedit.lab-song-port-prep.v1",
+  "status": "SOURCE_CANON_IMPORTED_IDENTICALLY__MEDIA_PREFLIGHT_PENDING__RENDER_FORBIDDEN",
+  "project_id": "el-viento-trae-tu-nombre",
+  "branch": "song/el-viento-trae-tu-nombre",
+  "transfer": {
+    "origin_repo": "SouthPaw302/AIVideoEdit",
+    "origin_branch": "song/el-viento-trae-tu-nombre",
+    "origin_commit_sha": "2f382a87ea646a024cecac98be070c44cfd010ed",
+    "origin_project_git_tree_sha": "5ed9d342b432d8f957a5d06a319a40f2e12a99b7",
+    "import_verified_commit_sha": "6d1931d739c42a2c0c9fe612d8a2c7c32ce42a25",
+    "imported_file_count": 218,
+    "comparison": "ALL_GIT_BLOB_IDS_MATCH",
+    "lab_main_engine_sha_at_port": "900e3e5749ed6fa13ad91524975a9e64661e6649",
+    "legacy_workflow_archived_at": "projects/el-viento-trae-tu-nombre/archive/EL_VIENTO_FX_LOCK_UPSTREAM_WORKFLOW.yml"
+  },
+  "authority": {
+    "active_route": "route4-two-heroes",
+    "user_directed": true,
+    "production_mode": "hybrid",
+    "canon_locked": true,
+    "edit_locked": true,
+    "source_regeneration_authorized": false,
+    "new_batch_authorized": false,
+    "artistic_acceptance": "PENDING_FULL_NORMAL_SPEED_REVIEW"
+  },
+  "exact_edit": {
+    "frames": 3705,
+    "fps": 24,
+    "duration_seconds": 154.375,
+    "size": [
+      1920,
+      1080
+    ],
+    "timeline_sections": [
+      {
+        "id": "R4-B01",
+        "first_frame": 0,
+        "last_frame": 515,
+        "frames": 516,
+        "mode": "living_scene",
+        "source_lock": "refinements/route4-two-heroes/shot_locks/BATCH_01_OPENING_REMEMBRANCE.json"
+      },
+      {
+        "id": "R4-B02",
+        "first_frame": 516,
+        "last_frame": 1031,
+        "frames": 516,
+        "mode": "living_scene",
+        "source_lock": "refinements/route4-two-heroes/shot_locks/BATCH_02_DISTANCE_AND_ORIGIN.json"
+      },
+      {
+        "id": "R4-B03",
+        "first_frame": 1032,
+        "last_frame": 1547,
+        "frames": 516,
+        "mode": "living_scene",
+        "source_lock": "refinements/route4-two-heroes/shot_locks/BATCH_03_VERSE3_EXPANSION.json"
+      },
+      {
+        "id": "R4-B04",
+        "first_frame": 1548,
+        "last_frame": 2063,
+        "frames": 516,
+        "mode": "living_scene",
+        "source_lock": "refinements/route4-two-heroes/shot_locks/BATCH_04_REMEMBERED_PRESENCE.json"
+      },
+      {
+        "id": "R4-B05",
+        "first_frame": 2064,
+        "last_frame": 2547,
+        "frames": 484,
+        "mode": "living_scene",
+        "source_lock": "refinements/route4-two-heroes/shot_locks/BATCH_05_CHORUS_CREST.json"
+      },
+      {
+        "id": "R4-B06",
+        "first_frame": 2548,
+        "last_frame": 2703,
+        "frames": 156,
+        "mode": "cinematic",
+        "source_lock": "refinements/route4-two-heroes/shot_locks/BATCH_06_RELEASE_TO_BLACK.json"
+      },
+      {
+        "id": "R4-EXTENDED-ACT",
+        "first_frame": 2704,
+        "last_frame": 3704,
+        "frames": 1001,
+        "mode": "living_scene"
+      }
+    ],
+    "total_sections": 7,
+    "original_source_audio_duration_seconds": 154.48,
+    "obsolete_timeline_seconds": 112.68,
+    "obsolete_timeline_authority": "ARCHIVE_ONLY"
+  },
+  "media": {
+    "asset_manifest_records": 50,
+    "current_audio": {
+      "drive_id": "1M6uRTeYejXxn2rSDkTJu5H0_LiWrdwN4",
+      "name": "El Viento trae tu nombre.wav",
+      "recorded_sha256": "8d967101c875868b64207bd43bfbc507c0a958989bbc560c2edb0024b15877cb",
+      "recorded_size_bytes": 29674010,
+      "drive_metadata_seen": true,
+      "runner_https_auth_staging_verified": false,
+      "hash_independently_checked_here": false,
+      "access": "PRIVATE_GOOGLE_DRIVE"
+    },
+    "legacy_audio_inventory_record": {
+      "id": "SRC-AUDIO-001",
+      "sha256": "bb26a35eaf2910531fc9ae057dd04c9315a6ad62425bd8267b9eb826a19c01e5",
+      "name": "El Viento trae tu nombre (Remastered).wav",
+      "status": "DO_NOT_SUBSTITUTE_FOR_CURRENT_MUX_AUTHORITY"
+    },
+    "current_1080_fx_candidate": {
+      "name": "El_Viento_Route4_1080p_FX_MASTER_v6.mp4",
+      "recorded_sha256": "5fe93ef79d528a27cb7a15003aac9e9bc50a0db40a6719a102d36d5f10314af0",
+      "recorded_frames": 3705,
+      "recorded_duration_seconds": 154.375,
+      "recorded_technical_qc": "PASS_SOURCE_RECORD_ONLY",
+      "creative_review": "PENDING",
+      "locator": "session:///mnt/data/El_Viento_Route4_1080p_FX_MASTER_v6.mp4",
+      "accessible_from_lab_runner": false
+    },
+    "hero_assets": {
+      "source_record_count": 50,
+      "drive_access": "one_or_more_private_assets_metadata_confirmed",
+      "all_media_staged": false,
+      "all_hashes_verified_now": false
+    }
+  },
+  "render_manifest": {
+    "path": null,
+    "created": false,
+    "reason": "Do not fabricate runnable source/shot locators or self-authorize rendering; require original-media byte staging and exact render recipe before adding canonical RENDER_MANIFEST.json.",
+    "authorization": "NOT_GRANTED_BY_CURRENT_USER"
+  },
+  "next_steps_before_render": [
+    "Run fresh bootstrap and Lab production/narrative/recut/workflow guards on this song branch; log failures without rewriting locked canon",
+    "Confirm and stage current 154.48-second original WAV with recorded SHA-256 and all required hero/loop/layer/live-motion media; private Drive links are not public signed staging URLs",
+    "Locate exact saved 1080p FX candidate or accepted previous edit by hash and verify review playback; the historical session:/// path is non-portable",
+    "Reconcile 154.375-second current script timeline versus archived 112.68-second shot packages and stale FX requirements/lock; preserve Route 4 heroes, pacing, audio, protected regions, accepted plates",
+    "Construct canonical aivideoedit.real-render.v1 manifest from actually available, byte-verified source media, with distinct new candidate destination; test coverage, hashes, current registry FX and toolchain without encoding",
+    "Wait for explicit new user instruction authorizing rendering. Until then do NOT dispatch GitHub Actions render, create media, upscale, publish or mark human creative acceptance."
+  ],
+  "run_guard": "FAIL_CLOSED__NO_RENDER__NO_PUBLISH__NO_4K__NO_MAIN_WRITES"
+}

@@ -1,0 +1,88 @@
+name: El Viento FX Lock
+
+on:
+  push:
+    branches:
+      - song/el-viento-trae-tu-nombre
+    paths:
+      - projects/el-viento-trae-tu-nombre/FX_REQUIREMENTS.json
+      - .github/workflows/el-viento-fx-lock.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  lock:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout song branch
+        uses: actions/checkout@v4
+        with:
+          ref: song/el-viento-trae-tu-nombre
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install FX gate runtime dependencies
+        run: python -m pip install --disable-pip-version-check numpy opencv-python-headless
+
+      - name: Boot AIVideoEdit OS
+        run: python bootstrap.py boot --repo-root .
+
+      - name: Generate canonical FX lock
+        run: |
+          python general/reusable/fx_v2/precompile_gate.py \
+            --manifest projects/el-viento-trae-tu-nombre/FX_REQUIREMENTS.json \
+            --registry general/reusable/fx_v2/registry.json \
+            --proof-dir general/reusable/fx_v2/proofs \
+            --runtime general/reusable/fx_v2/runtime.py \
+            --lock-out projects/el-viento-trae-tu-nombre/fx.lock.json
+
+      - name: Verify canonical FX lock
+        run: |
+          python general/reusable/fx_v2/precompile_gate.py \
+            --manifest projects/el-viento-trae-tu-nombre/FX_REQUIREMENTS.json \
+            --registry general/reusable/fx_v2/registry.json \
+            --proof-dir general/reusable/fx_v2/proofs \
+            --runtime general/reusable/fx_v2/runtime.py \
+            --verify-lock projects/el-viento-trae-tu-nombre/fx.lock.json
+
+      - name: Advance production state
+        run: |
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          root=Path("projects/el-viento-trae-tu-nombre")
+          lock=root/"fx.lock.json"
+          state=json.loads((root/"PROJECT_STATE.json").read_text())
+          digest=hashlib.sha256(lock.read_bytes()).hexdigest()
+          state["stage"]="FX_LOCKED"
+          state["fx_lock_verified"]=True
+          state["fx_lock_sha256"]=digest
+          state["fx_lock_verified_at"]="2026-09-22T06:50:00Z"
+          (root/"PROJECT_STATE.json").write_text(json.dumps(state,indent=2)+"\n")
+          (root/"STATUS.md").write_text(
+              "# Status\n\nMachine stage: **FX_LOCKED**.\n\n"
+              "The canonical FX v2 precompile gate generated and verified `fx.lock.json` "
+              "against current-main runtime, registry, proof media, and all declared render inputs.\n\n"
+              "A full-length 1920x1080 master candidate already exists and passed technical QC. "
+              "Next: verify/promote a post-lock assembly and run final mode-aware QC.\n"
+          )
+          print(digest)
+          PY
+
+      - name: Commit verified lock
+        run: |
+          if git diff --quiet -- projects/el-viento-trae-tu-nombre/fx.lock.json projects/el-viento-trae-tu-nombre/PROJECT_STATE.json projects/el-viento-trae-tu-nombre/STATUS.md; then
+            echo "No FX lock changes to commit"
+            exit 0
+          fi
+          git config user.name "AIVideoEdit Actions"
+          git config user.email "actions@users.noreply.github.com"
+          git add projects/el-viento-trae-tu-nombre/fx.lock.json projects/el-viento-trae-tu-nombre/PROJECT_STATE.json projects/el-viento-trae-tu-nombre/STATUS.md
+          git commit -m "Lock verified El Viento production FX"
+          git push origin HEAD:song/el-viento-trae-tu-nombre
