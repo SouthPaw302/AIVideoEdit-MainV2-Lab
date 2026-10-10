@@ -86,5 +86,49 @@ class DirectorScanEvidenceTests(unittest.TestCase):
         data["scope"]["accepted_baseline_sha256"] = None
         self.assertTrue(any("locked baseline" in e for e in scan.verify_record(data)))
 
+
+    def test_sampled_viewing_cannot_accept_artistic_verdict(self):
+        data = sample(); data["verdict"]["artistic"] = "accepted"
+        self.assertTrue(any("requires documented full_normal_speed" in e for e in scan.verify_record(data)))
+
+    def test_segment_viewing_cannot_accept_with_caveats(self):
+        data = sample()
+        data["viewing"]["method"] = "segments"
+        data["verdict"]["artistic"] = "accepted_with_caveats"
+        data["verdict"]["caveats"] = ["One late shot needs motion repair"]
+        self.assertTrue(any("full_normal_speed" in e for e in scan.verify_record(data)))
+
+    def test_full_normal_speed_viewing_can_be_evidence_complete_not_release(self):
+        data = sample()
+        data["viewing"].update({"method": "full_normal_speed", "entire_normal_speed": True})
+        data["verdict"]["artistic"] = "accepted"
+        self.assertEqual(scan.verify_record(data), [])
+        self.assertEqual(data["verdict"]["authenticated_release"], "pending")
+
+    def test_schema_missing_required_verdict_notes_fails(self):
+        data = sample(); del data["verdict"]["notes"]
+        self.assertTrue(any("missing required property notes" in e for e in scan.verify_record(data)))
+
+    def test_schema_rejects_non_string_scoped_changes(self):
+        data = sample(); data["scope"]["allowed_changes"] = [True, 123]
+        self.assertTrue(any("wrong JSON type" in e for e in scan.verify_record(data)))
+
+    def test_schema_rejects_unknown_fields(self):
+        data = sample(); data["viewing"]["unverified_watch_claim"] = True
+        self.assertTrue(any("unexpected property" in e for e in scan.verify_record(data)))
+
+    def test_schema_rejects_boolean_as_number(self):
+        data = sample(); data["candidate"]["frames"] = True
+        self.assertTrue(any("wrong JSON type" in e for e in scan.verify_record(data)))
+
+    def test_schema_rejects_invalid_optional_hash(self):
+        data = sample(); data["scope"]["accepted_baseline_sha256"] = "not-a-hash"
+        self.assertTrue(any("fails schema pattern" in e for e in scan.verify_record(data)))
+
+    def test_schema_rejects_invalid_caveat_item(self):
+        data = sample(); data["verdict"]["caveats"] = [5]
+        self.assertTrue(any("wrong JSON type" in e for e in scan.verify_record(data)))
+
+
 if __name__ == "__main__":
     unittest.main()

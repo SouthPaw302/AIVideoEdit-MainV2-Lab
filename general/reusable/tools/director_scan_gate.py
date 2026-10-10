@@ -22,12 +22,97 @@ STATUSES = {"pass", "warn", "fail", "not_applicable"}
 ARTISTIC = {"pending", "repair_required", "accepted_with_caveats", "accepted"}
 
 
+
+def _matches_type(value, wanted: str) -> bool:
+    """Follow JSON Schema's primitive types (bool is not a JSON integer)."""
+    if wanted == "object":
+        return isinstance(value, dict)
+    if wanted == "array":
+        return isinstance(value, list)
+    if wanted == "string":
+        return isinstance(value, str)
+    if wanted == "null":
+        return value is None
+    if wanted == "boolean":
+        return isinstance(value, bool)
+    if wanted == "integer":
+        return isinstance(value, int) and not isinstance(value, bool)
+    if wanted == "number":
+        return isinstance(value, (float, int)) and not isinstance(value, bool)
+    raise ValueError("Unsupported Director scan schema type: " + wanted)
+
+
+def _validate_schema_node(value, rule: dict, location: str) -> list[str]:
+    """Validate *all keywords used by* DIRECTOR_SCAN_RECORD.schema.json.
+
+    Fail closed if the schema grows outside this stdlib validator's supported
+    vocabulary. This prevents runtime/schema drift without extra dependencies.
+    """
+    errs = []
+    supported = {
+        "$schema", "title", "description", "type", "const", "enum", "required",
+        "properties", "additionalProperties", "minLength", "pattern", "items",
+        "minimum", "exclusiveMinimum",
+    }
+    unknown = set(rule) - supported
+    if unknown:
+        return [f"{location}: unsupported schema keywords: {sorted(unknown)}"]
+    types = rule.get("type")
+    if types is not None:
+        allowed = types if isinstance(types, list) else [types]
+        if not any(_matches_type(value, x) for x in allowed):
+            return [f"{location}: wrong JSON type; expected {types!r}"]
+    if "const" in rule and value != rule["const"]:
+        errs.append(f"{location}: schema constant mismatch")
+    if "enum" in rule and value not in rule["enum"]:
+        errs.append(f"{location}: value not in schema enum")
+    if isinstance(value, dict):
+        for key in rule.get("required", []):
+            if key not in value:
+                errs.append(f"{location}: missing required property {key}")
+        properties = rule.get("properties", {})
+        if rule.get("additionalProperties") is False:
+            for key in value:
+                if key not in properties:
+                    errs.append(f"{location}: unexpected property {key}")
+        for key, item in value.items():
+            if key in properties:
+                errs.extend(_validate_schema_node(item, properties[key], f"{location}.{key}"))
+    elif isinstance(value, list):
+        item_rule = rule.get("items")
+        if isinstance(item_rule, dict):
+            for index, item in enumerate(value):
+                errs.extend(_validate_schema_node(item, item_rule, f"{location}[{index}]"))
+    elif isinstance(value, str):
+        if "minLength" in rule and len(value) < rule["minLength"]:
+            errs.append(f"{location}: shorter than schema minLength")
+        if "pattern" in rule and re.search(rule["pattern"], value) is None:
+            errs.append(f"{location}: fails schema pattern")
+    elif isinstance(value, (int, float)) and not isinstance(value, bool):
+        if "minimum" in rule and value < rule["minimum"]:
+            errs.append(f"{location}: below schema minimum")
+        if "exclusiveMinimum" in rule and value <= rule["exclusiveMinimum"]:
+            errs.append(f"{location}: below schema exclusiveMinimum")
+    return errs
+
+
+def _validate_declared_schema(record: dict) -> list[str]:
+    path = Path(__file__).resolve().parents[1] / "DIRECTOR_SCAN_RECORD.schema.json"
+    try:
+        schema = json.loads(path.read_text(encoding="utf-8"))
+    except (ValueError, OSError) as exc:
+        return [f"Director scan schema unavailable or invalid: {exc}"]
+    return _validate_schema_node(record, schema, "$")
+
+
+
 def verify_record(record: object) -> list[str]:
     errors: list[str] = []
     if not isinstance(record, dict):
         return ["director scan record must be an object"]
     if record.get("schema") != SCHEMA:
         errors.append("director scan schema mismatch")
+    errors.extend(_validate_declared_schema(record))
     candidate = record.get("candidate")
     candidate = candidate if isinstance(candidate, dict) else {}
     if not str(candidate.get("locator") or "").strip():
@@ -99,6 +184,8 @@ def verify_record(record: object) -> list[str]:
     if art == "accepted_with_caveats" and not caveats:
         errors.append("accepted_with_caveats requires named caveats")
     if art in {"accepted", "accepted_with_caveats"}:
+        if method != "full_normal_speed" or whole is not True:
+            errors.append("artistic acceptance requires documented full_normal_speed viewing")
         if any(isinstance(checks.get(c), dict) and checks[c].get("status") == "fail" for c in CHECKS):
             errors.append("accepted artistic verdict contradicts a failing scan check")
         if not str(viewing.get("reviewer") or "").strip():
