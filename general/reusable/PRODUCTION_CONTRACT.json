@@ -191,7 +191,31 @@
   },
   "delivery_mastering_policy": {
     "separate_artistic_and_platform_master_when_packaging_changes": true,
-    "platform_packaging_must_not_overwrite_accepted_artistic_master": true
+    "platform_packaging_must_not_overwrite_accepted_artistic_master": true,
+    "content_addressed_delivery_manifest_required": true,
+    "directly_playable_files_must_be_distinguished_from_transfer_parts": true,
+    "silent_title_lead_in_and_outro_must_be_frame_accounted": true,
+    "optional_audio_remaster_must_preserve_original_audio_and_measured_sync": true,
+    "review_proxies_are_never_release_masters": true,
+    "release_eligible_4k_parent_must_be_exact_accepted_artistic_master": true,
+    "4k_derivative_must_preserve_edit_frame_count_fps_duration_and_audio_identity": true,
+    "delivery_archive_schema": "aivideoedit.delivery-archive.v1",
+    "delivery_archive_validator": "prototype/backend_gui/delivery_archive.py"
+  },
+  "delivery_lifecycle_policy": {
+    "states": [
+      "DIRECTOR_REJECTED",
+      "REVISION_REQUIRED",
+      "DIRECTOR_RECOMMENDED",
+      "HUMAN_ACCEPTED",
+      "RELEASE_AUTHORIZED",
+      "RELEASED",
+      "SUPERSEDED",
+      "WITHDRAWN"
+    ],
+    "human_acceptance_is_not_release_authorization": true,
+    "release_authorization_requires_authenticated_hash_bound_approval": true,
+    "released_masters_are_immutable_and_may_only_be_superseded_or_withdrawn": true
   },
   "creative_acceptance_policy": {
     "technical_pass_is_not_artistic_acceptance": true,

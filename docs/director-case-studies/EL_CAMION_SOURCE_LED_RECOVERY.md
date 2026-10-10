@@ -53,4 +53,4 @@ A Drive link to **Candidate 04** was mistakenly offered when the user asked to w
 9. Separately gate technical export, Director observations, user artistic acceptance, and authenticated final production release.
 10. Promote only **method**, not this production's imagery, storytelling, aesthetic, or identity, into the permanent OS.
 
-**Important status:** The user's conversational acceptance is not evidence of the GitHub release gate's required authenticated normal-speed whole-film watch, nor evidence that 4K upscale or YouTube upload occurred.
+**Important status:** The user's conversational acceptance is not the GitHub release gate's authenticated, exact-hash release token. A local 3840×2160 upscale exists at SHA `e4e922c3082589518d87a5ca2e068611c8f766e9f6eacf761e448afd7a32c373`, but forensic frame/audio comparison binds it to the 720p streaming proxy, not directly to the accepted lossless 1080p master. It is preserved as a review-only derivative and cannot be promoted as the release 4K. The authoritative content-addressed record is [EL_CAMION_DELIVERY_ARCHIVE.json](EL_CAMION_DELIVERY_ARCHIVE.json).

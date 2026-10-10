@@ -1,0 +1,249 @@
+{
+  "schema": "aivideoedit.delivery-archive.v1",
+  "project_id": "el-camion-y-la-carretera",
+  "created_at": "2026-10-10T00:00:00-04:00",
+  "authority": {
+    "source_branch": "song/camion-new",
+    "source_commit": "816651fb5112d0428d3f6ff64a229fcaf74be22d",
+    "engine_commit": "a6664820281398614a2fae1abd8e483361845a25",
+    "source_led_renderer_commit": "e46155a8b3fce9c885e096172af1a9c8da671622",
+    "production_folder": "https://drive.google.com/drive/folders/1xvw2_HzWOxHfYgkduDrTvejeCiVMrT9E"
+  },
+  "lifecycle": {
+    "state": "HUMAN_ACCEPTED",
+    "history": [
+      {
+        "state": "DIRECTOR_RECOMMENDED",
+        "evidence": "bounded final artistic compile and technical QC"
+      },
+      {
+        "state": "HUMAN_ACCEPTED",
+        "evidence": "user conversational acceptance with retained true-motion caveats"
+      }
+    ]
+  },
+  "release_approval": {
+    "authenticated": false,
+    "comment_url": null,
+    "approved_sha256": null,
+    "release_authorized": false,
+    "reason": "Human artistic acceptance is preserved, but no authenticated release token binds the exact accepted master."
+  },
+  "timeline": {
+    "fps": 24,
+    "frame_count": 6980,
+    "duration_seconds": 290.8333333333333,
+    "audio_start_seconds": 4.0,
+    "audio_duration_seconds": 282.8333333333333,
+    "section_frames": {
+      "silent_intro": 96,
+      "opening_replacement": 60,
+      "protected_song_core": 6656,
+      "ending_replacement": 72,
+      "silent_outro": 96
+    }
+  },
+  "title_qc": {
+    "exact_strings": [
+      "MOUNTAIN NOIR",
+      "@MotañaNegra"
+    ],
+    "safe_area_pass": true,
+    "typography_review": "PASS",
+    "title_pause_preserved": true,
+    "source_derived_backgrounds": true
+  },
+  "audio_qc": {
+    "decoded_correlation": 0.9999814629554749,
+    "best_lag_samples": 0,
+    "silent_intro_max_amplitude": 0,
+    "source_master_preserved": true,
+    "review_proxy_and_local_4k_decoded_pcm_sha256": "51a748b70fad5cb0a1a8f80e8216e0bf5afb7842781ee27725d3847670715686",
+    "review_proxy_and_local_4k_compressed_audio_sha256": "f9be76e98fecdb8755ef2c716ce26d8bb67126aa8437e36e3e89ed5702b1c682"
+  },
+  "lineage": {
+    "accepted_master_id": "artistic-master-1080",
+    "review_proxy_id": "streaming-review-720",
+    "platform_4k_id": "local-review-upscale-4k",
+    "audio_master_id": "safety-audio-master",
+    "thumbnail_ids": [
+      "final-qc-contact"
+    ],
+    "proof_ids": [
+      "final-technical-qc",
+      "candidate04-motion-qc",
+      "candidate04-source-index",
+      "audio-master-qc"
+    ]
+  },
+  "artifacts": [
+    {
+      "id": "artistic-master-1080",
+      "role": "accepted_artistic_master",
+      "filename": "El_Camion_FINAL_ARTISTIC_1080p_4K_HANDOFF.mp4",
+      "sha256": "1bc4a7c3acf6d65154de4a74fe6a295296cb5851bfde90b89b5e8a09ad967e6f",
+      "size_bytes": 178592477,
+      "access": "lossless_transfer_parts",
+      "directly_playable": false,
+      "locator": "https://drive.google.com/file/d/10mqeVYFqHSdJguUZC6w6aco1zope3ZWI/view?usp=drivesdk",
+      "media": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 24,
+        "frame_count": 6980,
+        "duration_seconds": 290.8333333333333,
+        "edit_identity": "el-camion-final-artistic-6980-v1"
+      },
+      "parts": [
+        {
+          "filename": "El_Camion_FINAL_ARTISTIC_1080p_4K_HANDOFF.mp4.part01",
+          "size_bytes": 30000000,
+          "sha256": "814a4fdc39b41f06b2a4faaef8757236434d65e3414b836bcc65c63c4866613e"
+        },
+        {
+          "filename": "El_Camion_FINAL_ARTISTIC_1080p_4K_HANDOFF.mp4.part02",
+          "size_bytes": 30000000,
+          "sha256": "e1c21e77706033c0f78c8369507c981d5d459009c917421d1ec8f139261a8da3"
+        },
+        {
+          "filename": "El_Camion_FINAL_ARTISTIC_1080p_4K_HANDOFF.mp4.part03",
+          "size_bytes": 30000000,
+          "sha256": "96dfb1547a8276323ec1b50a066b116afebe0b38830c684dbb3add5b483c5207"
+        },
+        {
+          "filename": "El_Camion_FINAL_ARTISTIC_1080p_4K_HANDOFF.mp4.part04",
+          "size_bytes": 30000000,
+          "sha256": "adfd95da5c64eaf3f1dbb82577957ceb4e07c72738db2c704ef6768146694872"
+        },
+        {
+          "filename": "El_Camion_FINAL_ARTISTIC_1080p_4K_HANDOFF.mp4.part05",
+          "size_bytes": 30000000,
+          "sha256": "8bf7123dbf0eb0ced43f72896fcaf34e8349badcfc505f83f83e4fd5a0500efc"
+        },
+        {
+          "filename": "El_Camion_FINAL_ARTISTIC_1080p_4K_HANDOFF.mp4.part06",
+          "size_bytes": 28592477,
+          "sha256": "6e2313362cc6894fd0fe2b6784f13be182db3c397e83fd44fb6eaa4801c98db9"
+        }
+      ]
+    },
+    {
+      "id": "streaming-review-720",
+      "role": "review_proxy",
+      "filename": "El_Camion_FINAL_ARTISTIC_STREAMING_REVIEW_720p.mp4",
+      "sha256": "394f68ef1e7fca587e8074e201641d5daaaf288b4c0ffa4db92cb252401cfdc3",
+      "size_bytes": 45106025,
+      "access": "directly_playable",
+      "directly_playable": true,
+      "release_eligible": false,
+      "parent_sha256": "1bc4a7c3acf6d65154de4a74fe6a295296cb5851bfde90b89b5e8a09ad967e6f",
+      "audio_identity": "51a748b70fad5cb0a1a8f80e8216e0bf5afb7842781ee27725d3847670715686",
+      "locator": "https://drive.google.com/file/d/1Rqd-UZ6MU8VHFCb2I_4YIo0NTdzuu5yu/view?usp=drivesdk",
+      "media": {
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "frame_count": 6980,
+        "duration_seconds": 290.8333333333333,
+        "container_duration_seconds": 290.837,
+        "edit_identity": "el-camion-final-artistic-6980-v1"
+      }
+    },
+    {
+      "id": "local-review-upscale-4k",
+      "role": "platform_4k_derivative_review_only",
+      "filename": "El_Camion_4K_UHD.mp4",
+      "sha256": "e4e922c3082589518d87a5ca2e068611c8f766e9f6eacf761e448afd7a32c373",
+      "size_bytes": 792652976,
+      "access": "local_only",
+      "directly_playable": true,
+      "release_eligible": false,
+      "parent_sha256": "394f68ef1e7fca587e8074e201641d5daaaf288b4c0ffa4db92cb252401cfdc3",
+      "audio_identity": "51a748b70fad5cb0a1a8f80e8216e0bf5afb7842781ee27725d3847670715686",
+      "locator": "E:/Videos/Projects/Camion_Live/El_Camion_4K_UHD.mp4",
+      "lineage_note": "Exact local upscale of the 720p review proxy; preserved as review-only and prohibited as a release master.",
+      "media": {
+        "width": 3840,
+        "height": 2160,
+        "fps": 24,
+        "frame_count": 6980,
+        "duration_seconds": 290.8333333333333,
+        "container_duration_seconds": 290.837,
+        "edit_identity": "el-camion-final-artistic-6980-v1"
+      },
+      "visual_spot_check_ssim": {
+        "4": 0.996451,
+        "30": 0.995718,
+        "120": 0.997067,
+        "240": 0.996445,
+        "286": 0.996101
+      }
+    },
+    {
+      "id": "original-audio-master",
+      "role": "original_audio",
+      "filename": "El camión y el Camino (Remastered x2).wav",
+      "sha256": "6789e6f3ea52501a0d4a151296a6ef7f8abc8516acd1f6cec959213a028ec0d9",
+      "size_bytes": 54319130,
+      "access": "local_only",
+      "locator": "private-production-original-audio",
+      "duration_seconds": 282.84,
+      "sample_rate_hz": 48000,
+      "channels": 2
+    },
+    {
+      "id": "safety-audio-master",
+      "role": "audio_master",
+      "filename": "El_Camion_Candidate04_SAFETY_MASTER_24bit_48k.wav",
+      "sha256": "d9fa7e9c5491aefd279af5756d77efc7ee246df3cf1118f88f6c7067b14fe702",
+      "size_bytes": 81458094,
+      "access": "directly_playable",
+      "locator": "drive-folder-relative:El_Camion_Candidate04_SAFETY_MASTER_24bit_48k.wav"
+    },
+    {
+      "id": "final-technical-qc",
+      "role": "technical_qc",
+      "filename": "FINAL_ARTISTIC_QC_REPORT.json",
+      "sha256": "cbd109e3596bf9959612318e59f1311b9dfdc38e10833dd67d27738c220abe1d",
+      "size_bytes": 1792,
+      "access": "evidence",
+      "locator": "drive-folder-relative:FINAL_ARTISTIC_QC_REPORT.json"
+    },
+    {
+      "id": "final-qc-contact",
+      "role": "thumbnail",
+      "filename": "FINAL_ARTISTIC_QC_CONTACT.jpg",
+      "sha256": "9e16b782a33d6ec0e5a18292ddc3a5f231d0a5e9e954b228c379241a16189fa2",
+      "size_bytes": 670285,
+      "access": "directly_playable",
+      "locator": "drive-folder-relative:FINAL_ARTISTIC_QC_CONTACT.jpg"
+    },
+    {
+      "id": "candidate04-motion-qc",
+      "role": "motion_proof",
+      "filename": "Candidate04_DIRECTOR_motion_QC.json",
+      "sha256": "9312db45b42663546caf182809e8d314bcaa860be7fe382142d1ad8c01071e55",
+      "size_bytes": 8393,
+      "access": "evidence",
+      "locator": "drive-folder-relative:Candidate04_DIRECTOR_motion_QC.json"
+    },
+    {
+      "id": "candidate04-source-index",
+      "role": "source_inventory",
+      "filename": "Candidate04_verified_original_source_index.json",
+      "sha256": "992a5755049075bcf286f0a204df6ff6fdab97d0473e59a362af8cdbb4d3bbd7",
+      "size_bytes": 5436,
+      "access": "evidence",
+      "locator": "drive-folder-relative:Candidate04_verified_original_source_index.json"
+    },
+    {
+      "id": "audio-master-qc",
+      "role": "audio_qc",
+      "filename": "AUDIO_MASTER_QC.json",
+      "sha256": "9cdba85060203bd53632da130a853abb23ae40f3516d312a29a412ef01155033",
+      "size_bytes": 2121,
+      "access": "evidence",
+      "locator": "drive-folder-relative:AUDIO_MASTER_QC.json"
+    }
+  ]
+}
