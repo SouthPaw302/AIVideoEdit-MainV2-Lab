@@ -127,7 +127,10 @@
       "drive_access": "one_or_more_private_assets_metadata_confirmed",
       "all_media_staged": false,
       "all_hashes_verified_now": false
-    }
+    },
+    "staging_index_path": "projects/el-viento-trae-tu-nombre/LAB_MEDIA_STAGING_INDEX.json",
+    "registered_assets_private_drive": 46,
+    "registered_assets_historical_session_only": 4
   },
   "render_manifest": {
     "path": null,
