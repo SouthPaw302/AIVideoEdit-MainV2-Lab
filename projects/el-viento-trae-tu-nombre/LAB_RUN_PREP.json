@@ -120,7 +120,9 @@
       "recorded_technical_qc": "PASS_SOURCE_RECORD_ONLY",
       "creative_review": "PENDING",
       "locator": "session:///mnt/data/El_Viento_Route4_1080p_FX_MASTER_v6.mp4",
-      "accessible_from_lab_runner": false
+      "accessible_from_lab_runner": false,
+      "drive_part_count": 9,
+      "drive_parts_located": true
     },
     "hero_assets": {
       "source_record_count": 50,
@@ -130,7 +132,12 @@
     },
     "staging_index_path": "projects/el-viento-trae-tu-nombre/LAB_MEDIA_STAGING_INDEX.json",
     "registered_assets_private_drive": 46,
-    "registered_assets_historical_session_only": 4
+    "registered_assets_historical_session_only": 4,
+    "registered_assets_metadata_confirmed_in_drive": 46,
+    "master_v6_drive_parts_found": 9,
+    "master_v6_drive_parts_folder": "https://drive.google.com/drive/folders/1ojhQ1k4yDDA9o8h3bp2sP3YF5Cn-EuKu",
+    "drive_inventory_status": "ALL_INDEXED_DRIVE_FILES_LOCATED__RUNNER_STAGE_AND_CONTENT_HASH_PENDING",
+    "drive_inventory_report": "projects/el-viento-trae-tu-nombre/LAB_MEDIA_STAGING_INDEX.json"
   },
   "render_manifest": {
     "path": null,

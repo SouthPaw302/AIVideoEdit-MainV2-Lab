@@ -32,3 +32,9 @@ The original song-specific `.github/workflows/el-viento-fx-lock.yml` is archived
 5. **STOP before render dispatch.** Only a later explicit user instruction may enable `render_authorization=explicit_user_render_request`. The new run requires Director gate, FX review, then full normal-speed human acceptance; 4K and publication remain blocked.
 
 See `LAB_RUN_PREP.json` for machine-readable readiness and frame ranges. **Do not copy the original root engine, global workflows, or old FX executor over repaired Lab `main`.**
+
+## Drive audit correction — 2026-10-10
+
+The original production media **already exists in private Google Drive**. Metadata checks confirmed **46/46** source-manifest Drive-linked files with their expected names (11 primary stills, 20 FX variants/support assets, QC images and 11 original proof clips). The source WAV exists in [Music Files](https://drive.google.com/drive/folders/16mpp93CQp-JWlpg1_XFND291oXSoNvaw). The **V6 FX master is archived as nine separately playable MP4 pieces** in [V6 Playable MP4 Parts](https://drive.google.com/drive/folders/1ojhQ1k4yDDA9o8h3bp2sP3YF5Cn-EuKu), totaling 602,357,406 bytes across the nine distinct files. **Do not mistake those pieces for an already-reconstructed verified master**; the original whole-file candidate recorded 602,346,122 bytes and SHA-256 `5fe93ef79d528a27cb7a15003aac9e9bc50a0db40a6719a102d36d5f10314af0`. Verify the proper assembly/remux method and full source SHA before treating the combined picture as its counterpart.
+
+**Updated state:** MEDIA FOUND IN DRIVE; byte-by-byte SHA checking and runner-readable authenticated staging remain pending. The Lab branch now has exact Drive IDs under `LAB_MEDIA_STAGING_INDEX.json` to eliminate rediscovery. Do not upload duplicate assets, regenerate stills, attempt anonymous downloads, enable render authorization, or change the accepted edit. No render has been started.

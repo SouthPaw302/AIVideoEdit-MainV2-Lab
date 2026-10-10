@@ -27,7 +27,7 @@
       "sha256": "1247d73e41e3461ae42a1bb5821430015cf00369dc364fd79081d90bc2bc34f5",
       "drive_file_id": "1PLWQXsouCSMeWqYE0zK4g0aIO_kLv873",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "available"
     },
     {
@@ -38,7 +38,7 @@
       "sha256": "c44b5d13b63cab370de6399ebc5b5d1f082b97200ba8d781d9d3a750f3b8f7ae",
       "drive_file_id": "1uGAtadsrrFxzIB1npqjznolPaEIa4Rir",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "available"
     },
     {
@@ -49,7 +49,7 @@
       "sha256": "e8864ecbfb037fa156bfd7817190e98e605653bf77157d7c50a45b46dfc404af",
       "drive_file_id": "1xOGeTL3P9LnwW6fc3_cGkX6wJYyCml26",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "available"
     },
     {
@@ -60,7 +60,7 @@
       "sha256": "bf9adfd1844fd3a205a90f45868b594ca91cfeae6f91b12c18c97a1db2d9e43b",
       "drive_file_id": "1t7JplXyvZ6Rdg6_YU0YH0jXwDjH1gNmc",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "available"
     },
     {
@@ -71,7 +71,7 @@
       "sha256": "7cf92580d98ffb6bbbf0d9d6ec8949ab70461d173a17dc608dc89cd844f76885",
       "drive_file_id": "1LvdY8W5EHiA8vd9N1zpbPnHrxZhEfoSo",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "available"
     },
     {
@@ -82,7 +82,7 @@
       "sha256": "12432a444497f86bb9276291be1b3a5356bfbfa97d8a5fa4d12d2354edc79a03",
       "drive_file_id": "1bF06bN2M64-rgnh8RRJ0b-90srtpSEoK",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "available"
     },
     {
@@ -93,7 +93,7 @@
       "sha256": "31adc42ffef33b9166351797c65609c08da9e5427262c9aae54eba953dda3410",
       "drive_file_id": "1Wm9PjGr2Yz9vfstP8hTqvQvXgaodlhdD",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "available"
     },
     {
@@ -104,7 +104,7 @@
       "sha256": "9fd707c8e9540b994746022bcb264ddd0cf4e34f82371ac09814b9d9959c095d",
       "drive_file_id": "1no19lCoxUXM6vpEDthHhD5Hxi4Z8XABM",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "available"
     },
     {
@@ -115,7 +115,7 @@
       "sha256": "5906bb8b0149be545d36c0209235a6b0f82c201f239e64b3f32532d43276810d",
       "drive_file_id": "1qUB9eIciqdfnI0ZDFY0gJb1CNW0SlXLm",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "available"
     },
     {
@@ -126,7 +126,7 @@
       "sha256": "fc6c883d778c9b991800eaea79753f2eae5de55549cad3655068b1338d221954",
       "drive_file_id": "1eK7FrEO-x1jnHlSQ50aPqaWOkxWw4vjV",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "available"
     },
     {
@@ -137,7 +137,7 @@
       "sha256": "c42eb1bb71fa21db5df91b9e6a82843879a70045fa30e7ea7bf591b3eeb0e8de",
       "drive_file_id": "12HSkdKl5k3jj076n1DyjN9M5YAf-4oZN",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "available"
     },
     {
@@ -148,7 +148,7 @@
       "sha256": "3469e208233bf20fde40ae477f3036e4e6eb2ec24f341be385272ca6ab854374",
       "drive_file_id": "11e1QLXZ4JXC_tZY8qC6BnsAWoJblWU6i",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "available"
     },
     {
@@ -159,7 +159,7 @@
       "sha256": "f1c1b38fa6146f87e5e68a249500075d18b5f2468810646f0926cc0cd55c58ac",
       "drive_file_id": "1FZXIgyIrQO3YaupN2RyNQKOQbSVwApBJ",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "available"
     },
     {
@@ -170,7 +170,7 @@
       "sha256": "7c875ce60c400ce093cde143ecbcfacad26f37796ec4e802840e461b3985ab18",
       "drive_file_id": "1l6EKYK7U6vi3qo11Ko6DoTKSAyCHIGyL",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "available"
     },
     {
@@ -181,7 +181,7 @@
       "sha256": "7fec0a1043cc91c5580c7a7ddd93be40bb126737d1a0a3fab97b7b9b325f7200",
       "drive_file_id": "1CSWna-fXuXXpz5uQjQD9xR-SLaMcgamH",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "available"
     },
     {
@@ -192,7 +192,7 @@
       "sha256": "b5a25e5fa46b5e361c3e732322e49e689ba97a416c0d2ea5e0bacc5e25dda9ec",
       "drive_file_id": "1CQce0SobR-7tXq9mXmV8V7h9c61l3j6M",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "available"
     },
     {
@@ -203,7 +203,7 @@
       "sha256": "a02b8e83abfc52647a198c015a25953a7352e85a11f882f54953e46444dc255e",
       "drive_file_id": "1iJhTa2t594vItw9CQvcKU7M1fI0-wsBn",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "available"
     },
     {
@@ -214,7 +214,7 @@
       "sha256": "e33b2bdb96ab6e34a7eb678d564eac900df2fac75449b4f0582b1fe04f673473",
       "drive_file_id": "1PKR8X02JmrVP-sYHtWBzWQVoRVeMNPQn",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "available"
     },
     {
@@ -225,7 +225,7 @@
       "sha256": "6f0e776ca443a0088a0c2485a2bfb5b78201bffdc433ec1dcdcea8ddc43cd974",
       "drive_file_id": "1JhcXu980kv8ex8LJC1V2qvzmhMB_hzEQ",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "available"
     },
     {
@@ -236,7 +236,7 @@
       "sha256": "938b5bf92e576533a92813c3da9502dbae3769d1a871fedccbe5abf78d8957bc",
       "drive_file_id": "12KoqDTNMMRAGqF0NzUSuYOO8pTEQ4wK5",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "available"
     },
     {
@@ -247,7 +247,7 @@
       "sha256": "b12c45603d7f8a5a4b442625932510954e16c1f7e1e64c0b8428012c4d29368c",
       "drive_file_id": "1tk2LpN0Y-OUxdgJDU5r1u51NXNYA5NCk",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "available"
     },
     {
@@ -258,7 +258,7 @@
       "sha256": "af60f0ee97c545b68a1c814eaef8d53c824d791b0348e22eecbfbaf67d90873e",
       "drive_file_id": "1146whSfkVZ6-lOTBsQF1MxC4oFWxQiO9",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "available"
     },
     {
@@ -269,7 +269,7 @@
       "sha256": "4f2ce7b6d07d747031e3fdd18fbb1bbb5d0faa7abe3183a3ecec7ebe22d0aea3",
       "drive_file_id": "1mcwQkfr0bE1w90jFdpt1CqTl4oQWEUlo",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "available"
     },
     {
@@ -280,7 +280,7 @@
       "sha256": "366f719a286916035d4fba15275452f763f87fcfcc3304067a04d976d8694533",
       "drive_file_id": "1rAOVCS6muRtx6QdQ9gP1l4JWAynXgTTZ",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "available"
     },
     {
@@ -291,7 +291,7 @@
       "sha256": "db2c075449e668750da0067d3eff96372de314811db671d81f97073cf9fe2a97",
       "drive_file_id": "1QSRpCWsC6p4s1PfWYVRivEB-xa5VsTRJ",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "available"
     },
     {
@@ -302,7 +302,7 @@
       "sha256": "ac446a47b4e8ac4ff0ac9308f8813718dbc0728e0caf09306b7c97ef663d2a90",
       "drive_file_id": "1oTJJwOwtUu4tXktDQ7owu5bc5szb2aJk",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "available"
     },
     {
@@ -313,7 +313,7 @@
       "sha256": "b866fb6b57b65223a965fc319b9cd8567f241b7c579cfbeda968480e6c77dbb1",
       "drive_file_id": "1ntg-y4_T7hJIMeab1hgv8aoDqNowgANJ",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "available"
     },
     {
@@ -324,7 +324,7 @@
       "sha256": "fe96ff9b842bcf637902e773c3b6652a9dd88b64feae04b592418173012634af",
       "drive_file_id": "1gC7LLUunTT0UcY1k_4eZNnBF2hNaXCNH",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "available"
     },
     {
@@ -335,7 +335,7 @@
       "sha256": "23eb05f6a690d7f7575f9dbec3dc0f7c94105e45cda4859ab2f965ec3acd93dc",
       "drive_file_id": "1GxBLdX4fGUKZxSQrKfXRH-eN-i9IUBp_",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "available"
     },
     {
@@ -346,7 +346,7 @@
       "sha256": "f0492bba441a8d610e763c8e59d20ed7ee776f1ff0c254dd2b458962ada40093",
       "drive_file_id": "1ZwlCmZhZGtCftldQqldx9RnnzwD1lrVt",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "available"
     },
     {
@@ -357,7 +357,7 @@
       "sha256": "f55f05cede15a65c750d65c23bfa6fddb88ee79e33827949d3560fda91f8afcb",
       "drive_file_id": "1Tco4ERP956V9YrNenCNBF0hYSxoqCmNT",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "available"
     },
     {
@@ -368,7 +368,7 @@
       "sha256": "008093744c0ed1c97c3e1e5ffcb556e4baa7045207bb7534fd27a575ab4a8e2b",
       "drive_file_id": "1FIRw9Vwda1gDM31MmcfvzP-1co4eNtDv",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "available"
     },
     {
@@ -379,7 +379,7 @@
       "sha256": "d15b78c3bdb826ef1ad515fd3f5ea8b0c4c99914f262e4f09449b24e99bfbf84",
       "drive_file_id": "1dh823IJfnZGcEC2X62ltwxqrxC6UJXao",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "available"
     },
     {
@@ -390,7 +390,7 @@
       "sha256": "cf540f9e8d8c50bb08ac2892db7bd2e1fd22efaf83080f7eadcce2318425c9a6",
       "drive_file_id": "1Gwoe66QB_Eecr8Rzs-5N19J_5N0YLjcV",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "needs_review"
     },
     {
@@ -401,7 +401,7 @@
       "sha256": "0ba9c6d6a54eb3a503eb063d5c95f100b98bbdb414087ab70a29a825e6a798dc",
       "drive_file_id": "1Iv9tsw8XVW5u_pmwx2Ahm8iqGfSjKZUr",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "needs_review"
     },
     {
@@ -412,7 +412,7 @@
       "sha256": "79c0a2c9a653e73beb928818e70191e3fef6f53126da3182092e51c46c1b7589",
       "drive_file_id": "197uqL2ZZRQgPrCeSZW-88htyHl4lOwVd",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "needs_review"
     },
     {
@@ -423,7 +423,7 @@
       "sha256": "f0d1d63264742a3c53648ad0db5fd84f24fae671ebc1791a08577be3745ed9e4",
       "drive_file_id": "1J-JoJmVb31ObFw0tZ9_Hrz-Zh8gtr2F6",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "needs_review"
     },
     {
@@ -434,7 +434,7 @@
       "sha256": "f9bd9b05e446d667c8bff05f3a715e360f2c017f93b9efa06188c624d689d5e2",
       "drive_file_id": "1VkdVId3qaP1MBlK_KaH1CF8YReC40ujY",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "needs_review"
     },
     {
@@ -445,7 +445,7 @@
       "sha256": "fcdb1e544f7497eb39338a431771b1b2a1972f8b3022dc1419554ff5e568825d",
       "drive_file_id": "1nXHL4l8uYaYUstHSqcl3-jWRIfSFXblt",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "needs_review"
     },
     {
@@ -456,7 +456,7 @@
       "sha256": "fafe6f8a9e915a817fc7db4718ff99f8ce54e64c19111c49c78f9379dd6b0a49",
       "drive_file_id": "1nGVAEI_4lZxEhrD4Gecs1anH9BfCY2oY",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "needs_review"
     },
     {
@@ -467,7 +467,7 @@
       "sha256": "97334d6f57ce07dc5e3abc5a4d300007f89a7b00d813a37e0a49b4440dee6057",
       "drive_file_id": "13QCbTyTrYQAcgLSSWH8KEQ4Y1Xb6ZTOf",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "needs_review"
     },
     {
@@ -478,7 +478,7 @@
       "sha256": "8a6324436b3453f7bbd71afc2a398c3d1aa1d97a9c1b2d2a4a8ae1be88c03145",
       "drive_file_id": "1QoTzrTqBfZsrfezjZQnIxrbsvUssYLCn",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "needs_review"
     },
     {
@@ -489,7 +489,7 @@
       "sha256": "f0e4a939dc413ce260fe17a0fc2607efb343567a525e9da0e5b6ff40b0acade5",
       "drive_file_id": "1Cwnm_A6jhCRtc_Q5Aw0txZdq9LtIsXHX",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "needs_review"
     },
     {
@@ -500,7 +500,7 @@
       "sha256": "4faa2a72dd7b8664f84e4097031378211a8109c390b33c39a00f33fb4bad9bb3",
       "drive_file_id": "12MlbcrySC1ofhd7qNvd9SRTQSAGEOF5g",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "needs_review"
     },
     {
@@ -511,7 +511,7 @@
       "sha256": "82d5d7ff6b821c02209d078f91b0dfe053799c33b82e5b8169aea9d2a28bd6a6",
       "drive_file_id": "1w4mFl9FvinhAWYnLtUhEpcKbbk0Q23YC",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "needs_review"
     },
     {
@@ -555,7 +555,7 @@
       "sha256": "3f166fa49619479f15c78e8f121f7558f245caa2de5e2575c5fde3102aecd05e",
       "drive_file_id": "1dmBQKAo4uA_AxT-m-fIdsrMAaP2EebNC",
       "source_locator_type": "private_drive",
-      "staging_status": "NOT_STAGED_NOT_BYTE_VERIFIED_IN_LAB",
+      "staging_status": "DRIVE_METADATA_CONFIRMED__NOT_RUNNER_STAGED_OR_SHA_CHECKED",
       "accepted_status": "needs_review"
     }
   ],
@@ -576,5 +576,95 @@
     "staging_status": "NOT_VERIFIED_OR_STAGED",
     "creative_status": "AWAITING_USER_VISUAL_REVIEW"
   },
-  "strict_rule": "Only stage bytes which match their exact recorded source SHA-256; no generated placeholders or lower-resolution substitutes. This index itself does not authorize rendering."
+  "strict_rule": "Only stage bytes which match their exact recorded source SHA-256; no generated placeholders or lower-resolution substitutes. This index itself does not authorize rendering.",
+  "drive_inventory_verification": {
+    "status": "ALL_46_MANIFEST_DRIVE_REFERENCES_FOUND",
+    "method": "Google Drive connector file-by-file get_file_metadata (46 checks); verified exact returned Drive ID, filename and MIME type; existence metadata only",
+    "verified_file_count": 46,
+    "metadata_results_match_source_filenames": true,
+    "content_bytes_verified": false,
+    "recorded_private_drive_media_folder_url": "https://drive.google.com/drive/folders/100EDoKDKfGusiYCGs-xGUtpjQuCjLFwH",
+    "master_parts_folder_url": "https://drive.google.com/drive/folders/1ojhQ1k4yDDA9o8h3bp2sP3YF5Cn-EuKu",
+    "source_wav": {
+      "id": "1M6uRTeYejXxn2rSDkTJu5H0_LiWrdwN4",
+      "name": "El Viento trae tu nombre.wav",
+      "size_bytes": 29674010,
+      "mime_type": "audio/wav",
+      "drive_url": "https://drive.google.com/file/d/1M6uRTeYejXxn2rSDkTJu5H0_LiWrdwN4/view?usp=drivesdk",
+      "expected_sha256": "8d967101c875868b64207bd43bfbc507c0a958989bbc560c2edb0024b15877cb",
+      "bytes_downloaded_or_hashed": false
+    },
+    "master_v6_segments": {
+      "parts": 9,
+      "items": [
+        {
+          "id": "1wc9Tuu-IXDik96PGPWyFEtI1pOKksa4O",
+          "name": "El_Viento_Route4_1080p_FX_MASTER_v6_Part_01.mp4",
+          "size_bytes": 84940637,
+          "drive_url": "https://drive.google.com/file/d/1wc9Tuu-IXDik96PGPWyFEtI1pOKksa4O/view?usp=drivesdk",
+          "mime_type": "video/mp4"
+        },
+        {
+          "id": "1Ru_Y2vr3tkVGXXlE5KGUIhsOdAGU1CNW",
+          "name": "El_Viento_Route4_1080p_FX_MASTER_v6_Part_02.mp4",
+          "size_bytes": 94077220,
+          "drive_url": "https://drive.google.com/file/d/1Ru_Y2vr3tkVGXXlE5KGUIhsOdAGU1CNW/view?usp=drivesdk",
+          "mime_type": "video/mp4"
+        },
+        {
+          "id": "1q04yGwbo-KacOewdRu3dVS33jzhjw5p_",
+          "name": "El_Viento_Route4_1080p_FX_MASTER_v6_Part_03.mp4",
+          "size_bytes": 85233527,
+          "drive_url": "https://drive.google.com/file/d/1q04yGwbo-KacOewdRu3dVS33jzhjw5p_/view?usp=drivesdk",
+          "mime_type": "video/mp4"
+        },
+        {
+          "id": "1zO-Pse-p8-aTtB6_eA1CrOHpQ_NHo8TB",
+          "name": "El_Viento_Route4_1080p_FX_MASTER_v6_Part_04.mp4",
+          "size_bytes": 34460526,
+          "drive_url": "https://drive.google.com/file/d/1zO-Pse-p8-aTtB6_eA1CrOHpQ_NHo8TB/view?usp=drivesdk",
+          "mime_type": "video/mp4"
+        },
+        {
+          "id": "1PObV8obbiC84q7eIm2H53T8hPyEnbgbd",
+          "name": "El_Viento_Route4_1080p_FX_MASTER_v6_Part_05.mp4",
+          "size_bytes": 82252380,
+          "drive_url": "https://drive.google.com/file/d/1PObV8obbiC84q7eIm2H53T8hPyEnbgbd/view?usp=drivesdk",
+          "mime_type": "video/mp4"
+        },
+        {
+          "id": "1cN84KXZkZykefBx9ynhgxjaGTUBMnc2Y",
+          "name": "El_Viento_Route4_1080p_FX_MASTER_v6_Part_06.mp4",
+          "size_bytes": 60084017,
+          "drive_url": "https://drive.google.com/file/d/1cN84KXZkZykefBx9ynhgxjaGTUBMnc2Y/view?usp=drivesdk",
+          "mime_type": "video/mp4"
+        },
+        {
+          "id": "1ZRlqx0sL3eL4cHPqUXwnJ0Vn8sW2rXWJ",
+          "name": "El_Viento_Route4_1080p_FX_MASTER_v6_Part_07.mp4",
+          "size_bytes": 84837745,
+          "drive_url": "https://drive.google.com/file/d/1ZRlqx0sL3eL4cHPqUXwnJ0Vn8sW2rXWJ/view?usp=drivesdk",
+          "mime_type": "video/mp4"
+        },
+        {
+          "id": "1DQXhmG1Qe6fsGnpYHd2VvbstCiIzGCTX",
+          "name": "El_Viento_Route4_1080p_FX_MASTER_v6_Part_08.mp4",
+          "size_bytes": 75642541,
+          "drive_url": "https://drive.google.com/file/d/1DQXhmG1Qe6fsGnpYHd2VvbstCiIzGCTX/view?usp=drivesdk",
+          "mime_type": "video/mp4"
+        },
+        {
+          "id": "16EDCgZdOtaIqqjrI4nxJzpb2cokVQGd8",
+          "name": "El_Viento_Route4_1080p_FX_MASTER_v6_Part_09.mp4",
+          "size_bytes": 828813,
+          "drive_url": "https://drive.google.com/file/d/16EDCgZdOtaIqqjrI4nxJzpb2cokVQGd8/view?usp=drivesdk",
+          "mime_type": "video/mp4"
+        }
+      ],
+      "total_drive_part_bytes": 602357406,
+      "recorded_unsegmented_master_size_bytes": 602346122,
+      "independent_hash_match_to_unsegmented_master": "NOT_VERIFIED",
+      "concatenation_approved": "NO; these are playable MP4 segments, do not concatenate bytes blindly"
+    }
+  }
 }
