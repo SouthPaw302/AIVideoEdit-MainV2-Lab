@@ -25,6 +25,8 @@ AIVideoEdit is a production operating system for authored music films and living
 - Technology names must be truthful.
 - Technical success never substitutes for artistic acceptance.
 - Inspect the actual export before claiming completion.
+- Run the current-main evidence-first Director scan, including real source and FX inventories, motion quality, source resolution, baseline comparison, audio, and playable current-version delivery. A sample, contact sheet, or test result is not a full-film watch.
+- When a film is accepted with caveats, lock the accepted foundation and name remaining work; never quietly rebuild the movie while polishing titles, sky light, transitions, or packaging.
 
 ## Persistence
 The repo is the durable brain. `.aivideoedit/SECOND_BRAIN.md` is generated fresh per session from current-main OS plus active branch manifests and, for Director Brain v2, the project `OPERATING_ORDER.json`. It is ephemeral context, never a second authority.

@@ -40,5 +40,8 @@ If the user has accepted a baseline and refinement is active with `restart_autho
 ## Production rule
 Build real media, not slides or metadata theater. Inspect short finished mode-aware proofs before scaling. For living-scene work, internal scene motion comes before camera motion. For cinematic work, prove action, coverage, continuity, progression, and music-directed pacing. Protect identity. Never accept invisible effects or command success as QC.
 
+## Canonical Director scan (read before judging footage)
+Open `.aivideoedit/os/general/reusable/DIRECTOR_SCAN_CANON.md` after bootstrap. Audit original stills/video and alternates **before** recreating assets; distinguish short low-resolution FX proofs from finished high-resolution shots; measure semantic internal motion and repeated clips, inspect actual FX against the production world, compare locked baseline and actual export, verify the specific intro/outro/brand and correct playback link, and explicitly record what was watched. A branch-local `DIRECTOR_SCAN.json` can be checked by the current-main `tools/director_scan_gate.py`, but the result is not permission to claim artistic/human release acceptance. If the user locks the film, only bounded authorized finishing changes may occur to an independent copy.
+
 ## Final QC
 Inspect the actual exported media for damaged/black frames, freezes, repetition, loop seams, ghosting, missing effects, flicker/boiling, identity drift, source leakage, continuity, framing/aspect, runtime, and audio sync. Apply `MODE_AWARE_QC.md`, record specs/SHA/storage/QC, and preserve artistic masters separately from platform packaging when they differ.

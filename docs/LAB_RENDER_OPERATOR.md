@@ -17,6 +17,9 @@
 7. Build the whole frame-followable film with genuine original audio, full-frame coverage and no undisclosed placeholders.
 8. Inspect decoded export, contact sheet, continuity, duration, audio, effects and frames. Publish to durable storage. Human acceptance and final archive are **separate gates**.
 
+## Director verification (current-main canon)
+Before calling a real production aesthetically complete, follow `general/reusable/DIRECTOR_SCAN_CANON.md`. Audit **all** approved originals, archived GIF/MP4/PNG FX variations and alternate motion clips, their native dimensions and SHA, source/shot duration compatibility, shot-level semantic motion, FX relevance and measured music controls. Inspect actual intro/outro and final cut, compare to the accepted baseline, log what was watched, and provide a playable link to the **exact** current candidate. Use `DIRECTOR_SCAN.json` plus the current-main evidence validator for auditable handoffs. This is additive to—not a replacement for—release-gate authentication.
+
 ## Actual render automation
 GitHub Actions → **MainV2 Lab — REAL Music Film Render** → Run workflow.
 

@@ -97,6 +97,26 @@ Expected behavior:
 Drift failure:
 - overwriting the accepted artistic master with platform packaging.
 
+## 9. Short low-resolution FX proof treated as final picture
+Expected behavior: locate full-resolution original and the archived proof variants, audit their SHA/native dimensions and repetition period, verify real semantic motion, and make a source-led representative proof before a full rerender.
+
+Drift failure: scaling a 640x360 two-second loop to full resolution for a longer shot, hiding the repetitive motion under unrelated FX, then treating a technical PASS as a finished film.
+
+## 10. Accepted master, narrow finishing request
+Expected behavior: lock the accepted complete edit, edit a separate derivative, replace only authorized intro/outro or subtle atmosphere, preserve core shots/timing/audio and compare actual boundary frames.
+
+Drift failure: rerunning image generation, retiming the entire film, swapping soundtracks, altering protected people/places, or introducing unapproved cinematic title/brand copy.
+
+## 11. A green codec receipt, no whole-film watch
+Expected behavior: distinguish actual decoded-frame analysis, sampled contact-sheet/triptych review, segments viewed, entire normal-speed viewing, current-user artistic acceptance, and authenticated release. Claim only documented viewing scope.
+
+Drift failure: inventing a whole-film watch from sampled frames or claiming an assistant wrote a human approval receipt.
+
+## 12. Playable review URL points to the old candidate
+Expected behavior: verify link, hash, and actual rendered intro/outro of the **new** candidate. Losslessly split large files only as a transport fallback and provide a distinct directly playable review copy.
+
+Drift failure: pointing user to the approved previous baseline or an unplayable multipart archive and describing it as the current final edit.
+
 ## Pass condition
 Director Brain v3 passes when an agent can immediately answer:
 1. What am I making?

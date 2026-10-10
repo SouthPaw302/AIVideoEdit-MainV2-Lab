@@ -1,15 +1,15 @@
 # Canonical Director Scan — Evidence Before Artistic Judgment
 
-**Status: current-main, project-neutral directing contract.** This file expands, and never overrides, \`PRIME_DIRECTIVE.md\`, \`DIRECTOR_SUPERVISION.md\`, Zero-Drift, FX v2, \`MODE_AWARE_QC.md\`, the active project's Operating Order, and the independent human final-release gate.
+**Status: current-main, project-neutral directing contract.** This file expands, and never overrides, `PRIME_DIRECTIVE.md`, `DIRECTOR_SUPERVISION.md`, Zero-Drift, FX v2, `MODE_AWARE_QC.md`, the active project's Operating Order, and the independent human final-release gate.
 
 **Purpose:** Make the Director's actual-media investigation repeatable for *every* song and every agent. A green runner, valid manifest, visually attractive contact sheet, or correctly encoded file cannot establish that a film works. The Director diagnoses the actual output against the approved sources, song, script, motion intent, and accepted baseline.
 
 ## Boot, scope and authority (mandatory)
 
-1. Bootstrap the exact current \`main\` and read Prime Directive, generated Second Brain, SOUL, and the active Operating Order.
+1. Bootstrap the exact current `main` and read Prime Directive, generated Second Brain, SOUL, and the active Operating Order.
 2. Read this canonical scan contract **before selecting a recovery strategy or calling a render a success**.
 3. Record which artifact is currently the approved baseline (locator and SHA), what the user actually accepted, the current user instructions, named defects, allowed and forbidden changes, and whether the request is *review*, *repair*, *finishing*, or *delivery*.
-4. Production and song assets stay on \`song/<slug>\`; canonical methods belong to current-main. Never move a one-off renderer, stylistic preference, private asset ID, song script, or rejected media into reusable canon by association.
+4. Production and song assets stay on `song/<slug>`; canonical methods belong to current-main. Never move a one-off renderer, stylistic preference, private asset ID, song script, or rejected media into reusable canon by association.
 5. When the user locks a creative edit, further operations use a **separate candidate/output name**; never overwrite the accepted file, re-time protected core shots, regenerate the world, or alter music under the guise of polish.
 
 ## The eleven-phase Director scan
@@ -30,7 +30,7 @@ A high-resolution source still, a two-second 640x360 FX proof, an FX-derived PNG
 
 ### D04 — Classify motion by semantic need
 
-Inspect actual start/middle/end frames and temporal behavior **inside each shot**, not just a single timeline sample. Describe independently moving weather, practical lights, reflections, glass, hair/cloth, characters/props, vehicle wheels/road perspective, and camera. Test whether motion is coherent and genuinely progressive rather than low-amplitude flicker or fixed-period looping. Camera pan/zoom or global wobble is not proof that a subject drove, walked, handled a letter, or turned. Where real articulation is required, specify \`GENERATED_CONTINUATION\` (or actual authorized video) with zero-drift anchors, bounded actions, original audio disposition, and frame-by-frame continuity QC. Mark unresolved requirements truthfully.
+Inspect actual start/middle/end frames and temporal behavior **inside each shot**, not just a single timeline sample. Describe independently moving weather, practical lights, reflections, glass, hair/cloth, characters/props, vehicle wheels/road perspective, and camera. Test whether motion is coherent and genuinely progressive rather than low-amplitude flicker or fixed-period looping. Camera pan/zoom or global wobble is not proof that a subject drove, walked, handled a letter, or turned. Where real articulation is required, specify `GENERATED_CONTINUATION` (or actual authorized video) with zero-drift anchors, bounded actions, original audio disposition, and frame-by-frame continuity QC. Mark unresolved requirements truthfully.
 
 ### D05 — Inspect *executed* FX and artistic relevance
 
@@ -58,20 +58,20 @@ Technical QC includes exact decoded frame count, nominal and actual fps, geometr
 
 ### D11 — Truthful verdict and handoff
 
-Separate (a) automated technical PASS, (b) Director visual findings, (c) explicit user artistic acceptance/caveats, and (d) **authenticated production-release approval**, which remains governed by \`docs/PRODUCTION_RELEASE_GATE.md\`. A machine scan, assistant-generated review, or conversation message must not forge a user's GitHub acceptance token or whole-film-watch assertion. Report \`PENDING\`, \`REPAIR_REQUIRED\`, \`ACCEPTED_WITH_CAVEATS\`, or \`ACCEPTED\` only in the appropriate *artistic* context. Do not treat an independently reviewed local/FFmpeg master as a canonical runner-built release without the required backend equivalence and release evidence. The next executor receives exact input/output SHA, branch/commit, timing map, active caveats, permissible operations, checksum-verification steps, and a clear prohibition on modifying the locked film.
+Separate (a) automated technical PASS, (b) Director visual findings, (c) explicit user artistic acceptance/caveats, and (d) **authenticated production-release approval**, which remains governed by `docs/PRODUCTION_RELEASE_GATE.md`. A machine scan, assistant-generated review, or conversation message must not forge a user's GitHub acceptance token or whole-film-watch assertion. Report `PENDING`, `REPAIR_REQUIRED`, `ACCEPTED_WITH_CAVEATS`, or `ACCEPTED` only in the appropriate *artistic* context. Do not treat an independently reviewed local/FFmpeg master as a canonical runner-built release without the required backend equivalence and release evidence. The next executor receives exact input/output SHA, branch/commit, timing map, active caveats, permissible operations, checksum-verification steps, and a clear prohibition on modifying the locked film.
 
 ## Mechanical Director scan record
 
-The reusable \`general/reusable/DIRECTOR_SCAN_RECORD.schema.json\` defines the **evidence structure** and \`general/reusable/tools/director_scan_gate.py\` validates completeness and internally consistent claims. The record belongs in the active song branch as \`DIRECTOR_SCAN.json\`, alongside receipts and actual-media proof. The gate is intentionally an **evidence validator, never an automated aesthetic judge or human-signoff simulator**.
+The reusable `general/reusable/DIRECTOR_SCAN_RECORD.schema.json` defines the **evidence structure** and `general/reusable/tools/director_scan_gate.py` validates completeness and internally consistent claims. The record belongs in the active song branch as `DIRECTOR_SCAN.json`, alongside receipts and actual-media proof. The gate is intentionally an **evidence validator, never an automated aesthetic judge or human-signoff simulator**.
 
-Required checks: \`inventory\`, \`duplicates_and_provenance\`, \`source_fidelity\`, \`semantic_motion\`, \`fx_actual_and_relevance\`, \`music_and_audio\`, \`full_timeline\`, \`baseline_comparison\`, \`intro_outro_brand\`, \`delivery_playability\`, \`handoff_and_caveats\`. Every check carries a truthful status and concrete evidence for affirmative/negative findings. A PASS with no evidence, or a final acceptance claim made after only sampled viewing, must fail validation or remain explicitly pending.
+Required checks: `inventory`, `duplicates_and_provenance`, `source_fidelity`, `semantic_motion`, `fx_actual_and_relevance`, `music_and_audio`, `full_timeline`, `baseline_comparison`, `intro_outro_brand`, `delivery_playability`, `handoff_and_caveats`. Every check carries a truthful status and concrete evidence for affirmative/negative findings. A PASS with no evidence, or a final acceptance claim made after only sampled viewing, must fail validation or remain explicitly pending.
 
 ## Decision table
 
 | Observation | Director response |
 |---|---|
 | FX proofs exist but are low-resolution, 2 seconds, or loop-heavy | Audit original stills and all alternate media; source-led full-shot proof before rebuilding |
-| Green workflow, weak picture progression | Keep technical PASS; creative \`REPAIR_REQUIRED\` with named scenes |
+| Green workflow, weak picture progression | Keep technical PASS; creative `REPAIR_REQUIRED` with named scenes |
 | Short transparent sky effect improves mood | Preserve approved geometry; region-mask and compare at normal speed |
 | Motion demands vehicle/wheel/body articulation | Actual video or bounded continuation; no pretend zoom |
 | Accepted full film has weak title card | Isolate intro/outro; protect core film and soundtrack |

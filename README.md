@@ -33,6 +33,9 @@ Portable entry point:
 
 The docs explain the system. **The bootstrapped runtime and guard determine whether production may proceed.**
 
+## Canonical Director scan
+The production OS includes `general/reusable/DIRECTOR_SCAN_CANON.md`, a source-to-export investigative checklist made canonical after real-film recovery. It checks original assets and FX variants, source-vs-proof fidelity, real temporal action, music/FX relevance, accepted-baseline preservation, intro/outro/brand accuracy, audio and playable delivery. Records belong to the song branch; `general/reusable/tools/director_scan_gate.py` validates evidence claims but **cannot grant artistic or release approval**.
+
 ## MainV2 Lab implementation (2026-10-08)
 
 This checkout is the **target** system: source lineage `AIVideoEdit/main → AIVideoEdit/MainV2 → AIVideoEdit-MainV2-Lab/main`. The original `MainV2` SHA is preserved as immutable import provenance; the **lab's own main** is now the bootstrap and render authority. The updated MainV2 models, FX, JEV, director system, GUI backend and tests are retained.

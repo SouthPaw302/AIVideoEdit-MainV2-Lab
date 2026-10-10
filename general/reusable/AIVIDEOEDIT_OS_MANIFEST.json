@@ -224,6 +224,22 @@
     {
       "path": "general/reusable/fx_v2/execution_guard.py",
       "role": "fail_closed_fx_execution_guard"
+    },
+    {
+      "path": "general/reusable/DIRECTOR_SCAN_CANON.md",
+      "role": "canonical_source_to_export_director_scan"
+    },
+    {
+      "path": "general/reusable/DIRECTOR_SCAN_RECORD.schema.json",
+      "role": "director_scan_evidence_record_schema"
+    },
+    {
+      "path": "general/reusable/tools/director_scan_gate.py",
+      "role": "fail_closed_director_scan_evidence_validator"
+    },
+    {
+      "path": "general/reusable/tools/test_director_scan_gate.py",
+      "role": "director_scan_regression_tests"
     }
   ],
   "purpose": "Critical files whose exact current-main hashes are attested at every agent-session bootstrap. The bootstrap materializes the entire main branch, not only this list.",

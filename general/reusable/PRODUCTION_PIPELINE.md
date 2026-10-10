@@ -162,6 +162,9 @@ Apply `MODE_AWARE_QC.md`. Director Brain v3 requires mode-aware proof acceptance
 
 `export_variety_qc.py` records composition/repetition evidence and supports before/after report comparison. Its metrics are evidence, not an automatic artistic verdict.
 
+### Mandatory source-to-export Director scan
+Apply `general/reusable/DIRECTOR_SCAN_CANON.md` to the candidate before creative success or delivery can be claimed. This extends the existing mode-aware QC with inventory of actual originals and all FX/alternate assets; duplicate SHA/source resolution and short-loop checks; per-shot semantic motion; executed and scene-appropriate FX; measured music-control use; full-timeline/intro/outro/audio inspection; same-timestamp baseline comparisons; and a real playable link to the **current** revision. Write the findings to branch-local `DIRECTOR_SCAN.json`; the current-main `general/reusable/tools/director_scan_gate.py` verifies evidence completeness and internal claims, never human visual acceptance. Record whether viewing was sampled, segments, or whole-film normal-speed; never infer the latter from contact sheets, statistics or full decode.
+
 ## 10A — Accept, lock, and refine a complete baseline
 When the current user explicitly accepts a full picture baseline:
 - set `accepted_baseline.status=accepted`;
