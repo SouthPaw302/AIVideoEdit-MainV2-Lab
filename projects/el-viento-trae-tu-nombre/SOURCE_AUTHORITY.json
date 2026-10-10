@@ -1,0 +1,17 @@
+{
+  "schema": "aivideoedit.source-authority.v1",
+  "allow": {
+    "current_user_instruction": true,
+    "current_uploaded_media": true,
+    "current_branch_decisions": true,
+    "current_main": true,
+    "historical_chats": false,
+    "historical_summaries": false,
+    "unrelated_song_branches": false,
+    "prior_project_storyboards": false,
+    "prior_project_visual_dna": false,
+    "prior_project_media": false
+  },
+  "explicit_user_authorizations": [],
+  "note": "Only current-session user direction, uploaded audio, current branch decisions and current main are production authority."
+}

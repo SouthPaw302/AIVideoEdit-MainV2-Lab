@@ -1,0 +1,27 @@
+{
+  "schema": "aivideoedit.shot-proof.v1",
+  "shot_id": "S10",
+  "production_mode": "living_scene",
+  "package_sha256": "305b43735144cfa1ebeebbb67fcfc009b645a0a4850ee047bdd0680a3fe230ec",
+  "proof_asset": {
+    "asset_id": "PROOF-S10",
+    "uri": "gdrive://file/1Cwnm_A6jhCRtc_Q5Aw0txZdq9LtIsXHX",
+    "sha256": "f0e4a939dc413ce260fe17a0fc2607efb343567a525e9da0e5b6ff40b0acade5",
+    "content_type": "video/mp4",
+    "name": "S10_proof.mp4",
+    "duration_seconds": 2.5
+  },
+  "checks": {
+    "internal_motion_visible": true,
+    "material_motion_independent": true,
+    "identity_stable": true,
+    "camera_restrained": true,
+    "loop_or_join_clean": true
+  },
+  "technical_and_mode_checks_passed": true,
+  "creative_status": "accepted",
+  "notes": "Short temporal proof accepts the shot's motion/composition recipe. Full-duration production render must preserve this accepted behavior.",
+  "user_acceptance_statement": "Yeah they are good",
+  "recorded_at": "2026-09-22T06:15:00Z",
+  "accepted_at": "2026-09-22T06:15:00Z"
+}
