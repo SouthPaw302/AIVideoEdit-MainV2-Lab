@@ -23,6 +23,11 @@ Remote endpoints:
 
 All remote tool calls resolve through the same provider-neutral Tool API already used by Studio/MCP. State-changing production calls therefore remain subject to the boot capsule, session attestation, Runtime Gatekeeper, Jev, and canonical AIVideoEdit guards.
 
+The browser Studio and the remote bridge have separate authentication scopes.
+Studio defaults to loopback-only access. A non-loopback `AIVE_HOST` additionally
+requires an `AIVE_STUDIO_TOKEN` of at least 32 bytes; this does not replace or weaken the remote
+bridge's `AIVE_REMOTE_TOKEN` requirement.
+
 There is no arbitrary shell endpoint.
 
 The included `remote_agent_client.py` is dependency-free and can be used by an authorized sandbox agent against an already-exposed Studio endpoint. Network exposure/TLS remains an operator/deployment concern and is intentionally not re-architected here.

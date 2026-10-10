@@ -21,7 +21,13 @@ From a host with Python, Git and FFmpeg:
 python prototype/backend_gui/stack.py
 ```
 
-Then open `http://127.0.0.1:8080`, or the host's LAN address from another device. `stack.py` binds to `0.0.0.0` by default.
+Then open `http://127.0.0.1:8080`. Studio binds only to loopback by default.
+
+LAN access is opt-in. Set both a non-loopback `AIVE_HOST` and an
+`AIVE_STUDIO_TOKEN` of at least 32 bytes; startup fails closed otherwise.
+The browser requests the token once and exchanges it for an HttpOnly,
+same-site session cookie. The remote-agent bridge keeps its separate
+`AIVE_REMOTE_TOKEN` authorization boundary.
 
 Termux can host the same browser workstation:
 
@@ -34,7 +40,8 @@ bash start_termux.sh
 
 Environment overrides:
 
-- `AIVE_HOST` (default `0.0.0.0`)
+- `AIVE_HOST` (default `127.0.0.1`)
+- `AIVE_STUDIO_TOKEN` (required for every non-loopback bind)
 - `AIVE_PORT` (default `8080`)
 - `AIVE_RUNTIME` (default `prototype/backend_gui/.runtime`)
 - `AIVE_MAX_UPLOAD` (default 2 GiB)
@@ -136,4 +143,4 @@ The new canonical-core/project bridge is deliberately fail-closed. This developm
 - final production QC/export
 - agent chat/provider adapter in Studio
 - MCP / ChatGPT App surface over the same Tool API
-- authentication/TLS for public or monetized hosted use
+- TLS termination and managed identity for public or monetized hosted use

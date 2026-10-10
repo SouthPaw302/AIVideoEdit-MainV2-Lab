@@ -15,6 +15,11 @@ from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, unquote, urlparse
 
+try:
+    from . import studio_security
+except ImportError:
+    import studio_security
+
 ROOT = Path(__file__).resolve().parent
 STATIC = ROOT / "static"
 RUNTIME = Path(os.environ.get("AIVE_RUNTIME", str(ROOT / ".runtime"))).resolve()
@@ -340,19 +345,48 @@ class Handler(SimpleHTTPRequestHandler):
         print(f"[{self.log_date_time_string()}] {fmt % args}")
 
     def translate_path(self, path: str) -> str:
-        parsed = urlparse(path).path
-        if parsed == "/":
-            parsed = "/index.html"
-        return str(STATIC / parsed.lstrip("/"))
+        target = studio_security.static_target(STATIC, path)
+        return str(target if target is not None else STATIC / ".aive-not-found")
 
-    def send_json(self, payload, status=200):
+    def end_headers(self):
+        self.send_header("X-Content-Type-Options", "nosniff")
+        self.send_header("Referrer-Policy", "same-origin")
+        self.send_header("X-Frame-Options", "DENY")
+        super().end_headers()
+
+    def send_json(self, payload, status=200, headers=None):
         body = json.dumps(payload, indent=2).encode("utf-8")
         self.send_response(status)
         self.send_header("Content-Type", "application/json")
         self.send_header("Content-Length", str(len(body)))
         self.send_header("Cache-Control", "no-store")
+        for name, value in (headers or {}).items():
+            self.send_header(name, value)
         self.end_headers()
         self.wfile.write(body)
+
+    def client_ip(self) -> str:
+        return str(self.client_address[0] if self.client_address else "")
+
+    def require_studio(self, *, mutating: bool) -> bool:
+        ok, status, reason, _ = studio_security.authorize(
+            self.headers, self.client_ip(), mutating=mutating
+        )
+        if not ok:
+            self.send_json(
+                {"ok": False, "error": reason, "auth_required": status == 401}, status
+            )
+        return ok
+
+    def create_studio_session(self):
+        ok, status, reason = studio_security.authorize_session(self.headers, self.client_ip())
+        if not ok:
+            return self.send_json(
+                {"ok": False, "error": reason, "auth_required": status == 401}, status
+            )
+        token = studio_security.configured_token()
+        headers = {"Set-Cookie": studio_security.session_cookie(token)} if token else {}
+        return self.send_json({"ok": True, "mode": "token" if token else "loopback"}, headers=headers)
 
     def read_json(self) -> dict:
         length = int(self.headers.get("Content-Length", "0"))
@@ -360,13 +394,14 @@ class Handler(SimpleHTTPRequestHandler):
         return json.loads(raw.decode("utf-8"))
 
     def runtime_target(self, asset_id: str, relative: str) -> Path | None:
+        if not re.fullmatch(r"[A-Za-z0-9_-]{1,64}", asset_id or ""):
+            return None
         base = (ASSET_ROOT / asset_id).resolve()
-        target = (base / unquote(relative)).resolve()
         try:
-            target.relative_to(base)
+            base.relative_to(ASSET_ROOT.resolve())
         except ValueError:
             return None
-        return target
+        return studio_security.contained_path(base, relative)
 
     def serve_runtime_file(self, asset_id: str, relative: str):
         target = self.runtime_target(asset_id, relative)
@@ -414,12 +449,21 @@ class Handler(SimpleHTTPRequestHandler):
         parsed = urlparse(self.path)
         path = parsed.path
         params = parse_qs(parsed.query)
+        if path == "/api/auth/status":
+            return self.send_json({
+                "ok": True,
+                "mode": "token" if studio_security.configured_token() else "loopback",
+                "token_required": bool(studio_security.configured_token()),
+            })
+        if path == "/api/health":
+            return self.send_json({"ok": True, "service": "aivideoedit-alpha", "version": "0.1.0-alpha", "pid": os.getpid()})
+        if path.startswith("/api/") or path.startswith("/media/"):
+            if not self.require_studio(mutating=False):
+                return
         if path.startswith("/media/"):
             parts = path.strip("/").split("/", 2)
             if len(parts) == 3:
                 return self.serve_runtime_file(parts[1], parts[2])
-        if path == "/api/health":
-            return self.send_json({"ok": True, "service": "aivideoedit-alpha", "version": "0.1.0-alpha", "pid": os.getpid(), "workspace": str(RUNTIME)})
         if path == "/api/capabilities":
             return self.send_json({"capabilities": capabilities()})
         if path == "/api/projects":
@@ -451,11 +495,18 @@ class Handler(SimpleHTTPRequestHandler):
                 if not find_project(project_id):
                     return self.send_json({"error": "project not found"}, 404)
                 return self.send_json(project_manifest(project_id))
+        target = studio_security.static_target(STATIC, self.path)
+        if target is None or not target.is_file():
+            return self.send_error(404)
         return super().do_GET()
 
     def do_POST(self):
         parsed = urlparse(self.path)
         path = parsed.path
+        if path == "/api/auth/session":
+            return self.create_studio_session()
+        if not self.require_studio(mutating=True):
+            return
         try:
             if path == "/api/projects":
                 return self.create_project()
@@ -471,6 +522,8 @@ class Handler(SimpleHTTPRequestHandler):
 
     def do_DELETE(self):
         path = urlparse(self.path).path
+        if not self.require_studio(mutating=True):
+            return
         if path.startswith("/api/assets/"):
             asset_id = path.rsplit("/", 1)[-1]
             with LOCK:
@@ -566,7 +619,8 @@ class Handler(SimpleHTTPRequestHandler):
 
 if __name__ == "__main__":
     load_state()
-    host = os.environ.get("AIVE_HOST", "0.0.0.0")
+    host = os.environ.get("AIVE_HOST", "127.0.0.1")
+    studio_security.validate_bind(host)
     port = int(os.environ.get("AIVE_PORT", "8080"))
     print(f"AIVideoEdit Alpha: http://127.0.0.1:{port}")
     print(f"LAN bind: {host}:{port}")
