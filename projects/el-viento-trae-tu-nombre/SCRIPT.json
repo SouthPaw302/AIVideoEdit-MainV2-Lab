@@ -1,0 +1,284 @@
+{
+  "schema": "aivideoedit.video-script.v1",
+  "locked": true,
+  "status": "current_edit_locked_fx_incomplete",
+  "refinement_id": "route4-two-heroes",
+  "target_fps": 24,
+  "duration_seconds": 154.375,
+  "audio_authority_seconds": 154.48,
+  "total_frames": 3705,
+  "timeline_granularity": "batch-level current-edit contract",
+  "basis": [
+    "storyboard",
+    "music_analysis",
+    "lyrics",
+    "current 1080 creative-lock edit",
+    "Route 4 batch shot locks",
+    "current 154.48 s source audio"
+  ],
+  "note": "This replaces the obsolete 112.68 s S01-S11 script as current authority. Edit timing is locked; FX are explicitly incomplete. Detailed 00:00-01:52.680 shot timing remains in Route 4 batch shot-lock files. The extended final act retains its accepted edit timing and uses Batches 07-09 as supplemental source libraries without inventing false sub-batch timing.",
+  "entries": [
+    {
+      "shot_id": "R4-B01",
+      "start_seconds": 0,
+      "end_seconds": 21.504,
+      "production_mode": "living_scene",
+      "section": "Opening remembrance",
+      "source_lock": "refinements/route4-two-heroes/shot_locks/BATCH_01_OPENING_REMEMBRANCE.json",
+      "fx_status": "reopened_missing_fx",
+      "motion_regions": [
+        "sea/water",
+        "rain/mist",
+        "lantern/practical light",
+        "luminous thread",
+        "bounded depth layers"
+      ],
+      "protected_regions": [
+        "male hero identity",
+        "female hero identity",
+        "faces/anatomy",
+        "fort/harbor architecture",
+        "horizon/coastline",
+        "thread continuity"
+      ],
+      "start_frame": 0,
+      "end_frame": 515,
+      "visual_action": "Establish the male and female heroes in connected fort/harbor memory space; luminous thread begins only after the shared-memory gate.",
+      "visual_media": "Route 4 Batch 01 locked hero/memory shots and preserved motion/loop assets.",
+      "animation_behavior": "Living-scene internal motion only: sea, rain/mist, practical light, thread glow and bounded depth movement; no identity or architecture drift.",
+      "camera_behavior": "restrained push/static micro-depth movement",
+      "lyric_cue": "Miraba el mar desde el fuerte / pensando en ti, mi querida. / El viento trae tu nombre / entre las olas dormidas.",
+      "music_cues": [
+        "Opening remembrance",
+        "32-beat phrase grid",
+        "FX subordinate to lyric/story"
+      ],
+      "transition": "Atmosphere and gold-thread continuity into Batch 02; no hard replacement."
+    },
+    {
+      "shot_id": "R4-B02",
+      "start_seconds": 21.504,
+      "end_seconds": 43.008,
+      "production_mode": "living_scene",
+      "section": "Distance and origin",
+      "source_lock": "refinements/route4-two-heroes/shot_locks/BATCH_02_DISTANCE_AND_ORIGIN.json",
+      "fx_status": "reopened_missing_fx",
+      "motion_regions": [
+        "map/parchment details",
+        "harbor water",
+        "sky/atmosphere",
+        "practical light",
+        "bounded parallax"
+      ],
+      "protected_regions": [
+        "male hero identity",
+        "female hero identity",
+        "duo relationship",
+        "fort/harbor geography",
+        "map-contact anatomy",
+        "horizon"
+      ],
+      "start_frame": 516,
+      "end_frame": 1031,
+      "visual_action": "Move from separation into shared geography through map/origin, harbor presence and first stable duo confirmation.",
+      "visual_media": "Route 4 Batch 02 locked map/parapet/duo shots with preserved motion/FX variation libraries.",
+      "animation_behavior": "Map detail, water, sky, practical light and bounded parallax evolve internally while hero identity and geography remain fixed.",
+      "camera_behavior": "restrained push/pull and lateral drift only",
+      "lyric_cue": "Lejos de España nacimos / bajo este cielo tan claro. / Si el destino nos separa / el corazón sigue amando.",
+      "music_cues": [
+        "Distance and origin section",
+        "32-beat phrase grid",
+        "build toward shared-frame confirmation"
+      ],
+      "transition": "Thread/geography continuity into memory awakening."
+    },
+    {
+      "shot_id": "R4-B03",
+      "start_seconds": 43.008,
+      "end_seconds": 64.512,
+      "production_mode": "living_scene",
+      "section": "Verse 3 expansion",
+      "source_lock": "refinements/route4-two-heroes/shot_locks/BATCH_03_VERSE3_EXPANSION.json",
+      "fx_status": "reopened_missing_fx",
+      "motion_regions": [
+        "memory overlays",
+        "rain/mist",
+        "lantern light",
+        "coastal water",
+        "double-exposure layers"
+      ],
+      "protected_regions": [
+        "hero identities",
+        "faces/anatomy",
+        "fort geometry",
+        "coastline",
+        "lantern architecture",
+        "no extra figures"
+      ],
+      "start_frame": 1032,
+      "end_frame": 1547,
+      "visual_action": "Memory awakens through rain, lantern light, coastal overlays and controlled double-exposure while keeping the two-hero world legible.",
+      "visual_media": "Route 4 Batch 03 locked shots plus Batch 03 memory FX variation library.",
+      "animation_behavior": "Independent rain/mist, lantern glow, coastal water and memory-overlay motion; no whole-frame wobble or face drift.",
+      "camera_behavior": "bounded living-scene camera language",
+      "lyric_cue": "Expanded verse 3: island, salt wind, harbor birds, remembered face and summer rain.",
+      "music_cues": [
+        "Verse 3 expansion",
+        "narrative density rises",
+        "memory effects become more present"
+      ],
+      "transition": "Ghosted/fog memory handoff into remembered presence."
+    },
+    {
+      "shot_id": "R4-B04",
+      "start_seconds": 64.512,
+      "end_seconds": 86.016,
+      "production_mode": "living_scene",
+      "section": "Remembered presence",
+      "source_lock": "refinements/route4-two-heroes/shot_locks/BATCH_04_REMEMBERED_PRESENCE.json",
+      "fx_status": "reopened_missing_fx",
+      "motion_regions": [
+        "memory apparition layers",
+        "map/wall light",
+        "gold light travel",
+        "atmospheric haze",
+        "bounded camera depth"
+      ],
+      "protected_regions": [
+        "hero identities",
+        "hands/anatomy",
+        "architecture",
+        "map geography",
+        "horizon",
+        "stable world topology"
+      ],
+      "start_frame": 1548,
+      "end_frame": 2063,
+      "visual_action": "Remembered presence intensifies through apparition layers, map/wall illumination and controlled gold-light travel.",
+      "visual_media": "Route 4 Batch 04 locked shots plus Batch 04 FX variation library.",
+      "animation_behavior": "Layered apparition, map light and haze move independently inside fixed architecture; protected anatomy and geography remain stable.",
+      "camera_behavior": "restrained depth travel",
+      "lyric_cue": "Return and remembrance passage; paths lead back toward the shared island memory.",
+      "music_cues": [
+        "Remembered presence",
+        "mid-film memory crest",
+        "light/atmosphere carry narrative"
+      ],
+      "transition": "Gold/thread energy resolves into chorus-crest imagery."
+    },
+    {
+      "shot_id": "R4-B05",
+      "start_seconds": 86.016,
+      "end_seconds": 106.176,
+      "production_mode": "living_scene",
+      "section": "Chorus crest",
+      "source_lock": "refinements/route4-two-heroes/shot_locks/BATCH_05_CHORUS_CREST.json",
+      "fx_status": "reopened_missing_fx",
+      "motion_regions": [
+        "thread energy",
+        "portal/window glow",
+        "map/table illumination",
+        "memory overlays",
+        "warm practical light"
+      ],
+      "protected_regions": [
+        "hero identities",
+        "faces/anatomy",
+        "fort/harbor geography",
+        "thread motif",
+        "architecture",
+        "no topology drift"
+      ],
+      "start_frame": 2064,
+      "end_frame": 2547,
+      "visual_action": "Chorus crest: portal/window glow, thread energy, map/table light and memory layers converge without replacing the accepted scene structure.",
+      "visual_media": "Route 4 Batch 05 locked shots plus Batch 05 golden-thread FX variation library.",
+      "animation_behavior": "Thread, glow, map light, atmosphere and bounded depth evolve as independent layers; no topology drift.",
+      "camera_behavior": "long hero holds with restrained cinematic motion",
+      "lyric_cue": "Y aunque cambien las mareas / aunque los caminos nos lleven lejos / tu voz sigue viva entre estas piedras / como una llama que no muere.",
+      "music_cues": [
+        "Chorus emotional crest",
+        "longer holds",
+        "FX intensity may rise with music but remain coherent"
+      ],
+      "transition": "Thread/light handoff into the core-timeline release and extended final act."
+    },
+    {
+      "shot_id": "R4-B06",
+      "start_seconds": 106.176,
+      "end_seconds": 112.68,
+      "production_mode": "cinematic",
+      "section": "Core-timeline release/handoff",
+      "source_lock": "refinements/route4-two-heroes/shot_locks/BATCH_06_RELEASE_TO_BLACK.json",
+      "fx_status": "reopened_missing_fx",
+      "note": "Legacy fade-to-black instruction is superseded by the extended 154.375 s current edit.",
+      "start_frame": 2548,
+      "end_frame": 2703,
+      "visual_action": "Complete the original 112.68-second core phrase without fading out permanently; hand the thread/harbor memory forward into the extended current edit.",
+      "visual_media": "Route 4 Batch 06 locked shots and preserved ancestral/thread FX assets.",
+      "animation_behavior": "Controlled cinematic handoff using existing thread/light/harbor layers; legacy full fade-to-black is suppressed because the current audio continues.",
+      "camera_behavior": "bounded fluid follow / restrained hold",
+      "lyric_cue": "Que ruja el mar oscuro a medianoche / que soplen los vientos desde lejos. / Si el destino nos separa, mi amor / el corazón no sabe soltarte.",
+      "music_cues": [
+        "Core chorus release",
+        "transition into added chorus/outro",
+        "do not terminate picture at 112.68"
+      ],
+      "transition": "Continuous handoff into the extended ancestral-harbor act; no permanent black."
+    },
+    {
+      "shot_id": "R4-EXTENDED-ACT",
+      "start_seconds": 112.68,
+      "end_seconds": 154.375,
+      "production_mode": "living_scene",
+      "section": "Extended chorus / ancestral harbor resolution / outro",
+      "source_libraries": [
+        "refinements/route4-two-heroes/media/BATCH_07_ANCESTRAL_PRESENCE.json",
+        "refinements/route4-two-heroes/media/BATCH_08_SUPPLEMENTAL_ANCESTRAL_HARBOR.json",
+        "refinements/route4-two-heroes/media/BATCH_09_FINAL_SUPPLEMENTAL.json"
+      ],
+      "fx_status": "reopened_missing_fx",
+      "note": "Preserve current edit and timing. Supplemental manifests remain source libraries; no fabricated internal timecodes.",
+      "motion_regions": [
+        "ancestral apparition layers",
+        "golden thread structures",
+        "harbor water/reflections",
+        "lantern/candle light",
+        "celestial atmosphere",
+        "bounded depth/parallax"
+      ],
+      "protected_regions": [
+        "hero identities",
+        "ancestral silhouettes",
+        "fort/harbor geography",
+        "thread continuity",
+        "intro/outro timing",
+        "final celestial-thread composition"
+      ],
+      "start_frame": 2704,
+      "end_frame": 3704,
+      "visual_action": "Extend the current accepted edit through ancestral harbor resolution, luminous thread inheritance and channel outro while preserving the established two-hero world.",
+      "visual_media": "Preserved current extended-act edit using supplemental Route 4 Batches 07-09 as source/reference libraries.",
+      "animation_behavior": "Ancestral apparition layers, golden thread structures, harbor reflections, lantern/candle light, celestial atmosphere and bounded depth evolve inside long-held compositions.",
+      "camera_behavior": "restrained long-form scene evolution; no slideshow recut",
+      "lyric_cue": "Added chorus and instrumental outro / ancestral resolution.",
+      "music_cues": [
+        "Extended chorus",
+        "instrumental final act",
+        "gradual ancestral/celestial resolution",
+        "outro timing preserved"
+      ],
+      "transition": "Resolve to the existing accepted channel ending; no new postscript scene."
+    }
+  ],
+  "preservation": {
+    "edit_timing": "locked",
+    "hero_order": "locked",
+    "audio": "locked",
+    "intro_outro": "locked",
+    "hand_repair": "locked",
+    "upscale": "blocked until 1080 FX master is approved"
+  },
+  "updated_at": "2026-09-25T01:25:00Z",
+  "based_on_storyboard": true
+}

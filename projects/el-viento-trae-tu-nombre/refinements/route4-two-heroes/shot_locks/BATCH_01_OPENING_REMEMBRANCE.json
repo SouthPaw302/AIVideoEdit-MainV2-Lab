@@ -1,0 +1,176 @@
+{
+  "schema": "aivideoedit.batch-shot-lock.v1",
+  "refinement_id": "route4-two-heroes",
+  "batch_id": "BATCH-01-HERO-LOCK",
+  "status": "locked_for_moving_proof",
+  "authority": "current_user_direction",
+  "song_segment": {
+    "section_id": "M01",
+    "name": "Opening remembrance",
+    "start_seconds": 0,
+    "end_seconds": 21.504,
+    "duration_seconds": 21.504,
+    "tempo_bpm": 89.285714,
+    "beat_count": 32,
+    "structure": "4 shots x 8 beats",
+    "lyric_scope": [
+      "Miraba el mar desde el fuerte",
+      "pensando en ti, mi querida.",
+      "El viento trae tu nombre",
+      "entre las olas dormidas."
+    ]
+  },
+  "narrative_goal": "Introduce the male hero, then the female hero, reveal that they inhabit the same remembered island world, and end by establishing the luminous gold-red thread as the film's central inheritance/connection motif.",
+  "selected_shots": [
+    {
+      "shot_id": "R4-B01-S01",
+      "start_seconds": 0,
+      "end_seconds": 5.376,
+      "beats": 8,
+      "source_asset": {
+        "name": "01_fortress_hero_at_sunset.png",
+        "drive_id": "1Aqf6mBgoRZsMtQP26FUPHhj_1TNa4e5p",
+        "role": "male_hero_opening_anchor"
+      },
+      "lyric_cue": "Miraba el mar desde el fuerte",
+      "visual_intent": "Begin grounded and legible. Male hero alone at the fort, sea and horizon readable before any overt memory effect.",
+      "camera": "very slow 2.5D push-in, no orbit, no axis drift",
+      "approved_fx": [
+        {
+          "id": "FX2-SURFACE-001",
+          "use": "temporal stability"
+        },
+        {
+          "id": "FX2-MOTION-003",
+          "use": "water only; restrained"
+        },
+        {
+          "id": "FX2-LIGHT-002",
+          "use": "slow sunset light travel"
+        }
+      ],
+      "protected": "male identity, fort geometry, horizon, coastline",
+      "transition_out": "natural atmospheric continuation; no hard effect hit"
+    },
+    {
+      "shot_id": "R4-B01-S02",
+      "start_seconds": 5.376,
+      "end_seconds": 10.752,
+      "beats": 8,
+      "source_asset": {
+        "name": "02_rainlit_harbor_romance.png",
+        "drive_id": "19p96CGqOOiGgbqz3lliECPJ0YmV0UQ5J",
+        "role": "female_hero_opening_anchor"
+      },
+      "lyric_cue": "pensando en ti, mi querida.",
+      "visual_intent": "Answer the male image with the female hero. Rain and practical light make her feel physically present, not yet ghostly.",
+      "camera": "near-static composition with subtle bounded depth drift",
+      "approved_fx": [
+        {
+          "id": "FX2-SURFACE-001",
+          "use": "temporal stability"
+        },
+        {
+          "id": "FX2-MOTION-002",
+          "use": "localized rain/fabric/hair living flow only"
+        },
+        {
+          "id": "FX2-LIGHT-001",
+          "use": "lantern/practical breathing"
+        }
+      ],
+      "protected": "female identity, face, silhouette, wardrobe palette, architecture",
+      "transition_out": "rain/mist carries into shared-memory space"
+    },
+    {
+      "shot_id": "R4-B01-S03",
+      "start_seconds": 10.752,
+      "end_seconds": 16.128,
+      "beats": 8,
+      "source_asset": {
+        "name": "03_memory_gate_of_gold_and_rain.png",
+        "drive_id": "1PLiDqo_tc-Bn9Tru_JYFnKyFoV5qPwHo",
+        "role": "shared_memory_gate"
+      },
+      "lyric_cue": "El viento trae tu nombre",
+      "visual_intent": "First causal surreal shift: the separate realities begin to share one memory-space. Gold appears as a restrained connective signal.",
+      "camera": "slow bounded push through depth layers; no new geometry",
+      "approved_fx": [
+        {
+          "id": "FX2-SURFACE-001",
+          "use": "temporal stability"
+        },
+        {
+          "id": "FX2-ATM-001",
+          "use": "memory mist/rain carry"
+        },
+        {
+          "id": "FX2-LIGHT-002",
+          "use": "moving gold light field"
+        }
+      ],
+      "protected": "hero continuity, gate/fort architecture, readable geography",
+      "transition_out": "gold light resolves into the physical thread motif"
+    },
+    {
+      "shot_id": "R4-B01-S04",
+      "start_seconds": 16.128,
+      "end_seconds": 21.504,
+      "beats": 8,
+      "source_asset": {
+        "name": "04_threads_of_memory_at_sunset.png",
+        "drive_id": "1Fh5w_6P_KJbN7_dPn3x_NGIe8c24pxGU",
+        "role": "thread_motif_first_lock"
+      },
+      "lyric_cue": "entre las olas dormidas.",
+      "visual_intent": "First unmistakable appearance of the shared luminous embroidered thread. Keep it elegant and physical; do not yet reveal the full ancestral network.",
+      "camera": "static-to-micro-push; let internal thread motion carry the shot",
+      "approved_fx": [
+        {
+          "id": "FX2-SURFACE-001",
+          "use": "temporal stability"
+        },
+        {
+          "id": "FX2-MOTION-002",
+          "use": "localized thread/fabric motion"
+        },
+        {
+          "id": "FX2-MOTION-003",
+          "use": "subtle water motion"
+        },
+        {
+          "id": "FX2-LIGHT-001",
+          "use": "thread glow breathing"
+        }
+      ],
+      "protected": "thread silhouette/continuity, hero identities if visible, horizon",
+      "transition_out": "handoff to Batch 02 at 21.504 with thread direction and horizon continuity preserved"
+    }
+  ],
+  "held_as_alternates": [
+    "05_glowing_thread_across_harbor.png",
+    "06_threads_of_time_hearts_of_gold.png",
+    "07_threads_across_twilight_coast.png",
+    "08_threads_through_time_by_sea.png",
+    "09_tapestry_world.png",
+    "10_threads_of_destiny_at_sunset.png"
+  ],
+  "rejected_for_opening_use": [
+    {
+      "asset": "09_tapestry_world.png",
+      "reason": "too much narrative information for the opening; reserve full-tapestry language for later convergence/finale"
+    }
+  ],
+  "motion_rule": "Motion stays internal and bounded. No face morphing, no subject replacement, no architecture drift, no extra figures, no text.",
+  "proof_requirement": {
+    "next_step": "Render one contiguous 00:00.000-00:21.504 Batch 01 moving proof using only these four locked shots and canonical source audio.",
+    "qc": [
+      "male and female hero identity continuity",
+      "no AI face/body drift",
+      "no horizon/architecture drift",
+      "thread appears only after shared-memory gate",
+      "FX remain subordinate to lyric/story",
+      "clean handoff at 21.504 to Batch 02"
+    ]
+  }
+}

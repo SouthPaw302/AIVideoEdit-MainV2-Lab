@@ -1,0 +1,68 @@
+{
+  "schema": "aivideoedit.batch-shot-lock.v1",
+  "refinement_id": "route4-two-heroes",
+  "batch_id": "BATCH-05-GENERATIONS-PASSING",
+  "status": "locked_pre_fx",
+  "song_segment": {
+    "section_id": "M05",
+    "name": "Chorus crest",
+    "start_seconds": 86.016,
+    "end_seconds": 106.176,
+    "duration_seconds": 20.16,
+    "tempo_bpm": 89.285714,
+    "structure": "4 equal shots x 5.04 seconds"
+  },
+  "narrative_goal": "Escalate inherited memory without exhausting the finale: generations become visible, the luminous thread carries through them, the harbor fills with connected memory, and the thread becomes the dominant visual handoff into the ending.",
+  "selected_shots": [
+    {
+      "shot_id": "R4-B05-S01",
+      "start_seconds": 86.016,
+      "end_seconds": 91.056,
+      "source_asset": {
+        "name": "06_glowing_thread_of_generations.png",
+        "drive_id": "176YcLIn2d37zY0YM8vrY66Js19GCGzFC"
+      },
+      "intent": "Reveal generations around the established heroes while keeping the thread readable but not yet dominant."
+    },
+    {
+      "shot_id": "R4-B05-S02",
+      "start_seconds": 91.056,
+      "end_seconds": 96.096,
+      "source_asset": {
+        "name": "07_golden_thread_through_generations.png",
+        "drive_id": "1pd0W2aHBiipOAqIxdyphu2q84v5QEDnD"
+      },
+      "intent": "Let the thread become the carrier across generations and eras."
+    },
+    {
+      "shot_id": "R4-B05-S03",
+      "start_seconds": 96.096,
+      "end_seconds": 101.136,
+      "source_asset": {
+        "name": "10_harbor_of_golden_threads.png",
+        "drive_id": "1MxPrqlJazU-88ItyJbEfzsJ5xTFLFVf-"
+      },
+      "intent": "Expand the chorus visually across the harbor while preserving the same island geography."
+    },
+    {
+      "shot_id": "R4-B05-S04",
+      "start_seconds": 101.136,
+      "end_seconds": 106.176,
+      "source_asset": {
+        "name": "09_cinematic_sunset_thread.png",
+        "drive_id": "1eUIhZ3E53ciJp_VGOi8iGKZpC1Jj0D48"
+      },
+      "intent": "Compress the accumulated imagery back toward the single luminous thread motif that hands off to the ending."
+    }
+  ],
+  "held_as_alternates": [
+    "01_threads_of_legacy_at_sunset.png",
+    "02_red_gold_thread_of_destiny.png",
+    "03_threads_of_memory_at_sunset.png",
+    "04_threads_of_destiny_at_sunset.png",
+    "05_sunset_chapel_ancestral_love.png",
+    "08_threads_of_fate_at_sunset.png"
+  ],
+  "fx_variations_status": "held_for_gate_stage",
+  "next_step": "Stop at pre-FX. Batch 05 is ready for FX gate/review only."
+}

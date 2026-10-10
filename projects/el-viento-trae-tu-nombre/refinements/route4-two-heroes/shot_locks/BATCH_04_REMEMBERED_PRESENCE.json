@@ -1,0 +1,83 @@
+{
+  "schema": "aivideoedit.batch-shot-lock.v1",
+  "refinement_id": "route4-two-heroes",
+  "batch_id": "BATCH-04-VILLAGE-OF-THE-LIVING-PAST",
+  "status": "locked_pre_fx",
+  "song_segment": {
+    "section_id": "M04",
+    "name": "Remembered presence",
+    "start_seconds": 64.512,
+    "end_seconds": 86.016,
+    "duration_seconds": 21.504,
+    "tempo_bpm": 89.285714,
+    "beat_count": 32,
+    "structure": "4 shots x 8 beats",
+    "lyric_scope": [
+      "Aprendí tu rostro a la luz del farol",
+      "tu voz bajo la lluvia de verano.",
+      "Y cada camino que me llevó lejos",
+      "terminó trayéndome de regreso."
+    ]
+  },
+  "narrative_goal": "Make memory personal and intimate without jumping to the later ancestral climax: remembered woman in place, physical letter/relic, twilight memory-space, then a chapel/ruin image that closes the return motif.",
+  "selected_shots": [
+    {
+      "shot_id": "R4-B04-S01",
+      "start_seconds": 64.512,
+      "end_seconds": 69.888,
+      "beats": 8,
+      "source_asset": {
+        "name": "04_woman_ruins_harbor.png",
+        "drive_id": "1nKSfuZLzzixqxGUpmoVk9vW6eQCfp-z6"
+      },
+      "lyric_cue": "Aprendí tu rostro a la luz del farol",
+      "intent": "Human memory becomes intimate while the harbor/fort remains legible."
+    },
+    {
+      "shot_id": "R4-B04-S02",
+      "start_seconds": 69.888,
+      "end_seconds": 75.264,
+      "beats": 8,
+      "source_asset": {
+        "name": "06_letter_memory_coast.png",
+        "drive_id": "1_gRUbTGV-3IaorQazBszZKnaVS4o9X_Q"
+      },
+      "lyric_cue": "tu voz bajo la lluvia de verano.",
+      "intent": "Letter/relic carries remembered voice and distance without adding new mythology."
+    },
+    {
+      "shot_id": "R4-B04-S03",
+      "start_seconds": 75.264,
+      "end_seconds": 80.64,
+      "beats": 8,
+      "source_asset": {
+        "name": "07_twilight_fortress_memory.png",
+        "drive_id": "162NH_F3zPQtEqPGWnvW3fKC6n-s9E0Dm"
+      },
+      "lyric_cue": "Y cada camino que me llevó lejos",
+      "intent": "Twilight fort becomes the route-away image; retain geography and hero continuity."
+    },
+    {
+      "shot_id": "R4-B04-S04",
+      "start_seconds": 80.64,
+      "end_seconds": 86.016,
+      "beats": 8,
+      "source_asset": {
+        "name": "09_ruined_chapel_memory.png",
+        "drive_id": "116nvRoSor4CLYptzgLqIjE1MmSU4jcmj"
+      },
+      "lyric_cue": "terminó trayéndome de regreso.",
+      "intent": "Close on the memory/chapel space as a visual return, preparing the chorus without using the full ancestral convergence yet."
+    }
+  ],
+  "held_as_alternates": [
+    "01_fortress_memory_village.png",
+    "02_golden_hour_village_memory.png",
+    "03_coastal_village_memory.png",
+    "05_fortress_harbor_vision.png",
+    "08_wind_harbor_memory.png",
+    "10_village_memory_overall.png"
+  ],
+  "fx_variations_status": "held_for_gate_stage",
+  "next_step": "Stop at pre-FX. Batch 04 is ready for FX gate/review only."
+}

@@ -1,0 +1,49 @@
+{
+  "schema": "aivideoedit.batch-shot-lock.v1",
+  "refinement_id": "route4-two-heroes",
+  "batch_id": "BATCH-06-SEPARATION-BY-SEA",
+  "status": "locked_pre_fx",
+  "song_segment": {
+    "section_id": "M06",
+    "name": "Release to black",
+    "start_seconds": 106.176,
+    "end_seconds": 112.68,
+    "duration_seconds": 6.504,
+    "structure": "2 equal shots x 3.252 seconds"
+  },
+  "narrative_goal": "Resolve the separation motif with the pair still connected by inherited memory, then compress the image toward the map/thread anchor so the final FX gate can perform the actual release into black.",
+  "selected_shots": [
+    {
+      "shot_id": "R4-B06-S01",
+      "start_seconds": 106.176,
+      "end_seconds": 109.428,
+      "source_asset": {
+        "name": "06_ancestral_thread_pair.png",
+        "drive_id": "1-t0KDmvePEWfCat_cO4h7VcU0388CIO9"
+      },
+      "intent": "Keep both heroes and the ancestral thread visible as the final lyric resolves."
+    },
+    {
+      "shot_id": "R4-B06-S02",
+      "start_seconds": 109.428,
+      "end_seconds": 112.68,
+      "source_asset": {
+        "name": "10_map_thread_pair.png",
+        "drive_id": "18r4lvZQBI3rGhs5Rb74haJq5om20g8lO"
+      },
+      "intent": "Collapse attention toward the map/thread motif; final fade/release to black is deferred to the FX gate."
+    }
+  ],
+  "held_as_alternates": [
+    "01_moonlit_fortress_pair.png",
+    "02_harbor_memory_pair.png",
+    "03_thread_compass_pair.png",
+    "04_fortress_harbor_pair.png",
+    "05_relic_harbor_pair.png",
+    "07_map_harbor_pair.png",
+    "08_dusk_pair_fort.png",
+    "09_relic_memory_pair.png"
+  ],
+  "fx_variations_status": "partial_library_present_but_held_for_gate_stage",
+  "next_step": "Stop at pre-FX. Batch 06 is ready for final FX gate/review only."
+}

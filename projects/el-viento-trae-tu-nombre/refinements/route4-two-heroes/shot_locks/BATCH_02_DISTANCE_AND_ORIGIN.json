@@ -1,0 +1,88 @@
+{
+  "schema": "aivideoedit.batch-shot-lock.v1",
+  "refinement_id": "route4-two-heroes",
+  "batch_id": "BATCH-02-PRESENT-DAY-REALITY",
+  "status": "locked_pre_fx",
+  "song_segment": {
+    "section_id": "M02",
+    "name": "Distance and origin",
+    "start_seconds": 21.504,
+    "end_seconds": 43.008,
+    "duration_seconds": 21.504,
+    "tempo_bpm": 89.285714,
+    "beat_count": 32,
+    "structure": "4 shots x 8 beats",
+    "lyric_scope": [
+      "Lejos de España nacimos",
+      "bajo este cielo tan claro.",
+      "Si el destino nos separa",
+      "el corazón sigue amando."
+    ]
+  },
+  "narrative_goal": "Move from individual longing into shared geography: map/origin, woman at the harbor, reunion in the same dusk space, then a stable shared fortress/harbor image that hands off into memory awakening.",
+  "selected_shots": [
+    {
+      "shot_id": "R4-B02-S01",
+      "start_seconds": 21.504,
+      "end_seconds": 26.88,
+      "beats": 8,
+      "source_asset": {
+        "name": "07_male_map_battlement.png",
+        "drive_id": "1404d9s0_R-I51ZVWi2qprIFpeksZHemu"
+      },
+      "lyric_cue": "Lejos de España nacimos",
+      "intent": "Male hero studies origin/distance through the map; fort and sea stay concrete.",
+      "motion": "restrained push/pull and lateral drift only"
+    },
+    {
+      "shot_id": "R4-B02-S02",
+      "start_seconds": 26.88,
+      "end_seconds": 32.256,
+      "beats": 8,
+      "source_asset": {
+        "name": "08_female_harbor_parapet.png",
+        "drive_id": "1gzRi1pUYM7bdUqBqF8Pt7jzG4m67sIQ5"
+      },
+      "lyric_cue": "bajo este cielo tan claro.",
+      "intent": "Female hero answers from the harbor parapet under open sky; hold her identity and environment stable.",
+      "motion": "restrained push/pull and lateral drift only"
+    },
+    {
+      "shot_id": "R4-B02-S03",
+      "start_seconds": 32.256,
+      "end_seconds": 37.632,
+      "beats": 8,
+      "source_asset": {
+        "name": "03_duo_harbor_dusk.png",
+        "drive_id": "10O6N_1gN3i-vczkMLb2zcF3SEcMlJ6Js"
+      },
+      "lyric_cue": "Si el destino nos separa",
+      "intent": "First shared-frame confirmation that both belong to one physical island world before memory abstraction deepens.",
+      "motion": "restrained push/pull and lateral drift only"
+    },
+    {
+      "shot_id": "R4-B02-S04",
+      "start_seconds": 37.632,
+      "end_seconds": 43.008,
+      "beats": 8,
+      "source_asset": {
+        "name": "05_duo_fortress_harbor.png",
+        "drive_id": "1K6nLH8R8CbLZc_arSuQritKhiwBc2RAm"
+      },
+      "lyric_cue": "el corazón sigue amando.",
+      "intent": "Close the section with the pair anchored in fort/harbor geography; prepare structural handoff into Batch 3 Memory Awakening.",
+      "motion": "restrained push/pull and lateral drift only"
+    }
+  ],
+  "held_as_alternates": [
+    "01_male_fort_sunset.png",
+    "02_female_fort_rain.png",
+    "04_male_battlement_dusk.png",
+    "06_female_lantern_street.png",
+    "09_female_fortress_lantern.png",
+    "10_male_fort_map.png"
+  ],
+  "fx_variations_status": "held_for_gate_stage",
+  "transition_rule": "No storm/ancestral FX yet. Preserve geography and hero identities. Batch 3 may begin only after 43.008.",
+  "next_step": "FX gate/review for Batch 02 only after clean loops and pre-FX movement variants are accepted."
+}

@@ -1,0 +1,73 @@
+{
+  "schema": "aivideoedit.batch-shot-lock.v1",
+  "refinement_id": "route4-two-heroes",
+  "batch_id": "BATCH-03-MEMORY-AWAKENING",
+  "status": "locked_pre_fx",
+  "song_segment": {
+    "section_id": "M03",
+    "name": "Verse 3 expansion",
+    "start_seconds": 43.008,
+    "end_seconds": 64.512,
+    "duration_seconds": 21.504,
+    "tempo_bpm": 89.285714,
+    "beat_count": 32,
+    "structure": "4 shots x 8 beats"
+  },
+  "narrative_goal": "Turn the established physical island world into a legible memory mechanism: stone reveals map, touch activates remembered geography, geography opens into the coastal city, and the embroidered thread becomes the carrier into the next section.",
+  "selected_shots": [
+    {
+      "shot_id": "R4-B03-S01",
+      "start_seconds": 43.008,
+      "end_seconds": 48.384,
+      "beats": 8,
+      "source_asset": {
+        "name": "01_stone_map_awakening.png",
+        "drive_id": "10NSC7DFf3eDgS3VFFTr7O7s_3veM6WWk"
+      },
+      "intent": "Stone/map awakening begins the memory layer without losing tactile architecture."
+    },
+    {
+      "shot_id": "R4-B03-S02",
+      "start_seconds": 48.384,
+      "end_seconds": 53.76,
+      "beats": 8,
+      "source_asset": {
+        "name": "04_touching_harbor_map.png",
+        "drive_id": "1yBZGyvBuwqDH3uixV73GpQP8mMIYQrxL"
+      },
+      "intent": "Human contact activates the harbor memory; keep the hand/map relationship readable."
+    },
+    {
+      "shot_id": "R4-B03-S03",
+      "start_seconds": 53.76,
+      "end_seconds": 59.136,
+      "beats": 8,
+      "source_asset": {
+        "name": "06_portal_golden_coastal_city.png",
+        "drive_id": "1m0RFRlm2I2Pl8rOFA7bUrUoNG5Jlp5r7"
+      },
+      "intent": "The remembered coastal city becomes spatially present; no additional invented geography."
+    },
+    {
+      "shot_id": "R4-B03-S04",
+      "start_seconds": 59.136,
+      "end_seconds": 64.512,
+      "beats": 8,
+      "source_asset": {
+        "name": "07_threads_embroidered_map.png",
+        "drive_id": "17hcVKez9Nx1ThZRKw1Vai4CwAq0x-ata"
+      },
+      "intent": "Embroidered thread becomes the explicit carrier out of the map and into remembered presence."
+    }
+  ],
+  "held_as_alternates": [
+    "02_golden_map_lost_harbor.png",
+    "03_enchanted_map_fortress.png",
+    "05_enchanted_lost_coast.png",
+    "08_lovers_golden_thread.png",
+    "09_golden_threads_harbor.png",
+    "10_moonlit_fate_sea.png"
+  ],
+  "fx_variations_status": "held_for_gate_stage",
+  "next_step": "Stop at pre-FX. Batch 03 is ready for FX gate/review only."
+}
