@@ -1,0 +1,46 @@
+{
+  "schema": "aivideoedit.motion-variants.v1",
+  "refinement_id": "route4-two-heroes",
+  "batch_id": "BATCH-05",
+  "status": "drive_verified_pre_fx",
+  "scope": "pre-gate movement only",
+  "drive_folder": {
+    "id": "1C1jBRbqz0DdEt8HGtwvQ6rOrKGPAzvli",
+    "url": "https://drive.google.com/drive/folders/1C1jBRbqz0DdEt8HGtwvQ6rOrKGPAzvli"
+  },
+  "archive": {
+    "name": "El_Viento_Batch05_PreFX_Motion_Variants.zip",
+    "drive_id": "1X8VVVR5xotHrJiJLYdSoZLgjgGMpixjj",
+    "sha256": "f4bfe181a01a083bb46e169172763d920fc59b0968344780806d5969194bf3e4"
+  },
+  "rules": [
+    "no subject morphing",
+    "no geometry generation",
+    "no transition effects",
+    "no canonical FX IDs claimed",
+    "light movement only"
+  ],
+  "assets": [
+    {
+      "shot_id": "R4-B05-S01",
+      "name": "01_generations_motion_variant.mp4",
+      "sha256": "6146abaf2727f6ce8789bdf2367650d2c7cb3e14970ee64787aa48318417e502"
+    },
+    {
+      "shot_id": "R4-B05-S02",
+      "name": "02_thread_generations_motion_variant.mp4",
+      "sha256": "5ac813f6293ec9bee834ef5679b603296b0cc108477f3f5a44b101b826ef7ec5"
+    },
+    {
+      "shot_id": "R4-B05-S03",
+      "name": "03_harbor_threads_motion_variant.mp4",
+      "sha256": "c0055ec84b359c1a4aa0ee8f18222910f14676063c8c1748197f6bb6e538fbc3"
+    },
+    {
+      "shot_id": "R4-B05-S04",
+      "name": "04_sunset_thread_motion_variant.mp4",
+      "sha256": "ac07ef7dfb1c348f14a55860b23a1df359353cf9beb409dedfd5d19e1e5e77d1"
+    }
+  ],
+  "next_step": "Stop here before FX gates."
+}

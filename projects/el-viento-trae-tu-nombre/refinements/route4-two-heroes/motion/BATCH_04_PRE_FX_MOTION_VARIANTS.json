@@ -1,0 +1,46 @@
+{
+  "schema": "aivideoedit.motion-variants.v1",
+  "refinement_id": "route4-two-heroes",
+  "batch_id": "BATCH-04",
+  "status": "drive_verified_pre_fx",
+  "scope": "pre-gate movement only",
+  "drive_folder": {
+    "id": "1UO0MFlPRZ85MCdpl22bk7THNuQwLDfyR",
+    "url": "https://drive.google.com/drive/folders/1UO0MFlPRZ85MCdpl22bk7THNuQwLDfyR"
+  },
+  "archive": {
+    "name": "El_Viento_Batch04_PreFX_Motion_Variants.zip",
+    "drive_id": "1IKkoXFufZe4u40gIWl16bDxLQWlxvFRk",
+    "sha256": "a89b2cc3ebe64e7bc807a562a2f40113bab7e2ce09f6ff67aefafbbe74f41c98"
+  },
+  "rules": [
+    "no subject morphing",
+    "no geometry generation",
+    "no transition effects",
+    "no canonical FX IDs claimed",
+    "light movement only"
+  ],
+  "assets": [
+    {
+      "shot_id": "R4-B04-S01",
+      "name": "01_motion_variant.mp4",
+      "sha256": "d71bb05a7a9eb54741d8b8e922b6eb8c9074e854aa67581b1cfb75afaf73083b"
+    },
+    {
+      "shot_id": "R4-B04-S02",
+      "name": "02_motion_variant.mp4",
+      "sha256": "dbf84e7a8f03c170d112b9359e331ae0b11f0c7186aa5a0f0fc0914302904abc"
+    },
+    {
+      "shot_id": "R4-B04-S03",
+      "name": "03_motion_variant.mp4",
+      "sha256": "b45388458209ef2cbc6c03886500fea006d602c5431074c13ef9f12c231bad2c"
+    },
+    {
+      "shot_id": "R4-B04-S04",
+      "name": "04_motion_variant.mp4",
+      "sha256": "0724307c57445a823e985806ae238c7c13e26a9cfd29bd30335d26444807614a"
+    }
+  ],
+  "next_step": "Stop here before FX gates."
+}

@@ -1,0 +1,46 @@
+{
+  "schema": "aivideoedit.motion-variants.v1",
+  "refinement_id": "route4-two-heroes",
+  "batch_id": "BATCH-03",
+  "status": "drive_verified_pre_fx",
+  "scope": "pre-gate movement only",
+  "drive_folder": {
+    "id": "1SB4dezkzMArm1EWK8A9O3j3mbJGev1qa",
+    "url": "https://drive.google.com/drive/folders/1SB4dezkzMArm1EWK8A9O3j3mbJGev1qa"
+  },
+  "archive": {
+    "name": "El_Viento_Batch03_PreFX_Motion_Variants.zip",
+    "drive_id": "1SIgg98mEfO_xgXXgrmKvZO0x8rDJ4qGS",
+    "sha256": "f5c8732e51fa5230937bb61f8436e4c1d48360e788ffedb196e0a657827ce712"
+  },
+  "rules": [
+    "no subject morphing",
+    "no geometry generation",
+    "no transition effects",
+    "no canonical FX IDs claimed",
+    "light movement only"
+  ],
+  "assets": [
+    {
+      "shot_id": "R4-B03-S01",
+      "name": "01_stone_map_motion_variant.mp4",
+      "sha256": "fe5cefd123706bb91b6b7ebb0c7e6333e33799a01795bc12b61b9204794aa798"
+    },
+    {
+      "shot_id": "R4-B03-S02",
+      "name": "02_touching_map_motion_variant.mp4",
+      "sha256": "8e50ac2b8a7d3b9d7568445c2ad8ddb5a0053a3e745ae7181ed872bb3562639a"
+    },
+    {
+      "shot_id": "R4-B03-S03",
+      "name": "03_portal_city_motion_variant.mp4",
+      "sha256": "ab23569ee0aa576c0fa331a68a4b17d475b0128326a795df406638f6723ed728"
+    },
+    {
+      "shot_id": "R4-B03-S04",
+      "name": "04_embroidered_thread_motion_variant.mp4",
+      "sha256": "3c816bea57408a59a22a5b2278ab7d35967c0ff9fb9c020cde5dd0963991368a"
+    }
+  ],
+  "next_step": "Stop here before FX gates."
+}

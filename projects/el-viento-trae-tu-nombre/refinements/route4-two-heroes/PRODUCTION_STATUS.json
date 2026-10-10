@@ -1,0 +1,154 @@
+{
+  "schema": "aivideoedit.route4-production-status.v1",
+  "project": "El Viento trae tu nombre",
+  "branch": "song/el-viento-trae-tu-nombre",
+  "refinement_id": "route4-two-heroes",
+  "song_duration_seconds": 112.68,
+  "timeline_status": "fully_partitioned_batches_01_through_06",
+  "batches": [
+    {
+      "batch": 1,
+      "segment": "00:00.000-00:21.504",
+      "section": "Opening remembrance",
+      "shot_count": 4,
+      "shot_lock": true,
+      "clean_loops": true,
+      "gif_previews": true,
+      "pre_fx_motion": true,
+      "fx_gate": "rendered_pending_user_visual_review",
+      "fx_proof": "El_Viento_Batch01_FX_Moving_Proof_v3.mp4",
+      "fx_review": "included in 1080 FX master v6; technical QC passed",
+      "proof": "El_Viento_Batch01_BASELINE_AUDIT_v1.mp4"
+    },
+    {
+      "batch": 2,
+      "segment": "00:21.504-00:43.008",
+      "section": "Distance and origin",
+      "shot_count": 4,
+      "shot_lock": true,
+      "clean_loops": true,
+      "gif_previews": true,
+      "pre_fx_motion": true,
+      "fx_gate": "rendered_pending_user_visual_review",
+      "fx_proof": "El_Viento_Batch02_FX_Moving_Proof_v1.mp4",
+      "fx_review": "included in 1080 FX master v6; technical QC passed"
+    },
+    {
+      "batch": 3,
+      "segment": "00:43.008-01:04.512",
+      "section": "Verse 3 expansion",
+      "shot_count": 4,
+      "shot_lock": true,
+      "clean_loops": true,
+      "gif_previews": true,
+      "pre_fx_motion": true,
+      "fx_gate": "rendered_pending_user_visual_review",
+      "fx_proof": "El_Viento_Batch03_FX_Moving_Proof_v1.mp4",
+      "fx_review": "included in 1080 FX master v6; technical QC passed"
+    },
+    {
+      "batch": 4,
+      "segment": "01:04.512-01:26.016",
+      "section": "Remembered presence",
+      "shot_count": 4,
+      "shot_lock": true,
+      "clean_loops": true,
+      "gif_previews": true,
+      "pre_fx_motion": true,
+      "fx_gate": "rendered_pending_user_visual_review",
+      "fx_proof": "El_Viento_Batch04_FX_Moving_Proof_v1.mp4",
+      "fx_review": "included in 1080 FX master v6; technical QC passed"
+    },
+    {
+      "batch": 5,
+      "segment": "01:26.016-01:46.176",
+      "section": "Chorus crest",
+      "shot_count": 4,
+      "shot_lock": true,
+      "clean_loops": true,
+      "gif_previews": true,
+      "pre_fx_motion": true,
+      "fx_gate": "rendered_pending_user_visual_review",
+      "fx_proof": "El_Viento_Batch05_FX_Moving_Proof_v1.mp4",
+      "fx_review": "included in 1080 FX master v6; technical QC passed"
+    },
+    {
+      "batch": 6,
+      "segment": "01:46.176-01:52.680",
+      "section": "Release to black",
+      "shot_count": 2,
+      "shot_lock": true,
+      "clean_loops": true,
+      "gif_previews": true,
+      "pre_fx_motion": true,
+      "fx_gate": "rendered_pending_user_visual_review",
+      "fx_proof": "El_Viento_Batch06_FX_Moving_Proof_v1.mp4",
+      "fx_review": "included in 1080 FX master v6; technical QC passed"
+    }
+  ],
+  "preserved": [
+    "canonical source audio unchanged",
+    "v1 master preserved",
+    "Option 3 v2 preserved",
+    "main branch untouched"
+  ],
+  "pending": [
+    "user full normal-speed visual review of 1080 FX master v6",
+    "archive/promote accepted 1080 master",
+    "4K upscale only after explicit visual approval"
+  ],
+  "optional_pending": [
+    "Batch 06 FX still alternatives 09-10 only if explicitly requested"
+  ],
+  "exact_resume_action": "User reviews El_Viento_Route4_1080p_FX_MASTER_v6.mp4. Do not change or upscale it until visual feedback is received.",
+  "do_not_do": [
+    "do not invent Batch 07",
+    "do not regenerate locked media without QC failure or explicit user direction",
+    "do not modify main",
+    "do not overwrite preserved masters"
+  ],
+  "fx_completion_pass": {
+    "status": "core_fx_gates_locked_full_assembly_pending",
+    "batch_01": "locked",
+    "current_batch": null,
+    "reference_4k_policy": "rollback/reference only; do not upscale again during FX completion",
+    "final_rule": "user approval required on the completed 1080p FX master before any new upscale",
+    "batch_02": "locked",
+    "batch_03": "locked",
+    "batch_04": "locked",
+    "batch_05": "locked",
+    "batch_06": "locked",
+    "core_batches_locked": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  "last_fx_action": {
+    "batch": 1,
+    "result": "locked_existing_fx_verified",
+    "proof_sha256": "0922b1b02dcc11f56ae090aff4884eef4af47a338e91eb0af7c7dc89f6b77c00"
+  },
+  "core_fx_gates": {
+    "status": "complete",
+    "batches": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "method": "current-edit baseline FX audit/delta-only",
+    "baseline": "El_Viento_Route4_1080p_CREATIVE_LOCK_v5_review.mp4"
+  },
+  "full_fx_gate": {
+    "status": "rendered_pending_user_visual_review",
+    "result": "TECHNICAL_PASS",
+    "master_sha256": "5fe93ef79d528a27cb7a15003aac9e9bc50a0db40a6719a102d36d5f10314af0",
+    "updated_at": "2026-09-25T01:50:00Z"
+  }
+}

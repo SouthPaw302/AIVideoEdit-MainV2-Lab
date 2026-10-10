@@ -1,0 +1,50 @@
+{
+  "schema": "aivideoedit.refinement-qc-snapshot.v1",
+  "label": "PRE_EDIT_OPTION3_V2_ACCEPTED_SOURCE_LIBRARY",
+  "runtime_seconds": 112.666667,
+  "export_variety": {
+    "result": "PASS",
+    "similar_runs_count": 0,
+    "metrics": {
+      "mean_adjacent_similarity": 0.877335786819458,
+      "max_adjacent_similarity": 0.9937229156494141,
+      "samples": 12,
+      "sample_interval_seconds": 10,
+      "similarity_threshold": 0.992,
+      "max_similar_run_samples": 3
+    }
+  },
+  "black_freeze": {
+    "result": "PASS",
+    "black_event": "105.916667-112.625 intentional scripted ending",
+    "freeze_events": []
+  },
+  "framing_aspect": {
+    "result": "PASS",
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "fps": 24
+  },
+  "audio_sync": {
+    "result": "PASS",
+    "audio_present": true,
+    "canonical_timeline_seconds": 112.666667
+  },
+  "mode_aware_qc": {
+    "result": "REVIEW",
+    "note": "Accepted as source library/visual world, but user requested less abstraction, stronger human spine and more FX."
+  },
+  "source_canon_integrity": {
+    "result": "PASS",
+    "source_library_sha256": "4ac3f137d9bba34d05665acd9a344883f958bc04415b7b787e2bde2d020b96ab",
+    "measured_review_encode_sha256": "65418a8484229421026c25762edabc7bdde4ad2916c8d83af35d1ae561f1db55",
+    "evidence": "option3-v2 RENDER_CANDIDATE declares the review encode as the same edit/frame timeline derivative of the accepted master."
+  },
+  "continuity_warnings": [
+    "Final black is intentional in the old 112.68-second cut.",
+    "Baseline is too abstract for the selected Route 4 refinement."
+  ],
+  "measured_from": "El_Viento_Trae_Tu_Nombre_option3_v2_1080p_review.mp4"
+}

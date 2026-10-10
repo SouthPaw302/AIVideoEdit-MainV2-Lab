@@ -1,0 +1,47 @@
+{
+  "schema": "aivideoedit.motion-library.v1",
+  "refinement_id": "route4-two-heroes",
+  "batch_id": "BATCH-04",
+  "status": "loop_library_created_drive_backed",
+  "drive_folder": {
+    "id": "1VrtARRm_fXsCCqW-qhQfxlclMSkN3js-",
+    "url": "https://drive.google.com/drive/folders/1VrtARRm_fXsCCqW-qhQfxlclMSkN3js-"
+  },
+  "archive": {
+    "name": "El_Viento_Batch04_Loops_GIFs.zip",
+    "drive_id": "1m1_6clQqBUKzwwT06ejNuAYoPMaBQnCk",
+    "sha256": "f139d30f745ba1ad5175c42db6af5721875a3bbf8e3ccbe8cac0168814e361ab"
+  },
+  "motion_profile": {
+    "duration_seconds": 6,
+    "fps": 24,
+    "resolution": "1920x1080",
+    "loop_type": "periodic bounded camera drift"
+  },
+  "assets": [
+    {
+      "shot_id": "R4-B04-S01",
+      "loop": "01_loop_6s_1080p.mp4",
+      "gif": "01_loop_preview.gif",
+      "sha256": "8bd00b9118cea843cdba81bbe4d22bd181556dbd702721bc8b511cacd77ce962"
+    },
+    {
+      "shot_id": "R4-B04-S02",
+      "loop": "02_loop_6s_1080p.mp4",
+      "gif": "02_loop_preview.gif",
+      "sha256": "4cdf1ef72acb9394429622ae03f45a7770863f91ae074d07bef76994cabdd0b0"
+    },
+    {
+      "shot_id": "R4-B04-S03",
+      "loop": "03_loop_6s_1080p.mp4",
+      "gif": "03_loop_preview.gif",
+      "sha256": "48bffd5fe73f6dcfeda390a4acefbf42df8dbcd7b0694fbb240c2ca823a75bc1"
+    },
+    {
+      "shot_id": "R4-B04-S04",
+      "loop": "04_loop_6s_1080p.mp4",
+      "gif": "04_loop_preview.gif",
+      "sha256": "fbfddde7ecf9b198c51cbae20ed558be4d565d2159c453d68b1a26b412b2dd56"
+    }
+  ]
+}

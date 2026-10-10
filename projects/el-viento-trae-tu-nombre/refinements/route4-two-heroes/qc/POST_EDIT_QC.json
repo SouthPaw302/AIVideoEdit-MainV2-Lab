@@ -1,0 +1,53 @@
+{
+  "schema": "aivideoedit.refinement-qc-snapshot.v1",
+  "label": "POST_EDIT_ROUTE4_CURRENT_1080_BASELINE",
+  "runtime_seconds": 154.375,
+  "export_variety": {
+    "result": "PASS",
+    "similar_runs_count": 0,
+    "metrics": {
+      "mean_adjacent_similarity": 0.8509145577748617,
+      "max_adjacent_similarity": 0.924441397190094,
+      "samples": 16,
+      "sample_interval_seconds": 10,
+      "similarity_threshold": 0.992,
+      "max_similar_run_samples": 3
+    }
+  },
+  "black_freeze": {
+    "result": "PASS",
+    "black_events": [],
+    "freeze_events": []
+  },
+  "framing_aspect": {
+    "result": "PASS",
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "fps": 24,
+    "frames": 3705
+  },
+  "audio_sync": {
+    "result": "PASS",
+    "audio_present": true,
+    "audio_authority_seconds": 154.48,
+    "mux_seconds": 154.375,
+    "difference_seconds": -0.105
+  },
+  "mode_aware_qc": {
+    "result": "REVIEW",
+    "note": "Route 4 world/identity/timing preserved, but user explicitly reports missing FX. Creative FX completion is not accepted."
+  },
+  "source_canon_integrity": {
+    "result": "PASS",
+    "source_library_sha256": "4ac3f137d9bba34d05665acd9a344883f958bc04415b7b787e2bde2d020b96ab",
+    "route4_baseline_sha256": "5d822ef0442a086d13c9a7b94f0b6dcf8df5eac6e3b96495a70ff90192e68021",
+    "evidence": "Route 4 operating order explicitly authorizes reuse/expansion of the accepted source library and preserves prior masters; current user review reopens FX only, not canon identity."
+  },
+  "continuity_warnings": [
+    "Missing FX across the current 1080 requires a real delta FX pass.",
+    "Current FX precompile lock is stale after timeline/requirements reconciliation."
+  ],
+  "measured_from": "El_Viento_Route4_1080p_RECONSTRUCTED.mp4"
+}

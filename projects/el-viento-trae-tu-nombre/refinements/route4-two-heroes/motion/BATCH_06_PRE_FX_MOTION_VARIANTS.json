@@ -1,0 +1,36 @@
+{
+  "schema": "aivideoedit.motion-variants.v1",
+  "refinement_id": "route4-two-heroes",
+  "batch_id": "BATCH-06",
+  "status": "drive_verified_pre_fx",
+  "scope": "pre-gate movement only",
+  "drive_folder": {
+    "id": "1bjulk8Rkl067Xtihy3WvRDj1z1fZzPXk",
+    "url": "https://drive.google.com/drive/folders/1bjulk8Rkl067Xtihy3WvRDj1z1fZzPXk"
+  },
+  "archive": {
+    "name": "El_Viento_Batch06_PreFX_Motion_Variants.zip",
+    "drive_id": "1C5x0IsuwhqIuW10My-PIq_J_rh9TYq_B",
+    "sha256": "c2204cff2cdcb46013d4d33e988173d5caa94ccaa1e29f476f28feafbca8a1bb"
+  },
+  "rules": [
+    "no subject morphing",
+    "no geometry generation",
+    "no transition effects",
+    "no canonical FX IDs claimed",
+    "light movement only"
+  ],
+  "assets": [
+    {
+      "shot_id": "R4-B06-S01",
+      "name": "01_ancestral_thread_motion_variant.mp4",
+      "sha256": "b392c2feae42a395558221ddd3c2d3f2eb2ff232a5ed582ad317cf9e3e532463"
+    },
+    {
+      "shot_id": "R4-B06-S02",
+      "name": "02_map_thread_motion_variant.mp4",
+      "sha256": "3298bc685ff843ffda4eb5d112fa1a4e2ebf4814de3e919b1721acfc907556b8"
+    }
+  ],
+  "next_step": "Stop here before final FX gate."
+}
