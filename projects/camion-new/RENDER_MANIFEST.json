@@ -1,6 +1,6 @@
 {
   "schema": "aivideoedit.real-render.v1",
-  "production_id": "camion-new-full-song-candidate-02",
+  "production_id": "camion-new-full-song-candidate-03",
   "render_authorization": "explicit_user_render_request",
   "audio": {
     "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/releases/download/media-camion-new/source__El_camion_y_el_Camino_Remastered_x2.wav",
@@ -24,7 +24,7 @@
       "duration_seconds": 2.5,
       "fit": "cover",
       "fx": [],
-      "transition_out": "FX2-TRANS-024",
+      "transition_out": "FX2-TRANS-032",
       "transition_seconds": 0.8
     },
     {
@@ -39,13 +39,13 @@
       "loop": true,
       "fx": [
         {
-          "id": "FX2-ATM-021"
+          "id": "FX2-ATM-025"
         },
         {
-          "id": "FX2-LIGHT-021"
+          "id": "FX2-CAMERA-023"
         }
       ],
-      "transition_out": "FX2-TRANS-026",
+      "transition_out": "FX2-TRANS-032",
       "transition_seconds": 0.8
     },
     {
@@ -60,13 +60,13 @@
       "loop": true,
       "fx": [
         {
-          "id": "FX2-LIGHT-021"
+          "id": "FX2-LIGHT-026"
         },
         {
-          "id": "FX2-CAMERA-021"
+          "id": "FX2-CAMERA-023"
         }
       ],
-      "transition_out": "FX2-TRANS-025",
+      "transition_out": "FX2-TRANS-032",
       "transition_seconds": 0.8
     },
     {
@@ -81,10 +81,10 @@
       "loop": true,
       "fx": [
         {
-          "id": "FX2-CAMERA-021"
+          "id": "FX2-CAMERA-023"
         },
         {
-          "id": "FX2-MOTION-021"
+          "id": "FX2-AUDIO-021"
         }
       ],
       "transition_out": "FX2-TRANS-032",
@@ -102,13 +102,13 @@
       "loop": true,
       "fx": [
         {
-          "id": "FX2-MOTION-021"
+          "id": "FX2-ATM-025"
         },
         {
-          "id": "FX2-COMP-021"
+          "id": "FX2-ATM-021"
         }
       ],
-      "transition_out": "FX2-TRANS-029",
+      "transition_out": "FX2-TRANS-025",
       "transition_seconds": 0.8
     },
     {
@@ -123,13 +123,13 @@
       "loop": true,
       "fx": [
         {
-          "id": "FX2-COMP-021"
+          "id": "FX2-AUDIO-021"
         },
         {
-          "id": "FX2-MOTION-022"
+          "id": "FX2-LIGHT-026"
         }
       ],
-      "transition_out": "FX2-TRANS-030",
+      "transition_out": "FX2-TRANS-032",
       "transition_seconds": 0.8
     },
     {
@@ -144,13 +144,13 @@
       "loop": true,
       "fx": [
         {
-          "id": "FX2-MOTION-022"
+          "id": "FX2-ATM-021"
         },
         {
-          "id": "FX2-DISTORT-021"
+          "id": "FX2-CAMERA-023"
         }
       ],
-      "transition_out": "FX2-TRANS-021",
+      "transition_out": "FX2-TRANS-032",
       "transition_seconds": 0.8
     },
     {
@@ -165,13 +165,13 @@
       "loop": true,
       "fx": [
         {
-          "id": "FX2-DISTORT-021"
+          "id": "FX2-LIGHT-026"
         },
         {
-          "id": "FX2-MOTION-023"
+          "id": "FX2-ATM-025"
         }
       ],
-      "transition_out": "FX2-TRANS-031",
+      "transition_out": "FX2-TRANS-032",
       "transition_seconds": 0.8
     },
     {
@@ -186,13 +186,13 @@
       "loop": true,
       "fx": [
         {
-          "id": "FX2-MOTION-023"
+          "id": "FX2-LIGHT-026"
         },
         {
-          "id": "FX2-MOTION-024"
+          "id": "FX2-AUDIO-021"
         }
       ],
-      "transition_out": "FX2-TRANS-028",
+      "transition_out": "FX2-TRANS-032",
       "transition_seconds": 0.8
     },
     {
@@ -207,13 +207,13 @@
       "loop": true,
       "fx": [
         {
-          "id": "FX2-MOTION-024"
+          "id": "FX2-ATM-025"
         },
         {
-          "id": "FX2-CAMERA-022"
+          "id": "FX2-CAMERA-023"
         }
       ],
-      "transition_out": "FX2-TRANS-023",
+      "transition_out": "FX2-TRANS-032",
       "transition_seconds": 0.8
     },
     {
@@ -228,13 +228,13 @@
       "loop": true,
       "fx": [
         {
-          "id": "FX2-CAMERA-022"
+          "id": "FX2-ATM-025"
         },
         {
-          "id": "FX2-MOTION-025"
+          "id": "FX2-CAMERA-023"
         }
       ],
-      "transition_out": "FX2-TRANS-024",
+      "transition_out": "FX2-TRANS-032",
       "transition_seconds": 0.8
     },
     {
@@ -249,13 +249,13 @@
       "loop": true,
       "fx": [
         {
-          "id": "FX2-MOTION-025"
+          "id": "FX2-AUDIO-021"
         },
         {
-          "id": "FX2-CAMERA-023"
+          "id": "FX2-COMP-021"
         }
       ],
-      "transition_out": "FX2-TRANS-026",
+      "transition_out": "FX2-TRANS-032",
       "transition_seconds": 0.8
     },
     {
@@ -270,10 +270,10 @@
       "loop": true,
       "fx": [
         {
-          "id": "FX2-CAMERA-023"
+          "id": "FX2-SPATIAL-021"
         },
         {
-          "id": "FX2-COMP-022"
+          "id": "FX2-ATM-021"
         }
       ],
       "transition_out": "FX2-TRANS-025",
@@ -291,10 +291,10 @@
       "loop": true,
       "fx": [
         {
-          "id": "FX2-COMP-022"
+          "id": "FX2-AUDIO-021"
         },
         {
-          "id": "FX2-VIS-022"
+          "id": "FX2-LIGHT-026"
         }
       ],
       "transition_out": "FX2-TRANS-032",
@@ -312,13 +312,13 @@
       "loop": true,
       "fx": [
         {
-          "id": "FX2-VIS-022"
+          "id": "FX2-CAMERA-023"
         },
         {
-          "id": "FX2-SPATIAL-021"
+          "id": "FX2-ATM-025"
         }
       ],
-      "transition_out": "FX2-TRANS-029",
+      "transition_out": "FX2-TRANS-032",
       "transition_seconds": 0.8
     },
     {
@@ -333,13 +333,13 @@
       "loop": true,
       "fx": [
         {
-          "id": "FX2-SPATIAL-021"
+          "id": "FX2-LIGHT-026"
         },
         {
-          "id": "FX2-SURFACE-021"
+          "id": "FX2-CAMERA-023"
         }
       ],
-      "transition_out": "FX2-TRANS-030",
+      "transition_out": "FX2-TRANS-031",
       "transition_seconds": 0.8
     },
     {
@@ -354,13 +354,13 @@
       "loop": true,
       "fx": [
         {
-          "id": "FX2-SURFACE-021"
+          "id": "FX2-ATM-021"
         },
         {
-          "id": "FX2-CAMERA-024"
+          "id": "FX2-ATM-025"
         }
       ],
-      "transition_out": "FX2-TRANS-021",
+      "transition_out": "FX2-TRANS-032",
       "transition_seconds": 0.8
     },
     {
@@ -375,13 +375,13 @@
       "loop": true,
       "fx": [
         {
-          "id": "FX2-CAMERA-024"
+          "id": "FX2-LIGHT-026"
         },
         {
-          "id": "FX2-VIS-023"
+          "id": "FX2-AUDIO-021"
         }
       ],
-      "transition_out": "FX2-TRANS-031",
+      "transition_out": "FX2-TRANS-032",
       "transition_seconds": 0.8
     },
     {
@@ -396,13 +396,13 @@
       "loop": true,
       "fx": [
         {
-          "id": "FX2-VIS-023"
+          "id": "FX2-ATM-025"
         },
         {
-          "id": "FX2-LIGHT-024"
+          "id": "FX2-SURFACE-021"
         }
       ],
-      "transition_out": "FX2-TRANS-028",
+      "transition_out": "FX2-TRANS-032",
       "transition_seconds": 0.8
     },
     {
@@ -417,13 +417,13 @@
       "loop": true,
       "fx": [
         {
-          "id": "FX2-LIGHT-024"
+          "id": "FX2-CAMERA-023"
         },
         {
-          "id": "FX2-VIS-024"
+          "id": "FX2-ATM-025"
         }
       ],
-      "transition_out": "FX2-TRANS-023",
+      "transition_out": "FX2-TRANS-032",
       "transition_seconds": 0.8
     },
     {
@@ -438,13 +438,13 @@
       "loop": true,
       "fx": [
         {
-          "id": "FX2-VIS-024"
+          "id": "FX2-AUDIO-021"
         },
         {
-          "id": "FX2-AUDIO-021"
+          "id": "FX2-CAMERA-023"
         }
       ],
-      "transition_out": "FX2-TRANS-024",
+      "transition_out": "FX2-TRANS-032",
       "transition_seconds": 0.8
     },
     {
@@ -459,13 +459,13 @@
       "loop": true,
       "fx": [
         {
-          "id": "FX2-AUDIO-021"
+          "id": "FX2-LIGHT-025"
         },
         {
-          "id": "FX2-MOTION-026"
+          "id": "FX2-CAMERA-023"
         }
       ],
-      "transition_out": "FX2-TRANS-026",
+      "transition_out": "FX2-TRANS-032",
       "transition_seconds": 0.8
     },
     {
@@ -480,13 +480,13 @@
       "loop": true,
       "fx": [
         {
-          "id": "FX2-MOTION-026"
+          "id": "FX2-AUDIO-021"
         },
         {
-          "id": "FX2-VIS-025"
+          "id": "FX2-CAMERA-023"
         }
       ],
-      "transition_out": "FX2-TRANS-025",
+      "transition_out": "FX2-TRANS-032",
       "transition_seconds": 0.8
     },
     {
@@ -501,10 +501,10 @@
       "loop": true,
       "fx": [
         {
-          "id": "FX2-VIS-025"
+          "id": "FX2-ATM-021"
         },
         {
-          "id": "FX2-ATM-024"
+          "id": "FX2-SURFACE-021"
         }
       ],
       "transition_out": "FX2-TRANS-032",
@@ -522,13 +522,13 @@
       "loop": true,
       "fx": [
         {
-          "id": "FX2-ATM-024"
+          "id": "FX2-LIGHT-026"
         },
         {
-          "id": "FX2-VIS-026"
+          "id": "FX2-CAMERA-023"
         }
       ],
-      "transition_out": "FX2-TRANS-029",
+      "transition_out": "FX2-TRANS-032",
       "transition_seconds": 0.8
     },
     {
@@ -543,13 +543,13 @@
       "loop": true,
       "fx": [
         {
-          "id": "FX2-VIS-026"
+          "id": "FX2-CAMERA-023"
         },
         {
-          "id": "FX2-COMP-023"
+          "id": "FX2-ATM-025"
         }
       ],
-      "transition_out": "FX2-TRANS-030",
+      "transition_out": "FX2-TRANS-032",
       "transition_seconds": 0.8
     },
     {
@@ -564,13 +564,13 @@
       "loop": true,
       "fx": [
         {
-          "id": "FX2-COMP-023"
+          "id": "FX2-ATM-021"
         },
         {
-          "id": "FX2-ATM-021"
+          "id": "FX2-CAMERA-023"
         }
       ],
-      "transition_out": "FX2-TRANS-021",
+      "transition_out": "FX2-TRANS-032",
       "transition_seconds": 0.8
     },
     {
@@ -585,13 +585,13 @@
       "loop": true,
       "fx": [
         {
-          "id": "FX2-ATM-021"
+          "id": "FX2-LIGHT-025"
         },
         {
-          "id": "FX2-LIGHT-021"
+          "id": "FX2-ATM-021"
         }
       ],
-      "transition_out": "FX2-TRANS-031",
+      "transition_out": "FX2-TRANS-032",
       "transition_seconds": 0.8
     },
     {
@@ -606,13 +606,13 @@
       "loop": true,
       "fx": [
         {
-          "id": "FX2-LIGHT-021"
+          "id": "FX2-CAMERA-023"
         },
         {
-          "id": "FX2-CAMERA-021"
+          "id": "FX2-LIGHT-025"
         }
       ],
-      "transition_out": "FX2-TRANS-028",
+      "transition_out": "FX2-TRANS-032",
       "transition_seconds": 0.8
     },
     {
@@ -627,13 +627,13 @@
       "loop": true,
       "fx": [
         {
-          "id": "FX2-CAMERA-021"
+          "id": "FX2-CAMERA-023"
         },
         {
-          "id": "FX2-MOTION-021"
+          "id": "FX2-LIGHT-025"
         }
       ],
-      "transition_out": "FX2-TRANS-023",
+      "transition_out": "FX2-TRANS-032",
       "transition_seconds": 0.8
     },
     {
@@ -648,13 +648,13 @@
       "loop": true,
       "fx": [
         {
-          "id": "FX2-MOTION-021"
+          "id": "FX2-CAMERA-023"
         },
         {
-          "id": "FX2-COMP-021"
+          "id": "FX2-LIGHT-025"
         }
       ],
-      "transition_out": "FX2-TRANS-024",
+      "transition_out": "FX2-TRANS-032",
       "transition_seconds": 0.8
     },
     {

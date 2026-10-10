@@ -23,6 +23,7 @@ def main() -> int:
     from general.reusable.fx_v2.executor import FXExecutor
     from general.reusable.fx_v2.runtime import FXContext
     from general.reusable.tools.execution_ledger import record
+    from music_fx_dynamics import MusicFXDynamics
 
     manifest = json.loads(args.manifest.read_text(encoding="utf-8"))
     fps, width, height, counts = canonical.validate_manifest(manifest)
@@ -51,6 +52,11 @@ def main() -> int:
     next_source = None
     if boundary:
         next_source = canonical.stage(boundary["source"], input_root=args.input_root.resolve(), cache=cache)
+    music_controls = MusicFXDynamics(audio, args.director_gate.parent / "MUSIC_BEAT_EVIDENCE.json",
+                                     gate.get("music_evidence_sha256"), fps)
+    controls = music_controls.window(float(manifest["audio"]["start_seconds"]), sum(counts))
+    dynamics_path = args.out / "MUSIC_FX_DYNAMICS.json"
+    dynamics_path.write_text(json.dumps(music_controls.receipt(float(manifest["audio"]["start_seconds"]), controls), indent=2) + "\n", encoding="utf-8")
     ledger = args.out / "PRODUCTION_EXECUTION_LEDGER.json"
     for effect in sorted(locked_effects):
         record(ledger, project=manifest.get("production_id"), component="fx", subject=effect, stage="verified", actor="director_harness_gate", consumer="canonical_fx_executor")
@@ -72,7 +78,8 @@ def main() -> int:
             for n in range(count):
                 t = n / fps
                 frame = srcs[i].at(t)
-                ctx = FXContext(t=t, duration=count / fps, frame_index=total, fps=fps, energy=0.35, transient=0.1)
+                energy, transient = [float(v) for v in controls[total]]
+                ctx = FXContext(t=t, duration=count / fps, frame_index=total, fps=fps, energy=energy, transient=transient)
                 for spec in shot.get("fx", []):
                     frame = fx.apply_frame(spec["id"], frame, ctx, params=spec.get("params") or {})
                 transition = shot.get("transition_out")
@@ -115,6 +122,7 @@ def main() -> int:
         "height": height,
         "video_sha256": canonical.digest(target),
         "video_bytes": target.stat().st_size,
+        "music_fx_dynamics_sha256": canonical.digest(dynamics_path),
         "fx_lock_sha256": canonical.digest(lock_path),
         "director_harness_receipt_sha256": canonical.digest(args.director_gate),
         "audio_sha256": gate.get("music_evidence_sha256"),

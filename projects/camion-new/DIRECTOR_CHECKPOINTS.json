@@ -13,10 +13,10 @@
     "note": "Candidate02 bounded retiming prepared; full A/V Director review still required"
   },
   "fx_pass": {
-    "status": "audit_pending_visible_effect_verification",
-    "note": "Execution ledger alone not proof of visible FX"
+    "status": "candidate03_scene_appropriate_fx_and_music_dynamics_prepared",
+    "note": "Replaced genre-mismatched overlays, crowds, fire, and rotating debris with approved rainy road, memories, camera, and dawn FX; per-frame controls from pinned ONNX beat evidence and verified WAV; before/after visual comparison still required."
   },
   "final_review": {
-    "status": "pending_candidate02_real_export"
+    "status": "pending_candidate03_actual_export"
   }
 }
