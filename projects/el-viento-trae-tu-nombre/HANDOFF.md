@@ -1,19 +1,24 @@
-# Handoff
+# El Viento — NEW DIRECTOR handoff (active)
 
-Resume on `song/el-viento-trae-tu-nombre` only. Do not modify `main`.
+This replaces all prior preservation-only / missing-FX-only instructions on this Lab song branch.
 
-Read in this order:
-1. `OPERATING_ORDER.json`
-2. `SCRIPT.json`
-3. `FX_REQUIREMENTS.json`
-4. `refinements/route4-two-heroes/CHECKPOINT_CURRENT.json`
-5. `refinements/route4-two-heroes/PRODUCTION_STATUS.json`
-6. Route 4 batch FX gates and shot locks
+**The user wants an entirely NEW PRODUCTION, not a faithful re-edit.** The next Director has full freedom over story, editing, shots, characters, artwork, motion, FX, and even a radically different picture. The finished published film is a high-quality creative **reference / benchmark**, not a locked script. The old Route 4 original remains preserved in Git and Drive and must not be overwritten.
 
-Current authority is the preserved **154.375-second Route 4 two-hero edit** with the **154.480-second WAV** as audio authority.
+## Mandatory boot first
 
-The current 1080 is **not FX-complete**. The user explicitly reports missing FX. The old 112.680-second S01-S11 production records are archived and must not be used as current authority.
+```bash
+git fetch origin main song/el-viento-trae-tu-nombre
+git switch song/el-viento-trae-tu-nombre
+git pull --ff-only origin song/el-viento-trae-tu-nombre
+python bootstrap.py boot --repo-root . --branch song/el-viento-trae-tu-nombre
+```
 
-Do not restart production. Do not regenerate accepted media. Do not create Batch 10. Do not replace the current edit. Do not upscale.
+**Require `AIVideoEdit OS BOOTSTRAP: PASS`.** The bootstrap fetches and materializes the exact current `main` into `.aivideoedit/os/`, while all writes remain on this **song branch**. Do not merge `main` into the branch merely to get a fresh OS, and never edit `main` for this production.
 
-Current no-render instruction remains active. Next non-render action: regenerate and verify the canonical FX precompile lock against the corrected current script/FX requirements. After rendering is authorized, perform the real missing-FX delta pass batch-by-batch on the preserved edit.
+Read `.aivideoedit/os/PRIME_DIRECTIVE.md`, `.aivideoedit/SECOND_BRAIN.md`, and `.aivideoedit/os/SOUL.md` in order. Then read **[NEXT_DIRECTOR_START_HERE.md](NEXT_DIRECTOR_START_HERE.md)** and **[NEXT_DIRECTOR_HANDOFF.json](NEXT_DIRECTOR_HANDOFF.json)**.
+
+Run bootstrapped project production/narrative/recut/workflow guards before state-changing work. **Stage is INITIALIZED for the new film**; legacy Route 4 statuses and original shot files are historic material, not proof of the new film.
+
+No render, new media, or publication was started by this handoff. The NEXT agent is empowered to begin new production under normal system gates. Do not destroy the original film or replace its published Drive masters.
+
+**Do not follow the archived 2026-09-25 "no restart / FX-only" instruction; the user's explicit 2026-10-10 new-Director order supersedes it.**

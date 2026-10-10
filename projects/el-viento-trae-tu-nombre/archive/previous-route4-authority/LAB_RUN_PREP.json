@@ -1,6 +1,6 @@
 {
   "schema": "aivideoedit.lab-song-port-prep.v1",
-  "status": "NEW_DIRECTOR_PRODUCTION_INITIALIZED__BOOT_ON_SONG_BRANCH__MEDIA_LOCATED__NO_RENDER_IN_HANDOFF",
+  "status": "SOURCE_CANON_IMPORTED_IDENTICALLY__MEDIA_PREFLIGHT_PENDING__RENDER_FORBIDDEN",
   "project_id": "el-viento-trae-tu-nombre",
   "branch": "song/el-viento-trae-tu-nombre",
   "transfer": {
@@ -15,15 +15,14 @@
     "legacy_workflow_archived_at": "projects/el-viento-trae-tu-nombre/archive/EL_VIENTO_FX_LOCK_UPSTREAM_WORKFLOW.yml"
   },
   "authority": {
-    "creative_director_scope": "UNRESTRICTED_NEW_PRODUCTION_WITHIN_CURRENT_MAIN_OS_AND_REPO_BRANCH_ISOLATION",
-    "old_route": "reference_only",
-    "new_director_can_change_story": true,
-    "new_director_can_reedit_mp4": true,
-    "new_director_can_replace_or_generate_media": true,
-    "new_director_can_choose_different_story_and_visual_language": true,
-    "new_director_can_create_new_batches": true,
-    "approved_new_film": false,
-    "user_mandate": "Boot latest current-main Lab OS, work only on song branch, produce a new film; old preserve-only flags are superseded."
+    "active_route": "route4-two-heroes",
+    "user_directed": true,
+    "production_mode": "hybrid",
+    "canon_locked": true,
+    "edit_locked": true,
+    "source_regeneration_authorized": false,
+    "new_batch_authorized": false,
+    "artistic_acceptance": "PENDING_FULL_NORMAL_SPEED_REVIEW"
   },
   "exact_edit": {
     "frames": 3705,
@@ -93,10 +92,7 @@
     "total_sections": 7,
     "original_source_audio_duration_seconds": 154.48,
     "obsolete_timeline_seconds": 112.68,
-    "obsolete_timeline_authority": "ARCHIVE_ONLY",
-    "role": "HISTORICAL_ROUTE4_REFERENCE_ONLY__NOT_NEW_TIMELINE",
-    "locked_for_new_production": false,
-    "frame_ranges_legacy_reference_only": true
+    "obsolete_timeline_authority": "ARCHIVE_ONLY"
   },
   "media": {
     "asset_manifest_records": 50,
@@ -146,44 +142,16 @@
   "render_manifest": {
     "path": null,
     "created": false,
-    "reason": "The new Director may author the new film and render manifest after boot, source audit and standard gates; legacy Route 4 manifest and timing are historical.",
-    "authorization": "NOT_SET_IN_HANDOFF; SET_BY_NEW_DIRECTOR_WHEN_ACTUALLY_EXECUTING_AUTHORIZED_PRODUCTION"
+    "reason": "Do not fabricate runnable source/shot locators or self-authorize rendering; require original-media byte staging and exact render recipe before adding canonical RENDER_MANIFEST.json.",
+    "authorization": "NOT_GRANTED_BY_CURRENT_USER"
   },
   "next_steps_before_render": [
-    "Fetch current Lab main and current song branch without merging song production into main",
-    "Stay on song/el-viento-trae-tu-nombre and fresh boot exact current-main OS; require BOOTSTRAP PASS",
-    "Read new operating order and NEXT_DIRECTOR_START_HERE.md; audit user's attached finished movie and archived Drive media",
-    "Choose a NEW creative direction; story, heroes, edit, shot list, FX, camera, timing and media may all change",
-    "Recreate new production state and media/script/FX manifests through current-main Director and proof gates; keep original film and old assets immutable",
-    "Perform short real-media moving proofs/FX QC before expensive full film encoding; later render new candidate only through real-image/verified-audio and current Lab runner pipeline",
-    "Compare new film honestly against published film; do not claim improvement, final approval, or publication without actual human full-playback review"
+    "Run fresh bootstrap and Lab production/narrative/recut/workflow guards on this song branch; log failures without rewriting locked canon",
+    "Confirm and stage current 154.48-second original WAV with recorded SHA-256 and all required hero/loop/layer/live-motion media; private Drive links are not public signed staging URLs",
+    "Locate exact saved 1080p FX candidate or accepted previous edit by hash and verify review playback; the historical session:/// path is non-portable",
+    "Reconcile 154.375-second current script timeline versus archived 112.68-second shot packages and stale FX requirements/lock; preserve Route 4 heroes, pacing, audio, protected regions, accepted plates",
+    "Construct canonical aivideoedit.real-render.v1 manifest from actually available, byte-verified source media, with distinct new candidate destination; test coverage, hashes, current registry FX and toolchain without encoding",
+    "Wait for explicit new user instruction authorizing rendering. Until then do NOT dispatch GitHub Actions render, create media, upscale, publish or mark human creative acceptance."
   ],
-  "run_guard": "NO_RENDER_THIS_HANDOFF__NEXT_DIRECTOR_CAN_CREATE_NEW_FILM_AND_RENDER_VIA_CANONICAL_GATES__PRESERVE_OLD_MASTER",
-  "published_film_reference": {
-    "file_name": "El Viento trae tu nombre.mp4",
-    "sha256": "4ecba2862c84b5a64bd5001eae308374c18c77cef6bafe815ab11a08b20548a7",
-    "size_bytes": 34209452,
-    "format_duration_seconds": 154.389478,
-    "frames": 3705,
-    "fps": 24,
-    "width": 1280,
-    "height": 720,
-    "video_codec": "h264",
-    "audio_codec": "aac",
-    "source": "user_attached_finished_film_current_chat",
-    "published_url": "https://youtu.be/5bYgvrFJJ80",
-    "byte_identity_to_youtube": "NOT_VERIFIED",
-    "reference_role": "CREATIVE_BENCHMARK_NOT_LOCKED_STORYBOARD_OR_EDIT",
-    "drive_file_id": "NOT_IDENTIFIED_FOR_THIS_EXACT_UPLOAD"
-  },
-  "new_production": {
-    "id": "el-viento-lab-new-director",
-    "active_state": "INITIALIZED",
-    "current_operating_order": "OPERATING_ORDER.json",
-    "next_director_instructions": "NEXT_DIRECTOR_START_HERE.md",
-    "hash_contract": "NEXT_DIRECTOR_HANDOFF.json",
-    "work_branch": "song/el-viento-trae-tu-nombre",
-    "source_engine": "current main fetched and materialized by bootstrap",
-    "do_not_touch_main": true
-  }
+  "run_guard": "FAIL_CLOSED__NO_RENDER__NO_PUBLISH__NO_4K__NO_MAIN_WRITES"
 }

@@ -1,77 +1,80 @@
 {
   "schema": "aivideoedit.operating-order.v1",
-  "mission": "Create a two-hero Island Dream / Ancestral Memory music film in which a recurring male and female lead move through a living island memoryscape of fort, village, sea, rain, maps, embroidery and ancestral generations, ultimately revealing the entire world as inherited memory carried forward in a single luminous thread.",
+  "mission": "Create a NEW independent El Viento trae tu nombre music-film production with the AIVideoEdit-MainV2-Lab current-main engine. The next Director has full creative authority to develop a different storyline, recut/remix the existing published film, replace or create artwork and characters, rethink scenes and effects, and construct a new edit from real media. The original released film and historical Route 4 work are references and reusable resources, not binding edit/style canon for this new production.",
   "direction_authority": "user_directed",
   "production_mode": "hybrid",
   "canon_lock": {
-    "locked": true,
-    "picture_language": "Route 4 — Island Dream / Ancestral Memory. Painterly but legible cinematic world; two stable recurring hero characters; tactile island environments; ancestral memory revealed through controlled structural morphing, fog/pigment travel, water motion, textile/thread transformation and layered depth.",
-    "items": [
-      "Current-user selection of Route 4 — Island Dream / Ancestral Memory",
-      "Two recurring hero characters: one adult male and one adult female",
-      "Heroes remain recognizable across scenes through stable face/silhouette/hair/wardrobe/color anchors",
-      "Male visual anchor: darker coastal/stone/navy language",
-      "Female visual anchor: warmer lantern/sea-light/gold-rust-cream language",
-      "Shared motif: luminous embroidered thread linking heroes, places, generations and final inheritance image",
-      "Readable fort, village, harbor, sea, rain, mountain/island and ancestral imagery before abstraction",
-      "Effects must advance story and memory transitions rather than act as decoration",
-      "Existing v1 and Option 3 v2 assemblies remain preserved as research and rollback artifacts"
-    ]
+    "locked": false,
+    "picture_language": "TO_BE_SELECTED_BY_NEW_DIRECTOR",
+    "items": [],
+    "note": "Old Route 4 film is canon only inside the preserved historical production, not a constraint on the new candidate."
   },
   "accepted_baseline": {
-    "status": "accepted",
-    "file_or_locator": "MASTER-1080P-OPTION3-V2",
-    "sha256": "4ac3f137d9bba34d05665acd9a344883f958bc04415b7b787e2bde2d020b96ab",
-    "user_acceptance_statement": "That is really good but so abstract. I would like to see more of Option 3 in it. And I think you can make more use of our effects."
+    "status": "none",
+    "note": "No new-production cut is approved yet. The finished published film remains a valuable immutable comparison reference, not the new cut's accepted baseline.",
+    "historical_route4_snapshot": "archive/previous-route4-authority/OPERATING_ORDER.json",
+    "published_reference_sha256": "4ecba2862c84b5a64bd5001eae308374c18c77cef6bafe815ab11a08b20548a7"
   },
   "accepted_source_library": {
-    "status": "accepted",
-    "role": "visual_world",
-    "file_or_locator": "MASTER-1080P-OPTION3-V2",
-    "sha256": "4ac3f137d9bba34d05665acd9a344883f958bc04415b7b787e2bde2d020b96ab",
-    "user_acceptance_statement": "That is really good but so abstract.",
-    "content_reuse_authorized": true,
-    "timeline_locked": false
+    "status": "none",
+    "note": "New Director may reuse, recut, transform or replace legacy source media; acceptance, identity locks and hashes for any newly chosen canon must be established separately. Prior Route 4 approval stays in historical archive."
   },
   "refinement_scope": {
-    "active": true,
-    "goal": "Finish the missing repo FX pass on the preserved Route 4 154.375-second edit. Preserve timing, hero order, audio, intro/outro, camera motion, hand repair and accepted media.",
+    "active": false,
+    "goal": "New film; NOT an FX-only refinement of the old movie.",
+    "restart_authorized": true,
     "allowed_changes": [
-      "apply or tune production-approved repo FX in existing scenes",
-      "reuse existing loop/motion/FX variation libraries",
-      "create QC/proof evidence from the preserved edit",
-      "update manifests/locks/QC records"
+      "New storyline and plot",
+      "Re-edit or substantially restructure the published film",
+      "Replace or redesign characters and scenery",
+      "Generate new plates, loops, motion, camera, FX, transitions and shot packages",
+      "Reuse original project media or design entirely different shots",
+      "Replace obsolete picture timing and legacy Route 4 script/FX locks after Director inspection",
+      "Render and QC a distinct new production once current-main gates authorize it"
     ],
     "forbidden_changes": [
-      "modify main for song-production assets",
-      "delete or overwrite preserved v1 or Option 3 v2 masters",
-      "change the canonical source audio",
-      "change the current-user lyric sheet without a new user instruction",
-      "generate later media batches before their dependency gates are satisfied",
-      "restart the production",
-      "regenerate accepted media without QC failure or explicit user direction",
-      "change current edit timing/hero order",
-      "create Batch 10",
-      "upscale before 1080 FX approval"
-    ],
-    "restart_authorized": false
+      "Do not write production changes to protected main or original AIVideoEdit repository",
+      "Do not overwrite or delete the original published film or historic Drive masters",
+      "Do not bypass current-main bootstrap, source verification, runner media auth, Director/FX/QC gates or release-approval process"
+    ]
   },
   "recut_scope": {
-    "active": true,
-    "named_defects": [
-      "current 1080 still lacks the intended full FX pass"
-    ],
-    "allowed_changes": [
-      "FX-only delta work inside the existing edit",
-      "QC evidence and gate metadata"
-    ],
-    "forbidden_changes": [
-      "replacement of canonical audio",
-      "destructive overwrite of prior assemblies"
-    ],
-    "source_replacement_authorized": false
+    "active": false,
+    "source_replacement_authorized": true,
+    "note": "This is a newly authorized, independently directed production. The legacy source-library recut constraints are not active and should not be mistaken for current instructions."
   },
-  "current_user_direction": "Preserve the existing Route 4 154.375-second edit and finish the missing FX using the repo stack. Do not render under the current no-render instruction; do not restart, regenerate accepted media, create Batch 10, modify main, or upscale before 1080 FX approval.",
-  "exact_next_action": "Regenerate and verify the FX precompile lock against corrected SCRIPT.json and FX_REQUIREMENTS.json. Then resume missing-FX work only when rendering is authorized.",
-  "updated_at_utc": "2026-09-25T01:28:00Z"
+  "current_user_direction": "2026-10-10: Next Director can do anything creatively: produce a NEW film on song/el-viento-trae-tu-nombre, freely change the existing MP4 or storyline, and use the repaired Lab stack. First fetch/pull current Lab main to load the latest OS, check out and work only on this song branch, and boot fresh. Do not render in the present handoff operation; next agent handles production through required gates. Treat old preservation-only instructions as superseded.",
+  "exact_next_action": "Next agent: fetch origin main and song/el-viento-trae-tu-nombre; stay on song branch; run python bootstrap.py boot --repo-root . --branch song/el-viento-trae-tu-nombre until AIVideoEdit OS BOOTSTRAP: PASS; read .aivideoedit/os/PRIME_DIRECTIVE.md, .aivideoedit/SECOND_BRAIN.md, .aivideoedit/os/SOUL.md; read NEXT_DIRECTOR_START_HERE.md, inspect complete published film and Drive assets, choose fresh artistic direction, and begin a NEW production with stage gates.",
+  "updated_at_utc": "2026-10-10",
+  "new_production": {
+    "id": "el-viento-lab-new-director",
+    "phase": "INITIALIZED",
+    "legacy_route4_authority_status": "HISTORICAL_REFERENCE_ONLY",
+    "published_film_reference": {
+      "file_name": "El Viento trae tu nombre.mp4",
+      "sha256": "4ecba2862c84b5a64bd5001eae308374c18c77cef6bafe815ab11a08b20548a7",
+      "size_bytes": 34209452,
+      "format_duration_seconds": 154.389478,
+      "frames": 3705,
+      "fps": 24,
+      "width": 1280,
+      "height": 720,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "source": "user_attached_finished_film_current_chat",
+      "published_url": "https://youtu.be/5bYgvrFJJ80",
+      "byte_identity_to_youtube": "NOT_VERIFIED",
+      "reference_role": "CREATIVE_BENCHMARK_NOT_LOCKED_STORYBOARD_OR_EDIT",
+      "drive_file_id": "NOT_IDENTIFIED_FOR_THIS_EXACT_UPLOAD"
+    },
+    "creative_freedom_authorized": true,
+    "allow_total_story_rework": true,
+    "allow_source_replacement": true,
+    "allow_new_media_generation": true,
+    "allow_new_shot_batches": true,
+    "allow_new_film_picture_render_through_standard_gates": true,
+    "apply_no_render_to_current_handoff_only": true,
+    "work_branch": "song/el-viento-trae-tu-nombre",
+    "engine_ref": "current-origin-main-via-bootstrap"
+  }
 }

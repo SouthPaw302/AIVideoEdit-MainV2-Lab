@@ -1,124 +1,28 @@
 {
   "schema": "aivideoedit.media-plan.v1",
-  "user_approach_established": true,
-  "selected_capabilities": [
-    "generated_stills",
-    "generated_support_imagery",
-    "living_painting",
-    "living_still_fx",
-    "layered_composite",
-    "depth_25d",
-    "atmospheric_plate",
-    "reactive_plate",
-    "transition_media",
-    "analysis_qc_media",
-    "canonical_hero_library"
-  ],
+  "user_approach_established": false,
+  "selected_capabilities": [],
   "visual_direction_gate": {
     "required": true,
-    "presented_in_chat": true,
-    "options": [
-      {
-        "number": 1,
-        "name": "The Wind Remembers",
-        "story_approach": "A coastal fort retains fragments of a distant relationship through environmental memory.",
-        "rendering_route": "Living scene with restrained atmospheric/internal motion.",
-        "production_mode": "living_scene",
-        "storyboard": [
-          {
-            "number": 1,
-            "description": "Coastal fort and wind establish place."
-          },
-          {
-            "number": 2,
-            "description": "A remembered presence appears through shadow/reflection."
-          },
-          {
-            "number": 3,
-            "description": "The remembered name is carried into sea mist."
-          }
-        ]
-      },
-      {
-        "number": 2,
-        "name": "Letters Across the Water",
-        "story_approach": "Two separated people remain connected through letters carried symbolically across water.",
-        "rendering_route": "Painterly cinematic coverage and match cuts.",
-        "production_mode": "cinematic",
-        "storyboard": [
-          {
-            "number": 1,
-            "description": "A letter is written beside the coast."
-          },
-          {
-            "number": 2,
-            "description": "Paper, ink and memory cross the sea."
-          },
-          {
-            "number": 3,
-            "description": "The letter reaches an empty distant shore."
-          }
-        ]
-      },
-      {
-        "number": 3,
-        "name": "Island Memory Tapestry",
-        "story_approach": "Maps, textile memory, sea travel, place and ancestry transform into one living artwork and distill into a single thread.",
-        "rendering_route": "Hybrid painterly living-scene construction with selective cinematic transformations and bounded camera travel.",
-        "production_mode": "hybrid",
-        "storyboard": [
-          {
-            "number": 1,
-            "description": "Map, embroidery and ocean merge."
-          },
-          {
-            "number": 2,
-            "description": "Village, fort and homeland transform through memory."
-          },
-          {
-            "number": 3,
-            "description": "Ancestral silhouettes gather into tapestry, glowing thread and black."
-          }
-        ]
-      },
-      {
-        "number": 4,
-        "name": "Island Dream / Ancestral Memory — Two Heroes",
-        "story_approach": "A recurring male and female lead move through inherited island memory, separation and ancestral convergence until the world resolves into a living tapestry and inheritance thread.",
-        "rendering_route": "Hybrid cinematic living-painting with stable hero continuity, readable island environments, structural memory morphs, layered ancestry and stronger approved FX usage.",
-        "production_mode": "hybrid",
-        "storyboard": [
-          {
-            "number": 1,
-            "description": "Male and female heroes are established in separate but connected island spaces."
-          },
-          {
-            "number": 2,
-            "description": "Both move through village, sea, separation and ancestral generations as their worlds increasingly overlap."
-          },
-          {
-            "number": 3,
-            "description": "They converge inside a living multi-era island tapestry that resolves into the shared inheritance thread."
-          }
-        ]
-      }
-    ],
+    "presented_in_chat": false,
+    "options": [],
     "user_selection": {
-      "status": "selected",
-      "selected_option_numbers": [
-        4
-      ],
-      "recorded_user_instruction": "Route 4 selected. Add two recurring hero characters, one male and one female. Follow the repo and create media in batches only as needed."
+      "status": "pending_new_director_concept"
     },
-    "locked": true
+    "locked": false,
+    "user_granted_director_autonomy": true,
+    "note": "Published film is a usable supplied visual reference. Register/analyze it before declaring reference-led stage; otherwise follow current-main no-reference direction gate without faking prior choices."
   },
-  "large_batch_strategy": {
-    "policy": "dependency_gated_batches",
-    "current_batch": "FX-RECONCILIATION",
-    "current_batch_goal": "Complete missing FX on the preserved 154.375-second Route 4 edit without regenerating accepted media or altering timing.",
-    "next_batch_rule": "No new media batch is authorized. Reuse accepted Route 4 media/loop/FX libraries; Batch 10 is forbidden unless explicitly requested.",
-    "proof_policy": "After a valid precompile FX lock exists, evaluate missing FX in moving full-edit context before any final master promotion.",
-    "media_generation": "locked unless QC failure or explicit user instruction"
-  },
-  "current_phase": "FX_GATES_REOPENED"
+  "current_phase": "NEW_DIRECTOR_DISCOVERY",
+  "old_plan_in_archive": "archive/previous-route4-authority/MEDIA_PLAN.json",
+  "historical_media_index": "LAB_MEDIA_STAGING_INDEX.json",
+  "new_director_freedom": {
+    "may_reedit_original_movie": true,
+    "may_create_new_plot": true,
+    "may_choose_any_production_mode": true,
+    "may_reuse_existing_shots": true,
+    "may_replace_visuals": true,
+    "may_create_new_media": true,
+    "published_film_is_reference_not_new_candidate_canon": true
+  }
 }

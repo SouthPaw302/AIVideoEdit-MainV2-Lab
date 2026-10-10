@@ -1,0 +1,77 @@
+{
+  "schema": "aivideoedit.operating-order.v1",
+  "mission": "Create a two-hero Island Dream / Ancestral Memory music film in which a recurring male and female lead move through a living island memoryscape of fort, village, sea, rain, maps, embroidery and ancestral generations, ultimately revealing the entire world as inherited memory carried forward in a single luminous thread.",
+  "direction_authority": "user_directed",
+  "production_mode": "hybrid",
+  "canon_lock": {
+    "locked": true,
+    "picture_language": "Route 4 — Island Dream / Ancestral Memory. Painterly but legible cinematic world; two stable recurring hero characters; tactile island environments; ancestral memory revealed through controlled structural morphing, fog/pigment travel, water motion, textile/thread transformation and layered depth.",
+    "items": [
+      "Current-user selection of Route 4 — Island Dream / Ancestral Memory",
+      "Two recurring hero characters: one adult male and one adult female",
+      "Heroes remain recognizable across scenes through stable face/silhouette/hair/wardrobe/color anchors",
+      "Male visual anchor: darker coastal/stone/navy language",
+      "Female visual anchor: warmer lantern/sea-light/gold-rust-cream language",
+      "Shared motif: luminous embroidered thread linking heroes, places, generations and final inheritance image",
+      "Readable fort, village, harbor, sea, rain, mountain/island and ancestral imagery before abstraction",
+      "Effects must advance story and memory transitions rather than act as decoration",
+      "Existing v1 and Option 3 v2 assemblies remain preserved as research and rollback artifacts"
+    ]
+  },
+  "accepted_baseline": {
+    "status": "accepted",
+    "file_or_locator": "MASTER-1080P-OPTION3-V2",
+    "sha256": "4ac3f137d9bba34d05665acd9a344883f958bc04415b7b787e2bde2d020b96ab",
+    "user_acceptance_statement": "That is really good but so abstract. I would like to see more of Option 3 in it. And I think you can make more use of our effects."
+  },
+  "accepted_source_library": {
+    "status": "accepted",
+    "role": "visual_world",
+    "file_or_locator": "MASTER-1080P-OPTION3-V2",
+    "sha256": "4ac3f137d9bba34d05665acd9a344883f958bc04415b7b787e2bde2d020b96ab",
+    "user_acceptance_statement": "That is really good but so abstract.",
+    "content_reuse_authorized": true,
+    "timeline_locked": false
+  },
+  "refinement_scope": {
+    "active": true,
+    "goal": "Finish the missing repo FX pass on the preserved Route 4 154.375-second edit. Preserve timing, hero order, audio, intro/outro, camera motion, hand repair and accepted media.",
+    "allowed_changes": [
+      "apply or tune production-approved repo FX in existing scenes",
+      "reuse existing loop/motion/FX variation libraries",
+      "create QC/proof evidence from the preserved edit",
+      "update manifests/locks/QC records"
+    ],
+    "forbidden_changes": [
+      "modify main for song-production assets",
+      "delete or overwrite preserved v1 or Option 3 v2 masters",
+      "change the canonical source audio",
+      "change the current-user lyric sheet without a new user instruction",
+      "generate later media batches before their dependency gates are satisfied",
+      "restart the production",
+      "regenerate accepted media without QC failure or explicit user direction",
+      "change current edit timing/hero order",
+      "create Batch 10",
+      "upscale before 1080 FX approval"
+    ],
+    "restart_authorized": false
+  },
+  "recut_scope": {
+    "active": true,
+    "named_defects": [
+      "current 1080 still lacks the intended full FX pass"
+    ],
+    "allowed_changes": [
+      "FX-only delta work inside the existing edit",
+      "QC evidence and gate metadata"
+    ],
+    "forbidden_changes": [
+      "replacement of canonical audio",
+      "destructive overwrite of prior assemblies"
+    ],
+    "source_replacement_authorized": false
+  },
+  "current_user_direction": "Preserve the existing Route 4 154.375-second edit and finish the missing FX using the repo stack. Do not render under the current no-render instruction; do not restart, regenerate accepted media, create Batch 10, modify main, or upscale before 1080 FX approval.",
+  "exact_next_action": "Regenerate and verify the FX precompile lock against corrected SCRIPT.json and FX_REQUIREMENTS.json. Then resume missing-FX work only when rendering is authorized.",
+  "updated_at_utc": "2026-09-25T01:28:00Z"
+}
