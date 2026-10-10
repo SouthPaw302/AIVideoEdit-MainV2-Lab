@@ -1,0 +1,215 @@
+{
+  "schema": "aivideoedit.new-director-kickoff.v1",
+  "created_utc": "2026-10-10",
+  "source_handoff_sha": "36c175cde1203a4df0ced7252c4a616fc879536d",
+  "target_repo": "SouthPaw302/AIVideoEdit-MainV2-Lab",
+  "work_branch": "song/el-viento-trae-tu-nombre",
+  "base_os_main_sha": "900e3e5749ed6fa13ad91524975a9e64661e6649",
+  "current_boot": {
+    "status": "PASS",
+    "run_id": 38038008236,
+    "branch_sha": "dcab978ae6f8be629bec74eb4b761ca875d76cec",
+    "run_url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38038008236"
+  },
+  "production_id": "el-viento-lab-new-director",
+  "film_working_title": "La última luz / The Last Light",
+  "direction_authority": "user_directed",
+  "production_mode": "hybrid",
+  "stage": "DIRECTOR_KICKOFF_FIRST_PROOF_ONLY__NO_FULL_RENDER",
+  "creative_approach": {
+    "premise": "In 2026, a man returns to an island fort after an exile begun in 1980. An undelivered letter and the enduring light of a harbor lantern reconnect him with the woman and the place he left. Time periods are conveyed by practical costume, weather and architecture rather than magical geometry.",
+    "difference_from_published": "Distinct photoreal cinematic fort/letter/lantern narrative with two documented eras and in-world coastal motion instead of painterly glowing-topology two-hero memory fantasy.",
+    "time_periods": [
+      "1980 flashbacks",
+      "2026 present"
+    ],
+    "visual_language": "restrained cinematic realism, steel-blue storm and copper lantern light",
+    "continuity_locks": [
+      "coastal fort geometry remains fixed within each time period",
+      "same architecture across 1980 and 2026",
+      "older hero and younger hero must be recognizably one person",
+      "woman aged consistently",
+      "realistic wave, cloth, rain and flame motion only"
+    ]
+  },
+  "verified_inputs": {
+    "audio": {
+      "file_name": "El Viento trae tu nombre.wav",
+      "drive_file_id": "1M6uRTeYejXxn2rSDkTJu5H0_LiWrdwN4",
+      "sha256": "8d967101c875868b64207bd43bfbc507c0a958989bbc560c2edb0024b15877cb",
+      "duration_seconds": 154.48,
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "byte_hash_rechecked_in_current_session": true,
+      "github_runner_staging": "PENDING_PRIVATE_DRIVE_AUTH"
+    },
+    "published_reference": {
+      "file_name": "El Viento trae tu nombre.mp4",
+      "sha256": "4ecba2862c84b5a64bd5001eae308374c18c77cef6bafe815ab11a08b20548a7",
+      "duration_seconds": 154.389478,
+      "verification": "EXACT_BYTES_HASHED__13_SPACED_FRAMES_VIEWED__NOT_FULL_NORMAL_SPEED_WATCH",
+      "acceptance_role": "BENCHMARK_ONLY"
+    }
+  },
+  "first_proof": {
+    "status": "LOCAL_8_SECOND_REAL_MEDIA_PROOF_RENDERED_VISUAL_REVIEW_PENDING",
+    "output_name": "El_Viento_New_Film_Opening_Proof_01.mp4",
+    "output_sha256": "985501f20e0acf40c7ca1bb64a77eb19c4a0f2e65d00471a0141204983f1c3b5",
+    "duration_seconds": 8,
+    "fps": 24,
+    "dimensions": [
+      960,
+      540
+    ],
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "real_original_music": true,
+    "source_generated_still_sha256": "6e5d996e23898fc22670582257a7ea464a74a212ab1238080bee434c11625026",
+    "source_still_drive_file_id": "1ooguf49na8WdS17veXGPOtNpTRvDrYVY",
+    "moving_regions": "ocean-only warping and confined lamp flicker, no global camera motion",
+    "output_durable_staging": "NOT_YET_UPLOADED_TO_DRIVE_OR_RUNNER",
+    "local_chat_artifact": "sandbox:/mnt/data/El_Viento_New_Film_Opening_Proof_01.mp4",
+    "human_visual_acceptance": false
+  },
+  "drive_production_folder": {
+    "id": "1_NhFmJKcMhgv65VioXLdzq5yeswXYdNc",
+    "url": "https://drive.google.com/drive/folders/1_NhFmJKcMhgv65VioXLdzq5yeswXYdNc"
+  },
+  "batch_01_shots": [
+    {
+      "id": "B01-S01",
+      "start_seconds": 0,
+      "end_seconds": 8,
+      "description": "Fortress lamp and sealed letter",
+      "notes": "First original keyframe generated; 8s water/lamp local motion proof rendered",
+      "fx_intent": [
+        "environment_water",
+        "lantern_flame"
+      ],
+      "status": "PROOF_RENDERED_LOCAL_REVIEW_PENDING"
+    },
+    {
+      "id": "B01-S02",
+      "start_seconds": 8,
+      "end_seconds": 15,
+      "description": "Weathered hand lifts the sealed letter",
+      "notes": "Close-up; fixed hand anatomy; wax seal and rain beads",
+      "fx_intent": [
+        "rain_glass",
+        "localized_light"
+      ],
+      "status": "TO_CREATE"
+    },
+    {
+      "id": "B01-S03",
+      "start_seconds": 15,
+      "end_seconds": 22,
+      "description": "An older man climbs stone steps above the harbor",
+      "notes": "Present-day 2026; age and wardrobe continuity anchor",
+      "fx_intent": [
+        "wind_cloth",
+        "sea_spray"
+      ],
+      "status": "TO_CREATE"
+    },
+    {
+      "id": "B01-S04",
+      "start_seconds": 22,
+      "end_seconds": 29,
+      "description": "A young woman at the same archway in 1980",
+      "notes": "Flashback transition on matched architecture",
+      "fx_intent": [
+        "rain",
+        "practical_light"
+      ],
+      "status": "TO_CREATE"
+    },
+    {
+      "id": "B01-S05",
+      "start_seconds": 29,
+      "end_seconds": 36,
+      "description": "Harbor departure, late 1980",
+      "notes": "Young sailor boards working coastal vessel; actual articulated motion needed",
+      "fx_intent": [
+        "water",
+        "boat_subject_motion"
+      ],
+      "status": "TO_CREATE"
+    },
+    {
+      "id": "B01-S06",
+      "start_seconds": 36,
+      "end_seconds": 43,
+      "description": "The woman seals a second letter",
+      "notes": "Tactile props, no invented readable typography",
+      "fx_intent": [
+        "flame",
+        "rain_glass"
+      ],
+      "status": "TO_CREATE"
+    },
+    {
+      "id": "B01-S07",
+      "start_seconds": 43,
+      "end_seconds": 50,
+      "description": "Two childhood silhouettes cross the waterfront",
+      "notes": "Shared island origin and geography",
+      "fx_intent": [
+        "wind_cloth",
+        "water"
+      ],
+      "status": "TO_CREATE"
+    },
+    {
+      "id": "B01-S08",
+      "start_seconds": 50,
+      "end_seconds": 57,
+      "description": "Weathered family doorway beside the sea",
+      "notes": "Summer rain and amber family light",
+      "fx_intent": [
+        "rain",
+        "practical_light"
+      ],
+      "status": "TO_CREATE"
+    },
+    {
+      "id": "B01-S09",
+      "start_seconds": 57,
+      "end_seconds": 64.5,
+      "description": "The older man returns to the abandoned doorway",
+      "notes": "Present-day harbor with protected architecture and identity",
+      "fx_intent": [
+        "wind",
+        "atmosphere"
+      ],
+      "status": "TO_CREATE"
+    },
+    {
+      "id": "B01-S10",
+      "start_seconds": 64.5,
+      "end_seconds": 72,
+      "description": "The remembered young woman appears beyond a rainy window",
+      "notes": "Same 1980 wardrobe and identity, memory not supernatural body morph",
+      "fx_intent": [
+        "rain_glass",
+        "reflection"
+      ],
+      "status": "TO_CREATE"
+    }
+  ],
+  "required_gates_before_full_render": [
+    "RUNNER_MEDIA_AUTH_STAGING_AND_SHA",
+    "COMPLETE_NEW_B01_SHOTS_AND_FX_VARIANTS",
+    "NEW_SCRIPT_TIMED_FOR_MASTER_AUDIO",
+    "CANONICAL_FX_PRECOMPILE_AND_DIRECTOR_SCAN",
+    "RENDER_MANIFEST_REAL_SOURCES_ONLY",
+    "SHORT_PARALLEL_RUNNER_PROOF_AND_FANIN_QC"
+  ],
+  "forbidden": [
+    "NO_WRITE_TO_MAIN",
+    "NO_OVERWRITE_OLD_ROUTE4_OR_RELEASED_MASTER",
+    "NO_GUESS_SOURCE_URL_OR_HASH",
+    "NO_HUMAN_ACCEPTANCE_FROM_CI"
+  ],
+  "note": "Boot and actual local 8s proof completed. Full film render has NOT launched. New film remains distinct from preserved originals."
+}
