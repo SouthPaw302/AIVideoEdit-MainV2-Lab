@@ -1,0 +1,72 @@
+{
+  "schema": "aivideoedit.shot-package.v1",
+  "shot_id": "S10",
+  "script_entry": {
+    "shot_id": "S10",
+    "start_frame": 2322,
+    "end_frame": 2547,
+    "start_seconds": 96.768,
+    "end_seconds": 106.176,
+    "production_mode": "living_scene",
+    "visual_action": "The collapsed tapestry becomes a single luminous textile thread suspended in darkness.",
+    "visual_media": "HERO-S10 gdrive://file/1eK7FrEO-x1jnHlSQ50aPqaWOkxWw4vjV",
+    "animation_behavior": "Static framing; internal color travels beneath the fibers with restrained light vibration and no shape drift.",
+    "camera_behavior": "static",
+    "motion_regions": [
+      "internal color travel",
+      "thread light vibration",
+      "subtle fiber shimmer"
+    ],
+    "protected_regions": [
+      "single-thread silhouette",
+      "black field",
+      "thread continuity"
+    ],
+    "lyric_cue": "Que ruja el mar oscuro a medianoche / que soplen los vientos desde lejos.",
+    "music_cues": [
+      "Chorus remains at high emotional intensity",
+      "Visual energy compresses rather than expands"
+    ],
+    "transition": "Bounded thread-motion handoff into the final swept-away shot."
+  },
+  "media_evidence": [
+    {
+      "asset_id": "HERO-S10",
+      "uri": "gdrive://file/1eK7FrEO-x1jnHlSQ50aPqaWOkxWw4vjV",
+      "name": "shot_10_glowing_thread.png",
+      "sha256": "fc6c883d778c9b991800eaea79753f2eae5de55549cad3655068b1338d221954",
+      "status": "generated",
+      "role": "primary_hero_plate",
+      "content_type": "image/png",
+      "origin": "generated",
+      "creative_status": "available",
+      "lifecycle_status": "candidate"
+    },
+    {
+      "asset_id": "FX1-S10",
+      "uri": "gdrive://file/1tk2LpN0Y-OUxdgJDU5r1u51NXNYA5NCk",
+      "name": "shot_10_fx_motion_variant.png",
+      "sha256": "b12c45603d7f8a5a4b442625932510954e16c1f7e1e64c0b8428012c4d29368c",
+      "status": "generated",
+      "role": "fx_motion_variant_batch_01",
+      "content_type": "image/png",
+      "origin": "generated",
+      "creative_status": "available",
+      "lifecycle_status": "candidate"
+    },
+    {
+      "asset_id": "FX2-S10",
+      "uri": "gdrive://file/1ZwlCmZhZGtCftldQqldx9RnnzwD1lrVt",
+      "name": "shot_10_fx_motion_variant_b2.png",
+      "sha256": "f0492bba441a8d610e763c8e59d20ed7ee776f1ff0c254dd2b458962ada40093",
+      "status": "derived",
+      "role": "fx_motion_variant_batch_02",
+      "content_type": "image/png",
+      "origin": "derived",
+      "creative_status": "available",
+      "lifecycle_status": "candidate"
+    }
+  ],
+  "build_notes": "Drive-backed production package. Primary hero plate is the scripted visual anchor; motion variants are bounded support states reserved for proof/FX interpolation. No candidate variant is promoted to canonical until moving-proof acceptance.",
+  "built_at": "2026-09-22T05:31:00Z"
+}

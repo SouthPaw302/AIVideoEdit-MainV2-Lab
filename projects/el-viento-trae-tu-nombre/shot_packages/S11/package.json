@@ -1,0 +1,55 @@
+{
+  "schema": "aivideoedit.shot-package.v1",
+  "shot_id": "S11",
+  "script_entry": {
+    "shot_id": "S11",
+    "start_frame": 2548,
+    "end_frame": 2703,
+    "start_seconds": 106.176,
+    "end_seconds": 112.68,
+    "production_mode": "cinematic",
+    "visual_action": "An unseen force catches the thread; it bends, stretches and is swept away until it vanishes into pure black.",
+    "visual_media": "HERO-S11 gdrive://file/12HSkdKl5k3jj076n1DyjN9M5YAf-4oZN",
+    "animation_behavior": "One fluid follow movement with bounded thread deformation; thread becomes smaller and fainter without spawning new forms; end on full black.",
+    "camera_behavior": "bounded fluid follow",
+    "protected_regions": [
+      "thread identity",
+      "black destination",
+      "single continuous trajectory"
+    ],
+    "lyric_cue": "Si el destino nos separa, mi amor / el corazón no sabe soltarte.",
+    "music_cues": [
+      "Final lyric phrase resolves the separation motif",
+      "Energy releases into the ending"
+    ],
+    "transition": "End on pure black; no postscript image."
+  },
+  "media_evidence": [
+    {
+      "asset_id": "HERO-S11",
+      "uri": "gdrive://file/12HSkdKl5k3jj076n1DyjN9M5YAf-4oZN",
+      "name": "shot_11_thread_swept_away.png",
+      "sha256": "c42eb1bb71fa21db5df91b9e6a82843879a70045fa30e7ea7bf591b3eeb0e8de",
+      "status": "generated",
+      "role": "primary_hero_plate",
+      "content_type": "image/png",
+      "origin": "generated",
+      "creative_status": "available",
+      "lifecycle_status": "candidate"
+    },
+    {
+      "asset_id": "FX2-S11",
+      "uri": "gdrive://file/1Tco4ERP956V9YrNenCNBF0hYSxoqCmNT",
+      "name": "shot_11_fx_motion_variant_b2.png",
+      "sha256": "f55f05cede15a65c750d65c23bfa6fddb88ee79e33827949d3560fda91f8afcb",
+      "status": "derived",
+      "role": "fx_motion_variant_batch_02",
+      "content_type": "image/png",
+      "origin": "derived",
+      "creative_status": "available",
+      "lifecycle_status": "candidate"
+    }
+  ],
+  "build_notes": "Drive-backed production package. Primary hero plate is the scripted visual anchor; motion variants are bounded support states reserved for proof/FX interpolation. No candidate variant is promoted to canonical until moving-proof acceptance.",
+  "built_at": "2026-09-22T05:31:00Z"
+}

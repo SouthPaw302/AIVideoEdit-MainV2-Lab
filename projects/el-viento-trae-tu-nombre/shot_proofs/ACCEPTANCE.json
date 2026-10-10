@@ -1,0 +1,20 @@
+{
+  "schema": "aivideoedit.shot-proof-acceptance.v1",
+  "accepted": true,
+  "instruction": "Yeah they are good",
+  "shot_ids": [
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "S05",
+    "S06",
+    "S07",
+    "S08",
+    "S09",
+    "S10",
+    "S11"
+  ],
+  "acceptance_scope": "Accepted motion/composition proof recipes; full-duration shot renders must preserve the accepted behavior and locked script.",
+  "accepted_at": "2026-09-22T06:15:00Z"
+}
