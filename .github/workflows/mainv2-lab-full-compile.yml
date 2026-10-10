@@ -20,6 +20,9 @@ on:
 permissions:
   contents: read
 
+env:
+  FFMPEG_APT_VERSION: "7:6.1.1-3ubuntu5"
+
 jobs:
   complete-stack-compile:
     runs-on: ubuntu-24.04
@@ -34,7 +37,10 @@ jobs:
           cache: pip
           cache-dependency-path: .github/requirements/verification.lock.txt
       - name: Install verification dependencies
-        run: python -m pip install --disable-pip-version-check -r .github/requirements/verification.lock.txt
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y --allow-downgrades "ffmpeg=$FFMPEG_APT_VERSION"
+          python -m pip install --disable-pip-version-check -r .github/requirements/verification.lock.txt
       - name: Enforce source identity and isolation rules
         run: |
           python scripts/validate_contract.py
