@@ -1,0 +1,28 @@
+{
+  "schema": "aivideoedit.media-batch.v1",
+  "batch_id": "BATCH-01-HERO-CHARACTER-LOCK",
+  "refinement_id": "route4-two-heroes",
+  "status": "locked_for_moving_proof",
+  "purpose": "Lock stable male/female hero identity and opening relationship language before later story shots.",
+  "registered_media_manifest": "refinements/route4-two-heroes/media/BATCH_01_HERO_LOCK.json",
+  "shot_lock": "refinements/route4-two-heroes/shot_locks/BATCH_01_OPENING_REMEMBRANCE.json",
+  "song_segment": {
+    "start_seconds": 0,
+    "end_seconds": 21.504,
+    "section_id": "M01"
+  },
+  "locked_primary_assets": [
+    "01_fortress_hero_at_sunset.png",
+    "02_rainlit_harbor_romance.png",
+    "03_memory_gate_of_gold_and_rain.png",
+    "04_threads_of_memory_at_sunset.png"
+  ],
+  "continuity_rules": [
+    "same male identity across downstream appearances",
+    "same female identity across downstream appearances",
+    "distinct male stone/navy and female cream/rust/gold palette",
+    "shared gold-red thread introduced at end of Batch 01",
+    "no text, logos, modern branding, subject replacement or face drift"
+  ],
+  "downstream_gate": "Batch 01 is now locked. Its next repo step is the contiguous moving proof for 00:00.000-00:21.504; do not revise the Batch 01 media selection unless QC fails or the user explicitly reopens it."
+}

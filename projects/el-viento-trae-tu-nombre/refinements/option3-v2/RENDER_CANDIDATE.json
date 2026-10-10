@@ -1,0 +1,66 @@
+{
+  "schema": "aivideoedit.refinement-candidate.v1",
+  "id": "option3-v2",
+  "status": "needs_review",
+  "parent_assembly": {
+    "asset_id": "MASTER-1080P-001",
+    "sha256": "7ba526fbfc32c82e6045a46488314d83095152aa81da97f876afa2bdf57adffe",
+    "preserved": true
+  },
+  "current_candidate": {
+    "asset_id": "MASTER-1080P-OPTION3-V2",
+    "sha256": "4ac3f137d9bba34d05665acd9a344883f958bc04415b7b787e2bde2d020b96ab",
+    "filename": "El_Viento_Trae_Tu_Nombre_option3_v2_1080p.mp4",
+    "size_bytes": 148870496,
+    "width": 1920,
+    "height": 1080,
+    "fps": 24,
+    "frames": 2704,
+    "duration_seconds": 112.666667,
+    "transport_review_asset_id": "REVIEW-1080P-OPTION3-V2"
+  },
+  "user_defects": [
+    "The assembled cut is too abstract.",
+    "Show more of selected Option 3 / Island Memory Tapestry.",
+    "Make more use of the available effects."
+  ],
+  "changes": [
+    "Stronger map-ink visibility in S01-S02 with faint carryover into S05.",
+    "Stronger embroidery/thread overlays in S01-S02 with restrained motif carryover through S04/S06/S07/S09.",
+    "More legible ocean-current motion in S03-S04.",
+    "Clearer mist and anonymous silhouette presence in S07-S08.",
+    "Rebuilt S09 as an explicit whole-tapestry collage of prior motifs.",
+    "Rebuilt S10-S11 around a cleaner luminous thread carrying internal light/color memory.",
+    "Preserved the locked 11-shot frame spans, audio source, and 2704-frame timeline."
+  ],
+  "renderer": {
+    "path": "refinements/option3-v2/renderer_option3_v2.py",
+    "sha256": "3614866e4cc627c5e7f7a9c88ab0d611567dba27cdb387a1859e183dd43188ea"
+  },
+  "qc": {
+    "path": "refinements/option3-v2/TECHNICAL_QC.json",
+    "technical_status": "pass_candidate",
+    "contact_sheet_drive_id": "1dmBQKAo4uA_AxT-m-fIdsrMAaP2EebNC"
+  },
+  "created_at": "2026-09-22T07:58:00Z",
+  "transfer_artifacts": {
+    "drive_zip": {
+      "id": "18K5NloDVGofrMlJUpjLO9HyNWzkFWIg_",
+      "url": "https://drive.google.com/file/d/18K5NloDVGofrMlJUpjLO9HyNWzkFWIg_/view?usp=drivesdk",
+      "name": "El_Viento_Trae_Tu_Nombre_option3_v2_1080p_review.zip",
+      "size_bytes": 63333265,
+      "sha256": "6f2029f139f3af3e58e23951a4909eb8a33282ec6618627b1c3446687459e399",
+      "note": "Transfer-safe ZIP containing the 1080p Option 3 v2 review encode."
+    }
+  },
+  "review_encode": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 24,
+    "frames": 2704,
+    "duration_seconds": 112.666667,
+    "size_bytes": 63333085,
+    "sha256": "65418a8484229421026c25762edabc7bdde4ad2916c8d83af35d1ae561f1db55",
+    "relation_to_master": "same edit and frame timeline; lower-bitrate transfer encode"
+  }
+}

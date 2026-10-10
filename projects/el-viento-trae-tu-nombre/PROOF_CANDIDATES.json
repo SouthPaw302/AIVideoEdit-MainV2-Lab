@@ -1,0 +1,213 @@
+{
+  "schema": "aivideoedit.proof-candidates.v1",
+  "drive_folder_id": "1wcGDqY0EpCQ-__io-iKulzThBP0rJtXP",
+  "drive_folder_url": "https://drive.google.com/drive/folders/1wcGDqY0EpCQ-__io-iKulzThBP0rJtXP",
+  "contact_sheet": {
+    "drive_id": "1w4mFl9FvinhAWYnLtUhEpcKbbk0Q23YC",
+    "sha256": "82d5d7ff6b821c02209d078f91b0dfe053799c33b82e5b8169aea9d2a28bd6a6"
+  },
+  "candidates": [
+    {
+      "shot_id": "S01",
+      "production_mode": "living_scene",
+      "asset_id": "PROOF-S01",
+      "drive_id": "1Gwoe66QB_Eecr8Rzs-5N19J_5N0YLjcV",
+      "sha256": "cf540f9e8d8c50bb08ac2892db7bd2e1fd22efaf83080f7eadcce2318425c9a6",
+      "duration_seconds": 4,
+      "width": 960,
+      "height": 540,
+      "fps": 24,
+      "technical_motion_evidence": {
+        "start_mid_mean_abs_diff": 8.47,
+        "mid_end_mean_abs_diff": 15.67,
+        "max_black_fraction": 0.00735
+      },
+      "technical_status": "pass_candidate",
+      "creative_status": "needs_review"
+    },
+    {
+      "shot_id": "S02",
+      "production_mode": "living_scene",
+      "asset_id": "PROOF-S02",
+      "drive_id": "1Iv9tsw8XVW5u_pmwx2Ahm8iqGfSjKZUr",
+      "sha256": "0ba9c6d6a54eb3a503eb063d5c95f100b98bbdb414087ab70a29a825e6a798dc",
+      "duration_seconds": 3,
+      "width": 640,
+      "height": 360,
+      "fps": 24,
+      "technical_motion_evidence": {
+        "start_mid_mean_abs_diff": 11.16,
+        "mid_end_mean_abs_diff": 11.06,
+        "max_black_fraction": 0.01367
+      },
+      "technical_status": "pass_candidate",
+      "creative_status": "needs_review"
+    },
+    {
+      "shot_id": "S03",
+      "production_mode": "living_scene",
+      "asset_id": "PROOF-S03",
+      "drive_id": "197uqL2ZZRQgPrCeSZW-88htyHl4lOwVd",
+      "sha256": "79c0a2c9a653e73beb928818e70191e3fef6f53126da3182092e51c46c1b7589",
+      "duration_seconds": 3,
+      "width": 640,
+      "height": 360,
+      "fps": 24,
+      "technical_motion_evidence": {
+        "start_mid_mean_abs_diff": 8.17,
+        "mid_end_mean_abs_diff": 10.98,
+        "max_black_fraction": 0.01196
+      },
+      "technical_status": "pass_candidate",
+      "creative_status": "needs_review"
+    },
+    {
+      "shot_id": "S04",
+      "production_mode": "living_scene",
+      "asset_id": "PROOF-S04",
+      "drive_id": "1J-JoJmVb31ObFw0tZ9_Hrz-Zh8gtr2F6",
+      "sha256": "f0d1d63264742a3c53648ad0db5fd84f24fae671ebc1791a08577be3745ed9e4",
+      "duration_seconds": 3,
+      "width": 640,
+      "height": 360,
+      "fps": 24,
+      "technical_motion_evidence": {
+        "start_mid_mean_abs_diff": 10.36,
+        "mid_end_mean_abs_diff": 13,
+        "max_black_fraction": 0.0154
+      },
+      "technical_status": "pass_candidate",
+      "creative_status": "needs_review"
+    },
+    {
+      "shot_id": "S05",
+      "production_mode": "cinematic",
+      "asset_id": "PROOF-S05",
+      "drive_id": "1VkdVId3qaP1MBlK_KaH1CF8YReC40ujY",
+      "sha256": "f9bd9b05e446d667c8bff05f3a715e360f2c017f93b9efa06188c624d689d5e2",
+      "duration_seconds": 3,
+      "width": 640,
+      "height": 360,
+      "fps": 24,
+      "technical_motion_evidence": {
+        "start_mid_mean_abs_diff": 25.14,
+        "mid_end_mean_abs_diff": 22.95,
+        "max_black_fraction": 0.00782
+      },
+      "technical_status": "pass_candidate",
+      "creative_status": "needs_review"
+    },
+    {
+      "shot_id": "S06",
+      "production_mode": "living_scene",
+      "asset_id": "PROOF-S06",
+      "drive_id": "1nXHL4l8uYaYUstHSqcl3-jWRIfSFXblt",
+      "sha256": "fcdb1e544f7497eb39338a431771b1b2a1972f8b3022dc1419554ff5e568825d",
+      "duration_seconds": 3,
+      "width": 640,
+      "height": 360,
+      "fps": 24,
+      "technical_motion_evidence": {
+        "start_mid_mean_abs_diff": 7.73,
+        "mid_end_mean_abs_diff": 10.32,
+        "max_black_fraction": 0.00214
+      },
+      "technical_status": "pass_candidate",
+      "creative_status": "needs_review"
+    },
+    {
+      "shot_id": "S07",
+      "production_mode": "living_scene",
+      "asset_id": "PROOF-S07",
+      "drive_id": "1nGVAEI_4lZxEhrD4Gecs1anH9BfCY2oY",
+      "sha256": "fafe6f8a9e915a817fc7db4718ff99f8ce54e64c19111c49c78f9379dd6b0a49",
+      "duration_seconds": 2.5,
+      "width": 480,
+      "height": 270,
+      "fps": 24,
+      "technical_motion_evidence": {
+        "start_mid_mean_abs_diff": 6.33,
+        "mid_end_mean_abs_diff": 9.96,
+        "max_black_fraction": 0
+      },
+      "technical_status": "pass_candidate",
+      "creative_status": "needs_review"
+    },
+    {
+      "shot_id": "S08",
+      "production_mode": "living_scene",
+      "asset_id": "PROOF-S08",
+      "drive_id": "13QCbTyTrYQAcgLSSWH8KEQ4Y1Xb6ZTOf",
+      "sha256": "97334d6f57ce07dc5e3abc5a4d300007f89a7b00d813a37e0a49b4440dee6057",
+      "duration_seconds": 2.5,
+      "width": 480,
+      "height": 270,
+      "fps": 24,
+      "technical_motion_evidence": {
+        "start_mid_mean_abs_diff": 7.27,
+        "mid_end_mean_abs_diff": 9.56,
+        "max_black_fraction": 0.00458
+      },
+      "technical_status": "pass_candidate",
+      "creative_status": "needs_review"
+    },
+    {
+      "shot_id": "S09",
+      "production_mode": "cinematic",
+      "asset_id": "PROOF-S09",
+      "drive_id": "1QoTzrTqBfZsrfezjZQnIxrbsvUssYLCn",
+      "sha256": "8a6324436b3453f7bbd71afc2a398c3d1aa1d97a9c1b2d2a4a8ae1be88c03145",
+      "duration_seconds": 2.5,
+      "width": 480,
+      "height": 270,
+      "fps": 24,
+      "technical_motion_evidence": {
+        "start_mid_mean_abs_diff": 16.12,
+        "mid_end_mean_abs_diff": 14.17,
+        "max_black_fraction": 0.41226,
+        "note": "Dark void is intentional and visible tapestry remains readable in contact review."
+      },
+      "technical_status": "pass_candidate",
+      "creative_status": "needs_review"
+    },
+    {
+      "shot_id": "S10",
+      "production_mode": "living_scene",
+      "asset_id": "PROOF-S10",
+      "drive_id": "1Cwnm_A6jhCRtc_Q5Aw0txZdq9LtIsXHX",
+      "sha256": "f0e4a939dc413ce260fe17a0fc2607efb343567a525e9da0e5b6ff40b0acade5",
+      "duration_seconds": 2.5,
+      "width": 480,
+      "height": 270,
+      "fps": 24,
+      "technical_motion_evidence": {
+        "start_mid_mean_abs_diff": 3.57,
+        "mid_end_mean_abs_diff": 4.07,
+        "max_black_fraction": 0.50477,
+        "note": "Black field is intentional around luminous single thread."
+      },
+      "technical_status": "pass_candidate",
+      "creative_status": "needs_review"
+    },
+    {
+      "shot_id": "S11",
+      "production_mode": "cinematic",
+      "asset_id": "PROOF-S11",
+      "drive_id": "12MlbcrySC1ofhd7qNvd9SRTQSAGEOF5g",
+      "sha256": "4faa2a72dd7b8664f84e4097031378211a8109c390b33c39a00f33fb4bad9bb3",
+      "duration_seconds": 2.5,
+      "width": 480,
+      "height": 270,
+      "fps": 24,
+      "technical_motion_evidence": {
+        "start_mid_mean_abs_diff": 9.34,
+        "mid_end_mean_abs_diff": 16.1,
+        "max_black_fraction": 0.99998,
+        "note": "End frame is intentionally pure black per locked script."
+      },
+      "technical_status": "pass_candidate",
+      "creative_status": "needs_review"
+    }
+  ],
+  "inspection_note": "Start/mid/end visual contact review shows coherent progression through S01-S08. S09-S11 intentionally increase black-field coverage to execute the locked tapestry-to-thread-to-black ending. This record does not constitute user creative acceptance."
+}

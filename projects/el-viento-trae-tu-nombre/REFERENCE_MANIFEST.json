@@ -1,0 +1,19 @@
+{
+  "schema": "aivideoedit.reference-manifest.v1",
+  "videos": [],
+  "images": [],
+  "audio": [
+    {
+      "name": "El Viento trae tu nombre (Remastered).wav",
+      "sha256": "bb26a35eaf2910531fc9ae057dd04c9315a6ad62425bd8267b9eb826a19c01e5",
+      "duration_seconds": 112.68,
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "analysis_complete": true,
+      "authorized_role": "canonical_score_source"
+    }
+  ],
+  "usable_visual_reference": false,
+  "analysis_completed_at": "2026-09-22T05:30:00Z",
+  "note": "No external visual reference supplied. Current-user visual direction gate selected Island Memory Tapestry. Audio analysis and lyric authority are resolved."
+}

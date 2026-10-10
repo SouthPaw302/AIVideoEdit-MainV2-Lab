@@ -1,0 +1,19 @@
+{
+  "schema": "aivideoedit.refinement-qc.v1",
+  "candidate": "option3-v2",
+  "master_sha256": "4ac3f137d9bba34d05665acd9a344883f958bc04415b7b787e2bde2d020b96ab",
+  "frames": 2704,
+  "fps": 24,
+  "duration_seconds": 112.666667,
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "audio_present": true,
+  "video_present": true,
+  "contact_sheet_sha256": "3f166fa49619479f15c78e8f121f7558f245caa2de5e2575c5fde3102aecd05e",
+  "contact_sheet_drive_id": "1dmBQKAo4uA_AxT-m-fIdsrMAaP2EebNC",
+  "technical_status": "pass_candidate",
+  "creative_status": "needs_review",
+  "renderer_sha256": "3614866e4cc627c5e7f7a9c88ab0d611567dba27cdb387a1859e183dd43188ea"
+}

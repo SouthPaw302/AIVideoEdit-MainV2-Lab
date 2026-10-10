@@ -1,0 +1,442 @@
+{
+  "schema": "aivideoedit.production-checkpoint.v1",
+  "project": "El Viento trae tu nombre",
+  "branch": "song/el-viento-trae-tu-nombre",
+  "current_stage": "1080 FX master v6 rendered; repo technical gates passed; awaiting user visual review",
+  "active_scope": "visual review hold",
+  "audio_revision": {
+    "title": "El Viento trae tu nombre.wav",
+    "drive_file_id": "1M6uRTeYejXxn2rSDkTJu5H0_LiWrdwN4",
+    "drive_folder_id": "16mpp93CQp-JWlpg1_XFND291oXSoNvaw",
+    "duration_seconds": 154.48,
+    "previous_locked_duration_seconds": 112.68,
+    "extension_seconds": 41.8,
+    "status": "current_mux_authority",
+    "note": "Old 112.680 s timing retained only as legacy rollback/reference."
+  },
+  "editorial_directive": {
+    "preserve": [
+      "Route 4 two-hero canon",
+      "camera language",
+      "existing strong hero paintings",
+      "existing loop libraries",
+      "repo FX language"
+    ],
+    "change": [
+      "reduce hard scene replacements substantially",
+      "hold hero compositions longer",
+      "create movement inside scenes using existing image variations and transparent/overlay assets",
+      "use loops, parallax, foreground drift, light/rain/thread/material motion and restrained camera movement",
+      "use added chorus and instrumental outro as expanded final act",
+      "favor scene evolution over slideshow pacing"
+    ],
+    "supplemental_use": "Batches 07-09 are available for ancestral/harbor resolution but should function as layered evolution, not rapid replacement shots."
+  },
+  "completed": [
+    "New WAV located in Drive Music Files folder",
+    "New master duration verified at 154.480 seconds",
+    "Registered loop archives for Batches 01-09 re-identified from repo manifests and Drive",
+    "FX-variation libraries for Batches 02-06 re-verified from repo manifests",
+    "Prior Director's Cut v3 retained only as rollback/reference because its scene-change density was rejected",
+    "New 154.480 s WAV adopted as current mux authority",
+    "Sandbox cleaned and render inputs reduced to registered Route 4 loop/motion archives",
+    "Extended 2:34 workprint v1 rendered with nine long-form scenes",
+    "Technical QC passed with no detected black/freeze events",
+    "71 MB review copy uploaded to Drive Full Renders",
+    "Canonical Route 4 hero/story order restored in extended workprint",
+    "Corrected-order 154.480 s 1080p review rendered",
+    "MontañaNegra intro/outro bookends added in review form",
+    "Corrected-order review backed up to Drive Full Renders",
+    "Selective internal FX refinement rendered over corrected-order v2",
+    "Four high-value FX variation layers integrated without adding scene changes",
+    "Refined FX v3 technical QC passed with no detected black/freeze events",
+    "68 MB refined FX v3 review uploaded to Drive Full Renders",
+    "Canonical Route 4 hero/story order restored in 2:34 edit",
+    "MontañaNegra intro/outro added at 1080p refinement stage",
+    "Corrected-order refined FX v3 rendered at 1920x1080/24fps",
+    "65 MB review copy archived to Drive Full Renders",
+    "Main reusable FX v2 registry reviewed for lighting/fire effects",
+    "Selective firelight/warm-halation polish added without changing edit timing",
+    "Map-contact hand defect visually softened using localized supernatural glow rather than replacing the shot",
+    "Refined FX v4 rendered at exact 154.480 s mux authority",
+    "v4 technical QC passed with no detected black/freeze events",
+    "54 MB v4 review copy archived to Drive Full Renders",
+    "1:21 hand artifact repaired without replacing scene",
+    "1080p creative lock v5 rendered",
+    "final black/freeze QC passed",
+    "final contact-sheet visual pass completed",
+    "locked review copy uploaded to Drive",
+    "4K upscale source divided into three frame-stable video-only chunks",
+    "untouched audio master separated for final mux",
+    "split reconstruction ZIP created and validated byte-identical",
+    "all five ZIP parts, rebuild script and hashes uploaded to Drive",
+    "4K upscale completed for all three locked video chunks",
+    "all 3705 video frames preserved at 24 fps",
+    "full 3840x2160 master reconstructed and muxed with locked audio",
+    "final 4K sampled visual QC passed including 1:21 repaired region",
+    "4K final handoff ZIP created and split into 21 Drive-safe parts",
+    "all 21 ZIP parts plus rebuild script and hashes verified present on Drive",
+    "Batch 01 canonical FX runtime proof rendered, QC passed, Drive-backed and locked",
+    "Batch 02 canonical FX runtime proof rendered, QC passed, Drive-backed and locked",
+    "Batch 03 canonical FX runtime proof rendered, QC passed, Drive-backed and locked",
+    "Batch 04 canonical FX runtime proof rendered, QC passed, Drive-backed and locked",
+    "Batch 05 canonical FX runtime proof rendered, QC passed, Drive-backed and locked",
+    "Batch 06 canonical FX runtime proof rendered, QC passed, Drive-backed and locked without premature fade-to-black"
+  ],
+  "exact_next_action": "Review El_Viento_Route4_1080p_FX_MASTER_v6.mp4 at normal speed. If accepted, lock/promote/archive 1080. Do not upscale to 4K until explicit approval.",
+  "do_not_do": [
+    "do not use the old 112.680 s timing as current mux authority",
+    "do not create Batch 10",
+    "do not modify main",
+    "do not overwrite preserved masters",
+    "do not return to rapid slideshow-style scene replacement",
+    "do not upscale again until the full 1080p FX master is user-approved",
+    "do not use the foreign Batch 01 - Invocation ember/obsidian media as Route 4 canon",
+    "do not upscale again until the full 1080p FX master is approved",
+    "do not replace current edit with legacy batch motion assemblies",
+    "do not duplicate FX already baked into the current 1080p baseline",
+    "do not claim the current 1080 is FX-complete",
+    "do not use the obsolete 112.68-second S01-S11 FX lock",
+    "do not render until the current no-render instruction is lifted"
+  ],
+  "extended_audio": {
+    "file": "El Viento trae tu nombre.wav",
+    "duration_seconds": 154.48,
+    "role": "current mux authority",
+    "legacy_duration_seconds": 112.68
+  },
+  "extended_workprint": {
+    "file": "El_Viento_Route4_234_Workprint_v1.mp4",
+    "review_file": "El_Viento_Route4_234_Workprint_v1_review.mp4",
+    "sha256": "59c2afec3b0d3913939abc6a7e49051e36ebcb2b15ad903b252628d12d529355",
+    "review_sha256": "88c8eb5281123f1cdf273ad87946e84ecf1c87658814e97ac963390419c9e817",
+    "duration_seconds": 154.5,
+    "resolution": "1920x1080",
+    "fps": 24,
+    "audio": "stereo 48 kHz AAC",
+    "structure": "nine long-form scenes with soft crossfades; existing Route 4 loop/motion assets",
+    "technical_qc": {
+      "black_detect": "none",
+      "freeze_detect": "none",
+      "status": "pass"
+    },
+    "drive_review_id": "10bffcRpVmKyHKlTq9cFGRy0LnK3u0YH0",
+    "role": "rough extended workprint; not final master"
+  },
+  "editorial_lock": {
+    "hero_order": "restore and preserve canonical Route 4 hero/story order",
+    "scene_change_density": "reduced; favor long hero holds and internal movement",
+    "fx_strategy": "use existing loops, image variations, transparent/overlay assets and promoted FX inside scenes",
+    "cinematic_camera_language": "preserve from 2:34 workprint v1"
+  },
+  "channel_finish": {
+    "channel": "@MontañaNegra",
+    "intro_required": true,
+    "outro_required": true,
+    "existing_canonical_intro_outro_found": false,
+    "direction": "derive intro/outro from this production visual language; do not introduce unrelated branding language",
+    "reusable_asset_rule": "once accepted, archive intro/outro as reusable channel assets for future productions"
+  },
+  "delivery_target": {
+    "review_workflow": "1080p workprints until creative lock",
+    "current_step": "creative refinement / FX / hero-order / channel-bookend review",
+    "later_step": "4K upscale only after 1080p creative lock and final QC",
+    "preserve_native_1080p_master": true,
+    "archive_to": [
+      "Google Drive",
+      "GitHub manifests/checkpoints"
+    ]
+  },
+  "sandbox_policy": {
+    "keep_only": [
+      "active mux source",
+      "current render inputs",
+      "current review/master candidate",
+      "QC evidence"
+    ],
+    "archive_then_remove": true,
+    "durable_media": "Google Drive",
+    "durable_state": "GitHub"
+  },
+  "corrected_order_workprint": {
+    "file": "El_Viento_Route4_234_Corrected_Order_v2_drive.mp4",
+    "drive_file_id": "1O0QDzSGitfkXSdOt08sSV4AIFNYbRVsc",
+    "duration_seconds": 154.48,
+    "resolution": "1920x1080",
+    "fps": 24,
+    "hero_order": "canonical Route 4 order restored",
+    "channel_bookends": "MontañaNegra intro/outro included in 1080p review form",
+    "role": "current creative refinement candidate; not final master"
+  },
+  "refined_fx_v3": {
+    "file": "El_Viento_Route4_234_Refined_FX_v3.mp4",
+    "review_file": "El_Viento_Route4_234_Refined_FX_v3_drive.mp4",
+    "drive_file_id": "1lEHmDrvCGm9ZoKFswH9yQ6-Lzg1Ex2dt",
+    "duration_seconds": 154.5,
+    "resolution": "1920x1080",
+    "fps": 24,
+    "hero_order": "canonical Route 4 order preserved",
+    "fx_layers": [
+      "coastal double-exposure memory",
+      "golden thread sunset",
+      "fated threads twilight",
+      "ancestral thread horizon"
+    ],
+    "fx_strategy": "moving low-opacity internal layers at selected memory/chorus/finale intervals; no added scene replacements",
+    "technical_qc": {
+      "black_detect": "none",
+      "freeze_detect": "none",
+      "status": "pass"
+    },
+    "role": "current 1080p creative refinement candidate; not final master"
+  },
+  "corrected_order_candidate": {
+    "file": "El_Viento_Route4_234_Refined_FX_v3.mp4",
+    "review_file": "El_Viento_Route4_234_Refined_FX_v3_review.mp4",
+    "sha256": "cb3485303d5f5661363803cc4f90fbe893bc2e61a7f7c6a19b9b214d523acd29",
+    "review_sha256": "82c2818fe799ea0cbaf0141a25f5f2e6141ecc1b38763593f9e3337ced9b20f1",
+    "duration_seconds": 154.5,
+    "resolution": "1920x1080",
+    "fps": 24,
+    "audio": "stereo 48 kHz AAC",
+    "hero_order": "canonical Route 4 order restored",
+    "channel_finish": "MontañaNegra intro/outro included in current 1080p refinement",
+    "technical_qc": {
+      "black_detect": "none",
+      "freeze_detect": "none",
+      "status": "pass"
+    },
+    "drive_review_id": "1LRjGExaf2uTazUyKW1hfjdoUILDT9StG",
+    "role": "current 1080p creative refinement candidate; not final master"
+  },
+  "refined_fx_v4": {
+    "file": "El_Viento_Route4_234_Refined_FX_v4.mp4",
+    "review_file": "El_Viento_Route4_234_Refined_FX_v4_review.mp4",
+    "master_sha256": "cac31fb2bd171fa877ee2b1f20f9c53b5ee4d4736848e2ea227cee18febaabb6",
+    "review_sha256": "7caef827d270419d3cf465796cb2df409e280c25fe61becec83fad562de3a59f",
+    "duration_seconds": 154.48,
+    "resolution": "1920x1080",
+    "fps": 24,
+    "audio": "original current mux authority retained",
+    "drive_review_id": "1RFOlU342DZSBxl7P_j4piUDdWiV9mNOC",
+    "technical_qc": {
+      "black_detect": "none",
+      "freeze_detect": "none",
+      "status": "pass"
+    },
+    "creative_changes": [
+      "preserved v3 edit timing, hero order and scene structure",
+      "added restrained firelight-breath style warmth in lantern-heavy passages",
+      "added subtle warm light breathing in later ancestral passage",
+      "softened/brightened the map-contact hand region so awkward fingers read as supernatural map glow rather than requiring shot replacement"
+    ],
+    "main_effect_library_authority": [
+      "FX2-LIGHT-023 firelight_breath",
+      "FX2-LIGHT-028 warm_halation_bloom",
+      "FX2-LIGHT-002 moving_light_field"
+    ],
+    "note": "Selective treatment follows approved main FX library language; no scene replacement and no 4K work."
+  },
+  "creative_lock_v5": {
+    "file": "El_Viento_Route4_1080p_CREATIVE_LOCK_v5.mp4",
+    "review_file": "El_Viento_Route4_1080p_CREATIVE_LOCK_v5_review.mp4",
+    "master_sha256": "5bc1876733196673872daaef6bd44a500e4384d92422be1a88807c1167b46019",
+    "review_sha256": "2c1641ad8289fe62714d0bee28d50eb7d00a9192e143f96c3982156df01fb60c",
+    "resolution": "1920x1080",
+    "fps": 24,
+    "audio": "AAC stereo 48 kHz",
+    "mux_duration_seconds": 154.375,
+    "audio_authority_seconds": 154.48,
+    "artifact_repair": {
+      "location": "~00:01:21",
+      "method": "localized warm supernatural map glow over malformed hand/finger region",
+      "scene_replaced": false,
+      "timing_changed": false
+    },
+    "technical_qc": {
+      "black_detect": "none",
+      "freeze_detect": "none",
+      "visual_contact_sheet_review": "pass",
+      "status": "pass"
+    },
+    "drive_review_id": "1epCHhbFUtkLx1ysVl0cYUfuDi64ozz4c",
+    "role": "locked 1080p source for 4K upscale"
+  },
+  "upscale_prep": {
+    "target": "3840x2160 at 24 fps",
+    "drive_folder_id": "1KmABtLstpEKHN_0nzPP_KEKDYyPFtKjn",
+    "drive_folder_url": "https://drive.google.com/drive/folders/1KmABtLstpEKHN_0nzPP_KEKDYyPFtKjn",
+    "package_format": "regular ZIP raw-split into five reconstruction parts",
+    "parts": [
+      {
+        "file": "El_Viento_4K_Upscale_Prep.zip.part000",
+        "drive_id": "1X5xNUwSqG26cdgK_E9E7lMdP7Yc284vp"
+      },
+      {
+        "file": "El_Viento_4K_Upscale_Prep.zip.part001",
+        "drive_id": "1fL7tEd8GtaUw5xlfOXsXLdCMnFSbTF8s"
+      },
+      {
+        "file": "El_Viento_4K_Upscale_Prep.zip.part002",
+        "drive_id": "1gzw-3r9OgzUE5gXZt3s-91iJp4X2b5g8"
+      },
+      {
+        "file": "El_Viento_4K_Upscale_Prep.zip.part003",
+        "drive_id": "1PMPWz9iq2iXZ5UzFqt-q8N0Ul4avX6HZ"
+      },
+      {
+        "file": "El_Viento_4K_Upscale_Prep.zip.part004",
+        "drive_id": "1KQ25gHH5o0zzZI3TwpxUnoKAq3VllTAs"
+      }
+    ],
+    "rebuild_script": {
+      "file": "REBUILD_4K_PREP_ZIP.bat",
+      "drive_id": "1wDlr7wsLfUl6az4wfBgxAULY5w7xfL-s"
+    },
+    "hash_file": {
+      "file": "4K_RAW_SPLIT_SHA256.txt",
+      "drive_id": "1xm1zdJ0lNLBl9o8SzcopqraNtbfzA9pJ"
+    },
+    "internal_contents": [
+      "three frame-stable video-only source chunks",
+      "untouched AAC audio master",
+      "source SHA256 hashes",
+      "1080 reconstruction script",
+      "4K-after-upscale reconstruction script",
+      "upscale manifest",
+      "PC instructions"
+    ],
+    "validation": "raw split reconstruction tested byte-identical; reconstructed ZIP test passed",
+    "next_rule": "upscale chunks independently with exact frame-count preservation; concatenate 4K video chunks and mux untouched audio only after upscale"
+  },
+  "final_4k": {
+    "master_file": "El_Viento_Trae_Tu_Nombre_4K_MASTER.mp4",
+    "sha256": "ce97c9717e1e6c836fbd5d9423428f17ed865ff44ce8a23bd66f8ce3064059e8",
+    "resolution": "3840x2160",
+    "fps": 24,
+    "codec": "H.264",
+    "audio": "AAC stereo 48 kHz, locked source audio",
+    "duration_seconds": 154.375,
+    "upscale": "2x Lanczos with restrained unsharp 0.12",
+    "interpolation": false,
+    "source_chunks": [
+      {
+        "file": "El_Viento_4K_part_001.mp4",
+        "frames": 1440,
+        "duration": 60
+      },
+      {
+        "file": "El_Viento_4K_part_002.mp4",
+        "frames": 960,
+        "duration": 40
+      },
+      {
+        "file": "El_Viento_4K_part_003.mp4",
+        "frames": 1305,
+        "duration": 54.375
+      }
+    ],
+    "qc": {
+      "sampled_contact_sheet": "pass",
+      "repaired_81_second_region": "pass",
+      "dimensions": "pass",
+      "frame_rate": "pass",
+      "audio_stream": "pass"
+    }
+  },
+  "final_4k_handoff": {
+    "drive_folder_id": "19W2-3OG4KgFILqBS-DpEO2ehMWH7iPuc",
+    "drive_folder_url": "https://drive.google.com/drive/folders/19W2-3OG4KgFILqBS-DpEO2ehMWH7iPuc",
+    "split_archive": "El_Viento_4K_FINAL_HANDOFF.zip split into 21 raw parts",
+    "part_range": "part000-part020",
+    "part_size": "64 MiB except final remainder",
+    "rebuild_script": "REBUILD_4K_FINAL_ZIP.bat",
+    "hashes": "4K_FINAL_SPLIT_SHA256.txt",
+    "verified_drive_item_count": 23,
+    "contents_after_rebuild": [
+      "three upscaled 4K video chunks",
+      "locked original audio master",
+      "RECONSTRUCT_4K_MASTER.bat",
+      "UPSCALE_4K_MANIFEST.json",
+      "SHA256SUMS.txt",
+      "README_PC.txt"
+    ],
+    "reconstruction_master_sha256": "ce97c9717e1e6c836fbd5d9423428f17ed865ff44ce8a23bd66f8ce3064059e8"
+  },
+  "fx_completion_pass": {
+    "authority": "current user directive 2026-09-24",
+    "status": "core_fx_gates_locked_full_assembly_pending",
+    "completed_batches": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "current_batch": null,
+    "batch_01_proof": {
+      "file": "El_Viento_Batch01_FX_Moving_Proof_v3.mp4",
+      "sha256": "8a507ce08b1da649c721a8f9ebc199f15d9b4ec42af90baed61f0ac4f2636e81",
+      "drive_file_id": "1Ou6VY_1hshnPzxd7L44a8QnlL7Jy6WRM",
+      "qc_contact_sheet_drive_id": "1xUlH03Hq2OuUoETIw1ufq0JTDg22HqUH",
+      "status": "locked"
+    },
+    "prior_4k_master_role": "rollback/reference only",
+    "upscale_gate": "blocked until user approves completed 1080p FX master",
+    "batch_02_proof": {
+      "file": "El_Viento_Batch02_FX_Moving_Proof_v1.mp4",
+      "sha256": "bdf3516f7961e69d4b019c5f6fe6e86dd76f152e58873b9e1e33734a1245d9e3",
+      "drive_file_id": "1Zxu5ajoAf7nNb041J9zPDnVpvaHSOhgV",
+      "qc_contact_sheet_drive_id": "1SDjz4hdgZt7Jy_DHPKsLJYesqzkX01-f",
+      "status": "locked"
+    },
+    "batch_03_proof": {
+      "file": "El_Viento_Batch03_FX_Moving_Proof_v1.mp4",
+      "sha256": "a579a39fe470064838058252623d2a7d30a834ea3c44f997fa616743dba8851c",
+      "drive_file_id": "1s3c0KGtOTVvf80IGFcDVnaAP36vbCFxY",
+      "qc_contact_sheet_drive_id": "1H5nI6P3A8gqd6KdSHO8D-xd1XPOCFFPC",
+      "status": "locked"
+    },
+    "batch_04_proof": {
+      "file": "El_Viento_Batch04_FX_Moving_Proof_v1.mp4",
+      "sha256": "1416df27a1d15dc658cad1491a16301ac0a41753904d2d8b5f3257cbd5e58a38",
+      "drive_file_id": "1cxoa6yYd4_LgGiHKTE6FuEQQFUAVQrhV",
+      "qc_contact_sheet_drive_id": "1MGeGN3wz7GsmEjZnk2foILdKTeoX_x_B",
+      "status": "locked"
+    },
+    "batch_05_proof": {
+      "file": "El_Viento_Batch05_FX_Moving_Proof_v1.mp4",
+      "sha256": "8d2ece53c4a46f35dd74063e402828f0b9a0d9e6e3c7422fa9eb5dc74952ffea",
+      "drive_file_id": "1x_-bBs6YL7BlNAYbgmogytdP5Dgk1S13",
+      "qc_contact_sheet_drive_id": "1Zktzagr3_2hXADi9z0RJSDbJJ-8MGqJ8",
+      "status": "locked"
+    },
+    "batch_06_proof": {
+      "file": "El_Viento_Batch06_FX_Moving_Proof_v1.mp4",
+      "sha256": "ec7c8d98d4e68a1f1996797bc7ae9cc561269697d1ad8861b3e2741755b60a47",
+      "drive_file_id": "1MgKKV4O4ZeYgt4BgS6Vbd6flvzlXgtH2",
+      "qc_contact_sheet_drive_id": "1Q_pGjS-THHcdXTVirrfhk8AHnuuNCEBY",
+      "status": "locked"
+    },
+    "legacy_release_to_black": "suppressed because current mux authority continues to 154.480 s"
+  },
+  "fx_completion": {
+    "baseline_file": "El_Viento_Route4_1080p_CREATIVE_LOCK_v5.mp4",
+    "baseline_role": "preserved edit/timing baseline; NOT FX-complete",
+    "baseline_duration_seconds": 154.375,
+    "user_review": "missing FX",
+    "core_batches_01_06": "reopened_missing_fx",
+    "extended_act": "reopened_missing_fx",
+    "fx_lock": "verified",
+    "four_k_status": "blocked until approval",
+    "render_authorization": "blocked by current no-render instruction",
+    "fx_lock_sha256": "107090e7e09b2686f1c56b44d78d027b8802b7cdd2a16a583b1e8a5bbd073530",
+    "final_fx_complete": false,
+    "render_status": "completed",
+    "master_file": "El_Viento_Route4_1080p_FX_MASTER_v6.mp4",
+    "master_sha256": "5fe93ef79d528a27cb7a15003aac9e9bc50a0db40a6719a102d36d5f10314af0",
+    "technical_qc": "PASS",
+    "user_visual_review": "pending"
+  }
+}
