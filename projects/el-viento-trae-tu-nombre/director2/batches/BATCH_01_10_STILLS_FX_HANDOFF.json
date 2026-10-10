@@ -1,0 +1,100 @@
+{
+  "schema": "aivideoedit.director2.batch10.handoff.v1",
+  "production_id": "el-viento-lab-new-director",
+  "branch": "song/el-viento-trae-tu-nombre",
+  "based_on_commit": "9fcf9e7335a2bed25f1cb40d7c024c5abcf7e55a",
+  "current_main_sha": "900e3e5749ed6fa13ad91524975a9e64661e6649",
+  "batch_id": "B01",
+  "scope": "10 separate image plates; 10 pre-FX originals; 10 local FX variant stills; 10 separate 2-second motion proof MP4s; 20-second first-song audio-synced montage",
+  "original_song_sha256": "8d967101c875868b64207bd43bfbc507c0a958989bbc560c2edb0024b15877cb",
+  "media_provenance": {
+    "new_generated_shots": [
+      "B01-S01",
+      "B01-S02",
+      "B01-S03",
+      "B01-S04"
+    ],
+    "historical_source_derived_candidates": [
+      "B01-S05",
+      "B01-S06",
+      "B01-S07",
+      "B01-S08",
+      "B01-S09",
+      "B01-S10"
+    ],
+    "historical_master_sha256": "4ecba2862c84b5a64bd5001eae308374c18c77cef6bafe815ab11a08b20548a7",
+    "historical_source_role": "PERMITTED_REFERENCE_SOURCE_DERIVED__CREATIVE_HOLD__REPLACE_FOR_FINAL",
+    "source_02_effective_resolution_warning": "source native 873x491 before 1280x720 upsample"
+  },
+  "archives": [
+    {
+      "role": "stills",
+      "drive_id": "1ZSpbJjTeG9mcE0usoJKF4E4TpCazgw7a",
+      "url": "https://drive.google.com/file/d/1ZSpbJjTeG9mcE0usoJKF4E4TpCazgw7a/view",
+      "file_name": "El_Viento_Director2_Batch01_Stills_Archive.zip",
+      "size_bytes": 26383752,
+      "sha256": "43d45ffc65126b0673d359d742393996a5f476ed629ee3d8f5e6f075fb3be689"
+    },
+    {
+      "role": "fx",
+      "drive_id": "1bdDC48x24KZ4-NekSlKYn5kUcpi7_8cR",
+      "url": "https://drive.google.com/file/d/1bdDC48x24KZ4-NekSlKYn5kUcpi7_8cR/view",
+      "file_name": "El_Viento_Director2_Batch01_FX_Archive.zip",
+      "size_bytes": 16390927,
+      "sha256": "824f8f7174c49f987e2063eea0aeb83e9b46827e480080dbb488e98b6a76117b"
+    }
+  ],
+  "motion_reel": {
+    "drive_id": "1YwanUX75R3LJv0VCP-UcBHiYjXK5jcKd",
+    "url": "https://drive.google.com/file/d/1YwanUX75R3LJv0VCP-UcBHiYjXK5jcKd/view",
+    "name": "El_Viento_Director2_Batch01_Review_With_Music.mp4",
+    "size_bytes": 2672871,
+    "sha256": "83a5be745731a6f885f3ffdf6317186ef649cb36bd8f43f60583e1f3d300fc99",
+    "duration_seconds": 20,
+    "width": 640,
+    "height": 360,
+    "fps": 24,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "note": "This is a 2-second-per-shot FX contact reel, not an editorial cut, audio follows first 20 seconds of the song"
+  },
+  "fx_contact": {
+    "drive_id": "1An38N-lqo6BYYBPOQt2xe2GLAoO0-0sL",
+    "url": "https://drive.google.com/file/d/1An38N-lqo6BYYBPOQt2xe2GLAoO0-0sL/view"
+  },
+  "fx_gate": {
+    "local_proof_count": 10,
+    "each_proof_duration_seconds": 2,
+    "each_proof_frames": 48,
+    "mechanism": "bounded material masks: water displacement, practical lamp illumination, localized atmosphere",
+    "reported_canonical_fx_id_mappings": [
+      "FX2-SURFACE-022",
+      "FX2-LIGHT-028",
+      "FX2-ATM-021"
+    ],
+    "executed_via_canonical_fx2_executor": false,
+    "canonical_precompile_pass_not_claimed": true,
+    "full_parallel_runner_render_not_launched": true
+  },
+  "director_qc": {
+    "source_media_count": 10,
+    "video_decoding": "PASS",
+    "frames_per_proof": "PASS",
+    "black_segment_detection": "NO_0.3S_BLACK_SEGMENTS",
+    "human_approval": false,
+    "film_assembly_approved": false,
+    "visual_status": "FOUR_NEW_CANDIDATES; SIX_ARCHIVE_MISMATCH_HOLD",
+    "reason": "Historical Route4 source pictures have a different painterly visual language and facial wardrobe design than the independently directed photoreal film."
+  },
+  "continuation": {
+    "next_batch": "B02",
+    "batch_size": 10,
+    "only_advance_to_canon_after": "distinct real stills + preFX copies + FX loops + current-main director/FX gates",
+    "future_work": "Generate/replace six held historical shots with distinct continuity-safe new plates while producing B02; do not waste runner time making a faux complete film"
+  },
+  "preservation": [
+    "only song branch updated",
+    "no writes to protected main",
+    "archived published film and Drive masters unchanged"
+  ]
+}
