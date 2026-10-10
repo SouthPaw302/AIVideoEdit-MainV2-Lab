@@ -122,10 +122,6 @@ class StackHandler(base.Handler):
     server_version="AIVideoEditAlphaStack/0.8"
     def do_GET(self):
         path=urlparse(self.path).path
-        if path=="/api/system":return self.send_json(system_snapshot())
-        if path=="/api/storage":return self.send_json(storage.status())
-        if path=="/api/core":return self.send_json(CORE.status())
-        if path=="/api/tools":return self.send_json({"schema":"aivideoedit.tools.v1","tools":all_tool_schemas()})
         if path=="/api/remote/health":
             if not remote_bridge.enabled():
                 return self.send_json({"ok":False,"error":"remote bridge disabled"},404)
@@ -135,9 +131,28 @@ class StackHandler(base.Handler):
             if not ok:return self.send_json({"ok":False,"error":reason,"request_id":rid},401)
             names=[x.get("name") for x in all_tool_schemas() if isinstance(x,dict) and x.get("name")]
             return self.send_json({"ok":True,"request_id":rid,"result":remote_bridge.capability_document(names,harness_enabled=harness_tools.status().get("enabled",False))})
+        if path in {"/api/system","/api/storage","/api/core","/api/tools"}:
+            if not self.require_studio(mutating=False):return
+        if path=="/api/system":return self.send_json(system_snapshot())
+        if path=="/api/storage":return self.send_json(storage.status())
+        if path=="/api/core":return self.send_json(CORE.status())
+        if path=="/api/tools":return self.send_json({"schema":"aivideoedit.tools.v1","tools":all_tool_schemas()})
         return super().do_GET()
     def do_POST(self):
         path=urlparse(self.path).path
+        if path=="/api/remote/call":
+            ok,reason,rid=_remote_auth(self)
+            if not ok:return self.send_json({"ok":False,"error":reason,"request_id":rid},401)
+            try:
+                data=_json_body(self);name=str(data.get("name") or "");args=data.get("arguments") if isinstance(data.get("arguments"),dict) else {}
+                valid={x.get("name") for x in all_tool_schemas() if isinstance(x,dict)}
+                if name not in valid:return self.send_json({"ok":False,"error":"unknown or unapproved tool","request_id":rid},400)
+                result=_tool_call(name,args)
+                return self.send_json({"ok":True,"request_id":rid,"tool":name,"result":result})
+            except ValueError as exc:return self.send_json({"ok":False,"error":str(exc),"request_id":rid},400)
+            except Exception as exc:return self.send_json({"ok":False,"error":str(exc),"request_id":rid},500)
+        if path=="/api/auth/session":return super().do_POST()
+        if not self.require_studio(mutating=True):return
         if path=="/api/core/bootstrap":
             try:
                 data=_json_body(self);result=CORE.bootstrap(bool(data.get("offline",False)));return self.send_json(result,200 if result.get("bootstrapped") else 409)
@@ -150,17 +165,6 @@ class StackHandler(base.Handler):
                 return self.send_json({"ok":True,"tool":name,"result":result})
             except ValueError as exc:return self.send_json({"ok":False,"error":str(exc)},400)
             except Exception as exc:return self.send_json({"ok":False,"error":str(exc)},500)
-        if path=="/api/remote/call":
-            ok,reason,rid=_remote_auth(self)
-            if not ok:return self.send_json({"ok":False,"error":reason,"request_id":rid},401)
-            try:
-                data=_json_body(self);name=str(data.get("name") or "");args=data.get("arguments") if isinstance(data.get("arguments"),dict) else {}
-                valid={x.get("name") for x in all_tool_schemas() if isinstance(x,dict)}
-                if name not in valid:return self.send_json({"ok":False,"error":"unknown or unapproved tool","request_id":rid},400)
-                result=_tool_call(name,args)
-                return self.send_json({"ok":True,"request_id":rid,"tool":name,"result":result})
-            except ValueError as exc:return self.send_json({"ok":False,"error":str(exc),"request_id":rid},400)
-            except Exception as exc:return self.send_json({"ok":False,"error":str(exc),"request_id":rid},500)
         if path.startswith("/api/projects/") and path.endswith("/prepare"):
             parts=path.strip("/").split("/");pid=parts[2]
             if not base.find_project(pid):return self.send_json({"error":"project not found"},404)
@@ -173,6 +177,6 @@ class StackHandler(base.Handler):
         return super().do_POST()
 
 if __name__=="__main__":
-    base.load_state();base.dispatch_job=dispatch_job;start_workers();host=os.environ.get("AIVE_HOST","0.0.0.0");port=int(os.environ.get("AIVE_PORT","8080"));print(f"AIVideoEdit Alpha Stack: http://127.0.0.1:{port}");print(f"LAN bind: {host}:{port}");print(f"Workspace: {base.RUNTIME}");print(f"Workers: {WORKER_COUNT}");print(f"Storage: {storage.status()['detail']}");print(f"Canonical core: {'loaded' if CORE.status().get('bootstrapped') else 'not bootstrapped'}");print(f"Tool API: {len(all_tool_schemas())} tools")
+    base.load_state();base.dispatch_job=dispatch_job;start_workers();host=os.environ.get("AIVE_HOST","127.0.0.1");base.studio_security.validate_bind(host);port=int(os.environ.get("AIVE_PORT","8080"));print(f"AIVideoEdit Alpha Stack: http://127.0.0.1:{port}");print(f"Bind: {host}:{port}");print(f"Workspace: {base.RUNTIME}");print(f"Workers: {WORKER_COUNT}");print(f"Storage: {storage.status()['detail']}");print(f"Canonical core: {'loaded' if CORE.status().get('bootstrapped') else 'not bootstrapped'}");print(f"Tool API: {len(all_tool_schemas())} tools")
     if os.environ.get("AIVE_CORE_AUTOBOOT","").strip().lower() in {"1","true","yes"}:threading.Thread(target=CORE.bootstrap,name="aive-core-bootstrap",daemon=True).start()
     ThreadingHTTPServer((host,port),StackHandler).serve_forever()
