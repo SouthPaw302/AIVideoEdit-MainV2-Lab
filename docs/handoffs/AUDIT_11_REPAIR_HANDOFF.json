@@ -1,0 +1,109 @@
+{
+  "schema": "aivideoedit.audit-repair-handoff.v1",
+  "status": "READY_NOT_STARTED",
+  "repo": "SouthPaw302/AIVideoEdit-MainV2-Lab",
+  "audit_issue": 11,
+  "authority_main_sha_at_creation": "c2d20d888316e6fdcbcfe23bed508867c711149f",
+  "plan_path": "docs/handoffs/AUDIT_11_REPAIR_HANDOFF.md",
+  "director_pr": 10,
+  "director_pr_status": "OPEN_NOT_MERGED",
+  "transport": {
+    "type": "github_issue_and_immutable_branch_commit",
+    "issue_url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/issues/11",
+    "remote_bridge_status": "NOT_CONNECTED_NO_TASK_INBOX"
+  },
+  "protections": [
+    "boot_current_main",
+    "new_isolated_branch_per_packet",
+    "PR_and_required_checks",
+    "no_branch_protection_bypass",
+    "no_mutation_of_song_media_or_locked_master",
+    "no_unrelated_refactor",
+    "no_forged_human_visual_acceptance"
+  ],
+  "phase_order": [
+    {
+      "id": "01",
+      "name": "Secure workstation",
+      "issues": [
+        "SEC-01",
+        "SEC-02"
+      ],
+      "first": true,
+      "finish_when": "Auth and static traversal negative/positive integration tests PASS"
+    },
+    {
+      "id": "02",
+      "name": "Restore governance",
+      "issues": [
+        "GOV-01"
+      ],
+      "finish_when": "Ruleset, checks and environment approvals evidenced; Director PR reviewed legitimately"
+    },
+    {
+      "id": "03",
+      "name": "Repair source-to-release lineage",
+      "issues": [
+        "REL-01",
+        "REL-02",
+        "REL-03",
+        "REN-03"
+      ],
+      "finish_when": "Pinned assets and immutable SHA fanout/fanin/release preflight tests PASS"
+    },
+    {
+      "id": "04",
+      "name": "Make render pipeline generic",
+      "issues": [
+        "REN-01",
+        "REN-04",
+        "REN-05",
+        "OPS-01",
+        "OPS-02",
+        "OPS-03"
+      ],
+      "finish_when": "Arbitrary-shot shard/gather, concurrency, non-destructive rebuild tests PASS"
+    },
+    {
+      "id": "05",
+      "name": "Prove music, FX and continuity",
+      "issues": [
+        "FX-01",
+        "FX-02",
+        "FX-03",
+        "REN-02",
+        "QC-01"
+      ],
+      "finish_when": "Golden test proves audio-derived FX, motion, source identity, continuity; no auto artistic approval"
+    },
+    {
+      "id": "06",
+      "name": "Close creative delivery gaps",
+      "issues": [
+        "DEL-01",
+        "DEL-02",
+        "OPS-04",
+        "OPS-05",
+        "OPS-06"
+      ],
+      "finish_when": "Independent current-version 1080p/4K lineage and human release boundaries documented/tested"
+    }
+  ],
+  "reporting": {
+    "channel": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/issues/11",
+    "fields": [
+      "packet",
+      "status",
+      "branch",
+      "base_sha",
+      "head_sha",
+      "pr_url",
+      "reproduction",
+      "checks",
+      "risks",
+      "next_action"
+    ]
+  },
+  "original_user_authorization": "Create concise repair plan, publish in agent handoff bridge, provide immutable handoff hash.",
+  "code_changes_authorized_in_handoff_commit": false
+}
