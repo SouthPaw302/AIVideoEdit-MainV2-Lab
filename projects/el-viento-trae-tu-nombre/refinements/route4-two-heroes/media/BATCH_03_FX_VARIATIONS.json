@@ -1,0 +1,73 @@
+{
+  "schema": "aivideoedit.media-batch.v1",
+  "batch_id": "BATCH-03-FX-VARIATIONS",
+  "status": "drive_verified",
+  "role": "fx_alternative_stills",
+  "drive_folder": {
+    "id": "1y5BfKV0eYMUFh_z7v7aX4vlB1Eh4Rc3L",
+    "url": "https://drive.google.com/drive/folders/1y5BfKV0eYMUFh_z7v7aX4vlB1Eh4Rc3L"
+  },
+  "assets": [
+    {
+      "index": 1,
+      "name": "01_memory_wind_fortress.png",
+      "drive_id": "1AkLMaAhOaPZw6vbDg1fV7pVFFJpmxW8H",
+      "drive_url": "https://drive.google.com/file/d/1AkLMaAhOaPZw6vbDg1fV7pVFFJpmxW8H/view"
+    },
+    {
+      "index": 2,
+      "name": "02_double_exposure_coast.png",
+      "drive_id": "1NM2euLbnz_pgtGTYCYLPjjQ2XHsmc7KZ",
+      "drive_url": "https://drive.google.com/file/d/1NM2euLbnz_pgtGTYCYLPjjQ2XHsmc7KZ/view"
+    },
+    {
+      "index": 3,
+      "name": "03_memory_layers_fort.png",
+      "drive_id": "1ZK5Xk05FjQsHtpsEUiC1gqvBWZBzKOzA",
+      "drive_url": "https://drive.google.com/file/d/1ZK5Xk05FjQsHtpsEUiC1gqvBWZBzKOzA/view"
+    },
+    {
+      "index": 4,
+      "name": "04_lantern_memory_coast.png",
+      "drive_id": "1cfhygnmTti-X4q9tk-euxZdytle0kP3v",
+      "drive_url": "https://drive.google.com/file/d/1cfhygnmTti-X4q9tk-euxZdytle0kP3v/view"
+    },
+    {
+      "index": 5,
+      "name": "05_ghost_ship_memory.png",
+      "drive_id": "1FMjPuAzPfn6cfA99oh5w4PGBCQhZ7x6m",
+      "drive_url": "https://drive.google.com/file/d/1FMjPuAzPfn6cfA99oh5w4PGBCQhZ7x6m/view"
+    },
+    {
+      "index": 6,
+      "name": "06_map_room_memory.png",
+      "drive_id": "1UOSc0XLYnTBkl1EKko52zPnC4BXpXwNB",
+      "drive_url": "https://drive.google.com/file/d/1UOSc0XLYnTBkl1EKko52zPnC4BXpXwNB/view"
+    },
+    {
+      "index": 7,
+      "name": "07_coastal_double_exposure.png",
+      "drive_id": "1xj9Kj3g_uYrVYyk3CcVQMkPpn1Nqt-sz",
+      "drive_url": "https://drive.google.com/file/d/1xj9Kj3g_uYrVYyk3CcVQMkPpn1Nqt-sz/view"
+    },
+    {
+      "index": 8,
+      "name": "08_memory_fort_sea.png",
+      "drive_id": "1TdWT7H9P4xFbY6zViQCgCFQcVjz9DHwK",
+      "drive_url": "https://drive.google.com/file/d/1TdWT7H9P4xFbY6zViQCgCFQcVjz9DHwK/view"
+    },
+    {
+      "index": 9,
+      "name": "09_nostalgic_fort_memory.png",
+      "drive_id": "1z2F8VItvw596m47QT8Ffs8XZ8srOyrgd",
+      "drive_url": "https://drive.google.com/file/d/1z2F8VItvw596m47QT8Ffs8XZ8srOyrgd/view"
+    },
+    {
+      "index": 10,
+      "name": "10_final_memory_fort.png",
+      "drive_id": "1lL_h85ZQ9VIl4QEqP9UoeLcD2XurITkK",
+      "drive_url": "https://drive.google.com/file/d/1lL_h85ZQ9VIl4QEqP9UoeLcD2XurITkK/view"
+    }
+  ],
+  "next_batch": "BATCH-04-VILLAGE-OF-THE-LIVING-PAST"
+}

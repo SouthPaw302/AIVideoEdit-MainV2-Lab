@@ -1,0 +1,73 @@
+{
+  "schema": "aivideoedit.media-batch.v1",
+  "batch_id": "BATCH-04-VILLAGE-OF-THE-LIVING-PAST",
+  "status": "drive_verified",
+  "role": "production_stills",
+  "drive_folder": {
+    "id": "1D6u8DmcVIft_gT_RsCt-_WYr6fXgKFPO",
+    "url": "https://drive.google.com/drive/folders/1D6u8DmcVIft_gT_RsCt-_WYr6fXgKFPO"
+  },
+  "assets": [
+    {
+      "index": 1,
+      "name": "01_fortress_memory_village.png",
+      "drive_id": "1w8B6CGVyIDWtsi4-kuNr_0QNYqi8LAUX",
+      "drive_url": "https://drive.google.com/file/d/1w8B6CGVyIDWtsi4-kuNr_0QNYqi8LAUX/view"
+    },
+    {
+      "index": 2,
+      "name": "02_golden_hour_village_memory.png",
+      "drive_id": "17XNhSjHXAHl9dyHiw9JnavBkA8qSHwHu",
+      "drive_url": "https://drive.google.com/file/d/17XNhSjHXAHl9dyHiw9JnavBkA8qSHwHu/view"
+    },
+    {
+      "index": 3,
+      "name": "03_coastal_village_memory.png",
+      "drive_id": "17xxGuPSuGdYWOBjyxxqLXtSAsMKvMJPC",
+      "drive_url": "https://drive.google.com/file/d/17xxGuPSuGdYWOBjyxxqLXtSAsMKvMJPC/view"
+    },
+    {
+      "index": 4,
+      "name": "04_woman_ruins_harbor.png",
+      "drive_id": "1nKSfuZLzzixqxGUpmoVk9vW6eQCfp-z6",
+      "drive_url": "https://drive.google.com/file/d/1nKSfuZLzzixqxGUpmoVk9vW6eQCfp-z6/view"
+    },
+    {
+      "index": 5,
+      "name": "05_fortress_harbor_vision.png",
+      "drive_id": "1HgPGGdQHps3zzY1xHmf1Xacrh95YFmcl",
+      "drive_url": "https://drive.google.com/file/d/1HgPGGdQHps3zzY1xHmf1Xacrh95YFmcl/view"
+    },
+    {
+      "index": 6,
+      "name": "06_letter_memory_coast.png",
+      "drive_id": "1_gRUbTGV-3IaorQazBszZKnaVS4o9X_Q",
+      "drive_url": "https://drive.google.com/file/d/1_gRUbTGV-3IaorQazBszZKnaVS4o9X_Q/view"
+    },
+    {
+      "index": 7,
+      "name": "07_twilight_fortress_memory.png",
+      "drive_id": "162NH_F3zPQtEqPGWnvW3fKC6n-s9E0Dm",
+      "drive_url": "https://drive.google.com/file/d/162NH_F3zPQtEqPGWnvW3fKC6n-s9E0Dm/view"
+    },
+    {
+      "index": 8,
+      "name": "08_wind_harbor_memory.png",
+      "drive_id": "1-0RwmOe62gdtzqrUR-CoJy08j_2roft5",
+      "drive_url": "https://drive.google.com/file/d/1-0RwmOe62gdtzqrUR-CoJy08j_2roft5/view"
+    },
+    {
+      "index": 9,
+      "name": "09_ruined_chapel_memory.png",
+      "drive_id": "116nvRoSor4CLYptzgLqIjE1MmSU4jcmj",
+      "drive_url": "https://drive.google.com/file/d/116nvRoSor4CLYptzgLqIjE1MmSU4jcmj/view"
+    },
+    {
+      "index": 10,
+      "name": "10_village_memory_overall.png",
+      "drive_id": "1SCH9Okgy3epKx75ln39HnfQBFhIYk7GE",
+      "drive_url": "https://drive.google.com/file/d/1SCH9Okgy3epKx75ln39HnfQBFhIYk7GE/view"
+    }
+  ],
+  "next_batch": "BATCH-04-FX-VARIATIONS"
+}

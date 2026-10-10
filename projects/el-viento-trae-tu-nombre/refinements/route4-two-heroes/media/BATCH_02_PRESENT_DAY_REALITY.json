@@ -1,0 +1,71 @@
+{
+  "schema": "aivideoedit.media-batch.v1",
+  "batch_id": "BATCH-02-PRESENT-DAY-REALITY",
+  "status": "drive_verified",
+  "drive_folder": {
+    "id": "1AoHhUVXDIayvJpj-Zc6T7nnC3df6F3xl",
+    "url": "https://drive.google.com/drive/folders/1AoHhUVXDIayvJpj-Zc6T7nnC3df6F3xl"
+  },
+  "assets": [
+    {
+      "index": 1,
+      "name": "01_male_fort_sunset.png",
+      "drive_id": "1b8dYO8B6MfUC_gnNNUQgNOeSob4UB1yq",
+      "drive_url": "https://drive.google.com/file/d/1b8dYO8B6MfUC_gnNNUQgNOeSob4UB1yq/view"
+    },
+    {
+      "index": 2,
+      "name": "02_female_fort_rain.png",
+      "drive_id": "1zXD0_Mukj05odjmPrjH0jCPc47qorJNI",
+      "drive_url": "https://drive.google.com/file/d/1zXD0_Mukj05odjmPrjH0jCPc47qorJNI/view"
+    },
+    {
+      "index": 3,
+      "name": "03_duo_harbor_dusk.png",
+      "drive_id": "10O6N_1gN3i-vczkMLb2zcF3SEcMlJ6Js",
+      "drive_url": "https://drive.google.com/file/d/10O6N_1gN3i-vczkMLb2zcF3SEcMlJ6Js/view"
+    },
+    {
+      "index": 4,
+      "name": "04_male_battlement_dusk.png",
+      "drive_id": "1-G1gpzBgYJYF04aZDtx0zGg27RS3-HWW",
+      "drive_url": "https://drive.google.com/file/d/1-G1gpzBgYJYF04aZDtx0zGg27RS3-HWW/view"
+    },
+    {
+      "index": 5,
+      "name": "05_duo_fortress_harbor.png",
+      "drive_id": "1K6nLH8R8CbLZc_arSuQritKhiwBc2RAm",
+      "drive_url": "https://drive.google.com/file/d/1K6nLH8R8CbLZc_arSuQritKhiwBc2RAm/view"
+    },
+    {
+      "index": 6,
+      "name": "06_female_lantern_street.png",
+      "drive_id": "101TXxT8D3oBHaHc2WL1DHIBPIrC_euOr",
+      "drive_url": "https://drive.google.com/file/d/101TXxT8D3oBHaHc2WL1DHIBPIrC_euOr/view"
+    },
+    {
+      "index": 7,
+      "name": "07_male_map_battlement.png",
+      "drive_id": "1404d9s0_R-I51ZVWi2qprIFpeksZHemu",
+      "drive_url": "https://drive.google.com/file/d/1404d9s0_R-I51ZVWi2qprIFpeksZHemu/view"
+    },
+    {
+      "index": 8,
+      "name": "08_female_harbor_parapet.png",
+      "drive_id": "1gzRi1pUYM7bdUqBqF8Pt7jzG4m67sIQ5",
+      "drive_url": "https://drive.google.com/file/d/1gzRi1pUYM7bdUqBqF8Pt7jzG4m67sIQ5/view"
+    },
+    {
+      "index": 9,
+      "name": "09_female_fortress_lantern.png",
+      "drive_id": "1SVf6daqP71mJ7M6gvhrfVOuN2Jj--xdZ",
+      "drive_url": "https://drive.google.com/file/d/1SVf6daqP71mJ7M6gvhrfVOuN2Jj--xdZ/view"
+    },
+    {
+      "index": 10,
+      "name": "10_male_fort_map.png",
+      "drive_id": "1G097v6PvzyHpHyExpBGkDCfe1Bzplila",
+      "drive_url": "https://drive.google.com/file/d/1G097v6PvzyHpHyExpBGkDCfe1Bzplila/view"
+    }
+  ]
+}

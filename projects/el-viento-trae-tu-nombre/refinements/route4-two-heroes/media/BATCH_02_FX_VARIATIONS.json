@@ -1,0 +1,71 @@
+{
+  "schema": "aivideoedit.media-batch.v1",
+  "batch_id": "BATCH-02-FX-VARIATIONS",
+  "status": "drive_verified",
+  "drive_folder": {
+    "id": "1H09hrRbdm-CSujdaVoUX5Ru_gmYBqDlM",
+    "url": "https://drive.google.com/drive/folders/1H09hrRbdm-CSujdaVoUX5Ru_gmYBqDlM"
+  },
+  "assets": [
+    {
+      "index": 1,
+      "name": "01_stormbound_fortress_at_sunset.png",
+      "drive_id": "1pJ9fISSEUL60NW1zDrEl-SbUXb8fiDqN",
+      "drive_url": "https://drive.google.com/file/d/1pJ9fISSEUL60NW1zDrEl-SbUXb8fiDqN/view"
+    },
+    {
+      "index": 2,
+      "name": "02_stormlit_harbor_town_at_dusk.png",
+      "drive_id": "1O3zDRSCvBPaNGm0I1ZrvBMdzq2fH1mUE",
+      "drive_url": "https://drive.google.com/file/d/1O3zDRSCvBPaNGm0I1ZrvBMdzq2fH1mUE/view"
+    },
+    {
+      "index": 3,
+      "name": "03_stormy_harbor_promenade_at_dusk.png",
+      "drive_id": "19D1z_Aa2eycXoSURo05bcuagcOeqgNce",
+      "drive_url": "https://drive.google.com/file/d/19D1z_Aa2eycXoSURo05bcuagcOeqgNce/view"
+    },
+    {
+      "index": 4,
+      "name": "04_lone_watcher_over_the_golden_harbor.png",
+      "drive_id": "1HoXsi0NuGMwUv9BXrv-IXt-NN_f2DjM4",
+      "drive_url": "https://drive.google.com/file/d/1HoXsi0NuGMwUv9BXrv-IXt-NN_f2DjM4/view"
+    },
+    {
+      "index": 5,
+      "name": "05_stormy_sunset_over_the_harbor.png",
+      "drive_id": "1PtJ-geaBuwETUjQJJZhSckZ_CLlbRg8g",
+      "drive_url": "https://drive.google.com/file/d/1PtJ-geaBuwETUjQJJZhSckZ_CLlbRg8g/view"
+    },
+    {
+      "index": 6,
+      "name": "06_rainy_romance_by_the_sea.png",
+      "drive_id": "1B4o5OYYZHCJphxpAEQ3PyHPMQD42XiH_",
+      "drive_url": "https://drive.google.com/file/d/1B4o5OYYZHCJphxpAEQ3PyHPMQD42XiH_/view"
+    },
+    {
+      "index": 7,
+      "name": "07_windblown_shawl_at_sunset_fortress.png",
+      "drive_id": "1hwJ-hpr-pNwqbybhbHlem2Dk5ldMBECr",
+      "drive_url": "https://drive.google.com/file/d/1hwJ-hpr-pNwqbybhbHlem2Dk5ldMBECr/view"
+    },
+    {
+      "index": 8,
+      "name": "08_stormwatch_over_the_golden_harbor.png",
+      "drive_id": "1EAms-Puu-8Nt3x-X2VsWLwGkkCqnsYXc",
+      "drive_url": "https://drive.google.com/file/d/1EAms-Puu-8Nt3x-X2VsWLwGkkCqnsYXc/view"
+    },
+    {
+      "index": 9,
+      "name": "09_stormy_sunset_fortress_harbor.png",
+      "drive_id": "1zXlpUBts323hqg1e6QRUsYKsn3RnCen1",
+      "drive_url": "https://drive.google.com/file/d/1zXlpUBts323hqg1e6QRUsYKsn3RnCen1/view"
+    },
+    {
+      "index": 10,
+      "name": "10_sunset_over_the_misty_harbor.png",
+      "drive_id": "1rF4VRZUPVcQD12_2aKFfF6ZWs8nDGOSq",
+      "drive_url": "https://drive.google.com/file/d/1rF4VRZUPVcQD12_2aKFfF6ZWs8nDGOSq/view"
+    }
+  ]
+}

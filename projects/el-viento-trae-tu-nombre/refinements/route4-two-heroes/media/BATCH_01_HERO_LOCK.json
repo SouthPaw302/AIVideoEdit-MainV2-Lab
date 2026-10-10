@@ -1,0 +1,71 @@
+{
+  "schema": "aivideoedit.media-batch.v1",
+  "batch_id": "BATCH-01-HERO-LOCK",
+  "status": "drive_verified",
+  "drive_folder": {
+    "id": "1oV9dp3JRlHxz2vAUnmQUX1JyNSAptn0_",
+    "url": "https://drive.google.com/drive/folders/1oV9dp3JRlHxz2vAUnmQUX1JyNSAptn0_"
+  },
+  "assets": [
+    {
+      "index": 1,
+      "name": "01_fortress_hero_at_sunset.png",
+      "drive_id": "1Aqf6mBgoRZsMtQP26FUPHhj_1TNa4e5p",
+      "drive_url": "https://drive.google.com/file/d/1Aqf6mBgoRZsMtQP26FUPHhj_1TNa4e5p/view"
+    },
+    {
+      "index": 2,
+      "name": "02_rainlit_harbor_romance.png",
+      "drive_id": "19p96CGqOOiGgbqz3lliECPJ0YmV0UQ5J",
+      "drive_url": "https://drive.google.com/file/d/19p96CGqOOiGgbqz3lliECPJ0YmV0UQ5J/view"
+    },
+    {
+      "index": 3,
+      "name": "03_memory_gate_of_gold_and_rain.png",
+      "drive_id": "1PLiDqo_tc-Bn9Tru_JYFnKyFoV5qPwHo",
+      "drive_url": "https://drive.google.com/file/d/1PLiDqo_tc-Bn9Tru_JYFnKyFoV5qPwHo/view"
+    },
+    {
+      "index": 4,
+      "name": "04_threads_of_memory_at_sunset.png",
+      "drive_id": "1Fh5w_6P_KJbN7_dPn3x_NGIe8c24pxGU",
+      "drive_url": "https://drive.google.com/file/d/1Fh5w_6P_KJbN7_dPn3x_NGIe8c24pxGU/view"
+    },
+    {
+      "index": 5,
+      "name": "05_glowing_thread_across_harbor.png",
+      "drive_id": "1jYS5eHMjbsQjVbc6ykutAkmFXNRUSNVl",
+      "drive_url": "https://drive.google.com/file/d/1jYS5eHMjbsQjVbc6ykutAkmFXNRUSNVl/view"
+    },
+    {
+      "index": 6,
+      "name": "06_threads_of_time_hearts_of_gold.png",
+      "drive_id": "175AACAFqX7VL78m1eJ_q2qQ3-vYlwwOP",
+      "drive_url": "https://drive.google.com/file/d/175AACAFqX7VL78m1eJ_q2qQ3-vYlwwOP/view"
+    },
+    {
+      "index": 7,
+      "name": "07_threads_across_twilight_coast.png",
+      "drive_id": "1xU7_U4T452gYT-xnz3LBO7XEVyFmbgjY",
+      "drive_url": "https://drive.google.com/file/d/1xU7_U4T452gYT-xnz3LBO7XEVyFmbgjY/view"
+    },
+    {
+      "index": 8,
+      "name": "08_threads_through_time_by_sea.png",
+      "drive_id": "1LKaGLubrSFo9G157eoMkYTZ-rHVmjbIp",
+      "drive_url": "https://drive.google.com/file/d/1LKaGLubrSFo9G157eoMkYTZ-rHVmjbIp/view"
+    },
+    {
+      "index": 9,
+      "name": "09_tapestry_world.png",
+      "drive_id": "1dpo5Ab1SuWYhQCnwcn4xk2LfesH_r1Q1",
+      "drive_url": "https://drive.google.com/file/d/1dpo5Ab1SuWYhQCnwcn4xk2LfesH_r1Q1/view"
+    },
+    {
+      "index": 10,
+      "name": "10_threads_of_destiny_at_sunset.png",
+      "drive_id": "12ZXXDDFE78cn_vzYkeVDBpF6ZA9uSxi9",
+      "drive_url": "https://drive.google.com/file/d/12ZXXDDFE78cn_vzYkeVDBpF6ZA9uSxi9/view"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "schema": "aivideoedit.media-batch.v1",
+  "batch_id": "BATCH-05-FX-VARIATIONS",
+  "status": "drive_verified",
+  "drive_folder": {
+    "id": "1yww_oGUl8ImNlmeXN_mYHcm2ckEC48cM",
+    "url": "https://drive.google.com/drive/folders/1yww_oGUl8ImNlmeXN_mYHcm2ckEC48cM"
+  },
+  "assets": [
+    {
+      "index": 1,
+      "name": "01_threads_of_fate_sunset.png",
+      "drive_id": "14SAP7wodUypTNlv2QywbJxhbXjbV6R5g",
+      "drive_url": "https://drive.google.com/file/d/14SAP7wodUypTNlv2QywbJxhbXjbV6R5g/view"
+    },
+    {
+      "index": 2,
+      "name": "02_red_gold_thread_ancestors.png",
+      "drive_id": "18F4ZEB8K-lAGqz6xt7Sff1aYb9F1w5kn",
+      "drive_url": "https://drive.google.com/file/d/18F4ZEB8K-lAGqz6xt7Sff1aYb9F1w5kn/view"
+    },
+    {
+      "index": 3,
+      "name": "03_threads_of_fate_sunset_b.png",
+      "drive_id": "1NnyIqtm1cYkPX9Ru3_HwWCHDKIEkXTaI",
+      "drive_url": "https://drive.google.com/file/d/1NnyIqtm1cYkPX9Ru3_HwWCHDKIEkXTaI/view"
+    },
+    {
+      "index": 4,
+      "name": "04_golden_thread_sunset.png",
+      "drive_id": "14hQFmknwOBRApWs59XTZ0KJI3cw9nuGJ",
+      "drive_url": "https://drive.google.com/file/d/14hQFmknwOBRApWs59XTZ0KJI3cw9nuGJ/view"
+    },
+    {
+      "index": 5,
+      "name": "05_romantic_fate_cross.png",
+      "drive_id": "1e7fomH1wJiOONgpD_qfYKPtnpRB3089G",
+      "drive_url": "https://drive.google.com/file/d/1e7fomH1wJiOONgpD_qfYKPtnpRB3089G/view"
+    },
+    {
+      "index": 6,
+      "name": "06_threads_of_legacy.png",
+      "drive_id": "1fpkAwYjJSuGQ7ow3ht-XPC-we0Mb_aFm",
+      "drive_url": "https://drive.google.com/file/d/1fpkAwYjJSuGQ7ow3ht-XPC-we0Mb_aFm/view"
+    },
+    {
+      "index": 7,
+      "name": "07_destiny_thread_harbor.png",
+      "drive_id": "1Z9zdD4916lgv_2MrHCJKTcZyk02crMNo",
+      "drive_url": "https://drive.google.com/file/d/1Z9zdD4916lgv_2MrHCJKTcZyk02crMNo/view"
+    },
+    {
+      "index": 8,
+      "name": "08_fated_threads_twilight.png",
+      "drive_id": "1fVBF-VmaRCnWMXPiZStSPnhjYyc2sSNc",
+      "drive_url": "https://drive.google.com/file/d/1fVBF-VmaRCnWMXPiZStSPnhjYyc2sSNc/view"
+    },
+    {
+      "index": 9,
+      "name": "09_rainbound_threads.png",
+      "drive_id": "11P2qHoXN51LaD5VMt-jr9tmYtdelYL3_",
+      "drive_url": "https://drive.google.com/file/d/11P2qHoXN51LaD5VMt-jr9tmYtdelYL3_/view"
+    },
+    {
+      "index": 10,
+      "name": "10_sunset_harbor_golden_threads.png",
+      "drive_id": "1iZPq-wObGUSskuzJCKozH6WoEqrYNG93",
+      "drive_url": "https://drive.google.com/file/d/1iZPq-wObGUSskuzJCKozH6WoEqrYNG93/view"
+    }
+  ]
+}

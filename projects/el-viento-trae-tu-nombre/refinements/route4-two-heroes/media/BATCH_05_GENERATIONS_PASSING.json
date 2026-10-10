@@ -1,0 +1,73 @@
+{
+  "schema": "aivideoedit.media-batch.v1",
+  "batch_id": "BATCH-05-GENERATIONS-PASSING",
+  "status": "drive_verified_canon_replacement",
+  "supersedes_commit": "ef80f7a75f651b4fd36366c8a51a6571f8ff3939",
+  "note": "Earlier drifted tribal/coastal batch rejected by current user and deleted from Drive. This manifest is the canonical script-faithful replacement.",
+  "drive_folder": {
+    "id": "1lATLpUCdrVGo0X5fAPE4RvJjp1So7T7j",
+    "url": "https://drive.google.com/drive/folders/1lATLpUCdrVGo0X5fAPE4RvJjp1So7T7j"
+  },
+  "assets": [
+    {
+      "index": 1,
+      "name": "01_threads_of_legacy_at_sunset.png",
+      "drive_id": "1mLFNtK8DDJ9603nEuMK-FWV2YoFp0Tle",
+      "drive_url": "https://drive.google.com/file/d/1mLFNtK8DDJ9603nEuMK-FWV2YoFp0Tle/view"
+    },
+    {
+      "index": 2,
+      "name": "02_red_gold_thread_of_destiny.png",
+      "drive_id": "1ql2LbtOOSaSii9Cxsl1fOPo-f-x_pdr8",
+      "drive_url": "https://drive.google.com/file/d/1ql2LbtOOSaSii9Cxsl1fOPo-f-x_pdr8/view"
+    },
+    {
+      "index": 3,
+      "name": "03_threads_of_memory_at_sunset.png",
+      "drive_id": "1MXPcuJgKV_h1gG-wnCwMSgVNdgvL6dvX",
+      "drive_url": "https://drive.google.com/file/d/1MXPcuJgKV_h1gG-wnCwMSgVNdgvL6dvX/view"
+    },
+    {
+      "index": 4,
+      "name": "04_threads_of_destiny_at_sunset.png",
+      "drive_id": "1u9dvB3DOEBzY5rFukgo9ZgGJzePgi1ls",
+      "drive_url": "https://drive.google.com/file/d/1u9dvB3DOEBzY5rFukgo9ZgGJzePgi1ls/view"
+    },
+    {
+      "index": 5,
+      "name": "05_sunset_chapel_ancestral_love.png",
+      "drive_id": "11zIvRDyxR7615UW300r2ABAVE5dcUZmh",
+      "drive_url": "https://drive.google.com/file/d/11zIvRDyxR7615UW300r2ABAVE5dcUZmh/view"
+    },
+    {
+      "index": 6,
+      "name": "06_glowing_thread_of_generations.png",
+      "drive_id": "176YcLIn2d37zY0YM8vrY66Js19GCGzFC",
+      "drive_url": "https://drive.google.com/file/d/176YcLIn2d37zY0YM8vrY66Js19GCGzFC/view"
+    },
+    {
+      "index": 7,
+      "name": "07_golden_thread_through_generations.png",
+      "drive_id": "1pd0W2aHBiipOAqIxdyphu2q84v5QEDnD",
+      "drive_url": "https://drive.google.com/file/d/1pd0W2aHBiipOAqIxdyphu2q84v5QEDnD/view"
+    },
+    {
+      "index": 8,
+      "name": "08_threads_of_fate_at_sunset.png",
+      "drive_id": "1Q1kUIdHToqKyIssjn-HdHmqwLz86I5D0",
+      "drive_url": "https://drive.google.com/file/d/1Q1kUIdHToqKyIssjn-HdHmqwLz86I5D0/view"
+    },
+    {
+      "index": 9,
+      "name": "09_cinematic_sunset_thread.png",
+      "drive_id": "1eUIhZ3E53ciJp_VGOi8iGKZpC1Jj0D48",
+      "drive_url": "https://drive.google.com/file/d/1eUIhZ3E53ciJp_VGOi8iGKZpC1Jj0D48/view"
+    },
+    {
+      "index": 10,
+      "name": "10_harbor_of_golden_threads.png",
+      "drive_id": "1MxPrqlJazU-88ItyJbEfzsJ5xTFLFVf-",
+      "drive_url": "https://drive.google.com/file/d/1MxPrqlJazU-88ItyJbEfzsJ5xTFLFVf-/view"
+    }
+  ]
+}

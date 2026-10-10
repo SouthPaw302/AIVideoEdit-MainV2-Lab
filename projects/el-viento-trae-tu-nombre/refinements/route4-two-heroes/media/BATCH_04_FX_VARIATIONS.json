@@ -1,0 +1,73 @@
+{
+  "schema": "aivideoedit.media-batch.v1",
+  "batch_id": "BATCH-04-FX-VARIATIONS",
+  "status": "drive_verified",
+  "role": "fx_alternative_stills",
+  "drive_folder": {
+    "id": "1ZGoa-Jv4NKszY3MQNtAl414ywqifSU49",
+    "url": "https://drive.google.com/drive/folders/1ZGoa-Jv4NKszY3MQNtAl414ywqifSU49"
+  },
+  "assets": [
+    {
+      "index": 1,
+      "name": "01_dreamy_fortress.png",
+      "drive_id": "1RaKBnG1bCoPDk4spZGkYBCUIu7ueAm9v",
+      "drive_url": "https://drive.google.com/file/d/1RaKBnG1bCoPDk4spZGkYBCUIu7ueAm9v/view"
+    },
+    {
+      "index": 2,
+      "name": "02_twilight_rampart.png",
+      "drive_id": "1dWyLH73mGaytoZGW0nhhgnchpNEw4NJO",
+      "drive_url": "https://drive.google.com/file/d/1dWyLH73mGaytoZGW0nhhgnchpNEw4NJO/view"
+    },
+    {
+      "index": 3,
+      "name": "03_memory_study.png",
+      "drive_id": "12J-FCMHc0KcI8qpXHhpioh97L3QpUudt",
+      "drive_url": "https://drive.google.com/file/d/12J-FCMHc0KcI8qpXHhpioh97L3QpUudt/view"
+    },
+    {
+      "index": 4,
+      "name": "04_noir_balcony.png",
+      "drive_id": "1TD-lgOiAkWNwq2aapMvF9Q0tEwC2z2iu",
+      "drive_url": "https://drive.google.com/file/d/1TD-lgOiAkWNwq2aapMvF9Q0tEwC2z2iu/view"
+    },
+    {
+      "index": 5,
+      "name": "05_moonlit_ruins.png",
+      "drive_id": "1F9_VChkEuea8DmkQpUBQ6Ul1Zyu0GnJO",
+      "drive_url": "https://drive.google.com/file/d/1F9_VChkEuea8DmkQpUBQ6Ul1Zyu0GnJO/view"
+    },
+    {
+      "index": 6,
+      "name": "06_dreamy_fortress_overlay.png",
+      "drive_id": "1QcCyFlxJPUVN4e7nKg95xZLQxsBwZb-E",
+      "drive_url": "https://drive.google.com/file/d/1QcCyFlxJPUVN4e7nKg95xZLQxsBwZb-E/view"
+    },
+    {
+      "index": 7,
+      "name": "07_golden_fortress.png",
+      "drive_id": "1gQAg5zmcD3ialmkN7rnuxosfQ4ss_Zr2",
+      "drive_url": "https://drive.google.com/file/d/1gQAg5zmcD3ialmkN7rnuxosfQ4ss_Zr2/view"
+    },
+    {
+      "index": 8,
+      "name": "08_surreal_ruins.png",
+      "drive_id": "14PDTG6BOuDUWgMX5rNlrM8VJ0xOp90h1",
+      "drive_url": "https://drive.google.com/file/d/14PDTG6BOuDUWgMX5rNlrM8VJ0xOp90h1/view"
+    },
+    {
+      "index": 9,
+      "name": "09_teal_gold_fortress.png",
+      "drive_id": "1fbaVoYwnYA31b7fV_bKZZzWIT36lQCx5",
+      "drive_url": "https://drive.google.com/file/d/1fbaVoYwnYA31b7fV_bKZZzWIT36lQCx5/view"
+    },
+    {
+      "index": 10,
+      "name": "10_moonlit_memory.png",
+      "drive_id": "1110M3O1tv-lOHekMTy8jxtF9fEuz_Tpk",
+      "drive_url": "https://drive.google.com/file/d/1110M3O1tv-lOHekMTy8jxtF9fEuz_Tpk/view"
+    }
+  ],
+  "next_batch": "BATCH-05-GENERATIONS-PASSING"
+}

@@ -1,0 +1,71 @@
+{
+  "schema": "aivideoedit.media-batch.v1",
+  "batch_id": "BATCH-03-MEMORY-AWAKENING",
+  "status": "stills_drive_verified_fx_pending",
+  "drive_folder": {
+    "id": "1Gal-84z2Q6tBHYS5INLRtREpBkf9UXml",
+    "url": "https://drive.google.com/drive/folders/1Gal-84z2Q6tBHYS5INLRtREpBkf9UXml"
+  },
+  "assets": [
+    {
+      "index": 1,
+      "name": "01_stone_map_awakening.png",
+      "drive_id": "10NSC7DFf3eDgS3VFFTr7O7s_3veM6WWk",
+      "drive_url": "https://drive.google.com/file/d/10NSC7DFf3eDgS3VFFTr7O7s_3veM6WWk/view"
+    },
+    {
+      "index": 2,
+      "name": "02_golden_map_lost_harbor.png",
+      "drive_id": "17CTX-KCakxVtwJV4yZx67_w1qWj4OwWS",
+      "drive_url": "https://drive.google.com/file/d/17CTX-KCakxVtwJV4yZx67_w1qWj4OwWS/view"
+    },
+    {
+      "index": 3,
+      "name": "03_enchanted_map_fortress.png",
+      "drive_id": "1DArOnM9hxXQOPGH6mZI1QPX-9TKp1RoE",
+      "drive_url": "https://drive.google.com/file/d/1DArOnM9hxXQOPGH6mZI1QPX-9TKp1RoE/view"
+    },
+    {
+      "index": 4,
+      "name": "04_touching_harbor_map.png",
+      "drive_id": "1yBZGyvBuwqDH3uixV73GpQP8mMIYQrxL",
+      "drive_url": "https://drive.google.com/file/d/1yBZGyvBuwqDH3uixV73GpQP8mMIYQrxL/view"
+    },
+    {
+      "index": 5,
+      "name": "05_enchanted_lost_coast.png",
+      "drive_id": "1388XFUcd--cVuT9zb0r5WcY9WG5MHd45",
+      "drive_url": "https://drive.google.com/file/d/1388XFUcd--cVuT9zb0r5WcY9WG5MHd45/view"
+    },
+    {
+      "index": 6,
+      "name": "06_portal_golden_coastal_city.png",
+      "drive_id": "1m0RFRlm2I2Pl8rOFA7bUrUoNG5Jlp5r7",
+      "drive_url": "https://drive.google.com/file/d/1m0RFRlm2I2Pl8rOFA7bUrUoNG5Jlp5r7/view"
+    },
+    {
+      "index": 7,
+      "name": "07_threads_embroidered_map.png",
+      "drive_id": "17hcVKez9Nx1ThZRKw1Vai4CwAq0x-ata",
+      "drive_url": "https://drive.google.com/file/d/17hcVKez9Nx1ThZRKw1Vai4CwAq0x-ata/view"
+    },
+    {
+      "index": 8,
+      "name": "08_lovers_golden_thread.png",
+      "drive_id": "19jPZc-ATEnKThpjU58wYgx1pBdfTHzzm",
+      "drive_url": "https://drive.google.com/file/d/19jPZc-ATEnKThpjU58wYgx1pBdfTHzzm/view"
+    },
+    {
+      "index": 9,
+      "name": "09_golden_threads_harbor.png",
+      "drive_id": "1701QMELx4SQS4R_b_FhtNjRls3Kb8iQK",
+      "drive_url": "https://drive.google.com/file/d/1701QMELx4SQS4R_b_FhtNjRls3Kb8iQK/view"
+    },
+    {
+      "index": 10,
+      "name": "10_moonlit_fate_sea.png",
+      "drive_id": "1bf1BzgfForiMRYG-JPFdfgkpmuKu5q6N",
+      "drive_url": "https://drive.google.com/file/d/1bf1BzgfForiMRYG-JPFdfgkpmuKu5q6N/view"
+    }
+  ]
+}
