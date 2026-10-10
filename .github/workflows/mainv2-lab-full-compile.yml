@@ -75,7 +75,7 @@ jobs:
           python general/reusable/fx_v2/precompile_gate.py --engine-test --manifest general/reusable/fx_v2/examples/approved-runtime-core.fx.json --lock-out /tmp/mainv2-lab-fx-lock.json
           python general/reusable/fx_v2/precompile_gate.py --engine-test --manifest general/reusable/fx_v2/examples/approved-runtime-core.fx.json --verify-lock /tmp/mainv2-lab-fx-lock.json
       - name: Verify production-grade real render manifest rules
-        run: python -m pytest -q tests/test_real_film_render.py tests/test_lab_main_authority.py tests/test_release_gate.py
+        run: python -m pytest -q tests/test_real_film_render.py tests/test_lab_main_authority.py tests/test_release_gate.py tests/test_parallel_lineage.py
 
       - name: Upload bounded evidence
         if: always()

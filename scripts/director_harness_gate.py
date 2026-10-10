@@ -63,6 +63,8 @@ def main() -> int:
     ap.add_argument("--engine-root", type=Path, required=True)
     ap.add_argument("--project", type=Path, required=True)
     ap.add_argument("--manifest", type=Path, required=True)
+    ap.add_argument("--lineage", type=Path, required=True)
+    ap.add_argument("--media-root", type=Path, required=True)
     ap.add_argument("--out", type=Path, required=True)
     args = ap.parse_args()
 
@@ -70,6 +72,8 @@ def main() -> int:
     engine = args.engine_root.resolve()
     project = args.project.resolve()
     manifest_path = args.manifest.resolve()
+    lineage_path = args.lineage.resolve()
+    media_root = args.media_root.resolve()
     out = args.out.resolve()
     out.mkdir(parents=True, exist_ok=True)
 
@@ -88,6 +92,16 @@ def main() -> int:
     if manifest.get("render_authorization") != "explicit_user_render_request":
         raise RuntimeError("render authorization is not explicit")
 
+    sys.path.insert(0, str(engine))
+    from scripts.render_lineage import receipt_identity, verify_bundle
+    staged_manifest_path = media_root / "STAGED_MANIFEST.json"
+    lineage = verify_bundle(
+        lineage_path, staged_manifest_path, media_root,
+        source_root=source, engine_root=engine, project=project,
+        original_manifest=manifest_path,
+    )
+    staged_manifest = read(staged_manifest_path, {})
+
     # Use the exact main checkout as the authority for model, JEV, FX, and the
     # live MCP bridge.  The bridge's runtime is isolated and never writes main.
     runtime = out / "harness-runtime"
@@ -98,14 +112,14 @@ def main() -> int:
         "AIVE_OFFLINE": "1",
         "AIVE_HARNESS_ENABLED": "1",
     })
-    bridge = source / "prototype" / "backend_gui" / "aivideo_mcp.py"
+    bridge = engine / "prototype" / "backend_gui" / "aivideo_mcp.py"
     proc = subprocess.Popen(
-        [sys.executable, str(bridge)], cwd=str(source / "prototype" / "backend_gui"),
+        [sys.executable, str(bridge)], cwd=str(engine / "prototype" / "backend_gui"),
         stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
         text=True, env=env, bufsize=1,
     )
     try:
-        init = call(proc, 1, "initialize", {"protocolVersion": "2025-11-25", "capabilities": {}, "clientInfo": {"name": "camion-new-director-gate", "version": "1"}})
+        init = call(proc, 1, "initialize", {"protocolVersion": "2025-11-25", "capabilities": {}, "clientInfo": {"name": "aivideoedit-director-gate", "version": "1"}})
         proc.stdin.write(json.dumps({"jsonrpc": "2.0", "method": "notifications/initialized", "params": {}}) + "\n")
         proc.stdin.flush()
         listed = call(proc, 3, "tools/list", {})
@@ -156,10 +170,11 @@ def main() -> int:
         provision = subprocess.run([sys.executable, "-m", "general.reusable.tools.model_provision", "music-beat-onnx-v1"], cwd=str(engine), env=env, capture_output=True, text=True, timeout=600)
         if provision.returncode:
             raise RuntimeError("pinned ONNX provision failed: " + (provision.stderr or provision.stdout)[-1800:])
-        sys.path.insert(0, str(engine))
         from scripts.render_real_music_film import stage
         from general.reusable.tools.music_beat_worker import analyze_music
-        audio = stage(manifest["audio"], input_root=source, cache=out / "verified_inputs")
+        audio = stage(staged_manifest["audio"], input_root=media_root, cache=out / "verified_inputs")
+        if sha(audio) != lineage["audio_sha256"]:
+            raise RuntimeError("staged audio differs from immutable run lineage")
         music_evidence = analyze_music(audio)
         if music_evidence.get("engine") != "beat_this_onnx" or music_evidence.get("model_resolution", {}).get("used_fallback"):
             raise RuntimeError("pinned Beat This ONNX evidence is missing or used fallback")
@@ -208,6 +223,7 @@ def main() -> int:
             "parallel_shards": 4,
             "human_visual_approval": False,
             "production_complete": False,
+            **receipt_identity(lineage, lineage_path),
         }
         (out / "DIRECTOR_HARNESS_RECEIPT.json").write_text(json.dumps(receipt, indent=2) + "\n", encoding="utf-8")
         print(json.dumps({"result": "PASS", "decision": jev, "route": route, "main_commit": receipt["core"]["main_commit"], "fx_lock_sha256": receipt["fx_lock_sha256"]}, indent=2))

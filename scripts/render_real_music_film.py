@@ -75,7 +75,18 @@ def stage(media, *, input_root, cache):
         return target
     tmp = target.with_suffix(target.suffix + ".partial")
     try:
-        request = urllib.request.Request(url, headers={"User-Agent": "AIVideoEdit-Lab-RealRenderer/1.0"})
+        headers = {"User-Agent": "AIVideoEdit-Lab-RealRenderer/1.0"}
+        auth_hosts = {
+            item.strip().lower() for item in os.getenv("AIVE_MEDIA_AUTH_HOSTS", "").split(",")
+            if item.strip()
+        }
+        host = (urllib.parse.urlsplit(url).hostname or "").lower()
+        if host in auth_hosts:
+            token = os.getenv("AIVE_MEDIA_TOKEN", "")
+            if not token:
+                raise RuntimeError("authenticated media host requires AIVE_MEDIA_TOKEN")
+            headers["Authorization"] = "Bearer " + token
+        request = urllib.request.Request(url, headers=headers)
         try:
             with urllib.request.urlopen(request, timeout=180) as response, tmp.open("wb") as fd:
                 while True:

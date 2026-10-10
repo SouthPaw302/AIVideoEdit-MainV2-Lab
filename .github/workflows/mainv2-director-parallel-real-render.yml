@@ -36,6 +36,9 @@ jobs:
   director-gate:
     runs-on: ubuntu-latest
     timeout-minutes: 45
+    outputs:
+      engine_sha: ${{ steps.lock-lineage.outputs.engine_sha }}
+      source_sha: ${{ steps.lock-lineage.outputs.source_sha }}
     steps:
       - name: Check out immutable MainV2 engine from main
         uses: actions/checkout@v4
@@ -43,6 +46,7 @@ jobs:
           ref: main
           path: engine
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Check out authorized production branch only
         uses: actions/checkout@v4
@@ -50,6 +54,7 @@ jobs:
           ref: ${{ env.SOURCE_REF }}
           path: source
           fetch-depth: 0
+          persist-credentials: false
 
       - uses: actions/setup-python@v5
         with:
@@ -82,15 +87,42 @@ jobs:
           print('MAIN COMMIT:', p.get('os_main_commit'))
           PY
 
+      - name: Lock engine, project, manifest, toolchain and original media bytes once
+        id: lock-lineage
+        shell: bash
+        env:
+          AIVE_MEDIA_TOKEN: ${{ secrets.AIVE_MEDIA_TOKEN }}
+          AIVE_MEDIA_AUTH_HOSTS: ${{ vars.AIVE_MEDIA_AUTH_HOSTS }}
+        run: |
+          set -euo pipefail
+          engine_sha="$(git -C engine rev-parse HEAD)"
+          source_sha="$(git -C source rev-parse HEAD)"
+          echo "engine_sha=$engine_sha" >> "$GITHUB_OUTPUT"
+          echo "source_sha=$source_sha" >> "$GITHUB_OUTPUT"
+          python engine/scripts/render_lineage.py stage \
+            --manifest "source/$MANIFEST" \
+            --input-root source \
+            --engine-root engine \
+            --project "source/$PROJECT" \
+            --out "$RUNNER_TEMP/media-bundle"
+          python engine/scripts/render_lineage.py verify \
+            --lineage "$RUNNER_TEMP/media-bundle/RUN_LINEAGE.json" \
+            --manifest "$RUNNER_TEMP/media-bundle/STAGED_MANIFEST.json" \
+            --media-root "$RUNNER_TEMP/media-bundle" \
+            --source-root source --engine-root engine --project "source/$PROJECT" \
+            --original-manifest "source/$MANIFEST"
+
       - name: Run live Director input, Harness bridge, JEV, FX resolution and pinned ONNX gate
         shell: bash
         run: |
           set -euo pipefail
-          python source/scripts/director_harness_gate.py \
+          python engine/scripts/director_harness_gate.py \
             --source-root "$PWD/source" \
             --engine-root "$PWD/engine" \
             --project "$PWD/source/$PROJECT" \
             --manifest "$PWD/source/$MANIFEST" \
+            --lineage "$RUNNER_TEMP/media-bundle/RUN_LINEAGE.json" \
+            --media-root "$RUNNER_TEMP/media-bundle" \
             --out "$RUNNER_TEMP/director-gate"
 
       - name: Retain director and canonical gate receipts
@@ -99,6 +131,13 @@ jobs:
           name: director-gate
           path: ${{ runner.temp }}/director-gate/
           retention-days: 30
+
+      - name: Retain one byte-verified media bundle for all fan-out workers
+        uses: actions/upload-artifact@v4
+        with:
+          name: media-bundle-${{ github.run_id }}
+          path: ${{ runner.temp }}/media-bundle/
+          retention-days: 1
 
   render-shard:
     needs: director-gate
@@ -125,16 +164,18 @@ jobs:
       - name: Check out immutable MainV2 engine from main
         uses: actions/checkout@v4
         with:
-          ref: main
+          ref: ${{ needs.director-gate.outputs.engine_sha }}
           path: engine
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Check out authorized production branch only
         uses: actions/checkout@v4
         with:
-          ref: ${{ env.SOURCE_REF }}
+          ref: ${{ needs.director-gate.outputs.source_sha }}
           path: source
           fetch-depth: 0
+          persist-credentials: false
 
       - uses: actions/setup-python@v5
         with:
@@ -158,13 +199,19 @@ jobs:
           name: director-gate
           path: ${{ runner.temp }}/director-gate
 
+      - name: Download the locked original-media bundle
+        uses: actions/download-artifact@v4
+        with:
+          name: media-bundle-${{ github.run_id }}
+          path: ${{ runner.temp }}/media-bundle
+
       - name: Prepare exact timeline shard
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p "$RUNNER_TEMP/shard"
-          python source/scripts/prepare_render_shard.py \
-            --manifest "source/$MANIFEST" \
+          python engine/scripts/prepare_render_shard.py \
+            --manifest "$RUNNER_TEMP/media-bundle/STAGED_MANIFEST.json" \
             --start "${{ matrix.start }}" \
             --end "${{ matrix.end }}" \
             --out "$RUNNER_TEMP/shard/manifest.json"
@@ -173,9 +220,13 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          python source/scripts/render_real_music_film_shard.py \
+          python engine/scripts/render_real_music_film_shard.py \
             --manifest "$RUNNER_TEMP/shard/manifest.json" \
-            --input-root "$PWD/source" \
+            --staged-manifest "$RUNNER_TEMP/media-bundle/STAGED_MANIFEST.json" \
+            --lineage "$RUNNER_TEMP/media-bundle/RUN_LINEAGE.json" \
+            --input-root "$RUNNER_TEMP/media-bundle" \
+            --source-root "$PWD/source" \
+            --project "$PWD/source/$PROJECT" \
             --engine-root "$PWD/engine" \
             --director-gate "$RUNNER_TEMP/director-gate/DIRECTOR_HARNESS_RECEIPT.json" \
             --out "$RUNNER_TEMP/shard/output"
@@ -196,16 +247,18 @@ jobs:
       - name: Check out immutable MainV2 engine from main
         uses: actions/checkout@v4
         with:
-          ref: main
+          ref: ${{ needs.director-gate.outputs.engine_sha }}
           path: engine
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Check out authorized production branch only
         uses: actions/checkout@v4
         with:
-          ref: ${{ env.SOURCE_REF }}
+          ref: ${{ needs.director-gate.outputs.source_sha }}
           path: source
           fetch-depth: 0
+          persist-credentials: false
 
       - uses: actions/setup-python@v5
         with:
@@ -237,13 +290,23 @@ jobs:
           path: ${{ runner.temp }}/shards
           merge-multiple: false
 
+      - name: Download the same locked original-media bundle
+        uses: actions/download-artifact@v4
+        with:
+          name: media-bundle-${{ github.run_id }}
+          path: ${{ runner.temp }}/media-bundle
+
       - name: Assemble and mux original WAV once
         shell: bash
         run: |
           set -euo pipefail
-          python source/scripts/assemble_parallel_music_film.py \
-            --manifest "source/$MANIFEST" \
-            --input-root "$PWD/source" \
+          python engine/scripts/assemble_parallel_music_film.py \
+            --manifest "$RUNNER_TEMP/media-bundle/STAGED_MANIFEST.json" \
+            --original-manifest "source/$MANIFEST" \
+            --lineage "$RUNNER_TEMP/media-bundle/RUN_LINEAGE.json" \
+            --input-root "$RUNNER_TEMP/media-bundle" \
+            --source-root "$PWD/source" \
+            --project "$PWD/source/$PROJECT" \
             --engine-root "$PWD/engine" \
             --gate-dir "$RUNNER_TEMP/director-gate" \
             --shards-dir "$RUNNER_TEMP/shards" \
@@ -261,14 +324,16 @@ jobs:
         run: |
           set -euo pipefail
           root="$RUNNER_TEMP/final"
-          gh release create "lab-parallel-real-film-${GITHUB_RUN_ID}" \
+          gh release create "lab-real-film-${GITHUB_RUN_ID}" \
             "$root/real_music_film.mp4" \
             "$root/render_receipt.json" \
             "$root/contact_sheet.jpg" \
             "$root/PRODUCTION_EXECUTION_LEDGER.json" \
             "$root/DIRECTOR_HARNESS_RECEIPT.json" \
+            "$root/FX_LOCK.json" \
+            "$root/RUN_LINEAGE.json" \
             --repo "$GITHUB_REPOSITORY" \
-            --target "$GITHUB_SHA" \
+            --target "${{ needs.director-gate.outputs.engine_sha }}" \
             --prerelease \
             --title "AIVideoEdit Lab — Director-gated parallel REAL film render" \
             --notes "Branch-only Spanish Mountain Noir candidate. Canonical main engine booted read-only; live Director/Harness/JEV/FX/ONNX gate passed; parallel shards assembled; human visual approval still required."

@@ -96,6 +96,15 @@ def preflight(manifest, receipt, review, contract, *, source_sha, engine_sha, au
             bool(HEX40.fullmatch(engine_sha or "")), "current immutable source and engine SHAs required")
     require(receipt.get("source_commit_sha") == source_sha and
             receipt.get("engine_commit_sha") == engine_sha, "stale source or runtime lineage")
+    if receipt.get("lineage_schema") is not None:
+        require(receipt.get("lineage_schema") == "aivideoedit.render-lineage.v1",
+                "unknown parallel render lineage")
+        for name in ("lineage_sha256", "manifest_sha256", "staged_manifest_sha256",
+                     "toolchain_sha256", "media_bundle_sha256"):
+            require(bool(HEX64.fullmatch(str(receipt.get(name) or ""))),
+                    "missing immutable parallel lineage: " + name)
+        require(bool(HEX40.fullmatch(str(receipt.get("project_tree_git_sha") or ""))),
+                "missing immutable project tree identity")
     require(review.get("source_commit_sha") == source_sha and
             review.get("engine_commit_sha") == engine_sha, "review not bound to current commits")
     require(receipt.get("schema") == "aivideoedit.real-render-receipt.v1", "unknown render receipt")
@@ -173,6 +182,25 @@ def preflight(manifest, receipt, review, contract, *, source_sha, engine_sha, au
             "duration_seconds": expected, "frames": total_frames}
 
 
+def validate_parallel_lineage(receipt, lineage_path):
+    """Bind a parallel final receipt to the exact fan-out lineage artifact."""
+    if receipt.get("lineage_schema") is None:
+        return None
+    require(bool(lineage_path), "parallel render lineage artifact missing")
+    require(Path(lineage_path).is_file(), "parallel render lineage artifact missing")
+    require(sha(lineage_path) == receipt.get("lineage_sha256"),
+            "parallel render lineage artifact changed")
+    lineage = load(lineage_path)
+    require(lineage.get("schema") == receipt.get("lineage_schema"),
+            "parallel render lineage schema conflict")
+    for name in ("source_commit_sha", "engine_commit_sha", "project_tree_git_sha",
+                 "manifest_sha256", "staged_manifest_sha256", "toolchain_sha256",
+                 "media_bundle_sha256", "audio_sha256", "clip_sha256"):
+        require(lineage.get(name) == receipt.get(name),
+                "parallel render lineage conflict: " + name)
+    return lineage
+
+
 def gate(args):
     contract = load(ROOT / "general/reusable/PRODUCTION_CONTRACT.json")
     manifest_path, receipt_path, export, review_path = map(Path,
@@ -184,6 +212,7 @@ def gate(args):
     require(export.is_file() and sha(export) == receipt.get("render_sha256"), "missing or changed actual export")
     require(sha(args.fx_lock) == receipt.get("fx", {}).get("lock_sha256"), "FX lock no longer matches render")
     require(sha(args.ledger) == receipt.get("ledger_sha256"), "executed FX/ONNX/JEV evidence changed")
+    validate_parallel_lineage(receipt, args.lineage)
     ledger = load(args.ledger)
     require(ledger.get("schema") == "aivideoedit.production-execution-ledger.v1" and
             isinstance(ledger.get("events"), list) and bool(ledger["events"]),
@@ -250,6 +279,7 @@ def main():
                  "ledger", "contact-sheet", "source-root", "source-sha", "source-branch",
                  "engine-sha", "repository", "output"):
         p.add_argument("--" + name, required=True)
+    p.add_argument("--lineage")
     args = p.parse_args()
     try:
         result = gate(args)

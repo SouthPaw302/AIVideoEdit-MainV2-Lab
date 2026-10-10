@@ -40,7 +40,7 @@ jobs:
         with:
           ref: main
           path: engine
-          fetch-depth: 1
+          fetch-depth: 0
           persist-credentials: false
 
       - name: Check out the requested production source branch
@@ -95,6 +95,8 @@ jobs:
             --dir "$RUNNER_TEMP/candidate" --pattern real_music_film.mp4 \
             --pattern render_receipt.json --pattern FX_LOCK.json \
             --pattern PRODUCTION_EXECUTION_LEDGER.json --pattern contact_sheet.jpg
+          gh release download "$PROOF_TAG" --repo "$GITHUB_REPOSITORY" \
+            --dir "$RUNNER_TEMP/candidate" --pattern RUN_LINEAGE.json || true
           for f in real_music_film.mp4 render_receipt.json FX_LOCK.json PRODUCTION_EXECUTION_LEDGER.json contact_sheet.jpg; do
             test -s "$RUNNER_TEMP/candidate/$f"
           done
@@ -106,12 +108,17 @@ jobs:
         run: |
           set -euo pipefail
           source_sha="$(python -c 'import json,sys; print(json.load(open(sys.argv[1]))["source_commit_sha"])' "$RUNNER_TEMP/candidate/render_receipt.json")"
+          engine_sha="$(python -c 'import json,sys; print(json.load(open(sys.argv[1]))["engine_commit_sha"])' "$RUNNER_TEMP/candidate/render_receipt.json")"
           [[ "$source_sha" =~ ^[0-9a-f]{40}$ ]]
+          [[ "$engine_sha" =~ ^[0-9a-f]{40}$ ]]
           git -C source cat-file -e "$source_sha^{commit}"
           git -C source merge-base --is-ancestor "$source_sha" HEAD
+          git -C engine cat-file -e "$engine_sha^{commit}"
+          git -C engine merge-base --is-ancestor "$engine_sha" HEAD
           git -C source worktree add --detach "$GITHUB_WORKSPACE/source_proof" "$source_sha"
           cmp "source/$MANIFEST" "source_proof/$MANIFEST"
           echo "SOURCE_PROOF_SHA=$source_sha" >> "$GITHUB_ENV"
+          echo "ENGINE_PROOF_SHA=$engine_sha" >> "$GITHUB_ENV"
 
       - name: Enforce canonical source, narrative, recut and workflow production guards
         shell: bash
@@ -137,8 +144,12 @@ jobs:
         working-directory: engine
         run: |
           set -euo pipefail
-          engine_sha="$(git rev-parse HEAD)"
+          engine_sha="$ENGINE_PROOF_SHA"
           source_sha="$SOURCE_PROOF_SHA"
+          lineage_args=()
+          if [ -f "$RUNNER_TEMP/candidate/RUN_LINEAGE.json" ]; then
+            lineage_args+=(--lineage "$RUNNER_TEMP/candidate/RUN_LINEAGE.json")
+          fi
           PYTHONPATH="$PWD" python scripts/release_gate.py \
             --repository "$GITHUB_REPOSITORY" \
             --source-branch "$SOURCE_REF" \
@@ -150,7 +161,7 @@ jobs:
             --fx-lock "$RUNNER_TEMP/candidate/FX_LOCK.json" \
             --ledger "$RUNNER_TEMP/candidate/PRODUCTION_EXECUTION_LEDGER.json" \
             --contact-sheet "$RUNNER_TEMP/candidate/contact_sheet.jpg" \
-            --output "$RUNNER_TEMP/candidate/RELEASE_GATE.json"
+            --output "$RUNNER_TEMP/candidate/RELEASE_GATE.json" "${lineage_args[@]}"
           test -s "$RUNNER_TEMP/candidate/RELEASE_GATE.json"
 
       - name: Publish exact approved bytes, never a substitute or fallback
@@ -164,11 +175,13 @@ jobs:
           id="$(python -c 'import json,sys; print(json.load(open(sys.argv[1]))["production_id"])' "$c/RELEASE_GATE.json")"
           [[ "$id" =~ ^[a-zA-Z0-9_-]+$ ]]
           tag="production-$id-$GITHUB_RUN_ID"
-          gh release create "$tag" \
-            "$c/real_music_film.mp4" "$c/RELEASE_GATE.json" \
+          assets=("$c/real_music_film.mp4" "$c/RELEASE_GATE.json" \
             "$c/render_receipt.json" "$c/FX_LOCK.json" \
-            "$c/PRODUCTION_EXECUTION_LEDGER.json" "$c/contact_sheet.jpg" \
-            --repo "$GITHUB_REPOSITORY" --target "$(git -C engine rev-parse HEAD)" \
+            "$c/PRODUCTION_EXECUTION_LEDGER.json" "$c/contact_sheet.jpg")
+          if [ -f "$c/RUN_LINEAGE.json" ]; then assets+=("$c/RUN_LINEAGE.json"); fi
+          gh release create "$tag" \
+            "${assets[@]}" \
+            --repo "$GITHUB_REPOSITORY" --target "$ENGINE_PROOF_SHA" \
             --title "$id — complete verified and human-approved music film" \
             --notes "Full song, exact sources, full decoded export, current FX lineage and authenticated human approval. Audit RELEASE_GATE.json for acceptance evidence."
           echo "Final production release gate PASS: $tag" >> "$GITHUB_STEP_SUMMARY"
