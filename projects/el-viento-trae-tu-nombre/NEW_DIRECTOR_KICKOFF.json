@@ -67,9 +67,13 @@
     "source_generated_still_sha256": "6e5d996e23898fc22670582257a7ea464a74a212ab1238080bee434c11625026",
     "source_still_drive_file_id": "1ooguf49na8WdS17veXGPOtNpTRvDrYVY",
     "moving_regions": "ocean-only warping and confined lamp flicker, no global camera motion",
-    "output_durable_staging": "NOT_YET_UPLOADED_TO_DRIVE_OR_RUNNER",
+    "output_durable_staging": "GOOGLE_DRIVE_UPLOADED_VERIFIED_BY_FILE_METADATA",
     "local_chat_artifact": "sandbox:/mnt/data/El_Viento_New_Film_Opening_Proof_01.mp4",
-    "human_visual_acceptance": false
+    "human_visual_acceptance": false,
+    "drive_file_id": "1zkannvNYH2McA39pd31H55GZb3BcuvAd",
+    "drive_url": "https://drive.google.com/file/d/1zkannvNYH2McA39pd31H55GZb3BcuvAd/view?usp=drivesdk",
+    "uploaded_size_bytes": 460730,
+    "output_sha256_origin": "LOCAL_RENDER_BYTE_HASH_AND_EXACT_SOURCE_FILE_SNAPSHOT"
   },
   "drive_production_folder": {
     "id": "1_NhFmJKcMhgv65VioXLdzq5yeswXYdNc",
