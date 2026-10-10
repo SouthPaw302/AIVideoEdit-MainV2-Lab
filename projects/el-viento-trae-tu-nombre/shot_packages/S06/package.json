@@ -1,0 +1,72 @@
+{
+  "schema": "aivideoedit.shot-package.v1",
+  "shot_id": "S06",
+  "script_entry": {
+    "shot_id": "S06",
+    "start_frame": 1290,
+    "end_frame": 1547,
+    "start_seconds": 53.76,
+    "end_seconds": 64.512,
+    "production_mode": "living_scene",
+    "visual_action": "Fort pigment softens into luminous color and reforms as an abstract imagined homeland.",
+    "visual_media": "HERO-S06 gdrive://file/1bF06bN2M64-rgnh8RRJ0b-90srtpSEoK",
+    "animation_behavior": "Stone dissolves into color wash, landscape breathes subtly, and the camera tilts upward only after the transformation is readable.",
+    "camera_behavior": "slow upward tilt",
+    "motion_regions": [
+      "stone pigment softening",
+      "sky wash",
+      "landscape color breathing"
+    ],
+    "protected_regions": [
+      "landform composition",
+      "canvas tactility",
+      "lighting direction"
+    ],
+    "lyric_cue": "Crecimos donde el viento salado toca los montes / donde gritan las aves del puerto.",
+    "music_cues": [
+      "Place imagery broadens",
+      "Verse energy rises gradually"
+    ],
+    "transition": "Candidate FX2-TRANS-024 fog_pigment_travel introduces atmospheric veil."
+  },
+  "media_evidence": [
+    {
+      "asset_id": "HERO-S06",
+      "uri": "gdrive://file/1bF06bN2M64-rgnh8RRJ0b-90srtpSEoK",
+      "name": "shot_06_imagined_homeland.png",
+      "sha256": "12432a444497f86bb9276291be1b3a5356bfbfa97d8a5fa4d12d2354edc79a03",
+      "status": "generated",
+      "role": "primary_hero_plate",
+      "content_type": "image/png",
+      "origin": "generated",
+      "creative_status": "available",
+      "lifecycle_status": "candidate"
+    },
+    {
+      "asset_id": "FX1-S06",
+      "uri": "gdrive://file/1iJhTa2t594vItw9CQvcKU7M1fI0-wsBn",
+      "name": "shot_06_fx_motion_variant.png",
+      "sha256": "a02b8e83abfc52647a198c015a25953a7352e85a11f882f54953e46444dc255e",
+      "status": "generated",
+      "role": "fx_motion_variant_batch_01",
+      "content_type": "image/png",
+      "origin": "generated",
+      "creative_status": "available",
+      "lifecycle_status": "candidate"
+    },
+    {
+      "asset_id": "FX2-S06",
+      "uri": "gdrive://file/1oTJJwOwtUu4tXktDQ7owu5bc5szb2aJk",
+      "name": "shot_06_fx_motion_variant_b2.png",
+      "sha256": "ac446a47b4e8ac4ff0ac9308f8813718dbc0728e0caf09306b7c97ef663d2a90",
+      "status": "derived",
+      "role": "fx_motion_variant_batch_02",
+      "content_type": "image/png",
+      "origin": "derived",
+      "creative_status": "available",
+      "lifecycle_status": "candidate"
+    }
+  ],
+  "build_notes": "Drive-backed production package. Primary hero plate is the scripted visual anchor; motion variants are bounded support states reserved for proof/FX interpolation. No candidate variant is promoted to canonical until moving-proof acceptance.",
+  "built_at": "2026-09-22T05:31:00Z"
+}

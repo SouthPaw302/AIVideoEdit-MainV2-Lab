@@ -1,0 +1,72 @@
+{
+  "schema": "aivideoedit.shot-package.v1",
+  "shot_id": "S07",
+  "script_entry": {
+    "shot_id": "S07",
+    "start_frame": 1548,
+    "end_frame": 1805,
+    "start_seconds": 64.512,
+    "end_seconds": 75.264,
+    "production_mode": "living_scene",
+    "visual_action": "Painted smoke, translucent cloud and watercolor veils cross and partially obscure the homeland.",
+    "visual_media": "HERO-S07 gdrive://file/1Wm9PjGr2Yz9vfstP8hTqvQvXgaodlhdD",
+    "animation_behavior": "Atmosphere provides the motion while the composition remains fixed; smoke/cloud layers travel independently of the locked homeland.",
+    "camera_behavior": "static",
+    "motion_regions": [
+      "painted smoke",
+      "cloud wash",
+      "watercolor veil"
+    ],
+    "protected_regions": [
+      "homeland geometry",
+      "no new objects",
+      "stable frame registration"
+    ],
+    "lyric_cue": "Aprendí tu rostro a la luz del farol / tu voz bajo la lluvia de verano.",
+    "music_cues": [
+      "Lyric turns intimate and personal",
+      "Pulse stays stable beneath a more reflective phrase"
+    ],
+    "transition": "Candidate FX2-TRANS-025 ghosted_memory_transition into anonymous human presence."
+  },
+  "media_evidence": [
+    {
+      "asset_id": "HERO-S07",
+      "uri": "gdrive://file/1Wm9PjGr2Yz9vfstP8hTqvQvXgaodlhdD",
+      "name": "shot_07_veil_of_memory.png",
+      "sha256": "31adc42ffef33b9166351797c65609c08da9e5427262c9aae54eba953dda3410",
+      "status": "generated",
+      "role": "primary_hero_plate",
+      "content_type": "image/png",
+      "origin": "generated",
+      "creative_status": "available",
+      "lifecycle_status": "candidate"
+    },
+    {
+      "asset_id": "FX1-S07",
+      "uri": "gdrive://file/1PKR8X02JmrVP-sYHtWBzWQVoRVeMNPQn",
+      "name": "shot_07_fx_motion_variant.png",
+      "sha256": "e33b2bdb96ab6e34a7eb678d564eac900df2fac75449b4f0582b1fe04f673473",
+      "status": "generated",
+      "role": "fx_motion_variant_batch_01",
+      "content_type": "image/png",
+      "origin": "generated",
+      "creative_status": "available",
+      "lifecycle_status": "candidate"
+    },
+    {
+      "asset_id": "FX2-S07",
+      "uri": "gdrive://file/1ntg-y4_T7hJIMeab1hgv8aoDqNowgANJ",
+      "name": "shot_07_fx_motion_variant_b2.png",
+      "sha256": "b866fb6b57b65223a965fc319b9cd8567f241b7c579cfbeda968480e6c77dbb1",
+      "status": "derived",
+      "role": "fx_motion_variant_batch_02",
+      "content_type": "image/png",
+      "origin": "derived",
+      "creative_status": "available",
+      "lifecycle_status": "candidate"
+    }
+  ],
+  "build_notes": "Drive-backed production package. Primary hero plate is the scripted visual anchor; motion variants are bounded support states reserved for proof/FX interpolation. No candidate variant is promoted to canonical until moving-proof acceptance.",
+  "built_at": "2026-09-22T05:31:00Z"
+}

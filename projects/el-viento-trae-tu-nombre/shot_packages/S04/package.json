@@ -1,0 +1,71 @@
+{
+  "schema": "aivideoedit.shot-package.v1",
+  "shot_id": "S04",
+  "script_entry": {
+    "shot_id": "S04",
+    "start_frame": 774,
+    "end_frame": 1031,
+    "start_seconds": 32.256,
+    "end_seconds": 43.008,
+    "production_mode": "living_scene",
+    "visual_action": "Thick ocean paint gathers upward into a rustic island village.",
+    "visual_media": "HERO-S04 gdrive://file/1t7JplXyvZ6Rdg6_YU0YH0jXwDjH1gNmc",
+    "animation_behavior": "Impasto rises from water/pigment into architecture; internal gathering precedes a restrained dolly in.",
+    "camera_behavior": "slow dolly in",
+    "motion_regions": [
+      "impasto rise",
+      "water-to-pigment gathering",
+      "subtle painted-water motion"
+    ],
+    "protected_regions": [
+      "horizon",
+      "village topology after emergence"
+    ],
+    "lyric_cue": "Si el destino nos separa / el corazón sigue amando.",
+    "music_cues": [
+      "Closing phrase of the opening lyric block",
+      "Gentle cadence before the expanded verse"
+    ],
+    "transition": "Candidate FX2-TRANS-032 structural_morph_transition preserving shared geography into fort walls."
+  },
+  "media_evidence": [
+    {
+      "asset_id": "HERO-S04",
+      "uri": "gdrive://file/1t7JplXyvZ6Rdg6_YU0YH0jXwDjH1gNmc",
+      "name": "shot_04_village_rising.png",
+      "sha256": "bf9adfd1844fd3a205a90f45868b594ca91cfeae6f91b12c18c97a1db2d9e43b",
+      "status": "generated",
+      "role": "primary_hero_plate",
+      "content_type": "image/png",
+      "origin": "generated",
+      "creative_status": "available",
+      "lifecycle_status": "candidate"
+    },
+    {
+      "asset_id": "FX1-S04",
+      "uri": "gdrive://file/1CSWna-fXuXXpz5uQjQD9xR-SLaMcgamH",
+      "name": "shot_04_fx_motion_variant.png",
+      "sha256": "7fec0a1043cc91c5580c7a7ddd93be40bb126737d1a0a3fab97b7b9b325f7200",
+      "status": "generated",
+      "role": "fx_motion_variant_batch_01",
+      "content_type": "image/png",
+      "origin": "generated",
+      "creative_status": "available",
+      "lifecycle_status": "candidate"
+    },
+    {
+      "asset_id": "FX2-S04",
+      "uri": "gdrive://file/1rAOVCS6muRtx6QdQ9gP1l4JWAynXgTTZ",
+      "name": "shot_04_fx_motion_variant_b2.png",
+      "sha256": "366f719a286916035d4fba15275452f763f87fcfcc3304067a04d976d8694533",
+      "status": "derived",
+      "role": "fx_motion_variant_batch_02",
+      "content_type": "image/png",
+      "origin": "derived",
+      "creative_status": "available",
+      "lifecycle_status": "candidate"
+    }
+  ],
+  "build_notes": "Drive-backed production package. Primary hero plate is the scripted visual anchor; motion variants are bounded support states reserved for proof/FX interpolation. No candidate variant is promoted to canonical until moving-proof acceptance.",
+  "built_at": "2026-09-22T05:31:00Z"
+}

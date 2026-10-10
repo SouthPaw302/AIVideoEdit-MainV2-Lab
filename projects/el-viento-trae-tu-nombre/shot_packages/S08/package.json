@@ -1,0 +1,72 @@
+{
+  "schema": "aivideoedit.shot-package.v1",
+  "shot_id": "S08",
+  "script_entry": {
+    "shot_id": "S08",
+    "start_frame": 1806,
+    "end_frame": 2063,
+    "start_seconds": 75.264,
+    "end_seconds": 86.016,
+    "production_mode": "living_scene",
+    "visual_action": "Dark featureless silhouettes emerge, fade and re-form inside mist, cloud and water.",
+    "visual_media": "HERO-S08 gdrive://file/1no19lCoxUXM6vpEDthHhD5Hxi4Z8XABM",
+    "animation_behavior": "Mist drifts independently while silhouettes phase in and out; slow bounded pan; never reveal facial features or fixed identities.",
+    "camera_behavior": "slow pan",
+    "motion_regions": [
+      "mist drift",
+      "silhouette form",
+      "silhouette fade"
+    ],
+    "protected_regions": [
+      "silhouette anonymity",
+      "no facial detail",
+      "environment topology"
+    ],
+    "lyric_cue": "Y cada camino que me llevó lejos / terminó trayéndome de regreso.",
+    "music_cues": [
+      "Return motif resolves Verse 3",
+      "Energy prepares for chorus expansion"
+    ],
+    "transition": "Candidate FX2-TRANS-025 ghosted_memory_transition gathers all motifs into the complete tapestry."
+  },
+  "media_evidence": [
+    {
+      "asset_id": "HERO-S08",
+      "uri": "gdrive://file/1no19lCoxUXM6vpEDthHhD5Hxi4Z8XABM",
+      "name": "shot_08_ancestors_in_mist.png",
+      "sha256": "9fd707c8e9540b994746022bcb264ddd0cf4e34f82371ac09814b9d9959c095d",
+      "status": "generated",
+      "role": "primary_hero_plate",
+      "content_type": "image/png",
+      "origin": "generated",
+      "creative_status": "available",
+      "lifecycle_status": "candidate"
+    },
+    {
+      "asset_id": "FX1-S08",
+      "uri": "gdrive://file/1JhcXu980kv8ex8LJC1V2qvzmhMB_hzEQ",
+      "name": "shot_08_fx_motion_variant.png",
+      "sha256": "6f0e776ca443a0088a0c2485a2bfb5b78201bffdc433ec1dcdcea8ddc43cd974",
+      "status": "generated",
+      "role": "fx_motion_variant_batch_01",
+      "content_type": "image/png",
+      "origin": "generated",
+      "creative_status": "available",
+      "lifecycle_status": "candidate"
+    },
+    {
+      "asset_id": "FX2-S08",
+      "uri": "gdrive://file/1gC7LLUunTT0UcY1k_4eZNnBF2hNaXCNH",
+      "name": "shot_08_fx_motion_variant_b2.png",
+      "sha256": "fe96ff9b842bcf637902e773c3b6652a9dd88b64feae04b592418173012634af",
+      "status": "derived",
+      "role": "fx_motion_variant_batch_02",
+      "content_type": "image/png",
+      "origin": "derived",
+      "creative_status": "available",
+      "lifecycle_status": "candidate"
+    }
+  ],
+  "build_notes": "Drive-backed production package. Primary hero plate is the scripted visual anchor; motion variants are bounded support states reserved for proof/FX interpolation. No candidate variant is promoted to canonical until moving-proof acceptance.",
+  "built_at": "2026-09-22T05:31:00Z"
+}

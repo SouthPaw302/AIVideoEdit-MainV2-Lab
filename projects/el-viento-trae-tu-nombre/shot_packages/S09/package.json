@@ -1,0 +1,67 @@
+{
+  "schema": "aivideoedit.shot-package.v1",
+  "shot_id": "S09",
+  "script_entry": {
+    "shot_id": "S09",
+    "start_frame": 2064,
+    "end_frame": 2321,
+    "start_seconds": 86.016,
+    "end_seconds": 96.768,
+    "production_mode": "cinematic",
+    "visual_action": "Accelerating pullback reveals the complete tapestry in a dark void; its four corners fold inward toward the center.",
+    "visual_media": "HERO-S09 gdrive://file/1qUB9eIciqdfnI0ZDFY0gJb1CNW0SlXLm",
+    "animation_behavior": "Controlled pullback and symmetric inward folding; preserve all previously established motifs inside one readable tapestry.",
+    "camera_behavior": "accelerating pullback",
+    "protected_regions": [
+      "all prior motifs inside one tapestry",
+      "tapestry topology",
+      "dark void boundary"
+    ],
+    "lyric_cue": "Y aunque cambien las mareas / aunque los caminos nos lleven lejos / tu voz sigue viva entre estas piedras / como una llama que no muere.",
+    "music_cues": [
+      "Chorus emotional crest begins",
+      "Scale broadens while the visual world is unified"
+    ],
+    "transition": "Candidate FX2-TRANS-032 structural_morph_transition compresses tapestry into one thread."
+  },
+  "media_evidence": [
+    {
+      "asset_id": "HERO-S09",
+      "uri": "gdrive://file/1qUB9eIciqdfnI0ZDFY0gJb1CNW0SlXLm",
+      "name": "shot_09_whole_tapestry.png",
+      "sha256": "5906bb8b0149be545d36c0209235a6b0f82c201f239e64b3f32532d43276810d",
+      "status": "generated",
+      "role": "primary_hero_plate",
+      "content_type": "image/png",
+      "origin": "generated",
+      "creative_status": "available",
+      "lifecycle_status": "candidate"
+    },
+    {
+      "asset_id": "FX1-S09",
+      "uri": "gdrive://file/12KoqDTNMMRAGqF0NzUSuYOO8pTEQ4wK5",
+      "name": "shot_09_fx_motion_variant.png",
+      "sha256": "938b5bf92e576533a92813c3da9502dbae3769d1a871fedccbe5abf78d8957bc",
+      "status": "generated",
+      "role": "fx_motion_variant_batch_01",
+      "content_type": "image/png",
+      "origin": "generated",
+      "creative_status": "available",
+      "lifecycle_status": "candidate"
+    },
+    {
+      "asset_id": "FX2-S09",
+      "uri": "gdrive://file/1GxBLdX4fGUKZxSQrKfXRH-eN-i9IUBp_",
+      "name": "shot_09_fx_motion_variant_b2.png",
+      "sha256": "23eb05f6a690d7f7575f9dbec3dc0f7c94105e45cda4859ab2f965ec3acd93dc",
+      "status": "derived",
+      "role": "fx_motion_variant_batch_02",
+      "content_type": "image/png",
+      "origin": "derived",
+      "creative_status": "available",
+      "lifecycle_status": "candidate"
+    }
+  ],
+  "build_notes": "Drive-backed production package. Primary hero plate is the scripted visual anchor; motion variants are bounded support states reserved for proof/FX interpolation. No candidate variant is promoted to canonical until moving-proof acceptance.",
+  "built_at": "2026-09-22T05:31:00Z"
+}

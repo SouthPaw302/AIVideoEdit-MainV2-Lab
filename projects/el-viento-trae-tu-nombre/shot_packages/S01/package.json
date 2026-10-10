@@ -1,0 +1,58 @@
+{
+  "schema": "aivideoedit.shot-package.v1",
+  "shot_id": "S01",
+  "script_entry": {
+    "shot_id": "S01",
+    "start_frame": 0,
+    "end_frame": 257,
+    "start_seconds": 0,
+    "end_seconds": 10.752,
+    "production_mode": "living_scene",
+    "visual_action": "Aged linen awakens as faded nautical-map ink draws itself into the fibers.",
+    "visual_media": "HERO-S01 gdrive://file/1PLWQXsouCSMeWqYE0zK4g0aIO_kLv873",
+    "animation_behavior": "Internal ink emergence and canvas-fiber micro-motion first; restrained slow dolly out only after map geometry stabilizes.",
+    "camera_behavior": "slow dolly out",
+    "motion_regions": [
+      "map ink emergence",
+      "canvas fiber micro-motion"
+    ],
+    "protected_regions": [
+      "canvas topology",
+      "map geometry once formed"
+    ],
+    "lyric_cue": "Miraba el mar desde el fuerte / pensando en ti, mi querida.",
+    "music_cues": [
+      "Opening measured pulse",
+      "First vocal phrase establishes fort and remembrance"
+    ],
+    "transition": "Fluid material continuation into embroidery; no hard cut."
+  },
+  "media_evidence": [
+    {
+      "asset_id": "HERO-S01",
+      "uri": "gdrive://file/1PLWQXsouCSMeWqYE0zK4g0aIO_kLv873",
+      "name": "shot_01_map_awakening.png",
+      "sha256": "1247d73e41e3461ae42a1bb5821430015cf00369dc364fd79081d90bc2bc34f5",
+      "status": "generated",
+      "role": "primary_hero_plate",
+      "content_type": "image/png",
+      "origin": "generated",
+      "creative_status": "available",
+      "lifecycle_status": "candidate"
+    },
+    {
+      "asset_id": "FX1-S01",
+      "uri": "gdrive://file/11e1QLXZ4JXC_tZY8qC6BnsAWoJblWU6i",
+      "name": "shot_01_fx_motion_variant.png",
+      "sha256": "3469e208233bf20fde40ae477f3036e4e6eb2ec24f341be385272ca6ab854374",
+      "status": "generated",
+      "role": "fx_motion_variant_batch_01",
+      "content_type": "image/png",
+      "origin": "generated",
+      "creative_status": "available",
+      "lifecycle_status": "candidate"
+    }
+  ],
+  "build_notes": "Drive-backed production package. Primary hero plate is the scripted visual anchor; motion variants are bounded support states reserved for proof/FX interpolation. No candidate variant is promoted to canonical until moving-proof acceptance.",
+  "built_at": "2026-09-22T05:31:00Z"
+}

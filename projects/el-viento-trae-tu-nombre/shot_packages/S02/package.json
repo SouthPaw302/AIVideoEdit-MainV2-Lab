@@ -1,0 +1,72 @@
+{
+  "schema": "aivideoedit.shot-package.v1",
+  "shot_id": "S02",
+  "script_entry": {
+    "shot_id": "S02",
+    "start_frame": 258,
+    "end_frame": 515,
+    "start_seconds": 10.752,
+    "end_seconds": 21.504,
+    "production_mode": "living_scene",
+    "visual_action": "Bright embroidery blooms and threads through the established antique map.",
+    "visual_media": "HERO-S02 gdrive://file/1uGAtadsrrFxzIB1npqjznolPaEIa4Rir",
+    "animation_behavior": "Thread growth, tension and tiny textile sway inside a locked composition; camera remains static.",
+    "camera_behavior": "static",
+    "motion_regions": [
+      "embroidery growth",
+      "thread tension",
+      "thread micro-sway"
+    ],
+    "protected_regions": [
+      "map registration",
+      "canvas weave",
+      "coastline geometry"
+    ],
+    "lyric_cue": "El viento trae tu nombre / entre las olas dormidas.",
+    "music_cues": [
+      "Continuation of opening vocal phrase",
+      "Stable moderate pulse"
+    ],
+    "transition": "Candidate FX2-TRANS-021 chroma_pigment_transport into ocean-current color."
+  },
+  "media_evidence": [
+    {
+      "asset_id": "HERO-S02",
+      "uri": "gdrive://file/1uGAtadsrrFxzIB1npqjznolPaEIa4Rir",
+      "name": "shot_02_embroidered_cartography_v2.png",
+      "sha256": "c44b5d13b63cab370de6399ebc5b5d1f082b97200ba8d781d9d3a750f3b8f7ae",
+      "status": "generated",
+      "role": "primary_hero_plate",
+      "content_type": "image/png",
+      "origin": "generated",
+      "creative_status": "available",
+      "lifecycle_status": "candidate"
+    },
+    {
+      "asset_id": "FX1-S02",
+      "uri": "gdrive://file/1FZXIgyIrQO3YaupN2RyNQKOQbSVwApBJ",
+      "name": "shot_02_fx_motion_variant.png",
+      "sha256": "f1c1b38fa6146f87e5e68a249500075d18b5f2468810646f0926cc0cd55c58ac",
+      "status": "generated",
+      "role": "fx_motion_variant_batch_01",
+      "content_type": "image/png",
+      "origin": "generated",
+      "creative_status": "available",
+      "lifecycle_status": "candidate"
+    },
+    {
+      "asset_id": "FX2-S02",
+      "uri": "gdrive://file/1146whSfkVZ6-lOTBsQF1MxC4oFWxQiO9",
+      "name": "shot_02_fx_motion_variant_b2.png",
+      "sha256": "af60f0ee97c545b68a1c814eaef8d53c824d791b0348e22eecbfbaf67d90873e",
+      "status": "derived",
+      "role": "fx_motion_variant_batch_02",
+      "content_type": "image/png",
+      "origin": "derived",
+      "creative_status": "available",
+      "lifecycle_status": "candidate"
+    }
+  ],
+  "build_notes": "Drive-backed production package. Primary hero plate is the scripted visual anchor; motion variants are bounded support states reserved for proof/FX interpolation. No candidate variant is promoted to canonical until moving-proof acceptance.",
+  "built_at": "2026-09-22T05:31:00Z"
+}

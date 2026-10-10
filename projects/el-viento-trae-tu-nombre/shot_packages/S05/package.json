@@ -1,0 +1,68 @@
+{
+  "schema": "aivideoedit.shot-package.v1",
+  "shot_id": "S05",
+  "script_entry": {
+    "shot_id": "S05",
+    "start_frame": 1032,
+    "end_frame": 1289,
+    "start_seconds": 43.008,
+    "end_seconds": 53.76,
+    "production_mode": "cinematic",
+    "visual_action": "Village geometry hardens and weathers into historical fort walls without breaking spatial continuity.",
+    "visual_media": "HERO-S05 gdrive://file/1LvdY8W5EHiA8vd9N1zpbPnHrxZhEfoSo",
+    "animation_behavior": "Bounded architectural morph with a slow orbit; no unplanned axis shift, horizon drift or new structures.",
+    "camera_behavior": "bounded slow orbit",
+    "protected_regions": [
+      "shared village/fort geography",
+      "lighting direction",
+      "horizon",
+      "architectural anchor relationships"
+    ],
+    "lyric_cue": "Lejos de la Isla nacimos los dos / bajo este cielo abierto.",
+    "music_cues": [
+      "Expanded Verse 3 enters",
+      "Narrative density begins to rise"
+    ],
+    "transition": "Candidate FX2-TRANS-021 pigment transport softens fort surfaces into remembered landscape."
+  },
+  "media_evidence": [
+    {
+      "asset_id": "HERO-S05",
+      "uri": "gdrive://file/1LvdY8W5EHiA8vd9N1zpbPnHrxZhEfoSo",
+      "name": "shot_05_village_to_fort.png",
+      "sha256": "7cf92580d98ffb6bbbf0d9d6ec8949ab70461d173a17dc608dc89cd844f76885",
+      "status": "generated",
+      "role": "primary_hero_plate",
+      "content_type": "image/png",
+      "origin": "generated",
+      "creative_status": "available",
+      "lifecycle_status": "candidate"
+    },
+    {
+      "asset_id": "FX1-S05",
+      "uri": "gdrive://file/1CQce0SobR-7tXq9mXmV8V7h9c61l3j6M",
+      "name": "shot_05_fx_motion_variant.png",
+      "sha256": "b5a25e5fa46b5e361c3e732322e49e689ba97a416c0d2ea5e0bacc5e25dda9ec",
+      "status": "generated",
+      "role": "fx_motion_variant_batch_01",
+      "content_type": "image/png",
+      "origin": "generated",
+      "creative_status": "available",
+      "lifecycle_status": "candidate"
+    },
+    {
+      "asset_id": "FX2-S05",
+      "uri": "gdrive://file/1QSRpCWsC6p4s1PfWYVRivEB-xa5VsTRJ",
+      "name": "shot_05_fx_motion_variant_b2.png",
+      "sha256": "db2c075449e668750da0067d3eff96372de314811db671d81f97073cf9fe2a97",
+      "status": "derived",
+      "role": "fx_motion_variant_batch_02",
+      "content_type": "image/png",
+      "origin": "derived",
+      "creative_status": "available",
+      "lifecycle_status": "candidate"
+    }
+  ],
+  "build_notes": "Drive-backed production package. Primary hero plate is the scripted visual anchor; motion variants are bounded support states reserved for proof/FX interpolation. No candidate variant is promoted to canonical until moving-proof acceptance.",
+  "built_at": "2026-09-22T05:31:00Z"
+}

@@ -1,0 +1,71 @@
+{
+  "schema": "aivideoedit.shot-package.v1",
+  "shot_id": "S03",
+  "script_entry": {
+    "shot_id": "S03",
+    "start_frame": 516,
+    "end_frame": 773,
+    "start_seconds": 21.504,
+    "end_seconds": 32.256,
+    "production_mode": "living_scene",
+    "visual_action": "Map ink and embroidery liquefy into deep blue-green ocean currents while the tactile canvas remains visible.",
+    "visual_media": "HERO-S03 gdrive://file/1xOGeTL3P9LnwW6fc3_cGkX6wJYyCml26",
+    "animation_behavior": "Pigment and thread flow laterally like currents; preserve textile surface identity; add only a graceful bounded pan.",
+    "camera_behavior": "slow graceful pan",
+    "motion_regions": [
+      "ocean-current pigment",
+      "thread liquefaction",
+      "surface shimmer"
+    ],
+    "protected_regions": [
+      "canvas surface identity",
+      "dominant coastline-to-current flow"
+    ],
+    "lyric_cue": "Lejos de España nacimos / bajo este cielo tan claro.",
+    "music_cues": [
+      "Distance/origin lyric section begins",
+      "Measured pulse continues without abrupt energy change"
+    ],
+    "transition": "Candidate FX2-TRANS-032 structural_morph_transition from ocean mass into village forms."
+  },
+  "media_evidence": [
+    {
+      "asset_id": "HERO-S03",
+      "uri": "gdrive://file/1xOGeTL3P9LnwW6fc3_cGkX6wJYyCml26",
+      "name": "shot_03_ocean_memory.png",
+      "sha256": "e8864ecbfb037fa156bfd7817190e98e605653bf77157d7c50a45b46dfc404af",
+      "status": "generated",
+      "role": "primary_hero_plate",
+      "content_type": "image/png",
+      "origin": "generated",
+      "creative_status": "available",
+      "lifecycle_status": "candidate"
+    },
+    {
+      "asset_id": "FX1-S03",
+      "uri": "gdrive://file/1l6EKYK7U6vi3qo11Ko6DoTKSAyCHIGyL",
+      "name": "shot_03_fx_motion_variant.png",
+      "sha256": "7c875ce60c400ce093cde143ecbcfacad26f37796ec4e802840e461b3985ab18",
+      "status": "generated",
+      "role": "fx_motion_variant_batch_01",
+      "content_type": "image/png",
+      "origin": "generated",
+      "creative_status": "available",
+      "lifecycle_status": "candidate"
+    },
+    {
+      "asset_id": "FX2-S03",
+      "uri": "gdrive://file/1mcwQkfr0bE1w90jFdpt1CqTl4oQWEUlo",
+      "name": "shot_03_fx_motion_variant_b2.png",
+      "sha256": "4f2ce7b6d07d747031e3fdd18fbb1bbb5d0faa7abe3183a3ecec7ebe22d0aea3",
+      "status": "derived",
+      "role": "fx_motion_variant_batch_02",
+      "content_type": "image/png",
+      "origin": "derived",
+      "creative_status": "available",
+      "lifecycle_status": "candidate"
+    }
+  ],
+  "build_notes": "Drive-backed production package. Primary hero plate is the scripted visual anchor; motion variants are bounded support states reserved for proof/FX interpolation. No candidate variant is promoted to canonical until moving-proof acceptance.",
+  "built_at": "2026-09-22T05:31:00Z"
+}
