@@ -7,6 +7,7 @@ import server as base
 import production_project
 import production_assembly
 import production_final_qc
+import delivery_archive
 
 def _read(path,default):
     try:return json.loads(Path(path).read_text(encoding="utf-8"))
@@ -59,7 +60,14 @@ def build(pid,*,note:str=""):
     assembly_record=assembly.get("assembly") or {};asset=assembly.get("asset") or {}
     media={"asset_id":assembly_record.get("output_asset_id"),"uri":assembly_record.get("output_uri"),"sha256":assembly_record.get("sha256"),"browser_url":asset.get("source_url"),"size_bytes":asset.get("size_bytes"),"storage_policy":"heavy_media_external_or_workstation; not embedded in Git archive manifest"}
     state_before_archive=_read(project_dir/"PROJECT_STATE.json",{})
-    manifest={"schema":"aivideoedit.archive-manifest.v1","project_id":pid,"branch":current.get("branch"),"core_main_commit":current.get("main_commit"),"production_stage":"FINAL_QC_PASSED","project_state_snapshot":state_before_archive,"records":records,"final_media":media,"final_qc_sha256":_sha(project_dir/"FINAL_QC.json"),"assembly_record_sha256":_sha(project_dir/"ASSEMBLY.json"),"note":str(note or "").strip() or None,"created_at":base.now()}
+    lifecycle={"state":"RELEASE_AUTHORIZED","history":[
+        {"state":"DIRECTOR_RECOMMENDED","evidence":"accepted full-song final QC"},
+        {"state":"HUMAN_ACCEPTED","evidence":gate.get("approval_comment_url")},
+        {"state":"RELEASE_AUTHORIZED","evidence":gate.get("approval_comment_url")},
+    ]}
+    artifacts=[{"id":"accepted-artistic-master","role":"accepted_artistic_master","sha256":media.get("sha256"),"size_bytes":media.get("size_bytes"),"locator":media.get("browser_url") or media.get("uri"),"access":"directly_playable"}]
+    artifacts.extend({"id":f"record-{index:04d}","role":"production_record","sha256":rec["sha256"],"size_bytes":rec["size_bytes"],"locator":rec["path"],"access":"evidence"} for index,rec in enumerate(records,1))
+    manifest={"schema":"aivideoedit.archive-manifest.v2","project_id":pid,"branch":current.get("branch"),"core_main_commit":current.get("main_commit"),"production_stage":"FINAL_QC_PASSED","delivery_lifecycle":lifecycle,"release_approval":{"authenticated":True,"reviewer":gate.get("reviewer"),"comment_url":gate.get("approval_comment_url"),"approved_sha256":media.get("sha256")},"project_state_snapshot":state_before_archive,"records":records,"artifacts":artifacts,"final_media":media,"final_qc_sha256":_sha(project_dir/"FINAL_QC.json"),"assembly_record_sha256":_sha(project_dir/"ASSEMBLY.json"),"note":str(note or "").strip() or None,"created_at":base.now()}
     archive_path=project_dir/"ARCHIVE_MANIFEST.json";_write(archive_path,manifest)
     state_path=project_dir/"PROJECT_STATE.json";state=_read(state_path,{});state.update({"archive_complete":True,"archive_manifest_sha256":_sha(archive_path),"archive_record_count":len(records),"archived_at":base.now()});_write(state_path,state)
     commit=production_project._git_commit_paths(engine,[archive_path,state_path],"Create content-addressed production archive manifest");production_project._clear_guard_marker(engine)
@@ -68,6 +76,8 @@ def verify(pid):
     current,_engine,project_dir=_project(pid);manifest_path=project_dir/"ARCHIVE_MANIFEST.json";manifest=_read(manifest_path,{})
     if not manifest:return {"ok":False,"error":"archive manifest missing"}
     problems=[]
+    if manifest.get("schema")!="aivideoedit.archive-manifest.v2":problems.append("unsupported archive schema")
+    problems.extend(delivery_archive.validate_lifecycle(manifest.get("delivery_lifecycle") or {}))
     for rec in manifest.get("records",[]) if isinstance(manifest.get("records"),list) else []:
         path=project_dir/str(rec.get("path") or "")
         if not path.is_file():problems.append(f"missing {rec.get('path')}")
@@ -77,7 +87,10 @@ def verify(pid):
     elif record.get("sha256")!=media.get("sha256"):problems.append("final media hash differs from archive")
     if _sha(project_dir/"FINAL_QC.json")!=manifest.get("final_qc_sha256"):problems.append("FINAL_QC.json changed")
     if _sha(project_dir/"ASSEMBLY.json")!=manifest.get("assembly_record_sha256"):problems.append("ASSEMBLY.json changed")
+    approval=manifest.get("release_approval") or {}
+    if approval.get("authenticated") is not True or approval.get("approved_sha256")!=media.get("sha256") or not approval.get("comment_url"):
+        problems.append("release approval no longer binds the archived master")
     return {"ok":not problems,"problems":problems,"manifest_sha256":_sha(manifest_path),"record_count":len(manifest.get("records",[]))}
 def status(pid):
     current,_engine,project_dir=_project(pid);state=_read(project_dir/"PROJECT_STATE.json",{});manifest=_read(project_dir/"ARCHIVE_MANIFEST.json",{})
-    return {**current,"archive_complete":bool(state.get("archive_complete")),"manifest_present":bool(manifest),"archive_manifest_sha256":state.get("archive_manifest_sha256"),"record_count":len(manifest.get("records",[])) if isinstance(manifest.get("records"),list) else 0,"final_media":manifest.get("final_media")}
+    return {**current,"archive_complete":bool(state.get("archive_complete")),"manifest_present":bool(manifest),"archive_manifest_sha256":state.get("archive_manifest_sha256"),"record_count":len(manifest.get("records",[])) if isinstance(manifest.get("records"),list) else 0,"delivery_lifecycle":(manifest.get("delivery_lifecycle") or {}).get("state"),"final_media":manifest.get("final_media")}
