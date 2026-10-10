@@ -1,0 +1,59 @@
+name: "El Viento — New Director OS Boot"
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - song/el-viento-trae-tu-nombre
+    paths:
+      - .github/workflows/el-viento-new-director-boot.yml
+      - projects/el-viento-trae-tu-nombre/NEW_DIRECTOR_KICKOFF.json
+permissions:
+  contents: read
+concurrency:
+  group: el-viento-director-boot-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  fresh-main-boot:
+    name: "Bootstrap exact Lab main OS on song branch"
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: "Checkout active production branch"
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: song/el-viento-trae-tu-nombre
+          persist-credentials: false
+      - name: "Python"
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.11"
+      - name: "Check branch and bootstrap current main"
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git branch --show-current)" = "song/el-viento-trae-tu-nombre"
+          python bootstrap.py boot --repo-root . --branch song/el-viento-trae-tu-nombre 2>&1 | tee director-boot.log
+          grep -F "AIVideoEdit OS BOOTSTRAP: PASS" director-boot.log
+          test -s .aivideoedit/os/PRIME_DIRECTIVE.md
+          test -s .aivideoedit/SECOND_BRAIN.md
+          test -s .aivideoedit/os/SOUL.md
+          git diff --exit-code
+      - name: "Report verified session identities"
+        if: success()
+        shell: bash
+        run: |
+          set -euo pipefail
+          printf '### El Viento fresh OS boot PASS\n\n' >> "$GITHUB_STEP_SUMMARY"
+          printf 'Song branch: `%s`\n\n' "$(git rev-parse HEAD)" >> "$GITHUB_STEP_SUMMARY"
+          printf 'Current main OS: `%s`\n\n' "$(git rev-parse origin/main 2>/dev/null || echo 'See director-boot.log for exact current-main SHA')" >> "$GITHUB_STEP_SUMMARY"
+          echo "Next: Director media scan and authenticated staging; real render remains gated." >> "$GITHUB_STEP_SUMMARY"
+      - name: "Preserve boot evidence"
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: el-viento-director-boot-${{ github.run_id }}
+          path: |
+            director-boot.log
+            .aivideoedit/SECOND_BRAIN.md
+          if-no-files-found: warn
+          retention-days: 14
