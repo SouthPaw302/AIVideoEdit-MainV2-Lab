@@ -1,12 +1,6 @@
 name: Director Scan Canon — regression
 on:
   pull_request:
-    paths:
-      - 'general/reusable/DIRECTOR_SCAN_CANON.md'
-      - 'general/reusable/DIRECTOR_SCAN_RECORD.schema.json'
-      - 'general/reusable/tools/director_scan_gate.py'
-      - 'general/reusable/tools/test_director_scan_gate.py'
-      - '.github/workflows/director-scan-canon-verify.yml'
   workflow_dispatch:
 permissions:
   contents: read
