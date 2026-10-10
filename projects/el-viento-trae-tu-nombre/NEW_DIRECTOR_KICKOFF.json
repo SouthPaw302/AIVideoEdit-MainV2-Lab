@@ -215,5 +215,15 @@
     "NO_GUESS_SOURCE_URL_OR_HASH",
     "NO_HUMAN_ACCEPTANCE_FROM_CI"
   ],
-  "note": "Boot and actual local 8s proof completed. Full film render has NOT launched. New film remains distinct from preserved originals."
+  "note": "Boot and actual local 8s proof completed. Full film render has NOT launched. New film remains distinct from preserved originals.",
+  "director_session_boot_request": {
+    "requested_date_utc": "2026-10-10",
+    "instruction": "You are the director of this render. So you have to boot.",
+    "purpose": "Fresh canonical MainV2 Lab OS bootstrap and guarded Director scan for this session; keep full-film render gated on authentic staged media and new-shot coverage.",
+    "requested_main_sha": "900e3e5749ed6fa13ad91524975a9e64661e6649",
+    "previous_branch_sha": "432aa7384645d3efdf8db02f98ad72581cbd7f83",
+    "workflow": ".github/workflows/el-viento-new-director-boot.yml",
+    "trigger": "song-branch push via this kickoff file; requires actual runner AIVideoEdit OS BOOTSTRAP: PASS",
+    "verified_before_dispatch": false
+  }
 }
