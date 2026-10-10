@@ -104,6 +104,10 @@ def main() -> int:
         frame_sum += int(rec.get("frame_count") or 0)
     if expected_start != len(manifest["shots"]) or frame_sum != total_frames:
         raise RuntimeError(f"shard coverage mismatch: shots={expected_start}/{len(manifest['shots'])}, frames={frame_sum}/{total_frames}")
+    expected_plan = [(row["shard"], row["start"], row["end"]) for row in gate.get("shard_plan", [])]
+    actual_plan = [(rec.get("shard"), start, end) for start, end, rec, _video in records]
+    if actual_plan != expected_plan:
+        raise RuntimeError("fan-in shard identities differ from the locked dynamic plan")
 
     args.out.mkdir(parents=True, exist_ok=True)
     concat = args.out / "shards.concat.txt"

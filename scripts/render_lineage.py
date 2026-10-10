@@ -11,6 +11,8 @@ import argparse
 import copy
 import hashlib
 import json
+import os
+import platform
 import re
 import shutil
 import subprocess
@@ -26,11 +28,13 @@ TOOLCHAIN_PATHS = (
     "scripts/render_lineage.py",
     "scripts/director_harness_gate.py",
     "scripts/prepare_render_shard.py",
+    "scripts/plan_render_shards.py",
     "scripts/render_real_music_film.py",
     "scripts/render_real_music_film_shard.py",
     "scripts/assemble_parallel_music_film.py",
     "scripts/release_gate.py",
     ".github/workflows/mainv2-director-parallel-real-render.yml",
+    ".github/requirements/render-runner.lock.txt",
     "general/reusable/fx_v2/requirements-runtime.txt",
 )
 
@@ -91,6 +95,19 @@ def _toolchain(engine: Path) -> tuple[dict[str, str], str]:
     return files, canonical_sha(files)
 
 
+def _runtime_toolchain() -> tuple[dict[str, str], str]:
+    proc = subprocess.run(["ffmpeg", "-version"], capture_output=True, text=True, check=False)
+    if proc.returncode or not proc.stdout.strip():
+        raise LineageError("pinned FFmpeg runtime is unavailable")
+    runtime = {
+        "runner_image_os": os.getenv("ImageOS", platform.system()),
+        "runner_image_version": os.getenv("ImageVersion", "local"),
+        "python": platform.python_version(),
+        "ffmpeg": proc.stdout.splitlines()[0].strip(),
+    }
+    return runtime, canonical_sha(runtime)
+
+
 def _media_entries(manifest: dict):
     yield "audio", manifest.get("audio")
     for shot in manifest.get("shots") or []:
@@ -144,6 +161,7 @@ def build_bundle(
     engine_commit = git_commit(engine_root)
     project_tree = git_tree(input_root, project)
     toolchain, toolchain_sha = _toolchain(engine_root)
+    runtime, runtime_sha = _runtime_toolchain()
     output.mkdir(parents=True, exist_ok=True)
     objects = output / "objects"
     objects.mkdir(parents=True, exist_ok=True)
@@ -180,6 +198,7 @@ def build_bundle(
         "source_manifest_sha256": sha(manifest_path),
         "project_tree_git_sha": project_tree,
         "toolchain_sha256": toolchain_sha,
+        "runtime_toolchain_sha256": runtime_sha,
     }
     staged_path = output / "STAGED_MANIFEST.json"
     staged_path.write_text(json.dumps(staged_manifest, indent=2) + "\n", encoding="utf-8")
@@ -196,6 +215,8 @@ def build_bundle(
         "staged_manifest_sha256": sha(staged_path),
         "toolchain": toolchain,
         "toolchain_sha256": toolchain_sha,
+        "runtime_toolchain": runtime,
+        "runtime_toolchain_sha256": runtime_sha,
         "media": media,
         "media_bundle_sha256": canonical_sha(bundle_identity),
         "audio_sha256": media["audio"]["sha256"],
@@ -232,7 +253,7 @@ def verify_bundle(
     if lineage.get("schema") != SCHEMA:
         raise LineageError("unknown render lineage schema")
     for name in ("manifest_sha256", "staged_manifest_sha256", "toolchain_sha256",
-                 "media_bundle_sha256", "audio_sha256"):
+                 "media_bundle_sha256", "audio_sha256", "runtime_toolchain_sha256"):
         if not HEX64.fullmatch(str(lineage.get(name) or "")):
             raise LineageError("invalid lineage digest: " + name)
     for name in ("source_commit_sha", "engine_commit_sha", "project_tree_git_sha"):
@@ -248,6 +269,7 @@ def verify_bundle(
         "source_manifest_sha256": lineage["manifest_sha256"],
         "project_tree_git_sha": lineage["project_tree_git_sha"],
         "toolchain_sha256": lineage["toolchain_sha256"],
+        "runtime_toolchain_sha256": lineage["runtime_toolchain_sha256"],
     }
     if declared != expected_declared:
         raise LineageError("staged manifest lineage fields conflict")
@@ -261,6 +283,9 @@ def verify_bundle(
         toolchain, digest = _toolchain(engine_root.resolve())
         if toolchain != lineage.get("toolchain") or digest != lineage["toolchain_sha256"]:
             raise LineageError("render toolchain differs from run lineage")
+        runtime, runtime_digest = _runtime_toolchain()
+        if runtime != lineage.get("runtime_toolchain") or runtime_digest != lineage["runtime_toolchain_sha256"]:
+            raise LineageError("runner/Python/FFmpeg runtime differs from run lineage")
     if project is not None:
         if source_root is None:
             raise LineageError("project verification requires source checkout")
@@ -314,6 +339,7 @@ def receipt_identity(lineage: dict, lineage_path: Path) -> dict:
         "manifest_sha256": lineage["manifest_sha256"],
         "staged_manifest_sha256": lineage["staged_manifest_sha256"],
         "toolchain_sha256": lineage["toolchain_sha256"],
+        "runtime_toolchain_sha256": lineage["runtime_toolchain_sha256"],
         "media_bundle_sha256": lineage["media_bundle_sha256"],
     }
 

@@ -4,7 +4,7 @@
 
 ## Technical proof versus finished film
 
-- `mainv2-real-render.yml` and the Director-gated parallel workflow publish **only a prerelease** under `lab-real-film-<run-id>`. Their `human_visual_approval=false` and `production_complete=false` are intentional.
+- The operator-facing **Canonical Production Candidate (Director + Parallel)** workflow publishes **only a prerelease** under `lab-real-film-<run-id>`. The single-runner workflow is retained as compatibility proof only. Their `human_visual_approval=false` and `production_complete=false` are intentional.
 - The parallel workflow resolves engine/source commits once, stages every original media object by SHA-256 into one short-lived runner bundle, and records `RUN_LINEAGE.json`. Every shard and fan-in must match its source commit, engine commit, project tree, original/staged manifests, toolchain, audio bytes, clip bytes, FX lock and execution ledger. Production-branch copies of render scripts are never executed.
 - Private media may use an HTTPS host named in `AIVE_MEDIA_AUTH_HOSTS`; the credential is supplied only through the `AIVE_MEDIA_TOKEN` Actions secret and is never written into the manifest or lineage record. GitHub release assets continue to use the workflow token fallback.
 - The six-second smoke and 30-second Irish Eyes fixture are always **non-promotable**. Their partial timeline, looping clips and/or undeclared primary-media coverage cannot pass the production release gate.

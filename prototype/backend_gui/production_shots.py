@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build canonical shot packages from a locked script and real media evidence."""
 from __future__ import annotations
-import json, shutil
+import json, shutil, tempfile
 from pathlib import Path
 import server as base
 import production_project
@@ -46,13 +46,20 @@ def build_packages(project_id,assignments):
     if current.get("stage")!="STORYBOARD_LOCKED":raise RuntimeError("shot packages require STORYBOARD_LOCKED stage")
     script=_read_json(project_dir/"SCRIPT.json",{})
     if not script.get("locked") or not isinstance(script.get("entries"),list) or not script.get("entries"):raise RuntimeError("locked SCRIPT.json is required")
-    by_shot={str(x.get("shot_id")):x for x in assignments if isinstance(x,dict) and x.get("shot_id")};asset_map=_assets(project_id)
-    package_root=project_dir/"shot_packages"
-    if package_root.exists():shutil.rmtree(package_root)
-    package_root.mkdir(parents=True,exist_ok=True);package_paths=[];used_assets=set()
+    entries=script["entries"];shot_ids=[str(x.get("shot_id") or "").strip() for x in entries if isinstance(x,dict)]
+    if len(shot_ids)!=len(entries) or any(not x for x in shot_ids):raise RuntimeError("script contains an entry without shot_id")
+    if len(set(shot_ids))!=len(shot_ids):raise RuntimeError("script contains duplicate shot_id values")
+    by_shot={}
+    for raw in assignments:
+        if not isinstance(raw,dict) or not str(raw.get("shot_id") or "").strip():continue
+        shot_id=str(raw["shot_id"]).strip()
+        if shot_id in by_shot:raise ValueError(f"duplicate assignment for {shot_id}")
+        by_shot[shot_id]=raw
+    unknown=sorted(set(by_shot)-set(shot_ids))
+    if unknown:raise ValueError("assignments reference unknown script shots: "+", ".join(unknown))
+    asset_map=_assets(project_id);prepared=[];used_assets=set()
     for entry in script["entries"]:
         shot_id=str(entry.get("shot_id") or "").strip()
-        if not shot_id:raise RuntimeError("script contains an entry without shot_id")
         assignment=by_shot.get(shot_id,{});asset_ids=assignment.get("asset_ids") if isinstance(assignment.get("asset_ids"),list) else []
         if not asset_ids:raise ValueError(f"{shot_id} requires at least one real media asset")
         evidence=[]
@@ -63,16 +70,37 @@ def build_packages(project_id,assignments):
             if asset.get("creative_status")=="rejected":raise RuntimeError(f"{shot_id} cannot use rejected asset {asset.get('filename') or asset_id}")
             origin=str(asset.get("origin") or "ingested"); evidence_status="generated" if origin=="generated" else str(assignment.get("status") or "ingested")
             used_assets.add(str(asset_id));evidence.append({"asset_id":str(asset_id),"uri":f"aive://asset/{asset_id}","name":asset.get("filename"),"sha256":asset.get("sha256"),"status":evidence_status,"role":str(assignment.get("role") or asset.get("role") or "scripted_visual_media"),"content_type":asset.get("content_type"),"origin":origin,"creative_status":asset.get("creative_status") or "available"})
-        pkg=package_root/shot_id;pkg.mkdir(parents=True,exist_ok=True)
-        _write_json(pkg/"package.json",{"schema":"aivideoedit.shot-package.v1","shot_id":shot_id,"script_entry":entry,"media_evidence":evidence,"build_notes":str(assignment.get("notes") or "").strip(),"built_at":base.now()});package_paths.append(pkg/"package.json")
-    state_path=project_dir/"PROJECT_STATE.json";state=_read_json(state_path,{})
-    state["shot_package_count"]=len(package_paths);state["shot_packages_built"]=True;state["media_evidence_verified"]=True;state["shot_package_asset_count"]=len(used_assets);_write_json(state_path,state)
-    commit=production_project._git_commit_paths(engine,package_paths+[state_path],"Build real-media shot packages");production_project._clear_guard_marker(engine)
-    narrative=production_storyboard.run_narrative_guard(project_id)
-    if not narrative.get("ok"):
-        state["shot_packages_built"]=False;state["media_evidence_verified"]=False;_write_json(state_path,state);production_project._git_commit_paths(engine,[state_path],"Reject invalid shot package evidence")
-        raise RuntimeError("canonical narrative guard rejected shot packages: "+str(narrative.get("stdout") or narrative.get("stderr") or "unknown error")[-1800:])
-    return {**status(project_id),"commit":commit,"narrative_guard":"PASS"}
+        prepared.append((shot_id,{"schema":"aivideoedit.shot-package.v1","shot_id":shot_id,"script_entry":entry,"media_evidence":evidence,"build_notes":str(assignment.get("notes") or "").strip(),"built_at":base.now()}))
+
+    package_root=project_dir/"shot_packages";state_path=project_dir/"PROJECT_STATE.json"
+    staging=Path(tempfile.mkdtemp(prefix=".shot_packages.staging-",dir=str(project_dir)))
+    backup=project_dir/(".shot_packages.backup-"+staging.name.rsplit("-",1)[-1])
+    previous_state=state_path.read_bytes() if state_path.is_file() else None
+    swapped=False
+    try:
+        for shot_id,payload in prepared:
+            _write_json(staging/shot_id/"package.json",payload)
+        if len(list(staging.glob("*/package.json")))!=len(prepared):raise RuntimeError("staged shot package coverage is incomplete")
+        if package_root.exists():package_root.replace(backup)
+        staging.replace(package_root);swapped=True
+        state=_read_json(state_path,{})
+        state["shot_package_count"]=len(prepared);state["shot_packages_built"]=True;state["media_evidence_verified"]=True;state["shot_package_asset_count"]=len(used_assets);_write_json(state_path,state)
+        narrative=production_storyboard.run_narrative_guard(project_id)
+        if not narrative.get("ok"):raise RuntimeError("canonical narrative guard rejected shot packages: "+str(narrative.get("stdout") or narrative.get("stderr") or "unknown error")[-1800:])
+        package_paths=[package_root/shot_id/"package.json" for shot_id,_payload in prepared]
+        commit=production_project._git_commit_paths(engine,package_paths+[state_path],"Build real-media shot packages")
+        production_project._clear_guard_marker(engine)
+        if backup.exists():shutil.rmtree(backup)
+        return {**status(project_id),"commit":commit,"narrative_guard":"PASS"}
+    except Exception:
+        if swapped and package_root.exists():shutil.rmtree(package_root)
+        if backup.exists():backup.replace(package_root)
+        if previous_state is None:state_path.unlink(missing_ok=True)
+        else:state_path.write_bytes(previous_state)
+        production_project._clear_guard_marker(engine)
+        raise
+    finally:
+        if staging.exists():shutil.rmtree(staging)
 
 def status(project_id):
     current,_engine,project_dir=_project(project_id);root=project_dir/"shot_packages";packages=[]

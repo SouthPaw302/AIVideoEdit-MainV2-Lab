@@ -1,0 +1,5 @@
+# Required-check environment lock (Python 3.11 / ubuntu-24.04)
+numpy==2.4.6
+opencv-python-headless==4.14.0.94
+pytest==9.1.1
+PyYAML==6.0.3

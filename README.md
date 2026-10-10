@@ -40,7 +40,7 @@ The production OS includes `general/reusable/DIRECTOR_SCAN_CANON.md`, a source-t
 
 This checkout is the **target** system: source lineage `AIVideoEdit/main → AIVideoEdit/MainV2 → AIVideoEdit-MainV2-Lab/main`. The original `MainV2` SHA is preserved as immutable import provenance; the **lab's own main** is now the bootstrap and render authority. The updated MainV2 models, FX, JEV, director system, GUI backend and tests are retained.
 
-The inherited workflows have been activated in `.github/workflows/`. To render real music footage (not a synthetic test pattern), run **MainV2 Lab — REAL Music Film Render** with a checked-in/hard-linked media manifest or HTTPS SHA-pinned sources. It produces a real H.264/AAC MP4, records QC and publishes a **review-only** prerelease on this lab repository.
+The inherited workflows remain available in `.github/workflows/`, but there is one operator-facing candidate route: **AIVideoEdit — Canonical Production Candidate (Director + Parallel)**. Run it with a locked `song/<slug>` or `project/<slug>` branch, project directory and SHA-pinned manifest. It resolves one immutable lineage, derives the shard matrix from the actual shot count, runs Director/Harness/JEV/FX/ONNX gates, and publishes a **review-only** prerelease. The single-runner, fixture, proof and harness workflows are compatibility or verification surfaces, not production entrypoints.
 
 Read [Lab Render Operator](docs/LAB_RENDER_OPERATOR.md) for the exact input contract, Batch-10 + FX process, runner list and acceptance/delivery gates. `main` remains system-only; actual song work stays scoped to its own branch and approved media. Never modify the original AIVideoEdit repository from this lab.
 

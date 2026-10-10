@@ -42,6 +42,15 @@ def main() -> int:
         raise RuntimeError("director/harness gate did not authorize shard rendering")
     from scripts.render_lineage import require_receipt_identity
     require_receipt_identity(gate, lineage, args.lineage)
+    shard_identity = {
+        "shard": next((row.get("shard") for row in gate.get("shard_plan", [])
+                       if row.get("start") == (manifest.get("shard") or {}).get("start_index")
+                       and row.get("end") == (manifest.get("shard") or {}).get("end_index")), None),
+        "start": (manifest.get("shard") or {}).get("start_index"),
+        "end": (manifest.get("shard") or {}).get("end_index"),
+    }
+    if shard_identity["shard"] is None:
+        raise RuntimeError("shard range was not authorized by the locked dynamic plan")
     lock_path = args.director_gate.parent / "FX_LOCK.json"
     if not lock_path.is_file() or canonical.digest(lock_path) != gate.get("fx_lock_sha256"):
         raise RuntimeError("shared canonical FX lock is missing or changed")
@@ -118,6 +127,7 @@ def main() -> int:
         "production_id": lineage.get("production_id"),
         "start_index": (manifest.get("shard") or {}).get("start_index"),
         "end_index": (manifest.get("shard") or {}).get("end_index"),
+        "shard": shard_identity["shard"],
         "start_frame": (manifest.get("shard") or {}).get("start_frame"),
         "frame_count": total,
         "duration_seconds": round(total / fps, 6),

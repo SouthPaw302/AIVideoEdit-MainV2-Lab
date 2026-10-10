@@ -100,7 +100,7 @@ def preflight(manifest, receipt, review, contract, *, source_sha, engine_sha, au
         require(receipt.get("lineage_schema") == "aivideoedit.render-lineage.v1",
                 "unknown parallel render lineage")
         for name in ("lineage_sha256", "manifest_sha256", "staged_manifest_sha256",
-                     "toolchain_sha256", "media_bundle_sha256"):
+                     "toolchain_sha256", "runtime_toolchain_sha256", "media_bundle_sha256"):
             require(bool(HEX64.fullmatch(str(receipt.get(name) or ""))),
                     "missing immutable parallel lineage: " + name)
         require(bool(HEX40.fullmatch(str(receipt.get("project_tree_git_sha") or ""))),
@@ -195,7 +195,7 @@ def validate_parallel_lineage(receipt, lineage_path):
             "parallel render lineage schema conflict")
     for name in ("source_commit_sha", "engine_commit_sha", "project_tree_git_sha",
                  "manifest_sha256", "staged_manifest_sha256", "toolchain_sha256",
-                 "media_bundle_sha256", "audio_sha256", "clip_sha256"):
+                 "runtime_toolchain_sha256", "media_bundle_sha256", "audio_sha256", "clip_sha256"):
         require(lineage.get(name) == receipt.get(name),
                 "parallel render lineage conflict: " + name)
     return lineage
