@@ -1,0 +1,40 @@
+name: MainV2 Lab — Director Source-Led Proof Contract
+
+on:
+  push:
+    branches:
+      - song/camion-new
+    paths:
+      - scripts/director_source_led_render.py
+      - projects/camion-new/ORIGINAL_SOURCE_SHA256.json
+      - reviews/camion-new-candidate04-source-led-director.md
+      - .github/workflows/director-source-led-code-contract.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-source-led-code:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile and validate source-led renderer
+        run: python -m py_compile scripts/director_source_led_render.py
+      - name: Check expected source hash inventory
+        run: |
+          python - <<'PY'
+          import json,re
+          data=json.load(open("projects/camion-new/ORIGINAL_SOURCE_SHA256.json"))
+          assert len(data)==30
+          assert [x["id"] for x in data]==[f"EC-{n:02d}" for n in range(1,31)]
+          assert len({x["sha256"] for x in data})==30
+          for shot in data:
+              assert shot["size"]==[1672,941]
+              assert shot["name"].endswith(".png")
+              assert re.fullmatch(r"[0-9a-f]{64}",shot["sha256"])
+          print("SOURCE-LED CODE CONTRACT: PASS")
+          print("Private original media must be staged explicitly; none available to this check.")
+          print("Human visual acceptance remains pending.")
+          PY
