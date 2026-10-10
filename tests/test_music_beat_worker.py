@@ -33,3 +33,8 @@ def test_deterministic_fallback_tracks_120_bpm(tmp_path:Path):
     assert 115 <= evidence["bpm"] <= 125
     assert len(evidence["beat_positions_seconds"]) >= 10
     assert evidence["authority"]=="evidence_only"
+    controls=evidence["audio_controls"]
+    assert controls["source"]=="decoded_pcm_rms_flux"
+    assert len(controls["points"])>100
+    assert max(p["energy"] for p in controls["points"])>min(p["energy"] for p in controls["points"])
+    assert max(p["transient"] for p in controls["points"])>0

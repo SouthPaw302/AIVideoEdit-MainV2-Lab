@@ -78,11 +78,14 @@ def _approval_from_github(repo, comment_id, token):
     return data
 
 
-def preflight(manifest, receipt, review, contract, *, source_sha, engine_sha, audio_duration, comment):
+def preflight(manifest, receipt, review, contract, *, source_sha, engine_sha, audio_duration, comment, visual_qc):
     """Pure validation for tests and the CI media/approval inspector."""
     policy = contract.get("release_gate_policy", {})
     for name in ("fail_closed", "full_song_required", "real_source_required",
-                 "human_verified_comment_required", "actual_export_inspection_required"):
+                 "human_verified_comment_required", "actual_export_inspection_required",
+                 "measured_time_varying_audio_controls_required", "visible_locked_fx_evidence_required",
+                 "temporal_motion_evidence_required", "transition_continuity_evidence_required",
+                 "numeric_qc_cannot_grant_artistic_approval"):
         require(policy.get(name) is True, "production contract missing mandatory " + name)
     require(contract.get("schema") == "aivideoedit.production-contract.v3", "unknown production contract")
     require(manifest.get("schema") == "aivideoedit.real-render.v1", "unknown source manifest")
@@ -113,6 +116,19 @@ def preflight(manifest, receipt, review, contract, *, source_sha, engine_sha, au
     require(receipt.get("status") == "TECHNICAL_RENDER_PASS_VISUAL_REVIEW_PENDING" and
             receipt.get("production_complete") is False and
             receipt.get("human_visual_approval") is False, "technical proof must not self-certify release")
+    require(visual_qc.get("schema") == "aivideoedit.visual-qc-evidence.v1" and
+            visual_qc.get("status") == "PASS", "technical visual QC evidence did not pass")
+    require(visual_qc.get("candidate_sha256") == receipt.get("render_sha256"),
+            "technical visual QC targets different export bytes")
+    require(visual_qc.get("fx_visibility_proof_sha256") == receipt.get("fx_visibility_proof_sha256"),
+            "technical visual QC references different paired FX proof bytes")
+    require(visual_qc.get("human_visual_approval") is False and
+            visual_qc.get("artistic_approval") is False and
+            visual_qc.get("release_authority") is False,
+            "numeric QC must not grant artistic or release approval")
+    checks = visual_qc.get("checks")
+    require(isinstance(checks, dict) and bool(checks) and all(value is True for value in checks.values()),
+            "technical visual QC checks are incomplete")
     require(bool(HEX64.fullmatch(receipt.get("render_sha256", ""))), "missing export digest")
     require(review.get("approved_export_sha256") == receipt["render_sha256"], "review does not match export bytes")
     require(review.get("decision") == "ACCEPT" and review.get("watched_entire_film") is True and
@@ -212,6 +228,8 @@ def gate(args):
     require(export.is_file() and sha(export) == receipt.get("render_sha256"), "missing or changed actual export")
     require(sha(args.fx_lock) == receipt.get("fx", {}).get("lock_sha256"), "FX lock no longer matches render")
     require(sha(args.ledger) == receipt.get("ledger_sha256"), "executed FX/ONNX/JEV evidence changed")
+    require(sha(args.visual_qc) == receipt.get("visual_qc_sha256"), "technical visual QC evidence changed")
+    require(sha(args.fx_proof) == receipt.get("fx_visibility_proof_sha256"), "paired FX proof bundle changed")
     validate_parallel_lineage(receipt, args.lineage)
     ledger = load(args.ledger)
     require(ledger.get("schema") == "aivideoedit.production-execution-ledger.v1" and
@@ -241,7 +259,7 @@ def gate(args):
     comment = _approval_from_github(args.repository, review.get("approval_comment_id"), os.getenv("GITHUB_TOKEN"))
     evidence = preflight(manifest, receipt, review, contract, source_sha=args.source_sha,
                          engine_sha=args.engine_sha, audio_duration=media_duration(audio_info),
-                         comment=comment)
+                         comment=comment, visual_qc=load(args.visual_qc))
     require(comment.get("html_url", "").startswith("https://github.com/" + args.repository + "/"),
             "review comment not owned by this repository")
     info = probe(export, frames=True)
@@ -276,7 +294,7 @@ def gate(args):
 def main():
     p = argparse.ArgumentParser()
     for name in ("manifest", "receipt", "export", "review", "fx-lock",
-                 "ledger", "contact-sheet", "source-root", "source-sha", "source-branch",
+                 "ledger", "visual-qc", "fx-proof", "contact-sheet", "source-root", "source-sha", "source-branch",
                  "engine-sha", "repository", "output"):
         p.add_argument("--" + name, required=True)
     p.add_argument("--lineage")

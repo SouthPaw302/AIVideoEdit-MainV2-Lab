@@ -319,6 +319,7 @@ jobs:
             --out "$RUNNER_TEMP/final"
 
       - name: Retain actual MP4 and all receipts
+        if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: mainv2-parallel-real-film-${{ github.run_id }}
@@ -350,6 +351,8 @@ jobs:
             "$root/render_receipt.json" \
             "$root/contact_sheet.jpg" \
             "$root/PRODUCTION_EXECUTION_LEDGER.json" \
+            "$root/VISUAL_QC_EVIDENCE.json" \
+            "$root/FX_VISIBILITY_PROOF.zip" \
             "$root/DIRECTOR_HARNESS_RECEIPT.json" \
             "$root/FX_LOCK.json" \
             "$root/RUN_LINEAGE.json" \

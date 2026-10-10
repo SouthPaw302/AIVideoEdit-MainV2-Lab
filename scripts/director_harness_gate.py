@@ -188,7 +188,8 @@ def main() -> int:
         provision = subprocess.run([sys.executable, "-m", "general.reusable.tools.model_provision", "music-beat-onnx-v1"], cwd=str(engine), env=env, capture_output=True, text=True, timeout=600)
         if provision.returncode:
             raise RuntimeError("pinned ONNX provision failed: " + (provision.stderr or provision.stdout)[-1800:])
-        from scripts.render_real_music_film import stage
+        from scripts.render_real_music_film import stage, validate_manifest
+        from scripts.render_quality import AudioControls, inspect_source_media, manifest_fx_disposition
         from general.reusable.tools.music_beat_worker import analyze_music
         audio = stage(staged_manifest["audio"], input_root=media_root, cache=out / "verified_inputs")
         if sha(audio) != lineage["audio_sha256"]:
@@ -197,6 +198,14 @@ def main() -> int:
         if music_evidence.get("engine") != "beat_this_onnx" or music_evidence.get("model_resolution", {}).get("used_fallback"):
             raise RuntimeError("pinned Beat This ONNX evidence is missing or used fallback")
         (out / "MUSIC_BEAT_EVIDENCE.json").write_text(json.dumps(music_evidence, indent=2) + "\n", encoding="utf-8")
+        music_controls = AudioControls(music_evidence)
+        _fps, width, height, _counts = validate_manifest(staged_manifest)
+        staged_sources = [
+            stage(shot["source"], input_root=media_root, cache=out / "verified_inputs")
+            for shot in staged_manifest["shots"]
+        ]
+        source_media_qc = inspect_source_media(staged_manifest, staged_sources, width, height)
+        (out / "SOURCE_MEDIA_QC.json").write_text(json.dumps(source_media_qc, indent=2) + "\n", encoding="utf-8")
 
         from general.reusable.tools.jev_decision import decide
         from general.reusable.tools.harness_router import route_jev
@@ -223,6 +232,7 @@ def main() -> int:
         lock, effects, transitions = fx_lock(manifest, out)
         if not lock:
             raise RuntimeError("canonical FX lock is empty")
+        director_fx_disposition = manifest_fx_disposition(manifest)
         receipt = {
             "schema": "aivideoedit.director-harness-receipt.v1",
             "branch": os.environ.get("SOURCE_REF") or os.environ.get("GITHUB_REF_NAME") or "production/unknown",
@@ -235,9 +245,13 @@ def main() -> int:
             "jev": jev,
             "harness_route": route,
             "music_evidence_sha256": sha(out / "MUSIC_BEAT_EVIDENCE.json"),
+            "music_controls": music_controls.summary(),
+            "source_media_qc_sha256": sha(out / "SOURCE_MEDIA_QC.json"),
+            "source_media_qc": source_media_qc,
             "fx_lock_sha256": sha(lock),
             "effects": effects,
             "transitions": transitions,
+            "director_fx_disposition": director_fx_disposition,
             "parallel_shards": len(shard_plan["include"]),
             "shard_plan": shard_plan["include"],
             "shard_plan_sha256": sha(shard_plan_path),

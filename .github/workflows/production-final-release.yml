@@ -31,7 +31,7 @@ concurrency:
 jobs:
   gate-and-release:
     name: Complete song and independently approved release ONLY
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 90
     environment: production-release
     steps:
@@ -74,10 +74,12 @@ jobs:
 
       - name: Install independent decoded media inspector
         shell: bash
+        env:
+          FFMPEG_APT_VERSION: "7:6.1.1-3ubuntu5"
         run: |
           set -euo pipefail
           sudo apt-get update -y
-          sudo apt-get install -y ffmpeg
+          sudo apt-get install -y --allow-downgrades "ffmpeg=$FFMPEG_APT_VERSION"
           ffprobe -version
           ffmpeg -version
 
@@ -94,10 +96,12 @@ jobs:
           gh release download "$PROOF_TAG" --repo "$GITHUB_REPOSITORY" \
             --dir "$RUNNER_TEMP/candidate" --pattern real_music_film.mp4 \
             --pattern render_receipt.json --pattern FX_LOCK.json \
-            --pattern PRODUCTION_EXECUTION_LEDGER.json --pattern contact_sheet.jpg
+            --pattern PRODUCTION_EXECUTION_LEDGER.json --pattern VISUAL_QC_EVIDENCE.json \
+            --pattern FX_VISIBILITY_PROOF.zip \
+            --pattern contact_sheet.jpg
           gh release download "$PROOF_TAG" --repo "$GITHUB_REPOSITORY" \
             --dir "$RUNNER_TEMP/candidate" --pattern RUN_LINEAGE.json || true
-          for f in real_music_film.mp4 render_receipt.json FX_LOCK.json PRODUCTION_EXECUTION_LEDGER.json contact_sheet.jpg; do
+          for f in real_music_film.mp4 render_receipt.json FX_LOCK.json PRODUCTION_EXECUTION_LEDGER.json VISUAL_QC_EVIDENCE.json FX_VISIBILITY_PROOF.zip contact_sheet.jpg; do
             test -s "$RUNNER_TEMP/candidate/$f"
           done
 
@@ -160,6 +164,8 @@ jobs:
             --export "$RUNNER_TEMP/candidate/real_music_film.mp4" \
             --fx-lock "$RUNNER_TEMP/candidate/FX_LOCK.json" \
             --ledger "$RUNNER_TEMP/candidate/PRODUCTION_EXECUTION_LEDGER.json" \
+            --visual-qc "$RUNNER_TEMP/candidate/VISUAL_QC_EVIDENCE.json" \
+            --fx-proof "$RUNNER_TEMP/candidate/FX_VISIBILITY_PROOF.zip" \
             --contact-sheet "$RUNNER_TEMP/candidate/contact_sheet.jpg" \
             --output "$RUNNER_TEMP/candidate/RELEASE_GATE.json" "${lineage_args[@]}"
           test -s "$RUNNER_TEMP/candidate/RELEASE_GATE.json"
@@ -177,7 +183,8 @@ jobs:
           tag="production-$id-$GITHUB_RUN_ID"
           assets=("$c/real_music_film.mp4" "$c/RELEASE_GATE.json" \
             "$c/render_receipt.json" "$c/FX_LOCK.json" \
-            "$c/PRODUCTION_EXECUTION_LEDGER.json" "$c/contact_sheet.jpg")
+            "$c/PRODUCTION_EXECUTION_LEDGER.json" "$c/VISUAL_QC_EVIDENCE.json" \
+            "$c/FX_VISIBILITY_PROOF.zip" "$c/contact_sheet.jpg")
           if [ -f "$c/RUN_LINEAGE.json" ]; then assets+=("$c/RUN_LINEAGE.json"); fi
           gh release create "$tag" \
             "${assets[@]}" \

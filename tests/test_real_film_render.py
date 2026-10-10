@@ -23,3 +23,16 @@ def test_fail_closed_for_placeholder_and_invalid_duration():
     base["shots"][0]["duration_seconds"]=0
     with pytest.raises(ValueError,match="duration"):
         validate_manifest(base)
+
+def test_transition_requires_real_incoming_shot_and_bounded_duration():
+    base={"schema":"aivideoedit.real-render.v1","render_authorization":"explicit_user_render_request",
+          "audio":{"path":"song.wav","sha256":"0"*64},
+          "shots":[{"id":"one","source":{"path":"a.mp4","sha256":"1"*64},
+                    "duration_seconds":1,"transition_out":"blend"}],
+          "output":{"fps":24,"width":1280,"height":720}}
+    with pytest.raises(ValueError,match="last shot"):
+        validate_manifest(base)
+    base["shots"].append({"id":"two","source":{"path":"b.mp4","sha256":"2"*64},"duration_seconds":1})
+    base["shots"][0]["transition_seconds"]=2
+    with pytest.raises(ValueError,match="transition duration"):
+        validate_manifest(base)

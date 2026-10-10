@@ -105,6 +105,7 @@ def test_same_real_bytes_and_shas_reach_release_preflight(locked_run):
         "fps": 24,
         "fx": {"lock_sha256": fx_sha},
         "ledger_sha256": ledger_sha,
+        "fx_visibility_proof_sha256": fx_sha,
         **receipt_identity(lineage, bundle / "RUN_LINEAGE.json"),
     }
     validate_parallel_lineage(receipt, bundle / "RUN_LINEAGE.json")
@@ -136,6 +137,13 @@ def test_same_real_bytes_and_shas_reach_release_preflight(locked_run):
         engine_sha=lineage["engine_commit_sha"],
         audio_duration=4,
         comment=comment,
+        visual_qc={
+            "schema": "aivideoedit.visual-qc-evidence.v1", "status": "PASS",
+            "candidate_sha256": export_sha,
+            "fx_visibility_proof_sha256": fx_sha,
+            "checks": {"source": True, "audio": True, "fx": True, "motion": True, "seams": True},
+            "human_visual_approval": False, "artistic_approval": False, "release_authority": False,
+        },
     )
     assert evidence["frames"] == 96
 

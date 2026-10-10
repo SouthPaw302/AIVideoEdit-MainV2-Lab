@@ -28,6 +28,7 @@ def main() -> int:
     from general.reusable.fx_v2.executor import FXExecutor
     from general.reusable.fx_v2.runtime import FXContext
     from general.reusable.tools.execution_ledger import record
+    from scripts.render_quality import AudioControls, QualityCollector, transition_prerolls
 
     lineage = verify_bundle(
         args.lineage, args.staged_manifest, args.input_root,
@@ -54,6 +55,10 @@ def main() -> int:
     lock_path = args.director_gate.parent / "FX_LOCK.json"
     if not lock_path.is_file() or canonical.digest(lock_path) != gate.get("fx_lock_sha256"):
         raise RuntimeError("shared canonical FX lock is missing or changed")
+    music_path = args.director_gate.parent / "MUSIC_BEAT_EVIDENCE.json"
+    if not music_path.is_file() or canonical.digest(music_path) != gate.get("music_evidence_sha256"):
+        raise RuntimeError("measured music evidence is missing or changed")
+    music_controls = AudioControls(json.loads(music_path.read_text(encoding="utf-8")))
     locked_effects = {str(x.get("id")) for x in gate.get("effects", []) if isinstance(x, dict)}
     locked_transitions = {str(x.get("id")) for x in gate.get("transitions", []) if isinstance(x, dict)}
     for shot in manifest["shots"]:
@@ -86,15 +91,27 @@ def main() -> int:
         raise RuntimeError("unable to open shard video encoder")
     srcs = [canonical.VisualSource(path, shot, width, height) for path, shot in zip(sources, manifest["shots"])]
     next_src = canonical.VisualSource(next_source, boundary, width, height) if next_source and boundary else None
+    first_preroll = float((manifest.get("shard") or {}).get("entry_preroll_seconds") or 0.0)
+    prerolls = transition_prerolls(manifest["shots"], first_preroll)
+    quality = QualityCollector(fps, manifest["shots"], first_preroll=first_preroll,
+                               proof_dir=args.out / "fx_proofs")
+    timeline_start = float((manifest.get("shard") or {}).get("start_seconds") or 0.0)
+    global_start_frame = int((manifest.get("shard") or {}).get("start_frame") or 0)
     total = 0
     try:
         for i, (shot, count) in enumerate(zip(manifest["shots"], counts)):
             for n in range(count):
                 t = n / fps
-                frame = srcs[i].at(t)
-                ctx = FXContext(t=t, duration=count / fps, frame_index=total, fps=fps, energy=0.35, transient=0.1)
+                frame = srcs[i].at(prerolls[i] + t)
+                quality.observe_source(shot["id"], frame, n)
+                energy, transient = music_controls.at(timeline_start + total / fps)
+                global_frame = global_start_frame + total
+                ctx = FXContext(t=t, duration=count / fps, frame_index=global_frame, fps=fps, energy=energy, transient=transient)
                 for spec in shot.get("fx", []):
+                    before = frame.copy()
                     frame = fx.apply_frame(spec["id"], frame, ctx, params=spec.get("params") or {})
+                    quality.effect(spec["id"], before, frame, global_frame, kind="effect",
+                                   params=spec.get("params") or {})
                 transition = shot.get("transition_out")
                 transition_frames = min(max(1, round(float(shot.get("transition_seconds", 0.5)) * fps)), count)
                 if transition and n >= count - transition_frames:
@@ -106,7 +123,11 @@ def main() -> int:
                         incoming = next_src.at(relative)
                     else:
                         raise RuntimeError("transition at shard boundary has no incoming source")
+                    before = frame.copy()
                     frame = fx.apply_transition(transition, frame, incoming, into, ctx)
+                    quality.effect(transition, before, frame, global_frame, kind="transition",
+                                   params=shot.get("transition_params") or {})
+                quality.observe_output(shot["id"], frame, n)
                 writer.write(frame)
                 total += 1
     finally:
@@ -139,6 +160,8 @@ def main() -> int:
         "fx_lock_sha256": canonical.digest(lock_path),
         "director_harness_receipt_sha256": canonical.digest(args.director_gate),
         "music_evidence_sha256": gate.get("music_evidence_sha256"),
+        "music_controls": music_controls.summary(total),
+        "technical_visual_evidence": quality.summary(),
         "audio_sha256": canonical.digest(audio),
         "clip_sha256": {
             shot["id"]: canonical.digest(source)

@@ -20,6 +20,9 @@ production = json.loads((ROOT / "general/reusable/PRODUCTION_CONTRACT.json").rea
 policy = production.get("release_gate_policy", {})
 for key in ("fail_closed", "full_song_required", "real_source_required",
             "human_verified_comment_required", "actual_export_inspection_required",
+            "measured_time_varying_audio_controls_required", "visible_locked_fx_evidence_required",
+            "temporal_motion_evidence_required", "transition_continuity_evidence_required",
+            "numeric_qc_cannot_grant_artistic_approval",
             "production_contract_is_top_level_authority", "final_master_archive_4k_blocked_without_pass"):
     assert policy.get(key) is True, f"Missing production release policy: {key}"
 assert (ROOT / "scripts/release_gate.py").is_file(), "missing release implementation"

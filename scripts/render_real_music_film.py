@@ -132,13 +132,19 @@ def validate_manifest(m):
     if not (1 <= fps <= 60 and 160 <= width <= 3840 and 90 <= height <= 2160 and width % 2 == 0 and height % 2 == 0):
         raise ValueError("invalid output geometry")
     frames = []
-    for shot in m["shots"]:
+    for index, shot in enumerate(m["shots"]):
         d = float(shot.get("duration_seconds") or 0)
         n = round(d * fps)
         if n < 1 or abs(n / fps - d) > 0.03:
             raise ValueError("shot duration must resolve to whole frames: " + shot["id"])
         if shot.get("source") is None:
             raise ValueError("real source missing: " + shot["id"])
+        if shot.get("transition_out"):
+            if index + 1 >= len(m["shots"]):
+                raise ValueError("last shot cannot transition to a missing incoming source: " + shot["id"])
+            transition_seconds = float(shot.get("transition_seconds", 0.5))
+            if transition_seconds <= 0 or transition_seconds > d:
+                raise ValueError("transition duration is invalid: " + shot["id"])
         frames.append(n)
     if sum(frames) > 60 * 60 * fps:
         raise ValueError("render exceeds one hour; split into approved bounded jobs")
@@ -257,6 +263,10 @@ def render(manifest_path, input_root, out, *, require_onnx=False):
     from general.reusable.fx_v2.executor import FXExecutor
     from general.reusable.fx_v2.runtime import FXContext
     from general.reusable.tools.execution_ledger import record
+    from scripts.render_quality import (
+        AudioControls, QualityCollector, bundle_fx_proofs, combine_visual_evidence,
+        inspect_source_media, manifest_fx_disposition, transition_prerolls,
+    )
 
     out.mkdir(parents=True, exist_ok=True)
     m = json.loads(manifest_path.read_text(encoding="utf-8"))
@@ -264,6 +274,8 @@ def render(manifest_path, input_root, out, *, require_onnx=False):
     source_cache = out / "verified_inputs"
     audio = stage(m["audio"], input_root=input_root, cache=source_cache)
     sources = [stage(s["source"], input_root=input_root, cache=source_cache) for s in m["shots"]]
+    source_media_qc = inspect_source_media(m, sources, width, height)
+    (out / "SOURCE_MEDIA_QC.json").write_text(json.dumps(source_media_qc, indent=2) + "\n", encoding="utf-8")
     audio_info = probe(audio)
     streams = audio_info.get("streams") or []
     if not any(s.get("codec_type") == "audio" for s in streams):
@@ -274,6 +286,7 @@ def render(manifest_path, input_root, out, *, require_onnx=False):
     if audio_offset < 0 or audio_duration + 0.05 < audio_offset + duration:
         raise RuntimeError("source song is shorter than approved picture duration")
     lock_file, locked_fx, locked_transitions = fx_lock(m, out)
+    fx_declared = any(s.get("fx") or s.get("transition_out") for s in m["shots"])
     ledger = out / "PRODUCTION_EXECUTION_LEDGER.json"
     for x in locked_fx + locked_transitions:
         record(ledger, component="fx", subject=x["id"], stage="selected",
@@ -281,12 +294,14 @@ def render(manifest_path, input_root, out, *, require_onnx=False):
         record(ledger, component="fx", subject=x["id"], stage="verified",
                actor="fx_precompile_gate", consumer="canonical_fx_executor", required_execution=True)
     music_evidence = None
-    if require_onnx:
+    music_controls = None
+    if require_onnx or fx_declared:
         from general.reusable.tools.music_beat_worker import analyze_music
         music_evidence = analyze_music(audio)
-        if music_evidence.get("engine") != "beat_this_onnx" or music_evidence.get("model_resolution", {}).get("used_fallback"):
+        if require_onnx and (music_evidence.get("engine") != "beat_this_onnx" or music_evidence.get("model_resolution", {}).get("used_fallback")):
             raise RuntimeError("real Beat This ONNX inference required; fallback is forbidden")
         (out / "MUSIC_BEAT_EVIDENCE.json").write_text(json.dumps(music_evidence, indent=2) + "\n")
+        music_controls = AudioControls(music_evidence)
         record(ledger, component="onnx", subject="music-beat-onnx-v1", stage="executed",
                actor="music_beat_worker", consumer="render_music_evidence",
                evidence={"bpm": music_evidence.get("bpm"), "beats": len(music_evidence.get("beat_positions_seconds") or [])},
@@ -295,7 +310,6 @@ def render(manifest_path, input_root, out, *, require_onnx=False):
                actor="render_music_evidence", consumer="render_receipt")
     # JEV is the bounded go/no-go director decision, not a replacement for real QC.
     from general.reusable.tools.jev_decision import decide
-    fx_declared = any(s.get("fx") or s.get("transition_out") for s in m["shots"])
     jev = decide({
         "gate": "PASS",
         "checks": {
@@ -324,21 +338,30 @@ def render(manifest_path, input_root, out, *, require_onnx=False):
     if not writer.isOpened():
         raise RuntimeError("unable to open video encoder")
     srcs = [VisualSource(path, shot, width, height) for path, shot in zip(sources, m["shots"])]
+    prerolls = transition_prerolls(m["shots"])
+    quality = QualityCollector(fps, m["shots"], proof_dir=out / "fx_proofs")
     total = 0
     try:
         for i, (shot, count) in enumerate(zip(m["shots"], counts)):
             for n in range(count):
                 t = n / fps
-                frame = srcs[i].at(t)
-                ctx = FXContext(t=t, duration=count / fps, frame_index=total, fps=fps, energy=0.35, transient=0.1)
+                frame = srcs[i].at(prerolls[i] + t)
+                quality.observe_source(shot["id"], frame, n)
+                energy, transient = music_controls.at(audio_offset + total / fps) if music_controls else (0.0, 0.0)
+                ctx = FXContext(t=t, duration=count / fps, frame_index=total, fps=fps, energy=energy, transient=transient)
                 for spec in shot.get("fx", []):
+                    before = frame.copy()
                     frame = fx.apply_frame(spec["id"], frame, ctx, params=spec.get("params") or {})
+                    quality.effect(spec["id"], before, frame, total, kind="effect", params=spec.get("params") or {})
                 transition = shot.get("transition_out")
                 transition_frames = min(max(1, round(float(shot.get("transition_seconds", 0.5)) * fps)), count)
                 if transition and i + 1 < len(srcs) and n >= count - transition_frames:
                     into = (n - (count - transition_frames) + 1) / transition_frames
                     next_frame = srcs[i + 1].at((n - (count - transition_frames)) / fps)
+                    before = frame.copy()
                     frame = fx.apply_transition(transition, frame, next_frame, into, ctx)
+                    quality.effect(transition, before, frame, total, kind="transition", params=shot.get("transition_params") or {})
+                quality.observe_output(shot["id"], frame, n)
                 writer.write(frame)
                 total += 1
     finally:
@@ -366,6 +389,22 @@ def render(manifest_path, input_root, out, *, require_onnx=False):
         raise RuntimeError("decoded frame count mismatch")
     run(["ffmpeg", "-hide_banner", "-v", "error", "-i", target, "-f", "null", "-"], timeout=7200)
     fx_result = {"lock_sha256": digest(lock_file), "effects": locked_fx, "transitions": locked_transitions} if lock_file else {"effects": [], "transitions": []}
+    control_summary = music_controls.summary(total) if music_controls else {}
+    technical_visual_evidence = quality.summary()
+    fx_proof_path = out / "FX_VISIBILITY_PROOF.zip"
+    fx_proof_sha = bundle_fx_proofs([("single", out / "fx_proofs")], fx_proof_path)
+    visual_qc = combine_visual_evidence(
+        m,
+        [{"technical_visual_evidence": technical_visual_evidence, "music_controls": control_summary}],
+        {"effects": locked_fx, "transitions": locked_transitions, "source_media_qc": source_media_qc,
+         "director_fx_disposition": manifest_fx_disposition(m)},
+        digest(target),
+        fx_proof_sha,
+    )
+    visual_qc_path = out / "VISUAL_QC_EVIDENCE.json"
+    visual_qc_path.write_text(json.dumps(visual_qc, indent=2) + "\n", encoding="utf-8")
+    if visual_qc["status"] != "PASS":
+        raise RuntimeError("technical visual QC rejected the candidate: " + json.dumps(visual_qc["checks"], sort_keys=True))
     # Attest the exact source branch and engine code that produced the technical proof.
     # No git lineage means a usable proof, but NEVER an eligible release.
     def _commit(directory):
@@ -385,6 +424,9 @@ def render(manifest_path, input_root, out, *, require_onnx=False):
         "duration_seconds": duration, "render_frames": total, "decoded_frames": decoded_frames,
         "fps": fps, "resolution": [width, height], "video_codec": video.get("codec_name"),
         "audio_codec": sound.get("codec_name"), "fx": fx_result,
+        "music_controls": control_summary,
+        "visual_qc_sha256": digest(visual_qc_path),
+        "fx_visibility_proof_sha256": fx_proof_sha,
         "model": music_evidence.get("engine") if music_evidence else "not_requested",
         "jev": jev,
         "source_lineage": "AIVideoEdit/main -> AIVideoEdit/MainV2 -> AIVideoEdit-MainV2-Lab/main",
