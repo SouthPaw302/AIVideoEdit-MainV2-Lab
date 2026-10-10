@@ -1,0 +1,248 @@
+{
+  "schema": "aivideoedit.director2.native-shot-production-plan.v1",
+  "production_id": "el-viento-lab-new-director",
+  "song_branch": "song/el-viento-trae-tu-nombre",
+  "status": "PREPARED_NOT_GENERATED__DO_NOT_CLAIM_MEDIA_EXISTS",
+  "date": "2026-10-10",
+  "reason": "The current 12-shot replacement QC set fixes painterly style in editorial reviews, but ten shots were crops from generated contact grids and have an effective native raster only ~320x180. They must be replaced by real independent image plates before full film picture approval.",
+  "priority": "complete ten native-resolution replacements; do not repeat the already-created original batches or replace B01-S06/B02-S19",
+  "production_method": "one single scene per generated image; image output cannot be a grid, contact sheet, storyboard, numbered panel, captioned image, or lettered montage",
+  "minimum_image_dimensions_px": [
+    1280,
+    720
+  ],
+  "preferred_image_dimensions_px": [
+    1920,
+    1080
+  ],
+  "display_aspect_ratio": "16:9",
+  "source_audio": {
+    "name": "El Viento trae tu nombre.wav",
+    "sha256": "8d967101c875868b64207bd43bfbc507c0a958989bbc560c2edb0024b15877cb",
+    "duration_s": 154.48
+  },
+  "visual_anchors": [
+    {
+      "role": "fort_lantern_letter",
+      "file": "a_cinematic_wide_landscape_establishing_scene_of_a.png",
+      "sha256": "6e5d996e23898fc22670582257a7ea464a74a212ab1238080bee434c11625026",
+      "review_frame": true
+    },
+    {
+      "role": "woman_1980_and_harbor",
+      "file": "El_Viento_Director2_B01S03_Source.png",
+      "sha256": "4aede6e793506f7bce03759d92b33c595edcb9c36428a66ac064e63b24a2b82f",
+      "review_frame": true
+    },
+    {
+      "role": "woman_writing_letter",
+      "file": "a_cinematic_high_detail_wide_golden_hour_coastal.png",
+      "sha256": "d28d837bc395a5fcf8de7b22ce51069ab03eb7421de3748c2ead146aa115dc23",
+      "review_frame": true
+    }
+  ],
+  "character_lock_policy": {
+    "woman_1980": "young adult with dark curly hair, white lace dress, patterned deep teal shawl; preserve real face as established new-film plate",
+    "woman_2026": "same face grown older ~46 years; cannot establish from grid-contact image alone; generate and verify age continuity in side-by-side actual full-resolution plates",
+    "male_1980": "new full-resolution first-instance hero must be accepted as character anchor before male 2026 image generation; sailor ~25 years old, dark curly hair and muted working coastal attire",
+    "male_2026": "same male hero aged ~46 years from 1980 first-instance source; no instant montage-age morph",
+    "setting": "one coastal fort/harbor setting with unchanged major architecture and shore horizon between 1980 and 2026"
+  },
+  "required_output_per_shot": [
+    "original_16_9_full_frame_image_with_sha256",
+    "preFX_copy",
+    "named protected regions and region masks",
+    "approved_fx2_id_precompile_receipt",
+    "real_2s_or_more_motion_proof",
+    "director_view_scope",
+    "QC_accept_or_reject_with_reason"
+  ],
+  "forbidden": [
+    "human acceptance inferred from technical PASS",
+    "contact-sheet panel as final picture",
+    "upsampled 320x180 claimed as native 1080p",
+    "unauthorized text/logos/legible letters",
+    "face morph/extra bodies/false articulated motion",
+    "unmotivated camera motion",
+    "generic FX substituted for listed canonical FX",
+    "writes to main",
+    "overwrite the previous Route4 master"
+  ],
+  "existing_provisional_review": {
+    "stills": "https://drive.google.com/file/d/1IFjT4IcgItiPDZHFWqkL7w75RT__UBxa/view",
+    "fx": "https://drive.google.com/file/d/1AC0GbQ9pskrJ0C8ri6UJeZNx6BPd4g27/view",
+    "contact": "https://drive.google.com/file/d/1c9xelNhy6Dux70Z8mwYSClnDXL64rJiK/view"
+  },
+  "shots": [
+    {
+      "shot_id": "B01-S05",
+      "range_seconds": [
+        29,
+        36
+      ],
+      "era": "1980",
+      "director_action": "The departing sailor stands on a real wooden harbor vessel, half turned toward the woman on the distant fort parapet; show practical rigging, a coherent port, and restrained separation emotion.",
+      "identity_or_prop_lock": "male_1980_first_hero",
+      "motion_semantic_region": "sea_waves",
+      "canonical_fx_id_proposed": "FX2-SURFACE-022",
+      "reference_pixel_reuse_from_grid": false,
+      "source_verified": false,
+      "original_fullframe_sha256": null,
+      "fx_proof_sha256": null,
+      "visual_status": "NATIVE_SHOT_REQUIRED"
+    },
+    {
+      "shot_id": "B01-S07",
+      "range_seconds": [
+        43,
+        50
+      ],
+      "era": "1980",
+      "director_action": "The same young sailor and the previously established young woman stand close under the weathered fort arch, hands almost touching; bittersweet farewell, never morph subjects.",
+      "identity_or_prop_lock": "young_couple_joint_lock",
+      "motion_semantic_region": "lantern_light",
+      "canonical_fx_id_proposed": "FX2-LIGHT-028",
+      "reference_pixel_reuse_from_grid": false,
+      "source_verified": false,
+      "original_fullframe_sha256": null,
+      "fx_proof_sha256": null,
+      "visual_status": "NATIVE_SHOT_REQUIRED"
+    },
+    {
+      "shot_id": "B01-S08",
+      "range_seconds": [
+        50,
+        57
+      ],
+      "era": "childhood memory",
+      "director_action": "Two children viewed from behind walk beside the earlier island family doorway; no faces or ambiguous transformation to adult heroes, recognizable coastal architecture.",
+      "identity_or_prop_lock": "island_stone_arch_lock",
+      "motion_semantic_region": "wet_stone_reflection",
+      "canonical_fx_id_proposed": "FX2-SURFACE-023",
+      "reference_pixel_reuse_from_grid": false,
+      "source_verified": false,
+      "original_fullframe_sha256": null,
+      "fx_proof_sha256": null,
+      "visual_status": "NATIVE_SHOT_REQUIRED"
+    },
+    {
+      "shot_id": "B01-S09",
+      "range_seconds": [
+        57,
+        64.5
+      ],
+      "era": "2026",
+      "director_action": "An elderly male hand opens an undelivered wax-sealed letter beside the same old lantern on a stone ledge in the fort. No legible writing, no extra fingers.",
+      "identity_or_prop_lock": "letter_lantern_prop_lock",
+      "motion_semantic_region": "practical_lantern",
+      "canonical_fx_id_proposed": "FX2-LIGHT-028",
+      "reference_pixel_reuse_from_grid": false,
+      "source_verified": false,
+      "original_fullframe_sha256": null,
+      "fx_proof_sha256": null,
+      "visual_status": "NATIVE_SHOT_REQUIRED"
+    },
+    {
+      "shot_id": "B01-S10",
+      "range_seconds": [
+        64.5,
+        72
+      ],
+      "era": "1980 reflection",
+      "director_action": "A window on the same fort frames the established young woman in lace and teal shawl; rain remains on exterior glass, no ghost body or topology changes.",
+      "identity_or_prop_lock": "woman_1980_reference",
+      "motion_semantic_region": "rain_glass",
+      "canonical_fx_id_proposed": "FX2-SURFACE-023",
+      "reference_pixel_reuse_from_grid": false,
+      "source_verified": false,
+      "original_fullframe_sha256": null,
+      "fx_proof_sha256": null,
+      "visual_status": "NATIVE_SHOT_REQUIRED"
+    },
+    {
+      "shot_id": "B02-S14",
+      "range_seconds": [
+        96,
+        104
+      ],
+      "era": "1980",
+      "director_action": "A small working coastal schooner struggles under a moonlit storm, realistic rigging and waves, fixed hull and starboard silhouette, no supernatural portal or glowing thread.",
+      "identity_or_prop_lock": "ship_first_instance_lock",
+      "motion_semantic_region": "sea_storm",
+      "canonical_fx_id_proposed": "FX2-SURFACE-022",
+      "reference_pixel_reuse_from_grid": false,
+      "source_verified": false,
+      "original_fullframe_sha256": null,
+      "fx_proof_sha256": null,
+      "visual_status": "NATIVE_SHOT_REQUIRED"
+    },
+    {
+      "shot_id": "B02-S15",
+      "range_seconds": [
+        104,
+        112
+      ],
+      "era": "2026",
+      "director_action": "The older version of the 1980 sailor walks through the island's actual stone street toward the preserved fort and family doorway, recognizably aged by 46 years, no abrupt costume or face changes.",
+      "identity_or_prop_lock": "male_2026_aged_from_1980_lock",
+      "motion_semantic_region": "street_atmosphere",
+      "canonical_fx_id_proposed": "FX2-ATM-021",
+      "reference_pixel_reuse_from_grid": false,
+      "source_verified": false,
+      "original_fullframe_sha256": null,
+      "fx_proof_sha256": null,
+      "visual_status": "NATIVE_SHOT_REQUIRED"
+    },
+    {
+      "shot_id": "B02-S16",
+      "range_seconds": [
+        112,
+        120
+      ],
+      "era": "1980 memory",
+      "director_action": "Tight emotional portrait of the already established young woman hearing the salt wind from the fort parapet; same curls, lace dress and teal shawl; natural backlighting and intact geometry.",
+      "identity_or_prop_lock": "woman_1980_reference",
+      "motion_semantic_region": "sea_in_distance",
+      "canonical_fx_id_proposed": "FX2-SURFACE-022",
+      "reference_pixel_reuse_from_grid": false,
+      "source_verified": false,
+      "original_fullframe_sha256": null,
+      "fx_proof_sha256": null,
+      "visual_status": "NATIVE_SHOT_REQUIRED"
+    },
+    {
+      "shot_id": "B02-S17",
+      "range_seconds": [
+        120,
+        128
+      ],
+      "era": "time-passage",
+      "director_action": "An old box holding decades of never-delivered letters on a stone table near the fort; the same lantern has aged with the setting, no fake readable dates or typography.",
+      "identity_or_prop_lock": "letter_lantern_prop_lock",
+      "motion_semantic_region": "lamplight",
+      "canonical_fx_id_proposed": "FX2-LIGHT-028",
+      "reference_pixel_reuse_from_grid": false,
+      "source_verified": false,
+      "original_fullframe_sha256": null,
+      "fx_proof_sha256": null,
+      "visual_status": "NATIVE_SHOT_REQUIRED"
+    },
+    {
+      "shot_id": "B02-S18",
+      "range_seconds": [
+        128,
+        136
+      ],
+      "era": "2026",
+      "director_action": "A believable older woman in the island family doorway from 2026, continuity through the younger woman's eyes, jaw shape, and teal shawl; restrained emotional welcome, static pose.",
+      "identity_or_prop_lock": "woman_2026_aged_from_1980_lock",
+      "motion_semantic_region": "doorway_atmosphere",
+      "canonical_fx_id_proposed": "FX2-ATM-021",
+      "reference_pixel_reuse_from_grid": false,
+      "source_verified": false,
+      "original_fullframe_sha256": null,
+      "fx_proof_sha256": null,
+      "visual_status": "NATIVE_SHOT_REQUIRED"
+    }
+  ]
+}
