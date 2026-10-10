@@ -1,0 +1,136 @@
+{
+  "schema": "aivideoedit.fx-requirements.v1",
+  "project": "el-viento-trae-tu-nombre",
+  "refinement_id": "route4-two-heroes",
+  "runtime": "aivideoedit-fx-v2",
+  "seed": 302,
+  "status": "OPEN_MISSING_FX",
+  "baseline": {
+    "file": "El_Viento_Route4_1080p_CREATIVE_LOCK_v5.mp4",
+    "duration_seconds": 154.375,
+    "resolution": "1920x1080",
+    "role": "preserved edit/timing baseline; not FX-complete"
+  },
+  "effects": [
+    {
+      "id": "FX2-SURFACE-001",
+      "role": "temporal surface stability"
+    },
+    {
+      "id": "FX2-MOTION-002",
+      "role": "localized internal living flow"
+    },
+    {
+      "id": "FX2-MOTION-003",
+      "role": "sea/water motion"
+    },
+    {
+      "id": "FX2-ATM-001",
+      "role": "mist/smoke/memory atmosphere"
+    },
+    {
+      "id": "FX2-ATM-002",
+      "role": "rain plane where narratively present"
+    },
+    {
+      "id": "FX2-LIGHT-001",
+      "role": "practical/lantern breathing"
+    },
+    {
+      "id": "FX2-LIGHT-002",
+      "role": "moving gold light field"
+    },
+    {
+      "id": "FX2-LIGHT-023",
+      "role": "firelight breathing in lantern/candle passages"
+    },
+    {
+      "id": "FX2-LIGHT-024",
+      "role": "bounded radial light shafts at memory/ancestral crests"
+    },
+    {
+      "id": "FX2-LIGHT-028",
+      "role": "warm halation bloom on motivated highlights"
+    },
+    {
+      "id": "FX2-SPATIAL-021",
+      "role": "bounded pseudo-depth field; no topology drift"
+    },
+    {
+      "id": "FX2-SURFACE-021",
+      "role": "puddle/wet-ground shimmer"
+    },
+    {
+      "id": "FX2-SURFACE-022",
+      "role": "water-region displacement shimmer"
+    },
+    {
+      "id": "FX2-SURFACE-023",
+      "role": "wet reflection ripple"
+    },
+    {
+      "id": "FX2-AUDIO-021",
+      "role": "restrained RMS modulation for effect intensity only"
+    }
+  ],
+  "transitions": [
+    {
+      "id": "FX2-TRANS-021",
+      "role": "chroma/pigment memory transport"
+    },
+    {
+      "id": "FX2-TRANS-024",
+      "role": "fog/pigment travel"
+    },
+    {
+      "id": "FX2-TRANS-025",
+      "role": "ghosted memory transition"
+    },
+    {
+      "id": "FX2-TRANS-028",
+      "role": "rain-to-warm-light handoff where motivated"
+    },
+    {
+      "id": "FX2-TRANS-030",
+      "role": "reflection-to-water handoff"
+    },
+    {
+      "id": "FX2-TRANS-032",
+      "role": "bounded structural morph for established memory transformations"
+    }
+  ],
+  "render_inputs": [
+    "projects/el-viento-trae-tu-nombre/SCRIPT.json",
+    "projects/el-viento-trae-tu-nombre/ASSET_MANIFEST.json",
+    "projects/el-viento-trae-tu-nombre/FX_VARIANTS_MANIFEST.json",
+    "projects/el-viento-trae-tu-nombre/refinements/route4-two-heroes/shot_locks/BATCH_01_OPENING_REMEMBRANCE.json",
+    "projects/el-viento-trae-tu-nombre/refinements/route4-two-heroes/shot_locks/BATCH_02_DISTANCE_AND_ORIGIN.json",
+    "projects/el-viento-trae-tu-nombre/refinements/route4-two-heroes/shot_locks/BATCH_03_VERSE3_EXPANSION.json",
+    "projects/el-viento-trae-tu-nombre/refinements/route4-two-heroes/shot_locks/BATCH_04_REMEMBERED_PRESENCE.json",
+    "projects/el-viento-trae-tu-nombre/refinements/route4-two-heroes/shot_locks/BATCH_05_CHORUS_CREST.json",
+    "projects/el-viento-trae-tu-nombre/refinements/route4-two-heroes/shot_locks/BATCH_06_RELEASE_TO_BLACK.json",
+    "projects/el-viento-trae-tu-nombre/refinements/route4-two-heroes/media/BATCH_07_ANCESTRAL_PRESENCE.json",
+    "projects/el-viento-trae-tu-nombre/refinements/route4-two-heroes/media/BATCH_08_SUPPLEMENTAL_ANCESTRAL_HARBOR.json",
+    "projects/el-viento-trae-tu-nombre/refinements/route4-two-heroes/media/BATCH_09_FINAL_SUPPLEMENTAL.json",
+    "projects/el-viento-trae-tu-nombre/refinements/route4-two-heroes/fx/BATCH_01_FX_GATE.json",
+    "projects/el-viento-trae-tu-nombre/refinements/route4-two-heroes/fx/BATCH_02_FX_GATE.json",
+    "projects/el-viento-trae-tu-nombre/refinements/route4-two-heroes/fx/BATCH_03_FX_GATE.json",
+    "projects/el-viento-trae-tu-nombre/refinements/route4-two-heroes/fx/BATCH_04_FX_GATE.json",
+    "projects/el-viento-trae-tu-nombre/refinements/route4-two-heroes/fx/BATCH_05_FX_GATE.json",
+    "projects/el-viento-trae-tu-nombre/refinements/route4-two-heroes/fx/BATCH_06_FX_GATE.json",
+    "projects/el-viento-trae-tu-nombre/refinements/route4-two-heroes/fx/EXTENDED_ACT_FX_GATE.json"
+  ],
+  "allow_conditional": [],
+  "conditional_preflight": {},
+  "rules": [
+    "preserve current edit/timing",
+    "no media regeneration unless QC failure",
+    "no duplicate FX where already visibly present",
+    "missing FX must be demonstrated in moving full-edit context",
+    "do not create Batch 10",
+    "do not upscale before approved 1080 FX master"
+  ],
+  "note": "Current user explicitly reports the existing 1080 is still missing FX. This manifest supersedes the obsolete 112.68-second FX contract. Precompile lock regeneration is requested now; rendering remains blocked by the current no-render instruction.",
+  "updated_at": "2026-09-25T00:45:00Z",
+  "lock_request_at": "2026-09-25T01:31:00Z"
+}

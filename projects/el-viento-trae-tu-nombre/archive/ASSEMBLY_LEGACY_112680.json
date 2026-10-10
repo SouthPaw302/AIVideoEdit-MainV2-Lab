@@ -1,0 +1,100 @@
+{
+  "schema": "aivideoedit.assembly.v1",
+  "output_asset_id": "MASTER-1080P-001",
+  "output_uri": "session:///mnt/data/El_Viento_Trae_Tu_Nombre_master_1080p.mp4",
+  "sha256": "7ba526fbfc32c82e6045a46488314d83095152aa81da97f876afa2bdf57adffe",
+  "duration_seconds": 112.666667,
+  "target_frames": 2704,
+  "target_fps": 24,
+  "size": [
+    1920,
+    1080
+  ],
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "source_audio_asset_id": "SRC-AUDIO-001",
+  "fx_lock_sha256": "46250da009beea80d83cd43eebc026a772406f95be6f2f3630ff0a061bdf5c14",
+  "shot_evidence": [
+    {
+      "shot_id": "S01",
+      "package_path": "shot_packages/S01/package.json",
+      "proof_accepted": true,
+      "full_duration_rendered": true
+    },
+    {
+      "shot_id": "S02",
+      "package_path": "shot_packages/S02/package.json",
+      "proof_accepted": true,
+      "full_duration_rendered": true
+    },
+    {
+      "shot_id": "S03",
+      "package_path": "shot_packages/S03/package.json",
+      "proof_accepted": true,
+      "full_duration_rendered": true
+    },
+    {
+      "shot_id": "S04",
+      "package_path": "shot_packages/S04/package.json",
+      "proof_accepted": true,
+      "full_duration_rendered": true
+    },
+    {
+      "shot_id": "S05",
+      "package_path": "shot_packages/S05/package.json",
+      "proof_accepted": true,
+      "full_duration_rendered": true
+    },
+    {
+      "shot_id": "S06",
+      "package_path": "shot_packages/S06/package.json",
+      "proof_accepted": true,
+      "full_duration_rendered": true
+    },
+    {
+      "shot_id": "S07",
+      "package_path": "shot_packages/S07/package.json",
+      "proof_accepted": true,
+      "full_duration_rendered": true
+    },
+    {
+      "shot_id": "S08",
+      "package_path": "shot_packages/S08/package.json",
+      "proof_accepted": true,
+      "full_duration_rendered": true
+    },
+    {
+      "shot_id": "S09",
+      "package_path": "shot_packages/S09/package.json",
+      "proof_accepted": true,
+      "full_duration_rendered": true
+    },
+    {
+      "shot_id": "S10",
+      "package_path": "shot_packages/S10/package.json",
+      "proof_accepted": true,
+      "full_duration_rendered": true
+    },
+    {
+      "shot_id": "S11",
+      "package_path": "shot_packages/S11/package.json",
+      "proof_accepted": true,
+      "full_duration_rendered": true
+    }
+  ],
+  "qc": {
+    "decode_probe": "PASS",
+    "duration_match": "PASS",
+    "video_present": true,
+    "audio_present": true,
+    "frame_count": "PASS 2704",
+    "black_check": "PASS",
+    "freeze_check": "PASS"
+  },
+  "storage": {
+    "drive_render_folder_id": "1i0Ny_IyWzKoMCVgM-V5TRucvtCRNddfQ",
+    "drive_qc_contact_id": "1sXK0-zgCv_OuTOURE5POxeje71tyJseM",
+    "master_drive_upload_status": "pending_connector_file_reference"
+  },
+  "assembled_at": "2026-09-22T06:49:30Z"
+}

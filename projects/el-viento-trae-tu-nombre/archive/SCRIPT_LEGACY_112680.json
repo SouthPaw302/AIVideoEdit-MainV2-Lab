@@ -1,0 +1,307 @@
+{
+  "schema": "aivideoedit.video-script.v1",
+  "locked": true,
+  "status": "locked",
+  "based_on_storyboard": true,
+  "target_fps": 24,
+  "duration_seconds": 112.68,
+  "total_frames": 2704,
+  "basis": [
+    "storyboard",
+    "music_analysis",
+    "lyrics"
+  ],
+  "note": "Frame spans retain the established phrase-grid timing. Current-user lyrics are active narrative input; the Island Memory Tapestry remains the locked visual canon.",
+  "entries": [
+    {
+      "shot_id": "S01",
+      "start_frame": 0,
+      "end_frame": 257,
+      "start_seconds": 0,
+      "end_seconds": 10.752,
+      "production_mode": "living_scene",
+      "visual_action": "Aged linen awakens as faded nautical-map ink draws itself into the fibers.",
+      "visual_media": "HERO-S01 gdrive://file/1PLWQXsouCSMeWqYE0zK4g0aIO_kLv873",
+      "animation_behavior": "Internal ink emergence and canvas-fiber micro-motion first; restrained slow dolly out only after map geometry stabilizes.",
+      "camera_behavior": "slow dolly out",
+      "motion_regions": [
+        "map ink emergence",
+        "canvas fiber micro-motion"
+      ],
+      "protected_regions": [
+        "canvas topology",
+        "map geometry once formed"
+      ],
+      "lyric_cue": "Miraba el mar desde el fuerte / pensando en ti, mi querida.",
+      "music_cues": [
+        "Opening measured pulse",
+        "First vocal phrase establishes fort and remembrance"
+      ],
+      "transition": "Fluid material continuation into embroidery; no hard cut."
+    },
+    {
+      "shot_id": "S02",
+      "start_frame": 258,
+      "end_frame": 515,
+      "start_seconds": 10.752,
+      "end_seconds": 21.504,
+      "production_mode": "living_scene",
+      "visual_action": "Bright embroidery blooms and threads through the established antique map.",
+      "visual_media": "HERO-S02 gdrive://file/1uGAtadsrrFxzIB1npqjznolPaEIa4Rir",
+      "animation_behavior": "Thread growth, tension and tiny textile sway inside a locked composition; camera remains static.",
+      "camera_behavior": "static",
+      "motion_regions": [
+        "embroidery growth",
+        "thread tension",
+        "thread micro-sway"
+      ],
+      "protected_regions": [
+        "map registration",
+        "canvas weave",
+        "coastline geometry"
+      ],
+      "lyric_cue": "El viento trae tu nombre / entre las olas dormidas.",
+      "music_cues": [
+        "Continuation of opening vocal phrase",
+        "Stable moderate pulse"
+      ],
+      "transition": "Candidate FX2-TRANS-021 chroma_pigment_transport into ocean-current color."
+    },
+    {
+      "shot_id": "S03",
+      "start_frame": 516,
+      "end_frame": 773,
+      "start_seconds": 21.504,
+      "end_seconds": 32.256,
+      "production_mode": "living_scene",
+      "visual_action": "Map ink and embroidery liquefy into deep blue-green ocean currents while the tactile canvas remains visible.",
+      "visual_media": "HERO-S03 gdrive://file/1xOGeTL3P9LnwW6fc3_cGkX6wJYyCml26",
+      "animation_behavior": "Pigment and thread flow laterally like currents; preserve textile surface identity; add only a graceful bounded pan.",
+      "camera_behavior": "slow graceful pan",
+      "motion_regions": [
+        "ocean-current pigment",
+        "thread liquefaction",
+        "surface shimmer"
+      ],
+      "protected_regions": [
+        "canvas surface identity",
+        "dominant coastline-to-current flow"
+      ],
+      "lyric_cue": "Lejos de España nacimos / bajo este cielo tan claro.",
+      "music_cues": [
+        "Distance/origin lyric section begins",
+        "Measured pulse continues without abrupt energy change"
+      ],
+      "transition": "Candidate FX2-TRANS-032 structural_morph_transition from ocean mass into village forms."
+    },
+    {
+      "shot_id": "S04",
+      "start_frame": 774,
+      "end_frame": 1031,
+      "start_seconds": 32.256,
+      "end_seconds": 43.008,
+      "production_mode": "living_scene",
+      "visual_action": "Thick ocean paint gathers upward into a rustic island village.",
+      "visual_media": "HERO-S04 gdrive://file/1t7JplXyvZ6Rdg6_YU0YH0jXwDjH1gNmc",
+      "animation_behavior": "Impasto rises from water/pigment into architecture; internal gathering precedes a restrained dolly in.",
+      "camera_behavior": "slow dolly in",
+      "motion_regions": [
+        "impasto rise",
+        "water-to-pigment gathering",
+        "subtle painted-water motion"
+      ],
+      "protected_regions": [
+        "horizon",
+        "village topology after emergence"
+      ],
+      "lyric_cue": "Si el destino nos separa / el corazón sigue amando.",
+      "music_cues": [
+        "Closing phrase of the opening lyric block",
+        "Gentle cadence before the expanded verse"
+      ],
+      "transition": "Candidate FX2-TRANS-032 structural_morph_transition preserving shared geography into fort walls."
+    },
+    {
+      "shot_id": "S05",
+      "start_frame": 1032,
+      "end_frame": 1289,
+      "start_seconds": 43.008,
+      "end_seconds": 53.76,
+      "production_mode": "cinematic",
+      "visual_action": "Village geometry hardens and weathers into historical fort walls without breaking spatial continuity.",
+      "visual_media": "HERO-S05 gdrive://file/1LvdY8W5EHiA8vd9N1zpbPnHrxZhEfoSo",
+      "animation_behavior": "Bounded architectural morph with a slow orbit; no unplanned axis shift, horizon drift or new structures.",
+      "camera_behavior": "bounded slow orbit",
+      "protected_regions": [
+        "shared village/fort geography",
+        "lighting direction",
+        "horizon",
+        "architectural anchor relationships"
+      ],
+      "lyric_cue": "Lejos de la Isla nacimos los dos / bajo este cielo abierto.",
+      "music_cues": [
+        "Expanded Verse 3 enters",
+        "Narrative density begins to rise"
+      ],
+      "transition": "Candidate FX2-TRANS-021 pigment transport softens fort surfaces into remembered landscape."
+    },
+    {
+      "shot_id": "S06",
+      "start_frame": 1290,
+      "end_frame": 1547,
+      "start_seconds": 53.76,
+      "end_seconds": 64.512,
+      "production_mode": "living_scene",
+      "visual_action": "Fort pigment softens into luminous color and reforms as an abstract imagined homeland.",
+      "visual_media": "HERO-S06 gdrive://file/1bF06bN2M64-rgnh8RRJ0b-90srtpSEoK",
+      "animation_behavior": "Stone dissolves into color wash, landscape breathes subtly, and the camera tilts upward only after the transformation is readable.",
+      "camera_behavior": "slow upward tilt",
+      "motion_regions": [
+        "stone pigment softening",
+        "sky wash",
+        "landscape color breathing"
+      ],
+      "protected_regions": [
+        "landform composition",
+        "canvas tactility",
+        "lighting direction"
+      ],
+      "lyric_cue": "Crecimos donde el viento salado toca los montes / donde gritan las aves del puerto.",
+      "music_cues": [
+        "Place imagery broadens",
+        "Verse energy rises gradually"
+      ],
+      "transition": "Candidate FX2-TRANS-024 fog_pigment_travel introduces atmospheric veil."
+    },
+    {
+      "shot_id": "S07",
+      "start_frame": 1548,
+      "end_frame": 1805,
+      "start_seconds": 64.512,
+      "end_seconds": 75.264,
+      "production_mode": "living_scene",
+      "visual_action": "Painted smoke, translucent cloud and watercolor veils cross and partially obscure the homeland.",
+      "visual_media": "HERO-S07 gdrive://file/1Wm9PjGr2Yz9vfstP8hTqvQvXgaodlhdD",
+      "animation_behavior": "Atmosphere provides the motion while the composition remains fixed; smoke/cloud layers travel independently of the locked homeland.",
+      "camera_behavior": "static",
+      "motion_regions": [
+        "painted smoke",
+        "cloud wash",
+        "watercolor veil"
+      ],
+      "protected_regions": [
+        "homeland geometry",
+        "no new objects",
+        "stable frame registration"
+      ],
+      "lyric_cue": "Aprendí tu rostro a la luz del farol / tu voz bajo la lluvia de verano.",
+      "music_cues": [
+        "Lyric turns intimate and personal",
+        "Pulse stays stable beneath a more reflective phrase"
+      ],
+      "transition": "Candidate FX2-TRANS-025 ghosted_memory_transition into anonymous human presence."
+    },
+    {
+      "shot_id": "S08",
+      "start_frame": 1806,
+      "end_frame": 2063,
+      "start_seconds": 75.264,
+      "end_seconds": 86.016,
+      "production_mode": "living_scene",
+      "visual_action": "Dark featureless silhouettes emerge, fade and re-form inside mist, cloud and water.",
+      "visual_media": "HERO-S08 gdrive://file/1no19lCoxUXM6vpEDthHhD5Hxi4Z8XABM",
+      "animation_behavior": "Mist drifts independently while silhouettes phase in and out; slow bounded pan; never reveal facial features or fixed identities.",
+      "camera_behavior": "slow pan",
+      "motion_regions": [
+        "mist drift",
+        "silhouette form",
+        "silhouette fade"
+      ],
+      "protected_regions": [
+        "silhouette anonymity",
+        "no facial detail",
+        "environment topology"
+      ],
+      "lyric_cue": "Y cada camino que me llevó lejos / terminó trayéndome de regreso.",
+      "music_cues": [
+        "Return motif resolves Verse 3",
+        "Energy prepares for chorus expansion"
+      ],
+      "transition": "Candidate FX2-TRANS-025 ghosted_memory_transition gathers all motifs into the complete tapestry."
+    },
+    {
+      "shot_id": "S09",
+      "start_frame": 2064,
+      "end_frame": 2321,
+      "start_seconds": 86.016,
+      "end_seconds": 96.768,
+      "production_mode": "cinematic",
+      "visual_action": "Accelerating pullback reveals the complete tapestry in a dark void; its four corners fold inward toward the center.",
+      "visual_media": "HERO-S09 gdrive://file/1qUB9eIciqdfnI0ZDFY0gJb1CNW0SlXLm",
+      "animation_behavior": "Controlled pullback and symmetric inward folding; preserve all previously established motifs inside one readable tapestry.",
+      "camera_behavior": "accelerating pullback",
+      "protected_regions": [
+        "all prior motifs inside one tapestry",
+        "tapestry topology",
+        "dark void boundary"
+      ],
+      "lyric_cue": "Y aunque cambien las mareas / aunque los caminos nos lleven lejos / tu voz sigue viva entre estas piedras / como una llama que no muere.",
+      "music_cues": [
+        "Chorus emotional crest begins",
+        "Scale broadens while the visual world is unified"
+      ],
+      "transition": "Candidate FX2-TRANS-032 structural_morph_transition compresses tapestry into one thread."
+    },
+    {
+      "shot_id": "S10",
+      "start_frame": 2322,
+      "end_frame": 2547,
+      "start_seconds": 96.768,
+      "end_seconds": 106.176,
+      "production_mode": "living_scene",
+      "visual_action": "The collapsed tapestry becomes a single luminous textile thread suspended in darkness.",
+      "visual_media": "HERO-S10 gdrive://file/1eK7FrEO-x1jnHlSQ50aPqaWOkxWw4vjV",
+      "animation_behavior": "Static framing; internal color travels beneath the fibers with restrained light vibration and no shape drift.",
+      "camera_behavior": "static",
+      "motion_regions": [
+        "internal color travel",
+        "thread light vibration",
+        "subtle fiber shimmer"
+      ],
+      "protected_regions": [
+        "single-thread silhouette",
+        "black field",
+        "thread continuity"
+      ],
+      "lyric_cue": "Que ruja el mar oscuro a medianoche / que soplen los vientos desde lejos.",
+      "music_cues": [
+        "Chorus remains at high emotional intensity",
+        "Visual energy compresses rather than expands"
+      ],
+      "transition": "Bounded thread-motion handoff into the final swept-away shot."
+    },
+    {
+      "shot_id": "S11",
+      "start_frame": 2548,
+      "end_frame": 2703,
+      "start_seconds": 106.176,
+      "end_seconds": 112.68,
+      "production_mode": "cinematic",
+      "visual_action": "An unseen force catches the thread; it bends, stretches and is swept away until it vanishes into pure black.",
+      "visual_media": "HERO-S11 gdrive://file/12HSkdKl5k3jj076n1DyjN9M5YAf-4oZN",
+      "animation_behavior": "One fluid follow movement with bounded thread deformation; thread becomes smaller and fainter without spawning new forms; end on full black.",
+      "camera_behavior": "bounded fluid follow",
+      "protected_regions": [
+        "thread identity",
+        "black destination",
+        "single continuous trajectory"
+      ],
+      "lyric_cue": "Si el destino nos separa, mi amor / el corazón no sabe soltarte.",
+      "music_cues": [
+        "Final lyric phrase resolves the separation motif",
+        "Energy releases into the ending"
+      ],
+      "transition": "End on pure black; no postscript image."
+    }
+  ]
+}

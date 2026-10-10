@@ -1,0 +1,45 @@
+{
+  "schema": "aivideoedit.full-render-workprint.v1",
+  "status": "rendered_qc_candidate",
+  "filename": "El_Viento_Trae_Tu_Nombre_master_1080p.mp4",
+  "sha256": "2ea60fb7c1f99d528527be106a3c95df966ff45678c4a6f6962556fa4a9096eb",
+  "size_bytes": 386892082,
+  "video": {
+    "codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "fps": 24,
+    "frames": 2704,
+    "duration_seconds": 112.666667
+  },
+  "audio": {
+    "codec": "aac",
+    "sample_rate_hz": 48000,
+    "channels": 2,
+    "bitrate_kbps": 297,
+    "source_master_sha256": "bb26a35eaf2910531fc9ae057dd04c9315a6ad62425bd8267b9eb826a19c01e5"
+  },
+  "source_recipe": {
+    "proof_set_accepted": true,
+    "user_acceptance_statement": "Yeah they are good",
+    "hero_and_variant_hashes_verified": true,
+    "boundary_transition_frames": 14,
+    "total_boundary_transitions": 10
+  },
+  "qc": {
+    "full_decode": "PASS",
+    "frame_count": "PASS 2704",
+    "dimensions": "PASS 1920x1080",
+    "fps": "PASS 24",
+    "audio_present": true,
+    "visual_contact_sheet_review": "PASS candidate",
+    "black_end_behavior": "intentional scripted fade to black"
+  },
+  "storage": {
+    "drive_render_folder_id": "1i0Ny_IyWzKoMCVgM-V5TRucvtCRNddfQ",
+    "drive_qc_contact_id": "1sXK0-zgCv_OuTOURE5POxeje71tyJseM",
+    "drive_master_upload_status": "pending_connector_file_reference",
+    "current_session_locator": "/mnt/data/El_Viento_Trae_Tu_Nombre_master_1080p.mp4"
+  },
+  "rendered_at": "2026-09-22T06:40:00Z"
+}

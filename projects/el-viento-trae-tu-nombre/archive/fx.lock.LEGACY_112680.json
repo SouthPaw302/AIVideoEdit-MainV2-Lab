@@ -1,0 +1,236 @@
+{
+  "schema_version": 2,
+  "gate": "aivideoedit-fx-precompile-v2",
+  "project": "el-viento-trae-tu-nombre",
+  "runtime": "aivideoedit-fx-v2",
+  "manifest_sha256": "72590f7837f67a8754b5ac36f6a4fceb73fecc32fa1024529cda64ee606f3906",
+  "registry_sha256": "9221119f49099b08ddbf85fdbf7f93f4e9eb62c0fe558f5c677fd7e1c510e46f",
+  "runtime_sha256": "6cfdf3ba68c1f79015c1f1b26174d4e3ca4de7b75b06b5ad9811580f5bc2cfa4",
+  "render_inputs": [
+    {
+      "path": "projects/el-viento-trae-tu-nombre/SCRIPT.json",
+      "sha256": "02109105b5c352e7b71cbb2505680c1b85814350c059bc4cb9ed7dd14c8df64f"
+    },
+    {
+      "path": "projects/el-viento-trae-tu-nombre/ASSET_MANIFEST.json",
+      "sha256": "430437a1e3d7e9b9aede643444cfe88f9ba64cb742d83275e1575b5524811ed8"
+    },
+    {
+      "path": "projects/el-viento-trae-tu-nombre/shot_packages/S01/package.json",
+      "sha256": "dcbd86e7accd5a94b90454eac5e1aa8b923c788905f3150f8d899113531359df"
+    },
+    {
+      "path": "projects/el-viento-trae-tu-nombre/shot_packages/S02/package.json",
+      "sha256": "5b62fbbf8c973e594d9d14fdbefa2ef8d16bcbe37104324238e510625529a564"
+    },
+    {
+      "path": "projects/el-viento-trae-tu-nombre/shot_packages/S03/package.json",
+      "sha256": "576be0d7ee7abe64d243c850b29073fdde656982d9fc5a162b71c101dfb8f7e2"
+    },
+    {
+      "path": "projects/el-viento-trae-tu-nombre/shot_packages/S04/package.json",
+      "sha256": "cddb3edc459775b335ac9c0cd4f392b278c957047eed9bbdc6bea82f6ca216bf"
+    },
+    {
+      "path": "projects/el-viento-trae-tu-nombre/shot_packages/S05/package.json",
+      "sha256": "b8cf0da2edd1c50a8873fd448fce81c046a8fadbc739f82459f341bbaf63a951"
+    },
+    {
+      "path": "projects/el-viento-trae-tu-nombre/shot_packages/S06/package.json",
+      "sha256": "2011569979778edf9b2caa257f6025e5a2781c712de2a2ad61213d03c11e2bfe"
+    },
+    {
+      "path": "projects/el-viento-trae-tu-nombre/shot_packages/S07/package.json",
+      "sha256": "16278d9ab07a792cb00373bd8318d81689e8cf5befc9d12e37d4cc4b6956f4b4"
+    },
+    {
+      "path": "projects/el-viento-trae-tu-nombre/shot_packages/S08/package.json",
+      "sha256": "95004f1cb6f542dd783ff5416032232f54c98f20596d7967d1f9c264c0d1626b"
+    },
+    {
+      "path": "projects/el-viento-trae-tu-nombre/shot_packages/S09/package.json",
+      "sha256": "3b2fb672a696761add973b47042c5e1f11133fdadc2fd4f3c788960b155f1b3a"
+    },
+    {
+      "path": "projects/el-viento-trae-tu-nombre/shot_packages/S10/package.json",
+      "sha256": "305b43735144cfa1ebeebbb67fcfc009b645a0a4850ee047bdd0680a3fe230ec"
+    },
+    {
+      "path": "projects/el-viento-trae-tu-nombre/shot_packages/S11/package.json",
+      "sha256": "e96b4eacaeeab387d703c1a806d9af7691a9c42ca91c79c0a33b29421ffb7b92"
+    }
+  ],
+  "effects": [
+    {
+      "id": "FX2-SURFACE-001",
+      "name": "temporal_canvas_lock",
+      "family": "surface",
+      "gate_status": "approved",
+      "implementation": {
+        "kind": "runtime_apply",
+        "method": "apply_canvas"
+      },
+      "implementation_path": null,
+      "implementation_sha256": "93df6d0c8c045b394dc128e9b786ee70940071f0fcb6014ed0d9cb2997b8fc71",
+      "proofs": [
+        {
+          "id": "FX2_PROOF02_LIVING_SCENE_CANONICAL",
+          "record_sha256": "a83d923b3833ec91a93dc516d2e723f49aabe627785be436fe3d328d6e46bb25",
+          "declared_binary_sha256": "95119228f958e7a5905daf2de812833b6b9197d2e5b9650134a618f43f203114",
+          "artifact_path": "general/reusable/fx_v2/proofs/FX2_PROOF02_LIVING_SCENE_CANONICAL.mp4",
+          "artifact_verified": true,
+          "artifact_sha256": "95119228f958e7a5905daf2de812833b6b9197d2e5b9650134a618f43f203114"
+        }
+      ],
+      "conditional_preflight": null,
+      "smoke": {
+        "source_delta_max": 0.554392,
+        "temporal_delta_max": 0.0,
+        "global_shift_px_max": 0.006617,
+        "sample_output_sha256": "ad71703670e6a1830e514d09ecae0c88051a47e0a05a0d9c6034ebef3995bff6"
+      }
+    },
+    {
+      "id": "FX2-MOTION-002",
+      "name": "localized_living_flow",
+      "family": "motion",
+      "gate_status": "approved",
+      "implementation": {
+        "kind": "runtime_apply"
+      },
+      "implementation_path": null,
+      "implementation_sha256": "2513861e83edf6eef1778bf3c0f53d7615dfc645ac6329f21c7eaaf70f201757",
+      "proofs": [
+        {
+          "id": "FX2_PROOF02_LIVING_SCENE_CANONICAL",
+          "record_sha256": "a83d923b3833ec91a93dc516d2e723f49aabe627785be436fe3d328d6e46bb25",
+          "declared_binary_sha256": "95119228f958e7a5905daf2de812833b6b9197d2e5b9650134a618f43f203114",
+          "artifact_path": "general/reusable/fx_v2/proofs/FX2_PROOF02_LIVING_SCENE_CANONICAL.mp4",
+          "artifact_verified": true,
+          "artifact_sha256": "95119228f958e7a5905daf2de812833b6b9197d2e5b9650134a618f43f203114"
+        }
+      ],
+      "conditional_preflight": null,
+      "smoke": {
+        "source_delta_max": 1.53684,
+        "temporal_delta_max": 2.859722,
+        "global_shift_px_max": 0.879459,
+        "sample_output_sha256": "76881a239b97651e3a524cdea6611f47cb4efeaa1f9b06eb7f7703119887a88b"
+      }
+    },
+    {
+      "id": "FX2-MOTION-003",
+      "name": "water_flow",
+      "family": "motion",
+      "gate_status": "approved",
+      "implementation": {
+        "kind": "runtime_apply"
+      },
+      "implementation_path": null,
+      "implementation_sha256": "3317b3cda9b602dad8a90dfe498aa379e4751ea8c1e2de531e5ff1e7b410241d",
+      "proofs": [
+        {
+          "id": "FX2_PROOF02_LIVING_SCENE_CANONICAL",
+          "record_sha256": "a83d923b3833ec91a93dc516d2e723f49aabe627785be436fe3d328d6e46bb25",
+          "declared_binary_sha256": "95119228f958e7a5905daf2de812833b6b9197d2e5b9650134a618f43f203114",
+          "artifact_path": "general/reusable/fx_v2/proofs/FX2_PROOF02_LIVING_SCENE_CANONICAL.mp4",
+          "artifact_verified": true,
+          "artifact_sha256": "95119228f958e7a5905daf2de812833b6b9197d2e5b9650134a618f43f203114"
+        }
+      ],
+      "conditional_preflight": null,
+      "smoke": {
+        "source_delta_max": 1.347749,
+        "temporal_delta_max": 2.460509,
+        "global_shift_px_max": 0.153833,
+        "sample_output_sha256": "a1b9ccb6226bf72354be2f744263020b55e9c06539d2bec1d09a42499f6e8c63"
+      }
+    },
+    {
+      "id": "FX2-ATM-001",
+      "name": "advected_smoke",
+      "family": "environment",
+      "gate_status": "approved",
+      "implementation": {
+        "kind": "runtime_apply"
+      },
+      "implementation_path": null,
+      "implementation_sha256": "a53ce4e7a2d47488097ebc238b4f763a972e1333d3c1752cca4f467073a9e93e",
+      "proofs": [
+        {
+          "id": "FX2_PROOF02_LIVING_SCENE_CANONICAL",
+          "record_sha256": "a83d923b3833ec91a93dc516d2e723f49aabe627785be436fe3d328d6e46bb25",
+          "declared_binary_sha256": "95119228f958e7a5905daf2de812833b6b9197d2e5b9650134a618f43f203114",
+          "artifact_path": "general/reusable/fx_v2/proofs/FX2_PROOF02_LIVING_SCENE_CANONICAL.mp4",
+          "artifact_verified": true,
+          "artifact_sha256": "95119228f958e7a5905daf2de812833b6b9197d2e5b9650134a618f43f203114"
+        }
+      ],
+      "conditional_preflight": null,
+      "smoke": {
+        "source_delta_max": 1.800052,
+        "temporal_delta_max": 2.523999,
+        "global_shift_px_max": 0.009396,
+        "sample_output_sha256": "6caac7b14bd16f8c3526d5f1df79d851e0f915d31ae3f292372386a09284d894"
+      }
+    },
+    {
+      "id": "FX2-LIGHT-001",
+      "name": "practical_light_breath",
+      "family": "light",
+      "gate_status": "approved",
+      "implementation": {
+        "kind": "runtime_apply"
+      },
+      "implementation_path": null,
+      "implementation_sha256": "2f5208f853a4553c656bc7a96ba23cacc17498ded2c4fa792a3b4034e968af43",
+      "proofs": [
+        {
+          "id": "FX2_PROOF02_LIVING_SCENE_CANONICAL",
+          "record_sha256": "a83d923b3833ec91a93dc516d2e723f49aabe627785be436fe3d328d6e46bb25",
+          "declared_binary_sha256": "95119228f958e7a5905daf2de812833b6b9197d2e5b9650134a618f43f203114",
+          "artifact_path": "general/reusable/fx_v2/proofs/FX2_PROOF02_LIVING_SCENE_CANONICAL.mp4",
+          "artifact_verified": true,
+          "artifact_sha256": "95119228f958e7a5905daf2de812833b6b9197d2e5b9650134a618f43f203114"
+        }
+      ],
+      "conditional_preflight": null,
+      "smoke": {
+        "source_delta_max": 2.0,
+        "temporal_delta_max": 3.333333,
+        "global_shift_px_max": 0.019229,
+        "sample_output_sha256": "970f1205990c536438456966eb68687b4c2b9be1cbff9da750eeae18a23a90c4"
+      }
+    },
+    {
+      "id": "FX2-LIGHT-002",
+      "name": "moving_light_field",
+      "family": "light",
+      "gate_status": "approved",
+      "implementation": {
+        "kind": "runtime_apply"
+      },
+      "implementation_path": null,
+      "implementation_sha256": "ba82513929f15dba38090967d573b90400afb0e21ef71bc1c35d14f701621a03",
+      "proofs": [
+        {
+          "id": "FX2_PROOF02_LIVING_SCENE_CANONICAL",
+          "record_sha256": "a83d923b3833ec91a93dc516d2e723f49aabe627785be436fe3d328d6e46bb25",
+          "declared_binary_sha256": "95119228f958e7a5905daf2de812833b6b9197d2e5b9650134a618f43f203114",
+          "artifact_path": "general/reusable/fx_v2/proofs/FX2_PROOF02_LIVING_SCENE_CANONICAL.mp4",
+          "artifact_verified": true,
+          "artifact_sha256": "95119228f958e7a5905daf2de812833b6b9197d2e5b9650134a618f43f203114"
+        }
+      ],
+      "conditional_preflight": null,
+      "smoke": {
+        "source_delta_max": 0.820926,
+        "temporal_delta_max": 0.453623,
+        "global_shift_px_max": 0.019495,
+        "sample_output_sha256": "47784aa300f572cf15bf35af9f63d8e4c1ffca3e0ec4166bc6f903fc90be8fc7"
+      }
+    }
+  ],
+  "result": "PASS",
+  "evidence_fingerprint_sha256": "6aa449a218bc1541101303a97cb1702c4229b46b079ad119e1345ffd33393f4a"
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "aivideoedit.final-qc.v1",
+  "assembly_asset_id": "MASTER-1080P-001",
+  "assembly_sha256": "7ba526fbfc32c82e6045a46488314d83095152aa81da97f876afa2bdf57adffe",
+  "script_sha256": "02109105b5c352e7b71cbb2505680c1b85814350c059bc4cb9ed7dd14c8df64f",
+  "fx_lock_sha256": "46250da009beea80d83cd43eebc026a772406f95be6f2f3630ff0a061bdf5c14",
+  "technical": {
+    "decode_probe": "PASS",
+    "duration_match": "PASS",
+    "expected_duration_seconds": 112.68,
+    "actual_duration_seconds": 112.666667,
+    "video_present": true,
+    "audio_present": true,
+    "black_events": [],
+    "freeze_events": [],
+    "black_check": "PASS",
+    "freeze_check": "PASS",
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "fx_lock_live_verified": true,
+    "frame_count": 2704
+  },
+  "creative": {
+    "status": "pending_review",
+    "verified_shot_ids": [],
+    "mode_aware_checks": {},
+    "acceptance_instruction": null
+  },
+  "technical_pass": true,
+  "final_pass": false,
+  "recorded_at": "2026-09-22T06:49:30Z"
+}

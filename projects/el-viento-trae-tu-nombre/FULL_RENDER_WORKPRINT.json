@@ -1,0 +1,44 @@
+{
+  "schema": "aivideoedit.full-render-workprint.v1",
+  "status": "preserved_route4_baseline_fx_incomplete",
+  "filename": "El_Viento_Route4_1080p_CREATIVE_LOCK_v5.mp4",
+  "sha256": "5d822ef0442a086d13c9a7b94f0b6dcf8df5eac6e3b96495a70ff90192e68021",
+  "video": {
+    "codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "fps": 24,
+    "frames": 3705,
+    "duration_seconds": 154.375
+  },
+  "audio": {
+    "codec": "aac",
+    "sample_rate_hz": 48000,
+    "channels": 2,
+    "source_name": "El Viento trae tu nombre.wav",
+    "source_sha256": "8d967101c875868b64207bd43bfbc507c0a958989bbc560c2edb0024b15877cb",
+    "authority_duration_seconds": 154.48
+  },
+  "source_recipe": {
+    "refinement_id": "route4-two-heroes",
+    "edit_timing_locked": true,
+    "accepted_media_preserved": true,
+    "fx_completion": false
+  },
+  "qc": {
+    "full_decode": "PASS",
+    "frame_count": "PASS 3705",
+    "dimensions": "PASS 1920x1080",
+    "fps": "PASS 24",
+    "audio_present": true,
+    "black_check": "PASS",
+    "freeze_check": "PASS",
+    "creative_fx_status": "REVISION REQUIRED"
+  },
+  "storage": {
+    "review_drive_id": "1epCHhbFUtkLx1ysVl0cYUfuDi64ozz4c",
+    "reconstruction_source_drive_folder_id": "1KmABtLstpEKHN_0nzPP_KEKDYyPFtKjn"
+  },
+  "note": "This is the preserved current edit baseline, not a completed FX master.",
+  "updated_at": "2026-09-25T01:28:00Z"
+}
