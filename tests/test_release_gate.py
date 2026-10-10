@@ -42,6 +42,7 @@ def payload():
         "clip_sha256": {"s1": C, "s2": F},
         "duration_seconds": 120, "render_frames": 2880, "fps": 24,
         "fx": {"lock_sha256": F}, "ledger_sha256": C,
+        "fx_visibility_proof_sha256": F,
     }
     review = {
         "production_id": "full-song", "source_branch": "song/full-song",
@@ -57,13 +58,22 @@ def payload():
                "body": "AIVE-RELEASE-ACCEPT full-song " + V + " " + S +
                        " — watched entire film at normal speed",
                "user": {"login": "SouthPaw302", "type": "User"}}
-    return manifest, receipt, review, comment
+    visual_qc = {
+        "schema": "aivideoedit.visual-qc-evidence.v1", "status": "PASS",
+        "candidate_sha256": V,
+        "fx_visibility_proof_sha256": F,
+        "checks": {"source_media_quality": True, "time_varying_audio_controls_consumed": True,
+                   "all_locked_fx_visibly_changed_frames": True, "temporal_motion_measured": True,
+                   "transition_seams_continuous": True},
+        "human_visual_approval": False, "artistic_approval": False, "release_authority": False,
+    }
+    return manifest, receipt, review, comment, visual_qc
 
 
 def check(data, duration=120):
-    m, r, v, c = data
+    m, r, v, c, q = data
     return preflight(m, r, v, CONTRACT, source_sha=S, engine_sha=E,
-                     audio_duration=duration, comment=c)
+                     audio_duration=duration, comment=c, visual_qc=q)
 
 
 def rejects(transform, *, duration=120, pattern=None):
@@ -113,15 +123,18 @@ def test_30_second_manifest_even_when_receipt_claims_complete_fails():
     lambda d: d[3]["user"].update(type="Bot"),
     lambda d: d[3]["user"].update(login="other-human"),
     lambda d: d[3].update(body="LGTM"),
+    lambda d: d[4].update(status="FAIL"),
+    lambda d: d[4].update(candidate_sha256="0"*64),
+    lambda d: d[4].update(artistic_approval=True),
 ])
 def test_bypasses_fail_closed(mutation):
     rejects(mutation)
 
 
 def test_contract_cannot_omit_required_release_authority():
-    m, r, v, c = payload()
+    m, r, v, c, q = payload()
     weakened = copy.deepcopy(CONTRACT)
     weakened["release_gate_policy"]["human_verified_comment_required"] = False
     with pytest.raises(GateError, match="mandatory"):
         preflight(m, r, v, weakened, source_sha=S, engine_sha=E,
-                  audio_duration=120, comment=c)
+                  audio_duration=120, comment=c, visual_qc=q)

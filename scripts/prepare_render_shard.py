@@ -33,6 +33,12 @@ def main() -> int:
         return float(shots[index].get("duration_seconds") or 0)
 
     start_seconds = sum(duration(i) for i in range(args.start))
+    entry_preroll = 0.0
+    if args.start and shots[args.start - 1].get("transition_out"):
+        entry_preroll = min(
+            float(shots[args.start - 1].get("transition_seconds", 0.5)),
+            duration(args.start - 1),
+        )
     shard_shots = [dict(x) for x in shots[args.start:args.end]]
     shard_duration = sum(float(x.get("duration_seconds") or 0) for x in shard_shots)
     audio = dict(source.get("audio") or {})
@@ -47,6 +53,7 @@ def main() -> int:
         "start_seconds": round(start_seconds, 6),
         "duration_seconds": round(shard_duration, 6),
         "start_frame": round(start_seconds * fps),
+        "entry_preroll_seconds": round(entry_preroll, 6),
         "frame_count": round(shard_duration * fps),
         "parent_manifest_sha256": sha(args.manifest),
     }

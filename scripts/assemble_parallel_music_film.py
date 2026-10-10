@@ -54,6 +54,12 @@ def load_verified_shards(shards_dir: Path, gate: dict, lineage: dict, lineage_pa
         }
         if rec.get("clip_sha256") != expected_clips:
             raise RuntimeError(f"shard source-byte identity mismatch: {receipt_path}")
+        for effect in (rec.get("technical_visual_evidence") or {}).get("effects") or []:
+            if not effect.get("proof_file"):
+                continue
+            proof = receipt_path.parent / "fx_proofs" / str(effect["proof_file"])
+            if not proof.is_file() or sha(proof) != effect.get("proof_sha256"):
+                raise RuntimeError(f"shard FX proof mismatch: {receipt_path}")
         records.append((int(rec.get("start_index")), int(rec.get("end_index")), rec, video))
     records.sort(key=lambda item: item[0])
     return records
@@ -76,6 +82,7 @@ def main() -> int:
     sys.path.insert(0, str(engine))
     from scripts import render_real_music_film as canonical
     from scripts.render_lineage import receipt_identity, verify_bundle
+    from scripts.render_quality import bundle_fx_proofs, combine_visual_evidence
 
     lineage = verify_bundle(
         args.lineage, args.manifest, args.input_root,
@@ -91,6 +98,9 @@ def main() -> int:
     lock = args.gate_dir / "FX_LOCK.json"
     if canonical.digest(lock) != gate.get("fx_lock_sha256"):
         raise RuntimeError("director FX lock changed before assembly")
+    source_qc_path = args.gate_dir / "SOURCE_MEDIA_QC.json"
+    if not source_qc_path.is_file() or sha(source_qc_path) != gate.get("source_media_qc_sha256"):
+        raise RuntimeError("source-media QC evidence is missing or changed")
 
     records = load_verified_shards(args.shards_dir, gate, lineage, args.lineage)
     if not records:
@@ -132,6 +142,18 @@ def main() -> int:
         raise RuntimeError(f"assembled duration/frame mismatch: {measured:.3f}s/{decoded} vs {total_duration:.3f}s/{total_frames}")
     run(["ffmpeg", "-hide_banner", "-v", "error", "-i", target, "-f", "null", "-"])
     run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", target, "-vf", "fps=1/5,scale=320:180,tile=3x2", "-frames:v", "1", args.out / "contact_sheet.jpg"], timeout=180)
+    render_sha = sha(target)
+    fx_proof_path = args.out / "FX_VISIBILITY_PROOF.zip"
+    fx_proof_sha = bundle_fx_proofs(
+        [(str(record[2].get("shard")), record[3].parent / "fx_proofs") for record in records],
+        fx_proof_path,
+    )
+    visual_qc = combine_visual_evidence(manifest, [record[2] for record in records], gate, render_sha,
+                                        fx_proof_sha)
+    visual_qc_path = args.out / "VISUAL_QC_EVIDENCE.json"
+    visual_qc_path.write_text(json.dumps(visual_qc, indent=2) + "\n", encoding="utf-8")
+    if visual_qc["status"] != "PASS":
+        raise RuntimeError("technical visual QC rejected the candidate: " + json.dumps(visual_qc["checks"], sort_keys=True))
 
     events = []
     for _start, _end, _rec, video_path in records:
@@ -156,7 +178,7 @@ def main() -> int:
         "audio_sha256": lineage["audio_sha256"],
         "clip_sha256": lineage["clip_sha256"],
         "ledger_sha256": sha(final_ledger),
-        "render_sha256": sha(target),
+        "render_sha256": render_sha,
         "render_bytes": target.stat().st_size,
         "duration_seconds": measured,
         "render_frames": total_frames,
@@ -171,6 +193,9 @@ def main() -> int:
         "director_harness_receipt_sha256": sha(args.gate_dir / "DIRECTOR_HARNESS_RECEIPT.json"),
         "fx_lock_sha256": sha(lock),
         "fx": {"lock_sha256": sha(lock), "effects": gate.get("effects", []), "transitions": gate.get("transitions", [])},
+        "visual_qc_sha256": sha(visual_qc_path),
+        "fx_visibility_proof_sha256": fx_proof_sha,
+        "music_controls": gate.get("music_controls"),
         "shards": [{
             "start_index": s,
             "end_index": e,

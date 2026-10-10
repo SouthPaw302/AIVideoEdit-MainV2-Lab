@@ -193,6 +193,27 @@ def _bpm(beats:list[float])->float|None:
     return round(bpm,2)
 
 
+def _audio_controls(samples:list[float],rate:int)->dict[str,Any]:
+    """Return bounded, time-varying RMS/flux controls measured from decoded PCM."""
+    window=max(1,int(rate*.05))
+    rms=[]
+    for start in range(0,len(samples),window):
+        chunk=samples[start:start+window]
+        if chunk:rms.append(math.sqrt(sum(x*x for x in chunk)/len(chunk)))
+    peak=max(rms) if rms else 0.0
+    energy=[min(1.0,value/peak) if peak>1e-12 else 0.0 for value in rms]
+    flux=[max(0.0,value-(energy[i-1] if i else 0.0)) for i,value in enumerate(energy)]
+    flux_peak=max(flux) if flux else 0.0
+    transient=[min(1.0,value/flux_peak) if flux_peak>1e-12 else 0.0 for value in flux]
+    points=[
+        {"seconds":round(i*window/rate,4),"energy":round(e,6),"transient":round(t,6)}
+        for i,(e,t) in enumerate(zip(energy,transient))
+    ]
+    if len(points)==1:
+        points.append({**points[0],"seconds":round(window/rate,4)})
+    return {"source":"decoded_pcm_rms_flux","window_seconds":round(window/rate,6),"points":points}
+
+
 def analyze_onnx(path:Path,model:Path)->dict[str,Any]:
     import onnxruntime as ort
     samples,rate=_decode(path)
@@ -219,6 +240,7 @@ def analyze_onnx(path:Path,model:Path)->dict[str,Any]:
         "downbeat_positions_seconds":downs,
         "confidence":0.9 if len(beats)>=4 else 0.55,
         "authority":"evidence_only",
+        "audio_controls":_audio_controls(samples,rate),
     }
 
 
@@ -248,6 +270,7 @@ def analyze_dsp(path:Path)->dict[str,Any]:
         "downbeat_positions_seconds":beats[::4],
         "confidence":0.75 if len(beats)>=4 else 0.35,
         "authority":"evidence_only",
+        "audio_controls":_audio_controls(samples,rate),
     }
 
 
