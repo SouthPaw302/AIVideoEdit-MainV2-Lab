@@ -1,0 +1,51 @@
+{
+  "schema": "aivideoedit.full-fx-gate.v1",
+  "project": "El Viento trae tu nombre",
+  "refinement_id": "route4-two-heroes",
+  "baseline_file": "El_Viento_Route4_1080p_CREATIVE_LOCK_v5_review.mp4",
+  "baseline_drive_id": "1epCHhbFUtkLx1ysVl0cYUfuDi64ozz4c",
+  "review_sha256": "2c1641ad8289fe62714d0bee28d50eb7d00a9192e143f96c3982156df01fb60c",
+  "duration_seconds": 154.375,
+  "resolution": "1920x1080",
+  "fps": 24,
+  "result": "RENDERED_TECHNICAL_PASS_PENDING_USER_VISUAL",
+  "core_batches_01_06": "rendered_in_master_candidate_pending_visual_review",
+  "extended_act": "rendered_in_master_candidate_pending_visual_review",
+  "technical_qc": {
+    "decode": "pass",
+    "black_detect": "none",
+    "freeze_detect": "none",
+    "silence_detect": "none",
+    "export_variety": "pass",
+    "temporal_qc": "review; no new unexplained transition-spike locations versus preserved baseline"
+  },
+  "preservation": {
+    "edit_timing": "unchanged",
+    "hero_order": "unchanged",
+    "audio": "unchanged",
+    "intro_outro": "unchanged",
+    "loops_camera_motion": "unchanged",
+    "hand_repair": "unchanged"
+  },
+  "next_step": "User visual review at normal speed. Do not upscale until accepted.",
+  "note": "Previous 'no delta render required' conclusion is superseded by direct user review.",
+  "final_fx_complete": false,
+  "user_override": {
+    "at": "2026-09-25T00:45:00Z",
+    "direction": "The current 1080 is missing FX."
+  },
+  "master_candidate": {
+    "file": "El_Viento_Route4_1080p_FX_MASTER_v6.mp4",
+    "sha256": "5fe93ef79d528a27cb7a15003aac9e9bc50a0db40a6719a102d36d5f10314af0",
+    "size_bytes": 602346122,
+    "duration_seconds": 154.375,
+    "frames": 3705,
+    "fps": 24,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "audio": "original AAC stream copied unchanged from preserved Route 4 baseline"
+  },
+  "updated_at": "2026-09-25T01:50:00Z"
+}

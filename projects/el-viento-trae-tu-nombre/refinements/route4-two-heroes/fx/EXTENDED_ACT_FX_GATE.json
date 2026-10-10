@@ -1,0 +1,46 @@
+{
+  "schema": "aivideoedit.fx-gate.v1",
+  "project": "El Viento trae tu nombre",
+  "refinement_id": "route4-two-heroes",
+  "scope": "extended_final_act",
+  "segment": "01:52.680-02:34.375",
+  "review_mode": "baseline_fx_audit_delta_only",
+  "baseline_authority": {
+    "file": "El_Viento_Route4_1080p_CREATIVE_LOCK_v5_review.mp4",
+    "drive_id": "1epCHhbFUtkLx1ysVl0cYUfuDi64ozz4c"
+  },
+  "supplemental_sources": {
+    "batches": [
+      7,
+      8,
+      9
+    ],
+    "rule": "preserve as source/reference; their manifests explicitly leave timeline_assignment not_locked",
+    "batch10": "forbidden"
+  },
+  "existing_fx_verified": [
+    "ancestral apparition layers",
+    "golden thread/light structures",
+    "harbor memory double exposures",
+    "practical lantern/candle light",
+    "atmospheric and coastal motion",
+    "celestial-thread finale resolution"
+  ],
+  "delta_decision": "REOPENED: audit existing treatment but add genuinely missing FX without changing edit/timing.",
+  "moving_proof": {
+    "file": "El_Viento_ExtendedAct_BASELINE_AUDIT_v1.mp4",
+    "sha256": "1692bf48051a6dfdadedce9a467c5a488417f21b5bb3b1b444880fc65bfd7129",
+    "technical_qc": "pass",
+    "black_detect": "none",
+    "freeze_detect": "none",
+    "drive_contact_sheet_id": "15SSXBvvxoh4PkuXpJKmTeP-xIRvxUAQc"
+  },
+  "status": "rendered_pending_user_visual_review",
+  "user_override": {
+    "at": "2026-09-25T00:45:00Z",
+    "direction": "Current 1080 extended act is not accepted as FX-complete."
+  },
+  "master_candidate_sha256": "5fe93ef79d528a27cb7a15003aac9e9bc50a0db40a6719a102d36d5f10314af0",
+  "technical_qc_full_master": "pass",
+  "final_artistic_acceptance": "pending_user_visual_review"
+}

@@ -1,0 +1,141 @@
+{
+  "schema": "aivideoedit.fx-gate.v1",
+  "project": "El Viento trae tu nombre",
+  "refinement_id": "route4-two-heroes",
+  "batch": 1,
+  "segment": "00:00.000-00:21.504",
+  "source_policy": "preserve clean loops and pre-FX motion variants; no regeneration",
+  "selected_motion_sources": [
+    "01_motion_variant.mp4",
+    "02_motion_variant.mp4",
+    "03_motion_variant.mp4",
+    "04_motion_variant.mp4"
+  ],
+  "fx_decisions": [
+    {
+      "shot": 1,
+      "decision": "locked_after_autonomous_qc",
+      "fx": [
+        "subtle authored-highlight bloom",
+        "very light temporal grain",
+        "restrained vignette"
+      ],
+      "intent": "fort-at-dusk atmosphere; preserve male hero and harbor geometry",
+      "canonical_fx_ids": [
+        "FX2-SURFACE-001",
+        "FX2-MOTION-003",
+        "FX2-LIGHT-002"
+      ]
+    },
+    {
+      "shot": 2,
+      "decision": "locked_after_autonomous_qc",
+      "fx": [
+        "subtle authored-highlight bloom",
+        "very light temporal grain",
+        "restrained vignette"
+      ],
+      "intent": "lamp/rain atmosphere; preserve female hero identity and harbor geography",
+      "canonical_fx_ids": [
+        "FX2-SURFACE-001",
+        "FX2-MOTION-002",
+        "FX2-LIGHT-001"
+      ]
+    },
+    {
+      "shot": 3,
+      "decision": "locked_after_autonomous_qc",
+      "fx": [
+        "slightly stronger authored-highlight bloom",
+        "very light temporal grain",
+        "restrained vignette"
+      ],
+      "intent": "memory-thread awakening; preserve both heroes and architecture",
+      "canonical_fx_ids": [
+        "FX2-SURFACE-001",
+        "FX2-ATM-001",
+        "FX2-LIGHT-002"
+      ]
+    },
+    {
+      "shot": 4,
+      "decision": "locked_after_autonomous_qc",
+      "fx": [
+        "subtle authored-highlight bloom",
+        "very light temporal grain",
+        "restrained vignette"
+      ],
+      "intent": "convergence energy without structural drift",
+      "canonical_fx_ids": [
+        "FX2-SURFACE-001",
+        "FX2-MOTION-002",
+        "FX2-MOTION-003",
+        "FX2-LIGHT-001"
+      ]
+    }
+  ],
+  "prohibited_fx_confirmed_absent": [
+    "face morphing",
+    "subject replacement",
+    "architecture drift",
+    "horizon/geography drift",
+    "hallucinated figures",
+    "structural deformation",
+    "whole-frame wobble"
+  ],
+  "moving_proof": {
+    "file": "El_Viento_Batch01_BASELINE_AUDIT_v1.mp4",
+    "sha256": "0922b1b02dcc11f56ae090aff4884eef4af47a338e91eb0af7c7dc89f6b77c00",
+    "duration_seconds": 21.504,
+    "resolution": "1920x1080",
+    "fps": 24,
+    "source": "current 1080p creative-lock edit",
+    "technical_qc": "pass",
+    "black_detect": "none",
+    "freeze_detect": "none",
+    "artistic_acceptance": "superseded_missing_fx",
+    "drive_qc_contact_id": "1xUlH03Hq2OuUoETIw1ufq0JTDg22HqUH",
+    "note": "Legacy/replacement-style Batch 01 proof is not promotion authority because the current-edit preservation directive supersedes shot replacement."
+  },
+  "note": "Batch 01 locked by auditing the current 1080p creative edit. Existing effects satisfy the intended gate; duplicate stacking would degrade the accepted baseline.",
+  "runtime_authority": {
+    "runtime": "aivideoedit-fx-v2",
+    "seed": 302,
+    "implementation": "general/reusable/fx_v2/runtime.py",
+    "gate_finish": [
+      "authored-highlight bloom",
+      "very light temporal grain",
+      "restrained vignette"
+    ]
+  },
+  "source_validation": {
+    "canonical_motion_sources": "verified against registered Drive IDs/hashes and Route 4 shot lock",
+    "rejected_foreign_drive_folder": "Batch 01 - Invocation",
+    "reason": "contained unrelated ember/obsidian temple imagery and was not Route 4 canon"
+  },
+  "review_mode": "baseline_fx_audit_delta_only",
+  "baseline_authority": {
+    "file": "El_Viento_Route4_1080p_CREATIVE_LOCK_v5_review.mp4",
+    "drive_id": "1epCHhbFUtkLx1ysVl0cYUfuDi64ozz4c",
+    "policy": "preserve current edit/timing/title/audio/hero order and existing FX; do not replace shots with legacy Batch 01 motion assembly"
+  },
+  "existing_fx_verified": [
+    "rain/wet-reflection atmosphere",
+    "practical/lantern light breathing",
+    "thread glow and luminous connective motif",
+    "atmospheric movement",
+    "existing camera/parallax motion",
+    "current intro/title treatment"
+  ],
+  "delta_decision": "no additional FX required for Batch 01 after baseline audit; avoid duplicate bloom/grain/light stacking",
+  "status": "rendered_pending_user_visual_review",
+  "user_override": {
+    "at": "2026-09-25T00:45:00Z",
+    "direction": "Current 1080 is still missing FX; prior audit/lock is not sufficient artistic completion."
+  },
+  "prior_lock_preserved": true,
+  "current_authority": "Preserve current 154.375-second edit and perform a real delta FX pass; do not replace shots.",
+  "master_candidate_sha256": "5fe93ef79d528a27cb7a15003aac9e9bc50a0db40a6719a102d36d5f10314af0",
+  "technical_qc_full_master": "pass",
+  "final_artistic_acceptance": "pending_user_visual_review"
+}

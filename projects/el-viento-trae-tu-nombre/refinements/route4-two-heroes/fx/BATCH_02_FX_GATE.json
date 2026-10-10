@@ -1,0 +1,53 @@
+{
+  "schema": "aivideoedit.fx-gate.v1",
+  "project": "El Viento trae tu nombre",
+  "refinement_id": "route4-two-heroes",
+  "batch": 2,
+  "segment": "00:21.504-00:43.008",
+  "section": "Distance and origin",
+  "review_mode": "baseline_fx_audit_delta_only",
+  "baseline_authority": {
+    "file": "El_Viento_Route4_1080p_CREATIVE_LOCK_v5_review.mp4",
+    "drive_id": "1epCHhbFUtkLx1ysVl0cYUfuDi64ozz4c",
+    "policy": "preserve current edit, timing, hero order, audio, intro/outro, loops, camera motion and accepted repairs"
+  },
+  "existing_fx_verified": [
+    "thread/memory overlays",
+    "crossfaded apparition-like transition",
+    "wet/light atmosphere",
+    "existing camera/parallax motion"
+  ],
+  "delta_decision": "no duplicate FX stack added; current 1080p baseline already contains the intended moving FX language for this batch",
+  "technical_qc": {
+    "decode": "pass",
+    "black_detect": "none",
+    "freeze_detect": "none",
+    "temporal_motion": "present"
+  },
+  "moving_proof": {
+    "file": "El_Viento_Batch02_BASELINE_AUDIT_v1.mp4",
+    "sha256": "b15105027677f69c28acd8277939880ebbfd10e96478c9d38c79ba5448a4753b",
+    "source": "current 1080p creative-lock edit",
+    "artistic_acceptance": "superseded_missing_fx",
+    "drive_contact_sheet_id": "1rK2Bbw85oqBnpGnCltHHsdqzVGxOt4qp"
+  },
+  "status": "rendered_pending_user_visual_review",
+  "prohibited_changes_confirmed_absent": [
+    "shot replacement",
+    "timing rewrite",
+    "hero identity drift",
+    "architecture/geography drift",
+    "whole-frame wobble",
+    "duplicate FX stacking"
+  ],
+  "note": "Gate completed by auditing the accepted current edit. Legacy pre-FX motion assets remain preserved as source/reference only and do not supersede the current timeline.",
+  "user_override": {
+    "at": "2026-09-25T00:45:00Z",
+    "direction": "Current 1080 is still missing FX; prior audit/lock is not sufficient artistic completion."
+  },
+  "prior_lock_preserved": true,
+  "current_authority": "Preserve current 154.375-second edit and perform a real delta FX pass; do not replace shots.",
+  "master_candidate_sha256": "5fe93ef79d528a27cb7a15003aac9e9bc50a0db40a6719a102d36d5f10314af0",
+  "technical_qc_full_master": "pass",
+  "final_artistic_acceptance": "pending_user_visual_review"
+}

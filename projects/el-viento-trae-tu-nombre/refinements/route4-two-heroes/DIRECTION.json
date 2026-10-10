@@ -1,0 +1,61 @@
+{
+  "schema": "aivideoedit.refinement-direction.v1",
+  "refinement_id": "route4-two-heroes",
+  "title": "Route 4 — Island Dream / Ancestral Memory — Two Heroes",
+  "status": "active",
+  "source_audio": "El Viento trae tu nombre (Remastered).wav",
+  "preserved_assemblies": [
+    {
+      "asset_id": "MASTER-1080P-001",
+      "sha256": "7ba526fbfc32c82e6045a46488314d83095152aa81da97f876afa2bdf57adffe",
+      "role": "rollback"
+    },
+    {
+      "asset_id": "MASTER-1080P-OPTION3-V2",
+      "sha256": "4ac3f137d9bba34d05665acd9a344883f958bc04415b7b787e2bde2d020b96ab",
+      "role": "visual_research"
+    }
+  ],
+  "heroes": {
+    "male": {
+      "id": "HERO-MALE-01",
+      "role": "recurring emotional anchor",
+      "visual_language": "adult male; dark hair; grounded coastal silhouette; stone/navy/earth palette; weathered linen/wool textures; no logos or modern branding",
+      "continuity_lock": [
+        "face structure",
+        "hair shape/color",
+        "body proportions",
+        "wardrobe silhouette",
+        "navy/stone palette"
+      ]
+    },
+    "female": {
+      "id": "HERO-FEMALE-01",
+      "role": "recurring emotional anchor",
+      "visual_language": "adult female; dark hair; warm flowing silhouette; cream/rust/gold/lantern palette; tactile linen/wool textures; no logos or modern branding",
+      "continuity_lock": [
+        "face structure",
+        "hair shape/color",
+        "body proportions",
+        "wardrobe silhouette",
+        "cream/rust/gold palette"
+      ]
+    },
+    "shared_motif": "one luminous embroidered gold-red thread that can appear physically, symbolically or as a transition carrier"
+  },
+  "narrative_principle": "The surrealism must have causality: every transformation reveals another layer of place, relationship or inherited memory.",
+  "batch_01_requirement": {
+    "id": "BATCH-01-HERO-CHARACTER-LOCK",
+    "status": "required",
+    "deliverables": [
+      "male canonical character reference sheet",
+      "female canonical character reference sheet",
+      "shared two-character anchor composition",
+      "continuity/palette reference usable by later generation batches"
+    ],
+    "prohibited": [
+      "environment batch expansion before hero continuity is registered",
+      "faceless anonymous treatment for the two primary heroes"
+    ]
+  }
+}

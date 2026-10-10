@@ -1,0 +1,40 @@
+{
+  "schema": "aivideoedit.autonomous-reviewer.v1",
+  "project": "El Viento trae tu nombre",
+  "branch": "song/el-viento-trae-tu-nombre",
+  "refinement_id": "route4-two-heroes",
+  "name": "Route4 Review Director",
+  "authority": "Explicit user direction on 2026-09-24 delegated proof-by-proof creative review to the agent; do not stop for routine acceptance.",
+  "review_order": [
+    "technical decode/timing",
+    "hero identity continuity",
+    "architecture/geography/horizon stability",
+    "zero-drift violations",
+    "FX restraint and material plausibility",
+    "pacing/music fit",
+    "black/freeze/artifact checks"
+  ],
+  "decision_policy": {
+    "pass": "lock accepted proof and continue automatically",
+    "fail": "repair only named failed element, rerender, re-review, then continue",
+    "stop_only_for": [
+      "canon ambiguity that cannot be resolved from locked project state",
+      "missing/corrupt source media",
+      "requested change that would violate explicit user constraints"
+    ]
+  },
+  "prohibited": [
+    "regenerate accepted media without QC cause",
+    "create Batch 10",
+    "modify main",
+    "alter locked 00:00.000-01:52.680 timeline",
+    "introduce unapproved structural drift"
+  ],
+  "tool_preference": [
+    "prototype/backend_gui/production_proofs.py",
+    "prototype/backend_gui/production_fx.py",
+    "prototype/backend_gui/production_final_qc.py",
+    "prototype/backend_gui/harness_selftest.py",
+    "prototype/backend_gui/deepseek_harness/production_probe.py"
+  ]
+}
