@@ -1,0 +1,125 @@
+{
+  "schema": "aivideoedit.music-analysis.v1",
+  "analysis_complete": true,
+  "source_audio": {
+    "name": "El Viento trae tu nombre.wav",
+    "drive_id": "1M6uRTeYejXxn2rSDkTJu5H0_LiWrdwN4",
+    "sha256": "8d967101c875868b64207bd43bfbc507c0a958989bbc560c2edb0024b15877cb",
+    "sample_rate_hz": 48000,
+    "channels": 2,
+    "bit_depth": 16,
+    "duration_seconds": 154.48,
+    "status": "current_mux_authority"
+  },
+  "lyrics": {
+    "status": "present",
+    "source": "current_user_instruction",
+    "directing_use": "required",
+    "text_file": "LYRICS.md",
+    "verification_status": "verified_exact_current_user_text"
+  },
+  "genre": {
+    "status": "confident",
+    "label": "Spanish-language acoustic island folk ballad",
+    "confidence": 0.78,
+    "source": "director_analysis_of_current_audio_and_song_structure"
+  },
+  "rhythm": {
+    "tempo_status": "measured",
+    "tempo_bpm": 89.285714,
+    "pulse_description": "Moderate, steady pulse supporting long lyrical phrases and gradual painterly transformations.",
+    "meter_or_groove": "Measured 4/4 folk-ballad pulse with restrained forward motion."
+  },
+  "tonal_center": {
+    "estimate": "D minor / relative F-major family",
+    "status": "preliminary_signal_analysis"
+  },
+  "sections": [
+    {
+      "id": "M01",
+      "name": "Opening remembrance",
+      "start_seconds": 0,
+      "end_seconds": 21.504,
+      "energy": "low-to-medium",
+      "musical_cues": [
+        "Measured pulse establishes the opening",
+        "First vocal phrases introduce fort, sea and remembered name"
+      ],
+      "visual_function": "Awaken the tactile map and let embroidery spread through the remembered geography."
+    },
+    {
+      "id": "M02",
+      "name": "Distance and origin",
+      "start_seconds": 21.504,
+      "end_seconds": 43.008,
+      "energy": "medium",
+      "musical_cues": [
+        "Vocal phrasing continues over a stable pulse",
+        "The lyric shifts from immediate remembrance toward distance and origin"
+      ],
+      "visual_function": "Liquefy the map into sea and raise the island village from the painted current."
+    },
+    {
+      "id": "M03",
+      "name": "Verse 3 expansion",
+      "start_seconds": 43.008,
+      "end_seconds": 64.512,
+      "energy": "medium-rising",
+      "musical_cues": [
+        "The expanded verse increases narrative density",
+        "Place imagery broadens from island life toward memory and return"
+      ],
+      "visual_function": "Transform village into fort and then soften the fort into the imagined homeland."
+    },
+    {
+      "id": "M04",
+      "name": "Remembered presence",
+      "start_seconds": 64.512,
+      "end_seconds": 86.016,
+      "energy": "medium-high",
+      "musical_cues": [
+        "Personal memory becomes more intimate",
+        "The pulse remains stable while the lyric turns toward face, voice and return"
+      ],
+      "visual_function": "Let atmosphere overtake the homeland and reveal anonymous ancestral/personal presence in mist."
+    },
+    {
+      "id": "M05",
+      "name": "Chorus crest",
+      "start_seconds": 86.016,
+      "end_seconds": 106.176,
+      "energy": "high",
+      "musical_cues": [
+        "Chorus broadens the emotional scale",
+        "Mareas, caminos, piedras, mar and separation converge into the emotional crest"
+      ],
+      "visual_function": "Reveal the complete tapestry, collapse its accumulated imagery inward and compress it into one luminous thread."
+    },
+    {
+      "id": "M06",
+      "name": "Core phrase release / handoff",
+      "start_seconds": 106.176,
+      "end_seconds": 112.68,
+      "energy": "falling",
+      "musical_cues": [
+        "Original core phrase resolves",
+        "Current remastered source continues into added chorus/final act"
+      ],
+      "visual_function": "Carry the core thread/harbor memory forward; do not end permanently at 112.68 because the current source audio continues."
+    },
+    {
+      "id": "M07",
+      "name": "Extended chorus and ancestral resolution",
+      "start_seconds": 112.68,
+      "end_seconds": 154.48,
+      "energy": "renewed crest to gradual release",
+      "musical_cues": [
+        "Added chorus extends the emotional resolution",
+        "Instrumental/final passage supports longer evolving scenes and ancestral/celestial release"
+      ],
+      "visual_function": "Use the existing extended edit as timing authority; deepen ancestral harbor, luminous thread, atmosphere and internal FX without increasing scene-change density."
+    }
+  ],
+  "note": "Core 0-112.68 analysis is retained as phrase-grid history. Current source-audio authority is the 154.48-second remastered WAV; M07 covers the added chorus/final act. Lyrics remain directing input and Route 4 two-hero canon remains locked.",
+  "updated_at": "2026-09-25T01:28:00Z"
+}

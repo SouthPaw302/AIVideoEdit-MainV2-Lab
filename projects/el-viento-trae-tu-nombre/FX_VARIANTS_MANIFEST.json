@@ -1,0 +1,170 @@
+{
+  "schema": "aivideoedit.fx-variants.v1",
+  "project_id": "el-viento-trae-tu-nombre",
+  "purpose": "Alternate still states with slight bounded motion/composition differences for later FX interpolation, morphing, parallax and transition work. These are candidate support media, not locked canon.",
+  "drive": {
+    "root_folder_id": "100EDoKDKfGusiYCGs-xGUtpjQuCjLFwH",
+    "hero_folder_id": "1h6TJrzB470GXnHwncXzQutpIED4ctNyM",
+    "batch_01_fx_folder_id": "1lN0q8MYXZv5nUDkRHPVB4-M2awMECLHo",
+    "batch_02_fx_folder_id": "1if9Ctee4F2HhvHanzLMPz3As4Eqbyl1t",
+    "batch_03_fx_folder_id": "1v5sgPErmQHdHBwSrhoYPAt-bucz4rQrz"
+  },
+  "batch_01": {
+    "status": "uploaded",
+    "method": "generated alternate image states with slight visual/motion differences",
+    "assets": [
+      {
+        "shot": 1,
+        "name": "shot_01_fx_motion_variant.png",
+        "drive_id": "11e1QLXZ4JXC_tZY8qC6BnsAWoJblWU6i",
+        "lifecycle_status": "candidate"
+      },
+      {
+        "shot": 2,
+        "name": "shot_02_fx_motion_variant.png",
+        "drive_id": "1FZXIgyIrQO3YaupN2RyNQKOQbSVwApBJ",
+        "lifecycle_status": "candidate"
+      },
+      {
+        "shot": 3,
+        "name": "shot_03_fx_motion_variant.png",
+        "drive_id": "1l6EKYK7U6vi3qo11Ko6DoTKSAyCHIGyL",
+        "lifecycle_status": "candidate"
+      },
+      {
+        "shot": 4,
+        "name": "shot_04_fx_motion_variant.png",
+        "drive_id": "1CSWna-fXuXXpz5uQjQD9xR-SLaMcgamH",
+        "lifecycle_status": "candidate"
+      },
+      {
+        "shot": 5,
+        "name": "shot_05_fx_motion_variant.png",
+        "drive_id": "1CQce0SobR-7tXq9mXmV8V7h9c61l3j6M",
+        "lifecycle_status": "candidate"
+      },
+      {
+        "shot": 6,
+        "name": "shot_06_fx_motion_variant.png",
+        "drive_id": "1iJhTa2t594vItw9CQvcKU7M1fI0-wsBn",
+        "lifecycle_status": "candidate"
+      },
+      {
+        "shot": 7,
+        "name": "shot_07_fx_motion_variant.png",
+        "drive_id": "1PKR8X02JmrVP-sYHtWBzWQVoRVeMNPQn",
+        "lifecycle_status": "candidate"
+      },
+      {
+        "shot": 8,
+        "name": "shot_08_fx_motion_variant.png",
+        "drive_id": "1JhcXu980kv8ex8LJC1V2qvzmhMB_hzEQ",
+        "lifecycle_status": "candidate"
+      },
+      {
+        "shot": 9,
+        "name": "shot_09_fx_motion_variant.png",
+        "drive_id": "12KoqDTNMMRAGqF0NzUSuYOO8pTEQ4wK5",
+        "lifecycle_status": "candidate"
+      },
+      {
+        "shot": 10,
+        "name": "shot_10_fx_motion_variant.png",
+        "drive_id": "1tk2LpN0Y-OUxdgJDU5r1u51NXNYA5NCk",
+        "lifecycle_status": "candidate"
+      }
+    ]
+  },
+  "batch_02": {
+    "status": "uploaded",
+    "method": "deterministic bounded transform of Batch 02 candidate plates: ~1-2% translation/zoom, <=0.5 degree rotation, and sub-2px sinusoidal textile/fluid displacement; designed as FX interpolation support rather than whole-scene reinterpretation",
+    "assets": [
+      {
+        "shot": 2,
+        "name": "shot_02_fx_motion_variant_b2.png",
+        "drive_id": "1146whSfkVZ6-lOTBsQF1MxC4oFWxQiO9",
+        "sha256": "af60f0ee97c545b68a1c814eaef8d53c824d791b0348e22eecbfbaf67d90873e",
+        "lifecycle_status": "candidate"
+      },
+      {
+        "shot": 3,
+        "name": "shot_03_fx_motion_variant_b2.png",
+        "drive_id": "1mcwQkfr0bE1w90jFdpt1CqTl4oQWEUlo",
+        "sha256": "4f2ce7b6d07d747031e3fdd18fbb1bbb5d0faa7abe3183a3ecec7ebe22d0aea3",
+        "lifecycle_status": "candidate"
+      },
+      {
+        "shot": 4,
+        "name": "shot_04_fx_motion_variant_b2.png",
+        "drive_id": "1rAOVCS6muRtx6QdQ9gP1l4JWAynXgTTZ",
+        "sha256": "366f719a286916035d4fba15275452f763f87fcfcc3304067a04d976d8694533",
+        "lifecycle_status": "candidate"
+      },
+      {
+        "shot": 5,
+        "name": "shot_05_fx_motion_variant_b2.png",
+        "drive_id": "1QSRpCWsC6p4s1PfWYVRivEB-xa5VsTRJ",
+        "sha256": "db2c075449e668750da0067d3eff96372de314811db671d81f97073cf9fe2a97",
+        "lifecycle_status": "candidate"
+      },
+      {
+        "shot": 6,
+        "name": "shot_06_fx_motion_variant_b2.png",
+        "drive_id": "1oTJJwOwtUu4tXktDQ7owu5bc5szb2aJk",
+        "sha256": "ac446a47b4e8ac4ff0ac9308f8813718dbc0728e0caf09306b7c97ef663d2a90",
+        "lifecycle_status": "candidate"
+      },
+      {
+        "shot": 7,
+        "name": "shot_07_fx_motion_variant_b2.png",
+        "drive_id": "1ntg-y4_T7hJIMeab1hgv8aoDqNowgANJ",
+        "sha256": "b866fb6b57b65223a965fc319b9cd8567f241b7c579cfbeda968480e6c77dbb1",
+        "lifecycle_status": "candidate"
+      },
+      {
+        "shot": 8,
+        "name": "shot_08_fx_motion_variant_b2.png",
+        "drive_id": "1gC7LLUunTT0UcY1k_4eZNnBF2hNaXCNH",
+        "sha256": "fe96ff9b842bcf637902e773c3b6652a9dd88b64feae04b592418173012634af",
+        "lifecycle_status": "candidate"
+      },
+      {
+        "shot": 9,
+        "name": "shot_09_fx_motion_variant_b2.png",
+        "drive_id": "1GxBLdX4fGUKZxSQrKfXRH-eN-i9IUBp_",
+        "sha256": "23eb05f6a690d7f7575f9dbec3dc0f7c94105e45cda4859ab2f965ec3acd93dc",
+        "lifecycle_status": "candidate"
+      },
+      {
+        "shot": 10,
+        "name": "shot_10_fx_motion_variant_b2.png",
+        "drive_id": "1ZwlCmZhZGtCftldQqldx9RnnzwD1lrVt",
+        "sha256": "f0492bba441a8d610e763c8e59d20ed7ee776f1ff0c254dd2b458962ada40093",
+        "lifecycle_status": "candidate"
+      },
+      {
+        "shot": 11,
+        "name": "shot_11_fx_motion_variant_b2.png",
+        "drive_id": "1Tco4ERP956V9YrNenCNBF0hYSxoqCmNT",
+        "sha256": "f55f05cede15a65c750d65c23bfa6fddb88ee79e33827949d3560fda91f8afcb",
+        "lifecycle_status": "candidate"
+      }
+    ]
+  },
+  "batch_03": {
+    "status": "uploaded",
+    "method": "Storyboard/contact-sheet motion-development variants for FX planning and visual continuity reference.",
+    "assets": [
+      {
+        "name": "batch03_fx_motion_variant_contact_sheet_01.png",
+        "drive_id": "1FIRw9Vwda1gDM31MmcfvzP-1co4eNtDv",
+        "lifecycle_status": "candidate"
+      },
+      {
+        "name": "batch03_fx_motion_variant_contact_sheet_02.png",
+        "drive_id": "1dh823IJfnZGcEC2X62ltwxqrxC6UJXao",
+        "lifecycle_status": "candidate"
+      }
+    ]
+  }
+}

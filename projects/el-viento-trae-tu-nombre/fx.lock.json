@@ -1,0 +1,694 @@
+{
+  "schema_version": 2,
+  "gate": "aivideoedit-fx-precompile-v2",
+  "project": "el-viento-trae-tu-nombre",
+  "runtime": "aivideoedit-fx-v2",
+  "manifest_sha256": "834a7ef36da32c441313baef537344151cbad8ab6f431fef7c1b0d0de0f4b6ac",
+  "registry_sha256": "9221119f49099b08ddbf85fdbf7f93f4e9eb62c0fe558f5c677fd7e1c510e46f",
+  "runtime_sha256": "6cfdf3ba68c1f79015c1f1b26174d4e3ca4de7b75b06b5ad9811580f5bc2cfa4",
+  "render_inputs": [
+    {
+      "path": "projects/el-viento-trae-tu-nombre/SCRIPT.json",
+      "sha256": "1d54b7a3209f7b1d03df45c929139a731cc200a3511d13aac1a0798e29dbe19c"
+    },
+    {
+      "path": "projects/el-viento-trae-tu-nombre/ASSET_MANIFEST.json",
+      "sha256": "4d8e654022026468780520e68977f0a28ec281e6c2178a13ec159b44d18b1a69"
+    },
+    {
+      "path": "projects/el-viento-trae-tu-nombre/FX_VARIANTS_MANIFEST.json",
+      "sha256": "fc06334910b1b6ca606d06b21850be3cdb3bbe4a1e28799920de4989ee37e4f6"
+    },
+    {
+      "path": "projects/el-viento-trae-tu-nombre/refinements/route4-two-heroes/shot_locks/BATCH_01_OPENING_REMEMBRANCE.json",
+      "sha256": "cff420ff199f32c758a85515a2ab8360e134580a44c6153c073ef88c97d6d1ee"
+    },
+    {
+      "path": "projects/el-viento-trae-tu-nombre/refinements/route4-two-heroes/shot_locks/BATCH_02_DISTANCE_AND_ORIGIN.json",
+      "sha256": "8cb21005bbbde9bcbaed2c8ff7804bfb8652aaead34f39a917201993afb81cc6"
+    },
+    {
+      "path": "projects/el-viento-trae-tu-nombre/refinements/route4-two-heroes/shot_locks/BATCH_03_VERSE3_EXPANSION.json",
+      "sha256": "fe66dfff6a3fa46adb1f4305b580efab6135a1908e111695a0dae50cbaf1bed4"
+    },
+    {
+      "path": "projects/el-viento-trae-tu-nombre/refinements/route4-two-heroes/shot_locks/BATCH_04_REMEMBERED_PRESENCE.json",
+      "sha256": "1be4557f4b1c25001a12be6f68bf1fc8cb8f29064b1ec744299ef79bc9050d9d"
+    },
+    {
+      "path": "projects/el-viento-trae-tu-nombre/refinements/route4-two-heroes/shot_locks/BATCH_05_CHORUS_CREST.json",
+      "sha256": "1aaa76d2d6111ca453e599d661db387a1f2b71d9686e2b860114db038253b790"
+    },
+    {
+      "path": "projects/el-viento-trae-tu-nombre/refinements/route4-two-heroes/shot_locks/BATCH_06_RELEASE_TO_BLACK.json",
+      "sha256": "2be022ae47a783c3ac668f06757b075278fae1d04222eeb1291a7ad6ff32650b"
+    },
+    {
+      "path": "projects/el-viento-trae-tu-nombre/refinements/route4-two-heroes/media/BATCH_07_ANCESTRAL_PRESENCE.json",
+      "sha256": "702cd056d670606e414961424e9028656c9952d0cbd90bc44baf5e70ba30a908"
+    },
+    {
+      "path": "projects/el-viento-trae-tu-nombre/refinements/route4-two-heroes/media/BATCH_08_SUPPLEMENTAL_ANCESTRAL_HARBOR.json",
+      "sha256": "544e7760ef1d0c48d1d7a9014ffdeed2aba72643682fa4a27b66bb24bd6bc60a"
+    },
+    {
+      "path": "projects/el-viento-trae-tu-nombre/refinements/route4-two-heroes/media/BATCH_09_FINAL_SUPPLEMENTAL.json",
+      "sha256": "ab9c08cb960f0eab83b9d9078b64ab956b9a943b1f4386d74ee45253056f4330"
+    },
+    {
+      "path": "projects/el-viento-trae-tu-nombre/refinements/route4-two-heroes/fx/BATCH_01_FX_GATE.json",
+      "sha256": "b7a049a4154164a30cce3ab76d55955717358c19a8ecaaead354e5943b6eaac5"
+    },
+    {
+      "path": "projects/el-viento-trae-tu-nombre/refinements/route4-two-heroes/fx/BATCH_02_FX_GATE.json",
+      "sha256": "40f4089c7038c3ed714c72c3c49de81b03a0c813a9a34cc5cb7c6220612150e7"
+    },
+    {
+      "path": "projects/el-viento-trae-tu-nombre/refinements/route4-two-heroes/fx/BATCH_03_FX_GATE.json",
+      "sha256": "69164db6b346dc10fd9cd90ef93b9a38b3550517875c1478a444f0153d5e21de"
+    },
+    {
+      "path": "projects/el-viento-trae-tu-nombre/refinements/route4-two-heroes/fx/BATCH_04_FX_GATE.json",
+      "sha256": "b595586cb81c2ad11133fa6d652a2a5dc3905720f31ec752afaf39a759cb5195"
+    },
+    {
+      "path": "projects/el-viento-trae-tu-nombre/refinements/route4-two-heroes/fx/BATCH_05_FX_GATE.json",
+      "sha256": "f60114bd2bf0b129a45d5b47ce567b2e6771f8315f2d51b5286d51d0eebca0c5"
+    },
+    {
+      "path": "projects/el-viento-trae-tu-nombre/refinements/route4-two-heroes/fx/BATCH_06_FX_GATE.json",
+      "sha256": "7d930adfee63856ab34d1bedb57dfea9446793c853619130aa43c568a78af9b4"
+    },
+    {
+      "path": "projects/el-viento-trae-tu-nombre/refinements/route4-two-heroes/fx/EXTENDED_ACT_FX_GATE.json",
+      "sha256": "c6c36d88245f934af4e111f79f58fe2c92aa8097e4d28511fabd35be7ac467af"
+    }
+  ],
+  "effects": [
+    {
+      "id": "FX2-SURFACE-001",
+      "name": "temporal_canvas_lock",
+      "family": "surface",
+      "gate_status": "approved",
+      "implementation": {
+        "kind": "runtime_apply",
+        "method": "apply_canvas"
+      },
+      "implementation_path": null,
+      "implementation_sha256": "93df6d0c8c045b394dc128e9b786ee70940071f0fcb6014ed0d9cb2997b8fc71",
+      "proofs": [
+        {
+          "id": "FX2_PROOF02_LIVING_SCENE_CANONICAL",
+          "record_sha256": "a83d923b3833ec91a93dc516d2e723f49aabe627785be436fe3d328d6e46bb25",
+          "declared_binary_sha256": "95119228f958e7a5905daf2de812833b6b9197d2e5b9650134a618f43f203114",
+          "artifact_path": "general/reusable/fx_v2/proofs/FX2_PROOF02_LIVING_SCENE_CANONICAL.mp4",
+          "artifact_verified": true,
+          "artifact_sha256": "95119228f958e7a5905daf2de812833b6b9197d2e5b9650134a618f43f203114"
+        }
+      ],
+      "conditional_preflight": null,
+      "smoke": {
+        "source_delta_max": 0.554392,
+        "temporal_delta_max": 0.0,
+        "global_shift_px_max": 0.006617,
+        "sample_output_sha256": "ad71703670e6a1830e514d09ecae0c88051a47e0a05a0d9c6034ebef3995bff6"
+      }
+    },
+    {
+      "id": "FX2-MOTION-002",
+      "name": "localized_living_flow",
+      "family": "motion",
+      "gate_status": "approved",
+      "implementation": {
+        "kind": "runtime_apply"
+      },
+      "implementation_path": null,
+      "implementation_sha256": "2513861e83edf6eef1778bf3c0f53d7615dfc645ac6329f21c7eaaf70f201757",
+      "proofs": [
+        {
+          "id": "FX2_PROOF02_LIVING_SCENE_CANONICAL",
+          "record_sha256": "a83d923b3833ec91a93dc516d2e723f49aabe627785be436fe3d328d6e46bb25",
+          "declared_binary_sha256": "95119228f958e7a5905daf2de812833b6b9197d2e5b9650134a618f43f203114",
+          "artifact_path": "general/reusable/fx_v2/proofs/FX2_PROOF02_LIVING_SCENE_CANONICAL.mp4",
+          "artifact_verified": true,
+          "artifact_sha256": "95119228f958e7a5905daf2de812833b6b9197d2e5b9650134a618f43f203114"
+        }
+      ],
+      "conditional_preflight": null,
+      "smoke": {
+        "source_delta_max": 1.53684,
+        "temporal_delta_max": 2.859722,
+        "global_shift_px_max": 0.879459,
+        "sample_output_sha256": "76881a239b97651e3a524cdea6611f47cb4efeaa1f9b06eb7f7703119887a88b"
+      }
+    },
+    {
+      "id": "FX2-MOTION-003",
+      "name": "water_flow",
+      "family": "motion",
+      "gate_status": "approved",
+      "implementation": {
+        "kind": "runtime_apply"
+      },
+      "implementation_path": null,
+      "implementation_sha256": "3317b3cda9b602dad8a90dfe498aa379e4751ea8c1e2de531e5ff1e7b410241d",
+      "proofs": [
+        {
+          "id": "FX2_PROOF02_LIVING_SCENE_CANONICAL",
+          "record_sha256": "a83d923b3833ec91a93dc516d2e723f49aabe627785be436fe3d328d6e46bb25",
+          "declared_binary_sha256": "95119228f958e7a5905daf2de812833b6b9197d2e5b9650134a618f43f203114",
+          "artifact_path": "general/reusable/fx_v2/proofs/FX2_PROOF02_LIVING_SCENE_CANONICAL.mp4",
+          "artifact_verified": true,
+          "artifact_sha256": "95119228f958e7a5905daf2de812833b6b9197d2e5b9650134a618f43f203114"
+        }
+      ],
+      "conditional_preflight": null,
+      "smoke": {
+        "source_delta_max": 1.347749,
+        "temporal_delta_max": 2.460509,
+        "global_shift_px_max": 0.153833,
+        "sample_output_sha256": "a1b9ccb6226bf72354be2f744263020b55e9c06539d2bec1d09a42499f6e8c63"
+      }
+    },
+    {
+      "id": "FX2-ATM-001",
+      "name": "advected_smoke",
+      "family": "environment",
+      "gate_status": "approved",
+      "implementation": {
+        "kind": "runtime_apply"
+      },
+      "implementation_path": null,
+      "implementation_sha256": "a53ce4e7a2d47488097ebc238b4f763a972e1333d3c1752cca4f467073a9e93e",
+      "proofs": [
+        {
+          "id": "FX2_PROOF02_LIVING_SCENE_CANONICAL",
+          "record_sha256": "a83d923b3833ec91a93dc516d2e723f49aabe627785be436fe3d328d6e46bb25",
+          "declared_binary_sha256": "95119228f958e7a5905daf2de812833b6b9197d2e5b9650134a618f43f203114",
+          "artifact_path": "general/reusable/fx_v2/proofs/FX2_PROOF02_LIVING_SCENE_CANONICAL.mp4",
+          "artifact_verified": true,
+          "artifact_sha256": "95119228f958e7a5905daf2de812833b6b9197d2e5b9650134a618f43f203114"
+        }
+      ],
+      "conditional_preflight": null,
+      "smoke": {
+        "source_delta_max": 1.800052,
+        "temporal_delta_max": 2.523999,
+        "global_shift_px_max": 0.009396,
+        "sample_output_sha256": "6caac7b14bd16f8c3526d5f1df79d851e0f915d31ae3f292372386a09284d894"
+      }
+    },
+    {
+      "id": "FX2-ATM-002",
+      "name": "rain_plane",
+      "family": "environment",
+      "gate_status": "approved",
+      "implementation": {
+        "kind": "runtime_apply"
+      },
+      "implementation_path": null,
+      "implementation_sha256": "44b3015c737163c626e2335a65ce1591ae56ba319d5c6689db5e4a60f269734c",
+      "proofs": [
+        {
+          "id": "FX2_PROOF02_LIVING_SCENE_CANONICAL",
+          "record_sha256": "a83d923b3833ec91a93dc516d2e723f49aabe627785be436fe3d328d6e46bb25",
+          "declared_binary_sha256": "95119228f958e7a5905daf2de812833b6b9197d2e5b9650134a618f43f203114",
+          "artifact_path": "general/reusable/fx_v2/proofs/FX2_PROOF02_LIVING_SCENE_CANONICAL.mp4",
+          "artifact_verified": true,
+          "artifact_sha256": "95119228f958e7a5905daf2de812833b6b9197d2e5b9650134a618f43f203114"
+        }
+      ],
+      "conditional_preflight": null,
+      "smoke": {
+        "source_delta_max": 2.872205,
+        "temporal_delta_max": 5.483924,
+        "global_shift_px_max": 0.083578,
+        "sample_output_sha256": "73bd395eda83d33f2d16db4c0886d816e0e133ded4b8b0bdad8ce9795264ef2e"
+      }
+    },
+    {
+      "id": "FX2-LIGHT-001",
+      "name": "practical_light_breath",
+      "family": "light",
+      "gate_status": "approved",
+      "implementation": {
+        "kind": "runtime_apply"
+      },
+      "implementation_path": null,
+      "implementation_sha256": "2f5208f853a4553c656bc7a96ba23cacc17498ded2c4fa792a3b4034e968af43",
+      "proofs": [
+        {
+          "id": "FX2_PROOF02_LIVING_SCENE_CANONICAL",
+          "record_sha256": "a83d923b3833ec91a93dc516d2e723f49aabe627785be436fe3d328d6e46bb25",
+          "declared_binary_sha256": "95119228f958e7a5905daf2de812833b6b9197d2e5b9650134a618f43f203114",
+          "artifact_path": "general/reusable/fx_v2/proofs/FX2_PROOF02_LIVING_SCENE_CANONICAL.mp4",
+          "artifact_verified": true,
+          "artifact_sha256": "95119228f958e7a5905daf2de812833b6b9197d2e5b9650134a618f43f203114"
+        }
+      ],
+      "conditional_preflight": null,
+      "smoke": {
+        "source_delta_max": 2.0,
+        "temporal_delta_max": 3.333333,
+        "global_shift_px_max": 0.019229,
+        "sample_output_sha256": "970f1205990c536438456966eb68687b4c2b9be1cbff9da750eeae18a23a90c4"
+      }
+    },
+    {
+      "id": "FX2-LIGHT-002",
+      "name": "moving_light_field",
+      "family": "light",
+      "gate_status": "approved",
+      "implementation": {
+        "kind": "runtime_apply"
+      },
+      "implementation_path": null,
+      "implementation_sha256": "ba82513929f15dba38090967d573b90400afb0e21ef71bc1c35d14f701621a03",
+      "proofs": [
+        {
+          "id": "FX2_PROOF02_LIVING_SCENE_CANONICAL",
+          "record_sha256": "a83d923b3833ec91a93dc516d2e723f49aabe627785be436fe3d328d6e46bb25",
+          "declared_binary_sha256": "95119228f958e7a5905daf2de812833b6b9197d2e5b9650134a618f43f203114",
+          "artifact_path": "general/reusable/fx_v2/proofs/FX2_PROOF02_LIVING_SCENE_CANONICAL.mp4",
+          "artifact_verified": true,
+          "artifact_sha256": "95119228f958e7a5905daf2de812833b6b9197d2e5b9650134a618f43f203114"
+        }
+      ],
+      "conditional_preflight": null,
+      "smoke": {
+        "source_delta_max": 0.820926,
+        "temporal_delta_max": 0.453623,
+        "global_shift_px_max": 0.019495,
+        "sample_output_sha256": "47784aa300f572cf15bf35af9f63d8e4c1ffca3e0ec4166bc6f903fc90be8fc7"
+      }
+    },
+    {
+      "id": "FX2-LIGHT-023",
+      "name": "firelight_breath",
+      "family": "light",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "firelight_breath",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "implementation_path": "general/reusable/fx_v2/promoted_effects.py",
+      "implementation_sha256": "ab992242d901a858b349566c323f7f13f786dcc1c8d15365967c98c5f35025ad",
+      "proofs": [
+        {
+          "id": "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY",
+          "record_sha256": "1627a3700b17c9df73456709b1497ce5444952a06615724d2b0eb34bd506a186",
+          "declared_binary_sha256": "3e2cc13a3e292f3de8155e2043ec762f7aff3d330cdd034f62eabfa462c69000",
+          "artifact_path": "general/reusable/fx_v2/proofs/FX2_PROOF04_PROMOTED_EFFECT_LIBRARY.verification.json",
+          "artifact_verified": true,
+          "artifact_sha256": "3e2cc13a3e292f3de8155e2043ec762f7aff3d330cdd034f62eabfa462c69000"
+        }
+      ],
+      "conditional_preflight": null,
+      "smoke": {
+        "external_or_adapter": true,
+        "implementation_sha256": "ab992242d901a858b349566c323f7f13f786dcc1c8d15365967c98c5f35025ad"
+      }
+    },
+    {
+      "id": "FX2-LIGHT-024",
+      "name": "radial_light_shafts",
+      "family": "light",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "radial_light_shafts",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "implementation_path": "general/reusable/fx_v2/promoted_effects.py",
+      "implementation_sha256": "ab992242d901a858b349566c323f7f13f786dcc1c8d15365967c98c5f35025ad",
+      "proofs": [
+        {
+          "id": "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY",
+          "record_sha256": "1627a3700b17c9df73456709b1497ce5444952a06615724d2b0eb34bd506a186",
+          "declared_binary_sha256": "3e2cc13a3e292f3de8155e2043ec762f7aff3d330cdd034f62eabfa462c69000",
+          "artifact_path": "general/reusable/fx_v2/proofs/FX2_PROOF04_PROMOTED_EFFECT_LIBRARY.verification.json",
+          "artifact_verified": true,
+          "artifact_sha256": "3e2cc13a3e292f3de8155e2043ec762f7aff3d330cdd034f62eabfa462c69000"
+        }
+      ],
+      "conditional_preflight": null,
+      "smoke": {
+        "external_or_adapter": true,
+        "implementation_sha256": "ab992242d901a858b349566c323f7f13f786dcc1c8d15365967c98c5f35025ad"
+      }
+    },
+    {
+      "id": "FX2-LIGHT-028",
+      "name": "warm_halation_bloom",
+      "family": "light",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "warm_halation_bloom",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "implementation_path": "general/reusable/fx_v2/promoted_effects.py",
+      "implementation_sha256": "ab992242d901a858b349566c323f7f13f786dcc1c8d15365967c98c5f35025ad",
+      "proofs": [
+        {
+          "id": "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY",
+          "record_sha256": "1627a3700b17c9df73456709b1497ce5444952a06615724d2b0eb34bd506a186",
+          "declared_binary_sha256": "3e2cc13a3e292f3de8155e2043ec762f7aff3d330cdd034f62eabfa462c69000",
+          "artifact_path": "general/reusable/fx_v2/proofs/FX2_PROOF04_PROMOTED_EFFECT_LIBRARY.verification.json",
+          "artifact_verified": true,
+          "artifact_sha256": "3e2cc13a3e292f3de8155e2043ec762f7aff3d330cdd034f62eabfa462c69000"
+        }
+      ],
+      "conditional_preflight": null,
+      "smoke": {
+        "external_or_adapter": true,
+        "implementation_sha256": "ab992242d901a858b349566c323f7f13f786dcc1c8d15365967c98c5f35025ad"
+      }
+    },
+    {
+      "id": "FX2-SPATIAL-021",
+      "name": "pseudo_depth_field",
+      "family": "spatial",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "pseudo_depth_field",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "implementation_path": "general/reusable/fx_v2/promoted_effects.py",
+      "implementation_sha256": "ab992242d901a858b349566c323f7f13f786dcc1c8d15365967c98c5f35025ad",
+      "proofs": [
+        {
+          "id": "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY",
+          "record_sha256": "1627a3700b17c9df73456709b1497ce5444952a06615724d2b0eb34bd506a186",
+          "declared_binary_sha256": "3e2cc13a3e292f3de8155e2043ec762f7aff3d330cdd034f62eabfa462c69000",
+          "artifact_path": "general/reusable/fx_v2/proofs/FX2_PROOF04_PROMOTED_EFFECT_LIBRARY.verification.json",
+          "artifact_verified": true,
+          "artifact_sha256": "3e2cc13a3e292f3de8155e2043ec762f7aff3d330cdd034f62eabfa462c69000"
+        }
+      ],
+      "conditional_preflight": null,
+      "smoke": {
+        "external_or_adapter": true,
+        "implementation_sha256": "ab992242d901a858b349566c323f7f13f786dcc1c8d15365967c98c5f35025ad"
+      }
+    },
+    {
+      "id": "FX2-SURFACE-021",
+      "name": "puddle_shimmer",
+      "family": "surface",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "puddle_shimmer",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "implementation_path": "general/reusable/fx_v2/promoted_effects.py",
+      "implementation_sha256": "ab992242d901a858b349566c323f7f13f786dcc1c8d15365967c98c5f35025ad",
+      "proofs": [
+        {
+          "id": "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY",
+          "record_sha256": "1627a3700b17c9df73456709b1497ce5444952a06615724d2b0eb34bd506a186",
+          "declared_binary_sha256": "3e2cc13a3e292f3de8155e2043ec762f7aff3d330cdd034f62eabfa462c69000",
+          "artifact_path": "general/reusable/fx_v2/proofs/FX2_PROOF04_PROMOTED_EFFECT_LIBRARY.verification.json",
+          "artifact_verified": true,
+          "artifact_sha256": "3e2cc13a3e292f3de8155e2043ec762f7aff3d330cdd034f62eabfa462c69000"
+        }
+      ],
+      "conditional_preflight": null,
+      "smoke": {
+        "external_or_adapter": true,
+        "implementation_sha256": "ab992242d901a858b349566c323f7f13f786dcc1c8d15365967c98c5f35025ad"
+      }
+    },
+    {
+      "id": "FX2-SURFACE-022",
+      "name": "water_region_displacement_shimmer",
+      "family": "surface",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "water_region_displacement_shimmer",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "implementation_path": "general/reusable/fx_v2/promoted_effects.py",
+      "implementation_sha256": "ab992242d901a858b349566c323f7f13f786dcc1c8d15365967c98c5f35025ad",
+      "proofs": [
+        {
+          "id": "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY",
+          "record_sha256": "1627a3700b17c9df73456709b1497ce5444952a06615724d2b0eb34bd506a186",
+          "declared_binary_sha256": "3e2cc13a3e292f3de8155e2043ec762f7aff3d330cdd034f62eabfa462c69000",
+          "artifact_path": "general/reusable/fx_v2/proofs/FX2_PROOF04_PROMOTED_EFFECT_LIBRARY.verification.json",
+          "artifact_verified": true,
+          "artifact_sha256": "3e2cc13a3e292f3de8155e2043ec762f7aff3d330cdd034f62eabfa462c69000"
+        }
+      ],
+      "conditional_preflight": null,
+      "smoke": {
+        "external_or_adapter": true,
+        "implementation_sha256": "ab992242d901a858b349566c323f7f13f786dcc1c8d15365967c98c5f35025ad"
+      }
+    },
+    {
+      "id": "FX2-SURFACE-023",
+      "name": "wet_reflection_ripple",
+      "family": "surface",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "wet_reflection_ripple",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "implementation_path": "general/reusable/fx_v2/promoted_effects.py",
+      "implementation_sha256": "ab992242d901a858b349566c323f7f13f786dcc1c8d15365967c98c5f35025ad",
+      "proofs": [
+        {
+          "id": "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY",
+          "record_sha256": "1627a3700b17c9df73456709b1497ce5444952a06615724d2b0eb34bd506a186",
+          "declared_binary_sha256": "3e2cc13a3e292f3de8155e2043ec762f7aff3d330cdd034f62eabfa462c69000",
+          "artifact_path": "general/reusable/fx_v2/proofs/FX2_PROOF04_PROMOTED_EFFECT_LIBRARY.verification.json",
+          "artifact_verified": true,
+          "artifact_sha256": "3e2cc13a3e292f3de8155e2043ec762f7aff3d330cdd034f62eabfa462c69000"
+        }
+      ],
+      "conditional_preflight": null,
+      "smoke": {
+        "external_or_adapter": true,
+        "implementation_sha256": "ab992242d901a858b349566c323f7f13f786dcc1c8d15365967c98c5f35025ad"
+      }
+    },
+    {
+      "id": "FX2-AUDIO-021",
+      "name": "rms_memory_modulation",
+      "family": "audio_reactive",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "rms_memory_modulation",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "implementation_path": "general/reusable/fx_v2/promoted_effects.py",
+      "implementation_sha256": "ab992242d901a858b349566c323f7f13f786dcc1c8d15365967c98c5f35025ad",
+      "proofs": [
+        {
+          "id": "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY",
+          "record_sha256": "1627a3700b17c9df73456709b1497ce5444952a06615724d2b0eb34bd506a186",
+          "declared_binary_sha256": "3e2cc13a3e292f3de8155e2043ec762f7aff3d330cdd034f62eabfa462c69000",
+          "artifact_path": "general/reusable/fx_v2/proofs/FX2_PROOF04_PROMOTED_EFFECT_LIBRARY.verification.json",
+          "artifact_verified": true,
+          "artifact_sha256": "3e2cc13a3e292f3de8155e2043ec762f7aff3d330cdd034f62eabfa462c69000"
+        }
+      ],
+      "conditional_preflight": null,
+      "smoke": {
+        "external_or_adapter": true,
+        "implementation_sha256": "ab992242d901a858b349566c323f7f13f786dcc1c8d15365967c98c5f35025ad"
+      }
+    },
+    {
+      "id": "FX2-TRANS-021",
+      "name": "chroma_pigment_transport",
+      "family": "transition",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "chroma_pigment_transport",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "implementation_path": "general/reusable/fx_v2/promoted_effects.py",
+      "implementation_sha256": "ab992242d901a858b349566c323f7f13f786dcc1c8d15365967c98c5f35025ad",
+      "proofs": [
+        {
+          "id": "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY",
+          "record_sha256": "1627a3700b17c9df73456709b1497ce5444952a06615724d2b0eb34bd506a186",
+          "declared_binary_sha256": "3e2cc13a3e292f3de8155e2043ec762f7aff3d330cdd034f62eabfa462c69000",
+          "artifact_path": "general/reusable/fx_v2/proofs/FX2_PROOF04_PROMOTED_EFFECT_LIBRARY.verification.json",
+          "artifact_verified": true,
+          "artifact_sha256": "3e2cc13a3e292f3de8155e2043ec762f7aff3d330cdd034f62eabfa462c69000"
+        }
+      ],
+      "conditional_preflight": null,
+      "smoke": {
+        "external_or_adapter": true,
+        "implementation_sha256": "ab992242d901a858b349566c323f7f13f786dcc1c8d15365967c98c5f35025ad"
+      }
+    },
+    {
+      "id": "FX2-TRANS-024",
+      "name": "fog_pigment_travel",
+      "family": "transition",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "fog_pigment_travel",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "implementation_path": "general/reusable/fx_v2/promoted_effects.py",
+      "implementation_sha256": "ab992242d901a858b349566c323f7f13f786dcc1c8d15365967c98c5f35025ad",
+      "proofs": [
+        {
+          "id": "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY",
+          "record_sha256": "1627a3700b17c9df73456709b1497ce5444952a06615724d2b0eb34bd506a186",
+          "declared_binary_sha256": "3e2cc13a3e292f3de8155e2043ec762f7aff3d330cdd034f62eabfa462c69000",
+          "artifact_path": "general/reusable/fx_v2/proofs/FX2_PROOF04_PROMOTED_EFFECT_LIBRARY.verification.json",
+          "artifact_verified": true,
+          "artifact_sha256": "3e2cc13a3e292f3de8155e2043ec762f7aff3d330cdd034f62eabfa462c69000"
+        }
+      ],
+      "conditional_preflight": null,
+      "smoke": {
+        "external_or_adapter": true,
+        "implementation_sha256": "ab992242d901a858b349566c323f7f13f786dcc1c8d15365967c98c5f35025ad"
+      }
+    },
+    {
+      "id": "FX2-TRANS-025",
+      "name": "ghosted_memory_transition",
+      "family": "transition",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "ghosted_memory_transition",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "implementation_path": "general/reusable/fx_v2/promoted_effects.py",
+      "implementation_sha256": "ab992242d901a858b349566c323f7f13f786dcc1c8d15365967c98c5f35025ad",
+      "proofs": [
+        {
+          "id": "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY",
+          "record_sha256": "1627a3700b17c9df73456709b1497ce5444952a06615724d2b0eb34bd506a186",
+          "declared_binary_sha256": "3e2cc13a3e292f3de8155e2043ec762f7aff3d330cdd034f62eabfa462c69000",
+          "artifact_path": "general/reusable/fx_v2/proofs/FX2_PROOF04_PROMOTED_EFFECT_LIBRARY.verification.json",
+          "artifact_verified": true,
+          "artifact_sha256": "3e2cc13a3e292f3de8155e2043ec762f7aff3d330cdd034f62eabfa462c69000"
+        }
+      ],
+      "conditional_preflight": null,
+      "smoke": {
+        "external_or_adapter": true,
+        "implementation_sha256": "ab992242d901a858b349566c323f7f13f786dcc1c8d15365967c98c5f35025ad"
+      }
+    },
+    {
+      "id": "FX2-TRANS-028",
+      "name": "raindrop_to_ember",
+      "family": "transition",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "raindrop_to_ember",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "implementation_path": "general/reusable/fx_v2/promoted_effects.py",
+      "implementation_sha256": "ab992242d901a858b349566c323f7f13f786dcc1c8d15365967c98c5f35025ad",
+      "proofs": [
+        {
+          "id": "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY",
+          "record_sha256": "1627a3700b17c9df73456709b1497ce5444952a06615724d2b0eb34bd506a186",
+          "declared_binary_sha256": "3e2cc13a3e292f3de8155e2043ec762f7aff3d330cdd034f62eabfa462c69000",
+          "artifact_path": "general/reusable/fx_v2/proofs/FX2_PROOF04_PROMOTED_EFFECT_LIBRARY.verification.json",
+          "artifact_verified": true,
+          "artifact_sha256": "3e2cc13a3e292f3de8155e2043ec762f7aff3d330cdd034f62eabfa462c69000"
+        }
+      ],
+      "conditional_preflight": null,
+      "smoke": {
+        "external_or_adapter": true,
+        "implementation_sha256": "ab992242d901a858b349566c323f7f13f786dcc1c8d15365967c98c5f35025ad"
+      }
+    },
+    {
+      "id": "FX2-TRANS-030",
+      "name": "reflection_to_water",
+      "family": "transition",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "reflection_to_water",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "implementation_path": "general/reusable/fx_v2/promoted_effects.py",
+      "implementation_sha256": "ab992242d901a858b349566c323f7f13f786dcc1c8d15365967c98c5f35025ad",
+      "proofs": [
+        {
+          "id": "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY",
+          "record_sha256": "1627a3700b17c9df73456709b1497ce5444952a06615724d2b0eb34bd506a186",
+          "declared_binary_sha256": "3e2cc13a3e292f3de8155e2043ec762f7aff3d330cdd034f62eabfa462c69000",
+          "artifact_path": "general/reusable/fx_v2/proofs/FX2_PROOF04_PROMOTED_EFFECT_LIBRARY.verification.json",
+          "artifact_verified": true,
+          "artifact_sha256": "3e2cc13a3e292f3de8155e2043ec762f7aff3d330cdd034f62eabfa462c69000"
+        }
+      ],
+      "conditional_preflight": null,
+      "smoke": {
+        "external_or_adapter": true,
+        "implementation_sha256": "ab992242d901a858b349566c323f7f13f786dcc1c8d15365967c98c5f35025ad"
+      }
+    },
+    {
+      "id": "FX2-TRANS-032",
+      "name": "structural_morph_transition",
+      "family": "transition",
+      "gate_status": "approved",
+      "implementation": {
+        "effect_name": "structural_morph_transition",
+        "kind": "adapter",
+        "path": "general/reusable/fx_v2/promoted_effects.py",
+        "symbol": "apply_effect"
+      },
+      "implementation_path": "general/reusable/fx_v2/promoted_effects.py",
+      "implementation_sha256": "ab992242d901a858b349566c323f7f13f786dcc1c8d15365967c98c5f35025ad",
+      "proofs": [
+        {
+          "id": "FX2_PROOF04_PROMOTED_EFFECT_LIBRARY",
+          "record_sha256": "1627a3700b17c9df73456709b1497ce5444952a06615724d2b0eb34bd506a186",
+          "declared_binary_sha256": "3e2cc13a3e292f3de8155e2043ec762f7aff3d330cdd034f62eabfa462c69000",
+          "artifact_path": "general/reusable/fx_v2/proofs/FX2_PROOF04_PROMOTED_EFFECT_LIBRARY.verification.json",
+          "artifact_verified": true,
+          "artifact_sha256": "3e2cc13a3e292f3de8155e2043ec762f7aff3d330cdd034f62eabfa462c69000"
+        }
+      ],
+      "conditional_preflight": null,
+      "smoke": {
+        "external_or_adapter": true,
+        "implementation_sha256": "ab992242d901a858b349566c323f7f13f786dcc1c8d15365967c98c5f35025ad"
+      }
+    }
+  ],
+  "result": "PASS",
+  "evidence_fingerprint_sha256": "99834f3929d03d136b4f1901f38b0b134f988805fca348a32951de0c9493540e"
+}

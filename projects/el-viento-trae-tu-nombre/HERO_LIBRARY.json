@@ -1,0 +1,209 @@
+{
+  "schema": "aivideoedit.hero-library.v1",
+  "source": {
+    "identity": "El_Viento_Trae_Tu_Nombre_option3_v2_1080p.mp4",
+    "file_or_locator": "MASTER-1080P-OPTION3-V2",
+    "sha256": "4ac3f137d9bba34d05665acd9a344883f958bc04415b7b787e2bde2d020b96ab",
+    "fps": 24,
+    "frame_count": 2704,
+    "duration_seconds": 112.666667
+  },
+  "selection": {
+    "method": "six measured visual-world reference frames spanning Option 3 v2 assembly",
+    "candidate_interval_seconds": null,
+    "candidate_count": 6,
+    "target_count": 6,
+    "selected_count": 6,
+    "duplicate_similarity_threshold": 0.985,
+    "near_duplicate_rejections": 0,
+    "musical_landmarks_supplied": 0
+  },
+  "entries": [
+    {
+      "id": "hero_001",
+      "frame_index": 144,
+      "time_seconds": 6,
+      "file": "frames/hero_001_00000144.png",
+      "frame_sha256": "d947feee71e41edd44a00ab8d2ff1fd33934c99f9eda82c7704d6addf01d7f5a",
+      "lifecycle_status": "candidate",
+      "source_range_seconds": [
+        5.5,
+        6.5
+      ],
+      "range_basis": "measured reference window extracted from Option 3 v2 visual-world source",
+      "visual_signature": {
+        "method": "edge_density+saturation+luminance compact measured signature",
+        "vector": [
+          1.4166666,
+          0.4435968,
+          0.3711312
+        ]
+      },
+      "diversity_evidence": {
+        "min_distance_to_selected": 1,
+        "transition_strength": 0,
+        "quality_score": 1,
+        "motion_score": 0
+      },
+      "measured_tags": {
+        "musical_landmark": false
+      }
+    },
+    {
+      "id": "hero_002",
+      "frame_index": 576,
+      "time_seconds": 24,
+      "file": "frames/hero_002_00000576.png",
+      "frame_sha256": "5655c975b36d9c4a9d7e280d6b29f8228a81d38bb4eff28e1ff37767489df6b9",
+      "lifecycle_status": "candidate",
+      "source_range_seconds": [
+        23.5,
+        24.5
+      ],
+      "range_basis": "measured reference window extracted from Option 3 v2 visual-world source",
+      "visual_signature": {
+        "method": "edge_density+saturation+luminance compact measured signature",
+        "vector": [
+          1.5121528,
+          0.4098397,
+          0.302982
+        ]
+      },
+      "diversity_evidence": {
+        "min_distance_to_selected": 0.1152217,
+        "transition_strength": 0,
+        "quality_score": 1,
+        "motion_score": 0
+      },
+      "measured_tags": {
+        "musical_landmark": false
+      }
+    },
+    {
+      "id": "hero_003",
+      "frame_index": 1080,
+      "time_seconds": 45,
+      "file": "frames/hero_003_00001080.png",
+      "frame_sha256": "c0ded207405b1fc81d0d3e1c501d88a7800ac1eda0fe859a0362101be6d58835",
+      "lifecycle_status": "candidate",
+      "source_range_seconds": [
+        44.5,
+        45.5
+      ],
+      "range_basis": "measured reference window extracted from Option 3 v2 visual-world source",
+      "visual_signature": {
+        "method": "edge_density+saturation+luminance compact measured signature",
+        "vector": [
+          1.4184028,
+          0.4330048,
+          0.3230324
+        ]
+      },
+      "diversity_evidence": {
+        "min_distance_to_selected": 0.0357721,
+        "transition_strength": 0,
+        "quality_score": 1,
+        "motion_score": 0
+      },
+      "measured_tags": {
+        "musical_landmark": false
+      }
+    },
+    {
+      "id": "hero_004",
+      "frame_index": 1584,
+      "time_seconds": 66,
+      "file": "frames/hero_004_00001584.png",
+      "frame_sha256": "4320aa25d4b31be08a139926ee622cbcb244060e8b97385360ea79ce0492c748",
+      "lifecycle_status": "candidate",
+      "source_range_seconds": [
+        65.5,
+        66.5
+      ],
+      "range_basis": "measured reference window extracted from Option 3 v2 visual-world source",
+      "visual_signature": {
+        "method": "edge_density+saturation+luminance compact measured signature",
+        "vector": [
+          1.3663194,
+          0.3444359,
+          0.4231039
+        ]
+      },
+      "diversity_evidence": {
+        "min_distance_to_selected": 0.0339476,
+        "transition_strength": 0,
+        "quality_score": 1,
+        "motion_score": 0
+      },
+      "measured_tags": {
+        "musical_landmark": false
+      }
+    },
+    {
+      "id": "hero_005",
+      "frame_index": 2088,
+      "time_seconds": 87,
+      "file": "frames/hero_005_00002088.png",
+      "frame_sha256": "f06bea93b6b5cc71f799e4f5f9b746312d582d211b6a8c86a8f2e9157fd4309e",
+      "lifecycle_status": "candidate",
+      "source_range_seconds": [
+        86.5,
+        87.5
+      ],
+      "range_basis": "measured reference window extracted from Option 3 v2 visual-world source",
+      "visual_signature": {
+        "method": "edge_density+saturation+luminance compact measured signature",
+        "vector": [
+          1.4166666,
+          0.4034297,
+          0.3592678
+        ]
+      },
+      "diversity_evidence": {
+        "min_distance_to_selected": 0.0448339,
+        "transition_strength": 0,
+        "quality_score": 1,
+        "motion_score": 0
+      },
+      "measured_tags": {
+        "musical_landmark": false
+      }
+    },
+    {
+      "id": "hero_006",
+      "frame_index": 2544,
+      "time_seconds": 106,
+      "file": "frames/hero_006_00002544.png",
+      "frame_sha256": "85431c1858310fb0a5e2adb9fa23002a0d7902b3a683ce36c970461877817f45",
+      "lifecycle_status": "candidate",
+      "source_range_seconds": [
+        105.5,
+        106.5
+      ],
+      "range_basis": "measured reference window extracted from Option 3 v2 visual-world source",
+      "visual_signature": {
+        "method": "edge_density+saturation+luminance compact measured signature",
+        "vector": [
+          0.1302083,
+          0.821858,
+          0.0136183
+        ]
+      },
+      "diversity_evidence": {
+        "min_distance_to_selected": 0.3972658,
+        "transition_strength": 0,
+        "quality_score": 1,
+        "motion_score": 0
+      },
+      "measured_tags": {
+        "musical_landmark": false
+      }
+    }
+  ],
+  "unmeasured_dimensions": [
+    "semantic subject identity",
+    "semantic shot scale",
+    "narrative meaning"
+  ],
+  "warnings": []
+}
