@@ -16,7 +16,7 @@
   },
   "accepted_source_library": {
     "status": "accepted",
-    "role": "approved_source_for_bounded_recut_not_final_film",
+    "role": "shot_library",
     "file_or_locator": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38009381129",
     "sha256": "fea3ec58e8bda229e72fab816370a716dbae92911c3ad55e36c3d7e58ae85512",
     "user_acceptance_statement": "No problem keep it and fix the issues.",
@@ -42,7 +42,7 @@
     "restart_authorized": false
   },
   "recut_scope": {
-    "active": true,
+    "active": false,
     "named_defects": [
       "uniform_nine_second_pacing",
       "repeated_low_motion_compositions",
@@ -64,7 +64,7 @@
     "source_replacement_authorized": false
   },
   "current_user_direction": "Use the same style as @MountainNoir, but in Spanish; include the verified song, storyboard, camera work, loops, GIF/MP4 FX, transitions, and a restrained title pause.",
-  "exact_next_action": "Render Candidate 02 from revised source-locked manifest; inspect full output scene by scene and get explicit human visual acceptance before declaring production complete.",
+  "exact_next_action": "Candidate 02 timed recut using original approved shot loops; specialized hero-source extraction remains inactive until its measured HERO_LIBRARY.json exists. Inspect final real export and require human acceptance.",
   "director_supervision": {
     "required": true,
     "reviewer_role": "sandbox_director",
