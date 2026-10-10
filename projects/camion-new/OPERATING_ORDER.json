@@ -15,8 +15,8 @@
     "user_acceptance_statement": null
   },
   "accepted_source_library": {
-    "status": "accepted_for_reuse_not_final_release",
-    "role": "director_revision_source_library",
+    "status": "accepted",
+    "role": "approved_source_for_bounded_recut_not_final_film",
     "file_or_locator": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38009381129",
     "sha256": "fea3ec58e8bda229e72fab816370a716dbae92911c3ad55e36c3d7e58ae85512",
     "user_acceptance_statement": "No problem keep it and fix the issues.",
@@ -24,7 +24,7 @@
     "timeline_locked": false
   },
   "refinement_scope": {
-    "active": true,
+    "active": false,
     "goal": "Repair the actual Candidate 01 picture with a bounded recut; preserve all approved original sources.",
     "allowed_changes": [
       "shot_timing",
