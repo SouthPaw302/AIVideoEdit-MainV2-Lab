@@ -3,7 +3,7 @@
 from __future__ import annotations
 import argparse,hashlib,json,sys,subprocess
 from pathlib import Path
-import cv2,numpy as np
+import cv2,numpy as np, imageio_ffmpeg
 from PIL import Image
 from general.reusable.fx_v2.executor import FXExecutor
 from general.reusable.fx_v2.runtime import FXContext
@@ -25,7 +25,7 @@ executor=FXExecutor(seed=302,ledger_path=str(out/'FX2_EXECUTION_LEDGER.jsonl'),c
 W,H=960,540
 mask=np.zeros((H,W),np.float32);mask[round(.42*H):round(.94*H),:]=1
 mask=cv2.GaussianBlur(mask,(0,0),13)[...,None]*.56
-cmd=['ffmpeg','-hide_banner','-loglevel','error','-y','-f','rawvideo','-pixel_format','bgr24','-video_size','960x540','-framerate','24','-i','pipe:0','-an','-c:v','libx264','-preset','veryfast','-crf','22','-pix_fmt','yuv420p',str(out/'B01-S03_canonicalFX2_2s.mp4')]
+cmd=[imageio_ffmpeg.get_ffmpeg_exe(),'-hide_banner','-loglevel','error','-y','-f','rawvideo','-pixel_format','bgr24','-video_size','960x540','-framerate','24','-i','pipe:0','-an','-c:v','libx264','-preset','veryfast','-crf','22','-pix_fmt','yuv420p',str(out/'B01-S03_canonicalFX2_2s.mp4')]
 run=subprocess.Popen(cmd,stdin=subprocess.PIPE,stderr=subprocess.PIPE)
 thumbs=[]
 for j in range(48):

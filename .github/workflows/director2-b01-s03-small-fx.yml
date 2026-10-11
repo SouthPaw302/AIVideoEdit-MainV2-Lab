@@ -38,8 +38,8 @@ jobs:
           grep -F 'AIVideoEdit OS BOOTSTRAP: PASS' director2-boot.log
       - name: Install real FX runtime requirements
         run: |
-          python -m pip install --quiet "numpy>=1.26,<3" "opencv-python-headless>=4.8,<5" pillow
-          ffmpeg -version | head -1
+          python -m pip install --quiet "numpy>=1.26,<3" "opencv-python-headless>=4.8,<5" pillow imageio-ffmpeg
+          python -c 'import imageio_ffmpeg; print(imageio_ffmpeg.get_ffmpeg_exe())'
       - name: Render *only* B01-S03 small FX proof with canonical executor
         shell: bash
         env:
