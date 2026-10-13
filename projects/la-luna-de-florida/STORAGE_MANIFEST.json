@@ -74,5 +74,28 @@
     "noncanonical_storyboard_files_excluded_from_backup": 4,
     "all_recoverable_media_verified_present_by_drive_size_or_zip_member_sha": true,
     "remark": "Remote file SHA-256 not independently downloaded; Drive listed sizes match; 3 local ZIPs passed CRC test."
-  }
+  },
+  "batch05_video_inserts": [
+    {
+      "shot_id": "B05-S04",
+      "title": "Strings and percussion",
+      "media": "user_supplied_gemini_video",
+      "source_filename": "gemini_generated_video_a6339758.mp4",
+      "sha256": "5e1c2b35ce9fbbe60d45a6c55766a1fd876644c39ae5e7b97218ab087cae1cc5",
+      "size_bytes": 7427891,
+      "duration_seconds": 10.005,
+      "width": 1280,
+      "height": 720,
+      "fps": 24,
+      "has_original_audio": true,
+      "drive_file": "https://drive.google.com/file/d/1HN-pdGv84bnIoY7O52jOi9O3gVBR4Sgh/view",
+      "drive_folder": "https://drive.google.com/drive/folders/1PME39r3pnnvjuagQvvAiYlCJXxWNnbxY",
+      "intake_manifest": "https://drive.google.com/file/d/140bJYFfhTmkiypZUtQTHd8ph2hxN_E1m/view",
+      "preview": "https://drive.google.com/file/d/1tQQekbFbjQ1Rj7EfVcIXRqmLLfMHXNY3/view",
+      "status": "CANDIDATE_PENDING_VISUAL_APPROVAL",
+      "notes": "Moonlit tavern violin and guitar performance with couple seated in background; candidate for final-act strings and percussion. Not a dawn/sunrise scene.",
+      "original_unchanged": true,
+      "canonical_stills_replaced": false
+    }
+  ]
 }
