@@ -37,6 +37,24 @@ jobs:
           print("LA LUNA REPO OS BOOT VALIDATED:",session["branch"])
           print("Current-main OS SHA:",session.get("os_main_commit"))
           PY
+      - name: Director preflight and approved FX capability check (before production)
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, pathlib
+          p=pathlib.Path("projects/la-luna-de-florida/B01_DIRECTOR_PREFLIGHT.json")
+          d=json.loads(p.read_text())
+          assert d["director_disposition"]=="PROOF_AUTHORIZED_REVIEW_PENDING"
+          assert d["phase"]=="BEFORE_FX_MEDIA_GENERATION"
+          assert len(d["shots"])==10
+          registry=json.loads(pathlib.Path(".aivideoedit/os/general/reusable/fx_v2/registry.json").read_text())
+          for shot in d["shots"]:
+              for effect_id in shot["approved_runtime_effect_candidates"]:
+                  assert registry["effects"][effect_id]["gate_status"]=="approved", effect_id
+          print("Director B01 preflight validated against bootstrapped current-main FX registry")
+          print("No media approval, FX lock or release is granted")
+          PY
       - name: Show current project stage (not artistic approval)
         run: |
           python - <<'PY'
