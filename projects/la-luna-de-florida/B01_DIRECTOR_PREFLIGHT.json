@@ -1,0 +1,182 @@
+{
+  "schema": "aivideoedit.b01-director-preflight.v1",
+  "production": "la-luna-de-florida",
+  "branch": "song/la-luna-de-florida",
+  "phase": "BEFORE_FX_MEDIA_GENERATION",
+  "director_disposition": "PROOF_AUTHORIZED_REVIEW_PENDING",
+  "authority": {
+    "direction": "user_directed",
+    "mode": "hybrid",
+    "master_storyboard_sha256": "05b232452eebce56fb9c047a0f481a19e04cf2d13e364bee30255dd27c88703a",
+    "accepted_source_library": "none",
+    "master_user_instruction": "Inspect, bootstrap and make individual per-still FX duplicates and loops. Director supervises before production media."
+  },
+  "source_audit": {
+    "count": 10,
+    "pixels": "1280x720 all",
+    "provenance": "historic generated composite-derived still crops from Drive; not independent high-res final shots",
+    "visual_review": "all 10 sampled in director contact sheet; B01-S08 replacement visually inspected",
+    "limitations": [
+      "original B01-S08 has layout artifacts, use Candidate 02 for proof; preserve old bytes",
+      "multiple B01 images do not match approved storyboard shot captions one-to-one",
+      "no photographic or character-motion approval; no actual artistic review of full film"
+    ]
+  },
+  "render_contract": {
+    "proof_only": true,
+    "per_shot_original_copy": true,
+    "per_shot_alternate_frames": 2,
+    "per_shot_loop_videos": 2,
+    "per_shot_duration_seconds": 2.5,
+    "output_fps": 24,
+    "output_resolution": "960x540",
+    "source_preserve_unmodified": true,
+    "protected_regions": [
+      "faces",
+      "hands",
+      "instruments",
+      "architecture",
+      "skyline",
+      "water horizon",
+      "identity"
+    ],
+    "source_frame_motion_first": true,
+    "camera_motion": "off for proof",
+    "audio_policy": "mute FX proofs; preserve master WAV unchanged",
+    "fx_registry_origin": "exact current-main general/reusable/fx_v2/registry.json",
+    "release_status": "PENDING",
+    "human_visual_approval": false
+  },
+  "shots": [
+    {
+      "shot_id": "B01-S01",
+      "source_sha256": "97b7abe8e6e6b3f47c8a85a23e44aa57368bf9dc5334ae1527dbc8299166cd1a",
+      "source_role": "moon_harbor",
+      "scene_features": "water and skyline",
+      "approved_runtime_effect_candidates": [
+        "FX2-MOTION-003",
+        "FX2-LIGHT-002"
+      ],
+      "protection_notes": "protect skyline, moon, pilings, partial human at left",
+      "fx_gate": "PENDING_REAL_OUTPUT_QC",
+      "motion_disclaimer": null
+    },
+    {
+      "shot_id": "B01-S02",
+      "source_sha256": "a39ffe084705c80834a276539b201c86b8ca25cdddc8dcd2ca29c52d599af7d8",
+      "source_role": "port_guitar",
+      "scene_features": "open tavern with guitarist",
+      "approved_runtime_effect_candidates": [
+        "FX2-LIGHT-023",
+        "FX2-LIGHT-002"
+      ],
+      "protection_notes": "protect faces, instruments, performers, hand shapes",
+      "fx_gate": "PENDING_REAL_OUTPUT_QC",
+      "motion_disclaimer": "no independently articulated humans or playing instruments"
+    },
+    {
+      "shot_id": "B01-S03",
+      "source_sha256": "e966dab3b64e29baac7ecf04c393f8cbdc505a0626569a7dd72897f544079d23",
+      "source_role": "dance_two",
+      "scene_features": "dance couple",
+      "approved_runtime_effect_candidates": [
+        "FX2-LIGHT-023",
+        "FX2-LIGHT-002"
+      ],
+      "protection_notes": "actors static; real dance requires separate generated continuation",
+      "fx_gate": "PENDING_REAL_OUTPUT_QC",
+      "motion_disclaimer": "no independently articulated humans or playing instruments"
+    },
+    {
+      "shot_id": "B01-S04",
+      "source_sha256": "1883d88dcd6c93abc254a8f9d39cd819d91eedb35a353c0b34cb3f5ab0c82c2f",
+      "source_role": "tavern_fiddle",
+      "scene_features": "violinist/guitarist",
+      "approved_runtime_effect_candidates": [
+        "FX2-LIGHT-023",
+        "FX2-LIGHT-002"
+      ],
+      "protection_notes": "no bow/hand motion claimed; protect instrument geometry",
+      "fx_gate": "PENDING_REAL_OUTPUT_QC",
+      "motion_disclaimer": "no independently articulated humans or playing instruments"
+    },
+    {
+      "shot_id": "B01-S05",
+      "source_sha256": "f4d5e47eb4c2ceef2d0be8fcabc8fa67f0df7bdac4f1d20f04abe6dace2f4032",
+      "source_role": "red_dress",
+      "scene_features": "female lead in red dress",
+      "approved_runtime_effect_candidates": [
+        "FX2-LIGHT-023",
+        "FX2-LIGHT-002"
+      ],
+      "protection_notes": "protect eyes, face, limbs and dress folds",
+      "fx_gate": "PENDING_REAL_OUTPUT_QC",
+      "motion_disclaimer": "no independently articulated humans or playing instruments"
+    },
+    {
+      "shot_id": "B01-S06",
+      "source_sha256": "60bd221a66c7c6b2380de75f7218b74bbdfcc6a6b30f1446d8c7c5e1e6aec8da",
+      "source_role": "rustic_table",
+      "scene_features": "table and dancefloor",
+      "approved_runtime_effect_candidates": [
+        "FX2-LIGHT-023",
+        "FX2-LIGHT-002"
+      ],
+      "protection_notes": "protect people/instruments, localize warm practical lighting",
+      "fx_gate": "PENDING_REAL_OUTPUT_QC",
+      "motion_disclaimer": "no independently articulated humans or playing instruments"
+    },
+    {
+      "shot_id": "B01-S07",
+      "source_sha256": "d4bf74cab5c1b7c0bb39c428f7e87c79890282101137dfab337a7b2814df607c",
+      "source_role": "city_water",
+      "scene_features": "harbor reflections",
+      "approved_runtime_effect_candidates": [
+        "FX2-MOTION-003",
+        "FX2-LIGHT-002"
+      ],
+      "protection_notes": "protect moon, skyline, boat mast, near figures",
+      "fx_gate": "PENDING_REAL_OUTPUT_QC",
+      "motion_disclaimer": null
+    },
+    {
+      "shot_id": "B01-S08",
+      "source_sha256": "f16805ab4572a297bc7eeb4d211d5c77850e5ed8e4f3b25abe757201d6502713",
+      "source_role": "fandango_Candidate02",
+      "scene_features": "couple close dance by water (corrected Candidate02)",
+      "approved_runtime_effect_candidates": [
+        "FX2-LIGHT-023",
+        "FX2-LIGHT-002"
+      ],
+      "protection_notes": "protect faces, couple, hands; water only if separately masked",
+      "fx_gate": "PENDING_REAL_OUTPUT_QC",
+      "motion_disclaimer": null
+    },
+    {
+      "shot_id": "B01-S09",
+      "source_sha256": "5e43afd30be2b1243113bcd6acca6248c519a25298b94311cd407ed595243eae",
+      "source_role": "old_dock_Candidate02",
+      "scene_features": "working harbor yacht (corrected Candidate02)",
+      "approved_runtime_effect_candidates": [
+        "FX2-MOTION-003",
+        "FX2-LIGHT-002"
+      ],
+      "protection_notes": "protect boat hull, dock edge, skyline and horizon",
+      "fx_gate": "PENDING_REAL_OUTPUT_QC",
+      "motion_disclaimer": null
+    },
+    {
+      "shot_id": "B01-S10",
+      "source_sha256": "b2bbbc89908fbac06e588d8e71cc6b2653297edbd6f807577eabe15df7ab8d7c",
+      "source_role": "first_sun",
+      "scene_features": "sunrise harbor",
+      "approved_runtime_effect_candidates": [
+        "FX2-MOTION-003",
+        "FX2-LIGHT-002"
+      ],
+      "protection_notes": "protect sunrise, skyline, sailboat geometry and horizon",
+      "fx_gate": "PENDING_REAL_OUTPUT_QC",
+      "motion_disclaimer": null
+    }
+  ]
+}
