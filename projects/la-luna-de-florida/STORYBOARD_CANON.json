@@ -1,0 +1,502 @@
+{
+  "schema": "aivideoedit.storyboard-canon.v1",
+  "project": "la-luna-de-florida",
+  "approval": "explicit_current_user_instruction",
+  "approval_quote": "Now make that storey board Cannon for the stills",
+  "approval_scope": [
+    "story_acts",
+    "ordered_shot_intents",
+    "characters",
+    "continuity",
+    "visual_treatment",
+    "still_image_generation_targets"
+  ],
+  "not_approved": [
+    "finished_stills",
+    "existing_candidate_pixels",
+    "FX_proofs",
+    "animated_motion",
+    "film_edit",
+    "published_film",
+    "human_final_review"
+  ],
+  "lock": true,
+  "source": {
+    "kind": "assistant_generated_storyboard_explicitly_adopted_by_user",
+    "original_image_title": "Baila Conmigo — A Cinematic Film",
+    "canonical_project_title": "La Luna de Florida",
+    "note": "Artwork title Baila Conmigo remains unchanged in the original board; project and song title remains La Luna de Florida.",
+    "media_type": "image/png",
+    "resolution": {
+      "width": 1536,
+      "height": 1024
+    },
+    "sha256": "05b232452eebce56fb9c047a0f481a19e04cf2d13e364bee30255dd27c88703a",
+    "drive_file_url": "https://drive.google.com/file/d/1cR6kUCti5UkS8zdXz5B56EfjyRr_1Fau/view",
+    "drive_folder_url": "https://drive.google.com/drive/folders/1WbP-0hln252L4Lx7TymxcNdt3WXg43RQ"
+  },
+  "visual_rules": {
+    "treatment": "theatrical film, Miami realism, lyrics drive story beats; naturalistic cinematography rather than a music-video montage",
+    "continuity": [
+      "Recurring female lead with dark wavy hair, red flower, red-and-black ruffled dress",
+      "Recurring male lead with dark hat, dark vest and pale/white rolled-sleeve shirt",
+      "Same working dockside tavern, waterfront, marina and Miami skyline",
+      "Live acoustic guitar, violin/fiddle, hand percussion/palmas in the tavern world",
+      "Progression moonlit deep blue/amber to violet pre-dawn to golden sunrise",
+      "Separate film-frame images only; no contact-sheet layout, captions, borders, player controls or in-frame typography",
+      "No spontaneous facial, costume, object, geography or direction drift"
+    ],
+    "shot_note": "The 50 cells are canonical compositions/shot intentions. Contact-sheet crops alone are NOT independently generated full-resolution production stills."
+  },
+  "batch_count": 5,
+  "shots_per_batch": 10,
+  "shot_count": 50,
+  "batches": [
+    {
+      "batch_id": "B01",
+      "act_title": "Establishing the world",
+      "story_function": "The moonlit harbor, the working taberna and the protagonists' first encounter.",
+      "shots": [
+        {
+          "shot_id": "B01-S01",
+          "global_index": 1,
+          "storyboard_caption": "Miami harbor at night",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "existing_batch01_media_to_compare_against_canon",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B01-S02",
+          "global_index": 2,
+          "storyboard_caption": "The tavern by the dock",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "existing_batch01_media_to_compare_against_canon",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B01-S03",
+          "global_index": 3,
+          "storyboard_caption": "Our lead",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "existing_batch01_media_to_compare_against_canon",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B01-S04",
+          "global_index": 4,
+          "storyboard_caption": "First meeting",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "existing_batch01_media_to_compare_against_canon",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B01-S05",
+          "global_index": 5,
+          "storyboard_caption": "Music begins",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "existing_batch01_media_to_compare_against_canon",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B01-S06",
+          "global_index": 6,
+          "storyboard_caption": "The violin joins",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "existing_batch01_media_to_compare_against_canon",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B01-S07",
+          "global_index": 7,
+          "storyboard_caption": "First dance",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "existing_batch01_media_to_compare_against_canon",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B01-S08",
+          "global_index": 8,
+          "storyboard_caption": "A night of strangers",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "existing_batch01_media_to_compare_against_canon",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B01-S09",
+          "global_index": 9,
+          "storyboard_caption": "The city watches",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "existing_batch01_media_to_compare_against_canon",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B01-S10",
+          "global_index": 10,
+          "storyboard_caption": "This is only the beginning",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "existing_batch01_media_to_compare_against_canon",
+          "fx_status": "not_approved_by_storyboard_lock"
+        }
+      ]
+    },
+    {
+      "batch_id": "B02",
+      "act_title": "The night opens",
+      "story_function": "The pair enters the tavern, discovers the band and finds their first shared rhythm.",
+      "shots": [
+        {
+          "shot_id": "B02-S01",
+          "global_index": 11,
+          "storyboard_caption": "Entrance to the tavern",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B02-S02",
+          "global_index": 12,
+          "storyboard_caption": "Stepping inside",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B02-S03",
+          "global_index": 13,
+          "storyboard_caption": "The song starts",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B02-S04",
+          "global_index": 14,
+          "storyboard_caption": "Wine and laughter",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B02-S05",
+          "global_index": 15,
+          "storyboard_caption": "Closer now",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B02-S06",
+          "global_index": 16,
+          "storyboard_caption": "The room alive",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B02-S07",
+          "global_index": 17,
+          "storyboard_caption": "Castanuelas and strings",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B02-S08",
+          "global_index": 18,
+          "storyboard_caption": "Conversations & secrets",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B02-S09",
+          "global_index": 19,
+          "storyboard_caption": "The first chorus",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B02-S10",
+          "global_index": 20,
+          "storyboard_caption": "Music spills into the night",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        }
+      ]
+    },
+    {
+      "batch_id": "B03",
+      "act_title": "Port, memory, and the rap",
+      "story_function": "Road memories and Appalachian roots interrupt the harbor night; the pair returns to one another.",
+      "shots": [
+        {
+          "shot_id": "B03-S01",
+          "global_index": 21,
+          "storyboard_caption": "Old dock, new stories",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B03-S02",
+          "global_index": 22,
+          "storyboard_caption": "Thinking of the road",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B03-S03",
+          "global_index": 23,
+          "storyboard_caption": "She waits",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B03-S04",
+          "global_index": 24,
+          "storyboard_caption": "Rap verse – the harbor",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B03-S05",
+          "global_index": 25,
+          "storyboard_caption": "Boots on the wood",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B03-S06",
+          "global_index": 26,
+          "storyboard_caption": "Hands and history",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B03-S07",
+          "global_index": 27,
+          "storyboard_caption": "Mountains to the sea",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B03-S08",
+          "global_index": 28,
+          "storyboard_caption": "Travelers and workers",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B03-S09",
+          "global_index": 29,
+          "storyboard_caption": "Back together",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B03-S10",
+          "global_index": 30,
+          "storyboard_caption": "One story, many roads",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        }
+      ]
+    },
+    {
+      "batch_id": "B04",
+      "act_title": "The night deepens",
+      "story_function": "An ensemble of sailors, travelers, and musicians reveals deeper feeling before another chorus.",
+      "shots": [
+        {
+          "shot_id": "B04-S01",
+          "global_index": 31,
+          "storyboard_caption": "The violin from the corner",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B04-S02",
+          "global_index": 32,
+          "storyboard_caption": "Palmas and compás",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B04-S03",
+          "global_index": 33,
+          "storyboard_caption": "She laughs",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B04-S04",
+          "global_index": 34,
+          "storyboard_caption": "Lost in the dance",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B04-S05",
+          "global_index": 35,
+          "storyboard_caption": "Forgotten promises",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B04-S06",
+          "global_index": 36,
+          "storyboard_caption": "Voices in the tavern",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B04-S07",
+          "global_index": 37,
+          "storyboard_caption": "The musicians as one",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B04-S08",
+          "global_index": 38,
+          "storyboard_caption": "Candlelight",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B04-S09",
+          "global_index": 39,
+          "storyboard_caption": "A look that says more",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B04-S10",
+          "global_index": 40,
+          "storyboard_caption": "The chorus lifts again",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        }
+      ]
+    },
+    {
+      "batch_id": "B05",
+      "act_title": "Bridge, breakdown, and sunrise",
+      "story_function": "The music softens, one last dance becomes a promise, and the harbor wakes at dawn.",
+      "shots": [
+        {
+          "shot_id": "B05-S01",
+          "global_index": 41,
+          "storyboard_caption": "After the celebration",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B05-S02",
+          "global_index": 42,
+          "storyboard_caption": "One last dance",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B05-S03",
+          "global_index": 43,
+          "storyboard_caption": "The breakdown",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B05-S04",
+          "global_index": 44,
+          "storyboard_caption": "Strings and percussion",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B05-S05",
+          "global_index": 45,
+          "storyboard_caption": "The night fades",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B05-S06",
+          "global_index": 46,
+          "storyboard_caption": "Everyone together",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B05-S07",
+          "global_index": 47,
+          "storyboard_caption": "Before we let go",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B05-S08",
+          "global_index": 48,
+          "storyboard_caption": "The new day",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B05-S09",
+          "global_index": 49,
+          "storyboard_caption": "The echo remains",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        },
+        {
+          "shot_id": "B05-S10",
+          "global_index": 50,
+          "storyboard_caption": "Volveremos a bailar",
+          "source": "canonical_storyboard_cell",
+          "individual_still_status": "individual_image_not_yet_generated",
+          "fx_status": "not_approved_by_storyboard_lock"
+        }
+      ]
+    }
+  ],
+  "baseline_policy": {
+    "previous_batch_01_media": "preserved as candidates; assess each against matching canon compositions before adoption",
+    "candidate_02_workprint": "preserved as historical review-only workprint; not canonized by this approval"
+  },
+  "production_approval": {
+    "storyboard_visual_direction": true,
+    "source_pixels": false,
+    "shot_proofs": false,
+    "render": false,
+    "human_final_film": false
+  }
+}
