@@ -1,12 +1,33 @@
 {
   "schema": "aivideoedit.operating-order.v1",
-  "mission": "Create a full-song Miami-realism music film for the user-supplied La luna de Florida master, beginning with a provisional source-derived workprint.",
+  "mission": "Direct a lyrics-driven theatrical film with the user's canonical five-act, fifty-shot storyboard; Miami realism; preserve existing candidate media.",
   "direction_authority": "user_directed",
   "production_mode": "hybrid",
   "canon_lock": {
-    "locked": false,
-    "picture_language": "Contemporary Miami waterfront, weathered dockside taberna, Latin/Appalachian ensemble, consistent dancing couple, midnight toward sunrise.",
-    "items": []
+    "locked": true,
+    "picture_language": "User-approved five-act, 50-shot Baila Conmigo storyboard for the La Luna de Florida theatrical film: authentic Miami dockside tavern, one recurring couple, travelers/musicians and harbor; moonlight through sunrise, lyrics as the plot.",
+    "items": [
+      {
+        "id": "CANON-STORYBOARD-B01-B05",
+        "type": "storyboard_visual_direction",
+        "file": "STORYBOARD_CANON.json",
+        "image_sha256": "05b232452eebce56fb9c047a0f481a19e04cf2d13e364bee30255dd27c88703a",
+        "drive_file_url": "https://drive.google.com/file/d/1cR6kUCti5UkS8zdXz5B56EfjyRr_1Fau/view",
+        "locked_scope": [
+          "50_ordered_shot_intents",
+          "recurring_characters_and_costumes",
+          "theatrical_narrative",
+          "setting_and_geography",
+          "night_to_sunrise_progression"
+        ],
+        "excluded_scope": [
+          "existing_media_pixels",
+          "fx",
+          "render",
+          "final_cut"
+        ]
+      }
+    ]
   },
   "accepted_baseline": {
     "status": "none",
@@ -37,9 +58,9 @@
     "forbidden_changes": [],
     "source_replacement_authorized": false
   },
-  "current_user_direction": "Miami realism. Use the exact supplied song and lyrics; create production media and a Drive folder; keep working through an actual playable render.",
-  "exact_next_action": "Bootstrap on the production branch, review Candidate 02 source and FX stills, improve genuine motion, perform canonical workflow render and seek user visual review.",
-  "updated_at_utc": "2026-10-13T03:30:00Z",
+  "current_user_direction": "Treat La Luna de Florida as a theatrical film, with its story following the supplied lyrics; preserve the existing workprint and Batch 01; the latest five-act/50-shot storyboard is now explicitly canon for still generation.",
+  "exact_next_action": "Generate or match B01-S01..B05-S10 clean individual full-frame stills in order, preserving previously backed-up candidates, then produce source-derived FX proofs and inspect continuity before new render.",
+  "updated_at_utc": "2026-10-13T03:50:00Z",
   "director_supervision": {
     "required": true,
     "reviewer_role": "sandbox_director",
