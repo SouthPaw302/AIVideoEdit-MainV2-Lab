@@ -142,7 +142,7 @@ def main() -> int:
         proc.stdin.flush()
         listed = call(proc, 3, "tools/list", {})
         names = {x.get("name") for x in listed.get("tools", []) if isinstance(x, dict)}
-        required_tools = {"harness__status", "harness__context", "harness__specialist_fixture", "harness__fx_resolve", "core__bootstrap", "production__initialize"}
+        required_tools = {"harness__status", "harness__context", "harness__fx_resolve", "core__bootstrap", "production__initialize"}
         missing = sorted(required_tools - names)
         if missing:
             raise RuntimeError("live Harness surface missing: " + ", ".join(missing))
@@ -161,15 +161,8 @@ def main() -> int:
         # configuring a second provisional project would violate the stage gate.
         harness_status = tool(proc, 8, "harness.status", {})
         context = tool(proc, 9, "harness.context", {"project_id": project_id})
-        specialist = tool(proc, 10, "harness.specialist_fixture", {
-            "task": "Director review: enforce the current user direction, shot continuity, authored motion/transitions, source fidelity, and no release promotion before visual approval. Direction: " + direction,
-            "evidence": {
-                "user_direction": direction,
-                "route": route_name,
-                "production_mode": order["production_mode"],
-                "manifest_sha256": sha(manifest_path),
-            },
-        })
+        # Prototype isolation: never call the simulated specialist fixture.
+        specialist = None
         fx_resolution = tool(proc, 11, "harness.fx_resolve", {
             "project_id": project_id,
             "level": "scene",
@@ -207,6 +200,24 @@ def main() -> int:
         source_media_qc = inspect_source_media(staged_manifest, staged_sources, width, height)
         (out / "SOURCE_MEDIA_QC.json").write_text(json.dumps(source_media_qc, indent=2) + "\n", encoding="utf-8")
 
+        # Experimental real model preflight. The first authorized source shot is
+        # sampled here, BEFORE the film is rendered; this cannot certify the
+        # completed movie or imply review of other shots. A separate full
+        # post-render scan and owner approval are still mandatory.
+        from scripts.prototype_ai_specialist import invoke
+        for key in ("AIVE_PROTOTYPE_MODEL", "AIVE_PROTOTYPE_MMPROJ",
+                    "AIVE_PROTOTYPE_CLI"):
+            if not os.environ.get(key):
+                raise RuntimeError("prototype AI model not provisioned: " + key)
+        specialist = invoke(
+            staged_sources[0], direction,
+            Path(os.environ["AIVE_PROTOTYPE_MODEL"]),
+            Path(os.environ["AIVE_PROTOTYPE_MMPROJ"]),
+            Path(os.environ["AIVE_PROTOTYPE_CLI"]),
+            out / "PROTOTYPE_AI",
+        )
+        specialist["scope"] = "first authorized source shot only; pre-render model observation, not film QC"
+
         from general.reusable.tools.jev_decision import decide
         from general.reusable.tools.harness_router import route_jev
         evidence = {
@@ -215,7 +226,7 @@ def main() -> int:
                 "director_input_present": bool(direction),
                 "canonical_main_booted": bool(boot.get("bootstrapped")),
                 "live_harness_available": bool(harness_status.get("bridge_ready")),
-                "harness_director_review_consumed": specialist.get("status") == "COMPLETE",
+                "harness_director_review_consumed": specialist.get("status") == "MODEL_OBSERVATION_REVIEW_REQUIRED" and bool(specialist.get("raw_output_sha256")),
                 "canonical_fx_resolution_present": bool(fx_resolution.get("resolution")),
                 "onnx_evidence_available": True,
                 "parallel_render_authorized": True,
