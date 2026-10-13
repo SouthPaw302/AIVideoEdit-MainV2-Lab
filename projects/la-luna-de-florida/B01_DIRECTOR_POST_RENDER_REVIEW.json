@@ -1,0 +1,43 @@
+{
+  "schema": "aivideoedit.b01-director-post-run-review.v1",
+  "run_id": 38458305189,
+  "source_sha": "2cf2cdddd4728e3a1f93ba1b748240baa2639d85",
+  "drive_folder": "https://drive.google.com/drive/folders/14Mm6Y6FQ5ka8hk_0MMnSt24y-xWfxnXp",
+  "runner_url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38458305189",
+  "media_count": {
+    "original_copies": 10,
+    "fx_duplicate_stills": 20,
+    "fx_loops": 20,
+    "runner_receipts": 5
+  },
+  "review_copy": {
+    "url": "https://drive.google.com/file/d/17p-tXWgCe7mPe2wF15pPs3lG-GL-yMZk/view",
+    "sha256": "bffed820e92634ce5e871e3b39d7db078711e48a6fe82dd2f4e59bf1a1664279",
+    "duration_seconds": 25,
+    "contents": "ten A-variant runner clips spliced in order; silence"
+  },
+  "sampled_frames": {
+    "url": "https://drive.google.com/file/d/1a5F5DZrCTkWB-IYsmOkDOTLj7PHpnpLA/view",
+    "sha256": "c0bb6bc43ea6e3f3da7f632b51730193b31f155ac01e0d73e183b7ba9a3e47d9",
+    "scope": [
+      "B01-S01",
+      "B01-S02",
+      "B01-S03",
+      "B01-S07",
+      "B01-S08",
+      "B01-S09"
+    ],
+    "method": "first/middle samples per A/B variant, not full normal-speed film screening"
+  },
+  "technical_status": "PASS",
+  "director_verdict": "REPAIR_REQUIRED",
+  "human_artistic_approval": false,
+  "fx_lock": false,
+  "findings": [
+    "20 H264 640x360 2.5s proof loops exist with individual SHA256 receipts and source copies",
+    "FX water/light motion is mathematically measured but most sample frames look extremely similar; little cinematic animation visible",
+    "No independently articulated character or instrument movement; do not call this scene animation",
+    "Original B01 crops are not clean approved source canon; technical PASS not creative acceptance"
+  ],
+  "next_action": "Before film use, repair localized material FX visibility and protected regions, use real video continuation for character action; compare at normal speed, preserve source images, no storyboard redesign"
+}
