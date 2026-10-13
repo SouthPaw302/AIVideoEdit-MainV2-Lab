@@ -1,0 +1,24 @@
+{
+  "schema": "aivideoedit.media-plan.v1",
+  "selected_capabilities": [
+    "generated_stills",
+    "living_still_fx",
+    "loop_media",
+    "atmospheric_plate",
+    "transition_media",
+    "conventional_video"
+  ],
+  "user_approach_established": false,
+  "visual_direction_gate": {
+    "required": true,
+    "presented_in_chat": false,
+    "options": [],
+    "user_selection": {
+      "status": "pending",
+      "recorded_user_instruction": "Style: Miami realism"
+    },
+    "locked": false
+  },
+  "recorded_direction": "Miami realism, explicitly given by current user. Other artistic approvals pending.",
+  "visual_media": "10 provisional still crops and 10 experimental camera/light FX loops; not real articulated video."
+}
