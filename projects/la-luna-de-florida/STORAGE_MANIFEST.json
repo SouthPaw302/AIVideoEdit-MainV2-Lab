@@ -39,5 +39,27 @@
     "prompts": "https://drive.google.com/file/d/1IsCx77FjmEDkh-nUzp4TYf8tRTt4p_fq/view",
     "actual_video_count": 0,
     "status": "AWAITING_GEMINI_VIDEO_GENERATION"
+  },
+  "additional_still_backups": {
+    "folder": "https://drive.google.com/drive/folders/1AlqDTpBA0NLgRdWTF6o0et0_WsnQnfaZ",
+    "status": "backed_up_candidates_not_individually_accepted",
+    "batches": {
+      "B03": {
+        "recoverable_originals": 9,
+        "expected": 10,
+        "missing": "B03-S10 overwritten due to filename collision"
+      },
+      "B04": {
+        "recoverable_originals": 10,
+        "expected": 10
+      },
+      "B05_NIGHT_EXTRA": {
+        "recoverable_originals": 10,
+        "expected": 10,
+        "canon_finale_matches": false
+      }
+    },
+    "provenance": "individual full-frame imagegen files from prior turns; sha256 index stored on Drive",
+    "next_required": "Generate 10 truly independent full-size dawn-act B05-S01..B05-S10 images; do not use generated storyboard contact sheet as picture originals."
   }
 }

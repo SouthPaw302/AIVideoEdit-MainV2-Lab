@@ -16,3 +16,7 @@
 - All individual hashes: https://drive.google.com/file/d/1UL6apXpmJoIdklVyX9QoDY1E7PV5V6ZK/view; QC: https://drive.google.com/file/d/1eYxL_4ABJltglAL2I849iESWVCOrga5T/view; preview: https://drive.google.com/file/d/1nLo_pUa6aSabWQaWik5O4j3c5C4BGJ7N/view.
 - Gemini prompts: `GEMINI_2_CLIP_PLAN.md`; starts: https://drive.google.com/file/d/1Q5jXOmWkSxqwK01x3AmAE-S4F0njkraX/view and https://drive.google.com/file/d/1j4APw7JXepGQzU0LL0wr5JjkOIO-R0T_/view. **No Gemini outputs exist yet.** Wait for actual video uploads, hash/inspect before promotion.
 - Source originals remain preserved; all new FX/AI media remain experimental. No main/canon pipeline promotion, no deletion, no false completed-film claim.
+
+## New verified backup / continuation
+
+Backup folder: https://drive.google.com/drive/folders/1AlqDTpBA0NLgRdWTF6o0et0_WsnQnfaZ. B03=9/10 recoverable (B03-S10 collision), B04=10/10, B05_NIGHT_EXTRA=10/10, all indexed. Do not overwrite them or count contact-sheet crop material as originals. Next standalone full-resolution still generation target is B05-S01..S10 (bridge, breakdown, daybreak and outro), then individual FX duplicates after original backup and visual QC.

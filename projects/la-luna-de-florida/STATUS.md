@@ -13,3 +13,7 @@
 ## Batch 01 expanded FX + Gemini input staging
 
 Confirmed: 10 untouched source image backups, 20 independent A/B FX variant stills, 20 measured 2.5s H.264 24fps 960x540 environmental/practical-light FX loops and a 10s comparison workprint. Every loop decodes and has temporal pixel differences. This still does NOT animate the people's bodies and has no film-level human QC approval. The two Gemini source frames and instructions are staged, not yet rendered as actual videos. FX folder: https://drive.google.com/drive/folders/1YLxl1zBnDsRehuF2wqrJbiO5EBhXBcLz; Gemini folder: https://drive.google.com/drive/folders/1waAbyiv6cVAxkWJwHyU14eJLpTCc3Wis. Continue B02–B05 clean original media against canon, then build separate FX gates and request visual acceptance.
+
+## Batch B03/B04/B05 night extras backup
+
+29 recoverable full-frame imagegen files backed up to [Google Drive](https://drive.google.com/drive/folders/1AlqDTpBA0NLgRdWTF6o0et0_WsnQnfaZ), with separate archives and SHA-256 index. B03-S10 source original was overwritten by filename collision and is **not** falsely counted. B05 night extra candidates do not fulfill the locked sunrise act. Attempts to produce the next ten individual B05 finale frames returned *contact-sheet grids*, which were REJECTED as finished stills. The required 10 new full-size finale originals are therefore **NOT GENERATED**; no FX or new render promotion is authorized on their behalf.
