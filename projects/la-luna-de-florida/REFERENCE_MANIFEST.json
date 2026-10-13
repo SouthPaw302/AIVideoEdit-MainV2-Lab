@@ -1,6 +1,20 @@
 {
   "schema": "aivideoedit.reference-manifest.v1",
   "videos": [],
-  "images": [],
-  "notes": "No user-supplied reference video or image. Generated image composites are provisional original media, not accepted reference canon."
+  "images": [
+    {
+      "id": "CANON-STORYBOARD-B01-B05",
+      "name": "User-approved 50-shot theatrical storyboard",
+      "kind": "canonical_storyboard",
+      "source": "assistant_generated_in_current_conversation_explicitly_approved",
+      "role": "shot_planning_and_visual_direction",
+      "url": "https://drive.google.com/file/d/1cR6kUCti5UkS8zdXz5B56EfjyRr_1Fau/view",
+      "sha256": "05b232452eebce56fb9c047a0f481a19e04cf2d13e364bee30255dd27c88703a",
+      "width": 1536,
+      "height": 1024,
+      "analysis_complete": true,
+      "scope": "ordered shot references, not direct final-picture source pixels"
+    }
+  ],
+  "notes": "No external user-supplied visual reference. The user explicitly adopted the assistant-created board as the canon visual reference for the stills; cropping thumbnails is not independent finished still generation."
 }
