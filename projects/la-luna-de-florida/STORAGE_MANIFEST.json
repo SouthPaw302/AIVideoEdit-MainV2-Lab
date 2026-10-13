@@ -1,0 +1,16 @@
+{
+  "schema": "aivideoedit.storage-manifest.v1",
+  "drive_folder": "https://drive.google.com/drive/folders/1flQYE0YaY41hCoPGbZK9BmeejE_lyYtQ",
+  "drive_folder_id": "1flQYE0YaY41hCoPGbZK9BmeejE_lyYtQ",
+  "source_audio_sha256": "1a4bffef36930b504423d2653faff4cc5bfd9a15d44bdcf1083b27fbb0db1c10",
+  "workprint_current": {
+    "filename": "La_Luna_de_Florida_Candidate_02_full_540p.mp4",
+    "sha256": "bf2485631c0388ec304f13ef97eaafa4048ccdcf490259fb37a78b09d061727b",
+    "duration_seconds": 321.16,
+    "status": "technical_workprint_not_approved"
+  },
+  "old_candidate": {
+    "sha256": "a351b923d8d20189f102ea6275b118f51f706e398e30adc36c1bda3d023f2967",
+    "status": "superseded_due_visible_generated_layout_artifacts"
+  }
+}
