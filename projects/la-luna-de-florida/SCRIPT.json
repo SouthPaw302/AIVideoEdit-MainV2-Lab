@@ -11,5 +11,12 @@
     "user_directed_miami_realism"
   ],
   "entries": [],
-  "notes": "Preliminary workprint timeline is recorded separately; no locked frame-followable production script or storyboard has been approved."
+  "notes": "The 50-shot still storyboard is user-approved canon, but a full lyric-timed, frame-followable screenplay, separate completed still images and valid stage gates are pending. SCRIPT.locked stays false.",
+  "canonical_storyboard": {
+    "approved": true,
+    "file": "STORYBOARD_CANON.json",
+    "sha256": "05b232452eebce56fb9c047a0f481a19e04cf2d13e364bee30255dd27c88703a",
+    "acts": 5,
+    "shot_intents": 50
+  }
 }
