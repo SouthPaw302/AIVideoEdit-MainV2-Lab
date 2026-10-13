@@ -1,5 +1,21 @@
 {
   "schema": "aivideoedit.asset-manifest.v1",
-  "assets": [],
-  "notes": "10 generated still candidate images, source hashes and derived FX recorded in Drive /02 Stills Batch 01/MANIFEST_Candidate_02.json and /03 FX Batch 01/FX_MANIFEST_Candidate02.json. Not accepted/canonized."
+  "assets": [
+    {
+      "id": "CANON-STORYBOARD-B01-B05",
+      "kind": "storyboard_image",
+      "origin": "generated",
+      "lifecycle_status": "canonical",
+      "role": "user_approved_visual_direction_reference_for_still_generation",
+      "url": "https://drive.google.com/file/d/1cR6kUCti5UkS8zdXz5B56EfjyRr_1Fau/view",
+      "sha256": "05b232452eebce56fb9c047a0f481a19e04cf2d13e364bee30255dd27c88703a",
+      "mime_type": "image/png",
+      "width": 1536,
+      "height": 1024,
+      "content_reuse_as_final_picture": false,
+      "approved_scope": "storyboard only",
+      "review_status": "user_approved_storyboard_not_still_or_film"
+    }
+  ],
+  "notes": "Only the reference/storyboard asset is canon. Existing 10 Batch 01 still candidates, FX clips, Candidate 02 video and remaining 40 shot intents do not become accepted source media or finished pictures via this approval."
 }
