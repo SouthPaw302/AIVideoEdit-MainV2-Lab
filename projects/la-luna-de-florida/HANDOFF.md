@@ -9,3 +9,10 @@
 **Execution order:** (1) Boot current Lab OS; (2) read storyboard and exact 50-index; (3) reconcile existing B01 against canon without silent deletion; (4) create B02 source frames individually and back up Batch-10; (5) visually inspect continuity; (6) create derived motion/FX proofs with hashes and separate approval; (7) repeat B03–B05; (8) build a new film candidate only when ready and perform source-to-export Director scan. AI inference and technical tests never grant owner final release approval.
 
 **Canonical production stage:** `INITIALIZED` until actual prerequisites pass. Nothing in this handoff asserts the larger stages are done.
+
+## New FX and Gemini handoff
+
+- Authoritative new experiment index: `B01_FX_DUPLICATES_INDEX.json` (10 original copies + A/B stills + A/B 2.5s loops; no human articulated motion).
+- All individual hashes: https://drive.google.com/file/d/1UL6apXpmJoIdklVyX9QoDY1E7PV5V6ZK/view; QC: https://drive.google.com/file/d/1eYxL_4ABJltglAL2I849iESWVCOrga5T/view; preview: https://drive.google.com/file/d/1nLo_pUa6aSabWQaWik5O4j3c5C4BGJ7N/view.
+- Gemini prompts: `GEMINI_2_CLIP_PLAN.md`; starts: https://drive.google.com/file/d/1Q5jXOmWkSxqwK01x3AmAE-S4F0njkraX/view and https://drive.google.com/file/d/1j4APw7JXepGQzU0LL0wr5JjkOIO-R0T_/view. **No Gemini outputs exist yet.** Wait for actual video uploads, hash/inspect before promotion.
+- Source originals remain preserved; all new FX/AI media remain experimental. No main/canon pipeline promotion, no deletion, no false completed-film claim.

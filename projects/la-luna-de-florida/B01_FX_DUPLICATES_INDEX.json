@@ -1,0 +1,52 @@
+{
+  "schema": "aivideoedit.fx-duplicate-delivery.v1",
+  "branch": "song/la-luna-de-florida",
+  "scene_canon_sha256": "05b232452eebce56fb9c047a0f481a19e04cf2d13e364bee30255dd27c88703a",
+  "batch": "B01",
+  "media_created": {
+    "preserved_originals": 10,
+    "alternate_fx_stills": 20,
+    "independent_short_loop_mp4": 20,
+    "loop_duration_seconds": 2.5,
+    "fps": 24,
+    "resolution": "960x540",
+    "gemini_video_start_frames": 2,
+    "actual_gemini_videos": 0
+  },
+  "types": [
+    "water_reflections_distortion",
+    "localized_practical_lamp_heat_shimmer",
+    "localized_warm_lighting"
+  ],
+  "excluded_claims": [
+    "no_articulated_people",
+    "no_ai_temporal_video",
+    "no_Gemini_result",
+    "no_human_film_approval",
+    "no_promoted_canonical_fx"
+  ],
+  "validation": {
+    "all_20_mp4_decoded": true,
+    "all_20_have_temporal_pixel_change": true,
+    "face_geometry_protection_unverified_by_automated_differential": false,
+    "manifest_sha256": "f329e9e448a925b6dd403cd5ed081f01f2efa38131b7e610fcb9a4f80ad84a5d",
+    "proof_sha256": "cb2f91acdde3e31be32dd48489928c6b5d28c136684c9163a44a43f46604333c",
+    "human_review": false
+  },
+  "drive": {
+    "folder": "https://drive.google.com/drive/folders/1YLxl1zBnDsRehuF2wqrJbiO5EBhXBcLz",
+    "originals_zip": "https://drive.google.com/file/d/1bD6B20LVyOwzcLcpx7vz3-1jN14kOut0/view",
+    "fx_stills_zip": "https://drive.google.com/file/d/1CaxG7YhpONB2JJUvNu_7UsmCVAMxYgmm/view",
+    "loops_zip": "https://drive.google.com/file/d/1IMLV0bAyurBnvzBfzFKrCiUC9jb91Uzw/view",
+    "full_shot_and_loop_hash_manifest": "https://drive.google.com/file/d/1UL6apXpmJoIdklVyX9QoDY1E7PV5V6ZK/view",
+    "qc": "https://drive.google.com/file/d/1eYxL_4ABJltglAL2I849iESWVCOrga5T/view",
+    "quick_preview": "https://drive.google.com/file/d/1nLo_pUa6aSabWQaWik5O4j3c5C4BGJ7N/view"
+  },
+  "gemini": {
+    "folder": "https://drive.google.com/drive/folders/1waAbyiv6cVAxkWJwHyU14eJLpTCc3Wis",
+    "source1": "https://drive.google.com/file/d/1Q5jXOmWkSxqwK01x3AmAE-S4F0njkraX/view",
+    "source2": "https://drive.google.com/file/d/1j4APw7JXepGQzU0LL0wr5JjkOIO-R0T_/view",
+    "prompts": "https://drive.google.com/file/d/1IsCx77FjmEDkh-nUzp4TYf8tRTt4p_fq/view",
+    "status": "inputs_prepared; clips_not_generated"
+  }
+}

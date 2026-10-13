@@ -20,5 +20,24 @@
     "filename": "STORYBOARD_CANON_B01-B05.png",
     "authoritative_index": "projects/la-luna-de-florida/STORYBOARD_CANON.json",
     "status": "user_approved_storyboard_for_stills_only"
+  },
+  "fx_duplicates_batch_01": {
+    "manifest_sha256": "f329e9e448a925b6dd403cd5ed081f01f2efa38131b7e610fcb9a4f80ad84a5d",
+    "fx_zip_drive_url": "https://drive.google.com/file/d/1IMLV0bAyurBnvzBfzFKrCiUC9jb91Uzw/view",
+    "fx_stills_drive_url": "https://drive.google.com/file/d/1CaxG7YhpONB2JJUvNu_7UsmCVAMxYgmm/view",
+    "original_backup_drive_url": "https://drive.google.com/file/d/1bD6B20LVyOwzcLcpx7vz3-1jN14kOut0/view",
+    "fx_shot_manifest_url": "https://drive.google.com/file/d/1UL6apXpmJoIdklVyX9QoDY1E7PV5V6ZK/view",
+    "qc_url": "https://drive.google.com/file/d/1eYxL_4ABJltglAL2I849iESWVCOrga5T/view",
+    "proof_url": "https://drive.google.com/file/d/1nLo_pUa6aSabWQaWik5O4j3c5C4BGJ7N/view",
+    "status": "EXPERIMENTAL_UNAPPROVED",
+    "individual_source_pixes_preserved": true
+  },
+  "gemini_video_two_shots": {
+    "source_1": "https://drive.google.com/file/d/1Q5jXOmWkSxqwK01x3AmAE-S4F0njkraX/view",
+    "source_2": "https://drive.google.com/file/d/1j4APw7JXepGQzU0LL0wr5JjkOIO-R0T_/view",
+    "source_folder": "https://drive.google.com/drive/folders/1waAbyiv6cVAxkWJwHyU14eJLpTCc3Wis",
+    "prompts": "https://drive.google.com/file/d/1IsCx77FjmEDkh-nUzp4TYf8tRTt4p_fq/view",
+    "actual_video_count": 0,
+    "status": "AWAITING_GEMINI_VIDEO_GENERATION"
   }
 }
