@@ -97,10 +97,9 @@ def invoke(clip: Path, direction: str, model: Path, projector: Path,
         "visible local motion only where the samples justify it. "
         "Do not infer unseen frames or assert continuous motion from stills. "
         "Current direction: " + direction[:2500] + "\n"
-        'Return ONLY a JSON object with exactly these keys: '
-        '{"observation":"grounded account of visible frames",'
-        '"possible_defects":["specific possible issue, or empty"],'
-        '"needs_human_review":true}. '
+        "Return ONLY one JSON object. The required keys are observation "
+        "(string), possible_defects (array of strings), and "
+        "needs_human_review (boolean, always true). "
         "Do not output PASS, COMPLETE, or an automatic approval."
     )
     command = [
