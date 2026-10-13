@@ -71,6 +71,10 @@ jobs:
         run: |
           set -euo pipefail
           python -m pip install --disable-pip-version-check "numpy==2.2.6" "opencv-python-headless==4.11.0.86"
+          sudo apt-get update -y
+          sudo apt-get install -y ffmpeg
+          command -v ffmpeg
+          command -v ffprobe
           ffmpeg -version | head -n 1
       - name: Verify Director preflight against live bootstrapped main registry
         shell: bash
