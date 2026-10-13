@@ -8,17 +8,28 @@
     "transition_media",
     "conventional_video"
   ],
-  "user_approach_established": false,
+  "user_approach_established": true,
   "visual_direction_gate": {
-    "required": true,
-    "presented_in_chat": false,
+    "required": false,
+    "reason": "user explicitly adopted an existing storyboard as canonical visual reference; not a no-reference route-selection case",
+    "presented_in_chat": true,
     "options": [],
     "user_selection": {
-      "status": "pending",
-      "recorded_user_instruction": "Style: Miami realism"
+      "status": "selected",
+      "recorded_user_instruction": "Now make that storey board Cannon for the stills",
+      "reference_sha256": "05b232452eebce56fb9c047a0f481a19e04cf2d13e364bee30255dd27c88703a"
     },
-    "locked": false
+    "locked": true
   },
-  "recorded_direction": "Miami realism, explicitly given by current user. Other artistic approvals pending.",
-  "visual_media": "10 provisional still crops and 10 experimental camera/light FX loops; not real articulated video."
+  "recorded_direction": "Theatrical Miami realism, lyric-story, canonical B01-B05 story/shot sequence and character/world continuity. Storyboard approved; existing full-length workprint remains unapproved.",
+  "visual_media": "50 ordered individual shot targets, only 10 pre-existing Batch 01 provisional candidate images and camera/light FX loops backed up so far; the remaining full-resolution stills must actually be generated; source contact thumbnails not final media.",
+  "storyboard_canon": {
+    "locked": true,
+    "reference_file": "STORYBOARD_CANON.json",
+    "sha256": "05b232452eebce56fb9c047a0f481a19e04cf2d13e364bee30255dd27c88703a",
+    "shot_count": 50,
+    "act_count": 5,
+    "approval_source": "explicit_current_user_instruction",
+    "board_url": "https://drive.google.com/file/d/1cR6kUCti5UkS8zdXz5B56EfjyRr_1Fau/view"
+  }
 }
