@@ -1,0 +1,15 @@
+{
+  "schema": "aivideoedit.video-script.v1",
+  "locked": false,
+  "based_on_storyboard": false,
+  "target_fps": 24,
+  "duration_seconds": 321.16,
+  "total_frames": 7708,
+  "basis": [
+    "user_lyrics",
+    "audio_energy",
+    "user_directed_miami_realism"
+  ],
+  "entries": [],
+  "notes": "Preliminary workprint timeline is recorded separately; no locked frame-followable production script or storyboard has been approved."
+}
