@@ -97,5 +97,28 @@
       "original_unchanged": true,
       "canonical_stills_replaced": false
     }
-  ]
+  ],
+  "b01_current_main_runner_fx_20261013": {
+    "run_id": 38458305189,
+    "run_url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38458305189",
+    "source_branch_sha": "2cf2cdddd4728e3a1f93ba1b748240baa2639d85",
+    "drive_folder": "https://drive.google.com/drive/folders/14Mm6Y6FQ5ka8hk_0MMnSt24y-xWfxnXp",
+    "source_preserved_count": 10,
+    "fx_duplicate_still_count": 20,
+    "loop_count": 20,
+    "runner_receipt_count": 5,
+    "audit_count": 1,
+    "all_file_count": 56,
+    "loop_seconds": 2.5,
+    "loop_fps": 24,
+    "loop_resolution": "640x360",
+    "source_resolution": "1280x720",
+    "verified": "all five GitHub runner artifacts have complete hashed contents, ZIP CRC PASS, Drive listing shows 56 matching file sizes, not independently redownloaded from Drive",
+    "director_review": "PENDING",
+    "artistic_approval": false,
+    "fx_lock": false,
+    "status": "TECHNICAL_FX_PROOFS_REVIEW_REQUIRED",
+    "motion_scope": "water flow or localized practical light; no articulated people",
+    "old_fx_preserved": true
+  }
 }
