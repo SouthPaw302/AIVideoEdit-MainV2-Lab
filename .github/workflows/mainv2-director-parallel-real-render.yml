@@ -1,4 +1,4 @@
-name: AIVideoEdit — Canonical Production Candidate (Director + Parallel)
+name: AIVideoEdit — Prototype Qwen Candidate (Director + Parallel)
 
 on:
   workflow_dispatch:
@@ -44,10 +44,10 @@ jobs:
       source_sha: ${{ steps.lock-lineage.outputs.source_sha }}
       matrix: ${{ steps.plan-shards.outputs.matrix }}
     steps:
-      - name: Check out immutable MainV2 engine from main
+      - name: Check out experimental engine on prototype/ai
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
-          ref: main
+          ref: prototype/ai
           path: engine
           fetch-depth: 0
           persist-credentials: false
@@ -75,6 +75,33 @@ jobs:
           sudo apt-get update -y
           sudo apt-get install -y --allow-downgrades "ffmpeg=$FFMPEG_APT_VERSION"
           python -m pip install --disable-pip-version-check -r engine/.github/requirements/render-runner.lock.txt
+
+      - name: Provision real CPU Qwen3-VL multimodal runtime (prototype only)
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get install -y cmake ninja-build
+          git clone --depth 1 --branch b6907 https://github.com/ggml-org/llama.cpp.git "$RUNNER_TEMP/llama-prototype"
+          cmake -S "$RUNNER_TEMP/llama-prototype" -B "$RUNNER_TEMP/llama-prototype/build" -G Ninja -DCMAKE_BUILD_TYPE=Release -DGGML_CUDA=OFF
+          cmake --build "$RUNNER_TEMP/llama-prototype/build" -j2 --target llama-mtmd-cli
+          echo "AIVE_PROTOTYPE_CLI=$RUNNER_TEMP/llama-prototype/build/bin/llama-mtmd-cli" >> "$GITHUB_ENV"
+          python -m pip install "huggingface_hub>=0.35,<2"
+          python - <<'PY'
+          import os
+          from huggingface_hub import hf_hub_download
+          repo = "Qwen/Qwen3-VL-2B-Instruct-GGUF"
+          revision = "2244eb1748531fca9b5a02d1f72b6fde1a53cfae"
+          entries = [
+              ("AIVE_PROTOTYPE_MODEL", "Qwen3VL-2B-Instruct-Q4_K_M.gguf"),
+              ("AIVE_PROTOTYPE_MMPROJ", "mmproj-Qwen3VL-2B-Instruct-Q8_0.gguf"),
+          ]
+          with open(os.environ["GITHUB_ENV"], "a") as env:
+              for key, filename in entries:
+                  path=hf_hub_download(repo, filename, revision=revision,
+                                       local_dir=os.environ["RUNNER_TEMP"] + "/qwen-prototype")
+                  env.write(key + "=" + str(path) + "\n")
+          PY
+          python -m unittest discover -s tests -p test_prototype_ai_specialist.py -v
 
       - name: Verify and boot exact canonical MainV2 main engine
         working-directory: engine
