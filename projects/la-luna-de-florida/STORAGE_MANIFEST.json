@@ -37,8 +37,12 @@
     "source_2": "https://drive.google.com/file/d/1j4APw7JXepGQzU0LL0wr5JjkOIO-R0T_/view",
     "source_folder": "https://drive.google.com/drive/folders/1waAbyiv6cVAxkWJwHyU14eJLpTCc3Wis",
     "prompts": "https://drive.google.com/file/d/1IsCx77FjmEDkh-nUzp4TYf8tRTt4p_fq/view",
-    "actual_video_count": 0,
-    "status": "AWAITING_GEMINI_VIDEO_GENERATION"
+    "actual_video_count": 1,
+    "status": "ONE_UPLOADED_UNCUT_10S_CLIP_PLUS_TWO_EXTRACTED_SILENT_CANDIDATES_UNAPPROVED",
+    "original_mp4": "https://drive.google.com/file/d/1xC18cxLZrPgdXyUn9o8jt8hEAN0WP3p9/view",
+    "dance_candidate": "https://drive.google.com/file/d/1OesthH06Foii_2of3F8tk-JvYFlMkQbi/view",
+    "harbor_candidate": "https://drive.google.com/file/d/1pvaJeYGKtVqjdgndR-SB5MN2n3Hnrn_6/view",
+    "original_sha256": "e9335abaad0d9ee7d62131c66eab1d6626c53e3b035b4bb1b9a0362477a102c2"
   },
   "additional_still_backups": {
     "folder": "https://drive.google.com/drive/folders/1AlqDTpBA0NLgRdWTF6o0et0_WsnQnfaZ",
@@ -61,5 +65,14 @@
     },
     "provenance": "individual full-frame imagegen files from prior turns; sha256 index stored on Drive",
     "next_required": "Generate 10 truly independent full-size dawn-act B05-S01..B05-S10 images; do not use generated storyboard contact sheet as picture originals."
+  },
+  "sandbox_media_backup_audit": {
+    "url": "https://drive.google.com/file/d/1lro4XA-PSjuGxbFsc_JJDOcxEs9Vd58Z/view",
+    "local_files_audited": 79,
+    "drive_size_verified_files": 16,
+    "matching_sha256_in_zip_files": 59,
+    "noncanonical_storyboard_files_excluded_from_backup": 4,
+    "all_recoverable_media_verified_present_by_drive_size_or_zip_member_sha": true,
+    "remark": "Remote file SHA-256 not independently downloaded; Drive listed sizes match; 3 local ZIPs passed CRC test."
   }
 }
