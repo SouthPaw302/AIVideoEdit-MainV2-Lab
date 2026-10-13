@@ -6,7 +6,7 @@
   "director_brain_version": 4,
   "source_ingest_complete": true,
   "reference_analysis_complete": false,
-  "visual_approach_established": false,
+  "visual_approach_established": true,
   "storyboard_locked": false,
   "shot_packages_built": false,
   "shot_proofs_accepted": false,
@@ -17,5 +17,12 @@
   "human_visual_approval": false,
   "production_complete": false,
   "release_gate_status": "PENDING",
-  "local_candidate_render_exists": true
+  "local_candidate_render_exists": true,
+  "storyboard_design_canon": {
+    "locked": true,
+    "source_file": "STORYBOARD_CANON.json",
+    "sha256": "05b232452eebce56fb9c047a0f481a19e04cf2d13e364bee30255dd27c88703a",
+    "scope": "50 ordered still image plans only",
+    "explicit_user_approval": true
+  }
 }
