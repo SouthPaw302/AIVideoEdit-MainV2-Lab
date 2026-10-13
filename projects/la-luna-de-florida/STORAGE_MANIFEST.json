@@ -12,5 +12,13 @@
   "old_candidate": {
     "sha256": "a351b923d8d20189f102ea6275b118f51f706e398e30adc36c1bda3d023f2967",
     "status": "superseded_due_visible_generated_layout_artifacts"
+  },
+  "storyboard_canon": {
+    "drive_file_url": "https://drive.google.com/file/d/1cR6kUCti5UkS8zdXz5B56EfjyRr_1Fau/view",
+    "drive_folder": "https://drive.google.com/drive/folders/1WbP-0hln252L4Lx7TymxcNdt3WXg43RQ",
+    "sha256": "05b232452eebce56fb9c047a0f481a19e04cf2d13e364bee30255dd27c88703a",
+    "filename": "STORYBOARD_CANON_B01-B05.png",
+    "authoritative_index": "projects/la-luna-de-florida/STORYBOARD_CANON.json",
+    "status": "user_approved_storyboard_for_stills_only"
   }
 }
