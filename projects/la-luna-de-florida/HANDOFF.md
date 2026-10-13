@@ -24,3 +24,10 @@ Backup folder: https://drive.google.com/drive/folders/1AlqDTpBA0NLgRdWTF6o0et0_W
 ## Sandbox backup and clean handoff (2026-10-13)
 
 Drive audit: https://drive.google.com/file/d/1lro4XA-PSjuGxbFsc_JJDOcxEs9Vd58Z/view. The 79 current sandbox project entries were assessed: 16 direct Drive objects with matching sizes, 59 source/duplicate entries backed by SHA-matched members of CRC-tested ZIPs on Drive, and 4 noncanonical storyboard/playback images explicitly excluded from media retention as previously ordered. Remote SHA verification was **not** performed; source local hashes and exact Drive file IDs are in the audit. Original canon locked unchanged. Before local deletion, all recoverable media was backed up. The sandbox is **not a persistent source of truth**; reconstruct exclusively from Drive and the repo, and never assume local paths from historic chat handoffs still exist.
+
+## B01 REAL FX runner — completed / Director QC pending
+
+- [Real render run 38458305189](https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38458305189), all five parallel 2-shot jobs successful. Exact source SHA `2cf2cdddd4728e3a1f93ba1b748240baa2639d85`.
+- [Individual Drive media](https://drive.google.com/drive/folders/14Mm6Y6FQ5ka8hk_0MMnSt24y-xWfxnXp): 10 unchanged source copies, 20 source-derived A/B FX stills, 20 actual 2.5s H.264 loops (24fps, 640×360), five hashed runner receipts, one backup audit. All 56 items remotely listed at matching sizes. All five ZIP artifacts passed CRC plus reported source/output file SHA-256 verification locally before backup.
+- Canonical effects: `FX2-MOTION-003` water flow or `FX2-LIGHT-023` practical light. These are **small experimental motion proofs**, not full-resolution theatrical shots or real animated characters, not FX-locked and not accepted as film canon.
+- The Director's pre-production approval/protection plan is `B01_DIRECTOR_PREFLIGHT.json`; Director's final visual acceptance, protected-ROI review, source-to-output movie check and any human release approval are still PENDING. Preserve all older B01 files and workprints.
