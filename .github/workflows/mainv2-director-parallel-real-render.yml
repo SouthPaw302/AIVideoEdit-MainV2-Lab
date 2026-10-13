@@ -373,7 +373,7 @@ jobs:
         run: |
           set -euo pipefail
           root="$RUNNER_TEMP/final"
-          gh release create "lab-real-film-${GITHUB_RUN_ID}" \
+          gh release create "prototype-ai-film-${GITHUB_RUN_ID}" \
             "$root/real_music_film.mp4" \
             "$root/render_receipt.json" \
             "$root/contact_sheet.jpg" \
@@ -386,5 +386,5 @@ jobs:
             --repo "$GITHUB_REPOSITORY" \
             --target "${{ needs.director-gate.outputs.engine_sha }}" \
             --prerelease \
-            --title "AIVideoEdit — Director-gated canonical production candidate" \
-            --notes "Immutable production branch candidate. Canonical main engine, Director/Harness/JEV/FX/ONNX gate, dynamic parallel shards and fan-in lineage passed. Human normal-speed visual approval is still required."
+            --title "AIVideoEdit — Experimental Qwen prototype, NOT canon" \
+            --notes "Experimental prototype/ai engine: Qwen inference sampled only the first authorized source clip before render. Parallel render technical proof only. NOT CANON, NOT FINAL, NOT A FULL VISUAL REVIEW. Human approval required."
