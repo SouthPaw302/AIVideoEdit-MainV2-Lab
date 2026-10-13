@@ -1,0 +1,21 @@
+{
+  "schema": "aivideoedit.project-state.v3",
+  "production_id": "la-luna-de-florida",
+  "branch": "song/la-luna-de-florida",
+  "stage": "INITIALIZED",
+  "director_brain_version": 4,
+  "source_ingest_complete": true,
+  "reference_analysis_complete": false,
+  "visual_approach_established": false,
+  "storyboard_locked": false,
+  "shot_packages_built": false,
+  "shot_proofs_accepted": false,
+  "fx_lock_verified": false,
+  "assembly_complete": false,
+  "final_qc_passed": false,
+  "archive_complete": false,
+  "human_visual_approval": false,
+  "production_complete": false,
+  "release_gate_status": "PENDING",
+  "local_candidate_render_exists": true
+}
