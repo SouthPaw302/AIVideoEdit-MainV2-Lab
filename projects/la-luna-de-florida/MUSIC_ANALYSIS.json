@@ -1,0 +1,76 @@
+{
+  "schema": "aivideoedit.music-analysis.v1",
+  "analysis_complete": false,
+  "source_audio": {
+    "name": "La luna de Florida.wav",
+    "sha256": "1a4bffef36930b504423d2653faff4cc5bfd9a15d44bdcf1083b27fbb0db1c10",
+    "duration_seconds": 321.16,
+    "sample_rate_hz": 48000,
+    "channels": 2,
+    "drive_folder": "https://drive.google.com/drive/folders/1flQYE0YaY41hCoPGbZK9BmeejE_lyYtQ"
+  },
+  "lyrics": {
+    "status": "present",
+    "source": "current_user_message",
+    "text_file": "LYRICS.md",
+    "directing_use": "included"
+  },
+  "genre": {
+    "status": "inferred",
+    "label": "Spanish fandango, Appalachian folk and boom-bap crossover",
+    "confidence": 0.75,
+    "source": "user_supplied_lyrics_and_instrumentation",
+    "user_declaration": null
+  },
+  "rhythm": {
+    "tempo_status": "estimated_unverified",
+    "tempo_bpm_estimate": 184.57,
+    "possible_half_time_bpm": 92.29,
+    "measurement": "librosa onset estimate from 30s-75s snippet; not a beat-grid lock",
+    "pulse_description": "Driving guitar/fandango accents and hip-hop rap rhythmic sections",
+    "meter_or_groove": "Likely 4/4, not independently validated"
+  },
+  "sections": [
+    {
+      "id": "intro",
+      "start_seconds": 0,
+      "end_seconds": 29,
+      "energy": "low to rising",
+      "musical_cues": [
+        "Measured 10-second RMS ~0.057-0.076 in first 30s"
+      ],
+      "narrative_function": "Introduce moonlit harbor and taberna"
+    },
+    {
+      "id": "party",
+      "start_seconds": 29,
+      "end_seconds": 122,
+      "energy": "medium/high",
+      "musical_cues": [
+        "Measured RMS broadly ~0.11-0.16"
+      ],
+      "narrative_function": "Develop couple, tavern music and dancing"
+    },
+    {
+      "id": "rap-and-mid-film",
+      "start_seconds": 122,
+      "end_seconds": 230,
+      "energy": "mixed/peaks",
+      "musical_cues": [
+        "Measured 10-second RMS varies ~0.10-0.17"
+      ],
+      "narrative_function": "Dockside rap, mountain-to-coast identity and dance returns"
+    },
+    {
+      "id": "build-and-finale",
+      "start_seconds": 230,
+      "end_seconds": 321.16,
+      "energy": "alternating to strong finish",
+      "musical_cues": [
+        "Measured 10-second RMS 0.173 at 260s; rises to ~0.19-0.20 at 300-310s"
+      ],
+      "narrative_function": "Emotional bridge, final chorus, dawn"
+    }
+  ],
+  "section_timing_certainty": "approximate energy windows only; verse/chorus line timing not transcribed from sound"
+}
