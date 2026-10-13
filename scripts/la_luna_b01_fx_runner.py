@@ -15,7 +15,7 @@ from pathlib import Path
 import cv2
 import numpy as np
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[1]
 PROJECT = ROOT / "projects/la-luna-de-florida"
 RUNTIME = ROOT / ".aivideoedit/os/general/reusable/fx_v2/runtime.py"
 FPS = 24
