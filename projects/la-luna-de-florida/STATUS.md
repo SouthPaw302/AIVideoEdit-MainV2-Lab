@@ -17,3 +17,10 @@ Confirmed: 10 untouched source image backups, 20 independent A/B FX variant stil
 ## Batch B03/B04/B05 night extras backup
 
 29 recoverable full-frame imagegen files backed up to [Google Drive](https://drive.google.com/drive/folders/1AlqDTpBA0NLgRdWTF6o0et0_WsnQnfaZ), with separate archives and SHA-256 index. B03-S10 source original was overwritten by filename collision and is **not** falsely counted. B05 night extra candidates do not fulfill the locked sunrise act. Attempts to produce the next ten individual B05 finale frames returned *contact-sheet grids*, which were REJECTED as finished stills. The required 10 new full-size finale originals are therefore **NOT GENERATED**; no FX or new render promotion is authorized on their behalf.
+
+## B01 REAL FX runner — completed / Director QC pending
+
+- [Real render run 38458305189](https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38458305189), all five parallel 2-shot jobs successful. Exact source SHA `2cf2cdddd4728e3a1f93ba1b748240baa2639d85`.
+- [Individual Drive media](https://drive.google.com/drive/folders/14Mm6Y6FQ5ka8hk_0MMnSt24y-xWfxnXp): 10 unchanged source copies, 20 source-derived A/B FX stills, 20 actual 2.5s H.264 loops (24fps, 640×360), five hashed runner receipts, one backup audit. All 56 items remotely listed at matching sizes. All five ZIP artifacts passed CRC plus reported source/output file SHA-256 verification locally before backup.
+- Canonical effects: `FX2-MOTION-003` water flow or `FX2-LIGHT-023` practical light. These are **small experimental motion proofs**, not full-resolution theatrical shots or real animated characters, not FX-locked and not accepted as film canon.
+- The Director's pre-production approval/protection plan is `B01_DIRECTOR_PREFLIGHT.json`; Director's final visual acceptance, protected-ROI review, source-to-output movie check and any human release approval are still PENDING. Preserve all older B01 files and workprints.
