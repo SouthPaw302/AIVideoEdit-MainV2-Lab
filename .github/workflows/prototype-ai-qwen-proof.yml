@@ -1,0 +1,138 @@
+name: Prototype AI — Real Qwen Director Proof
+
+on:
+  workflow_dispatch:
+    inputs:
+      clip_url:
+        description: "HTTPS GitHub release URL of a real 10-30s candidate video"
+        required: true
+        type: string
+      clip_sha256:
+        description: "SHA256 of exact source candidate video"
+        required: true
+        type: string
+      direction:
+        description: "User-authorized scene direction"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  prove-real-specialist:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 70
+    steps:
+      - name: Checkout only the prototype engine
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: prototype/ai
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.11'
+      - name: Test fake-PASS rejection without loading any AI weights
+        run: python -m unittest discover -s tests -p test_prototype_ai_specialist.py -v
+
+      - name: Download and hash-check authorized real candidate
+        shell: bash
+        env:
+          CLIP_URL: ${{ inputs.clip_url }}
+          CLIP_SHA256: ${{ inputs.clip_sha256 }}
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import os,re,urllib.parse
+          url=urllib.parse.urlsplit(os.environ["CLIP_URL"])
+          assert url.scheme=="https" and url.hostname=="github.com", "only GitHub HTTPS release media accepted"
+          assert url.path.startswith("/SouthPaw302/") and "/releases/download/" in url.path, "candidate must be SouthPaw302 release media"
+          assert re.fullmatch(r"[0-9a-fA-F]{64}",os.environ["CLIP_SHA256"]), "source SHA256 mandatory"
+          PY
+          mkdir -p "$RUNNER_TEMP/prototype-ai"
+          curl --fail --location --retry 4 --retry-delay 3 "$CLIP_URL" -o "$RUNNER_TEMP/prototype-ai/candidate.mp4"
+          printf '%s  %s\n' "$CLIP_SHA256" "$RUNNER_TEMP/prototype-ai/candidate.mp4" | sha256sum -c -
+
+      - name: Build pinned llama.cpp multimodal CPU CLI
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update -y
+          sudo apt-get install -y cmake ninja-build ffmpeg
+          git clone --depth 1 --branch b6907 https://github.com/ggml-org/llama.cpp.git "$RUNNER_TEMP/llama"
+          git -C "$RUNNER_TEMP/llama" rev-parse HEAD > "$RUNNER_TEMP/prototype-ai/LLAMA_COMMIT.txt"
+          cmake -S "$RUNNER_TEMP/llama" -B "$RUNNER_TEMP/llama/build" -G Ninja -DCMAKE_BUILD_TYPE=Release -DGGML_CUDA=OFF
+          cmake --build "$RUNNER_TEMP/llama/build" -j2 --target llama-mtmd-cli
+          echo "AIVE_PROTOTYPE_CLI=$RUNNER_TEMP/llama/build/bin/llama-mtmd-cli" >> "$GITHUB_ENV"
+
+      - name: Provision revision-pinned Qwen3-VL 2B and vision projector
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install "huggingface_hub>=0.35,<2"
+          python - <<'PY'
+          import hashlib, os, pathlib
+          from huggingface_hub import hf_hub_download
+          repo="Qwen/Qwen3-VL-2B-Instruct-GGUF"
+          revision="2244eb1748531fca9b5a02d1f72b6fde1a53cfae"
+          root=pathlib.Path(os.environ["RUNNER_TEMP"]) / "prototype-ai"
+          files=[
+              ("AIVE_PROTOTYPE_MODEL","Qwen3VL-2B-Instruct-Q4_K_M.gguf"),
+              ("AIVE_PROTOTYPE_MMPROJ","mmproj-Qwen3VL-2B-Instruct-Q8_0.gguf")
+          ]
+          with open(os.environ["GITHUB_ENV"], "a") as env:
+              for key,filename in files:
+                  path=hf_hub_download(repo,filename,revision=revision,local_dir=str(root/"model"))
+                  h=hashlib.file_digest(open(path,"rb"),"sha256").hexdigest()
+                  print(filename, pathlib.Path(path).stat().st_size, h)
+                  env.write(key+"="+str(path)+"\n")
+          (root/"MODEL_REVISION.txt").write_text(repo+"@"+revision+"\n")
+          PY
+
+      - name: Execute real multimodal observation with sample-frame evidence
+        shell: bash
+        env:
+          DIRECTION: ${{ inputs.direction }}
+        run: |
+          set -euo pipefail
+          python scripts/prototype_ai_specialist.py \
+            --clip "$RUNNER_TEMP/prototype-ai/candidate.mp4" \
+            --model "$AIVE_PROTOTYPE_MODEL" \
+            --projector "$AIVE_PROTOTYPE_MMPROJ" \
+            --binary "$AIVE_PROTOTYPE_CLI" \
+            --direction "$DIRECTION" \
+            --out "$RUNNER_TEMP/prototype-ai/inference"
+
+      - name: Independent structural evidence and JEV technical check
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json,os,pathlib
+          from general.reusable.tools.jev_decision import decide
+          p=pathlib.Path(os.environ["RUNNER_TEMP"])/"prototype-ai/inference/PROTOTYPE_AI_RECEIPT.json"
+          receipt=json.loads(p.read_text())
+          checks={
+            "real_external_process_exited_zero":receipt.get("inference_exit_code")==0,
+            "real_weight_and_vision_hashes":len(receipt.get("model_sha256",""))==64 and len(receipt.get("projector_sha256",""))==64,
+            "more_than_one_actual_sampled_frame":len(receipt.get("frames",[]))>=3,
+            "external_output_saved":len(receipt.get("raw_output_sha256",""))==64,
+            "not_self_approved":receipt.get("human_visual_approval") is False and receipt.get("director_observation",{}).get("needs_human_review") is True
+          }
+          d=decide({"gate":"PASS","checks":checks})
+          assert d["decision"]=="PASS", d
+          out={"status":"TECHNICAL_MODEL_EVIDENCE_ONLY","jev":d,"human_visual_approval":False,"production_complete":False}
+          (p.parent/"JEV_TECHNICAL_REVIEW.json").write_text(json.dumps(out,indent=2)+"\n")
+          print(json.dumps(out,indent=2))
+          PY
+
+      - name: Retain actual receipts and failure traces
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: prototype-ai-director-${{ github.run_id }}
+          path: |
+            ${{ runner.temp }}/prototype-ai/inference/
+            ${{ runner.temp }}/prototype-ai/MODEL_REVISION.txt
+            ${{ runner.temp }}/prototype-ai/LLAMA_COMMIT.txt
+          retention-days: 14
