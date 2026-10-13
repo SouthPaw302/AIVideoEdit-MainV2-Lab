@@ -14,9 +14,13 @@
 
 - Authoritative new experiment index: `B01_FX_DUPLICATES_INDEX.json` (10 original copies + A/B stills + A/B 2.5s loops; no human articulated motion).
 - All individual hashes: https://drive.google.com/file/d/1UL6apXpmJoIdklVyX9QoDY1E7PV5V6ZK/view; QC: https://drive.google.com/file/d/1eYxL_4ABJltglAL2I849iESWVCOrga5T/view; preview: https://drive.google.com/file/d/1nLo_pUa6aSabWQaWik5O4j3c5C4BGJ7N/view.
-- Gemini prompts: `GEMINI_2_CLIP_PLAN.md`; starts: https://drive.google.com/file/d/1Q5jXOmWkSxqwK01x3AmAE-S4F0njkraX/view and https://drive.google.com/file/d/1j4APw7JXepGQzU0LL0wr5JjkOIO-R0T_/view. **No Gemini outputs exist yet.** Wait for actual video uploads, hash/inspect before promotion.
+- Gemini prompts: `GEMINI_2_CLIP_PLAN.md`; starts: https://drive.google.com/file/d/1Q5jXOmWkSxqwK01x3AmAE-S4F0njkraX/view and https://drive.google.com/file/d/1j4APw7JXepGQzU0LL0wr5JjkOIO-R0T_/view. **One actual 10s Gemini upload is now archived**: https://drive.google.com/file/d/1xC18cxLZrPgdXyUn9o8jt8hEAN0WP3p9/view (SHA-256 e9335abaad0d9ee7d62131c66eab1d6626c53e3b035b4bb1b9a0362477a102c2), with two separate silent extracted candidates in the same Gemini Drive folder. Do not claim two independent Gemini-generated videos or artistic approval.
 - Source originals remain preserved; all new FX/AI media remain experimental. No main/canon pipeline promotion, no deletion, no false completed-film claim.
 
 ## New verified backup / continuation
 
 Backup folder: https://drive.google.com/drive/folders/1AlqDTpBA0NLgRdWTF6o0et0_WsnQnfaZ. B03=9/10 recoverable (B03-S10 collision), B04=10/10, B05_NIGHT_EXTRA=10/10, all indexed. Do not overwrite them or count contact-sheet crop material as originals. Next standalone full-resolution still generation target is B05-S01..S10 (bridge, breakdown, daybreak and outro), then individual FX duplicates after original backup and visual QC.
+
+## Sandbox backup and clean handoff (2026-10-13)
+
+Drive audit: https://drive.google.com/file/d/1lro4XA-PSjuGxbFsc_JJDOcxEs9Vd58Z/view. The 79 current sandbox project entries were assessed: 16 direct Drive objects with matching sizes, 59 source/duplicate entries backed by SHA-matched members of CRC-tested ZIPs on Drive, and 4 noncanonical storyboard/playback images explicitly excluded from media retention as previously ordered. Remote SHA verification was **not** performed; source local hashes and exact Drive file IDs are in the audit. Original canon locked unchanged. Before local deletion, all recoverable media was backed up. The sandbox is **not a persistent source of truth**; reconstruct exclusively from Drive and the repo, and never assume local paths from historic chat handoffs still exist.
