@@ -23,12 +23,15 @@
     "user_declaration": null
   },
   "rhythm": {
-    "tempo_status": "estimated_unverified",
-    "tempo_bpm_estimate": 184.57,
-    "possible_half_time_bpm": 92.29,
-    "measurement": "librosa onset estimate from 30s-75s snippet; not a beat-grid lock",
+    "tempo_status": "ONNX_FULL_SONG_MEASURED_DIRECTOR_ALIGNMENT_PENDING",
+    "tempo_bpm_estimate": 93.75,
+    "measurement": "Pinned Beat This! ONNX CPU full-song inference run 38680169728. Source WAV hash verified; feature storage fp16, inference fp32.",
     "pulse_description": "Driving guitar/fandango accents and hip-hop rap rhythmic sections",
-    "meter_or_groove": "Likely 4/4, not independently validated"
+    "meter_or_groove": "Likely 4/4, not independently validated",
+    "possible_double_time_bpm": 187.5,
+    "downbeat_count": 140,
+    "beat_count": 510,
+    "beat_grid_status": "measured_music_evidence_not_script_sync_locked"
   },
   "sections": [
     {
@@ -72,5 +75,31 @@
       "narrative_function": "Emotional bridge, final chorus, dawn"
     }
   ],
-  "section_timing_certainty": "approximate energy windows only; verse/chorus line timing not transcribed from sound"
+  "section_timing_certainty": "approximate energy windows only; verse/chorus line timing not transcribed from sound",
+  "onnx_song_analysis": {
+    "status": "PASS",
+    "engine": "beat_this_onnx",
+    "model_id": "music-beat-onnx-v1",
+    "model_source_git_blob_sha1": "e2363cec9872bacf8867945b71ddaed879089995",
+    "model_fallback_used": false,
+    "providers": [
+      "CPUExecutionProvider"
+    ],
+    "bpm": 93.75,
+    "beats": 510,
+    "downbeats": 140,
+    "duration_seconds": 321.16,
+    "audio_source_sha256": "1a4bffef36930b504423d2653faff4cc5bfd9a15d44bdcf1083b27fbb0db1c10",
+    "run_id": 38680169728,
+    "run_url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38680169728",
+    "actions_artifact_id": 11947689630,
+    "full_json_sha256": "cc6ef0c817624560832c8a67994cbd664a5b1567b6ba41f38911f1f2a83e062c",
+    "full_json_drive_archive": "https://drive.google.com/file/d/1m38BKFd-1BEZZAnPf4LQdjka6G9B4lZ6/view",
+    "source_feature_quantization_note": "fp16 mel storage upcast to fp32 at ONNX inference; not bit-identical to direct fp32 mel worker",
+    "separate_control_bus": "decoded PCM energy/onset evidence, not inferred by ONNX",
+    "inference_scope": "beat/downbeat detection and tempo, not lyrics transcription or script generation",
+    "canonical_storyboard_unchanged": true,
+    "original_audio_unchanged": true
+  },
+  "analysis_completion_note": "Music beat/downbeat scan passed; precise per-line lyric alignment, section/texture annotations and Director script timing are not yet independently verified. The 50-shot canon storyboard remains locked."
 }
