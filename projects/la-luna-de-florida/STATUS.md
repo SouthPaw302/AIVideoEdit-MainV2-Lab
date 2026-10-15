@@ -1,5 +1,12 @@
 # La Luna de Florida — Status
 
+## B03 native Lab-main FXRunner — PASSED on exact originals (2026-10-15)
+
+[GitHub Actions #38700642135](https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38700642135) **completed/success**. Using the user-enabled public reader folder and no Drive credential copies, runner downloaded the unchanged original B03 ZIP with exact SHA256 `da7b54eef5373b2d6b4db69eac0c497e4e9443facbc8fd78db29baecbc565252`, booted **current Lab-main FXRuntime**, individually verified the nine original still hashes, and rendered 18 A/B loops (2.5s, 60 frames, 960×540, 24fps). Actual encoded video decode, original pixel protection (max outside-mask delta zero), material motion and loop-seam QC passed. Verified runner artifact ZIP CRC PASS; [download from La Luna Drive](https://drive.google.com/file/d/1284TQUxZiLqYEsXHgNo26mITEQa9Fl5L/view) SHA256 `7d2057f68f796efa1008d612f2ff37f90c980575d891d57fd4b6de8c3b76de9b` (GitHub artifact ID `11956611194`).
+
+**Distinct gates:** RC2 remains the sandbox-produced **10-shot Director moving-scene candidate**, while the later runner certifies **only nine source-originals' ambient Light FX**. It does not certify articulated action in the rap/boot shots or restore B03-S10's lost original. The 40-second RC2 edit uses provisional song timing. No B04/B05 work, Master FX lock, or film release is claimed.
+
+
 ## Current B03 production — RC2 Director living-scene proof (2026-10-15)
 
 **[Watch B03 RC2 — 40-second moving Director review](https://drive.google.com/file/d/1s89gO338Tb0dFx37Vco25o0cSnXuE0Qo/view)** · [10 four-second scene proof clips, runnable scripts, QA receipts](https://drive.google.com/file/d/1efo2t2xX6TKclhZ1I1hBWxhX1-z-62op/view) · [20 A/B Light FX loops](https://drive.google.com/file/d/13RGjh1O9tloPirr4D38-ydUtyeEtjXJc/view) · [Director visual contact](https://drive.google.com/file/d/1v5Pl4gx7n4S_abvvu8exsseheSgcKhES/view).
