@@ -1,0 +1,2450 @@
+{
+  "schema": "aivideoedit.la-luna-master-director-edit-plan.candidate.v1",
+  "production_id": "la-luna-de-florida",
+  "authoritative_write_branch": "song/la-luna-de-florida",
+  "status": "MASTER_DIRECTOR_PASS_01_TIMELINE_CANDIDATE__LYRIC_CUES_UNVERIFIED__NOT_RENDER_READY",
+  "locked": false,
+  "source_branch_parent_sha": "5621c26e5d1870607fcfa9bcafc3c462d352ded0",
+  "current_main_os_sha": "900e3e5749ed6fa13ad91524975a9e64661e6649",
+  "music": {
+    "sha256": "1a4bffef36930b504423d2653faff4cc5bfd9a15d44bdcf1083b27fbb0db1c10",
+    "duration_seconds": 321.16,
+    "sample_rate_hz": 48000,
+    "original_WAV_preserve_and_mux_once": true
+  },
+  "onnx": {
+    "full_json_sha256": "cc6ef0c817624560832c8a67994cbd664a5b1567b6ba41f38911f1f2a83e062c",
+    "actual_pinned_model": true,
+    "beat_count": 510,
+    "downbeat_count": 140,
+    "lyric_alignment": false
+  },
+  "target": {
+    "fps": 24,
+    "width": 960,
+    "height": 540,
+    "frames": 7708,
+    "picture_seconds": 321.1666666666667,
+    "pcm_picture_tolerance_seconds": 0.006666666666660603
+  },
+  "prior_50_proofs_hash_verified": true,
+  "prior_50_proofs_unchanged": true,
+  "master_extension_artistic_coverage_complete": false,
+  "shot_semantic_lyric_timing_complete": false,
+  "master_fx_accepted": false,
+  "user_final_release_approved": false,
+  "mandatory_master_fx_rule": "All five batches already have their own authored FX loops. Cinematic Master Director FX pass is a distinct supervised scene-by-scene film treatment integrating existing A/B FX, zero-drift protected layers, meaningful internal motion, depth, intentional camera/edit/grade and independently verified music/lyric cues. Never render full film as four-second proofs blindly repeated.",
+  "next_gate": "Independent full-WAV lyric in/out audit + nonrepeating long-shot coverage + director-approved multi-act Master FX representative proofs + canonical SHA media staging; only then full parallel render.",
+  "shots": [
+    {
+      "shot_id": "B01-S01",
+      "global_index": 1,
+      "storyboard_caption": "Miami harbor at night",
+      "source_clip_sha256": "e0156c760bdf9447ab607e19721304d4b9ca9f89c7c0bd648ba12b5b05e17a34",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B01-S01_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "harbor",
+      "time_of_day": "Miami_night",
+      "time_start": 0,
+      "time_end": 11.666666666666666,
+      "start_frame": 0,
+      "end_frame_exclusive": 280,
+      "duration_frames": 280,
+      "duration_seconds": 11.666666666666666,
+      "lyric_or_instrumental_cue": "Miami harbor at night — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-MOTION-003",
+          "FX2-SPATIAL-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "FX_LAYER",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 184
+    },
+    {
+      "shot_id": "B01-S02",
+      "global_index": 2,
+      "storyboard_caption": "The tavern by the dock",
+      "source_clip_sha256": "23591d4e7e34ca94c0a89991ba9e6a9694df240506b25ea7a861ee2ad685f097",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B01-S02_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "harbor",
+      "time_of_day": "Miami_night",
+      "time_start": 11.666666666666666,
+      "time_end": 18.166666666666668,
+      "start_frame": 280,
+      "end_frame_exclusive": 436,
+      "duration_frames": 156,
+      "duration_seconds": 6.5,
+      "lyric_or_instrumental_cue": "The tavern by the dock — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-MOTION-003",
+          "FX2-SPATIAL-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "FX_LAYER",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 60
+    },
+    {
+      "shot_id": "B01-S03",
+      "global_index": 3,
+      "storyboard_caption": "Our lead",
+      "source_clip_sha256": "21a24d452a967141dfbfc6449130c4f8492a751b609c92338cf29347097b826b",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B01-S03_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "couple",
+      "time_of_day": "Miami_night",
+      "time_start": 18.166666666666668,
+      "time_end": 22.833333333333332,
+      "start_frame": 436,
+      "end_frame_exclusive": 548,
+      "duration_frames": 112,
+      "duration_seconds": 4.666666666666667,
+      "lyric_or_instrumental_cue": "Our lead — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "CUTAWAY_WITH_EXISTING_SOURCE",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 16
+    },
+    {
+      "shot_id": "B01-S04",
+      "global_index": 4,
+      "storyboard_caption": "First meeting",
+      "source_clip_sha256": "7ffc6038d4e66c3d9f6139951c488ebd02f12f0cac23b14f72f5b84ad40120cb",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B01-S04_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "couple",
+      "time_of_day": "Miami_night",
+      "time_start": 22.833333333333332,
+      "time_end": 28.166666666666668,
+      "start_frame": 548,
+      "end_frame_exclusive": 676,
+      "duration_frames": 128,
+      "duration_seconds": 5.333333333333333,
+      "lyric_or_instrumental_cue": "First meeting — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "CUTAWAY_WITH_EXISTING_SOURCE",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 32
+    },
+    {
+      "shot_id": "B01-S05",
+      "global_index": 5,
+      "storyboard_caption": "Music begins",
+      "source_clip_sha256": "6c69ff266fc16e5d207e4e3cbe693239da76de72e8d2b7e51d6745a909697b0e",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B01-S05_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "musician",
+      "time_of_day": "Miami_night",
+      "time_start": 28.166666666666668,
+      "time_end": 32.166666666666664,
+      "start_frame": 676,
+      "end_frame_exclusive": 772,
+      "duration_frames": 96,
+      "duration_seconds": 4,
+      "lyric_or_instrumental_cue": "Music begins — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use exact 96-frame source once, no time-stretch",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "preserve_actual_actor_motion_and_source_camera; no fabricated articulation",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "CROSS_ACT_GEMINI_PERFORMANCE_REUSE_REVIEW"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "KEEP",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 0
+    },
+    {
+      "shot_id": "B01-S06",
+      "global_index": 6,
+      "storyboard_caption": "The violin joins",
+      "source_clip_sha256": "bb25bba54c3f43bcc9db54b8f41c64797ee74a20a1128bd5f689ca0c2ec63bad",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B01-S06_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "musician",
+      "time_of_day": "Miami_night",
+      "time_start": 32.166666666666664,
+      "time_end": 36.166666666666664,
+      "start_frame": 772,
+      "end_frame_exclusive": 868,
+      "duration_frames": 96,
+      "duration_seconds": 4,
+      "lyric_or_instrumental_cue": "The violin joins — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use exact 96-frame source once, no time-stretch",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "preserve_actual_actor_motion_and_source_camera; no fabricated articulation",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "CROSS_ACT_GEMINI_PERFORMANCE_REUSE_REVIEW"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "KEEP",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 0
+    },
+    {
+      "shot_id": "B01-S07",
+      "global_index": 7,
+      "storyboard_caption": "First dance",
+      "source_clip_sha256": "fd13c62448e45e783db47802534bfa292bc93eb820243d908cb64104d0c254db",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B01-S07_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "dance",
+      "time_of_day": "Miami_night",
+      "time_start": 36.166666666666664,
+      "time_end": 40.833333333333336,
+      "start_frame": 868,
+      "end_frame_exclusive": 980,
+      "duration_frames": 112,
+      "duration_seconds": 4.666666666666667,
+      "lyric_or_instrumental_cue": "First dance — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "preserve_actual_actor_motion_and_source_camera; no fabricated articulation",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "CROSS_ACT_GEMINI_PERFORMANCE_REUSE_REVIEW"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 16
+    },
+    {
+      "shot_id": "B01-S08",
+      "global_index": 8,
+      "storyboard_caption": "A night of strangers",
+      "source_clip_sha256": "7b8d5489c2470ebcf4a1a45d165b48a6614b7bf6f6b5c4cd938a9b5f37b26f0f",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B01-S08_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "crowd",
+      "time_of_day": "Miami_night",
+      "time_start": 40.833333333333336,
+      "time_end": 44.75,
+      "start_frame": 980,
+      "end_frame_exclusive": 1074,
+      "duration_frames": 94,
+      "duration_seconds": 3.9166666666666665,
+      "lyric_or_instrumental_cue": "A night of strangers — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use exact 96-frame source once, no time-stretch",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "KEEP",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 0
+    },
+    {
+      "shot_id": "B01-S09",
+      "global_index": 9,
+      "storyboard_caption": "The city watches",
+      "source_clip_sha256": "2001e884435f9c8159ac912cf004a0da814e285892f0eaa6d6d024b371a6ee2f",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B01-S09_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "harbor",
+      "time_of_day": "Miami_night",
+      "time_start": 44.75,
+      "time_end": 48.75,
+      "start_frame": 1074,
+      "end_frame_exclusive": 1170,
+      "duration_frames": 96,
+      "duration_seconds": 4,
+      "lyric_or_instrumental_cue": "The city watches — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use exact 96-frame source once, no time-stretch",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-MOTION-003",
+          "FX2-SPATIAL-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "KEEP",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 0
+    },
+    {
+      "shot_id": "B01-S10",
+      "global_index": 10,
+      "storyboard_caption": "This is only the beginning",
+      "source_clip_sha256": "efed5954a5b2a3d3524f9ab034fb88e6a4651e40fa3f71a5b6b4aa88451ae130",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B01-S10_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "harbor",
+      "time_of_day": "Miami_night",
+      "time_start": 48.75,
+      "time_end": 53.333333333333336,
+      "start_frame": 1170,
+      "end_frame_exclusive": 1280,
+      "duration_frames": 110,
+      "duration_seconds": 4.583333333333333,
+      "lyric_or_instrumental_cue": "This is only the beginning — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-MOTION-003",
+          "FX2-SPATIAL-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "FX_LAYER",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 14
+    },
+    {
+      "shot_id": "B02-S01",
+      "global_index": 11,
+      "storyboard_caption": "Entrance to the tavern",
+      "source_clip_sha256": "488e962cb4525729485ebfb89a83128542d76a1c94c33ac9ac2a7d2f8adc0f6a",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B02-S01_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "harbor",
+      "time_of_day": "Miami_night",
+      "time_start": 53.333333333333336,
+      "time_end": 59.583333333333336,
+      "start_frame": 1280,
+      "end_frame_exclusive": 1430,
+      "duration_frames": 150,
+      "duration_seconds": 6.25,
+      "lyric_or_instrumental_cue": "Entrance to the tavern — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-MOTION-003",
+          "FX2-SPATIAL-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "FX_LAYER",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 54
+    },
+    {
+      "shot_id": "B02-S02",
+      "global_index": 12,
+      "storyboard_caption": "Stepping inside",
+      "source_clip_sha256": "e1b886c7091ce8efb2842d5b3e3f737535ca2e59cef2acc27a6ec321936d6d72",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B02-S02_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "musician",
+      "time_of_day": "Miami_night",
+      "time_start": 59.583333333333336,
+      "time_end": 64.91666666666667,
+      "start_frame": 1430,
+      "end_frame_exclusive": 1558,
+      "duration_frames": 128,
+      "duration_seconds": 5.333333333333333,
+      "lyric_or_instrumental_cue": "Stepping inside — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "preserve_actual_actor_motion_and_source_camera; no fabricated articulation",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "CROSS_ACT_GEMINI_PERFORMANCE_REUSE_REVIEW"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 32
+    },
+    {
+      "shot_id": "B02-S03",
+      "global_index": 13,
+      "storyboard_caption": "The song starts",
+      "source_clip_sha256": "0b572bf526193dd90f0849965282bd8c9f13361ede62be6b5bb6165bb1cc3903",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B02-S03_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "musician",
+      "time_of_day": "Miami_night",
+      "time_start": 64.91666666666667,
+      "time_end": 72.58333333333333,
+      "start_frame": 1558,
+      "end_frame_exclusive": 1742,
+      "duration_frames": 184,
+      "duration_seconds": 7.666666666666667,
+      "lyric_or_instrumental_cue": "The song starts — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "preserve_actual_actor_motion_and_source_camera; no fabricated articulation",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "CROSS_ACT_GEMINI_PERFORMANCE_REUSE_REVIEW"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 88
+    },
+    {
+      "shot_id": "B02-S04",
+      "global_index": 14,
+      "storyboard_caption": "Wine and laughter",
+      "source_clip_sha256": "cd7a12e264e69b77c4797c195434b3a721b4ae6190b6dbfc17d9170bd30c3b20",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B02-S04_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "community",
+      "time_of_day": "Miami_night",
+      "time_start": 72.58333333333333,
+      "time_end": 79.25,
+      "start_frame": 1742,
+      "end_frame_exclusive": 1902,
+      "duration_frames": 160,
+      "duration_seconds": 6.666666666666667,
+      "lyric_or_instrumental_cue": "Wine and laughter — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-MOTION-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "CUTAWAY_WITH_EXISTING_SOURCE",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 64
+    },
+    {
+      "shot_id": "B02-S05",
+      "global_index": 15,
+      "storyboard_caption": "Closer now",
+      "source_clip_sha256": "0ea4e3219e801748695011ee4757555f3a3f4961caea734572de000d38004014",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B02-S05_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "couple",
+      "time_of_day": "Miami_night",
+      "time_start": 79.25,
+      "time_end": 85.91666666666667,
+      "start_frame": 1902,
+      "end_frame_exclusive": 2062,
+      "duration_frames": 160,
+      "duration_seconds": 6.666666666666667,
+      "lyric_or_instrumental_cue": "Closer now — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "CUTAWAY_WITH_EXISTING_SOURCE",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 64
+    },
+    {
+      "shot_id": "B02-S06",
+      "global_index": 16,
+      "storyboard_caption": "The room alive",
+      "source_clip_sha256": "a3ac4e19bbb5d8c57cb2b1300f75ce9fecd60d3bb897df3ed50eef6e698b4124",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B02-S06_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "dance",
+      "time_of_day": "Miami_night",
+      "time_start": 85.91666666666667,
+      "time_end": 94.25,
+      "start_frame": 2062,
+      "end_frame_exclusive": 2262,
+      "duration_frames": 200,
+      "duration_seconds": 8.333333333333334,
+      "lyric_or_instrumental_cue": "The room alive — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "preserve_actual_actor_motion_and_source_camera; no fabricated articulation",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "CROSS_ACT_GEMINI_PERFORMANCE_REUSE_REVIEW"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 104
+    },
+    {
+      "shot_id": "B02-S07",
+      "global_index": 17,
+      "storyboard_caption": "Castanuelas and strings",
+      "source_clip_sha256": "573c351bd847cce03731472804899d819d292d5dd337b4789544b8efadba3352",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B02-S07_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "musician",
+      "time_of_day": "Miami_night",
+      "time_start": 94.25,
+      "time_end": 100.91666666666667,
+      "start_frame": 2262,
+      "end_frame_exclusive": 2422,
+      "duration_frames": 160,
+      "duration_seconds": 6.666666666666667,
+      "lyric_or_instrumental_cue": "Castanuelas and strings — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "preserve_actual_actor_motion_and_source_camera; no fabricated articulation",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "CROSS_ACT_GEMINI_PERFORMANCE_REUSE_REVIEW"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 64
+    },
+    {
+      "shot_id": "B02-S08",
+      "global_index": 18,
+      "storyboard_caption": "Conversations & secrets",
+      "source_clip_sha256": "93a3e8213802a992c2e5d9603a3c4d6be000e6fbaf493548e5c7b8fa29a7fb82",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B02-S08_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "community",
+      "time_of_day": "Miami_night",
+      "time_start": 100.91666666666667,
+      "time_end": 107.16666666666667,
+      "start_frame": 2422,
+      "end_frame_exclusive": 2572,
+      "duration_frames": 150,
+      "duration_seconds": 6.25,
+      "lyric_or_instrumental_cue": "Conversations & secrets — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-MOTION-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "CUTAWAY_WITH_EXISTING_SOURCE",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 54
+    },
+    {
+      "shot_id": "B02-S09",
+      "global_index": 19,
+      "storyboard_caption": "The first chorus",
+      "source_clip_sha256": "63ff4bd77c3b5c4c866690d8c4b332e2f9b1b92d262284dc5330fcdfa86b92d3",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B02-S09_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "dance",
+      "time_of_day": "Miami_night",
+      "time_start": 107.16666666666667,
+      "time_end": 117.66666666666667,
+      "start_frame": 2572,
+      "end_frame_exclusive": 2824,
+      "duration_frames": 252,
+      "duration_seconds": 10.5,
+      "lyric_or_instrumental_cue": "The first chorus — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "preserve_actual_actor_motion_and_source_camera; no fabricated articulation",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "CROSS_ACT_GEMINI_PERFORMANCE_REUSE_REVIEW"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 156
+    },
+    {
+      "shot_id": "B02-S10",
+      "global_index": 20,
+      "storyboard_caption": "Music spills into the night",
+      "source_clip_sha256": "2d46bfd5dfcda2a7974b211b7d3f277dba8148dda4b4eaf356df505811c88088",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B02-S10_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "harbor",
+      "time_of_day": "Miami_night",
+      "time_start": 117.66666666666667,
+      "time_end": 125.16666666666667,
+      "start_frame": 2824,
+      "end_frame_exclusive": 3004,
+      "duration_frames": 180,
+      "duration_seconds": 7.5,
+      "lyric_or_instrumental_cue": "Music spills into the night — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-MOTION-003",
+          "FX2-SPATIAL-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "FX_LAYER",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 84
+    },
+    {
+      "shot_id": "B03-S01",
+      "global_index": 21,
+      "storyboard_caption": "Old dock, new stories",
+      "source_clip_sha256": "d8021b930a58029f91c22accf5c1495c450d30712b8d8f7ed8a881322eed3a3c",
+      "source_archive": "La_Luna_B03_RC2_10_Moving_Shots_and_Repro_Scripts.zip",
+      "source_entry": "moving_shots/B03-S01_RC2_DIRECTOR_PROOF_4s.mp4",
+      "scene_type": "harbor",
+      "time_of_day": "Miami_night",
+      "time_start": 125.16666666666667,
+      "time_end": 132.25,
+      "start_frame": 3004,
+      "end_frame_exclusive": 3174,
+      "duration_frames": 170,
+      "duration_seconds": 7.083333333333333,
+      "lyric_or_instrumental_cue": "Old dock, new stories — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B03_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-MOTION-003",
+          "FX2-SPATIAL-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "FX_LAYER",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 74
+    },
+    {
+      "shot_id": "B03-S02",
+      "global_index": 22,
+      "storyboard_caption": "Thinking of the road",
+      "source_clip_sha256": "dfe0aff86441e60b610712d444495daf4fa3903cd784297acea0f398dd8f11a6",
+      "source_archive": "La_Luna_B03_RC2_10_Moving_Shots_and_Repro_Scripts.zip",
+      "source_entry": "moving_shots/B03-S02_RC2_DIRECTOR_PROOF_4s.mp4",
+      "scene_type": "couple",
+      "time_of_day": "Miami_night",
+      "time_start": 132.25,
+      "time_end": 138.75,
+      "start_frame": 3174,
+      "end_frame_exclusive": 3330,
+      "duration_frames": 156,
+      "duration_seconds": 6.5,
+      "lyric_or_instrumental_cue": "Thinking of the road — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B03_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "CUTAWAY_WITH_EXISTING_SOURCE",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 60
+    },
+    {
+      "shot_id": "B03-S03",
+      "global_index": 23,
+      "storyboard_caption": "She waits",
+      "source_clip_sha256": "11314c2fc60e3bdbebf48d6da7f1c70078f7bde8800f1fdbbc98b7ad3d352b95",
+      "source_archive": "La_Luna_B03_RC2_10_Moving_Shots_and_Repro_Scripts.zip",
+      "source_entry": "moving_shots/B03-S03_RC2_DIRECTOR_PROOF_4s.mp4",
+      "scene_type": "couple",
+      "time_of_day": "Miami_night",
+      "time_start": 138.75,
+      "time_end": 145.25,
+      "start_frame": 3330,
+      "end_frame_exclusive": 3486,
+      "duration_frames": 156,
+      "duration_seconds": 6.5,
+      "lyric_or_instrumental_cue": "She waits — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B03_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "CUTAWAY_WITH_EXISTING_SOURCE",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 60
+    },
+    {
+      "shot_id": "B03-S04",
+      "global_index": 24,
+      "storyboard_caption": "Rap verse – the harbor",
+      "source_clip_sha256": "8b8a61ec1f8ba7d53d66f5b46a95e95cc23c6b32c01a9dfb533246daabe48f17",
+      "source_archive": "La_Luna_B03_RC2_10_Moving_Shots_and_Repro_Scripts.zip",
+      "source_entry": "moving_shots/B03-S04_RC2_DIRECTOR_PROOF_4s.mp4",
+      "scene_type": "rap_voiceover",
+      "time_of_day": "Miami_night",
+      "time_start": 145.25,
+      "time_end": 153.79166666666666,
+      "start_frame": 3486,
+      "end_frame_exclusive": 3691,
+      "duration_frames": 205,
+      "duration_seconds": 8.541666666666666,
+      "lyric_or_instrumental_cue": "Rap verse – the harbor — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B03_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "CUTAWAY_WITH_EXISTING_SOURCE",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 109
+    },
+    {
+      "shot_id": "B03-S05",
+      "global_index": 25,
+      "storyboard_caption": "Boots on the wood",
+      "source_clip_sha256": "ac1bd474302203b34fbc3ab819a7381ce4b9dfa3a47c8fa633f74037eabbd674",
+      "source_archive": "La_Luna_B03_RC2_10_Moving_Shots_and_Repro_Scripts.zip",
+      "source_entry": "moving_shots/B03-S05_RC2_DIRECTOR_PROOF_4s.mp4",
+      "scene_type": "boots_detail",
+      "time_of_day": "Miami_night",
+      "time_start": 153.79166666666666,
+      "time_end": 159.41666666666666,
+      "start_frame": 3691,
+      "end_frame_exclusive": 3826,
+      "duration_frames": 135,
+      "duration_seconds": 5.625,
+      "lyric_or_instrumental_cue": "Boots on the wood — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B03_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "FX_LAYER",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 39
+    },
+    {
+      "shot_id": "B03-S06",
+      "global_index": 26,
+      "storyboard_caption": "Hands and history",
+      "source_clip_sha256": "00a1fd7362fb760b3c12da329e7b8bc9357456ec232e4a3f83a61f9f533adc05",
+      "source_archive": "La_Luna_B03_RC2_10_Moving_Shots_and_Repro_Scripts.zip",
+      "source_entry": "moving_shots/B03-S06_RC2_DIRECTOR_PROOF_4s.mp4",
+      "scene_type": "musician",
+      "time_of_day": "Miami_night",
+      "time_start": 159.41666666666666,
+      "time_end": 167.33333333333334,
+      "start_frame": 3826,
+      "end_frame_exclusive": 4016,
+      "duration_frames": 190,
+      "duration_seconds": 7.916666666666667,
+      "lyric_or_instrumental_cue": "Hands and history — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B03_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "preserve_actual_actor_motion_and_source_camera; no fabricated articulation",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "CROSS_ACT_GEMINI_PERFORMANCE_REUSE_REVIEW"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 94
+    },
+    {
+      "shot_id": "B03-S07",
+      "global_index": 27,
+      "storyboard_caption": "Mountains to the sea",
+      "source_clip_sha256": "6b520d92c6bb7ac6f3dc0d03d07a4d65275d79cb2e60cf7bc81a75103a8d9a1e",
+      "source_archive": "La_Luna_B03_RC2_10_Moving_Shots_and_Repro_Scripts.zip",
+      "source_entry": "moving_shots/B03-S07_RC2_DIRECTOR_PROOF_4s.mp4",
+      "scene_type": "mountain_memory",
+      "time_of_day": "appalachian_memory_NOT_current_Miami_dawn",
+      "time_start": 167.33333333333334,
+      "time_end": 174.75,
+      "start_frame": 4016,
+      "end_frame_exclusive": 4194,
+      "duration_frames": 178,
+      "duration_seconds": 7.416666666666667,
+      "lyric_or_instrumental_cue": "Mountains to the sea — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B03_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-SPATIAL-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "FX_LAYER",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 82
+    },
+    {
+      "shot_id": "B03-S08",
+      "global_index": 28,
+      "storyboard_caption": "Travelers and workers",
+      "source_clip_sha256": "7ddf37380f7044a560e9060d513b22b48fe6256f981337fe1ffe0eb5c8cd4450",
+      "source_archive": "La_Luna_B03_RC2_10_Moving_Shots_and_Repro_Scripts.zip",
+      "source_entry": "moving_shots/B03-S08_RC2_DIRECTOR_PROOF_4s.mp4",
+      "scene_type": "community",
+      "time_of_day": "Miami_night",
+      "time_start": 174.75,
+      "time_end": 182.08333333333334,
+      "start_frame": 4194,
+      "end_frame_exclusive": 4370,
+      "duration_frames": 176,
+      "duration_seconds": 7.333333333333333,
+      "lyric_or_instrumental_cue": "Travelers and workers — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B03_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-MOTION-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "CUTAWAY_WITH_EXISTING_SOURCE",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 80
+    },
+    {
+      "shot_id": "B03-S09",
+      "global_index": 29,
+      "storyboard_caption": "Back together",
+      "source_clip_sha256": "3a8852a330a87de718c81e022e51ecd4061b01327970d09a6e4e702c8ed042bc",
+      "source_archive": "La_Luna_B03_RC2_10_Moving_Shots_and_Repro_Scripts.zip",
+      "source_entry": "moving_shots/B03-S09_RC2_DIRECTOR_PROOF_4s.mp4",
+      "scene_type": "dance",
+      "time_of_day": "Miami_night",
+      "time_start": 182.08333333333334,
+      "time_end": 189.75,
+      "start_frame": 4370,
+      "end_frame_exclusive": 4554,
+      "duration_frames": 184,
+      "duration_seconds": 7.666666666666667,
+      "lyric_or_instrumental_cue": "Back together — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B03_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "preserve_actual_actor_motion_and_source_camera; no fabricated articulation",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "CROSS_ACT_GEMINI_PERFORMANCE_REUSE_REVIEW"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 88
+    },
+    {
+      "shot_id": "B03-S10",
+      "global_index": 30,
+      "storyboard_caption": "One story, many roads",
+      "source_clip_sha256": "3034fbbc2c60892ac8c10e497ee9367002a713b3b8909cceb055b318a6038cfc",
+      "source_archive": "La_Luna_B03_RC2_10_Moving_Shots_and_Repro_Scripts.zip",
+      "source_entry": "moving_shots/B03-S10_RC2_DIRECTOR_PROOF_4s.mp4",
+      "scene_type": "memory_reunion_bridge",
+      "time_of_day": "appalachian_memory_NOT_current_Miami_dawn",
+      "time_start": 189.75,
+      "time_end": 197.08333333333334,
+      "start_frame": 4554,
+      "end_frame_exclusive": 4730,
+      "duration_frames": 176,
+      "duration_seconds": 7.333333333333333,
+      "lyric_or_instrumental_cue": "One story, many roads — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "FX_LAYER",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 80
+    },
+    {
+      "shot_id": "B04-S01",
+      "global_index": 31,
+      "storyboard_caption": "The violin from the corner",
+      "source_clip_sha256": "48a32ec51df49d61d14aa4be07447e159c58ce29dd10d66cc88286e8df6d0b9e",
+      "source_archive": "La_Luna_B04_RC2_10_Moving_Shots_and_Director_Receipts.zip",
+      "source_entry": "moving_shots/B04-S01_DIRECTOR_MOVING_PROOF_4s.mp4",
+      "scene_type": "musician",
+      "time_of_day": "Miami_night",
+      "time_start": 197.08333333333334,
+      "time_end": 204.41666666666666,
+      "start_frame": 4730,
+      "end_frame_exclusive": 4906,
+      "duration_frames": 176,
+      "duration_seconds": 7.333333333333333,
+      "lyric_or_instrumental_cue": "The violin from the corner — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B04_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "preserve_actual_actor_motion_and_source_camera; no fabricated articulation",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "CROSS_ACT_GEMINI_PERFORMANCE_REUSE_REVIEW"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 80
+    },
+    {
+      "shot_id": "B04-S02",
+      "global_index": 32,
+      "storyboard_caption": "Palmas and compás",
+      "source_clip_sha256": "a641890347b94982539475307d1998c89cf2cecf3cc95821656d27c1dacf3106",
+      "source_archive": "La_Luna_B04_RC2_10_Moving_Shots_and_Director_Receipts.zip",
+      "source_entry": "moving_shots/B04-S02_DIRECTOR_MOVING_PROOF_4s.mp4",
+      "scene_type": "palmas_tableau",
+      "time_of_day": "Miami_night",
+      "time_start": 204.41666666666666,
+      "time_end": 209.625,
+      "start_frame": 4906,
+      "end_frame_exclusive": 5031,
+      "duration_frames": 125,
+      "duration_seconds": 5.208333333333333,
+      "lyric_or_instrumental_cue": "Palmas and compás — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B04_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "FX_LAYER",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 29
+    },
+    {
+      "shot_id": "B04-S03",
+      "global_index": 33,
+      "storyboard_caption": "She laughs",
+      "source_clip_sha256": "431752b9fcd008796bbcf46bff61e00f74aa4ef202fc88732ea341d6adf6a673",
+      "source_archive": "La_Luna_B04_RC2_10_Moving_Shots_and_Director_Receipts.zip",
+      "source_entry": "moving_shots/B04-S03_DIRECTOR_MOVING_PROOF_4s.mp4",
+      "scene_type": "couple",
+      "time_of_day": "Miami_night",
+      "time_start": 209.625,
+      "time_end": 215.33333333333334,
+      "start_frame": 5031,
+      "end_frame_exclusive": 5168,
+      "duration_frames": 137,
+      "duration_seconds": 5.708333333333333,
+      "lyric_or_instrumental_cue": "She laughs — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B04_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "CUTAWAY_WITH_EXISTING_SOURCE",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 41
+    },
+    {
+      "shot_id": "B04-S04",
+      "global_index": 34,
+      "storyboard_caption": "Lost in the dance",
+      "source_clip_sha256": "75880736096f62c92411333a2f3c390af101713d9dbe49c3fd4fe63068b9ca58",
+      "source_archive": "La_Luna_B04_RC2_10_Moving_Shots_and_Director_Receipts.zip",
+      "source_entry": "moving_shots/B04-S04_DIRECTOR_MOVING_PROOF_4s.mp4",
+      "scene_type": "dance",
+      "time_of_day": "Miami_night",
+      "time_start": 215.33333333333334,
+      "time_end": 223.91666666666666,
+      "start_frame": 5168,
+      "end_frame_exclusive": 5374,
+      "duration_frames": 206,
+      "duration_seconds": 8.583333333333334,
+      "lyric_or_instrumental_cue": "Lost in the dance — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B04_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "preserve_actual_actor_motion_and_source_camera; no fabricated articulation",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "CROSS_ACT_GEMINI_PERFORMANCE_REUSE_REVIEW"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 110
+    },
+    {
+      "shot_id": "B04-S05",
+      "global_index": 35,
+      "storyboard_caption": "Forgotten promises",
+      "source_clip_sha256": "38ed958c25e397acd18f1f03dfe76cec201efeb7345df99e9cd71c18335a3e1c",
+      "source_archive": "La_Luna_B04_RC2_10_Moving_Shots_and_Director_Receipts.zip",
+      "source_entry": "moving_shots/B04-S05_DIRECTOR_MOVING_PROOF_4s.mp4",
+      "scene_type": "couple",
+      "time_of_day": "Miami_night",
+      "time_start": 223.91666666666666,
+      "time_end": 229.75,
+      "start_frame": 5374,
+      "end_frame_exclusive": 5514,
+      "duration_frames": 140,
+      "duration_seconds": 5.833333333333333,
+      "lyric_or_instrumental_cue": "Forgotten promises — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B04_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "CUTAWAY_WITH_EXISTING_SOURCE",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 44
+    },
+    {
+      "shot_id": "B04-S06",
+      "global_index": 36,
+      "storyboard_caption": "Voices in the tavern",
+      "source_clip_sha256": "c8eb833e4a1f07497d393f45a339eb8497fbac9e5b03fef41c3680c8ebd30351",
+      "source_archive": "La_Luna_B04_RC2_10_Moving_Shots_and_Director_Receipts.zip",
+      "source_entry": "moving_shots/B04-S06_DIRECTOR_MOVING_PROOF_4s.mp4",
+      "scene_type": "community",
+      "time_of_day": "Miami_night",
+      "time_start": 229.75,
+      "time_end": 235.75,
+      "start_frame": 5514,
+      "end_frame_exclusive": 5658,
+      "duration_frames": 144,
+      "duration_seconds": 6,
+      "lyric_or_instrumental_cue": "Voices in the tavern — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B04_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-MOTION-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "CUTAWAY_WITH_EXISTING_SOURCE",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 48
+    },
+    {
+      "shot_id": "B04-S07",
+      "global_index": 37,
+      "storyboard_caption": "The musicians as one",
+      "source_clip_sha256": "a8fee7392c569ddb2397e683fb206255744e6536316ae62625601d86519f2557",
+      "source_archive": "La_Luna_B04_RC2_10_Moving_Shots_and_Director_Receipts.zip",
+      "source_entry": "moving_shots/B04-S07_DIRECTOR_MOVING_PROOF_4s.mp4",
+      "scene_type": "musician",
+      "time_of_day": "Miami_night",
+      "time_start": 235.75,
+      "time_end": 243.45833333333334,
+      "start_frame": 5658,
+      "end_frame_exclusive": 5843,
+      "duration_frames": 185,
+      "duration_seconds": 7.708333333333333,
+      "lyric_or_instrumental_cue": "The musicians as one — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B04_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "preserve_actual_actor_motion_and_source_camera; no fabricated articulation",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "CROSS_ACT_GEMINI_PERFORMANCE_REUSE_REVIEW"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 89
+    },
+    {
+      "shot_id": "B04-S08",
+      "global_index": 38,
+      "storyboard_caption": "Candlelight",
+      "source_clip_sha256": "bda3015b89d0f17d199f86f090d43101a43208dc104e24b53dcca097e41919be",
+      "source_archive": "La_Luna_B04_RC2_10_Moving_Shots_and_Director_Receipts.zip",
+      "source_entry": "moving_shots/B04-S08_DIRECTOR_MOVING_PROOF_4s.mp4",
+      "scene_type": "candle",
+      "time_of_day": "Miami_night",
+      "time_start": 243.45833333333334,
+      "time_end": 249.08333333333334,
+      "start_frame": 5843,
+      "end_frame_exclusive": 5978,
+      "duration_frames": 135,
+      "duration_seconds": 5.625,
+      "lyric_or_instrumental_cue": "Candlelight — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B04_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-022"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "FX_LAYER",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 39
+    },
+    {
+      "shot_id": "B04-S09",
+      "global_index": 39,
+      "storyboard_caption": "A look that says more",
+      "source_clip_sha256": "353053e9efecddef6470070ce31da52b70c82de0b13ece55767cfbc9ce1325e8",
+      "source_archive": "La_Luna_B04_RC2_10_Moving_Shots_and_Director_Receipts.zip",
+      "source_entry": "moving_shots/B04-S09_DIRECTOR_MOVING_PROOF_4s.mp4",
+      "scene_type": "couple",
+      "time_of_day": "Miami_night",
+      "time_start": 249.08333333333334,
+      "time_end": 255.58333333333334,
+      "start_frame": 5978,
+      "end_frame_exclusive": 6134,
+      "duration_frames": 156,
+      "duration_seconds": 6.5,
+      "lyric_or_instrumental_cue": "A look that says more — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B04_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "CUTAWAY_WITH_EXISTING_SOURCE",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 60
+    },
+    {
+      "shot_id": "B04-S10",
+      "global_index": 40,
+      "storyboard_caption": "The chorus lifts again",
+      "source_clip_sha256": "c88f2a28e9bcb20d1480bb55f9de6ad9456b1176db992b1dcef1ba25b98127c2",
+      "source_archive": "La_Luna_B04_RC2_10_Moving_Shots_and_Director_Receipts.zip",
+      "source_entry": "moving_shots/B04-S10_DIRECTOR_MOVING_PROOF_4s.mp4",
+      "scene_type": "dance",
+      "time_of_day": "Miami_night",
+      "time_start": 255.58333333333334,
+      "time_end": 262.6666666666667,
+      "start_frame": 6134,
+      "end_frame_exclusive": 6304,
+      "duration_frames": 170,
+      "duration_seconds": 7.083333333333333,
+      "lyric_or_instrumental_cue": "The chorus lifts again — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B04_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "preserve_actual_actor_motion_and_source_camera; no fabricated articulation",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "CROSS_ACT_GEMINI_PERFORMANCE_REUSE_REVIEW"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 74
+    },
+    {
+      "shot_id": "B05-S01",
+      "global_index": 41,
+      "storyboard_caption": "After the celebration",
+      "source_clip_sha256": "05cf0f0f8f07fd40b6120d19dd3b78cf8959d95968155beac4943a656e79e227",
+      "source_archive": "La_Luna_B05_RC1_10_Moving_Shots_Provenance_and_Scripts.zip",
+      "source_entry": "B05-S01_MOVING_4s.mp4",
+      "scene_type": "community",
+      "time_of_day": "Miami_night",
+      "time_start": 262.6666666666667,
+      "time_end": 269.6666666666667,
+      "start_frame": 6304,
+      "end_frame_exclusive": 6472,
+      "duration_frames": 168,
+      "duration_seconds": 7,
+      "lyric_or_instrumental_cue": "After the celebration — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B05_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-MOTION-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "CUTAWAY_WITH_EXISTING_SOURCE",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 72
+    },
+    {
+      "shot_id": "B05-S02",
+      "global_index": 42,
+      "storyboard_caption": "One last dance",
+      "source_clip_sha256": "ff10f0d53d521bf2429a7fab902b7e5826b15bb674770d96d399627264837084",
+      "source_archive": "La_Luna_B05_RC1_10_Moving_Shots_Provenance_and_Scripts.zip",
+      "source_entry": "B05-S02_MOVING_4s.mp4",
+      "scene_type": "dance",
+      "time_of_day": "Miami_night",
+      "time_start": 269.6666666666667,
+      "time_end": 275.8333333333333,
+      "start_frame": 6472,
+      "end_frame_exclusive": 6620,
+      "duration_frames": 148,
+      "duration_seconds": 6.166666666666667,
+      "lyric_or_instrumental_cue": "One last dance — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B05_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "preserve_actual_actor_motion_and_source_camera; no fabricated articulation",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "CROSS_ACT_GEMINI_PERFORMANCE_REUSE_REVIEW"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 52
+    },
+    {
+      "shot_id": "B05-S03",
+      "global_index": 43,
+      "storyboard_caption": "The breakdown",
+      "source_clip_sha256": "0b47e9d0720a721fae963f508bdf687928ad16892628ddf0d9c3436005da408b",
+      "source_archive": "La_Luna_B05_RC1_10_Moving_Shots_Provenance_and_Scripts.zip",
+      "source_entry": "B05-S03_MOVING_4s.mp4",
+      "scene_type": "couple",
+      "time_of_day": "Miami_night",
+      "time_start": 275.8333333333333,
+      "time_end": 283.9166666666667,
+      "start_frame": 6620,
+      "end_frame_exclusive": 6814,
+      "duration_frames": 194,
+      "duration_seconds": 8.083333333333334,
+      "lyric_or_instrumental_cue": "The breakdown — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B05_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "CUTAWAY_WITH_EXISTING_SOURCE",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 98
+    },
+    {
+      "shot_id": "B05-S04",
+      "global_index": 44,
+      "storyboard_caption": "Strings and percussion",
+      "source_clip_sha256": "49a8fb5ef76feba0bb04c54cdbd6e53c28843c3bfda277cd5e0794f79634a95b",
+      "source_archive": "La_Luna_B05_RC1_10_Moving_Shots_Provenance_and_Scripts.zip",
+      "source_entry": "B05-S04_MOVING_4s.mp4",
+      "scene_type": "musician",
+      "time_of_day": "Miami_night",
+      "time_start": 283.9166666666667,
+      "time_end": 290.5833333333333,
+      "start_frame": 6814,
+      "end_frame_exclusive": 6974,
+      "duration_frames": 160,
+      "duration_seconds": 6.666666666666667,
+      "lyric_or_instrumental_cue": "Strings and percussion — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B05_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "preserve_actual_actor_motion_and_source_camera; no fabricated articulation",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "CROSS_ACT_GEMINI_PERFORMANCE_REUSE_REVIEW"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 64
+    },
+    {
+      "shot_id": "B05-S05",
+      "global_index": 45,
+      "storyboard_caption": "The night fades",
+      "source_clip_sha256": "45ced15103b9f23bcd7b27b9bd00a3308cd072e7b8e8f7552840944c0ed622c8",
+      "source_archive": "La_Luna_B05_RC1_10_Moving_Shots_Provenance_and_Scripts.zip",
+      "source_entry": "B05-S05_MOVING_4s.mp4",
+      "scene_type": "harbor",
+      "time_of_day": "Miami_night",
+      "time_start": 290.5833333333333,
+      "time_end": 297.0833333333333,
+      "start_frame": 6974,
+      "end_frame_exclusive": 7130,
+      "duration_frames": 156,
+      "duration_seconds": 6.5,
+      "lyric_or_instrumental_cue": "The night fades — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B05_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-MOTION-003",
+          "FX2-SPATIAL-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "FX_LAYER",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 60
+    },
+    {
+      "shot_id": "B05-S06",
+      "global_index": 46,
+      "storyboard_caption": "Everyone together",
+      "source_clip_sha256": "889a4b0bb098c05e0a2b31df4182a5141c18841eab94ad196cc4e604f90f0ab4",
+      "source_archive": "La_Luna_B05_RC1_10_Moving_Shots_Provenance_and_Scripts.zip",
+      "source_entry": "B05-S06_MOVING_4s.mp4",
+      "scene_type": "community",
+      "time_of_day": "Miami_night",
+      "time_start": 297.0833333333333,
+      "time_end": 303.0833333333333,
+      "start_frame": 7130,
+      "end_frame_exclusive": 7274,
+      "duration_frames": 144,
+      "duration_seconds": 6,
+      "lyric_or_instrumental_cue": "Everyone together — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B05_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-MOTION-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "CUTAWAY_WITH_EXISTING_SOURCE",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 48
+    },
+    {
+      "shot_id": "B05-S07",
+      "global_index": 47,
+      "storyboard_caption": "Before we let go",
+      "source_clip_sha256": "0c1c32fe8cc7f44c8ec9252c76487673ba44c88d0323c8c0c41f1dffa8b0a605",
+      "source_archive": "La_Luna_B05_RC1_10_Moving_Shots_Provenance_and_Scripts.zip",
+      "source_entry": "B05-S07_MOVING_4s.mp4",
+      "scene_type": "couple",
+      "time_of_day": "Miami_night",
+      "time_start": 303.0833333333333,
+      "time_end": 309.1666666666667,
+      "start_frame": 7274,
+      "end_frame_exclusive": 7420,
+      "duration_frames": 146,
+      "duration_seconds": 6.083333333333333,
+      "lyric_or_instrumental_cue": "Before we let go — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use original 96 frames ONCE at most; additional duration requires newly verified source-derived scene evolution or genuine alternate performance, NEVER blind looping or hold",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B05_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "CUTAWAY_WITH_EXISTING_SOURCE",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 50
+    },
+    {
+      "shot_id": "B05-S08",
+      "global_index": 48,
+      "storyboard_caption": "The new day",
+      "source_clip_sha256": "176ec94fe3bf6cfbaa62d2fd7cda3d6f0aed4e6710b4e490a10ffd67157fe7f8",
+      "source_archive": "La_Luna_B05_RC1_10_Moving_Shots_Provenance_and_Scripts.zip",
+      "source_entry": "B05-S08_MOVING_4s.mp4",
+      "scene_type": "dawn_harbor",
+      "time_of_day": "authentic_sunrise",
+      "time_start": 309.1666666666667,
+      "time_end": 313.1666666666667,
+      "start_frame": 7420,
+      "end_frame_exclusive": 7516,
+      "duration_frames": 96,
+      "duration_seconds": 4,
+      "lyric_or_instrumental_cue": "The new day — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use exact 96-frame source once, no time-stretch",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B05_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-MOTION-003",
+          "FX2-SPATIAL-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "KEEP",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 0
+    },
+    {
+      "shot_id": "B05-S09",
+      "global_index": 49,
+      "storyboard_caption": "The echo remains",
+      "source_clip_sha256": "b93a84350bd209cb4cef58adbf37a3502859b8dd5d12d10896e5717d216f9777",
+      "source_archive": "La_Luna_B05_RC1_10_Moving_Shots_Provenance_and_Scripts.zip",
+      "source_entry": "B05-S09_MOVING_4s.mp4",
+      "scene_type": "dawn_community",
+      "time_of_day": "authentic_sunrise",
+      "time_start": 313.1666666666667,
+      "time_end": 317.1666666666667,
+      "start_frame": 7516,
+      "end_frame_exclusive": 7612,
+      "duration_frames": 96,
+      "duration_seconds": 4,
+      "lyric_or_instrumental_cue": "The echo remains — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use exact 96-frame source once, no time-stretch",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B05_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-023"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "KEEP",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 0
+    },
+    {
+      "shot_id": "B05-S10",
+      "global_index": 50,
+      "storyboard_caption": "Volveremos a bailar",
+      "source_clip_sha256": "6d03acf3645374833c54121862a4f314c2ca332b2963d4ec48ee9aed963a9023",
+      "source_archive": "La_Luna_B05_RC1_10_Moving_Shots_Provenance_and_Scripts.zip",
+      "source_entry": "B05-S10_MOVING_4s.mp4",
+      "scene_type": "dawn_dance",
+      "time_of_day": "authentic_sunrise",
+      "time_start": 317.1666666666667,
+      "time_end": 321.1666666666667,
+      "start_frame": 7612,
+      "end_frame_exclusive": 7708,
+      "duration_frames": 96,
+      "duration_seconds": 4,
+      "lyric_or_instrumental_cue": "Volveremos a bailar — storyboard semantic association ONLY, verify actual sung line",
+      "cue_evidence": {
+        "status": "ESTIMATED_NOT_AUDIO_VOCAL_VERIFIED",
+        "inputs": [
+          "original_48kHz_WAV_SHA256",
+          "510_ONNX_beats",
+          "140_ONNX_downbeats",
+          "approximate_energy_sections",
+          "locked_storyboard"
+        ],
+        "not_lyric_timestamp_evidence": true
+      },
+      "original_4s_clip_use_policy": "Use exact 96-frame source once, no time-stretch",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B05_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-023"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "preserve_actual_actor_motion_and_source_camera; no fabricated articulation",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [],
+      "QC_review": "MASTER_CANDIDATE_NOT_FRAME_OR_NORMAL_SPEED_APPROVED",
+      "director_first_pass_veto": "KEEP",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 0
+    }
+  ]
+}

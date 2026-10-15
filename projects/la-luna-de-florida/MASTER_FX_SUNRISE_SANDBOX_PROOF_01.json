@@ -1,0 +1,26 @@
+{
+  "schema": "aivideoedit.la-luna-sandbox-cinematic-sunrise-proof.v1",
+  "status": "CANDIDATE_NOT_DIRECTOR_ACCEPTED",
+  "scope": "B05-S08_to_B05-S10_12_seconds_only",
+  "render_sha256": "08dc0eea01accbe9dff26f34449380e71175dee924dfd3aac32bb779b0226ab6",
+  "original_audio_sha256": "1a4bffef36930b504423d2653faff4cc5bfd9a15d44bdcf1083b27fbb0db1c10",
+  "audio_excerpt": [
+    309.16,
+    321.16
+  ],
+  "fps": 24,
+  "frames": 288,
+  "width": 960,
+  "height": 540,
+  "full_decode_pass": true,
+  "black_frames": 0,
+  "near_identical_adjacent_frames": 0,
+  "first_shot_native_A_B_FX_ID": "FX2-MOTION-003",
+  "first_shot_native_loop_SHA256_A": "667681c8c2c7129c14ebdefd042f557ff008226982914be4cc2a961bd264ef9a",
+  "first_shot_native_loop_SHA256_B": "479b6842153f238b574c52fa591fe69eab8d6df57a531ee68812fbeb8e33ceeb",
+  "frame_mask_protects_upper_frame": true,
+  "other_two_source_shots_unmodified_before_encoding": true,
+  "master_normal_speed_artistically_accepted": false,
+  "lyric_exactly_aligned": false,
+  "no_claim_full_render": true
+}
