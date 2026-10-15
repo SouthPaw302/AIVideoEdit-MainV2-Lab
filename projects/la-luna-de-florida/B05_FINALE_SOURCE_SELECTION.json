@@ -1,0 +1,115 @@
+{
+  "schema": "aivideoedit.la-luna-b05-finale-sources.v1",
+  "production": "la-luna-de-florida",
+  "branch": "song/la-luna-de-florida",
+  "stage": "B05",
+  "status": "TEN_NIGHT_TO_DAWN_SHOT_PLATES_SELECTED_SHA_VERIFIED_NOT_FILM_RELEASE",
+  "original_archive": {
+    "originals": 10,
+    "url": "https://drive.google.com/file/d/125BAnia3HKacDFtpOel8-etstMu-h0tw/view",
+    "sha256": "dbbc3a1a72af40dcdb9afa26ea032dd5bdc2ef448a3508464a562e78ad5cf596",
+    "night_extra_originals": 7,
+    "three_standalone_dawn_candidates": 3
+  },
+  "canvas": [
+    1672,
+    941
+  ],
+  "shot_intents": [
+    {
+      "shot_id": "B05-S01",
+      "caption": "After the celebration",
+      "source_filename": "B05-S01.png",
+      "original_sha256": "6da10b14c200f70d8c06070ff48fdc8e02627669715285dd8b1404eefedb9f6a",
+      "provenance": "night-extra-08",
+      "native_fx_approval": false,
+      "full_motion_approval": false
+    },
+    {
+      "shot_id": "B05-S02",
+      "caption": "One last dance",
+      "source_filename": "B05-S02.png",
+      "original_sha256": "de97ab7bd4e750273fb019093ac640f724755310b8686a537a4d8e44d7f1c54e",
+      "provenance": "night-extra-10",
+      "native_fx_approval": false,
+      "full_motion_approval": false
+    },
+    {
+      "shot_id": "B05-S03",
+      "caption": "The breakdown",
+      "source_filename": "B05-S03.png",
+      "original_sha256": "f707d5be41d4f738720225372c814e02fbd046e0a64ae6b623c32c0e936db07f",
+      "provenance": "night-extra-02",
+      "native_fx_approval": false,
+      "full_motion_approval": false
+    },
+    {
+      "shot_id": "B05-S04",
+      "caption": "Strings and percussion",
+      "source_filename": "B05-S04.png",
+      "original_sha256": "cabe919a31493f4ce169f106153c36f1f496ff4ee8eee2db10ee8373998117ab",
+      "provenance": "night-extra-06",
+      "native_fx_approval": false,
+      "full_motion_approval": false
+    },
+    {
+      "shot_id": "B05-S05",
+      "caption": "The night fades",
+      "source_filename": "B05-S05.png",
+      "original_sha256": "17f797271d387421e3b8df3eea2448dace71ceb64c75d0e1aee7657830a3b2db",
+      "provenance": "night-extra-01",
+      "native_fx_approval": false,
+      "full_motion_approval": false
+    },
+    {
+      "shot_id": "B05-S06",
+      "caption": "Everyone together",
+      "source_filename": "B05-S06.png",
+      "original_sha256": "b405cf8d2df65942fe323fdc52939d8ec63bc37bf4ae9b7815dba46c7654e7aa",
+      "provenance": "night-extra-04",
+      "native_fx_approval": false,
+      "full_motion_approval": false
+    },
+    {
+      "shot_id": "B05-S07",
+      "caption": "Before we let go",
+      "source_filename": "B05-S07.png",
+      "original_sha256": "1958b6d706d40555a13795d3b227658b1dc497b8c368d4e46ba83e0fcf9b6919",
+      "provenance": "night-extra-09",
+      "native_fx_approval": false,
+      "full_motion_approval": false
+    },
+    {
+      "shot_id": "B05-S08",
+      "caption": "The new day",
+      "source_filename": "B05-S08.png",
+      "original_sha256": "ec6fe9ec0c4161ba27063cfcf0243cc6257a81f6b4d57ae6a60fc08ffdc8e090",
+      "provenance": "new sunrise-pier plate",
+      "native_fx_approval": false,
+      "full_motion_approval": false
+    },
+    {
+      "shot_id": "B05-S09",
+      "caption": "The echo remains",
+      "source_filename": "B05-S09.png",
+      "original_sha256": "36c4dc8c1c96bb3b779c6c76e21e41612614df27cdb3178f94ee044495137188",
+      "provenance": "new dawn-tavern-couple plate",
+      "native_fx_approval": false,
+      "full_motion_approval": false
+    },
+    {
+      "shot_id": "B05-S10",
+      "caption": "Volveremos a bailar",
+      "source_filename": "B05-S10.png",
+      "original_sha256": "4faf6b7dcc1a5dba470593031b1dc10ebc52560513e7a6ffe8a0d81384b7bc16",
+      "provenance": "new sunrise-celebration plate",
+      "native_fx_approval": false,
+      "full_motion_approval": false
+    }
+  ],
+  "director_rule": "Seven nighttime shots progress naturally through nightfall to three standalone sunrise frames; original night extras never overwritten. No storyboard poster used.",
+  "source_s10": "Full-frame dawn-celebration candidate not contact-sheet cell",
+  "source_image_unchanged": true,
+  "storyboard_sha256": "05b232452eebce56fb9c047a0f481a19e04cf2d13e364bee30255dd27c88703a",
+  "full_film_master_approved": false
+}
