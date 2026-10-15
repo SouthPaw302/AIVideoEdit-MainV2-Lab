@@ -4,12 +4,24 @@ Existing approved-main FX A/B loops and hashed originals are the inputs.
 This is a technical moving-scene proof, NEVER a performance/film approval.
 """
 from __future__ import annotations
-import argparse,hashlib,json,math,subprocess,time
+import argparse,hashlib,importlib.util,json,math,subprocess,time,sys
 from pathlib import Path
 import cv2,numpy as np
 
 ROOT=Path(__file__).resolve().parents[1]
 PROJ=ROOT/"projects/la-luna-de-florida"
+RUNTIME=ROOT/".aivideoedit/os/general/reusable/fx_v2/runtime.py"
+_runtime_module=None
+def exact_main_runtime():
+ global _runtime_module
+ if _runtime_module is None:
+  if not RUNTIME.is_file():raise RuntimeError("Must first bootstrap current-main FXRuntime")
+  spec=importlib.util.spec_from_file_location("la_luna_native_os_runtime",str(RUNTIME))
+  mod=importlib.util.module_from_spec(spec)
+  sys.modules[spec.name]=mod
+  spec.loader.exec_module(mod)
+  _runtime_module=mod
+ return _runtime_module
 FPS=24; N=96; W=960; H=540
 CLOTH={
 "B01-S02":[(.72,.48,.97,.95)],
@@ -91,7 +103,8 @@ def compile_shot(base,out,record,sid):
  if source is None:raise RuntimeError(f"{sid}: source unreadable")
  loopa=readloop(a);loopb=readloop(b)
  matte=cloth_mask(sid)
- xx,yy=np.meshgrid(np.arange(W,dtype=np.float32),np.arange(H,dtype=np.float32))
+ module=exact_main_runtime()
+ fx=module.FXRuntime(seed=302)
  yy2,xx2=np.ogrid[:H,:W]
  g=np.maximum(np.exp(-.5*(((xx2-W*.08)/(W*.14))**2+((yy2-H*.21)/(H*.22))**2)),
               np.exp(-.5*(((xx2-W*.83)/(W*.16))**2+((yy2-H*.17)/(H*.19))**2))).astype(np.float32)
@@ -106,14 +119,16 @@ def compile_shot(base,out,record,sid):
    t=i/(N-1)
    idx=int(round(59*(.5-.5*math.cos(2*math.pi*t))))
    im=cv2.addWeighted(loopa[idx],.70,loopb[idx],.30,0)
+   ctx=module.FXContext(t=i/FPS,duration=N/FPS,frame_index=i,fps=FPS,energy=.3,transient=.04)
    if matte is not None:
-    dx=(1.8*math.sin(2*math.pi*t)*(yy/H))*matte
-    dy=(1.2*math.cos(2*math.pi*t)*(xx/W))*matte
-    moved=cv2.remap(im,(xx+dx).astype(np.float32),(yy+dy).astype(np.float32),
-                    cv2.INTER_LINEAR,borderMode=cv2.BORDER_REFLECT_101)
-    alpha=(.8*matte)[:,:,None]
-    im=np.clip(im*(1-alpha)+moved*alpha,0,255).astype(np.uint8)
-   im=np.clip(im.astype(np.float32)*(1+.009*math.sin(2*math.pi*t)*g[:,:,None]),0,255).astype(np.uint8)
+    # Approved FX2-MOTION-002, semantic cloth mask. Faces/instruments outside the matte.
+    im=fx.localized_living_flow(im,ctx,mask=matte,strength=1.85)
+   if sid[:3]=="B02" and int(sid[-2:]) in (3,4,6,7,8,9,10) or sid in ("B01-S02","B01-S04","B01-S06"):
+    # Approved FX2-ATM-001: upper-left ambient interior only, no performer shape warp.
+    im=fx.advected_smoke(im,ctx,roi=(.0,.0,.22,.29),strength=.28)
+   # 2D Gaussian image-space practical light, emphatically NOT 3DGS.
+   pulse=.027*math.sin(5*math.pi*t)+.013*math.sin(11*math.pi*t)
+   im=np.clip(im.astype(np.float32)*(1+pulse*g[:,:,None]),0,255).astype(np.uint8)
    im=camera(im,i,int(sid[-2:])%4)
    if prev is not None:maxdelta=max(maxdelta,float(np.mean(cv2.absdiff(im,prev))))
    if i==N//2:mid=im.copy()
@@ -135,8 +150,10 @@ def compile_shot(base,out,record,sid):
  "midframe":str(still.relative_to(out)),"midframe_sha256":sha(still),
  "fps":FPS,"frames":N,"duration_s":N/FPS,"resolution":[W,H],
  "motion_methods":["current_main_existing_FXRuntime_light_loops","original_and_duplicate_motion_source",
-                   "masked_cloth_micro_motion" if matte is not None else "no_cloth_deform",
+                   "FX2-MOTION-002_canon_localized_living_flow_with_body_protection" if matte is not None else "no_cloth_deform",
+                   "FX2-ATM-001_canon_advected_smoke_or_NOT_APPLICABLE",
                    "2D_Gaussian_light_not_3DGS","bounded_Director_camera"],
+ "runtime_sha256":sha(RUNTIME),
  "max_adjacent_frame_mad":round(maxdelta,3),"full_video_decode":True,
  "semantic_status":"PERFORMANCE_MOTION_GAP" if sid in PERFORM else "NO_PERFORMANCE_ACTION_REQUIRED",
  "unproven_action":PERFORM.get(sid),"source_coverage_mismatch":MISMATCH.get(sid),
