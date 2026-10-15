@@ -2,7 +2,7 @@
   "schema": "aivideoedit.la-luna-b05-director-preflight.v1",
   "branch": "song/la-luna-de-florida",
   "production": "la-luna-de-florida",
-  "status": "NIGHT_EXTRA_TECHNICAL_HASH_ORDER_SEPARATED_FROM_FINALE_STORY_MAPPING__DAWN_GAP_OPEN",
+  "status": "B05_TEN_PROVEN_SOURCE_PLATES_DIRECTOR_SELECTED_WITH_DAWN__NATIVE_20_FX_AND_RC1_TEN_MOTION_SCENES_PASS",
   "storyboard_sha256": "05b232452eebce56fb9c047a0f481a19e04cf2d13e364bee30255dd27c88703a",
   "canon_storyboard": "STORYBOARD_CANON.json",
   "act_title": "Bridge, breakdown, and sunrise",
@@ -18,7 +18,8 @@
       941
     ],
     "CRC_pass": true,
-    "hash_checks": true
+    "hash_checks": true,
+    "historical_role": "ten nighttime extra originals, intact and separate from selected B05 production source pack"
   },
   "source_inventory": [
     {
@@ -174,7 +175,8 @@
     ],
     "source_derived_dawn_candidate_allowed_for_review": true,
     "source_derived_dawn_must_not_be_labeled_independent_original": true,
-    "imagegen_storyboard_poster_disposition": "REJECTED_NOT_PRODUCTION_MEDIA"
+    "imagegen_storyboard_poster_disposition": "REJECTED_NOT_PRODUCTION_MEDIA",
+    "current_source_resolution": "Dawn footage now sourced from three separate full-frame, newly authored 1672x941 B05 plates; historical ORIGINAL dawn stills in older archive remain missing, not fabricated."
   },
   "fx_scope": {
     "run_native_lab_main_on_ten_original_night_plates": true,
@@ -300,5 +302,17 @@
       "preview_only": true,
       "original_sha256": "de97ab7bd4e750273fb019093ac640f724755310b8686a537a4d8e44d7f1c54e"
     }
-  ]
+  ],
+  "finale_resolution": {
+    "film_source_pack": "B05_FINALE_SOURCE_SELECTION.json",
+    "source_archive": "https://drive.google.com/file/d/125BAnia3HKacDFtpOel8-etstMu-h0tw/view",
+    "source_archive_sha256": "dbbc3a1a72af40dcdb9afa26ea032dd5bdc2ef448a3508464a562e78ad5cf596",
+    "night_source_count": 7,
+    "independent_dawn_plate_count": 3,
+    "poster_disposition": "Both generated contact-sheet/poster attempts REJECTED; not included in B05 source archive",
+    "actual_dawn_video_in_finale": "https://drive.google.com/file/d/1OjqMNnZKW5m2XDKtbsJhprdyiUIniiQz/view",
+    "director_decision": "B05_DIRECTOR_BATCH_DECISION.json",
+    "historic_B05_original_dawn_gap": "Existing old night EXTRA zip did not contain original dawn final act; resolved as new source candidates, not retroactive assertion those original dawn stills existed.",
+    "full_feature_release_approved": false
+  }
 }
