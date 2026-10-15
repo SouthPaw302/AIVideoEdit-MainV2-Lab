@@ -1,5 +1,10 @@
 # Production handoff — La Luna de Florida
 
+## B01/B02 RC5 full moving-shot proof library — reviewed technical scope
+
+**LATEST PRIORITY before B03-B05:** [80s RC5 Director review](https://drive.google.com/file/d/1z6KpMw3WljbtWajHDVV1e02mzCLQjfFA/view), [20 native-cadence shot videos, all RC3/4/5 compositor source scripts, and SHA/QC receipts](https://drive.google.com/file/d/1J3dmI4nO_3TK601rvI8wdEulmW8czkBe/view). See `B01_B02_MOVEMENT_DIRECTOR_STATUS.json.latest_RC5_provisional` for per-shot classification. New RC5 sandbox movie 1920 frames/80s, zero detected black and >=0.5s frozen events. 15 shots have genuine same-film actor/instrument/reaction motion candidates, 4 are environment/no character action, B02-S02 dock-to-interior cut has moving musicians but not literal door-crossing feet. **No human/Director creative acceptance yet.** High risk of repeated underlying B05 Gemini musician footage over many shot reframings: normal-speed review required. B01/B02 originals/FX preserved, user song WAV/50-shot board/other repo unaffected. This is NOT the 5m21 film. No expansion to B03/B04/B05 until owner/Director acceptance of B01/B02 movement/coverage. All new evidence goes to production Drive directly, not persistent native ChatGPT Library.
+
+
 ## New RC3 source-performance handoff — 2026-10-15
 
 Read [B01_B02_MOVEMENT_DIRECTOR_STATUS.json](B01_B02_MOVEMENT_DIRECTOR_STATUS.json) latest_RC3_provisional. The 80-second [RC3 review export](https://drive.google.com/file/d/1-nbQnQvvoSOnU_hEn4P8YPQOrFFqJ2q8/view) replaces neither original nor RC2: genuine actor/instrument motion candidates for 9 shots, preserved other 11 as pre-existing motion layers, nocturnal B01-S10 visual option. This RC3 was rendered in the sandbox; original 20 moving clips still trace to GitHub Actions run #38684398752. Both exact-original video hashes, 20-shot complete candidate archive and reproducible Python source, full QC and source receipts are archived in [Drive](https://drive.google.com/drive/folders/19fPAokHiMzdwD0FqTHVlW_VhBAe6RFet).
