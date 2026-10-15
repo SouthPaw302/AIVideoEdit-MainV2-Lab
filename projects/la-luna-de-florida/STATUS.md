@@ -1,5 +1,10 @@
 # La Luna de Florida — Status
 
+## NEXT-CHAT PRIMARY HANDOFF — 2026-10-15
+
+The comprehensive [MASTER_FX_DIRECTOR_HANDOFF_2026-10-15.md](MASTER_FX_DIRECTOR_HANDOFF_2026-10-15.md) is now the **single read-first operational runbook**. It includes 50 locked-shot instructions and **exact next steps through full render and post-Director-pass QC**. Do not redo accepted B01-B05. The 50×4s picture source probes, original song, and beat data are ready, but full-song timing (`SCRIPT.json entries: []`) and the proper 5:21 master remain **NOT DONE**. Current branch CI Production Contract and Full Compile passed as of prior head; recheck after edits. The detailed handoff itself is documentation, **not** evidence of a completed Director watch or feature film.
+
+
 ## Latest — B05 night-to-dawn Director batch SELECTED, full film Master FX next (2026-10-15)
 
 **Five production batches now Director-selected at moving-scene proof stage.** B05 retains 7 distinct original archived nighttime source stills and 3 new standalone true full-frame 1672×941 dawn plates; no earlier-contact-sheet poster is treated as media. The original B05 night EXTRA archive was preserved and never rewritten. Source ZIP: [10 exact B05 source plates](https://drive.google.com/file/d/125BAnia3HKacDFtpOel8-etstMu-h0tw/view), SHA256 `dbbc3a1a72af40dcdb9afa26ea032dd5bdc2ef448a3508464a562e78ad5cf596`, mapping in [B05_FINALE_SOURCE_SELECTION.json](B05_FINALE_SOURCE_SELECTION.json).
