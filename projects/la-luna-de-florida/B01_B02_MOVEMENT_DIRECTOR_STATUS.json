@@ -240,10 +240,10 @@
     "canon_coverage_mismatch_nonoverlapping": 3,
     "real_Gemini_inserts_under_review": 2
   },
-  "director_disposition": "B01_B02_RC5_RENDERED_AND_TEMPORAL_QC_PASS__CREATIVE_REVIEW_REQUIRED",
-  "B01_character_gate": "OPEN",
-  "B02_character_gate": "OPEN",
-  "B03_B04_B05_progression_hold": true,
+  "director_disposition": "B01_B02_BATCH_MOTION_STAGE_PASSED_BY_DIRECTOR__MASTER_AND_RELEASE_NOT_LOCKED",
+  "B01_character_gate": "BATCH_MOVING_SCENE_PROOF_DIRECTOR_SELECTED__FINAL_MASTER_REVIEW_LATER",
+  "B02_character_gate": "BATCH_MOVING_SCENE_PROOF_DIRECTOR_SELECTED__FINAL_MASTER_REVIEW_LATER",
+  "B03_B04_B05_progression_hold": false,
   "master_fx_ready": false,
   "individual_source_pixels_locked": false,
   "film_release_approved": false,
@@ -394,5 +394,65 @@
     "FX_stage_locked": false,
     "full_film_release_approved": false,
     "B03_B04_B05_progression_hold": true
+  },
+  "latest_RC8_director_batch_selection": {
+    "status": "B01_B02_DIRECTOR_BATCH_MOTION_STAGE_PASS__NOT_FINAL_MASTER",
+    "director_role": "Assistant as production Director; user asked to finish batches and delegated visual direction; owner final release is separate",
+    "reviewed_media": "https://drive.google.com/file/d/1G11pqOEWMc8h0W-y4Gsf7qW-VEsqN-zh/view",
+    "reviewed_media_sha256": "6912661751b968ff7c4cd8e546c1e64d0cc8429456e4e091db493a35278fa5c3",
+    "moving_shots": "https://drive.google.com/file/d/1rqMtkcCARkcwH0FqLx0tfwoo0JrA-AQ-/view",
+    "moving_shots_zip_sha256": "3ff12e6533078f284603d49f7e8ec30dfd85f91a11894774e9bcdae7add875ac",
+    "contact": "https://drive.google.com/file/d/137drSrviObFtLMXBrCNhOuIhkzTR3tDx/view",
+    "director_decision": "https://drive.google.com/file/d/13INExAvUFPYsXsGSPZ3aFZPvXCDdNARD/view",
+    "technical_receipt": "https://drive.google.com/file/d/1nURaKlAYO3gHrhDGBasicDDs6NEIUYTj/view",
+    "media_scope": {
+      "batch_ids": [
+        "B01",
+        "B02"
+      ],
+      "shots": 20,
+      "individual_mp4_files": 20,
+      "frames_each": 96,
+      "fps": 24,
+      "temporary_reel_seconds": 80
+    },
+    "revised": [
+      "B01-S01",
+      "B01-S02",
+      "B01-S05",
+      "B01-S10",
+      "B02-S01",
+      "B02-S04",
+      "B02-S08",
+      "B02-S10"
+    ],
+    "director_notes": "Vocal scales over two no-singer harbor/tavern panoramas. Scene-local A/B FX and still derivatives remain, real same-film dancer/instrument footage when performance must be shown, purposeful transition toward tavern at B01-S10/B02-S01, music out into harbor B02-S10. Repeated footage is not to be rubber-stamped in the 5m21 master.",
+    "coverage_interpretation": "B02-S01 outside tavern approach and B02-S02 editorial threshold to visible interior—literal walking through doorway not shown, but director accepts the ellipsis as batch coverage, not canonical storyboard rewrite.",
+    "QC": {
+      "per_shot_exact_frame_count": 20,
+      "RC7_complete_encoded_scan": {
+        "black_events": 0,
+        "half_second_freezes": 0
+      },
+      "RC8_changed_shot_independent_decode_and_freeze_scan": {
+        "count": 2,
+        "black_events": 0,
+        "half_second_freezes": 0
+      },
+      "RC8_total_encoded_frames": 1920,
+      "RC8_full_encoded_freeze_scan": "NOT_COMPLETED__PROCESS_INTERRUPTED_AT_15_SECONDS",
+      "reused_18_other_shot_bytes_exactly_from_RC7": true
+    },
+    "Director_selection": "ACCEPT_B01_B02_AS_MOVING_SCENE_BATCH_PROOFS_FOR_CONTINUED_FULL_FILM_PRODUCTION",
+    "not_approved": [
+      "final_5m21_film",
+      "frame_followable_lyric_cut",
+      "final_scene_durations",
+      "master_FX",
+      "owner_releasable_movie",
+      "source_repetition_as_master_edit"
+    ],
+    "B03_B04_B05_hold_cleared_for_new_batch_work": true,
+    "missing_next_batch_source_status": "Existing B03 original recoverability caveat and B05 dawn finale completeness still apply. No new source or script derived by this decision."
   }
 }
