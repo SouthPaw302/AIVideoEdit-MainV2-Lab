@@ -1,0 +1,42 @@
+{
+  "schema": "aive.godot.procedural3d-proof.v1",
+  "date": "2026-10-15",
+  "branch": "test/godot-render",
+  "tested_sha": "48abca2eede6c7910a61c16e52d1fdc2dce35e5c",
+  "run": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38698906992",
+  "status": "TECHNICAL_PROOF_PASS",
+  "source_visuals": [],
+  "source_video": [],
+  "source_wav": "El Viento trae tu nombre Instrumental",
+  "source_wav_sha256": "8d451360246378db551282c3703add4cd474c9ad3a4c6cf778390ae727820fe0",
+  "wav_excerpt_start_seconds": 46,
+  "scene_engine": "Godot 4.7.2 software OpenGL, procedural 3D mesh construction + physically orbiting camera",
+  "movie": {
+    "duration_seconds": 14,
+    "frames": 336,
+    "width": 960,
+    "height": 540,
+    "fps": 24,
+    "audio_codec": "aac",
+    "video_codec": "h264"
+  },
+  "outputs": {
+    "godot": {
+      "sha256": "a8f97c2c49dcfb5604cb2dbc98b9c65522be6fab8c52f996b558e9b8494788ae",
+      "bytes": 2155633
+    },
+    "mainv2_fx": {
+      "sha256": "4d4fb08188609d27b54d3986da36e58515048d18542b80759614663791593ac3",
+      "bytes": 2396559,
+      "canonical_fx": [
+        "FX2-ATM-001",
+        "FX2-LIGHT-001"
+      ]
+    }
+  },
+  "technical_verification": "Both movies decoded with matching 336 frames, audio present, exact output digests, 14s stream duration; visible original 3D geometry inspected",
+  "human_visual_approval": "PENDING",
+  "production_use": "NOT_APPROVED",
+  "main_changed": false,
+  "artifacts": "Actions 7-day retention and current ChatGPT downloads"
+}
