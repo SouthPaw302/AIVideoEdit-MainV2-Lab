@@ -1,0 +1,137 @@
+name: La Luna B02 — Real Per-Still FX Render (Director First)
+
+on:
+  push:
+    branches:
+      - song/la-luna-de-florida
+    paths:
+      - .github/workflows/la-luna-b02-fx.yml
+      - scripts/la_luna_b02_fx_runner.py
+      - projects/la-luna-de-florida/B02_DIRECTOR_PREFLIGHT.json
+      - projects/la-luna-de-florida/media/b02_sources/**
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: la-luna-b02-fx-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  b02-individual-fx:
+    name: "Render B02 FX ${{ matrix.group }}"
+    runs-on: ubuntu-24.04
+    timeout-minutes: 55
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - group: "S01-S02"
+            shot_a: "B02-S01"
+            shot_b: "B02-S02"
+          - group: "S03-S04"
+            shot_a: "B02-S03"
+            shot_b: "B02-S04"
+          - group: "S05-S06"
+            shot_a: "B02-S05"
+            shot_b: "B02-S06"
+          - group: "S07-S08"
+            shot_a: "B02-S07"
+            shot_b: "B02-S08"
+          - group: "S09-S10"
+            shot_a: "B02-S09"
+            shot_b: "B02-S10"
+    steps:
+      - name: Checkout immutable production branch and ten hash-verified B02 original PNGs
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Setup pinned Python runtime
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.11"
+      - name: Boot exact current-main OS and validate Director/guards
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch --no-tags origin main
+          python bootstrap.py boot --repo-root "$PWD" --branch song/la-luna-de-florida --offline
+          python .aivideoedit/os/general/reusable/tools/production_guard.py --branch song/la-luna-de-florida
+          python .aivideoedit/os/general/reusable/tools/narrative_guard.py --branch song/la-luna-de-florida
+          if test -f .aivideoedit/os/general/reusable/tools/recut_guard.py; then
+            python .aivideoedit/os/general/reusable/tools/recut_guard.py --branch song/la-luna-de-florida
+          fi
+          if test -f .aivideoedit/os/general/reusable/tools/workflow_guard.py; then
+            python .aivideoedit/os/general/reusable/tools/workflow_guard.py --branch song/la-luna-de-florida
+          fi
+      - name: Install pinned FXRuntime and video backend dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --disable-pip-version-check "numpy==2.2.6" "opencv-python-headless==4.11.0.86"
+          sudo apt-get update -y
+          sudo apt-get install -y ffmpeg
+          command -v ffmpeg
+          command -v ffprobe
+      - name: Verify all source hashes, Director preflight and exact current-main FX registry
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib, json, pathlib
+          base=pathlib.Path("projects/la-luna-de-florida")
+          d=json.loads((base/"B02_DIRECTOR_PREFLIGHT.json").read_text())
+          assert d["phase"]=="BEFORE_FX_MEDIA_GENERATION"
+          assert d["director_disposition"]=="PROOF_AUTHORIZED_REVIEW_PENDING"
+          assert d["render_contract"]["source_preserve_unmodified"] is True
+          assert d["render_contract"]["human_approval"] is False
+          assert len(d["shots"])==10
+          registry=json.loads(pathlib.Path(".aivideoedit/os/general/reusable/fx_v2/registry.json").read_text())
+          for shot in d["shots"]:
+              p=base/"media/b02_sources"/(shot["shot_id"]+".png")
+              assert p.is_file(),f"Missing original {p}"
+              assert hashlib.sha256(p.read_bytes()).hexdigest()==shot["source_sha256"],f"Hash mismatch {p}"
+              for k in shot["approved_runtime_effect_candidates"]:
+                  assert registry["effects"][k]["gate_status"]=="approved",k
+          print("B02 ORIGINALS, REGISTRY AND DIRECTOR PREFLIGHT: VERIFIED")
+          PY
+      - name: Render four actual independently hashed H.264 A/B loops and derived stills
+        shell: bash
+        env:
+          SHOT_A: ${{ matrix.shot_a }}
+          SHOT_B: ${{ matrix.shot_b }}
+        run: |
+          set -euo pipefail
+          python scripts/la_luna_b02_fx_runner.py \
+            --shots "$SHOT_A" "$SHOT_B" --out "$RUNNER_TEMP/real-b02-fx"
+          python - <<'PY'
+          import json, os, pathlib
+          p=pathlib.Path(os.environ["RUNNER_TEMP"])/"real-b02-fx/B02_FX_RUNNER_RECEIPT.json"
+          d=json.loads(p.read_text())
+          assert d["variant_count"]==4 and d["shot_count"]==2
+          assert all(x["decoded_without_error"] and x["max_mean_absolute_pixel_change"]>=.03 for x in d["generated"])
+          assert d["director_full_film_review"] is False and d["human_release_approval"] is False
+          print("B02 REAL RUNNER FX OUTPUTS: 4 — TECHNICAL EVIDENCE ONLY")
+          PY
+      - name: Write truthful proof status to Actions summary
+        if: always()
+        shell: bash
+        run: |
+          {
+            echo "### La Luna de Florida — Batch 02 real FX proof"
+            echo "Group: ${{ matrix.group }}"
+            echo "Input: original B02 PNGs, independently hashed against branch Director preflight."
+            echo "Output on success: 4 A/B MP4 loops, 4 derived stills, unchanged originals, SHA-256 receipt."
+            echo "FX: water ROI or localized practical light via bootstrapped current-main FXRuntime."
+            echo "Technical execution is not artistic, Director, source-canon, or release acceptance."
+          } >> "$GITHUB_STEP_SUMMARY"
+      - name: Upload B02 unchanged sources, A/B FX stills, loops and measured proof receipt
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: la-luna-b02-real-fx-${{ matrix.group }}-${{ github.run_id }}
+          path: ${{ runner.temp }}/real-b02-fx/
+          retention-days: 30
+          if-no-files-found: warn
