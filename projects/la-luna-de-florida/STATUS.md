@@ -1,5 +1,12 @@
 # La Luna de Florida — Status
 
+## Current stage interpretation — 2026-10-15
+
+Canonical process authority: [FX_STAGE_CANON.json](FX_STAGE_CANON.json). **Light FX, Character FX and Master FX/Assembly are distinct gates**. B01 and B02 Light FX both have technical PASS with original backups and 20 A/B motion proofs each; **neither batch has completed the separate character-performance acceptance gate**. The light gate is not expected to animate people. Master FX, complete film and owner approval remain pending. Beat This! ONNX full-song beat evidence is PASS ([run #38680169728](https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38680169728)); precise lyric-line/script timing remains unverified. This section supersedes any older summary implying B02 Light FX is incomplete, without erasing historical facts or promoting unapproved pixels to canon.
+
+Another film repo may be studied solely as an agent-process reference once the user supplies it. **No cross-project creative assets, story, characters, settings, workflows or canon imported automatically.** Current-main OS and this branch's own authority remain binding.
+
+
 **Canonical still storyboard LOCKED by explicit user instruction.** See `STORYBOARD_CANON.json` and `STORYBOARD_CANON.md`: 50 shots in five narrative acts, board SHA256 `05b232452eebce56fb9c047a0f481a19e04cf2d13e364bee30255dd27c88703a`.
 
 **Machine production stage:** `INITIALIZED`. Do not artificially advance `PROJECT_STATE.stage`; the full stage prerequisites still need completing. The user approved the storyboard as visual canon, not individual pixels or a finished film.
