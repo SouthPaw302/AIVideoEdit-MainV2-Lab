@@ -1,5 +1,14 @@
 # Production handoff — La Luna de Florida
 
+## LATEST — RC8 B01/B02 Director motion-stage pass and next production
+
+B01/B02 **10+10 movie-scene movement proofs DIRECTOR-SELECTED for the next stage**. [RC8 80-second moving Director cut](https://drive.google.com/file/d/1G11pqOEWMc8h0W-y4Gsf7qW-VEsqN-zh/view), [all 20 exact hashed MP4 scene proofs + executable source scripts](https://drive.google.com/file/d/1rqMtkcCARkcwH0FqLx0tfwoo0JrA-AQ-/view), [contact](https://drive.google.com/file/d/137drSrviObFtLMXBrCNhOuIhkzTR3tDx/view), [Director decision](https://drive.google.com/file/d/13INExAvUFPYsXsGSPZ3aFZPvXCDdNARD/view). The 2 pan opening shots obey the user's vocals/scales direction; FX stack plus genuine dance/violin performance remain the primary method. B01-S10 and B02-S01 form a restrained camera approach to the tavern; B02-S02 editorially transitions inside; B02-S10 concludes out over actual moving harbor.
+
+Technical caveat: RC7 full scan passed, RC8 changed two shots decoded and passed, yet an independent full RC8 freeze scan was interrupted after 15 seconds; do not misreport the latter as passed. Source FX/video are immutable. Human owner release **not** approved. The 4s per-shot sequence is only a temp workprint; whole-film lyrics/ONNX sync and 5:21 assembly remain for Master FX. Source repetition from the same-film 10s B05 musician clip remains an editorial risk at full-film scale.
+
+**Next:** go B03-B05 only after inspecting existing originals and reconciling source gaps. B03-S10 is missing, B05 night extras do NOT replace the final sunrise requirement. Work only on `song/la-luna-de-florida`. Never import another project's characters or media. The earlier RC5 statuses below are historical, not the latest gate truth.
+
+
 ## B01/B02 RC5 full moving-shot proof library — reviewed technical scope
 
 **LATEST PRIORITY before B03-B05:** [80s RC5 Director review](https://drive.google.com/file/d/1z6KpMw3WljbtWajHDVV1e02mzCLQjfFA/view), [20 native-cadence shot videos, all RC3/4/5 compositor source scripts, and SHA/QC receipts](https://drive.google.com/file/d/1J3dmI4nO_3TK601rvI8wdEulmW8czkBe/view). See `B01_B02_MOVEMENT_DIRECTOR_STATUS.json.latest_RC5_provisional` for per-shot classification. New RC5 sandbox movie 1920 frames/80s, zero detected black and >=0.5s frozen events. 15 shots have genuine same-film actor/instrument/reaction motion candidates, 4 are environment/no character action, B02-S02 dock-to-interior cut has moving musicians but not literal door-crossing feet. **No human/Director creative acceptance yet.** High risk of repeated underlying B05 Gemini musician footage over many shot reframings: normal-speed review required. B01/B02 originals/FX preserved, user song WAV/50-shot board/other repo unaffected. This is NOT the 5m21 film. No expansion to B03/B04/B05 until owner/Director acceptance of B01/B02 movement/coverage. All new evidence goes to production Drive directly, not persistent native ChatGPT Library.
