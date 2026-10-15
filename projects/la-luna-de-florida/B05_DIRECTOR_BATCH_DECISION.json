@@ -1,0 +1,147 @@
+{
+  "schema": "aivideoedit.la-luna-b05-director-batch-decision.v1",
+  "production_id": "la-luna-de-florida",
+  "branch": "song/la-luna-de-florida",
+  "scope": "B05_AND_FULL_FILM_HANDOFF",
+  "status": "B05_RC1_TEN_MOVING_SHOTS_DIRECTOR_SELECTED__FULL_MASTER_UNASSEMBLED",
+  "source_selection": "B05_FINALE_SOURCE_SELECTION.json",
+  "source_archive": "https://drive.google.com/file/d/125BAnia3HKacDFtpOel8-etstMu-h0tw/view",
+  "source_sha256": "dbbc3a1a72af40dcdb9afa26ea032dd5bdc2ef448a3508464a562e78ad5cf596",
+  "source_count": 10,
+  "preserved_night_originals": 7,
+  "new_standalone_dawn_source_images": 3,
+  "original_B05_night_extra_archive_unchanged": true,
+  "native_fx": {
+    "run": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38805344772",
+    "status": "completed_success",
+    "originals_verified": 10,
+    "A_B_variants": 20,
+    "actual_main_runtime": true,
+    "runtime_sha256": "6cfdf3ba68c1f79015c1f1b26174d4e3ca4de7b75b06b5ad9811580f5bc2cfa4",
+    "drive_artifact": "https://drive.google.com/file/d/1yUW4rNoWl7gEygjWbtJGgU3u6dLaPPqt/view",
+    "artifact_sha256": "66ef92564f362c8189a7ef9be252638a564555fd02b5314d90492ac311ac3e0f"
+  },
+  "director_moving_cut": {
+    "watch": "https://drive.google.com/file/d/1OjqMNnZKW5m2XDKtbsJhprdyiUIniiQz/view",
+    "sha256": "ea79734b5e4427beb5e51ccabcd25df39d6e43ba76a12481db50d4502dd209b3",
+    "shot_archive": "https://drive.google.com/file/d/1vps_qOmVKJy_96aTcQh0-tgjJlZmXLsJ/view",
+    "shot_archive_sha256": "c7a2e55b3e7e8cdcc33c3cb55532fb2fed5d881603c91e5dd356e5b08ae2bb27",
+    "contact": "https://drive.google.com/file/d/1z-2nVLnzDXRGHumaTk3ZFmRGomW_SjT-/view",
+    "qc": "https://drive.google.com/file/d/1JAOA7Dudsq3rGgigzRouT3DKpD2Ya4J-/view",
+    "actual_frames": 960,
+    "fps": 24,
+    "duration_s": 40,
+    "resolution": [
+      960,
+      540
+    ],
+    "actual_export_black_events": 0,
+    "actual_export_half_second_freeze_events": 0,
+    "original_audio_excerpt_start_s": 281.16,
+    "source_audio_untouched": true,
+    "provisional_timing": true,
+    "moving_scene_compositor": "source-preserved, sandbox execution using actual native loop output, restrained affine cinema camera, two distinct same-song real video inserts in S02 and S04; no global warps or false choreography claims"
+  },
+  "per_shot": [
+    {
+      "shot_id": "B05-S01",
+      "decision": "SELECT_NIGHT_ENSEMBLE_HOLD",
+      "note": "After celebration, anchored at tavern table; material lighting and bounded slow camera, actor poses protected",
+      "original_source_unchanged": true,
+      "moving_scene_accepted_as_batch_proof": true,
+      "final_master_timing_still_open": true
+    },
+    {
+      "shot_id": "B05-S02",
+      "decision": "SELECT_LAST_DANCE_WITH_FILMED_MOTION",
+      "note": "One last dance: original night source starts the shot, then genuine same-film couple performance provides moving-body footage",
+      "original_source_unchanged": true,
+      "moving_scene_accepted_as_batch_proof": true,
+      "final_master_timing_still_open": true
+    },
+    {
+      "shot_id": "B05-S03",
+      "decision": "SELECT_SILENT_HERO_BREAKDOWN",
+      "note": "Reflective man, camera and lantern atmosphere; no lip-motion claim",
+      "original_source_unchanged": true,
+      "moving_scene_accepted_as_batch_proof": true,
+      "final_master_timing_still_open": true
+    },
+    {
+      "shot_id": "B05-S04",
+      "decision": "SELECT_FILMED_MUSIC_SOURCE",
+      "note": "Original nighttime guitar/violin image transitions into genuine 10s same-film B05-S04 Gemini musician action; no note-level fingering sync claim",
+      "original_source_unchanged": true,
+      "moving_scene_accepted_as_batch_proof": true,
+      "final_master_timing_still_open": true
+    },
+    {
+      "shot_id": "B05-S05",
+      "decision": "SELECT_NIGHT_FADES_BRIDGE",
+      "note": "Moonlit pier and lanterns, native localized water/lighting; final darkness before sunrise",
+      "original_source_unchanged": true,
+      "moving_scene_accepted_as_batch_proof": true,
+      "final_master_timing_still_open": true
+    },
+    {
+      "shot_id": "B05-S06",
+      "decision": "SELECT_ENSEMBLE_FINAL_CHORUS",
+      "note": "Tavern musicians, community and lantern energy, camera/motivated material FX; no fake individual claps",
+      "original_source_unchanged": true,
+      "moving_scene_accepted_as_batch_proof": true,
+      "final_master_timing_still_open": true
+    },
+    {
+      "shot_id": "B05-S07",
+      "decision": "SELECT_BEFORE_GOODBYE_HOLD",
+      "note": "Nighttime dance/intimacy held as visual farewell; faces and geometry protected",
+      "original_source_unchanged": true,
+      "moving_scene_accepted_as_batch_proof": true,
+      "final_master_timing_still_open": true
+    },
+    {
+      "shot_id": "B05-S08",
+      "decision": "SELECT_FULLFRAME_SUNRISE_PANORAMA",
+      "note": "Real full-frame dawn pier plate, native water FX plus slow wide camera travel; sunrise reveal after nighttime beats",
+      "original_source_unchanged": true,
+      "moving_scene_accepted_as_batch_proof": true,
+      "final_master_timing_still_open": true
+    },
+    {
+      "shot_id": "B05-S09",
+      "decision": "SELECT_DAWN_COPULE_ECHO",
+      "note": "Standalone sunrise tavern plate shows couple in morning light, native practical lighting, no forced lips/hands animation",
+      "original_source_unchanged": true,
+      "moving_scene_accepted_as_batch_proof": true,
+      "final_master_timing_still_open": true
+    },
+    {
+      "shot_id": "B05-S10",
+      "decision": "SELECT_SUNRISE_CELEBRATION_FINALE",
+      "note": "Standalone sunrise full-crowd and couple celebration: Vovleremos a bailar; ending on warm morning over harbor, not return to night",
+      "original_source_unchanged": true,
+      "moving_scene_accepted_as_batch_proof": true,
+      "final_master_timing_still_open": true
+    }
+  ],
+  "director_verdict": "PASS_B05_AS_MOVING_SCENE_BATCH_FOR_MASTER_FX",
+  "acceptance_limits": [
+    "This is a 40s B05 preview, not full 5:21 feature or final timed scenes",
+    "10 source plates selected as film shot candidates, not retrospective assertion all 10 original B05 dawn pictures existed before current work",
+    "Animated character performance specifically shown in S02 and S04; other shots are credible still-derived living scene treatments",
+    "Cross-act same-film Gemini reuse from B01–B04 must be reviewed for repetition and identity during full-film Master FX",
+    "B01–B04 batch-stage decisions preserved and not re-rendered here",
+    "Lyrics/beat-to-shot master cue timings not yet locked",
+    "Owner release and full master FX remain pending"
+  ],
+  "master_next_action": "Boot the canonical song branch and full-song ONNX beat analysis; link B01/B02 RC8, B03 RC2, B04 RC2, B05 RC1 as source-locked per-shot proof libraries; create frame-followable 321.16s narrative edit with verified lyrics and music markers, accept/reject repeated Gemini performance shots, apply Master FX continuity/grade/transitions, then runner full film render/actual QC. No new storyboard or other project assets.",
+  "progress": {
+    "B01": "batch_stage_selected",
+    "B02": "batch_stage_selected",
+    "B03": "batch_stage_selected_with_nine_originals_S10_derived",
+    "B04": "batch_stage_selected",
+    "B05": "batch_stage_selected_RC1",
+    "master": "NOT_COMPLETED",
+    "release": "NOT_APPROVED"
+  }
+}
