@@ -1,5 +1,17 @@
 # La Luna de Florida — Status
 
+## B01–B02 Director movement production (2026-10-15)
+
+**Active in THIS song branch; B03–B05 movement progression HOLD until B01/B02 are Director-complete.** Detailed binding report: [B01_B02_MOVEMENT_DIRECTOR_STATUS.json](B01_B02_MOVEMENT_DIRECTOR_STATUS.json).
+
+- Actual Actions run [#38684398752](https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38684398752): **10/10 matrix jobs success**, 20 source-hash-validated new 4-second H264 moving-scene candidate proofs (96 frames each, 960x540), using the preserved original B01/B02 A/B environmental light loops, local protected cloth movement, 2D Gaussian practical light and Director camera. Both original FX input runs remain unchanged.
+- Actual moving-source same-film Gemini clip split into **B01-S07 real first dance** and **B01-S09 moving harbor** (two distinct source time windows); only as separate candidate video motion. Preserve source video and older stills.
+- The current **80-second RC2 real-dance Director review** with initial 80 seconds of the unchanged original WAV is at [Drive](https://drive.google.com/file/d/1VTshGBSTdKKNf87PaH3wfNzLUn47AJ-x/view). It is a temporary 4 seconds/shot moving proof, NOT canon script timing.
+- All 20 proofs and full receipts archived in [Drive](https://drive.google.com/file/d/1wC2qxvCZAPgQR0AZ9w94T9sKPVnf6NIN/view); [motion work folder](https://drive.google.com/drive/folders/19fPAokHiMzdwD0FqTHVlW_VhBAe6RFet) contains review cuts, Gemini real-motion alternatives and contacts.
+- **Director verdict = REVISIONS REQUIRED, not Character FX locked**: 14 shots still lack real character/instrument/gesture articulation; B01-S10 and B02-S01/S02 remain visual-storyboard coverage mismatches. Actual RC2 export has 0 black frames, correct 1920-frame/80-second duration and decodes, but 7 temporal freeze intervals >=0.5s and 208 pairs with too little adjacent motion in the original 20 clip candidate set. These defects were not concealed.
+- Full film Master FX and human release remain unapproved. No other repository/branch source media or story entered this production.
+
+
 ## Current stage interpretation — 2026-10-15
 
 Canonical process authority: [FX_STAGE_CANON.json](FX_STAGE_CANON.json). **Light FX, Character FX and Master FX/Assembly are distinct gates**. B01 and B02 Light FX both have technical PASS with original backups and 20 A/B motion proofs each; **neither batch has completed the separate character-performance acceptance gate**. The light gate is not expected to animate people. Master FX, complete film and owner approval remain pending. Beat This! ONNX full-song beat evidence is PASS ([run #38680169728](https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38680169728)); precise lyric-line/script timing remains unverified. This section supersedes any older summary implying B02 Light FX is incomplete, without erasing historical facts or promoting unapproved pixels to canon.
