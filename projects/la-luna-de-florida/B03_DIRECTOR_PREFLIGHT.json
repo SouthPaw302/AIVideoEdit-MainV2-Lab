@@ -3,7 +3,7 @@
   "production": "la-luna-de-florida",
   "branch": "song/la-luna-de-florida",
   "stage": "B03",
-  "status": "SOURCE_AUDIT_PASSED_9_OF_10__S10_SOURCE_DERIVED_CANDIDATE_ONLY",
+  "status": "SOURCE_AUDIT_9_OF_9_RECOVERABLE_ORIGINALS_PASS__S10_DERIVED_EDITORIAL_SOURCE_ACCEPTED_BY_DIRECTOR",
   "source_zip": "https://drive.google.com/file/d/1oSb1FLlWJjzPccU2sywjI5gGGw2Lqv4K/view",
   "source_zip_size_bytes": 19189873,
   "canonical_board_sha256": "05b232452eebce56fb9c047a0f481a19e04cf2d13e364bee30255dd27c88703a",
@@ -132,7 +132,8 @@
     ],
     "method": "camera_and_alpha_handoff_from_existing_originals",
     "must_not_claim": "10 independent full-size original stills recovered",
-    "director_right_to_reject_if_artistic_coverage_mismatch": true
+    "director_right_to_reject_if_artistic_coverage_mismatch": false,
+    "director_disposition": "ACCEPT_DERIVED_BRIDGE_FOR_B03_BATCH_STAGE__MASTER_CAN_CHANGE_EDITORIAL_TIMING"
   },
   "visual_protection": [
     "actors identity faces",
@@ -142,5 +143,14 @@
     "source time night except deliberate mountain memory"
   ],
   "run_provenance": "Initial sandbox FX equivalent, not claimed bootstrapped current-main FXRuntime. GitHub Actions current-main native workflow to be staged or tested separately.",
-  "master_film_approved": false
+  "master_film_approved": false,
+  "user_authorized_source_count": {
+    "B03_original_stills": 9,
+    "B03_storyboard_intents": 10,
+    "director_decision": "B03_DIRECTOR_BATCH_DECISION.json",
+    "source_S10_original_unavailable": true,
+    "derived_S10_editorial_handoff_accepted": true,
+    "independent_tenth_source_required": false,
+    "locked_storyboard_preserved": true
+  }
 }
