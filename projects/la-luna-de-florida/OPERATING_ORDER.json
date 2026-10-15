@@ -58,8 +58,8 @@
     "forbidden_changes": [],
     "source_replacement_authorized": false
   },
-  "current_user_direction": "La Luna de Florida is a full five-act Director film; B01/B02 RC8, B03 RC2 nine-original-source exception, and B04 RC2 10 originals/20 native light FX/10 moving scene Director selections are complete as PRODUCTION BATCH gates. Keep original 50-shot storyboard and exact original WAV immutable, no cross-project footage. For B05 preserve correct dusk-to-dawn story and differentiate night extras from needed true sunrise originals.",
-  "exact_next_action": "Advance to B05 SOURCE PREFLIGHT first. Verify 10 canonical final act B05 storyboard intents against existing B05 NIGHT EXTRA backup; night extras alone do NOT satisfy the dawn/sunrise ending. Produce only missing approved original sources or clearly separate cinematic derived treatment, get visual and source authority correct, then run native Lab-main FX for scene-appropriate materials, separate performance/scene motion FX, ten-shots Director QC. Do not begin Master FX until B05 visuals and the full 5:21 lyric-aligned screenplay are ready. B04 batch decision in B04_DIRECTOR_BATCH_DECISION.json and native run #38702608550.",
+  "current_user_direction": "La Luna de Florida full Director five-act 50-shot film. All five production batches B01/B02 RC8, B03 RC2, B04 RC2, B05 RC1 have actual 4-second-per-shot moving proofs and Director batch-stage selection. Preserve originals, fx loops, source hashes, the song WAV and 50-shot storyboard; never mistake these temporary proof timings for the complete 321.16s movie. The user directed 'home stretch, don't get stuck'.",
+  "exact_next_action": "Begin FULL 321.16-SECOND MASTER FX / DIRECTOR FEATURE ASSEMBLY. First read projects/la-luna-de-florida/MASTER_50_SHOT_SOURCE_PREFLIGHT.json (50/50 video SHA/fps/frame/source verified) and B05_DIRECTOR_BATCH_DECISION.json. Read full-song original WAV SHA1a4b.. and pinned ONNX run 38680169728 plus LYRICS.md / SCRIPT.md. Author frame-followable 7708-frame shot schedule from music and lyric cues, not uniform four-second workprints; prevent repeated 10s same-film Gemini performance motifs from becoming obvious in the complete film. Assemble master with authorized native FX/shot package camera transitions, continuity grade, sound and encoded-video actual QC. Complete film, final artistic signoff and owner release NOT yet approved. Do not change source stills, main or unrelated song branches.",
   "updated_at_utc": "2026-10-13T03:50:00Z",
   "director_supervision": {
     "required": true,
@@ -89,10 +89,8 @@
     "external_reference_policy": "process_learning_only"
   },
   "movement_current_work": {
-    "active_batches": [
-      "B05"
-    ],
-    "status": "B04_DIRECTOR_BATCH_STAGE_SELECTED__NEXT_B05_CANON_FINALE_SOURCE_PREFLIGHT",
+    "active_batches": [],
+    "status": "ALL_FIVE_BATCH_MOVING_SCENES_SELECTED__MASTER_FX_PREP_NOW",
     "B01_B02_batch_stage": "RC8_SELECTED",
     "B03_stage": "RC2_9_ORIGINALS_18_NATIVE_FX_S10_DERIVED_SELECTED",
     "B04_stage": "RC2_10_ORIGINALS_20_NATIVE_FX_10_MOVING_PROOFS_SELECTED",
@@ -100,8 +98,15 @@
     "B04_native_run_id": 38702608550,
     "B04_runner_pass": true,
     "B04_review_cut": "https://drive.google.com/file/d/11exEAiou7XMbLerksMQvOJxPqb_BdP9P/view",
-    "B05_started": false,
+    "B05_started": true,
     "master_locked": false,
-    "owner_release_approved": false
+    "owner_release_approved": false,
+    "B05_stage": "RC1_10_PROVEN_NIGHT_TO_DAWN_SOURCE_PLATES_20_NATIVE_A_B_FX_10_MOVING_SCENES_SELECTED",
+    "B05_director_decision": "B05_DIRECTOR_BATCH_DECISION.json",
+    "B05_run_id": 38805344772,
+    "B05_review_cut": "https://drive.google.com/file/d/1OjqMNnZKW5m2XDKtbsJhprdyiUIniiQz/view",
+    "B05_10_shot_proofs": "https://drive.google.com/file/d/1vps_qOmVKJy_96aTcQh0-tgjJlZmXLsJ/view",
+    "all_50_video_proofs_verified": true,
+    "master_source_index": "MASTER_50_SHOT_SOURCE_PREFLIGHT.json"
   }
 }
