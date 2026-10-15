@@ -1,5 +1,16 @@
 # La Luna de Florida — Status
 
+## Latest — B05 night-to-dawn Director batch SELECTED, full film Master FX next (2026-10-15)
+
+**Five production batches now Director-selected at moving-scene proof stage.** B05 retains 7 distinct original archived nighttime source stills and 3 new standalone true full-frame 1672×941 dawn plates; no earlier-contact-sheet poster is treated as media. The original B05 night EXTRA archive was preserved and never rewritten. Source ZIP: [10 exact B05 source plates](https://drive.google.com/file/d/125BAnia3HKacDFtpOel8-etstMu-h0tw/view), SHA256 `dbbc3a1a72af40dcdb9afa26ea032dd5bdc2ef448a3508464a562e78ad5cf596`, mapping in [B05_FINALE_SOURCE_SELECTION.json](B05_FINALE_SOURCE_SELECTION.json).
+
+**Native current-Lab-main FXRuntime PASS:** [GitHub Actions run #38805344772](https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38805344772) downloaded SHA-verified 10 stills and rendered 20 A/B registered localized-water/practical-light loops. [Complete original-preserving native archive](https://drive.google.com/file/d/1yUW4rNoWl7gEygjWbtJGgU3u6dLaPPqt/view), SHA256 `66ef92564f362c8189a7ef9be252638a564555fd02b5314d90492ac311ac3e0f`.
+
+**B05 40-second Director review** [watch RC1](https://drive.google.com/file/d/1OjqMNnZKW5m2XDKtbsJhprdyiUIniiQz/view), SHA256 `ea79734b5e4427beb5e51ccabcd25df39d6e43ba76a12481db50d4502dd209b3`; [all 10 moving clips + repro script, SHA receipts](https://drive.google.com/file/d/1vps_qOmVKJy_96aTcQh0-tgjJlZmXLsJ/view); [two-moment/shot contact](https://drive.google.com/file/d/1z-2nVLnzDXRGHumaTk3ZFmRGomW_SjT-/view). Actual encoded QC PASS: 960 frames at 24fps, 960×540, original WAV excerpt (281.16s start), zero black events and zero ≥0.5s freezes. S02 real same-film dance; S04 real same-film violin/guitar performance; remaining shots use source-preserving native lighting/water and restrained Director camera. B05-S08 is the morning pier panorama, S09 sunrise couple/room, S10 morning celebration; the film does not end in darkness. [Exact per-shot Director batch-stage verdict](B05_DIRECTOR_BATCH_DECISION.json).
+
+**Master source audit:** [50/50 individual B01–B05 MP4 SHA-proven 960×540 24fps 96-frame clips](MASTER_50_SHOT_SOURCE_PREFLIGHT.json) checked from all four archives. Original song WAV SHA256 `1a4bffef36930b504423d2653faff4cc5bfd9a15d44bdcf1083b27fbb0db1c10` unchanged. Five batch workprints total 200s, NOT the whole **321.16s** theatrical film. Director's *next* task is frame-followable lyric/ONNX beat timing, continuity/performer repetition review, Master FX true full-song render and full encoded QC. Full film not yet assembled/owner release NOT APPROVED.
+
+
 ## LATEST — B04 RC2 Director batch-stage selection (2026-10-15)
 
 **B04 10/10 moving-scene proof positions DIRECTOR-SELECTED for full-film continuation.** [Watch B04 RC2 40-second cut](https://drive.google.com/file/d/11exEAiou7XMbLerksMQvOJxPqb_BdP9P/view) · [10 preserved shot clips, reproducible RC1/RC2 compositors and technical receipts](https://drive.google.com/file/d/10cF5tPLxGHxvGKZA7B091K53dGxctqTb/view) · [full contact sheet](https://drive.google.com/file/d/1js02fxYFgaCHuo_YJ4FZlItktdcNuEtt/view). [Exact per-shot Director verdict](B04_DIRECTOR_BATCH_DECISION.json). New Drive folder: [15 Director Movement B04](https://drive.google.com/drive/folders/16AxFdus_bQzScFUUCCxIaHIr1AMxQIYD).
