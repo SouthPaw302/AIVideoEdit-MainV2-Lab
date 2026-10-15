@@ -1,0 +1,48 @@
+name: La Luna — FX Stage Canon Gate
+on:
+  push:
+    branches:
+      - song/la-luna-de-florida
+    paths:
+      - .github/workflows/la-luna-fx-stage-canon.yml
+      - scripts/la_luna_fx_canon_guard.py
+      - projects/la-luna-de-florida/FX_STAGE_CANON.json
+      - projects/la-luna-de-florida/OPERATING_ORDER.json
+      - projects/la-luna-de-florida/SOURCE_AUTHORITY.json
+      - projects/la-luna-de-florida/STORYBOARD_CANON.json
+      - projects/la-luna-de-florida/MUSIC_ANALYSIS.json
+      - projects/la-luna-de-florida/SCRIPT.json
+      - projects/la-luna-de-florida/PROJECT_STATE.json
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  fx-canon-verify:
+    name: Validate song-only three-stage FX canon and source isolation
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.11'
+      - name: Boot current-main OS and verify production branch guard
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch --no-tags origin main
+          python bootstrap.py boot --repo-root "$PWD" --branch song/la-luna-de-florida --offline
+      - name: Verify locked FX process canon and external project exclusion
+        run: python scripts/la_luna_fx_canon_guard.py
+      - name: Record truthful stage-gate scope
+        if: always()
+        shell: bash
+        run: |
+          {
+            echo '### La Luna — FX stage process check'
+            echo 'Verifies: 50-shot board authority; Light FX -> Character FX -> Master FX separation; ONNX evidence; source isolation.'
+            echo 'Does NOT certify: individual stills, character animation clips, lyric-line sync, full export, or human release.'
+          } >> "$GITHUB_STEP_SUMMARY"
