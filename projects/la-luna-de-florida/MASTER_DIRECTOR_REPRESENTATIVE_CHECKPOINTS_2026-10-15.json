@@ -1,0 +1,82 @@
+{
+  "schema": "aivideoedit.la-luna-master-fx-representative-checkpoints.v1",
+  "production": "la-luna-de-florida",
+  "branch": "song/la-luna-de-florida",
+  "status": "DIRECTOR_CHECKPOINT_IN_PROGRESS_NOT_APPROVED",
+  "hard_authority": {
+    "user_release_approved": false,
+    "script_locked": false,
+    "full_321s_film_rendered": false,
+    "representative_pass_all_five_acts_approved": false
+  },
+  "source_preservation": "ALL_CANONICAL_50_MP4S_AND_98_BATCH_NATIVE_FX_LOOPS_UNMODIFIED",
+  "original_wav_sha256": "1a4bffef36930b504423d2653faff4cc5bfd9a15d44bdcf1083b27fbb0db1c10",
+  "source_onnx_sha256": "cc6ef0c817624560832c8a67994cbd664a5b1567b6ba41f38911f1f2a83e062c",
+  "independent_music_evidence": {
+    "pcm_sample_rate": 48000,
+    "pcm_stereo": true,
+    "song_duration_s": 321.16,
+    "rms_seconds_scanned": 322,
+    "onnx_beats": 510,
+    "onnx_downbeats": 140,
+    "candidate_edit_starts_within_125ms_of_beat": 22,
+    "candidate_edit_starts_within_125ms_of_downbeat": 6,
+    "lyric_line_timestamps_verified": false,
+    "note": "Timing evidence on original WAV and independent ONNX; no spoken-vocal line transcription performed or inferred"
+  },
+  "shots": [
+    {
+      "id": "B01-S01",
+      "status": "MASTER_FX_RC2_PROOF_TECH_PASS_DIRECTOR_CREATIVE_HOLD",
+      "frames": 280,
+      "fps": 24,
+      "duration_seconds": 11.666666666666666,
+      "source_sha256": "97b7abe8e6e6b3f47c8a85a23e44aa57368bf9dc5334ae1527dbc8299166cd1a",
+      "original_4s_mp4_sha256": "e0156c760bdf9447ab607e19721304d4b9ca9f89c7c0bd648ba12b5b05e17a34",
+      "candidate_sha256": "6eabe8270812b3ffae8050d622c0714c5dadbc0326d2a72508467bb557904616",
+      "master_fx_details": "Protected static moon/city original; local native B01-S01 FX2-MOTION-003 A/B water and bounded source cloud/camera treatment. New candidate, not RC8 replacement.",
+      "qc": "FULL_VIDEO_DECODE_PASS_NO_BLACK_OR_FREEZE_GE_0P5S",
+      "director_note": "Still too static for feature-length opening; source itself has top-edge moon clipping; preserve approved RC8 crop, devise richer internal scene motion, do not treat as accepted."
+    },
+    {
+      "id": "B05-S04",
+      "status": "AUTHENTIC_SOURCE_PERFORMANCE_LONGFORM_CANDIDATE_TECH_PASS_FX_PENDING",
+      "frames": 160,
+      "fps": 24,
+      "duration_seconds": 6.666666666666667,
+      "original_gemini_video_sha256": "5e1c2b35ce9fbbe60d45a6c55766a1fd876644c39ae5e7b97218ab087cae1cc5",
+      "original_gemini_frame_range": [
+        0,
+        160
+      ],
+      "candidate_sha256": "114f742bf92b781563ed7bb432326d6490c051b9f521d863a978b4d0603f0c12",
+      "qc": "FULL_VIDEO_DECODE_PASS_NO_BLACK_OR_FREEZE_GE_0P5S",
+      "director_note": "Six-and-two-thirds seconds of actual violin and guitar actors without loops. Must reserve exact source frames uniquely across other acts and perform protected Master FX afterward."
+    },
+    {
+      "id": "B05-S08-S10",
+      "status": "SUNRISE_12S_TECH_PASS_DIRECTOR_CREATIVE_HOLD",
+      "frames": 288,
+      "fps": 24,
+      "duration_seconds": 12,
+      "original_wav_excerpt_start_s": 309.16,
+      "aac_to_original_waveform_correlation": 0.9997116,
+      "candidate_sha256": "08dc0eea01accbe9dff26f34449380e71175dee924dfd3aac32bb779b0226ab6",
+      "qc": "FULL_DECODE_NO_BLACK_NO_FREEZE",
+      "director_note": "Final dawning world matches visual story, but no validated lyric-line cues or accepted full cinematic evolution; first 4s native water FX only."
+    }
+  ],
+  "blocker_summary": [
+    "Lyric line alignment against entire WAV required",
+    "Remaining 2910 frame original gap only partly addressed in new candidate coverage; accepted master coverage still incomplete",
+    "48 other full-duration Master Director shot evolutions not complete",
+    "Canonical byte-serving source staging/manifest not production-ready",
+    "No complete full-feature actual movie to watch"
+  ],
+  "source_proof_github_run_urls": [
+    "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38823261996",
+    "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38823261974"
+  ],
+  "media_delivery_caveat": "Proof MP4 bytes currently sandbox-local; this JSON is receipt-only, not proof the renders are archived to Drive or deployed in the canonical runner. Do not claim full delivery.",
+  "next_director_action": "Finish nonrepeating long-form source coverage and real lyric cues, then full five-act cinematic representative FX proof and canonical manifest; keep all release gates closed."
+}
