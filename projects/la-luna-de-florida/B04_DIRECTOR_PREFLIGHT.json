@@ -1,0 +1,159 @@
+{
+  "schema": "aivideoedit.la-luna-b04-director-preflight.v1",
+  "production": "la-luna-de-florida",
+  "branch": "song/la-luna-de-florida",
+  "scope": "B04_ONLY",
+  "status": "ORIGINAL_10_STILL_SOURCE_SHA_AND_BOARD_SEMANTICS_VERIFIED__FX_AND_CHARACTER_GATES_OPEN",
+  "canonical_storyboard_source": "projects/la-luna-de-florida/STORYBOARD_CANON.json",
+  "storyboard_sha256": "05b232452eebce56fb9c047a0f481a19e04cf2d13e364bee30255dd27c88703a",
+  "act": "The night deepens",
+  "story_function": "Musicians and travelers reveal deeper feeling before chorus",
+  "original_archive": {
+    "drive": "https://drive.google.com/file/d/1XsSd2sQbSpRd8nxRyJxnryk0ErDELCbm/view",
+    "folder": "https://drive.google.com/drive/folders/1AlqDTpBA0NLgRdWTF6o0et0_WsnQnfaZ",
+    "sha256": "4905a120d08dd6d5eaca1b7f18d53188af5523abe5be3e30bb5be0f174e1a5df",
+    "originals": 10,
+    "resolution": [
+      1672,
+      941
+    ],
+    "unzip_crc_check_required": true,
+    "source_originals_immutable": true
+  },
+  "shot_intents": [
+    {
+      "shot_id": "B04-S01",
+      "caption": "The violin from the corner",
+      "source_filename": "B04-S01.png",
+      "original_sha256": "cd3817357668012d3599bf19c5f3609503648c94c078f65a8477c42135a91c3b",
+      "fx_candidate": "FX2-LIGHT-023",
+      "recipe": "RCP-FIRELIT-INTERIOR",
+      "character_motion_direction": "moving_violin_candidate_or_source_masked_stringing",
+      "semantic_action_not_falsified": true,
+      "original_accepted_as_source": true,
+      "FX_output_approval": false
+    },
+    {
+      "shot_id": "B04-S02",
+      "caption": "Palmas and compás",
+      "source_filename": "B04-S02.png",
+      "original_sha256": "3f08a83cdb977cc50a8b11e88e0aed2839cb1c81d88657c0675b40918041454a",
+      "fx_candidate": "FX2-LIGHT-023",
+      "recipe": "RCP-FIRELIT-INTERIOR",
+      "character_motion_direction": "real_hand_palmas_if_source_available_else_unverified",
+      "semantic_action_not_falsified": true,
+      "original_accepted_as_source": true,
+      "FX_output_approval": false
+    },
+    {
+      "shot_id": "B04-S03",
+      "caption": "She laughs",
+      "source_filename": "B04-S03.png",
+      "original_sha256": "d0bf85d4e4eddd4e7f4a42d7e779f0104d6454b44b77cac92aca15c1ec6d8397",
+      "fx_candidate": "FX2-LIGHT-023",
+      "recipe": "RCP-FIRELIT-INTERIOR",
+      "character_motion_direction": "real_couple_smile_or_light_camera_still_hold",
+      "semantic_action_not_falsified": true,
+      "original_accepted_as_source": true,
+      "FX_output_approval": false
+    },
+    {
+      "shot_id": "B04-S04",
+      "caption": "Lost in the dance",
+      "source_filename": "B04-S04.png",
+      "original_sha256": "60c7f4bb6fb1dd0efe67cd590c97a67b59270a77351653b0788306f8d7f61619",
+      "fx_candidate": "FX2-LIGHT-023",
+      "recipe": "RCP-FIRELIT-INTERIOR",
+      "character_motion_direction": "real_dance_movement + environmental FX",
+      "semantic_action_not_falsified": true,
+      "original_accepted_as_source": true,
+      "FX_output_approval": false
+    },
+    {
+      "shot_id": "B04-S05",
+      "caption": "Forgotten promises",
+      "source_filename": "B04-S05.png",
+      "original_sha256": "35e2e75214bfca7a5f92bf14080265b03bd2f4544d2158a9651d7828acd773cc",
+      "fx_candidate": "FX2-LIGHT-023",
+      "recipe": "RCP-FIRELIT-INTERIOR",
+      "character_motion_direction": "quiet_contemplative_still_hold_not_fake_lips",
+      "semantic_action_not_falsified": true,
+      "original_accepted_as_source": true,
+      "FX_output_approval": false
+    },
+    {
+      "shot_id": "B04-S06",
+      "caption": "Voices in the tavern",
+      "source_filename": "B04-S06.png",
+      "original_sha256": "457fa59d958254ea0af02c2eeb3b5e31e4f619087256cf68db447f91d21fd7a9",
+      "fx_candidate": "FX2-LIGHT-023",
+      "recipe": "RCP-FIRELIT-INTERIOR",
+      "character_motion_direction": "live_room_conversation_masked_environment_no_false_speech",
+      "semantic_action_not_falsified": true,
+      "original_accepted_as_source": true,
+      "FX_output_approval": false
+    },
+    {
+      "shot_id": "B04-S07",
+      "caption": "The musicians as one",
+      "source_filename": "B04-S07.png",
+      "original_sha256": "11cab50e63948aae1ec6a7f49ed58f80c5aa573180d4fe5f2620040b4fba2538",
+      "fx_candidate": "FX2-LIGHT-023",
+      "recipe": "RCP-FIRELIT-INTERIOR",
+      "character_motion_direction": "same_film_live_violin_guitar_over_gallery_or_FX_plate",
+      "semantic_action_not_falsified": true,
+      "original_accepted_as_source": true,
+      "FX_output_approval": false
+    },
+    {
+      "shot_id": "B04-S08",
+      "caption": "Candlelight",
+      "source_filename": "B04-S08.png",
+      "original_sha256": "fbe620791dedd88ca7098980fcee4582db866465924c5d2b6c648ab57422969e",
+      "fx_candidate": "FX2-LIGHT-023",
+      "recipe": "RCP-FIRELIT-INTERIOR",
+      "character_motion_direction": "lantern candle-breath_real_scene_motion",
+      "semantic_action_not_falsified": true,
+      "original_accepted_as_source": true,
+      "FX_output_approval": false
+    },
+    {
+      "shot_id": "B04-S09",
+      "caption": "A look that says more",
+      "source_filename": "B04-S09.png",
+      "original_sha256": "5129baa4d6f250937551890024e24c9cb808fdf6a5493a1318312c0255331024",
+      "fx_candidate": "FX2-LIGHT-023",
+      "recipe": "RCP-FIRELIT-INTERIOR",
+      "character_motion_direction": "eye_line_intimate_hold_with_protected_identity",
+      "semantic_action_not_falsified": true,
+      "original_accepted_as_source": true,
+      "FX_output_approval": false
+    },
+    {
+      "shot_id": "B04-S10",
+      "caption": "The chorus lifts again",
+      "source_filename": "B04-S10.png",
+      "original_sha256": "ea3f3a4476321f9c6003fcbc5d8e59302490de4865906f9a1c73c9a8eaf3b4d2",
+      "fx_candidate": "FX2-LIGHT-023",
+      "recipe": "RCP-FIRELIT-INTERIOR",
+      "character_motion_direction": "dance_fanfare_performance_plus_approved_living_scene",
+      "semantic_action_not_falsified": true,
+      "original_accepted_as_source": true,
+      "FX_output_approval": false
+    }
+  ],
+  "rules": {
+    "originals_not_replaced": true,
+    "prior_batch_proofs_preserved": true,
+    "light_and_character_gates_separate": true,
+    "batch_count_10": true,
+    "master_lyrics_timing_not_locked": true,
+    "actor_identity_and_anatomy_protected": true,
+    "original_audio_unchanged": true,
+    "other_repos_readonly": true,
+    "FXRuntime": "use current Lab main boot, report actual run and SHA; sandbox FX equivalent separate",
+    "source_performance": "same-film Gemini only when scene supports; archive provenance; avoid wholesale re-use and identity discontinuity"
+  },
+  "director_role": "Director selects and rejects shot treatments, not delegate artistic gate to user",
+  "human_release_approved": false
+}
