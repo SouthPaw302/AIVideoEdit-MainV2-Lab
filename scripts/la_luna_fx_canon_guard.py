@@ -79,10 +79,19 @@ def check() -> dict:
             "unrelated source protections modified")
     ext = canon["external_film_reference_boundary"]
     study = authority["external_reference_process_study"]
-    require(ext["unknown_source"] == "NO_EXTERNAL_REPOSITORY_NAMED_YET" and
+    require(ext["unknown_source"] == "RESOLVED_REFERENCE_REPOSITORY_SouthPaw302/AIVideoEdit" and
+            canon["reference_method_study"]["external_repo"] == "SouthPaw302/AIVideoEdit" and
+            canon["reference_method_study"]["foreign_story_or_assets_imported"] is False and
+            canon["reference_method_study"]["foreign_code_imported"] is False and
             study["content_reuse_authorized"] is False and
             study["automatic_process_import_authorized"] is False,
             "unapproved cross-project reference import")
+    char = stages[1]
+    require("GIF" in char["purpose"] and "video-generation requirement" in char["purpose"],
+            "shot-local existing FX/loop/duplicate motion method was lost")
+    require("PERFORMANCE_MOTION_GAP" in char["pass_rule"] and
+            "3DGS" in char["technologies_and_existing_library"]["gaussian_terms"],
+            "motion fidelity or Gaussian technology truth gate lost")
     require(state["production_complete"] is False and
             state["human_visual_approval"] is False,
             "script/FX process gate cannot release the film")
