@@ -240,7 +240,7 @@
     "canon_coverage_mismatch_nonoverlapping": 3,
     "real_Gemini_inserts_under_review": 2
   },
-  "director_disposition": "REVISIONS_REQUIRED_NO_PREMATURE_B01_B02_CHARACTER_LOCK",
+  "director_disposition": "B01_B02_RC5_RENDERED_AND_TEMPORAL_QC_PASS__CREATIVE_REVIEW_REQUIRED",
   "B01_character_gate": "OPEN",
   "B02_character_gate": "OPEN",
   "B03_B04_B05_progression_hold": true,
@@ -248,12 +248,11 @@
   "individual_source_pixels_locked": false,
   "film_release_approved": false,
   "next_actions": [
-    "Inspect RC3 at normal speed. Keep same-song performances as versioned candidate alternatives only; reject visible source repetition, identity or timing discontinuity, do not blindly promote.",
-    "Fix remaining six real gesture/dance/musician motion gaps: B01-S04/S05/S06, B02-S04/S06/S08, using vetted character pose-state variation, source-derived real footage or specifically approved bounded generation only.",
-    "Repair B02-S01/S02 entrance/interior coverage without replacing locked storyboard; validate actual scene-level arrival/threshold rather than claiming water/dock is inside.",
-    "Re-run actual final encoded temporal scan; RC3 still has 6 half-second-or-longer freeze events and cannot pass temporal motion gate.",
-    "Use ONNX and independently verified lyric lines to lock film scene durations only after shots are truthful. Do not assume provisional 4 seconds/shot is script timing.",
-    "Do not begin B03/B04/B05 or Master FX until B01/B02 gate is satisfied."
+    "Watch the actual RC5 80s Director review at normal speed to inspect source repetition (B05 source used as multiple shot variants), actor geography, continuity and picture quality. Keep receipts and candidate labels intact.",
+    "Decide whether B02 S01 dockside approach and S02 crossfade-to-interior honor locked storyboard entry/stepping intent; if literal stepping is required, author a distinct performer walking threshold shot from same-song source, do not claim current edit includes it.",
+    "Only after explicit scene-level Director acceptance may the RC5 action clips be canonically selected; source A/B light FX and B01/B02 originals remain immutable.",
+    "Derive lyric-line sync/frame-locked shot durations from the 321.16s WAV and ONNX evidence, do not reuse 4s/shot as final film timing.",
+    "Keep B03-B05 and Master FX held until B01/B02 Director creative gate is resolved."
   ],
   "latest_RC3_provisional": {
     "status": "ACTUAL_EXPORT_QC_COMPLETED__CREATIVE_GATES_OPEN",
@@ -327,5 +326,73 @@
     "master_fx_ready": false,
     "B03_B04_B05_hold": true,
     "limitations": "Actual dance/guitar/violin motion improves nine clips. Some same-song footage was reused/reframed, including later-act musician footage; Director must check temporal repetition, facial continuity, lyric/script timing. Remaining six semantically moving shots and two entrance/interior coverage issues cannot be falsely accepted by camera or light FX."
+  },
+  "latest_RC5_provisional": {
+    "status": "ALL_20_MOVING_CLIP_PROOFS_RENDERED_AND_ARCHIVED__CREATIVE_GATE_OPEN",
+    "render_site": "SANDBOX_FROM_EXACT_SOURCE_ORIGINAL_AND_PREVIOUS_ACTIONS_PROOFS__NOT_NEW_GITHUB_RUN",
+    "review_cut": "https://drive.google.com/file/d/1z6KpMw3WljbtWajHDVV1e02mzCLQjfFA/view",
+    "review_mp4_sha256": "01107dcf1d324dec464fd6a28ce24463a5c96858c03e3a663ebf53ef64a99b89",
+    "moving_shot_archive": "https://drive.google.com/file/d/1J3dmI4nO_3TK601rvI8wdEulmW8czkBe/view",
+    "archive_sha256": "666bd523c97bda97cfd93159a28f1e059444ee2b140275e3d7f89a9bfceef017",
+    "contact_sheet": "https://drive.google.com/file/d/1JuwWOzpSzdos8lvKqvFUvKcL8TEF4RTy/view",
+    "receipt": "https://drive.google.com/file/d/1hfjxJj_55P33w7ACDSXYlwQFm5YT6d4C/view",
+    "all_clips": 20,
+    "frames_each": 96,
+    "fps": 24,
+    "review_seconds": 80,
+    "source_song_seconds_total": 321.16,
+    "genuine_source_video_action_or_reaction_candidates": [
+      "B01-S02",
+      "B01-S03",
+      "B01-S04",
+      "B01-S05",
+      "B01-S06",
+      "B01-S07",
+      "B01-S08",
+      "B02-S03",
+      "B02-S04",
+      "B02-S05",
+      "B02-S06",
+      "B02-S07",
+      "B02-S08",
+      "B02-S09",
+      "B02-S10"
+    ],
+    "environment_only_no_performance_expected": [
+      "B01-S01",
+      "B01-S09",
+      "B01-S10",
+      "B02-S01"
+    ],
+    "implied_transition_with_live_interior": [
+      "B02-S02"
+    ],
+    "actual_encoded_export_qc": {
+      "no_black_events": true,
+      "freezes_ge_0p5s": 0,
+      "frame_count_verified": 1920,
+      "decode_pass": true,
+      "individual_20_MP4_crc_pass": true
+    },
+    "cross_act_B05_source_note": "10s actor/instrument video is same La Luna production, original was B05-S04 candidate; reused in selected B01/B02 takes solely as alternates. Excessive repetition, storytelling beat, costume consistency, visual quality and motion interpolation must be inspected at normal speed before approving.",
+    "canon_scope": "No original still, light FX, B05 master, storyboard, lyrics or WAV changed. All shot timings 4s are workprint ONLY, not the final scene script.",
+    "not_claimed": [
+      "user_character_animation_lock",
+      "each_shot_visual_approval",
+      "fingering_verified_against_original_music_notes",
+      "B02_literal_entrance_shown",
+      "full_5m21_film",
+      "final_lyric_alignment"
+    ],
+    "source_coverage_caveats": [
+      "B02-S01 still shows exterior dock approach, not door closeup",
+      "B02-S02 shows exterior-to-interior editorial handoff, not actual walking across threshold",
+      "B01-S10 alternate night harbor recycles a clean source motif to avoid rejected dawn/text frame"
+    ],
+    "B01_B02_director_disposition": "TECHNICALLY_COMPLETE_MOVING_PROOF_LIBRARY_PENDING_CREATIVE_REVIEW",
+    "artistic_acceptance": false,
+    "FX_stage_locked": false,
+    "full_film_release_approved": false,
+    "B03_B04_B05_progression_hold": true
   }
 }
