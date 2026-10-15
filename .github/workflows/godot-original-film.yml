@@ -70,22 +70,28 @@ jobs:
             --write-movie "$RUNNER_TEMP/godot-film/godotframes/shot.png" \
             --fixed-fps 24 --quit-after 336 "res://scenes/twilight.tscn"
           test "$(find "$RUNNER_TEMP/godot-film/godotframes" -name 'shot*.png' | wc -l)" -eq 336
+      - name: Encode independent Godot-only movie first
+        shell: bash
+        run: |
+          set -euo pipefail
+          ffmpeg -hide_banner -loglevel error -nostdin -y \
+            -framerate 24 -i "$RUNNER_TEMP/godot-film/godotframes/shot%08d.png" \
+            -i "$RUNNER_TEMP/godot-film/music_clip.wav" \
+            -map 0:v:0 -map 1:a:0 -c:v libx264 -preset veryfast -crf 20 \
+            -pix_fmt yuv420p -c:a aac -b:a 192k -t 14 -movflags +faststart \
+            "$RUNNER_TEMP/godot-film/godot.mp4"
       - name: Apply real canonical MainV2 FXExecutor to comparison variant
         shell: bash
         run: |
           python experiment/.lab/godot-film/tools/apply_fx.py \
             --repo-root experiment --source "$RUNNER_TEMP/godot-film/godotframes" \
             --out "$RUNNER_TEMP/godot-film/fxframes"
-      - name: Encode both movie versions with verified instrumental WAV
+      - name: Encode MainV2-enhanced version with same verified instrumental WAV
         shell: bash
         run: |
           set -euo pipefail
-          for kind in godot mainv2_fx; do
-            if [ "$kind" = godot ]; then
-              input="$RUNNER_TEMP/godot-film/godotframes/shot%08d.png"
-            else
-              input="$RUNNER_TEMP/godot-film/fxframes/frame%06d.png"
-            fi
+          for kind in mainv2_fx; do
+            input="$RUNNER_TEMP/godot-film/fxframes/frame%06d.png"
             ffmpeg -hide_banner -loglevel error -nostdin -y \
               -framerate 24 -i "$input" -i "$RUNNER_TEMP/godot-film/music_clip.wav" \
               -map 0:v:0 -map 1:a:0 -c:v libx264 -preset veryfast -crf 20 \

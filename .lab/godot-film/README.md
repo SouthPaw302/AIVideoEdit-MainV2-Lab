@@ -14,7 +14,7 @@ The audio analyzer scans source PCM for a high-energy 14-second segment and meas
 
 ## Two outputs
 1. Real Godot Movie Maker PNG frames with the source WAV excerpt, FFmpeg H.264/AAC encoded to `godot.mp4`.
-2. The same movie additionally processed by approved original `FX2-LIGHT-001` through the existing MainV2 FXExecutor, producing `mainv2_fx.mp4`. No FX registry or main workflow modification.
+2. The same movie additionally processed by approved original `FX2-ATM-001` plus `FX2-LIGHT-001` through the existing MainV2 FXExecutor, producing `mainv2_fx.mp4`. No FX registry or main workflow modification.
 
 ## Proof and limitations
 Technical validator checks output dimensions, duration, frame count, audio, cryptographic hashes, frame samples and original source identities. CI artifacts are short-lived. No artistic acceptance without the user's visual review. This is not a true 3D reconstruction, nor is the result a replacement for an approved long-form music film. Stay on the isolated test branch, do not merge `main`.
