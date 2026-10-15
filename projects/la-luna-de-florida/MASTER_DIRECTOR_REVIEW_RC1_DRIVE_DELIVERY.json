@@ -1,0 +1,21 @@
+{
+  "schema": "aivideoedit.la-luna-director-review-evidence-delivery.v1",
+  "production_id": "la-luna-de-florida",
+  "branch": "song/la-luna-de-florida",
+  "type": "SOURCE_SCREENING_AND_REPRESENTATIVE_CANDIDATE_QC_NOT_FINAL_FILM",
+  "title": "La Luna Florida Director Review RC1 evidence bundle",
+  "drive_file_id": "1MvAQDSkW1QhwEg46QV7jChuaNWVxSDLO",
+  "drive_file_url": "https://drive.google.com/file/d/1MvAQDSkW1QhwEg46QV7jChuaNWVxSDLO/view?usp=drivesdk",
+  "drive_parent_folder_id": "1SwUW7OzXWU7j5iqfjrlmvzm9ZJ8U4czo",
+  "file_name": "La_Luna_Florida_Director_Review_RC1_2026-10-15.zip",
+  "bytes": 14813809,
+  "sha256": "d13e694e6731e01192f586456e34f33af839b89918f1cb9a90fe3c88e8bb994a",
+  "verified_by_drive_metadata_readback": true,
+  "package_contents": "17 files plus manifest: draft 7708-frame edit map, 50 proof source comparison, native FX loop lineage QC, original WAV ONNX and RMS analysis, B01 280f pano RC2 proof and receipts, B05 musician 160f source-authentic performance proof and receipts, B05 final sunrise 288f candidate and audio/frame QC",
+  "original_sources_unchanged": true,
+  "full_feature_321p16s_playable": false,
+  "source_stage_director_verdict": "REPAIR_REQUIRED",
+  "user_release_approved": false,
+  "accepted_full_film_baseline": false,
+  "further_work": "Artistic Director must complete lyric-aligned cut, nonrepeating shot extension, per-shot Master FX, five-act proofs, canonical stageable render manifest, full parallel render, normal-speed full-length inspection, eleven-phase scan, surgical repairs then seek user final release approval."
+}
