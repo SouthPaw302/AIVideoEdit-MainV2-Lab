@@ -1,5 +1,14 @@
 # Production handoff — La Luna de Florida
 
+## ACTIVE — B04 Director stage selected, B05 next (2026-10-15)
+
+**B04 accepted for production-stage progression: 10 original SHA-verified stills, 20 real Lab-main light FX loops and 10 sandbox moving-scenes assembled from those exact native FX proofs.** [B04 RC2 40s Director film review](https://drive.google.com/file/d/11exEAiou7XMbLerksMQvOJxPqb_BdP9P/view) and [10 original-source moving shots/repro scripts/QC](https://drive.google.com/file/d/10cF5tPLxGHxvGKZA7B091K53dGxctqTb/view), [native FX runner source receipt](https://drive.google.com/file/d/1itN2iGrKs149QpLXAM6rUu8rFGJWmGl6/view), [Director decision](B04_DIRECTOR_BATCH_DECISION.json). B04-S10 was repaired to end in dancing moonlit tavern, not unrelated empty marina. Nine earlier clip bytes unchanged. RC2 full encoded QC zero black / zero ≥0.5s freeze. Four genuine same-film performance portions; six remaining shots are still/FX/camera tableau and do not falsely claim clapping, laughing, dialogue or gaze articulation.
+
+**Do NOT do Master FX from 4s/shot workprints**; whole original WAV 5m21s and lyric-line/ONNX frame mapping require a separate comprehensive director pass. Other song projects untouched.
+
+**NEXT B05:** inspect the locked board's ten final-act intents and the Drive originals archive. Existing `B05_NIGHT_EXTRA_ORIGINAL_STILLS_BACKUP.zip` contains nighttime extra stills, *not* the canonical dawn/sunrise payoff. Treat it as additional media until Director has independently matched all ten late-night-to-dawn beats. B01-B04 immutably preserved. No release claims.
+
+
 ## ACTIVE — B04 next; B03 nine-source Director acceptance (2026-10-15)
 
 **Do not stop on the missing B03-S10 original or recreate it.** The user accepts nine B03 originals; Director selected the existing S07-to-S09 layered transition to fill the tenth storyboard shot intent. Ten canon intent slots are intact. [B03 Director batch decision](B03_DIRECTOR_BATCH_DECISION.json) is authoritative for this exception; original/S10 provenance remains precise in [B03 status](B03_MOVEMENT_DIRECTOR_STATUS.json). Ten B03 moving-scene RC2 candidates archived and [native Lab-main B03 18 A/B Light FX gate passed](https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38700642135). This is **batch stage acceptance only**, not release/movie master. Do not demand articulated lip-sync for rap voiceover or physical stamping in a boot detail cutaway.
