@@ -6,7 +6,7 @@ on:
     paths:
       - .github/workflows/la-luna-b05-native-fx.yml
       - scripts/la_luna_b05_native_fx_runner.py
-      - projects/la-luna-de-florida/B05_DIRECTOR_PREFLIGHT.json
+      - projects/la-luna-de-florida/B05_FINALE_SOURCE_SELECTION.json
   workflow_dispatch:
 permissions:
   contents: read
@@ -39,16 +39,16 @@ jobs:
           python -m pip install --disable-pip-version-check 'numpy==2.2.6' 'opencv-python-headless==4.11.0.86' 'gdown==5.2.0'
           sudo apt-get update -y
           sudo apt-get install -y ffmpeg unzip
-      - name: Download unchanged B05 nine-still ZIP from linked Drive archive
+      - name: Download hashed 7-night 3-dawn source ZIP from linked Drive archive
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p "$RUNNER_TEMP/b05_sources"
-          gdown --id 1D6kgeamq_cnfpvGcVzbPO-U7GwLqtjV2 --output "$RUNNER_TEMP/b05_archive.zip" --quiet
-          printf '%s  %s\n' 'b80050b8808255fe023296ba9e722c60116fd6fe6e24fba2b619e98cc62ad4d4' "$RUNNER_TEMP/b05_archive.zip" | sha256sum --check --status
+          gdown --id 125BAnia3HKacDFtpOel8-etstMu-h0tw --output "$RUNNER_TEMP/b05_archive.zip" --quiet
+          printf '%s  %s\n' 'dbbc3a1a72af40dcdb9afa26ea032dd5bdc2ef448a3508464a562e78ad5cf596' "$RUNNER_TEMP/b05_archive.zip" | sha256sum --check --status
           unzip -t "$RUNNER_TEMP/b05_archive.zip"
           unzip -q "$RUNNER_TEMP/b05_archive.zip" -d "$RUNNER_TEMP/b05_sources"
-          for n in $(seq -w 1 10); do cp "$RUNNER_TEMP/b05_sources/B05_NIGHT_EXTRA-S$n.png" "$RUNNER_TEMP/b05_sources/B05-S$n.png"; done
+
           test "$(find "$RUNNER_TEMP/b05_sources" -maxdepth 1 -name 'B05-S*.png' | wc -l)" -eq 10
           test -f "$RUNNER_TEMP/b05_sources/B05-S10.png"
       - name: Run real bootstrapped FXRuntime for ten source-proven B05 shots
@@ -67,15 +67,15 @@ jobs:
           assert len(j['generated'])==20 and all(x['decoded'] for x in j['generated'])
           assert j['all_ten_originals_sha_verified'] is True
           assert j['director_approval'] is False
-          print('B05_NIGHT_EXTRA_20_LIGHT_FX_PROOFS_PASS; DAWN_STILLS_NOT_CERTIFIED; CHARACTER_FX_NOT_CERTIFIED')
+          print('B05_NIGHT_TO_DAWN_20_NATIVE_FX_PROOFS_PASS; PERFORMANCE_SEPARATE; FILM_NOT_LOCKED')
           PY
       - name: Report strict light FX scope
         if: always()
         run: |
           {
             echo '### B05 native FX'
-            echo 'Ten NIGHT EXTRA originals are hash-verified; this does not grant dawn finale footage approval.'
-            echo 'This run validates B05 night-extras light FX only, not canonical sunrise, character performance, master film or release.'
+            echo '7 archived night stills and 3 standalone full-frame dawn candidates are individually SHA checked.'
+            echo 'B05 native water/light effects for night-to-dawn materials only; actual character performance and film master remain separate.'
             echo 'If gdown cannot access the authenticated Drive archive, fail closed: DO NOT fall back to synthetic media.'
           } >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
