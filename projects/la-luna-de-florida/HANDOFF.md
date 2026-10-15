@@ -1,5 +1,12 @@
 # Production handoff — La Luna de Florida
 
+## CURRENT HANDOFF — B03 RC2 shot-stage output (2026-10-15)
+
+**Use B03 only.** [RC2 Director 40s review cut](https://drive.google.com/file/d/1s89gO338Tb0dFx37Vco25o0cSnXuE0Qo/view), [20 A/B FX loops](https://drive.google.com/file/d/13RGjh1O9tloPirr4D38-ydUtyeEtjXJc/view), [10 real moving 4s MP4 clips and reproducible original-SHA-bound scripts](https://drive.google.com/file/d/1efo2t2xX6TKclhZ1I1hBWxhX1-z-62op/view), [QC](https://drive.google.com/file/d/1eHS5xQDgRF0668LULYgHhHu8ttgErx7Z/view), [contact](https://drive.google.com/file/d/1v5Pl4gx7n4S_abvvu8exsseheSgcKhES/view). Full source state and artistic distinctions are in [B03_MOVEMENT_DIRECTOR_STATUS.json](B03_MOVEMENT_DIRECTOR_STATUS.json) and [B03_DIRECTOR_PREFLIGHT.json](B03_DIRECTOR_PREFLIGHT.json).
+
+Nine original PNG stills source-preserved, missing B03-S10 retained as a missing original with a **visually directed S07→S09 road-memory-composite candidate**, not a fake tenth source. The apparent warm sunrise in B03-S07 is an intentional flashback/memory, not the ending dawn. This RC2 was **rendered in sandbox FX equivalent, not bootstrapped native current-main FXRuntime**. The original song excerpt starting 02:02 is provisional. The native FX/precompile verification of current Lab main, character semantics (B03-S04 voiceover static vs lips; S05 boots stationary), Director final B03 picture selection and scene-level music timing remain REQUIRED. Prior B01/B02 RC8 Director batch-stage decision stays untouched. Do not progress B04/B05 solely based on this technical review; do not invent new storyboard or bring another repo's assets.
+
+
 ## LATEST — RC8 B01/B02 Director motion-stage pass and next production
 
 B01/B02 **10+10 movie-scene movement proofs DIRECTOR-SELECTED for the next stage**. [RC8 80-second moving Director cut](https://drive.google.com/file/d/1G11pqOEWMc8h0W-y4Gsf7qW-VEsqN-zh/view), [all 20 exact hashed MP4 scene proofs + executable source scripts](https://drive.google.com/file/d/1rqMtkcCARkcwH0FqLx0tfwoo0JrA-AQ-/view), [contact](https://drive.google.com/file/d/137drSrviObFtLMXBrCNhOuIhkzTR3tDx/view), [Director decision](https://drive.google.com/file/d/13INExAvUFPYsXsGSPZ3aFZPvXCDdNARD/view). The 2 pan opening shots obey the user's vocals/scales direction; FX stack plus genuine dance/violin performance remain the primary method. B01-S10 and B02-S01 form a restrained camera approach to the tavern; B02-S02 editorially transitions inside; B02-S10 concludes out over actual moving harbor.
