@@ -1,0 +1,100 @@
+name: Godot renderer technical smoke (branch-isolated)
+on:
+  push:
+    branches:
+      - test/godot-render
+    paths:
+      - '.lab/godot/**'
+      - '.github/workflows/godot-render-test.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: godot-render-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  godot-movie-writer:
+    if: github.ref == 'refs/heads/test/godot-render'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    env:
+      GODOT_VERSION: "4.7.2-stable"
+      GODOT_ZIP_SHA256: "cadd3204e728a35d3f13adb7fd0d7902636b79f6b95c40c265eb73b6c35329e4"
+      LIBGL_ALWAYS_SOFTWARE: "1"
+      MESA_GL_VERSION_OVERRIDE: "3.3"
+    steps:
+      - name: Checkout technical experiment (exact commit)
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          path: experiment
+          persist-credentials: false
+      - name: Checkout production OS authority separately (main only)
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: main
+          path: os
+          persist-credentials: false
+      - name: Bootstrap unchanged production OS (NOT production approval)
+        run: |
+          python os/bootstrap.py boot --repo-root "$GITHUB_WORKSPACE/os" --branch main
+      - name: Install software rendering and media tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq xvfb xauth libgl1-mesa-dri libgl1 libx11-6 libxcursor1 libxinerama1 libxi6 libxrandr2 libxrender1 libasound2t64 ffmpeg unzip curl
+      - name: Download and verify pinned Godot engine
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fL --retry 3 "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}/Godot_v${GODOT_VERSION}_linux.x86_64.zip" -o /tmp/godot.zip
+          printf "%s  %s\n" "$GODOT_ZIP_SHA256" /tmp/godot.zip | sha256sum -c -
+          unzip -q /tmp/godot.zip -d /tmp/godot-bin
+          chmod +x "/tmp/godot-bin/Godot_v${GODOT_VERSION}_linux.x86_64"
+          "/tmp/godot-bin/Godot_v${GODOT_VERSION}_linux.x86_64" --version
+      - name: Render actual 2D and 3D frames with Godot Movie Maker
+        shell: bash
+        run: |
+          set -euo pipefail
+          export GODOT_BIN="/tmp/godot-bin/Godot_v${GODOT_VERSION}_linux.x86_64"
+          export PROJ="$GITHUB_WORKSPACE/experiment/.lab/godot"
+          export OUT="$RUNNER_TEMP/godot-render"
+          mkdir -p "$OUT/2d" "$OUT/3d"
+          # Import scripts/scenes first. This is editor metadata generation, not a render.
+          "$GODOT_BIN" --headless --path "$PROJ" --editor --import --quit
+          for kind in 2d 3d; do
+            echo "Rendering ${kind} via Xvfb/OpenGL, not Godot dummy headless..."
+            xvfb-run -a -s "-screen 0 1024x768x24" "$GODOT_BIN" \
+              --path "$PROJ" --rendering-method gl_compatibility \
+              --write-movie "$OUT/$kind/proof.png" \
+              --fixed-fps 24 --quit-after 48 "res://scenes/proof_${kind}.tscn"
+            test -s "$OUT/$kind/proof.wav"
+            ffmpeg -hide_banner -loglevel error -nostdin -y \
+              -framerate 24 -i "$OUT/$kind/proof%08d.png" \
+              -i "$OUT/$kind/proof.wav" \
+              -c:v libx264 -preset veryfast -crf 21 -pix_fmt yuv420p \
+              -c:a aac -b:a 128k -shortest "$OUT/$kind/proof.mp4"
+          done
+      - name: Verify measured technical proof and hashes
+        shell: bash
+        run: |
+          set -euo pipefail
+          python experiment/.lab/godot/verify_render.py \
+            --root "$RUNNER_TEMP/godot-render" \
+            --godot-version "$GODOT_VERSION" \
+            --source-sha "$GITHUB_SHA"
+      - name: Retain genuine evidence for review
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: godot-render-technical-${{ github.run_id }}
+          path: ${{ runner.temp }}/godot-render/
+          if-no-files-found: warn
+          retention-days: 7
+      - name: Technical-only declaration
+        if: always()
+        run: |
+          echo "### Godot movie writer research only" >> "$GITHUB_STEP_SUMMARY"
+          echo "2D and 3D synthetic fixture. No canonical or accepted production media." >> "$GITHUB_STEP_SUMMARY"
+          echo "Actual PNG/WAV and encoded MP4 evidence only if run passes verification." >> "$GITHUB_STEP_SUMMARY"
