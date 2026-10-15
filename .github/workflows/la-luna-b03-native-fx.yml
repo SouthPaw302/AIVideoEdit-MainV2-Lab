@@ -45,7 +45,7 @@ jobs:
           set -euo pipefail
           mkdir -p "$RUNNER_TEMP/b03_sources"
           gdown --id 1oSb1FLlWJjzPccU2sywjI5gGGw2Lqv4K --output "$RUNNER_TEMP/b03_archive.zip" --quiet
-          echo 'da7b54eef5373b2d6b4db69eac0c497e4e9443facbc8fd78db29baecbc565252  ' "$RUNNER_TEMP/b03_archive.zip" | sha256sum --check --status
+          printf '%s  %s\n' 'da7b54eef5373b2d6b4db69eac0c497e4e9443facbc8fd78db29baecbc565252' "$RUNNER_TEMP/b03_archive.zip" | sha256sum --check --status
           unzip -t "$RUNNER_TEMP/b03_archive.zip"
           unzip -q "$RUNNER_TEMP/b03_archive.zip" -d "$RUNNER_TEMP/b03_sources"
           test "$(find "$RUNNER_TEMP/b03_sources" -maxdepth 1 -name 'B03-S*.png' | wc -l)" -eq 9
