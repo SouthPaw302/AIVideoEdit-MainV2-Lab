@@ -1,5 +1,12 @@
 # Production handoff — La Luna de Florida
 
+## Latest B03 — native main FX light-proof gate PASS
+
+[Native GitHub B03 run #38700642135](https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38700642135) downloaded the SHA-verified public-folder B03 archive and produced **18 authentic Lab-main FXRuntime A/B proofs from the 9 preserved source PNGs**, all decoded with bounded material motion, zero protected-ROI changes and zero loop seam deviation. [Drive archived artifact (original copies, 18 loops, 18 derived stills, receipt)](https://drive.google.com/file/d/1284TQUxZiLqYEsXHgNo26mITEQa9Fl5L/view), archived ZIP SHA256 `7d2057f68f796efa1008d612f2ff37f90c980575d891d57fd4b6de8c3b76de9b`. Source SHA `da7b54eef5373b2d6b4db69eac0c497e4e9443facbc8fd78db29baecbc565252`, native runtime SHA `6cfdf3ba68c1f79015c1f1b26174d4e3ca4de7b75b06b5ad9811580f5bc2cfa4`.
+
+**Keep gates separate:** 9/9 known-source **native light FX PASS**, while B03 ten moving-scene RC2 review was rendered in sandbox and is not yet a native full character/Director creative lock. B03-S10 original still remains missing, derive only as explicitly recorded composite; original source file not recreated. Do not advance B04/B05 under the false premise of B03 complete story/character acceptance. No external film material imported.
+
+
 ## CURRENT HANDOFF — B03 RC2 shot-stage output (2026-10-15)
 
 **Use B03 only.** [RC2 Director 40s review cut](https://drive.google.com/file/d/1s89gO338Tb0dFx37Vco25o0cSnXuE0Qo/view), [20 A/B FX loops](https://drive.google.com/file/d/13RGjh1O9tloPirr4D38-ydUtyeEtjXJc/view), [10 real moving 4s MP4 clips and reproducible original-SHA-bound scripts](https://drive.google.com/file/d/1efo2t2xX6TKclhZ1I1hBWxhX1-z-62op/view), [QC](https://drive.google.com/file/d/1eHS5xQDgRF0668LULYgHhHu8ttgErx7Z/view), [contact](https://drive.google.com/file/d/1v5Pl4gx7n4S_abvvu8exsseheSgcKhES/view). Full source state and artistic distinctions are in [B03_MOVEMENT_DIRECTOR_STATUS.json](B03_MOVEMENT_DIRECTOR_STATUS.json) and [B03_DIRECTOR_PREFLIGHT.json](B03_DIRECTOR_PREFLIGHT.json).
