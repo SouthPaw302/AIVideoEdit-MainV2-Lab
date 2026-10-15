@@ -3,7 +3,7 @@
   "production": "la-luna-de-florida",
   "branch": "song/la-luna-de-florida",
   "scope": "B04_ONLY",
-  "status": "ORIGINAL_10_STILL_SOURCE_SHA_AND_BOARD_SEMANTICS_VERIFIED__FX_AND_CHARACTER_GATES_OPEN",
+  "status": "B04_10_OF_10_SOURCE_HASH_NATIVE_20_AB_FX_PASS__RC2_10_MOVING_SHOTS_DIRECTOR_SELECTED",
   "canonical_storyboard_source": "projects/la-luna-de-florida/STORYBOARD_CANON.json",
   "storyboard_sha256": "05b232452eebce56fb9c047a0f481a19e04cf2d13e364bee30255dd27c88703a",
   "act": "The night deepens",
@@ -155,5 +155,20 @@
     "source_performance": "same-film Gemini only when scene supports; archive provenance; avoid wholesale re-use and identity discontinuity"
   },
   "director_role": "Director selects and rejects shot treatments, not delegate artistic gate to user",
-  "human_release_approved": false
+  "human_release_approved": false,
+  "native_lab_fx": {
+    "technical_status": "PASS",
+    "run_id": 38702608550,
+    "runtime_sha256": "6cfdf3ba68c1f79015c1f1b26174d4e3ca4de7b75b06b5ad9811580f5bc2cfa4",
+    "source_originals": 10,
+    "AB_loops": 20,
+    "Drive_artifact": "https://drive.google.com/file/d/1itN2iGrKs149QpLXAM6rUu8rFGJWmGl6/view"
+  },
+  "director_batch_selection": {
+    "decision": "B04_DIRECTOR_BATCH_DECISION.json",
+    "RC2_review": "https://drive.google.com/file/d/11exEAiou7XMbLerksMQvOJxPqb_BdP9P/view",
+    "director_selected": true,
+    "all_10_sources_preserved": true,
+    "master_and_owner_acceptance": false
+  }
 }
