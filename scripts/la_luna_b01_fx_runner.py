@@ -21,7 +21,7 @@ RUNTIME = ROOT / ".aivideoedit/os/general/reusable/fx_v2/runtime.py"
 FPS = 24
 DURATION = 2.5
 FRAMES = 60
-W, H = 640, 360
+W, H = 960, 540
 WATER_SHOTS = {"B01-S01", "B01-S07", "B01-S09", "B01-S10"}
 WATER_ROI = {
     "B01-S01": (0.0, 0.69, 1.0, 0.98),
@@ -37,6 +37,49 @@ LIGHT_ROI = {
     "B01-S06": ((0.03, 0.03, 0.32, 0.47), (0.70, 0.04, 0.98, 0.48)),
     "B01-S08": ((0.02, 0.01, 0.24, 0.32), (0.80, 0.02, 0.99, 0.32)),
 }
+
+
+# Director repair: material-only masks built from observed B01 originals.
+# Original crops (and older completed Actions run) remain untouched.
+WATER_POLYGONS = {
+    "B01-S01": [(0.46,.77),(.68,.72),(.88,.73),(.87,.99),(.53,.99)],
+    "B01-S07": [(0.46,.76),(.66,.72),(.88,.73),(.88,.98),(.51,.98)],
+    "B01-S09": [(0.53,.78),(.67,.77),(.95,.78),(.97,.98),(.57,.98)],
+    "B01-S10": [(0.07,.71),(.20,.66),(.78,.66),(.88,.73),(.91,.97),(.04,.97)],
+}
+WATER_PROTECTED_RECTS = {
+    "B01-S01": [(0.80,.55,.98,.85)],
+    "B01-S07": [(0.79,.55,.99,.88)],
+    "B01-S09": [(0.64,.56,.99,.81),(.00,.73,.18,.99)],
+    "B01-S10": [(0.18,.61,.27,1.),(.35,.60,.43,1.),(.58,.60,.65,1.),(.78,.57,.85,1.)],
+}
+# Only practical fixtures/reflections, not bodies or general full-screen illumination.
+LIGHT_POINTS = {
+    "B01-S02": [(.10,.12,.075,.14),(.41,.09,.06,.12)],
+    "B01-S03": [(.028,.12,.046,.12),(.10,.14,.055,.13)],
+    "B01-S04": [(.11,.10,.07,.12),(.68,.08,.055,.11)],
+    "B01-S05": [(.035,.14,.045,.11),(.12,.12,.05,.10)],
+    "B01-S06": [(.31,.77,.075,.12),(.46,.76,.055,.10)],
+    "B01-S08": [(.77,.75,.07,.13),(.91,.76,.06,.11)],
+}
+
+def material_mask(shape, shot_id, engine):
+    h,w=shape[:2]
+    if shot_id in WATER_SHOTS:
+        mask=np.zeros((h,w),np.float32)
+        points=np.array([[(int(x*w),int(y*h)) for x,y in WATER_POLYGONS[shot_id]]],np.int32)
+        cv2.fillPoly(mask,points,1.0)
+        mask=cv2.GaussianBlur(mask,(0,0),4.0)
+        # Reapply exclusions after feather to keep geometry exactly locked.
+        for x0,y0,x1,y1 in WATER_PROTECTED_RECTS[shot_id]:
+            mask[int(y0*h):int(y1*h),int(x0*w):int(x1*w)]=0
+    else:
+        mask=np.zeros((h,w),np.float32)
+        for cx,cy,rx,ry in LIGHT_POINTS[shot_id]:
+            mask=np.maximum(mask,engine.ellipse_mask(shape,(cx,cy),(rx,ry),blur=9))
+    if mask.max()<.95 or np.mean(mask)<.002:
+        raise ValueError(f"{shot_id} missing visible approved material mask")
+    return np.clip(mask,0,1)
 
 
 def digest(p: Path) -> str:
@@ -67,6 +110,7 @@ def render_one(src: Path, shot: dict, variant: str, rt, out: Path) -> dict:
         raise ValueError(f"{sid} expected original 1280x720")
     bgr = cv2.resize(original, (W, H), interpolation=cv2.INTER_AREA)
     effects = rt.FXRuntime(seed=302)
+    material = material_mask(bgr.shape, sid, effects)
     original_out = out / "original"
     original_out.mkdir(parents=True, exist_ok=True)
     source_copy = original_out / f"{sid}_ORIGINAL_UNCHANGED.jpg"
@@ -84,28 +128,29 @@ def render_one(src: Path, shot: dict, variant: str, rt, out: Path) -> dict:
                "-pix_fmt", "yuv420p", "-movflags", "+faststart", str(video_path)]
     process = subprocess.Popen(command, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
     measures = []
+    material_measures = []
+    protected_measures = []
     start_frame = None
     end_frame = None
     roi = WATER_ROI.get(sid) if sid in WATER_SHOTS else LIGHT_ROI[sid][0 if variant == "A" else 1]
     try:
         for i in range(FRAMES):
             t = i / FPS
-            ctx = rt.FXContext(t=t, duration=DURATION, frame_index=i, fps=FPS, energy=.16, transient=0)
+            ctx = rt.FXContext(t=t, duration=DURATION, frame_index=i, fps=FPS, energy=.18, transient=0)
             if sid in WATER_SHOTS:
-                strength = .64 if variant == "A" else 1.12
-                changed = effects.water_flow(bgr, ctx, roi=roi, strength=strength, reflect=False)
+                strength = 1.75 if variant == "A" else 2.75
+                changed = effects.water_flow(bgr, ctx, roi=(0,.54,1,1), strength=strength, reflect=False)
             else:
-                strength = .26 if variant == "A" else .36
-                changed = effects.practical_light_breath(bgr, ctx, roi=roi, strength=strength)
-            # A cyclic transparent handoff to the unmodified source at the loop join.
-            # This preserves the source at t=0 and bounds residual difference at t=2.46s.
-            envelope = math.sin(math.pi * i / FRAMES) ** 2
-            if envelope < 1e-8:
-                picture = bgr
-            else:
-                picture = cv2.addWeighted(changed, envelope, bgr, 1.0 - envelope, 0)
+                strength = .95 if variant == "A" else 1.40
+                changed = effects.practical_light_breath(bgr, ctx, mask=material, strength=strength)
+            # Exactly meet original at BOTH loop boundaries; never globally pan/zoom.
+            envelope = math.sin(math.pi * i / (FRAMES-1)) ** 2
+            picture = effects.blend(bgr, changed, material * envelope * (1.0 if sid in WATER_SHOTS else .92))
             delta = np.abs(picture.astype(np.int16) - bgr.astype(np.int16))
+            per_pixel = np.mean(delta,axis=2)
             measures.append(float(np.mean(delta)))
+            material_measures.append(float(np.mean(per_pixel[material>.5])))
+            protected_measures.append(float(np.max(per_pixel[material<.001])))
             if i == FRAMES // 2:
                 cv2.imwrite(str(still_path), picture, [cv2.IMWRITE_JPEG_QUALITY, 93])
             if i == 0:
@@ -129,16 +174,25 @@ def render_one(src: Path, shot: dict, variant: str, rt, out: Path) -> dict:
     if decode.returncode:
         raise RuntimeError(f"{sid}/{variant} MP4 decoding failed: {decode.stderr[-700:]}")
     mean_max = max(measures)
+    material_max = max(material_measures)
+    protected_max = max(protected_measures)
     seam = float(np.mean(np.abs(start_frame.astype(np.int16) - end_frame.astype(np.int16))))
     # A light effect must produce pixel changes, not just a successful shell exit.
-    if mean_max < .03:
-        raise ValueError(f"{sid}/{variant} effect not measurably visible")
-    if seam > 1.5:
+    if mean_max < .03 or material_max < .45:
+        raise ValueError(f"{sid}/{variant} effect lacks material motion (global {mean_max:.4f}, material {material_max:.4f})")
+    if protected_max > .01:
+        raise ValueError(f"{sid}/{variant} protected-frame pixels changed: {protected_max:.4f}")
+    if seam > .01:
         raise ValueError(f"{sid}/{variant} loop boundary fails (MAD={seam:.3f})")
     return {
         "shot_id": sid, "variant": variant, "kind": "water_flow" if sid in WATER_SHOTS else "practical_light_breath",
         "canonical_fx_id": "FX2-MOTION-003" if sid in WATER_SHOTS else "FX2-LIGHT-023",
-        "original_sha256": actual, "region": roi, "source_width":1280, "source_height":720,
+        "original_sha256": actual, "region": WATER_POLYGONS[sid] if sid in WATER_SHOTS else LIGHT_POINTS[sid],
+        "protected_rectangles": WATER_PROTECTED_RECTS.get(sid, []),
+        "max_material_pixel_change": round(material_max,4),
+        "max_protected_pixel_change": round(protected_max,4),
+        "repair_scope": "bounded water/material lighting; no actor articulation",
+        "source_width":1280, "source_height":720,
         "render_width": W, "render_height": H, "fps":FPS, "frames":FRAMES, "duration_seconds":DURATION,
         "original_copy":str(source_copy.relative_to(out)), "original_copy_sha256":digest(source_copy),
         "fx_still":str(still_path.relative_to(out)), "fx_still_sha256":digest(still_path),
@@ -180,13 +234,15 @@ def main() -> int:
         if len(results)!=2*len(shots):
             raise RuntimeError("FX proof count mismatch")
         receipt={
-            "schema":"aivideoedit.b01-fx-runner-proof.v1",
-            "status":"TECHNICAL_FX_PROOFS_REVIEW_REQUIRED",
+            "schema":"aivideoedit.b01-director-fx-repair-proof.v1",
+            "status":"TECHNICAL_FX_REPAIR_PROOFS_REVIEW_REQUIRED",
             "source_branch":"song/la-luna-de-florida",
             "source_preflight_sha256":digest(PROJECT/"B01_DIRECTOR_PREFLIGHT.json"),
             "runtime_sha256":digest(RUNTIME),
             "source_canon_status":"storyboard_locked_stills_not_accepted",
-            "render_engine":"exact-current-main FXRuntime water_flow/practical_light_breath",
+            "render_engine":"exact-current-main FXRuntime water_flow/practical_light_breath; Director source-localized masks",
+            "preserves_prior_runner_proofs":True,
+            "fx_repair_scope":"bounded localized material motion only",
             "shot_count":len(shots),"variant_count":len(results),
             "processing_seconds":round(time.monotonic()-start,2),
             "generated":results,
