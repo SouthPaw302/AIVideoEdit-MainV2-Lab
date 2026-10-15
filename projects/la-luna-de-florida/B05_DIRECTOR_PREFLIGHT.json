@@ -1,0 +1,212 @@
+{
+  "schema": "aivideoedit.la-luna-b05-director-preflight.v1",
+  "branch": "song/la-luna-de-florida",
+  "production": "la-luna-de-florida",
+  "status": "TEN_NIGHT_EXTRA_SOURCES_HASH_VERIFIED__DAWN_ORIGINAL_SOURCE_GAP_OPEN",
+  "storyboard_sha256": "05b232452eebce56fb9c047a0f481a19e04cf2d13e364bee30255dd27c88703a",
+  "canon_storyboard": "STORYBOARD_CANON.json",
+  "act_title": "Bridge, breakdown, and sunrise",
+  "original_archive": {
+    "drive": "https://drive.google.com/file/d/1D6kgeamq_cnfpvGcVzbPO-U7GwLqtjV2/view",
+    "sha256": "b80050b8808255fe023296ba9e722c60116fd6fe6e24fba2b619e98cc62ad4d4",
+    "bytes": 22727172,
+    "source_filename_prefix": "B05_NIGHT_EXTRA",
+    "source_role": "nighttime visual candidates only; NOT verified canon dawn originals",
+    "originals": 10,
+    "dimensions": [
+      1672,
+      941
+    ],
+    "CRC_pass": true,
+    "hash_checks": true
+  },
+  "source_inventory": [
+    {
+      "file": "B05_NIGHT_EXTRA-S01.png",
+      "sha256": "17f797271d387421e3b8df3eea2448dace71ceb64c75d0e1aee7657830a3b2db",
+      "kind": "preserved_night_extra_original",
+      "source_role": "candidate_not_canon_B05_finale"
+    },
+    {
+      "file": "B05_NIGHT_EXTRA-S02.png",
+      "sha256": "f707d5be41d4f738720225372c814e02fbd046e0a64ae6b623c32c0e936db07f",
+      "kind": "preserved_night_extra_original",
+      "source_role": "candidate_not_canon_B05_finale"
+    },
+    {
+      "file": "B05_NIGHT_EXTRA-S03.png",
+      "sha256": "ba35ba0c18902b538d9b9e0e9ede4b3c56a3ba8706e104710f107ca22c5c2db8",
+      "kind": "preserved_night_extra_original",
+      "source_role": "candidate_not_canon_B05_finale"
+    },
+    {
+      "file": "B05_NIGHT_EXTRA-S04.png",
+      "sha256": "b405cf8d2df65942fe323fdc52939d8ec63bc37bf4ae9b7815dba46c7654e7aa",
+      "kind": "preserved_night_extra_original",
+      "source_role": "candidate_not_canon_B05_finale"
+    },
+    {
+      "file": "B05_NIGHT_EXTRA-S05.png",
+      "sha256": "8de9dfa0c07734e36b87cf33162afbc02269d5ad6778a3e47e3a7ad22b0dcaae",
+      "kind": "preserved_night_extra_original",
+      "source_role": "candidate_not_canon_B05_finale"
+    },
+    {
+      "file": "B05_NIGHT_EXTRA-S06.png",
+      "sha256": "cabe919a31493f4ce169f106153c36f1f496ff4ee8eee2db10ee8373998117ab",
+      "kind": "preserved_night_extra_original",
+      "source_role": "candidate_not_canon_B05_finale"
+    },
+    {
+      "file": "B05_NIGHT_EXTRA-S07.png",
+      "sha256": "5baaf17fc90a4bb8ab925dc82bda3fe848b8033a6567721053ab5e9f1b5ba0a7",
+      "kind": "preserved_night_extra_original",
+      "source_role": "candidate_not_canon_B05_finale"
+    },
+    {
+      "file": "B05_NIGHT_EXTRA-S08.png",
+      "sha256": "6da10b14c200f70d8c06070ff48fdc8e02627669715285dd8b1404eefedb9f6a",
+      "kind": "preserved_night_extra_original",
+      "source_role": "candidate_not_canon_B05_finale"
+    },
+    {
+      "file": "B05_NIGHT_EXTRA-S09.png",
+      "sha256": "1958b6d706d40555a13795d3b227658b1dc497b8c368d4e46ba83e0fcf9b6919",
+      "kind": "preserved_night_extra_original",
+      "source_role": "candidate_not_canon_B05_finale"
+    },
+    {
+      "file": "B05_NIGHT_EXTRA-S10.png",
+      "sha256": "de97ab7bd4e750273fb019093ac640f724755310b8686a537a4d8e44d7f1c54e",
+      "kind": "preserved_night_extra_original",
+      "source_role": "candidate_not_canon_B05_finale"
+    }
+  ],
+  "shot_intents": [
+    {
+      "shot_id": "B05-S01",
+      "caption": "After the celebration",
+      "direction": "lantern-lit ensemble remains seated; fatigue and quiet resolve",
+      "source_file": "B05_NIGHT_EXTRA-S08.png",
+      "source_sha256": "6da10b14c200f70d8c06070ff48fdc8e02627669715285dd8b1404eefedb9f6a",
+      "source_treatment": "night_original",
+      "artistic_source_accepted": false,
+      "preview_only": true
+    },
+    {
+      "shot_id": "B05-S02",
+      "caption": "One last dance",
+      "direction": "tavern-stage dancer footwork; real source dance layer where compatible",
+      "source_file": "B05_NIGHT_EXTRA-S05.png",
+      "source_sha256": "8de9dfa0c07734e36b87cf33162afbc02269d5ad6778a3e47e3a7ad22b0dcaae",
+      "source_treatment": "night_original_plus_same_film_dance",
+      "artistic_source_accepted": false,
+      "preview_only": true
+    },
+    {
+      "shot_id": "B05-S03",
+      "caption": "The breakdown",
+      "direction": "woman's introspection as music falls away; no false facial movement",
+      "source_file": "B05_NIGHT_EXTRA-S02.png",
+      "source_sha256": "f707d5be41d4f738720225372c814e02fbd046e0a64ae6b623c32c0e936db07f",
+      "source_treatment": "night_original",
+      "artistic_source_accepted": false,
+      "preview_only": true
+    },
+    {
+      "shot_id": "B05-S04",
+      "caption": "Strings and percussion",
+      "direction": "genuine same-film violin and guitar clip, original S04 night plate",
+      "source_file": "B05_NIGHT_EXTRA-S06.png",
+      "source_sha256": "cabe919a31493f4ce169f106153c36f1f496ff4ee8eee2db10ee8373998117ab",
+      "source_treatment": "night_original_plus_authorized_same_film_Gemini",
+      "artistic_source_accepted": false,
+      "preview_only": true
+    },
+    {
+      "shot_id": "B05-S05",
+      "caption": "The night fades",
+      "direction": "night harbor water, first pre-dawn glimmer; source-derived graded transition",
+      "source_file": "B05_NIGHT_EXTRA-S09.png",
+      "source_sha256": "1958b6d706d40555a13795d3b227658b1dc497b8c368d4e46ba83e0fcf9b6919",
+      "source_treatment": "source_derived_predawn_candidate",
+      "artistic_source_accepted": false,
+      "preview_only": true
+    },
+    {
+      "shot_id": "B05-S06",
+      "caption": "Everyone together",
+      "direction": "travelers and musician gathering before dawn",
+      "source_file": "B05_NIGHT_EXTRA-S04.png",
+      "source_sha256": "b405cf8d2df65942fe323fdc52939d8ec63bc37bf4ae9b7815dba46c7654e7aa",
+      "source_treatment": "night_original",
+      "artistic_source_accepted": false,
+      "preview_only": true
+    },
+    {
+      "shot_id": "B05-S07",
+      "caption": "Before we let go",
+      "direction": "couple dancing embracing; lingering emotional hold",
+      "source_file": "B05_NIGHT_EXTRA-S10.png",
+      "source_sha256": "de97ab7bd4e750273fb019093ac640f724755310b8686a537a4d8e44d7f1c54e",
+      "source_treatment": "night_original_plus_same_film_couple",
+      "artistic_source_accepted": false,
+      "preview_only": true
+    },
+    {
+      "shot_id": "B05-S08",
+      "caption": "The new day",
+      "direction": "Miami dock plate dynamically transformed by dawn sky/water light, no authentic dawn source still",
+      "source_file": "B05_NIGHT_EXTRA-S01.png",
+      "source_sha256": "17f797271d387421e3b8df3eea2448dace71ceb64c75d0e1aee7657830a3b2db",
+      "source_treatment": "source_derived_dawn_environment_candidate",
+      "artistic_source_accepted": false,
+      "preview_only": true
+    },
+    {
+      "shot_id": "B05-S09",
+      "caption": "The echo remains",
+      "direction": "harbor reflections as sunrise broadens; dawn treatment not independent sunrise photo",
+      "source_file": "B05_NIGHT_EXTRA-S09.png",
+      "source_sha256": "1958b6d706d40555a13795d3b227658b1dc497b8c368d4e46ba83e0fcf9b6919",
+      "source_treatment": "source_derived_dawn_environment_candidate",
+      "artistic_source_accepted": false,
+      "preview_only": true
+    },
+    {
+      "shot_id": "B05-S10",
+      "caption": "Volveremos a bailar",
+      "direction": "tavern-stage couple with sunrise transition to harbor, metaphor of promise",
+      "source_file": "B05_NIGHT_EXTRA-S10.png",
+      "source_sha256": "de97ab7bd4e750273fb019093ac640f724755310b8686a537a4d8e44d7f1c54e",
+      "source_treatment": "night_original_with_dawn_editorial_transition_candidate",
+      "artistic_source_accepted": false,
+      "preview_only": true
+    }
+  ],
+  "semantic_gap": {
+    "sunrise_skyline_missing_original": true,
+    "affected_storyboard_beats": [
+      "B05-S05",
+      "B05-S08",
+      "B05-S09",
+      "B05-S10"
+    ],
+    "source_derived_dawn_candidate_allowed_for_review": true,
+    "source_derived_dawn_must_not_be_labeled_independent_original": true,
+    "imagegen_storyboard_poster_disposition": "REJECTED_NOT_PRODUCTION_MEDIA"
+  },
+  "fx_scope": {
+    "run_native_lab_main_on_ten_original_night_plates": true,
+    "light_fx_from_originals_gate_only": true,
+    "dawn_derived_layer_and_onscreen_transition_need_separate_Director_QC": true,
+    "instrument_performance_source": "https://drive.google.com/file/d/1HN-pdGv84bnIoY7O52jOi9O3gVBR4Sgh/view",
+    "protected_originals": true
+  },
+  "release_gates": {
+    "B01_B04_unchanged": true,
+    "frame_aligned_lyrics": false,
+    "master_film": false,
+    "owner_release": false
+  }
+}
