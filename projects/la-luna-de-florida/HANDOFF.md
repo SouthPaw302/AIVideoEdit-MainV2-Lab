@@ -1,5 +1,16 @@
 # Production handoff — La Luna de Florida
 
+## Current user-canon FX workflow — per-song only (2026-10-15)
+
+**Read [FX_STAGE_CANON.json](FX_STAGE_CANON.json) before any B01–B05 FX or assembly action.** Explicit current-user direction locks three distinct stages: **(1) Batch Light FX** = environmental/practical-light A/B motion proofs; **(2) Batch Character FX** = separate genuine articulated people/instruments/actions, shot-specific and Zero-Drift-gated (or reasoned NOT_APPLICABLE); **(3) Master FX + Assembly** = combine inspected per-shot layers against the full-song ONNX beat/downbeat evidence, independently verified lyric cues, frame-timed script and 50-shot storyboard. This is a workflow canon, **not a grant of individual picture/film acceptance**.
+
+**Already done at the *light-FX technical* gate:** B01 [Actions #38675807521](https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38675807521) and B02 [Actions #38673490212](https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38673490212), each 10 originals × A/B = 20 motion proofs. Their character-action gates and Master FX remain separate/unpassed. B01's earlier `B01_FX_REPAIR_DIRECTOR_REVIEW.json` artistic verdict applied to a *full-animation expectation* and does not negate the technical success of the Light FX preparation gate; do not rewrite its historical evidence. This policy does not approve the B01/B02 pixels, replace originals, or unlock film release.
+
+**Story and sound authority:** locked `STORYBOARD_CANON.json` (50 B01–B05 shots, SHA256 `05b232452eebce56fb9c047a0f481a19e04cf2d13e364bee30255dd27c88703a`), source WAV (SHA256 `1a4bffef36930b504423d2653faff4cc5bfd9a15d44bdcf1083b27fbb0db1c10`), `LYRICS.md`, `SCRIPT.md` / `SCRIPT.json`, and pinned Beat This! ONNX run [#38680169728](https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38680169728) (93.75 BPM, 510 beats, 140 downbeats). **The full-song beat inference passed; frame-followable screenplay/lyric-line sync are not locked.** No new storyboard and no inferred approval.
+
+**External movie example isolation:** User plans to nominate a different repo solely for studying the other agent's *production process*. Do not inspect/import external story, characters, media, visual DNA, accepted sources, settings, manifests, branches or state as La Luna authority. Do not modify that example repo. Record methodological lessons as references only; **ask for explicit user authorization before adopting a specific method into this branch**. Keep `SOURCE_AUTHORITY.json` exclusions intact and never modify `main` or unrelated song branches as part of this exercise.
+
+
 **New immutable visual plan**: `STORYBOARD_CANON.json` is the authority for 50 B01–B05 stills. The image `STORYBOARD_CANON_B01-B05.png` is stored in Drive under `06 Canon Storyboard`. Verify its SHA256 equals `05b232452eebce56fb9c047a0f481a19e04cf2d13e364bee30255dd27c88703a` before any new still or FX.
 
 **Scope:** theatrical film and lyric-story. Board locks composition sequence, protagonists, mise-en-scène and night-to-day trajectory. It does not accept final stills/animations/edits or permit reusing tiny thumbnails as high-resolution media.
