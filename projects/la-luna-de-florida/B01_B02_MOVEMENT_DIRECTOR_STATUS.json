@@ -248,12 +248,84 @@
   "individual_source_pixels_locked": false,
   "film_release_approved": false,
   "next_actions": [
-    "Remove detected hard/near freeze in existing 4s comps using truly evolving, zero-drift internal FX/layers; do not falsely pass via global noise, random jitter, optical distortion or repeated zoom.",
-    "Review RC2 at normal speed against 50-shot canon; keep current source and FX bytes immutable",
-    "Finish B01 performance gaps for S02/S03/S04/S05/S06/S08 using verified same-song pose variants, independent moving-footage coverage or a specifically authorized bounded continuation; do not fake musical actions with camera zoom",
-    "Repair B01-S10 source mismatch: correct night-world finale to Act 1 without text or dawn and keep existing original as rejected candidate",
-    "Fix B02-S01/S02 exterior-to-interior visual coverage with scene-correct still/footage and transition; retain old proofs",
-    "Finish B02 S03..S10 physical dance/musicians/conversation performance motion, prioritizing live articulation",
-    "Run Director normal-speed proof check and exact project/source to export QC, then mark batches complete only if visual proof passes"
-  ]
+    "Inspect RC3 at normal speed. Keep same-song performances as versioned candidate alternatives only; reject visible source repetition, identity or timing discontinuity, do not blindly promote.",
+    "Fix remaining six real gesture/dance/musician motion gaps: B01-S04/S05/S06, B02-S04/S06/S08, using vetted character pose-state variation, source-derived real footage or specifically approved bounded generation only.",
+    "Repair B02-S01/S02 entrance/interior coverage without replacing locked storyboard; validate actual scene-level arrival/threshold rather than claiming water/dock is inside.",
+    "Re-run actual final encoded temporal scan; RC3 still has 6 half-second-or-longer freeze events and cannot pass temporal motion gate.",
+    "Use ONNX and independently verified lyric lines to lock film scene durations only after shots are truthful. Do not assume provisional 4 seconds/shot is script timing.",
+    "Do not begin B03/B04/B05 or Master FX until B01/B02 gate is satisfied."
+  ],
+  "latest_RC3_provisional": {
+    "status": "ACTUAL_EXPORT_QC_COMPLETED__CREATIVE_GATES_OPEN",
+    "render_location": "SANDBOX_NOT_A_NEW_GITHUB_ACTIONS_RUN",
+    "export": "https://drive.google.com/file/d/1-nbQnQvvoSOnU_hEn4P8YPQOrFFqJ2q8/view",
+    "export_sha256": "a45fb9dd8dca2bea2f8a7043eb4037c953ccc51b521abfa3d5035677d69c3608",
+    "individual_20_clips": "https://drive.google.com/file/d/1R8PxP8T1BG_BQStDPX0k54VpIY3JLec-/view",
+    "individual_archive_sha256": "41938fa08c8d3e93b1e674e446395db62d80e01613a795ec6cb5fdbc1938fea9",
+    "contact": "https://drive.google.com/file/d/1qPCIDnEYnSDyVEU4DqgQz_Q09tuEzNeb/view",
+    "receipt": "https://drive.google.com/file/d/1isO3wnorU0iKSlhoedVfdJrw2FbTTk2V/view",
+    "source_implementation": "https://drive.google.com/file/d/1_6oK-q2xJSNuhaJbGLgi00ECu8bzD8mN/view",
+    "source_provenance": "https://drive.google.com/file/d/1ycFPS3612wET9bKfjBa79Hf55MLWdL6a/view",
+    "source_clips": [
+      {
+        "same_film_source": "GEMINI_UPLOAD_952aed07_ORIGINAL_UNCUT.mp4",
+        "sha256": "e9335abaad0d9ee7d62131c66eab1d6626c53e3b035b4bb1a0362477a102c2",
+        "role": "dance",
+        "original_unchanged": true
+      },
+      {
+        "same_film_source": "B05-S04_GEMINI_a6339758_original.mp4",
+        "sha256": "5e1c2b35ce9fbbe60d45a6c55766a1fd876644c39ae5e7b97218ab087cae1cc5",
+        "role": "guitar_violin_musicians",
+        "cross_act_candidate_only": true,
+        "original_unchanged": true
+      }
+    ],
+    "genuine_actor_or_instrument_video_candidates": [
+      "B01-S02",
+      "B01-S03",
+      "B01-S07",
+      "B01-S08",
+      "B02-S03",
+      "B02-S05",
+      "B02-S07",
+      "B02-S09",
+      "B02-S10"
+    ],
+    "rejected_source_still_still_preserved": {
+      "shot": "B01-S10",
+      "reason": "source contains text and inappropriate sunrise",
+      "RC3_alt": "source-derived nocturnal harbor reprise; candidate, never recanonized"
+    },
+    "technical_QC": {
+      "individual_clips_decoded": 20,
+      "individual_shots": 20,
+      "encoded_review_frames": 1920,
+      "review_duration_s": 80,
+      "review_fps": 24,
+      "black_events": 0,
+      "half_second_or_longer_freeze_events": 6,
+      "previous_RC2_freeze_events": 7,
+      "archive_crc": "PASS",
+      "remote_drive_backups_listed": true
+    },
+    "unresolved_actor_or_instrument_semantic_motion": [
+      "B01-S04",
+      "B01-S05",
+      "B01-S06",
+      "B02-S04",
+      "B02-S06",
+      "B02-S08"
+    ],
+    "unresolved_visual_storyboard_coverage": [
+      "B02-S01",
+      "B02-S02"
+    ],
+    "human_approval": false,
+    "canon_shot_source_acceptance": false,
+    "FX_locked": false,
+    "master_fx_ready": false,
+    "B03_B04_B05_hold": true,
+    "limitations": "Actual dance/guitar/violin motion improves nine clips. Some same-song footage was reused/reframed, including later-act musician footage; Director must check temporal repetition, facial continuity, lyric/script timing. Remaining six semantically moving shots and two entrance/interior coverage issues cannot be falsely accepted by camera or light FX."
+  }
 }
