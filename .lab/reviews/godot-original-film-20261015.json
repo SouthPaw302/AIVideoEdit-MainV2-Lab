@@ -1,0 +1,43 @@
+{
+  "schema": "aive.godot.authored-music-film-review.v1",
+  "date": "2026-10-15",
+  "branch": "test/godot-render",
+  "commit_tested": "0f7769f198dd87c49c5e1f4eedfd08ba3c16a466",
+  "github_actions_run": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38694900035",
+  "technical_result": "PASS",
+  "source_image": "source__04_twilight_inn_beneath_the_flower_crown.png",
+  "source_image_sha256": "81cfa4e39aa944782978ec921bac45078dfe4ad8adb4372f9ba132168cc3a723",
+  "source_audio": "source__El_Viento_trae_tu_nombre_Instrumental.wav",
+  "source_audio_sha256": "8d451360246378db551282c3703add4cd474c9ad3a4c6cf778390ae727820fe0",
+  "audio_excerpt_start_seconds": 46,
+  "audio_excerpt_duration_seconds": 14,
+  "video": {
+    "fps": 24,
+    "width": 960,
+    "height": 540,
+    "frames": 336,
+    "audio": "actual selected instrumental WAV"
+  },
+  "outputs": [
+    {
+      "name": "godot.mp4",
+      "sha256": "e2369e1a18702227769881d845e246d9ba31b629bfcbe116af3e8d130455cc78",
+      "bytes": 2715242
+    },
+    {
+      "name": "mainv2_fx.mp4",
+      "sha256": "d1ffb24a5f21c11bdb8424e905c58a83c017efc9aa9ab2a0d9ea5e62c73d3ccb",
+      "bytes": 2803034,
+      "canonical_fx": [
+        "FX2-ATM-001",
+        "FX2-LIGHT-001"
+      ]
+    }
+  ],
+  "video_location": "GitHub Actions temporary artifact and attached chat files; not production delivery",
+  "source_processing": "Godot Movie Maker original animation constructed from pinned still, not recycled existing video",
+  "post_processing": "Optional canonical MainV2 FXExecutor smoke and light",
+  "human_artistic_review": "PENDING",
+  "production_authorization": false,
+  "main_changed": false
+}
