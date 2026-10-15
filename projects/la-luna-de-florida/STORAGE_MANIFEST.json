@@ -64,7 +64,7 @@
       }
     },
     "provenance": "individual full-frame imagegen files from prior turns; sha256 index stored on Drive",
-    "next_required": "Generate 10 truly independent full-size dawn-act B05-S01..B05-S10 images; do not use generated storyboard contact sheet as picture originals."
+    "next_required": "B05 source issue resolved by separate 7-night + 3-full-frame-dawn source pack; now 50 verified moving shot proofs and full-song Master FX lyric/beat edit required. Do not regenerate source stills or invent old original status."
   },
   "sandbox_media_backup_audit": {
     "url": "https://drive.google.com/file/d/1lro4XA-PSjuGxbFsc_JJDOcxEs9Vd58Z/view",
@@ -120,5 +120,17 @@
     "status": "TECHNICAL_FX_PROOFS_REVIEW_REQUIRED",
     "motion_scope": "water flow or localized practical light; no articulated people",
     "old_fx_preserved": true
+  },
+  "B05_selected_finale": {
+    "source_manifest": "B05_FINALE_SOURCE_SELECTION.json",
+    "source_zip": "https://drive.google.com/file/d/125BAnia3HKacDFtpOel8-etstMu-h0tw/view",
+    "source_hash": "dbbc3a1a72af40dcdb9afa26ea032dd5bdc2ef448a3508464a562e78ad5cf596",
+    "source_mix": "7 original night extras, 3 new standalone full-frame dawn candidates",
+    "native_run_id": 38805344772,
+    "native_loop_archive": "https://drive.google.com/file/d/1yUW4rNoWl7gEygjWbtJGgU3u6dLaPPqt/view",
+    "director_cut": "https://drive.google.com/file/d/1OjqMNnZKW5m2XDKtbsJhprdyiUIniiQz/view",
+    "moving_proofs": "https://drive.google.com/file/d/1vps_qOmVKJy_96aTcQh0-tgjJlZmXLsJ/view",
+    "master_preflight": "MASTER_50_SHOT_SOURCE_PREFLIGHT.json",
+    "stage": "10 scene proofs Director selected, final Master FX still open"
   }
 }
