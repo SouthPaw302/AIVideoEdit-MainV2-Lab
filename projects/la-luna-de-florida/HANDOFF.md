@@ -21,6 +21,12 @@
 
 **Canonical production stage:** `INITIALIZED` until actual prerequisites pass. Nothing in this handoff asserts the larger stages are done.
 
+### Original AIVideoEdit film learning — methodology only
+
+Read [REFERENCE_METHOD_STUDY.md](REFERENCE_METHOD_STUDY.md) for the 29-branch reference inventory, six detailed song-method examples, exact current-Lab main FX comparisons, and the corrected character/scene motion compile recipe. User instruction: **build La Luna moving characters/scenes from source duplicates, variant stills, GIF/MP4 loops, transparent alpha, depth/parallax, valid Gaussian light/spatial effects, current-main neutral FXRuntime/recipes, and bounded Director camera cuts/moves**. Real dance/instrument articulated action still requires actual credible changing poses/source motion or authorized continuation; do not claim a fixed hand/string pose was animated by lights/camera. Use the Lab current main 91-entry FX registry; don't copy any prior song's source material. True 3DGS remains conditional, whereas 2D Gaussian light is ordinary image-space FX.
+
+Other repo: https://github.com/SouthPaw302/AIVideoEdit/tree/song/el-viento-trae-tu-nombre — **READ ONLY**. Our writable production is only `SouthPaw302/AIVideoEdit-MainV2-Lab`, branch `song/la-luna-de-florida`. No external master/hero/lyric/story/shot constraints or code automatically become La Luna authority.
+
 ## New FX and Gemini handoff
 
 - Authoritative new experiment index: `B01_FX_DUPLICATES_INDEX.json` (10 original copies + A/B stills + A/B 2.5s loops; no human articulated motion).
