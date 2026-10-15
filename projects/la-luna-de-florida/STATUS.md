@@ -1,5 +1,18 @@
 # La Luna de Florida — Status
 
+## LATEST — B04 RC2 Director batch-stage selection (2026-10-15)
+
+**B04 10/10 moving-scene proof positions DIRECTOR-SELECTED for full-film continuation.** [Watch B04 RC2 40-second cut](https://drive.google.com/file/d/11exEAiou7XMbLerksMQvOJxPqb_BdP9P/view) · [10 preserved shot clips, reproducible RC1/RC2 compositors and technical receipts](https://drive.google.com/file/d/10cF5tPLxGHxvGKZA7B091K53dGxctqTb/view) · [full contact sheet](https://drive.google.com/file/d/1js02fxYFgaCHuo_YJ4FZlItktdcNuEtt/view). [Exact per-shot Director verdict](B04_DIRECTOR_BATCH_DECISION.json). New Drive folder: [15 Director Movement B04](https://drive.google.com/drive/folders/16AxFdus_bQzScFUUCCxIaHIr1AMxQIYD).
+
+**Native Lab-main FX actual runner PASS:** [GitHub Actions #38702608550](https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38702608550) downloaded the checksum-verified original B04 ZIP (SHA256 `4905a120d08dd6d5eaca1b7f18d53188af5523abe5be3e30bb5be0f174e1a5df`); 10 full-resolution (1672×941) originals / 20 A/B loop and derivative still FX proofs (60 frames × 2.5s) from the registered `FX2-LIGHT-023` current-main runtime. Protected ROI, loop seam and actual frame decode checks PASS. [Native archived originals / 20 FX proofs / receipt](https://drive.google.com/file/d/1itN2iGrKs149QpLXAM6rUu8rFGJWmGl6/view), SHA256 `a7344abecddee2a839e126b01a99a5c04e5802423bd463b09e1702085e506e55`.
+
+**Separate 10×4-second moving scenes** compiled in sandbox *from that authentic native FX pass*, with bounded Director camera and selected same-film video evidence for B04-S01 violin, S04 dance, S07 ensemble and S10 chorus. All ten original images preserved. [RC2 actual export QC](https://drive.google.com/file/d/1Jbu9O7a89ReCVwZBmQBhAMj3LP8_LkX8/view): 960 encoded frames / 40 seconds / 24fps, **zero black and half-second freeze events**. RC1 rejected because final chorus turned into empty marina; RC2 repairs **S10 only**, preserves nine other moving MP4s byte-for-byte, and ends on the couple inside the lively moonlit tavern.
+
+**No false actor performance:** B04-S02 palmas cutaway depicts palms but does not prove live hand clapping; S03 smile does not prove animated laughter; S06 voices are visual storytelling not lip-sync; S09 held eye line does not animate eyeballs. Same-film Gemini musician/dance sources must be reviewed for repetition during the 5:21 feature master. **Director's approval is batch-scene selection only**; full film, final song/lyric alignment and owner release not granted.
+
+**B01-B04 production batches now staged/selected; next B05 finale source/canon reconciliation**. Existing B05 night extras do not equal canon sunrise; do not silently replace final dawn stills.
+
+
 ## Latest Director decision — B03 stage selected, B04 next (2026-10-15)
 
 **B03 complete for batch-level production progression.** User explicitly permits **nine original full-size stills** for B03. The original B03-S10 remains historically unrecovered, but the tenth **storyboard shot intent** is fulfilled for this stage by the Director-selected *S07 road-memory → S09 couple/reunion* moving editorial composite. **No tenth original still is required.** This modifies neither the locked 50-shot storyboard nor the source history. [Exact shot-by-shot Director decision](B03_DIRECTOR_BATCH_DECISION.json).
