@@ -1,0 +1,188 @@
+{
+  "schema": "aivideoedit.b02-director-preflight.v1",
+  "production": "la-luna-de-florida",
+  "branch": "song/la-luna-de-florida",
+  "phase": "BEFORE_FX_MEDIA_GENERATION",
+  "director_disposition": "PROOF_AUTHORIZED_REVIEW_PENDING",
+  "authority": {
+    "direction": "user_directed",
+    "mode": "hybrid",
+    "canon_storyboard_sha256": "05b232452eebce56fb9c047a0f481a19e04cf2d13e364bee30255dd27c88703a",
+    "approved_scope": "ordered shot intent only",
+    "human_visual_approval": false,
+    "accepted_source_library": "none"
+  },
+  "source_audit": {
+    "count": 10,
+    "source_resolution": "1672x941",
+    "kind": "ten standalone generated PNGs, separately archived on Drive",
+    "drive_folder": "https://drive.google.com/drive/folders/1k3mMMbdF3egjlktalMwZy-TV71pMteQc",
+    "director_review": "inspected all 10 in contact overview; B02-S01/S02 show the waterfront rather than literal doorway/stepping inside, therefore provisional coverage not accepted canonical pixels",
+    "source_sha256_pinned": true
+  },
+  "render_contract": {
+    "proof_only": true,
+    "source_preserve_unmodified": true,
+    "per_shot_original_copy": 1,
+    "per_shot_alternate_stills": 2,
+    "per_shot_loop_mp4": 2,
+    "duration_seconds": 2.5,
+    "fps": 24,
+    "resolution": "960x540",
+    "master_audio_mutation": false,
+    "protected_regions": [
+      "face",
+      "eyes",
+      "hands",
+      "clothing",
+      "instruments",
+      "boat geometry",
+      "skyline",
+      "horizon",
+      "building/lamps geometry"
+    ],
+    "camera_motion": "off",
+    "effect_selection": "approved main registry runtime only",
+    "do_not_claim": [
+      "people_dancing",
+      "instrument_playing",
+      "3D_stitched_camera",
+      "director_visual_pass",
+      "master_render_complete"
+    ],
+    "fx_lock": false,
+    "human_approval": false
+  },
+  "shots": [
+    {
+      "shot_id": "B02-S01",
+      "shot_intent": "Entrance to the tavern",
+      "source_sha256": "f20f3f2a2d00441c53ee1d14b4277348da73d2f4f26e1a7b73facb1e29e038e1",
+      "source_filename": "B02-S01.png",
+      "scene_features": "waterfront walkway / dock, exterior harbor",
+      "approved_runtime_effect_candidates": [
+        "FX2-MOTION-003"
+      ],
+      "protection_notes": "water beyond right dock, not wood or pilings",
+      "coverage_status": "provisional_nonliteral_storyboard_coverage",
+      "fx_gate": "PENDING_REAL_RUNNER_MEDIA_QC"
+    },
+    {
+      "shot_id": "B02-S02",
+      "shot_intent": "Stepping inside",
+      "source_sha256": "17f797271d387421e3b8df3eea2448dace71ceb64c75d0e1aee7657830a3b2db",
+      "source_filename": "B02-S02.png",
+      "scene_features": "tavern threshold, waterfront exterior",
+      "approved_runtime_effect_candidates": [
+        "FX2-MOTION-003"
+      ],
+      "protection_notes": "water through open deck beyond right, all buildings protected",
+      "coverage_status": "provisional_nonliteral_storyboard_coverage",
+      "fx_gate": "PENDING_REAL_RUNNER_MEDIA_QC"
+    },
+    {
+      "shot_id": "B02-S03",
+      "shot_intent": "The song starts",
+      "source_sha256": "316b053c868012593f32638dce3fc1bb8096781120ed6e3dad281b4f8d575b27",
+      "source_filename": "B02-S03.png",
+      "scene_features": "acoustic guitar detail, tavern light",
+      "approved_runtime_effect_candidates": [
+        "FX2-LIGHT-023"
+      ],
+      "protection_notes": "preserve guitar wood, strings, musician hands",
+      "coverage_status": "candidate_matches_shot_intent",
+      "fx_gate": "PENDING_REAL_RUNNER_MEDIA_QC"
+    },
+    {
+      "shot_id": "B02-S04",
+      "shot_intent": "Wine and laughter",
+      "source_sha256": "6da10b14c200f70d8c06070ff48fdc8e02627669715285dd8b1404eefedb9f6a",
+      "source_filename": "B02-S04.png",
+      "scene_features": "crowded tavern table",
+      "approved_runtime_effect_candidates": [
+        "FX2-LIGHT-023"
+      ],
+      "protection_notes": "preserve faces, wine glasses, hands",
+      "coverage_status": "candidate_matches_shot_intent",
+      "fx_gate": "PENDING_REAL_RUNNER_MEDIA_QC"
+    },
+    {
+      "shot_id": "B02-S05",
+      "shot_intent": "Closer now",
+      "source_sha256": "975750f344e73561e266af1ecc046127c0a1251eb8ecfccf2605e5c31ac3a778",
+      "source_filename": "B02-S05.png",
+      "scene_features": "couple embrace at harbor",
+      "approved_runtime_effect_candidates": [
+        "FX2-LIGHT-023"
+      ],
+      "protection_notes": "preserve both faces, fingers and dress",
+      "coverage_status": "candidate_matches_shot_intent",
+      "fx_gate": "PENDING_REAL_RUNNER_MEDIA_QC"
+    },
+    {
+      "shot_id": "B02-S06",
+      "shot_intent": "The room alive",
+      "source_sha256": "457fa59d958254ea0af02c2eeb3b5e31e4f619087256cf68db447f91d21fd7a9",
+      "source_filename": "B02-S06.png",
+      "scene_features": "tavern ensemble",
+      "approved_runtime_effect_candidates": [
+        "FX2-LIGHT-023"
+      ],
+      "protection_notes": "protect singer, crowd and palmas anatomy",
+      "coverage_status": "candidate_matches_shot_intent",
+      "fx_gate": "PENDING_REAL_RUNNER_MEDIA_QC"
+    },
+    {
+      "shot_id": "B02-S07",
+      "shot_intent": "Castanuelas and strings",
+      "source_sha256": "cabe919a31493f4ce169f106153c36f1f496ff4ee8eee2db10ee8373998117ab",
+      "source_filename": "B02-S07.png",
+      "scene_features": "guitar/fiddle duet",
+      "approved_runtime_effect_candidates": [
+        "FX2-LIGHT-023"
+      ],
+      "protection_notes": "protect strings, bows, fingers",
+      "coverage_status": "candidate_matches_shot_intent",
+      "fx_gate": "PENDING_REAL_RUNNER_MEDIA_QC"
+    },
+    {
+      "shot_id": "B02-S08",
+      "shot_intent": "Conversations & secrets",
+      "source_sha256": "1a337a41b88bf7f604a72e95345619cdc64e8954c32c79448a0c394d7edd40b5",
+      "source_filename": "B02-S08.png",
+      "scene_features": "tavern table gathering",
+      "approved_runtime_effect_candidates": [
+        "FX2-LIGHT-023"
+      ],
+      "protection_notes": "protect faces, hands and instruments",
+      "coverage_status": "candidate_matches_shot_intent",
+      "fx_gate": "PENDING_REAL_RUNNER_MEDIA_QC"
+    },
+    {
+      "shot_id": "B02-S09",
+      "shot_intent": "The first chorus",
+      "source_sha256": "0598ab6dbca0437622a88ef3870491edf34c24a485de69f1a013ab6945bd17d2",
+      "source_filename": "B02-S09.png",
+      "scene_features": "couple dancing, tavern",
+      "approved_runtime_effect_candidates": [
+        "FX2-LIGHT-023"
+      ],
+      "protection_notes": "protect faces, dress, step poses; not articulated dance",
+      "coverage_status": "candidate_matches_shot_intent",
+      "fx_gate": "PENDING_REAL_RUNNER_MEDIA_QC"
+    },
+    {
+      "shot_id": "B02-S10",
+      "shot_intent": "Music spills into the night",
+      "source_sha256": "3f08a83cdb977cc50a8b11e88e0aed2839cb1c81d88657c0675b40918041454a",
+      "source_filename": "B02-S10.png",
+      "scene_features": "dance floor waterfront ensemble",
+      "approved_runtime_effect_candidates": [
+        "FX2-LIGHT-023"
+      ],
+      "protection_notes": "protect faces, instruments, clothing and performers",
+      "coverage_status": "candidate_matches_shot_intent",
+      "fx_gate": "PENDING_REAL_RUNNER_MEDIA_QC"
+    }
+  ]
+}
