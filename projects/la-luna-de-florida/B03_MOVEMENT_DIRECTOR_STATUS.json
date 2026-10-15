@@ -1,0 +1,135 @@
+{
+  "schema": "aivideoedit.la-luna-b03-director-motion-status.v1",
+  "production": "la-luna-de-florida",
+  "branch": "song/la-luna-de-florida",
+  "stage": "B03",
+  "date_utc": "2026-10-15",
+  "status": "RC2_10_OF_10_SOURCE_DERIVED_MOVING_PROOFS_RENDERED_TECHNICAL_PASS__NATIVE_MAIN_FX_GATE_PENDING",
+  "director_decision": "SELECT_B03_RC2_FOR_PROVISIONAL_STORY_ASSEMBLY_AND_REVIEW__DO_NOT_MARK_CANONICAL_FX_ORIGINALS_LOCKED",
+  "mission": "Full 5:21 Director film, 50 fixed storyboard shots; B03 third act is port, road memories and rap, travelers, reunion.",
+  "storyboard_source": "STORYBOARD_CANON.json",
+  "storyboard_image_sha256": "05b232452eebce56fb9c047a0f481a19e04cf2d13e364bee30255dd27c88703a",
+  "source": {
+    "original_zip": "https://drive.google.com/file/d/1oSb1FLlWJjzPccU2sywjI5gGGw2Lqv4K/view",
+    "exact_byte_sha_compatible_with_existing_audit": true,
+    "originals": 9,
+    "total_shot_id_positions": 10,
+    "missing": "B03-S10",
+    "missing_original_status": "NOT_RECOVERED_NOT_RECREATED",
+    "S10_derived_sources": [
+      "B03-S07 original mountain memory",
+      "B03-S09 original returning couple"
+    ],
+    "S10_type": "explicit filmic alpha/memory crossfade, original status STILL MISSING",
+    "source_imagegen_poster_in_chats": "REJECTED_NOT_A_PRODUCTION_STILL_NOT_USED"
+  },
+  "render": {
+    "method": "SANDBOX_FX_EQUIVALENT_CV2_FFMPEG_PLUS_SAME_FILM_REAL_GEMINI",
+    "main_os_boot_pass_this_render": false,
+    "native_main_FXRuntime_executed": false,
+    "fx_loops_A_B": 20,
+    "fx_loop_duration_s": 2.5,
+    "fx_loop_resolution": [
+      640,
+      360
+    ],
+    "moving_clips": 10,
+    "frames_each": 96,
+    "frame_rate": 24,
+    "moving_resolution": [
+      960,
+      540
+    ],
+    "review_reel_seconds": 40,
+    "review_reel_sha256": "864844eb4cc767b99b6176e97a506f12c8371bac5b13fc5356db6b2713741ad7",
+    "audio": "original source WAV excerpt starts 02:02, provisional NOT lyric/ONNX frame locked",
+    "independent_export_scan": {
+      "actual_decoded_frames": 960,
+      "blackdetect_events": 0,
+      "freezedetect_0p5s_events": 0,
+      "ffmpeg_exit": 0
+    }
+  },
+  "artifact_links": {
+    "folder": "https://drive.google.com/drive/folders/1fFH_qNV8qvZ3h3X2NZgc0hs2yHisC5Bq",
+    "director_rc2_video": "https://drive.google.com/file/d/1s89gO338Tb0dFx37Vco25o0cSnXuE0Qo/view",
+    "ten_moving_clips_and_repro_scripts": "https://drive.google.com/file/d/1efo2t2xX6TKclhZ1I1hBWxhX1-z-62op/view",
+    "twenty_FX_AB_loops": "https://drive.google.com/file/d/13RGjh1O9tloPirr4D38-ydUtyeEtjXJc/view",
+    "contact": "https://drive.google.com/file/d/1v5Pl4gx7n4S_abvvu8exsseheSgcKhES/view",
+    "qc": "https://drive.google.com/file/d/1eHS5xQDgRF0668LULYgHhHu8ttgErx7Z/view"
+  },
+  "director_scene_verdicts": [
+    {
+      "id": "B03-S01",
+      "status": "ENVIRONMENT_MOTION_PROOF_PASS",
+      "note": "Old dock, water movement and lanterns, no actors required",
+      "human_release": false
+    },
+    {
+      "id": "B03-S02",
+      "status": "CAMERA_AND_ENVIRONMENT_PROOF_PASS",
+      "note": "Man reflective portrait, hold as road-memory anchor",
+      "human_release": false
+    },
+    {
+      "id": "B03-S03",
+      "status": "CAMERA_AND_ENVIRONMENT_PROOF_PASS",
+      "note": "Woman waiting; still picture plus harbor FX; no claim of moving face",
+      "human_release": false
+    },
+    {
+      "id": "B03-S04",
+      "status": "RAP_VOICEOVER_VISUAL_CANDIDATE",
+      "note": "Rapper gesture shown in original still, NOT actual lip sync or arm articulation",
+      "human_release": false
+    },
+    {
+      "id": "B03-S05",
+      "status": "FOOTWEAR_DETAIL_CANDIDATE",
+      "note": "Shoe/boots and skirt wood reflection; no actual stomp footage, must not claim audible tap choreography from pixels",
+      "human_release": false
+    },
+    {
+      "id": "B03-S06",
+      "status": "LIVE_MUSIC_SOURCE_PROOF_PASS",
+      "note": "guitar and violin physically move in same-production Gemini B05 clip; note cross-act reuse",
+      "human_release": false
+    },
+    {
+      "id": "B03-S07",
+      "status": "MEMORY_IMAGE_ATMOSPHERE_PROOF_PASS",
+      "note": "warm mountain road is explicitly time-separated road-memory insert, not film dawn",
+      "human_release": false
+    },
+    {
+      "id": "B03-S08",
+      "status": "GROUP_WORLD_MOTION_PROOF_PASS",
+      "note": "travelers table atmosphere and camera; not a claim that all extras gestured",
+      "human_release": false
+    },
+    {
+      "id": "B03-S09",
+      "status": "LIVE_COUPLE_MOVEMENT_PROOF_PASS",
+      "note": "same-film moving couple reunion, source GIF/clip match subject style",
+      "human_release": false
+    },
+    {
+      "id": "B03-S10",
+      "status": "DERIVED_MEMORY_HANDoFF_CANDIDATE",
+      "note": "source S10 original missing; blend S07 road flashback into S09 couple; never claim independent new still",
+      "human_release": false
+    }
+  ],
+  "provenance_no_cross_repo_assets": true,
+  "originals_untouched": true,
+  "source_video_originals_untouched": true,
+  "remaining_before_native_stage_complete": [
+    "Demonstrate/verify exact current Lab main bootstrapped FXRuntime or precompile FX gate for B03 A/B motion, using authenticated Drive source archive and registered recipe selection; current RC2 is a sandbox equivalent only.",
+    "Director judge whether fixed-pose rap and boots detail meet in-film action intent when timing to the song; don't assert lip or foot articulation without evidence.",
+    "B03-S10 missing independent original remains a documented derivative exception; if a full original is mandated later, create and approve a new, separate scene-correct frame—never use generated contact-sheet/poster.",
+    "Full original 321.16-second film lyric-cue and scene timing are not locked."
+  ],
+  "B04_B05_source_state_unchanged": true,
+  "film_master_ready": false,
+  "human_release_approved": false
+}
