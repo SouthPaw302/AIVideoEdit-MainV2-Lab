@@ -46,7 +46,11 @@ jobs:
       - name: Install pinned render stack
         run: |
           python -m pip install --disable-pip-version-check 'numpy==2.2.6' 'opencv-python-headless==4.11.0.86'
-          command -v gh && command -v ffmpeg && command -v ffprobe
+          sudo apt-get update -y
+          sudo apt-get install -y ffmpeg
+          command -v gh
+          command -v ffmpeg
+          command -v ffprobe
       - name: Retrieve original A/B light FX from successful immutable Actions run
         shell: bash
         env:
