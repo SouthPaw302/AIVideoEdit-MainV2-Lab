@@ -1,0 +1,99 @@
+name: Godot + MainV2 real-source overlay research
+on:
+  push:
+    branches: [test/godot-render]
+    paths:
+      - '.lab/godot-source/**'
+      - '.github/workflows/godot-source-test.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: godot-source-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  source-composite-technical-proof:
+    if: github.ref == 'refs/heads/test/godot-render'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      GODOT_VERSION: "4.7.2-stable"
+      GODOT_ZIP_SHA256: "cadd3204e728a35d3f13adb7fd0d7902636b79f6b95c40c265eb73b6c35329e4"
+      LIBGL_ALWAYS_SOFTWARE: "1"
+      MESA_GL_VERSION_OVERRIDE: "3.3"
+    steps:
+      - name: Checkout isolated experimental branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          path: experiment
+          persist-credentials: false
+      - name: Checkout authoritative main for unmodified OS boot
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: main
+          path: os
+          persist-credentials: false
+      - name: Bootstrap unchanged main OS (not production acceptance)
+        run: python os/bootstrap.py boot --repo-root "$GITHUB_WORKSPACE/os" --branch main
+      - name: Install runtime dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq xvfb xauth libgl1-mesa-dri libgl1 libasound2t64 ffmpeg unzip curl
+          python -m pip install --disable-pip-version-check numpy opencv-python-headless
+      - name: Download and verify Godot
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fL --retry 3 "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}/Godot_v${GODOT_VERSION}_linux.x86_64.zip" -o /tmp/godot.zip
+          printf "%s  %s\n" "$GODOT_ZIP_SHA256" /tmp/godot.zip | sha256sum -c -
+          unzip -q /tmp/godot.zip -d /tmp/godot-bin
+          chmod +x "/tmp/godot-bin/Godot_v${GODOT_VERSION}_linux.x86_64"
+      - name: Fetch only existing source-pinned media for CI
+        run: |
+          python experiment/.lab/godot-source/fetch_pinned.py \
+            experiment/.lab/fixtures/irish-eyes-real-source-30s.json \
+            "$RUNNER_TEMP/pinned_source.mp4"
+      - name: Godot Movie Maker -- real rendered overlay frames
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/godot-source/overlay"
+          GODOT_BIN="/tmp/godot-bin/Godot_v${GODOT_VERSION}_linux.x86_64"
+          PROJ="$GITHUB_WORKSPACE/experiment/.lab/godot-source"
+          "$GODOT_BIN" --headless --path "$PROJ" --editor --import --quit
+          xvfb-run -a -s "-screen 0 1024x768x24" "$GODOT_BIN" \
+            --path "$PROJ" --rendering-method gl_compatibility \
+            --write-movie "$RUNNER_TEMP/godot-source/overlay/overlay.png" \
+            --fixed-fps 24 --quit-after 144 "res://atmosphere.tscn"
+      - name: Source-faithful composition with actual approved FXExecutor
+        shell: bash
+        run: |
+          set -euo pipefail
+          SOURCE_HASH="$(python -c 'import json;print(json.load(open("experiment/.lab/fixtures/irish-eyes-real-source-30s.json"))["shots"][0]["source"]["sha256"])')"
+          python experiment/.lab/godot-source/composite.py \
+            --repo-root experiment \
+            --source "$RUNNER_TEMP/pinned_source.mp4" \
+            --sha256 "$SOURCE_HASH" \
+            --label "repo-pinned-Irish-Eyes-source" \
+            --overlay "$RUNNER_TEMP/godot-source/overlay" \
+            --output "$RUNNER_TEMP/godot-source/composite"
+      - name: Publish strictly technical samples, original hashes and movie
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: godot-mainv2-source-test-${{ github.run_id }}
+          path: |
+            ${{ runner.temp }}/godot-source/composite/*.mp4
+            ${{ runner.temp }}/godot-source/composite/*.json
+            ${{ runner.temp }}/godot-source/composite/before_*.png
+            ${{ runner.temp }}/godot-source/composite/after_*.png
+            ${{ runner.temp }}/godot-source/overlay/*.png
+          retention-days: 7
+          if-no-files-found: warn
+      - name: Technical classification
+        if: always()
+        run: |
+          echo "### Technical movie and FX research only" >> "$GITHUB_STEP_SUMMARY"
+          echo "No user source uploaded to public GitHub, no release, no approved production, no main changes." >> "$GITHUB_STEP_SUMMARY"

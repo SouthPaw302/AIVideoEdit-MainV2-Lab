@@ -1,0 +1,13 @@
+config_version=5
+[application]
+config/name="AIVideoEdit - Godot Source Overlay Research"
+run/main_scene="res://atmosphere.tscn"
+[display]
+window/size/viewport_width=560
+window/size/viewport_height=560
+window/size/window_width_override=560
+window/size/window_height_override=560
+window/stretch/mode="canvas_items"
+[rendering]
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
