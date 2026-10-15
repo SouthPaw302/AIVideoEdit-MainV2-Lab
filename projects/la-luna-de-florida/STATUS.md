@@ -1,5 +1,16 @@
 # La Luna de Florida — Status
 
+## Current B03 production — RC2 Director living-scene proof (2026-10-15)
+
+**[Watch B03 RC2 — 40-second moving Director review](https://drive.google.com/file/d/1s89gO338Tb0dFx37Vco25o0cSnXuE0Qo/view)** · [10 four-second scene proof clips, runnable scripts, QA receipts](https://drive.google.com/file/d/1efo2t2xX6TKclhZ1I1hBWxhX1-z-62op/view) · [20 A/B Light FX loops](https://drive.google.com/file/d/13RGjh1O9tloPirr4D38-ydUtyeEtjXJc/view) · [Director visual contact](https://drive.google.com/file/d/1v5Pl4gx7n4S_abvvu8exsseheSgcKhES/view).
+
+- Storyboard B03 10 fixed shot intents; **nine full-resolution source originals recovered with exact SHA checks** from [immutable Drive ZIP](https://drive.google.com/file/d/1oSb1FLlWJjzPccU2sywjI5gGGw2Lqv4K/view). **Original B03-S10 is lost**; the tenth moving scene is a clearly flagged **S07 mountain-road memory → S09 harbor-couple** source-derived alpha/camera composite, not a new original. Accidental contact-sheet/poster image is **not** a source still and was not used.
+- Environment/micro-material/lamp-water/camera FX produced in **sandbox equivalent** using OpenCV + FFmpeg, 20 A/B 2.5-second loops (640×360, 24fps); ten 4-second moving-scene proofs (960×540, 24fps). Source originals and all historical passes preserved. **Do not call this exact-current-main bootstrapped FXRuntime production:** separate canonical native main FX gate remains to be verified.
+- Real guitar/violin movement in B03-S06 uses existing **same-film** archived Gemini musician source (not another repo). B03-S09 reunion employs the existing same-film animated couple. Other shots prioritize ambience/depth and protected actor portraits; **do not claim** S04 rap lips or S05 boot steps articulate from pixels.
+- Actual 40-second RC2 workprint (960 encoded frames) decodes with **zero black frames and zero freezes ≥0.5 seconds**. Audio is a rough excerpt from **02:02** of the untouched original WAV—not a final aligned cue, final film or final shot duration. [Exact QC receipt](https://drive.google.com/file/d/1eHS5xQDgRF0668LULYgHhHu8ttgErx7Z/view).
+- Director technical disposition: **10 moving-shot candidates REVIEW-READY; native-main FX proof + action/storyboard final-selection gate still OPEN.** `B03_MOVEMENT_DIRECTOR_STATUS.json` records shot verdicts and the S10 exception. **B04/B05 not started**, master and human release unchanged.
+
+
 ## RC8 B01/B02 Director batch-motion selection — 2026-10-15
 
 **DIRECTOR BATCH-STAGE PASS (not whole-film acceptance).** [Watch the new RC8 Director's 80-second cut](https://drive.google.com/file/d/1G11pqOEWMc8h0W-y4Gsf7qW-VEsqN-zh/view); [20 per-shot moving proofs and reproducible source scripts](https://drive.google.com/file/d/1rqMtkcCARkcwH0FqLx0tfwoo0JrA-AQ-/view); [20-shot contact](https://drive.google.com/file/d/137drSrviObFtLMXBrCNhOuIhkzTR3tDx/view); [written Director decision](https://drive.google.com/file/d/13INExAvUFPYsXsGSPZ3aFZPvXCDdNARD/view). Exact latest disposition: `B01_B02_MOVEMENT_DIRECTOR_STATUS.json.latest_RC8_director_batch_selection`.
