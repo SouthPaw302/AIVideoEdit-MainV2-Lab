@@ -10,5 +10,15 @@
     "prior_project_visual_dna": false,
     "prior_project_media": false
   },
-  "explicit_user_authorizations": []
+  "explicit_user_authorizations": [],
+  "external_reference_process_study": {
+    "status": "AUTHORIZED_IN_PRINCIPLE_UNTIL_USER_IDENTIFIES_SOURCE",
+    "policy_file": "FX_STAGE_CANON.json",
+    "purpose": "agent_execution_workflow_learning_only",
+    "user_must_specify_repository": true,
+    "content_reuse_authorized": false,
+    "source_canon_authority": false,
+    "automatic_process_import_authorized": false,
+    "unrelated_song_branches_remain_forbidden": true
+  }
 }
