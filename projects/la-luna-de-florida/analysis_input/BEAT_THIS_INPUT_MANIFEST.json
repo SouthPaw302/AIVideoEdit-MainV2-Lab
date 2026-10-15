@@ -1,0 +1,33 @@
+{
+  "schema": "aivideoedit.la-luna-mel-input-chunks.v1",
+  "song_source_sha256": "1a4bffef36930b504423d2653faff4cc5bfd9a15d44bdcf1083b27fbb0db1c10",
+  "whole_zip_sha256": "124671ffcf0871b259d5e8d2544195478991acad7f9544f938ef05fc64328bb3",
+  "whole_zip_bytes": 3308748,
+  "mel_preprocessing": "current-main music_beat_worker parameters N_FFT=1024 HOP=441 N_MELS=128 log1p(1000*mel); fp16 stored then upcast to float32",
+  "parts": [
+    {
+      "part_name": "part_01.zip",
+      "inner_name": "part_01.bin",
+      "bytes": 900000,
+      "sha256": "0c6f8970a46a391a514bdd88ce89ed0eeb334316d81a4244ec24b4a044f8a8cb"
+    },
+    {
+      "part_name": "part_02.zip",
+      "inner_name": "part_02.bin",
+      "bytes": 900000,
+      "sha256": "8e7b0ee1f4185e3879028ffc6a7b765092dbbb1c15ec5da052d7601fd39b0a94"
+    },
+    {
+      "part_name": "part_03.zip",
+      "inner_name": "part_03.bin",
+      "bytes": 900000,
+      "sha256": "9fa6b9850ae5a277ae3b412c34bbf44de7d4545330aade3fdfad6ba7de928ce5"
+    },
+    {
+      "part_name": "part_04.zip",
+      "inner_name": "part_04.bin",
+      "bytes": 608748,
+      "sha256": "12e8919eca08b64148dacb8eb458da2037fe35353f37546c4b0351f53298ca59"
+    }
+  ]
+}
