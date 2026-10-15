@@ -1,5 +1,12 @@
 # Production handoff — La Luna de Florida
 
+## New RC3 source-performance handoff — 2026-10-15
+
+Read [B01_B02_MOVEMENT_DIRECTOR_STATUS.json](B01_B02_MOVEMENT_DIRECTOR_STATUS.json) latest_RC3_provisional. The 80-second [RC3 review export](https://drive.google.com/file/d/1-nbQnQvvoSOnU_hEn4P8YPQOrFFqJ2q8/view) replaces neither original nor RC2: genuine actor/instrument motion candidates for 9 shots, preserved other 11 as pre-existing motion layers, nocturnal B01-S10 visual option. This RC3 was rendered in the sandbox; original 20 moving clips still trace to GitHub Actions run #38684398752. Both exact-original video hashes, 20-shot complete candidate archive and reproducible Python source, full QC and source receipts are archived in [Drive](https://drive.google.com/drive/folders/19fPAokHiMzdwD0FqTHVlW_VhBAe6RFet).
+
+**Still OPEN:** B01 S04/05/06 genuine action, B02 S04/06/08 genuine action, B02 S01/S02 entrance/interior source mismatch, 6 actual encoded >0.5s freeze events. Creative review/user approval NOT granted; don't infer 4s per shot is the film script. Director should first review RC3 at normal speed, then author **new source-derived pose/real-performance variants** against each outstanding shot, preserve still and FX provenance, and independently pass the complete character/action and picture-QC gates before B03–B05 progress. Never import anything from other projects; B05 source is same film, separately logged cross-act provisional footage only.
+
+
 ## Director movement pass B01/B02 — next exact action (2026-10-15)
 
 Read `B01_B02_MOVEMENT_DIRECTOR_STATUS.json` and see [the 80s RC2 review](https://drive.google.com/file/d/1VTshGBSTdKKNf87PaH3wfNzLUn47AJ-x/view), [all 20 real 4s clips](https://drive.google.com/file/d/1wC2qxvCZAPgQR0AZ9w94T9sKPVnf6NIN/view) and successful [GitHub run 38684398752](https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38684398752). `scripts/la_luna_b01b02_movement_compile.py` and `.github/workflows/la-luna-b01b02-moving-scenes.yml` are branch-local reproducible source-hash-checked job entrypoints. Both light-FX input runs are unchanged, and no source, storyboard or audio replacement is accepted.
