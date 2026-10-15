@@ -146,6 +146,10 @@ def render_one(src: Path, shot: dict, variant: str, rt, out: Path) -> dict:
             # Exactly meet original at BOTH loop boundaries; never globally pan/zoom.
             envelope = math.sin(math.pi * i / (FRAMES-1)) ** 2
             picture = effects.blend(bgr, changed, material * envelope * (1.0 if sid in WATER_SHOTS else .92))
+            # Avoid float->uint8 roundoff changing a supposedly protected pixel by 1.
+            picture[material < .001] = bgr[material < .001]
+            if i == 0 or i == FRAMES - 1:
+                picture = bgr.copy()
             delta = np.abs(picture.astype(np.int16) - bgr.astype(np.int16))
             per_pixel = np.mean(delta,axis=2)
             measures.append(float(np.mean(delta)))
