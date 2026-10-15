@@ -1,5 +1,12 @@
 # Production handoff — La Luna de Florida
 
+## Director movement pass B01/B02 — next exact action (2026-10-15)
+
+Read `B01_B02_MOVEMENT_DIRECTOR_STATUS.json` and see [the 80s RC2 review](https://drive.google.com/file/d/1VTshGBSTdKKNf87PaH3wfNzLUn47AJ-x/view), [all 20 real 4s clips](https://drive.google.com/file/d/1wC2qxvCZAPgQR0AZ9w94T9sKPVnf6NIN/view) and successful [GitHub run 38684398752](https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38684398752). `scripts/la_luna_b01b02_movement_compile.py` and `.github/workflows/la-luna-b01b02-moving-scenes.yml` are branch-local reproducible source-hash-checked job entrypoints. Both light-FX input runs are unchanged, and no source, storyboard or audio replacement is accepted.
+
+**Do not confuse real rendered 2.5D proof with completed full-film character action.** RC2 uses one genuine user-supplied Gemini dance segment for B01-S07 and one harbor segment for B01-S09, not repeatedly as synthetic input to every shot. 14 other storyboard shots need their real performer/instrument/conversation action, 3 mismatches need new matching source treatment, and 7 freeze periods require temporal repair. Stage must remain pending until real video output is visually reviewed and approved. Do not advance to B03/B04/B05 or Master FX merely because 10 jobs succeeded. Don't use other song branches' visuals.
+
+
 ## Current user-canon FX workflow — per-song only (2026-10-15)
 
 **Read [FX_STAGE_CANON.json](FX_STAGE_CANON.json) before any B01–B05 FX or assembly action.** Explicit current-user direction locks three distinct stages: **(1) Batch Light FX** = environmental/practical-light A/B motion proofs; **(2) Batch Character FX** = separate genuine articulated people/instruments/actions, shot-specific and Zero-Drift-gated (or reasoned NOT_APPLICABLE); **(3) Master FX + Assembly** = combine inspected per-shot layers against the full-song ONNX beat/downbeat evidence, independently verified lyric cues, frame-timed script and 50-shot storyboard. This is a workflow canon, **not a grant of individual picture/film acceptance**.
