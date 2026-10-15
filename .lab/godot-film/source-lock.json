@@ -1,0 +1,21 @@
+{
+  "schema": "aive.godot.creative-source-lock.v1",
+  "duration_seconds": 14,
+  "fps": 24,
+  "source_repository": "SouthPaw302/AIVideoEdit",
+  "release": "media-mountain-noir-after-midnight",
+  "image": {
+    "name": "Twilight Inn Beneath the Flower Crown",
+    "file": "backdrop.png",
+    "url": "https://github.com/SouthPaw302/AIVideoEdit/releases/download/media-mountain-noir-after-midnight/source__04_twilight_inn_beneath_the_flower_crown.png",
+    "sha256": "81cfa4e39aa944782978ec921bac45078dfe4ad8adb4372f9ba132168cc3a723"
+  },
+  "wav": {
+    "name": "El Viento trae tu nombre Instrumental",
+    "file": "source.wav",
+    "url": "https://github.com/SouthPaw302/AIVideoEdit/releases/download/media-mountain-noir-after-midnight/source__El_Viento_trae_tu_nombre_Instrumental.wav",
+    "sha256": "8d451360246378db551282c3703add4cd474c9ad3a4c6cf778390ae727820fe0"
+  },
+  "experiment_only": true,
+  "human_visual_approval_required": true
+}

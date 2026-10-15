@@ -1,0 +1,117 @@
+name: Godot original WAV and image film (isolated)
+on:
+  push:
+    branches: [test/godot-render]
+    paths:
+      - '.lab/godot-film/**'
+      - '.github/workflows/godot-original-film.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: godot-original-film-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  godot-authored-movie:
+    if: github.ref == 'refs/heads/test/godot-render'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    env:
+      GODOT_VERSION: "4.7.2-stable"
+      GODOT_SHA256: "cadd3204e728a35d3f13adb7fd0d7902636b79f6b95c40c265eb73b6c35329e4"
+      LIBGL_ALWAYS_SOFTWARE: "1"
+      MESA_GL_VERSION_OVERRIDE: "3.3"
+    steps:
+      - name: Checkout experiment at current immutable commit
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          path: experiment
+          persist-credentials: false
+      - name: Checkout canonical main OS separately (read-only)
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: main
+          path: os
+          persist-credentials: false
+      - name: Bootstrap unchanged current-main operating system
+        run: python os/bootstrap.py boot --repo-root "$GITHUB_WORKSPACE/os" --branch main
+      - name: Install Godot software OpenGL renderer and media tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq xvfb xauth libgl1-mesa-dri libgl1 libasound2t64 ffmpeg unzip curl
+          python -m pip install --disable-pip-version-check numpy opencv-python-headless
+      - name: Download SHA-pinned Godot engine
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fL --retry 3 "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}/Godot_v${GODOT_VERSION}_linux.x86_64.zip" -o /tmp/godot.zip
+          printf "%s  %s\n" "$GODOT_SHA256" /tmp/godot.zip | sha256sum -c -
+          unzip -q /tmp/godot.zip -d /tmp/godot-bin
+          chmod +x "/tmp/godot-bin/Godot_v${GODOT_VERSION}_linux.x86_64"
+      - name: Verify source still/WAV and compute real frame-aligned music controls
+        shell: bash
+        run: |
+          set -euo pipefail
+          PROJ="$GITHUB_WORKSPACE/experiment/.lab/godot-film"
+          mkdir -p "$RUNNER_TEMP/godot-film"
+          python "$PROJ/tools/prepare.py" "$PROJ" "$RUNNER_TEMP/godot-film"
+      - name: Render 336 new cinematic scene frames using Godot Movie Maker
+        shell: bash
+        run: |
+          set -euo pipefail
+          BIN="/tmp/godot-bin/Godot_v${GODOT_VERSION}_linux.x86_64"
+          PROJ="$GITHUB_WORKSPACE/experiment/.lab/godot-film"
+          mkdir -p "$RUNNER_TEMP/godot-film/godotframes" "$RUNNER_TEMP/godot-film/fxframes"
+          "$BIN" --headless --path "$PROJ" --editor --import --quit
+          xvfb-run -a -s "-screen 0 1280x800x24" "$BIN" \
+            --path "$PROJ" --rendering-method gl_compatibility \
+            --write-movie "$RUNNER_TEMP/godot-film/godotframes/shot.png" \
+            --fixed-fps 24 --quit-after 336 "res://scenes/twilight.tscn"
+          test "$(find "$RUNNER_TEMP/godot-film/godotframes" -name 'shot*.png' | wc -l)" -eq 336
+      - name: Apply real canonical MainV2 FXExecutor to comparison variant
+        shell: bash
+        run: |
+          python experiment/.lab/godot-film/tools/apply_fx.py \
+            --repo-root experiment --source "$RUNNER_TEMP/godot-film/godotframes" \
+            --out "$RUNNER_TEMP/godot-film/fxframes"
+      - name: Encode both movie versions with verified instrumental WAV
+        shell: bash
+        run: |
+          set -euo pipefail
+          for kind in godot mainv2_fx; do
+            if [ "$kind" = godot ]; then
+              input="$RUNNER_TEMP/godot-film/godotframes/shot%08d.png"
+            else
+              input="$RUNNER_TEMP/godot-film/fxframes/frame%06d.png"
+            fi
+            ffmpeg -hide_banner -loglevel error -nostdin -y \
+              -framerate 24 -i "$input" -i "$RUNNER_TEMP/godot-film/music_clip.wav" \
+              -map 0:v:0 -map 1:a:0 -c:v libx264 -preset veryfast -crf 20 \
+              -pix_fmt yuv420p -c:a aac -b:a 192k -t 14 -movflags +faststart \
+              "$RUNNER_TEMP/godot-film/${kind}.mp4"
+          done
+      - name: Validate both full movies and real source coverage
+        run: python experiment/.lab/godot-film/tools/verify.py "$RUNNER_TEMP/godot-film"
+      - name: Upload movie proofs and reports for human review
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: godot-original-film-${{ github.run_id }}
+          retention-days: 7
+          if-no-files-found: warn
+          path: |
+            ${{ runner.temp }}/godot-film/*.mp4
+            ${{ runner.temp }}/godot-film/*.json
+            ${{ runner.temp }}/godot-film/fxframes/*report.json
+            ${{ runner.temp }}/godot-film/fxframes/before*.png
+            ${{ runner.temp }}/godot-film/fxframes/after*.png
+            ${{ runner.temp }}/godot-film/godotframes/shot00000024.png
+            ${{ runner.temp }}/godot-film/godotframes/shot00000167.png
+            ${{ runner.temp }}/godot-film/godotframes/shot00000300.png
+      - name: Explicitly defer artistic acceptance
+        if: always()
+        run: |
+          echo "### Original Godot cinematic research — human approval not granted" >> "$GITHUB_STEP_SUMMARY"
+          echo "True Godot movie writer frames from verified source still with verified original WAV, not a recycled existing video." >> "$GITHUB_STEP_SUMMARY"
