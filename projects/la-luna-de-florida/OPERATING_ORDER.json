@@ -58,8 +58,8 @@
     "forbidden_changes": [],
     "source_replacement_authorized": false
   },
-  "current_user_direction": "Treat La Luna de Florida as a theatrical film, with its story following the supplied lyrics; preserve the existing workprint and Batch 01; the latest five-act/50-shot storyboard is now explicitly canon for still generation. Current additional user direction: for each batch, treat A/B environmental/light proofs as a preparation gate; create separate, identity-safe character-action proofs before final Master FX and film assembly. Existing B01/B02 light FX technical PASS is not character animation or final-film acceptance. An unnamed external film project may be studied for methods only, never imported into La Luna.",
-  "exact_next_action": "Hold B03-B05 until B01/B02 character actions and source mismatches are repaired and visually inspected. Read B01_B02_MOVEMENT_DIRECTOR_STATUS.json, compare actual 80s RC2 film candidate to immutable 50-shot storyboard, repair 14 remaining performance-motion gaps plus 3 source coverage mismatches, remove 7 actual-export freeze intervals. Use verified current-main FXRuntime/duplicated stills/loops/2.5D/Director camera, and same-song real footage where available. Never call static instrument hands or fixed dance poses a performance PASS, and do not promote film to release without Director/QC/user gates.",
+  "current_user_direction": "Full Director theatrical film from La Luna 50-shot storyboard with heavily reused Lab main canonical FX stack. User authorized B01/B02 Director-scene stage selection at RC8, then explicitly requested B03. Keep B01/B02 immutable; B03 shot-level source and FX provenance mandatory, do not fake absent B03-S10 original. No other movie's media or canon may be imported.",
+  "exact_next_action": "B03: 9 original SHA-verified stills archived; B03-S10 originally lost, derived S07-road-memory into S09-couple transition is PROVISIONAL not independent original. Review the already-rendered sandbox RC2 40-second cut and archived 10 moving proof clips/20 A-B FX loops. Confirm main bootstrapped FXRuntime + precompile on actual B03 sources using runner/authenticated Drive media; then independently Director-QC performances and apply per-shot approval before advancing B04/B05. Do not claim native-runner PASS from local equivalent or source-derived shot as original. Preserve all originals and original WAV; full film Master FX/human release unapproved.",
   "updated_at_utc": "2026-10-13T03:50:00Z",
   "director_supervision": {
     "required": true,
@@ -90,23 +90,18 @@
   },
   "movement_current_work": {
     "active_batches": [
-      "B01",
-      "B02"
+      "B03"
     ],
-    "status": "20_TECHNICAL_MOVING_SCENE_PROOFS_RAN_DIRECTOR_REVISIONS_REQUIRED",
-    "director_status": "B01_B02_MOVEMENT_DIRECTOR_STATUS.json",
-    "actual_runner": 38684398752,
-    "runner_success": true,
-    "clip_count": 20,
-    "real_source_motion_alternatives": [
-      "B01-S07",
-      "B01-S09"
-    ],
-    "B01_and_B02_character_fx_accepted": false,
-    "remaining_performance_motion_gaps": 14,
-    "remaining_shot_coverage_mismatches": 3,
-    "remaining_temporal_freeze_intervals": 7,
-    "backed_up_to_drive": true,
-    "user_priority": "Complete B01/B02 before B03-B05; do not falsely grant Character FX pass from render execution"
+    "status": "B03_RC2_10_MOVING_PROOFS_20_AB_LOOPS_TECHNICAL_PASS__NATIVE_MAIN_FX_GATE_PENDING",
+    "director_status": "B03_MOVEMENT_DIRECTOR_STATUS.json",
+    "baseline_B01_B02": "RC8 Director batch-stage selection preserved",
+    "B03_originals_verified": 9,
+    "B03_original_S10_missing": true,
+    "B03_S10_candidate_type": "explicit_story_memory_derived_composite",
+    "workprint": "https://drive.google.com/file/d/1s89gO338Tb0dFx37Vco25o0cSnXuE0Qo/view",
+    "native_fx_precompile_runner_proof": false,
+    "source_originals_preserved": true,
+    "B04_B05_started": false,
+    "master_approved": false
   }
 }
