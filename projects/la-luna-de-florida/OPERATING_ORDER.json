@@ -58,8 +58,8 @@
     "forbidden_changes": [],
     "source_replacement_authorized": false
   },
-  "current_user_direction": "Director's full five-act La Luna film, original stills and canonical Lab main FX first. As of 2026-10-15 the user expressly permits B03 to have NINE independent source stills, while the tenth storyboard intent (B03-S10) uses an identified source-derived S07→S09 cinematic transition. Preserve ten shot intents, the provenance of the missing original, and all existing B01/B02/B03 proofs. Do not blend other production media.",
-  "exact_next_action": "B03 DIRECTOR BATCH STAGE SELECTED with 9 exact-original stills, 18 native Lab-main A/B Light FX proofs PASS (run 38700642135) and 10 RC2 moving-scene shot positions (S10 derived selected), see B03_DIRECTOR_BATCH_DECISION.json. NEXT B04: verify the pre-existing ten B04 originals and SHA receipts from Drive, storyboard-match, then native Lab-main A/B FX and separate moving-character FX proofs/Director review. Do not redo B03 or demand an unnecessary new S10 still; no premature Master FX or 5:21 film release.",
+  "current_user_direction": "La Luna de Florida is a full five-act Director film; B01/B02 RC8, B03 RC2 nine-original-source exception, and B04 RC2 10 originals/20 native light FX/10 moving scene Director selections are complete as PRODUCTION BATCH gates. Keep original 50-shot storyboard and exact original WAV immutable, no cross-project footage. For B05 preserve correct dusk-to-dawn story and differentiate night extras from needed true sunrise originals.",
+  "exact_next_action": "Advance to B05 SOURCE PREFLIGHT first. Verify 10 canonical final act B05 storyboard intents against existing B05 NIGHT EXTRA backup; night extras alone do NOT satisfy the dawn/sunrise ending. Produce only missing approved original sources or clearly separate cinematic derived treatment, get visual and source authority correct, then run native Lab-main FX for scene-appropriate materials, separate performance/scene motion FX, ten-shots Director QC. Do not begin Master FX until B05 visuals and the full 5:21 lyric-aligned screenplay are ready. B04 batch decision in B04_DIRECTOR_BATCH_DECISION.json and native run #38702608550.",
   "updated_at_utc": "2026-10-13T03:50:00Z",
   "director_supervision": {
     "required": true,
@@ -90,28 +90,18 @@
   },
   "movement_current_work": {
     "active_batches": [
-      "B04"
+      "B05"
     ],
-    "status": "B03_DIRECTOR_MOVING_SCENE_BATCH_STAGE_SELECTED__NEXT_B04_SOURCE_FX_PREFLIGHT",
-    "director_status": "B03_MOVEMENT_DIRECTOR_STATUS.json",
-    "baseline_B01_B02": "RC8 Director batch-stage selection preserved",
-    "B03_originals_verified": 9,
-    "B03_original_S10_missing": true,
-    "B03_S10_candidate_type": "explicit_story_memory_derived_composite",
-    "workprint": "https://drive.google.com/file/d/1s89gO338Tb0dFx37Vco25o0cSnXuE0Qo/view",
-    "native_fx_precompile_runner_proof": true,
-    "source_originals_preserved": true,
-    "B04_B05_started": false,
-    "master_approved": false,
-    "native_fx_run_id": 38700642135,
-    "native_fx_artifact": "https://drive.google.com/file/d/1284TQUxZiLqYEsXHgNo26mITEQa9Fl5L/view",
-    "native_fx_technical_status": "PASS_9_SOURCES_18_VARIANTS",
-    "B03_director_stage_selected": true,
-    "B03_approved_original_count": 9,
-    "B03_S10_source_original_missing": true,
-    "B03_S10_derived_editorial_selected": true,
-    "B03_decision_file": "B03_DIRECTOR_BATCH_DECISION.json",
-    "B04_started": false,
-    "final_master_approved": false
+    "status": "B04_DIRECTOR_BATCH_STAGE_SELECTED__NEXT_B05_CANON_FINALE_SOURCE_PREFLIGHT",
+    "B01_B02_batch_stage": "RC8_SELECTED",
+    "B03_stage": "RC2_9_ORIGINALS_18_NATIVE_FX_S10_DERIVED_SELECTED",
+    "B04_stage": "RC2_10_ORIGINALS_20_NATIVE_FX_10_MOVING_PROOFS_SELECTED",
+    "B04_director_decision": "B04_DIRECTOR_BATCH_DECISION.json",
+    "B04_native_run_id": 38702608550,
+    "B04_runner_pass": true,
+    "B04_review_cut": "https://drive.google.com/file/d/11exEAiou7XMbLerksMQvOJxPqb_BdP9P/view",
+    "B05_started": false,
+    "master_locked": false,
+    "owner_release_approved": false
   }
 }
