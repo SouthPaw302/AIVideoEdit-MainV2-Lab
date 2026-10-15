@@ -1,5 +1,10 @@
 # Production handoff — La Luna de Florida
 
+## 2026-10-15 — CANONICAL MASTER FX DIRECTOR HANDOFF (READ FIRST)
+
+**[MASTER_FX_DIRECTOR_HANDOFF_2026-10-15.md](MASTER_FX_DIRECTOR_HANDOFF_2026-10-15.md) is the next-chat primary runbook**, including 50 specific shot directives, links to all 4 source archives/ONNX/WAV, boot steps, 7708-frame timing plan requirements, actual runner media staging, existing canonical parallel workflow dispatch inputs, and what to do **after** the full-length Director pass: watch, eleven-phase scan, surgical RCn repairs, whole-film encoded QC, Drive archive, executive-producer approval gate. This long handoff remains a plan; **no final master render has started**. Keep all B01–B05 batch-stage Director selects and originals unchanged. Continue on `song/la-luna-de-florida` only, never the external AIVideoEdit repo or either `main` branch.
+
+
 ## ACTIVE — Master FX feature handoff; all B01–B05 motion proof batches Director-selected
 
 **Five batch production stages COMPLETE, theatrical film NOT yet assembled.** The verified [MASTER_50_SHOT_SOURCE_PREFLIGHT.json](MASTER_50_SHOT_SOURCE_PREFLIGHT.json) is the only approved starting inventory for full-song assemble: 50 source-verifiable 4s moving proof clips (B01/B02 RC8, B03 RC2, B04 RC2, B05 RC1), SHA256 each, each 960×540 at 24fps and 96 frames, all four video archives readable. The original WAV is **321.16s** and requires new Director timelines/lyric sync; never interpret the 200s preview totals as full movie.
