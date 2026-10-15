@@ -1,5 +1,12 @@
 # Production handoff — La Luna de Florida
 
+## ACTIVE — B04 next; B03 nine-source Director acceptance (2026-10-15)
+
+**Do not stop on the missing B03-S10 original or recreate it.** The user accepts nine B03 originals; Director selected the existing S07-to-S09 layered transition to fill the tenth storyboard shot intent. Ten canon intent slots are intact. [B03 Director batch decision](B03_DIRECTOR_BATCH_DECISION.json) is authoritative for this exception; original/S10 provenance remains precise in [B03 status](B03_MOVEMENT_DIRECTOR_STATUS.json). Ten B03 moving-scene RC2 candidates archived and [native Lab-main B03 18 A/B Light FX gate passed](https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38700642135). This is **batch stage acceptance only**, not release/movie master. Do not demand articulated lip-sync for rap voiceover or physical stamping in a boot detail cutaway.
+
+**Immediate next**: B04 storyboard shot-by-shot source audit using existing [B04 originals ZIP](https://drive.google.com/file/d/1XsSd2sQbSpRd8nxRyJxnryk0ErDELCbm/view) under La Luna's [09 originals archive](https://drive.google.com/drive/folders/1AlqDTpBA0NLgRdWTF6o0et0_WsnQnfaZ). Keep existing originals SHA-pinned, no synthetic or other-song substitution. Then render native registered FX A/B loops and separate B04 moving character/camera layers; prove and Director-review before B05. Preserve B01/B02 RC8, B03 RC2, 50-shot canon, all historical FX and master WAV. Final music edit/master/human release still pending.
+
+
 ## Latest B03 — native main FX light-proof gate PASS
 
 [Native GitHub B03 run #38700642135](https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38700642135) downloaded the SHA-verified public-folder B03 archive and produced **18 authentic Lab-main FXRuntime A/B proofs from the 9 preserved source PNGs**, all decoded with bounded material motion, zero protected-ROI changes and zero loop seam deviation. [Drive archived artifact (original copies, 18 loops, 18 derived stills, receipt)](https://drive.google.com/file/d/1284TQUxZiLqYEsXHgNo26mITEQa9Fl5L/view), archived ZIP SHA256 `7d2057f68f796efa1008d612f2ff37f90c980575d891d57fd4b6de8c3b76de9b`. Source SHA `da7b54eef5373b2d6b4db69eac0c497e4e9443facbc8fd78db29baecbc565252`, native runtime SHA `6cfdf3ba68c1f79015c1f1b26174d4e3ca4de7b75b06b5ad9811580f5bc2cfa4`.
