@@ -91,7 +91,8 @@
       "source_sha256": "6da10b14c200f70d8c06070ff48fdc8e02627669715285dd8b1404eefedb9f6a",
       "source_treatment": "night_original",
       "artistic_source_accepted": false,
-      "preview_only": true
+      "preview_only": true,
+      "original_sha256": "6da10b14c200f70d8c06070ff48fdc8e02627669715285dd8b1404eefedb9f6a"
     },
     {
       "shot_id": "B05-S02",
@@ -101,7 +102,8 @@
       "source_sha256": "8de9dfa0c07734e36b87cf33162afbc02269d5ad6778a3e47e3a7ad22b0dcaae",
       "source_treatment": "night_original_plus_same_film_dance",
       "artistic_source_accepted": false,
-      "preview_only": true
+      "preview_only": true,
+      "original_sha256": "8de9dfa0c07734e36b87cf33162afbc02269d5ad6778a3e47e3a7ad22b0dcaae"
     },
     {
       "shot_id": "B05-S03",
@@ -111,7 +113,8 @@
       "source_sha256": "f707d5be41d4f738720225372c814e02fbd046e0a64ae6b623c32c0e936db07f",
       "source_treatment": "night_original",
       "artistic_source_accepted": false,
-      "preview_only": true
+      "preview_only": true,
+      "original_sha256": "f707d5be41d4f738720225372c814e02fbd046e0a64ae6b623c32c0e936db07f"
     },
     {
       "shot_id": "B05-S04",
@@ -121,7 +124,8 @@
       "source_sha256": "cabe919a31493f4ce169f106153c36f1f496ff4ee8eee2db10ee8373998117ab",
       "source_treatment": "night_original_plus_authorized_same_film_Gemini",
       "artistic_source_accepted": false,
-      "preview_only": true
+      "preview_only": true,
+      "original_sha256": "cabe919a31493f4ce169f106153c36f1f496ff4ee8eee2db10ee8373998117ab"
     },
     {
       "shot_id": "B05-S05",
@@ -131,7 +135,8 @@
       "source_sha256": "1958b6d706d40555a13795d3b227658b1dc497b8c368d4e46ba83e0fcf9b6919",
       "source_treatment": "source_derived_predawn_candidate",
       "artistic_source_accepted": false,
-      "preview_only": true
+      "preview_only": true,
+      "original_sha256": "1958b6d706d40555a13795d3b227658b1dc497b8c368d4e46ba83e0fcf9b6919"
     },
     {
       "shot_id": "B05-S06",
@@ -141,7 +146,8 @@
       "source_sha256": "b405cf8d2df65942fe323fdc52939d8ec63bc37bf4ae9b7815dba46c7654e7aa",
       "source_treatment": "night_original",
       "artistic_source_accepted": false,
-      "preview_only": true
+      "preview_only": true,
+      "original_sha256": "b405cf8d2df65942fe323fdc52939d8ec63bc37bf4ae9b7815dba46c7654e7aa"
     },
     {
       "shot_id": "B05-S07",
@@ -151,7 +157,8 @@
       "source_sha256": "de97ab7bd4e750273fb019093ac640f724755310b8686a537a4d8e44d7f1c54e",
       "source_treatment": "night_original_plus_same_film_couple",
       "artistic_source_accepted": false,
-      "preview_only": true
+      "preview_only": true,
+      "original_sha256": "de97ab7bd4e750273fb019093ac640f724755310b8686a537a4d8e44d7f1c54e"
     },
     {
       "shot_id": "B05-S08",
@@ -161,7 +168,8 @@
       "source_sha256": "17f797271d387421e3b8df3eea2448dace71ceb64c75d0e1aee7657830a3b2db",
       "source_treatment": "source_derived_dawn_environment_candidate",
       "artistic_source_accepted": false,
-      "preview_only": true
+      "preview_only": true,
+      "original_sha256": "17f797271d387421e3b8df3eea2448dace71ceb64c75d0e1aee7657830a3b2db"
     },
     {
       "shot_id": "B05-S09",
@@ -171,7 +179,8 @@
       "source_sha256": "1958b6d706d40555a13795d3b227658b1dc497b8c368d4e46ba83e0fcf9b6919",
       "source_treatment": "source_derived_dawn_environment_candidate",
       "artistic_source_accepted": false,
-      "preview_only": true
+      "preview_only": true,
+      "original_sha256": "1958b6d706d40555a13795d3b227658b1dc497b8c368d4e46ba83e0fcf9b6919"
     },
     {
       "shot_id": "B05-S10",
@@ -181,7 +190,8 @@
       "source_sha256": "de97ab7bd4e750273fb019093ac640f724755310b8686a537a4d8e44d7f1c54e",
       "source_treatment": "night_original_with_dawn_editorial_transition_candidate",
       "artistic_source_accepted": false,
-      "preview_only": true
+      "preview_only": true,
+      "original_sha256": "de97ab7bd4e750273fb019093ac640f724755310b8686a537a4d8e44d7f1c54e"
     }
   ],
   "semantic_gap": {
