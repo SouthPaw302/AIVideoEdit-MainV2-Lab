@@ -59,7 +59,7 @@
     "source_replacement_authorized": false
   },
   "current_user_direction": "Full Director theatrical film from La Luna 50-shot storyboard with heavily reused Lab main canonical FX stack. User authorized B01/B02 Director-scene stage selection at RC8, then explicitly requested B03. Keep B01/B02 immutable; B03 shot-level source and FX provenance mandatory, do not fake absent B03-S10 original. No other movie's media or canon may be imported.",
-  "exact_next_action": "B03: 9 original SHA-verified stills archived; B03-S10 originally lost, derived S07-road-memory into S09-couple transition is PROVISIONAL not independent original. Review the already-rendered sandbox RC2 40-second cut and archived 10 moving proof clips/20 A-B FX loops. Confirm main bootstrapped FXRuntime + precompile on actual B03 sources using runner/authenticated Drive media; then independently Director-QC performances and apply per-shot approval before advancing B04/B05. Do not claim native-runner PASS from local equivalent or source-derived shot as original. Preserve all originals and original WAV; full film Master FX/human release unapproved.",
+  "exact_next_action": "B03 native current-Lab-main FXRuntime SOURCE & LIGHT GATE PASSED (GitHub run #38700642135) using 9 original SHA-verified stills, 18 A/B loops archived on Drive; B03-S10 original remains MISSING and RC2 source-derived road-memory/couple scene must not be promoted as original. Next Director shot review/semantic character FX, especially S04 rap and S05 boots; do not mislabel workprint 40s as final music cue, and preserve all B01/B02 work. B04/B05 not yet started; master film and release unapproved.",
   "updated_at_utc": "2026-10-13T03:50:00Z",
   "director_supervision": {
     "required": true,
@@ -92,16 +92,19 @@
     "active_batches": [
       "B03"
     ],
-    "status": "B03_RC2_10_MOVING_PROOFS_20_AB_LOOPS_TECHNICAL_PASS__NATIVE_MAIN_FX_GATE_PENDING",
+    "status": "B03_RC2_10_MOVING_SCENES_TECHNICAL_PASS_PLUS_NATIVE_LIGHT_FX_18_AB_PASS__DIRECTOR_SEMANTIC_MOTION_GATE_OPEN",
     "director_status": "B03_MOVEMENT_DIRECTOR_STATUS.json",
     "baseline_B01_B02": "RC8 Director batch-stage selection preserved",
     "B03_originals_verified": 9,
     "B03_original_S10_missing": true,
     "B03_S10_candidate_type": "explicit_story_memory_derived_composite",
     "workprint": "https://drive.google.com/file/d/1s89gO338Tb0dFx37Vco25o0cSnXuE0Qo/view",
-    "native_fx_precompile_runner_proof": false,
+    "native_fx_precompile_runner_proof": true,
     "source_originals_preserved": true,
     "B04_B05_started": false,
-    "master_approved": false
+    "master_approved": false,
+    "native_fx_run_id": 38700642135,
+    "native_fx_artifact": "https://drive.google.com/file/d/1284TQUxZiLqYEsXHgNo26mITEQa9Fl5L/view",
+    "native_fx_technical_status": "PASS_9_SOURCES_18_VARIANTS"
   }
 }
