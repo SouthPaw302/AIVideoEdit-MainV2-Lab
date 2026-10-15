@@ -19,6 +19,13 @@
     "content_reuse_authorized": false,
     "source_canon_authority": false,
     "automatic_process_import_authorized": false,
-    "unrelated_song_branches_remain_forbidden": true
+    "unrelated_song_branches_remain_forbidden": true,
+    "user_named_repo": "SouthPaw302/AIVideoEdit",
+    "primary_read_only_branch": "song/el-viento-trae-tu-nombre",
+    "external_project_reference_study": "REFERENCE_METHOD_STUDY.md",
+    "user_authorized_method_only": "Use the CURRENT MAIN reusable FX library, still duplicates/variants, GIFs, loops, Gaussian image-space treatments or legitimate spatial tools, Director camera/cut and layered composition as La Luna shot-motion method.",
+    "external_repo_reads_permitted": true,
+    "no_external_repo_changes": true,
+    "no_external_media_source_code_or_canon_import": true
   }
 }
