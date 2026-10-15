@@ -1,0 +1,149 @@
+{
+  "schema": "aivideoedit.la-luna-b04-director-batch-selection.v1",
+  "project": "la-luna-de-florida",
+  "branch": "song/la-luna-de-florida",
+  "scope": "B04_ONLY",
+  "date": "2026-10-15",
+  "director_batch_disposition": "SELECTED_B04_10_MOVING_SCENE_PROOFS_FOR_CONTINUED_FIVE_ACT_FILM_PRODUCTION",
+  "source": {
+    "originals": 10,
+    "source_zip_sha256": "4905a120d08dd6d5eaca1b7f18d53188af5523abe5be3e30bb5be0f174e1a5df",
+    "source_zip": "https://drive.google.com/file/d/1XsSd2sQbSpRd8nxRyJxnryk0ErDELCbm/view",
+    "all_original_sha_pinned_in": "B04_DIRECTOR_PREFLIGHT.json",
+    "originals_preserved": true
+  },
+  "native_light_FX": {
+    "real_runner": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38702608550",
+    "status": "TECHNICAL_PASS",
+    "originals": 10,
+    "AB_loops": 20,
+    "runner_artifact": "https://drive.google.com/file/d/1itN2iGrKs149QpLXAM6rUu8rFGJWmGl6/view",
+    "archive_sha256": "a7344abecddee2a839e126b01a99a5c04e5802423bd463b09e1702085e506e55",
+    "runtime_sha256": "6cfdf3ba68c1f79015c1f1b26174d4e3ca4de7b75b06b5ad9811580f5bc2cfa4"
+  },
+  "moving_scene": {
+    "candidate": "RC2",
+    "actual_export": "https://drive.google.com/file/d/11exEAiou7XMbLerksMQvOJxPqb_BdP9P/view",
+    "actual_export_sha256": "58ca06902959afed9b9c437ab00f3aec1942951d7ff6c9015d4312120d961cda",
+    "ten_4sec_shot_clips_and_scripts": "https://drive.google.com/file/d/10cF5tPLxGHxvGKZA7B091K53dGxctqTb/view",
+    "ten_shot_archive_sha256": "6f9b9fbcd0e8d11c7a601ee7560ddc18bbf9e6034afc707ad097384ee6bcfbfa",
+    "contact": "https://drive.google.com/file/d/1js02fxYFgaCHuo_YJ4FZlItktdcNuEtt/view",
+    "qc": "https://drive.google.com/file/d/1Jbu9O7a89ReCVwZBmQBhAMj3LP8_LkX8/view",
+    "sandbox_compiler_uses_real_native_loops": true,
+    "was_moving_cut_rendered_in_GitHub_runner": false,
+    "contains_same_film_live_footage_shots": [
+      "B04-S01",
+      "B04-S04",
+      "B04-S07",
+      "B04-S10"
+    ],
+    "still_based_living_tableaux_shots": [
+      "B04-S02",
+      "B04-S03",
+      "B04-S05",
+      "B04-S06",
+      "B04-S08",
+      "B04-S09"
+    ],
+    "shorts": 10,
+    "frames_per_shot": 96,
+    "review_seconds": 40,
+    "review_fps": 24,
+    "full_reel_decoded_frames": 960,
+    "full_reel_black_events": 0,
+    "freeze_events_ge_half_second": 0,
+    "song_excerpt_start_seconds": 216,
+    "song_timing_provisional": true,
+    "RC1_ending_rejected_as_empty_marina": true,
+    "RC2_original_nine_clips_byte_unchanged": true
+  },
+  "per_shot": [
+    {
+      "shot_id": "B04-S01",
+      "disposition": "SELECT_LIVE_SOURCE_VIOLIN",
+      "note": "Original nighttime violin scene supported by genuine same-film violin bow/guitar footage, without claiming note-level sync",
+      "source_image_unchanged": true,
+      "master_timing_pending": true
+    },
+    {
+      "shot_id": "B04-S02",
+      "disposition": "SELECT_STILL_DERIVED_PALMAS_CUTAWAY",
+      "note": "Palmas source still and energy of compás represented visually; individual hands NOT proven clapping in motion",
+      "source_image_unchanged": true,
+      "master_timing_pending": true
+    },
+    {
+      "shot_id": "B04-S03",
+      "disposition": "SELECT_EMOTIONAL_REACTION_HOLD",
+      "note": "Source portrays smiling/laughing woman; protected portrait/camera FX, no artificial moving mouth",
+      "source_image_unchanged": true,
+      "master_timing_pending": true
+    },
+    {
+      "shot_id": "B04-S04",
+      "disposition": "SELECT_GENUINE_DANCE_SOURCE",
+      "note": "Live same-film couple dancing, photographed tavern scene opens shot",
+      "source_image_unchanged": true,
+      "master_timing_pending": true
+    },
+    {
+      "shot_id": "B04-S05",
+      "disposition": "SELECT_INTROSPECTIVE_HOLD",
+      "note": "Silent expression and glass/lantern mood for forgotten promises",
+      "source_image_unchanged": true,
+      "master_timing_pending": true
+    },
+    {
+      "shot_id": "B04-S06",
+      "disposition": "SELECT_ENSAMBLE_VOICEOVER_SCENE",
+      "note": "Visual voices and ensemble; no lip-sync/speech articulation claim",
+      "source_image_unchanged": true,
+      "master_timing_pending": true
+    },
+    {
+      "shot_id": "B04-S07",
+      "disposition": "SELECT_LIVE_SOURCE_MUSICIANS",
+      "note": "Distinct later 3.3-second portion of same film moving guitar/violin; source repetition flagged for master",
+      "source_image_unchanged": true,
+      "master_timing_pending": true
+    },
+    {
+      "shot_id": "B04-S08",
+      "disposition": "SELECT_PRACTICAL_LIGHT_PORTRAIT",
+      "note": "Candlelight and contemplative tavern world supported by native source-safe lighting",
+      "source_image_unchanged": true,
+      "master_timing_pending": true
+    },
+    {
+      "shot_id": "B04-S09",
+      "disposition": "SELECT_QUIET_CONNECTION_CUTAWAY",
+      "note": "Woman and musician gazes held as an emotional tableau; no eye articulation asserted",
+      "source_image_unchanged": true,
+      "master_timing_pending": true
+    },
+    {
+      "shot_id": "B04-S10",
+      "disposition": "SELECT_RC2_NIGHTTIME_LIVING_CHORUS_END",
+      "note": "RC1 inappropriate empty marina ending rejected; RC2 restores original moonlit tavern dance with live moving couple and an in-shot homecoming",
+      "source_image_unchanged": true,
+      "master_timing_pending": true
+    }
+  ],
+  "master_caveats": [
+    "B04-S02 hands are static in FX scene; Master FX may require authentic hand movement if sound beat foregrounds palmas",
+    "B04-S03 depicts laughter in original still only, not an articulated laughing mouth",
+    "B04-S06 tavern voices not lip-synchronized",
+    "B04-S09 emotional gazes are held portraits",
+    "Same-film Gemini video reused in B01-B04/B05 and must be assessed for repetition",
+    "No lyrics-to-frames timing locked; temporary four-second shots are NOT final full-film edit"
+  ],
+  "production_gate": {
+    "Director_batch_stage_selected": true,
+    "may_proceed_B05": true,
+    "B01_B02_B03_unchanged": true,
+    "complete_feature_5m21_approved": false,
+    "master_fx_approved": false,
+    "release_or_human_owner_approval": false
+  },
+  "next": "B05 dawn finale has known night-only extras and missing canonical sunrise; inspect 50-shot storyboard and source inventory before choosing film-safe final 10 shots. Do not claim the existing 10 NIGHT EXTRA stills replace the approved dawn ending."
+}
