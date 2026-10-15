@@ -1,5 +1,16 @@
 # La Luna de Florida — Status
 
+## RC8 B01/B02 Director batch-motion selection — 2026-10-15
+
+**DIRECTOR BATCH-STAGE PASS (not whole-film acceptance).** [Watch the new RC8 Director's 80-second cut](https://drive.google.com/file/d/1G11pqOEWMc8h0W-y4Gsf7qW-VEsqN-zh/view); [20 per-shot moving proofs and reproducible source scripts](https://drive.google.com/file/d/1rqMtkcCARkcwH0FqLx0tfwoo0JrA-AQ-/view); [20-shot contact](https://drive.google.com/file/d/137drSrviObFtLMXBrCNhOuIhkzTR3tDx/view); [written Director decision](https://drive.google.com/file/d/13INExAvUFPYsXsGSPZ3aFZPvXCDdNARD/view). Exact latest disposition: `B01_B02_MOVEMENT_DIRECTOR_STATUS.json.latest_RC8_director_batch_selection`.
+
+All 20 shot clips were produced as an auditable source-preserving motion library: 10 each for B01/B02, 96 frames/shot at 24fps. The 80s cut has 1920 encoded frames and original unmodified song audio excerpt. Opening vocal scales now use two harbor/tavern panoramas without close singer. Distinct native A/B still/FX support is restored in B01-S05, B02-S04 and B02-S08. B01-S10 replaces disallowed daylight/title image with nocturnal pier. B02-S01 continues toward tavern; B02-S02 cuts to a true-moving interior performance. B02-S10 carries the original FX-enabled dancers out into moving moonlit harbor. Prior B01/B02 stills and FX/genuine source videos are preserved.
+
+**QC honesty:** RC7 full encoded video passed black and half-second freeze scan with zero events. RC8's two changed clips independently passed decode/black/freeze checks; 18 clips are byte-identical to RC7, and the RC8 wrapper has correct 1920-frame metadata. An attempted independent RC8 full-encoded scan was interrupted after 15 seconds and is **not** represented as a full-export QC PASS.
+
+**Director artistic disposition:** B01/B02 stage **selected to continue the 50-shot film**, without user being required to act as Director. A production-batch pass does not certify the final 5:21 full-film edit, pacing, source repetition, individual-frame release or lyric timing. B02 threshold entry uses a deliberately implied cut rather than literal walking feet. Same-film B05 musicians are reused as provisional filmed performance sources; repetition is to be resolved during final film editorial, not called invisible. **B03–B05 may proceed next with their own documented source/FX gates**, but pre-existing B03-S10 missing source and B05 dawn-act mismatch remain unresolved. Master FX and release remain LOCKED.
+
+
 ## B01/B02 RC5 — full 20-shot moving-source Director candidate (2026-10-15)
 
 **Newest:** [watch RC5 80-second 20-shot review](https://drive.google.com/file/d/1z6KpMw3WljbtWajHDVV1e02mzCLQjfFA/view); [download 20 individual original-source-derived motion clips with all reproduction scripts and receipts](https://drive.google.com/file/d/1J3dmI4nO_3TK601rvI8wdEulmW8czkBe/view); [contact sheet](https://drive.google.com/file/d/1JuwWOzpSzdos8lvKqvFUvKcL8TEF4RTy/view); [per-shot SHA + QC receipt](https://drive.google.com/file/d/1hfjxJj_55P33w7ACDSXYlwQFm5YT6d4C/view). 20 real rendered 4s MP4s; 15 actor/musician/reaction video candidates, four ambient-only camera/material scenes, and one pier-to-interior editorial transitional shot. Original source clips and B01/B02 A/B Light FX remain unchanged.
