@@ -1,0 +1,216 @@
+{
+  "schema": "aivideoedit.la-luna-b01b02-director-movement-review.v1",
+  "production_id": "la-luna-de-florida",
+  "branch": "song/la-luna-de-florida",
+  "scope": "B01-B02 missing moving-scene/character-performance completion",
+  "user_direction": "Full theatrical Director film, main FX library first; do not move to B03-B05 while B01-B02 moving performance/coverage is incomplete",
+  "technical_execution": {
+    "run_id": 38684398752,
+    "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38684398752",
+    "jobs_passed": 10,
+    "jobs_total": 10,
+    "inputs": {
+      "B01_light_run": 38675807521,
+      "B02_light_run": 38673490212
+    },
+    "shots_rendered": 20,
+    "rendered_clips": 20,
+    "frames_per_clip": 96,
+    "fps": 24,
+    "dimensions": [
+      960,
+      540
+    ],
+    "duration_per_clip_seconds": 4,
+    "media_type": "actual H264 MP4, source-preserving layered visual-motion candidate",
+    "tests": [
+      "original source SHA from per-batch preflight",
+      "verified old A/B encoded MP4s",
+      "video full decode",
+      "exact encoded frame count",
+      "preserve original master audio"
+    ],
+    "clarification": "Technical proof does not demonstrate violin/guitar articulation, physical gesture, dance, or user creative acceptance"
+  },
+  "sandbox_QC": {
+    "decoded_clips_pass": 20,
+    "black_frames": 0,
+    "near_frozen_adjacent_frame_pairs": 208,
+    "reason": "FX and slow camera micro-motion frequently too subtle to distinguish every adjacent encoded frame; this remains a creative quality warning",
+    "approval": "PENDING"
+  },
+  "source_video_inserts": {
+    "origin": "GEMINI_UPLOAD_952aed07_ORIGINAL_UNCUT.mp4",
+    "origin_sha256": "e9335abaad0d9ee7d62131c66eab1d6626c53e3b035b4bb1b9a0362477a102c2",
+    "source_scope": "same-song user-supplied Gemini video, not a foreign project",
+    "alternative_not_replacement": [
+      {
+        "shot_id": "B01-S07",
+        "start_second": 0,
+        "end_second": 4,
+        "purpose": "actual dancing woman and man, resolves source-semantic gap pending creative acceptance"
+      },
+      {
+        "shot_id": "B01-S09",
+        "start_second": 5,
+        "end_second": 9,
+        "purpose": "actual moving harbor/city coverage pending creative acceptance"
+      }
+    ],
+    "original_stills_unchanged": true
+  },
+  "artifacts": {
+    "github_actions": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38684398752",
+    "drive_folder": "https://drive.google.com/drive/folders/19fPAokHiMzdwD0FqTHVlW_VhBAe6RFet",
+    "all_20_clips_zip": "https://drive.google.com/file/d/1wC2qxvCZAPgQR0AZ9w94T9sKPVnf6NIN/view",
+    "scene_motion_review_RC1": "https://drive.google.com/file/d/1pACopmFy6ZonvxFdaSQihCFXvkvzUkaP/view",
+    "scene_motion_review_RC2_real_dance": "https://drive.google.com/file/d/1VTshGBSTdKKNf87PaH3wfNzLUn47AJ-x/view",
+    "RC2_hash_sha256": "not_recorded_in_repo_until_verified",
+    "RC2_frames": 1920,
+    "RC2_duration_seconds": 80,
+    "RC2_mode": "temporary 4s each shot in canonical order, audio first 80s of original WAV, NOT final lyric/frame-locked screenplay",
+    "gemini_derivation_receipt": "https://drive.google.com/file/d/1ipNh5TXaO2-M76vIgne0g8xG6vSizn2D/view"
+  },
+  "shot_review": [
+    {
+      "shot_id": "B01-S01",
+      "status": "ATMOSPHERIC_MOTION_PROOF",
+      "required_action": "Normal-speed Director review of existing real atmospheric motion before promotion",
+      "candidate_is_approved": false
+    },
+    {
+      "shot_id": "B01-S02",
+      "status": "PERFORMANCE_MOTION_GAP",
+      "required_action": "Live guitar, violin bow and woman dance movement, avoid rigid musician hands",
+      "candidate_is_approved": false
+    },
+    {
+      "shot_id": "B01-S03",
+      "status": "PERFORMANCE_MOTION_GAP",
+      "required_action": "Lead expressive body/face response beyond a fixed still",
+      "candidate_is_approved": false
+    },
+    {
+      "shot_id": "B01-S04",
+      "status": "PERFORMANCE_MOTION_GAP",
+      "required_action": "Dance progression and violin bow movement",
+      "candidate_is_approved": false
+    },
+    {
+      "shot_id": "B01-S05",
+      "status": "PERFORMANCE_MOTION_GAP",
+      "required_action": "Acoustic guitar performance plus couple motion",
+      "candidate_is_approved": false
+    },
+    {
+      "shot_id": "B01-S06",
+      "status": "PERFORMANCE_MOTION_GAP",
+      "required_action": "Skirt and dance steps, musical accompaniment",
+      "candidate_is_approved": false
+    },
+    {
+      "shot_id": "B01-S07",
+      "status": "REAL_SOURCE_MOTION_CANDIDATE",
+      "required_action": "Original wrong moonlit harbor: candidate uses user Gemini video 00:00–00:04 for first dance; needs normal-speed director approval",
+      "candidate_is_approved": false
+    },
+    {
+      "shot_id": "B01-S08",
+      "status": "PERFORMANCE_MOTION_GAP",
+      "required_action": "Physical couple movement/recognition beats",
+      "candidate_is_approved": false
+    },
+    {
+      "shot_id": "B01-S09",
+      "status": "REAL_SOURCE_MOTION_CANDIDATE",
+      "required_action": "Original yacht/habor now backed by actual moving Gemini frames 00:05–00:09; pending Director approval",
+      "candidate_is_approved": false
+    },
+    {
+      "shot_id": "B01-S10",
+      "status": "CANONICAL_COVERAGE_MISMATCH",
+      "required_action": "Contaminated typography and sunrise violate night-first-act story; don't promote original",
+      "candidate_is_approved": false
+    },
+    {
+      "shot_id": "B02-S01",
+      "status": "CANONICAL_COVERAGE_MISMATCH",
+      "required_action": "Exterior harbor walkway, not tavern entrance",
+      "candidate_is_approved": false
+    },
+    {
+      "shot_id": "B02-S02",
+      "status": "CANONICAL_COVERAGE_MISMATCH",
+      "required_action": "Exterior waterfront deck, not actual stepping inside",
+      "candidate_is_approved": false
+    },
+    {
+      "shot_id": "B02-S03",
+      "status": "PERFORMANCE_MOTION_GAP",
+      "required_action": "Guitar pluck/fret with actual varying fingers and strings",
+      "candidate_is_approved": false
+    },
+    {
+      "shot_id": "B02-S04",
+      "status": "PERFORMANCE_MOTION_GAP",
+      "required_action": "Visible conversation, laughter, reaching/glasses",
+      "candidate_is_approved": false
+    },
+    {
+      "shot_id": "B02-S05",
+      "status": "PERFORMANCE_MOTION_GAP",
+      "required_action": "Reciprocal intimate gesture/head/hand response",
+      "candidate_is_approved": false
+    },
+    {
+      "shot_id": "B02-S06",
+      "status": "PERFORMANCE_MOTION_GAP",
+      "required_action": "Live dance, crowd palmas, interaction",
+      "candidate_is_approved": false
+    },
+    {
+      "shot_id": "B02-S07",
+      "status": "PERFORMANCE_MOTION_GAP",
+      "required_action": "Guitar strum and violin bow; protect instrument geometry",
+      "candidate_is_approved": false
+    },
+    {
+      "shot_id": "B02-S08",
+      "status": "PERFORMANCE_MOTION_GAP",
+      "required_action": "Conversation/reaction gestures; locked faces/hands",
+      "candidate_is_approved": false
+    },
+    {
+      "shot_id": "B02-S09",
+      "status": "PERFORMANCE_MOTION_GAP",
+      "required_action": "First chorus authentic dancer poses changing in time",
+      "candidate_is_approved": false
+    },
+    {
+      "shot_id": "B02-S10",
+      "status": "PERFORMANCE_MOTION_GAP",
+      "required_action": "Couple dance and musicians continuing into the night",
+      "candidate_is_approved": false
+    }
+  ],
+  "counts": {
+    "performance_motion_gap": 14,
+    "canon_coverage_mismatch_nonoverlapping": 3,
+    "real_Gemini_inserts_under_review": 2
+  },
+  "director_disposition": "REVISIONS_REQUIRED",
+  "B01_character_gate": "OPEN",
+  "B02_character_gate": "OPEN",
+  "B03_B04_B05_progression_hold": true,
+  "master_fx_ready": false,
+  "individual_source_pixels_locked": false,
+  "film_release_approved": false,
+  "next_actions": [
+    "Review RC2 at normal speed against 50-shot canon; keep current source and FX bytes immutable",
+    "Finish B01 performance gaps for S02/S03/S04/S05/S06/S08 using verified same-song pose variants, independent moving-footage coverage or a specifically authorized bounded continuation; do not fake musical actions with camera zoom",
+    "Repair B01-S10 source mismatch: correct night-world finale to Act 1 without text or dawn and keep existing original as rejected candidate",
+    "Fix B02-S01/S02 exterior-to-interior visual coverage with scene-correct still/footage and transition; retain old proofs",
+    "Finish B02 S03..S10 physical dance/musicians/conversation performance motion, prioritizing live articulation",
+    "Run Director normal-speed proof check and exact project/source to export QC, then mark batches complete only if visual proof passes"
+  ]
+}
