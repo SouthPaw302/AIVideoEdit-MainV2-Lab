@@ -1,0 +1,49 @@
+{
+  "schema": "aive.godot.source-video-experiment.v1",
+  "title": "WOmanCLouds source media Godot + canonical MainV2 FX",
+  "status": "TECHNICAL_SOURCE_PROOF_PASS",
+  "authority": "test/godot-render experiment only, no production approval",
+  "date": "2026-10-15",
+  "branch": "test/godot-render",
+  "godot_mainv2_source_runner": {
+    "run_id": 38692112937,
+    "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38692112937",
+    "commit_sha": "6e0cc43abb9cf7f89a63b027c3ac3236318700ee",
+    "conclusion": "success",
+    "source": "immutable SHA-pinned repo Irish Eyes source and WAV, explicitly derived into 560x560/24fps for CI"
+  },
+  "user_uploaded_clip": {
+    "file_name": "WOmanCLouds.mp4",
+    "sha256": "3fc2192b4425dd87b6362a6a77aa29e0c54d93b8df14383ed7105063d77f7ab6",
+    "distribution": "not committed to GitHub; remains a user-supplied local attachment",
+    "media_role": "current user-supplied bounded renderer test source, not a canonical approved film source"
+  },
+  "local_proof": {
+    "source_shot_frames": 145,
+    "duration_seconds": 6.041666666666667,
+    "source_resolution": [
+      560,
+      560
+    ],
+    "fps": 24,
+    "output_codec": "H.264",
+    "audio_codec": "AAC derived from input audio",
+    "output_sha256": "c6a67e6bbddc74c0119dc145e3542f04416cccc970c567bc1234a7baf6b93670",
+    "video_render": "Godot movie-writer overlay frames, 145 actual PNGs produced on successful runner",
+    "fx_application": "FXExecutor FX2-ATM-001 directly loaded from this repo, seed 302",
+    "qc": {
+      "protected_pixels_changed_before_encoding": 0,
+      "modified_frames": 145,
+      "video_frames": 145,
+      "video_audio_present": true
+    }
+  },
+  "limitations": [
+    "Technical prototype, not visually approved",
+    "No true 3D reconstruction",
+    "Lossy output codec may introduce changes in protected source region on decoded video",
+    "Review and backend equivalence still required before any production use"
+  ],
+  "durable_media_location": "GitHub Actions ephemeral artifact for CI test; user-uploaded local proof shared in ChatGPT, not published to GitHub",
+  "changes_to_production_main": false
+}
