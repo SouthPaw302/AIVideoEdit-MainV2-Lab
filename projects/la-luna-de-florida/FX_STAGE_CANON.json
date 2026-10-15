@@ -79,27 +79,87 @@
     {
       "id": "BATCH_CHARACTER_FX",
       "execution_scope": "each_batch_per_shot_when_semantic_action_required",
-      "purpose": "Produce genuine articulated human, costume, prop and instrument action before master assembly; use a distinct versioned pass, not a rewrite of light FX.",
+      "purpose": "Compile convincing moving scenes and, where required, actual subject action from La Luna's protected source stills using the current-main reusable FX library, shot-derived duplicate/alternate image states, GIF and video loops, transparent layers, depth/2.5D, legitimate Gaussian effects and Director-authored camera movement/cuts. This is a per-shot layered animation/compositing gate, NOT an automatic video-generation requirement.",
       "inputs": [
-        "storyboard_shot_intent",
-        "identity_and_zero_drift_anchors",
-        "source_still_or_separately_authorized_moving_source",
-        "bounded_action_envelope",
-        "target_timing_guidance"
+        "canonical_storyboard_per_shot_intent",
+        "verified_clean_original_still_and_SHA",
+        "alternate_or_duplicate_source_states_with_SHA",
+        "preexisting_approved_A_B_light_FX_variants_when_relevant",
+        "protected_face_hand_instrument_costume_geometry_masks",
+        "current_main_approved_fx_v2_runtime_registry_and_reusable_recipes",
+        "verified_lyrics_and_ONNX_music_timing_as_directing_evidence",
+        "real_source_performance_motion_or_bounded_authorized_continuation_only_when_required"
       ],
       "outputs": [
-        "separate_character_animation_clips",
-        "character_action_and_identity_QC",
-        "source_start_frame_and_clip_hashes",
-        "shot_specific_acceptance_or_reasoned_NOT_APPLICABLE"
+        "original_and_clean_variant_independently_preserved",
+        "shot_local_GIF_or_MP4_loop_library_and_derived_layer_hashes",
+        "separate_alpha_depth_material_atmosphere_and_camera_recipe",
+        "composited_pre_master_moving_scene_proof",
+        "action_identity_camera_protection_temporal_loop_QC",
+        "shot_specific_character_action_acceptance_or_reasoned_NOT_APPLICABLE_or_PERFORMANCE_MOTION_GAP",
+        "Drive_and_runner_receipts"
       ],
-      "pass_rule": "Show real semantically correct movement—dance, walking, faces, hands, instruments, clothing as the shot requires—while preserving identity, geography, anatomy and continuity. Camera-only parallax or environmental movement is not a substitute. A no-character shot may record NOT_APPLICABLE with Director reasoning.",
+      "pass_rule": "The actual moving-shot proof must plausibly show the storyboard's required observable action from source-derived poses/layers, loops, approved FX and restrained Director camera work, while preserving protected face/hand/anatomy, instruments and scene geometry. If a dance step, guitar fingering or violin bow action is required, environmental warp, global camera/parallax motion, or lighting alone is not evidence of articulated performance. Mark PERFORMANCE_MOTION_GAP until real motion or approved bounded continuation exists. A non-performing/non-character shot may be NOT_APPLICABLE for subject articulation without blocking appropriate world/scene animation.",
       "cannot_claim": [
         "light_fx_failure_due_to_absent_character_action",
         "source_video_authorized_by_mere_presence",
         "terminal_frames_auto_canonical",
-        "final_film_approved"
-      ]
+        "final_film_approved",
+        "any_camera_only_living_painting_proves_instrument_or_dance_articulation",
+        "image_space_gaussian_glow_is_true_3DGS",
+        "foreign_movie_render_approvals_apply_here"
+      ],
+      "preferred_technique_order": [
+        "immutable_full_resolution_original_and_storyboard_semantic_lock",
+        "preserve_duplicates_and_pose_or_motion_variation_images_separately",
+        "extract_or_render_source_derived_clean_GIF_MP4_loops_and_alphas",
+        "protect_identity_hands_instrument_anchors_and_world_topology",
+        "multi_plane_depth_parallax_or_camera_tracking_when_supported_by_source",
+        "FX_V2_reused_material_motion_environment_light_and_compositing",
+        "2D_Gaussian_light_glow_haze_only_when_motivated_no_fake_3DGS",
+        "Director_camera_cuts_bounded_travel_and_timed_transitions",
+        "compose_short_native_cadence_moving_proof_and_screen_motion_in_context",
+        "QC_then_version_archive_and_pass_only_relevant_correct_semantic_action",
+        "only_if_required_action_is_unachievable_from_existing_shot_sources_consider_authorized_bounded_generated_continuation"
+      ],
+      "technologies_and_existing_library": {
+        "current_main_registry": "general/reusable/fx_v2/registry.json",
+        "current_main_registry_git_blob_sha1": "e817763435e9bb948523c7e3c9a5d83252a11932",
+        "current_main_runtime": "general/reusable/fx_v2/runtime.py",
+        "current_main_runtime_git_blob_sha1": "dce4d8751a394c5d4a18426c33f77297d9d08aa2",
+        "FX_must_resolve_live_registry_before_use": true,
+        "allowed_neutral_candidate_ids": [
+          "FX2-MOTION-002",
+          "FX2-MOTION-003",
+          "FX2-MOTION-021",
+          "FX2-MOTION-024",
+          "FX2-SPATIAL-021",
+          "FX2-COMP-021",
+          "FX2-COMP-022",
+          "FX2-COMP-023",
+          "FX2-CAMERA-021",
+          "FX2-CAMERA-022",
+          "FX2-CAMERA-023",
+          "FX2-CAMERA-024"
+        ],
+        "approved_recipe_examples": [
+          "RCP-LONG-HOLD",
+          "RCP-MULTIPLANE",
+          "RCP-PROTECTED-ENVIRONMENT",
+          "RCP-TRANSPARENT-HANDOFF",
+          "RCP-INSTRUMENT-AXIS"
+        ],
+        "approved_workflow_examples": [
+          "WF-SOURCE-DERIVED-LOOPS",
+          "WF-IDENTITY-SAFE-LOOP-25D-QC",
+          "WF-SCENE-GRAPH-25D",
+          "WF-LAYERED-COMPOSITING",
+          "WF-LIVING-SCENE-ASSEMBLY",
+          "WF-TEMPORAL-QC"
+        ],
+        "gaussian_terms": "2D Gaussian fields for light, glow, blur and haze are image-space effects. True 3DGS/SuperSplat (FX2-SPATIAL-003) is conditional, and requires real geometry and verified project-specific preflight. Never claim a 2.5D depth-plane as 3DGS.",
+        "source_and_effect_acceptance": "An effect's registry status is only eligibility. Select by current La Luna scene semantics with current-main fx_resolver and verify actual implementation, rendered proof and precompile gate; never blanket-apply to every shot."
+      }
     },
     {
       "id": "MASTER_FX_AND_ASSEMBLY",
@@ -171,8 +231,21 @@
       "alter_external_repository",
       "change_main_or_other_song_branches"
     ],
-    "promotion_rule": "If a method looks useful, propose an independent La Luna-specific adaptation and require explicit user authorization before adoption or implementation; still obey current-main OS and this branch canon.",
-    "unknown_source": "NO_EXTERNAL_REPOSITORY_NAMED_YET",
-    "unrelated_branch_source_authority_unchanged": true
+    "promotion_rule": "No automatic import of external project data, media or source code. The user explicitly authorized the shared method of duplicate-still/loop/GIF/Gaussian/depth/layer/FX/camera shot compile for La Luna; its concrete implementation must use current-main neutral verified capabilities, La Luna's own board/assets, gates, and independent QC. Any additional transfer of external implementation or project-specific behavior needs separate user approval.",
+    "unknown_source": "RESOLVED_REFERENCE_REPOSITORY_SouthPaw302/AIVideoEdit",
+    "unrelated_branch_source_authority_unchanged": true,
+    "approved_method": "source image duplicate/loop/GIF/layer/depth/FX library/camera compile is explicitly authorized as La Luna animation workflow, using existing CURRENT LAB MAIN primitives only"
+  },
+  "user_clarification_2026_10_15": "Character animation is principally constructed/compiled using our existing FX library, duplicated/variant still images, GIF and loop motion, Gaussian family (truthfully distinguished), 2.5D/depth, Director shot cuts and camera movement—not assumed independent AI-generated video for every shot. Film-specific actor/instrument action must still be depicted convincingly.",
+  "reference_method_study": {
+    "path": "REFERENCE_METHOD_STUDY.md",
+    "external_repo": "SouthPaw302/AIVideoEdit",
+    "primary_read_only_branch": "song/el-viento-trae-tu-nombre",
+    "other_song_branches_top_level_inventoried": 29,
+    "detailed_project_methods_sampled": 6,
+    "foreign_story_or_assets_imported": false,
+    "foreign_code_imported": false,
+    "comparison_with_current_lab_main": "exact matching core FX registry/runtime; Lab main adds resolver/execution/recipes",
+    "study_use": "methodology_only"
   }
 }
