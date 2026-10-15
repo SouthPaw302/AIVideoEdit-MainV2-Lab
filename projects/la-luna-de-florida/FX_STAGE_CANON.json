@@ -48,7 +48,21 @@
       "B05"
     ],
     "shots_per_batch": 10,
-    "original_still_policy": "Preserve originals and SHA-256 provenance; canonical storyboard cells are direction references, not finished production stills. Never silently promote candidate stills or contact-sheet crops."
+    "original_still_policy": "Preserve originals and SHA-256 provenance; canonical storyboard cells are direction references, not finished production stills. Never silently promote candidate stills or contact-sheet crops.",
+    "source_count_exceptions": [
+      {
+        "batch_id": "B03",
+        "user_authorized": true,
+        "source_originals_required": 9,
+        "storyboard_shot_count": 10,
+        "missing_source_original": "B03-S10",
+        "treatment": "Director-selected layered memory bridge from B03-S07 mountain road to B03-S09 couple",
+        "source_derivation_is_original": false,
+        "may_proceed_to_B04": true,
+        "decision": "B03_DIRECTOR_BATCH_DECISION.json",
+        "film_master_approval_implied": false
+      }
+    ]
   },
   "stages": [
     {
