@@ -59,7 +59,7 @@
     "source_replacement_authorized": false
   },
   "current_user_direction": "Treat La Luna de Florida as a theatrical film, with its story following the supplied lyrics; preserve the existing workprint and Batch 01; the latest five-act/50-shot storyboard is now explicitly canon for still generation. Current additional user direction: for each batch, treat A/B environmental/light proofs as a preparation gate; create separate, identity-safe character-action proofs before final Master FX and film assembly. Existing B01/B02 light FX technical PASS is not character animation or final-film acceptance. An unnamed external film project may be studied for methods only, never imported into La Luna.",
-  "exact_next_action": "Preserve B01/B02 technical light FX PASS and archives; keep production truth/50-shot storyboard intact. Continue remaining individually verified batches. For each shot that requires semantic action, run a separate bounded Character FX gate with source/identity/temporal QC (B01/B02 still require this); for non-character shots record NOT_APPLICABLE. Complete lyric-line/shot timing against the existing full-song ONNX evidence before Master FX/assembly. Never silently transfer another project's creative or runtime state.",
+  "exact_next_action": "Hold B03-B05 until B01/B02 character actions and source mismatches are repaired and visually inspected. Read B01_B02_MOVEMENT_DIRECTOR_STATUS.json, compare actual 80s RC2 film candidate to immutable 50-shot storyboard, repair 14 remaining performance-motion gaps plus 3 source coverage mismatches, remove 7 actual-export freeze intervals. Use verified current-main FXRuntime/duplicated stills/loops/2.5D/Director camera, and same-song real footage where available. Never call static instrument hands or fixed dance poses a performance PASS, and do not promote film to release without Director/QC/user gates.",
   "updated_at_utc": "2026-10-13T03:50:00Z",
   "director_supervision": {
     "required": true,
@@ -87,5 +87,26 @@
     ],
     "separate_gate_status_required": true,
     "external_reference_policy": "process_learning_only"
+  },
+  "movement_current_work": {
+    "active_batches": [
+      "B01",
+      "B02"
+    ],
+    "status": "20_TECHNICAL_MOVING_SCENE_PROOFS_RAN_DIRECTOR_REVISIONS_REQUIRED",
+    "director_status": "B01_B02_MOVEMENT_DIRECTOR_STATUS.json",
+    "actual_runner": 38684398752,
+    "runner_success": true,
+    "clip_count": 20,
+    "real_source_motion_alternatives": [
+      "B01-S07",
+      "B01-S09"
+    ],
+    "B01_and_B02_character_fx_accepted": false,
+    "remaining_performance_motion_gaps": 14,
+    "remaining_shot_coverage_mismatches": 3,
+    "remaining_temporal_freeze_intervals": 7,
+    "backed_up_to_drive": true,
+    "user_priority": "Complete B01/B02 before B03-B05; do not falsely grant Character FX pass from render execution"
   }
 }
