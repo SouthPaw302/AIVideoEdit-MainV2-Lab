@@ -4,8 +4,8 @@
   "branch": "song/la-luna-de-florida",
   "stage": "B03",
   "date_utc": "2026-10-15",
-  "status": "RC2_10_OF_10_MOVING_PROOFS_RENDERED__NATIVE_MAIN_18_AB_LIGHT_FX_PROOFS_PASS__DIRECTOR_CHARACTER_GATES_OPEN",
-  "director_decision": "SELECT_B03_RC2_FOR_PROVISIONAL_STORY_ASSEMBLY_AND_REVIEW__DO_NOT_MARK_CANONICAL_FX_ORIGINALS_LOCKED",
+  "status": "B03_BATCH_STAGE_DIRECTOR_SELECTED__9_SOURCE_ORIGINALS_18_NATIVE_AB_FX_PASS_AND_10_MOVING_PROOFS__MASTER_NOT_LOCKED",
+  "director_decision": "B03_BATCH_STAGE_DIRECTOR_SELECTED_2026_10_15__REFER_B03_DIRECTOR_BATCH_DECISION.json",
   "mission": "Full 5:21 Director film, 50 fixed storyboard shots; B03 third act is port, road memories and rap, travelers, reunion.",
   "storyboard_source": "STORYBOARD_CANON.json",
   "storyboard_image_sha256": "05b232452eebce56fb9c047a0f481a19e04cf2d13e364bee30255dd27c88703a",
@@ -15,12 +15,12 @@
     "originals": 9,
     "total_shot_id_positions": 10,
     "missing": "B03-S10",
-    "missing_original_status": "NOT_RECOVERED_NOT_RECREATED",
+    "missing_original_status": "MISSING_AS_HISTORICAL_PROVENANCE__NOT_REQUIRED_FOR_B03_DIRECTOR_BATCH_STAGE",
     "S10_derived_sources": [
       "B03-S07 original mountain memory",
       "B03-S09 original returning couple"
     ],
-    "S10_type": "explicit filmic alpha/memory crossfade, original status STILL MISSING",
+    "S10_type": "USER_ACCEPTED_NINE_STILL_WORKFLOW__DIRECTOR_SELECTED_DERIVED_ROAD_TO_COUPLE_EDITORIAL_BRIDGE",
     "source_imagegen_poster_in_chats": "REJECTED_NOT_A_PRODUCTION_STILL_NOT_USED"
   },
   "render": {
@@ -123,12 +123,7 @@
   "provenance_no_cross_repo_assets": true,
   "originals_untouched": true,
   "source_video_originals_untouched": true,
-  "remaining_before_native_stage_complete": [
-    "Native B03 light FX gate is now PASSED for S01-S09. S10 is a separately documented derived editorial composite, never an original still.",
-    "Director evaluate semantic motion of B03-S04 rap voiceover and B03-S05 boots detail in full-picture context; do not misclaim lip sync or physical foot choreography.",
-    "Full character/action and Director film-stage selection of the 10 moving shots remains separate; RC2 is a provisional candidate with full 40-second technical QC.",
-    "Full 321.16-second film lyric cue and scene timing remain unverified."
-  ],
+  "remaining_before_native_stage_complete": [],
   "B04_B05_source_state_unchanged": true,
   "film_master_ready": false,
   "human_release_approved": false,
@@ -171,5 +166,18 @@
     "archive_crc": "PASS",
     "independently_read_and_checked_receipt": true,
     "scope": "Light/ambient source-preserving FX only: not human performance, scene/storyboard/lyric alignment, missing original replacement, Director film or owner release"
-  }
+  },
+  "director_batch_source_exception": {
+    "nine_originals_permitted": true,
+    "ten_storyboard_intents_preserved": true,
+    "b03_s10_derived_selected": true,
+    "decision_file": "B03_DIRECTOR_BATCH_DECISION.json"
+  },
+  "remaining_before_full_film_master": [
+    "Original lyrics/ONNX scene pacing not yet frame-locked",
+    "Check cross-act reused B05 musician source for visual repetition and continuity before final master",
+    "B03-S04 has illustrative rap voiceover image not lip sync; B03-S05 boot detail does not claim filmed steps",
+    "Owner full film/release not approved"
+  ],
+  "B04_next_work_authorized": true
 }
