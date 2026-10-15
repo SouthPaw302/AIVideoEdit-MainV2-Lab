@@ -1,0 +1,18 @@
+{
+  "schema": "aive.godot.procedural-source-lock.v1",
+  "duration_seconds": 14,
+  "fps": 24,
+  "source_repository": "SouthPaw302/AIVideoEdit",
+  "release": "media-mountain-noir-after-midnight",
+  "wav": {
+    "name": "El Viento trae tu nombre Instrumental",
+    "file": "source.wav",
+    "url": "https://github.com/SouthPaw302/AIVideoEdit/releases/download/media-mountain-noir-after-midnight/source__El_Viento_trae_tu_nombre_Instrumental.wav",
+    "sha256": "8d451360246378db551282c3703add4cd474c9ad3a4c6cf778390ae727820fe0"
+  },
+  "visual_sources": [],
+  "prior_video_sources": [],
+  "scene_generation": "GDScript procedural 3D geometry and lighting; zero imported images, meshes and videos",
+  "experiment_only": true,
+  "human_visual_approval_required": true
+}
