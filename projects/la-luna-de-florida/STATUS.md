@@ -1,5 +1,14 @@
 # La Luna de Florida — Status
 
+## B01/B02 RC3 real source-performance candidate — 2026-10-15
+
+**Latest review cut:** [RC3 80s](https://drive.google.com/file/d/1-nbQnQvvoSOnU_hEn4P8YPQOrFFqJ2q8/view) (actual 1920-frame H264/AAC export, source song first 80s, temporary 4s/shot). [20 individual candidates + executable source and receipts](https://drive.google.com/file/d/1R8PxP8T1BG_BQStDPX0k54VpIY3JLec-/view), [20-shot contact](https://drive.google.com/file/d/1qPCIDnEYnSDyVEU4DqgQz_Q09tuEzNeb/view), [receipt](https://drive.google.com/file/d/1isO3wnorU0iKSlhoedVfdJrw2FbTTk2V/view). All archive bytes listed on Drive. Song branch work remains **Director review candidate**, and this new RC3 was rendered in sandbox, NOT a new GitHub Actions run. The 20 underlying moving FX proofs *were* previously rendered in GitHub Actions #38684398752.
+
+New genuine source-video moving-actor/instrument candidates: **B01-S02/S03/S07/S08, B02-S03/S05/S07/S09/S10** (9 shots) using the same film's exact-SHA original Gemini dance clip and exact-SHA B05 guitar/violin clip, the latter **cross-act footage as provisional technical source**, not B05 canon replacement. Replaced B01-S10 candidate's erroneous typography/sunrise with a night-harbor reprise from the same film source library, **without overwriting or approving either source**. Remaining **semantic action gaps**: B01-S04/S05/S06 and B02-S04/S06/S08. Remaining **storyboard coverage mismatches**: B02-S01/S02 (exterior vs entrance/interior). The other moving shots remain existing FX/camera support proofs, not actor-animation passes.
+
+**Actual encoded export QC:** 20/20 four-second clips decode, review 1920 frames / 80 seconds / 24fps, no black events, **6 freeze events >=0.5s (down from 7 in RC2)**. This is not a temporal-QC PASS, not a final lyric/frame-followable screenplay, not character FX lock, and not user-approved picture. **B03–B05 HOLD.** All old sources, accepted FX supports, older RC1/RC2 and original B05 source preserved. Source-driven process provenance lives in [Drive FX archive](https://drive.google.com/drive/folders/19fPAokHiMzdwD0FqTHVlW_VhBAe6RFet).
+
+
 ## B01–B02 Director movement production (2026-10-15)
 
 **Active in THIS song branch; B03–B05 movement progression HOLD until B01/B02 are Director-complete.** Detailed binding report: [B01_B02_MOVEMENT_DIRECTOR_STATUS.json](B01_B02_MOVEMENT_DIRECTOR_STATUS.json).
