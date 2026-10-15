@@ -1,5 +1,14 @@
 # Production handoff — La Luna de Florida
 
+## ACTIVE — Master FX feature handoff; all B01–B05 motion proof batches Director-selected
+
+**Five batch production stages COMPLETE, theatrical film NOT yet assembled.** The verified [MASTER_50_SHOT_SOURCE_PREFLIGHT.json](MASTER_50_SHOT_SOURCE_PREFLIGHT.json) is the only approved starting inventory for full-song assemble: 50 source-verifiable 4s moving proof clips (B01/B02 RC8, B03 RC2, B04 RC2, B05 RC1), SHA256 each, each 960×540 at 24fps and 96 frames, all four video archives readable. The original WAV is **321.16s** and requires new Director timelines/lyric sync; never interpret the 200s preview totals as full movie.
+
+[B05 RC1 night-to-dawn 40s](https://drive.google.com/file/d/1OjqMNnZKW5m2XDKtbsJhprdyiUIniiQz/view), [B05 10 moving shots and scripts](https://drive.google.com/file/d/1vps_qOmVKJy_96aTcQh0-tgjJlZmXLsJ/view), [native FX 20 A/B passes](https://drive.google.com/file/d/1yUW4rNoWl7gEygjWbtJGgU3u6dLaPPqt/view), [10 source plates 7 night/3 dawn](https://drive.google.com/file/d/125BAnia3HKacDFtpOel8-etstMu-h0tw/view), [Director decision](B05_DIRECTOR_BATCH_DECISION.json). Native Lab-main runner #38805344772 success; B05 actual 40s export QC PASS. The older ten-night EXTRA archive remains intact, not falsely treated as approved sunrise originals. Previous contacts/posters rejected and absent from production.
+
+**NOW** build *director-led 5:21 original music feature*, including section and lyric-timed frame schedule using verified Beat This! ONNX run #38680169728, full-song WAV and locked storyboard; choose/distill cross-act Gemini repeats; actual native FX loops, camera, transitions, protected identities; master color/audio mix and verify complete export. Per-batch Director selects are not equivalent to user release approval. B01-B04 media and external repositories remain untouched.
+
+
 ## ACTIVE — B04 Director stage selected, B05 next (2026-10-15)
 
 **B04 accepted for production-stage progression: 10 original SHA-verified stills, 20 real Lab-main light FX loops and 10 sandbox moving-scenes assembled from those exact native FX proofs.** [B04 RC2 40s Director film review](https://drive.google.com/file/d/11exEAiou7XMbLerksMQvOJxPqb_BdP9P/view) and [10 original-source moving shots/repro scripts/QC](https://drive.google.com/file/d/10cF5tPLxGHxvGKZA7B091K53dGxctqTb/view), [native FX runner source receipt](https://drive.google.com/file/d/1itN2iGrKs149QpLXAM6rUu8rFGJWmGl6/view), [Director decision](B04_DIRECTOR_BATCH_DECISION.json). B04-S10 was repaired to end in dancing moonlit tavern, not unrelated empty marina. Nine earlier clip bytes unchanged. RC2 full encoded QC zero black / zero ≥0.5s freeze. Four genuine same-film performance portions; six remaining shots are still/FX/camera tableau and do not falsely claim clapping, laughing, dialogue or gaze articulation.
