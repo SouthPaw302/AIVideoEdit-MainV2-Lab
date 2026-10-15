@@ -59,7 +59,7 @@
     "source_replacement_authorized": false
   },
   "current_user_direction": "La Luna de Florida full Director five-act 50-shot film. All five production batches B01/B02 RC8, B03 RC2, B04 RC2, B05 RC1 have actual 4-second-per-shot moving proofs and Director batch-stage selection. Preserve originals, fx loops, source hashes, the song WAV and 50-shot storyboard; never mistake these temporary proof timings for the complete 321.16s movie. The user directed 'home stretch, don't get stuck'.",
-  "exact_next_action": "Begin FULL 321.16-SECOND MASTER FX / DIRECTOR FEATURE ASSEMBLY. First read projects/la-luna-de-florida/MASTER_50_SHOT_SOURCE_PREFLIGHT.json (50/50 video SHA/fps/frame/source verified) and B05_DIRECTOR_BATCH_DECISION.json. Read full-song original WAV SHA1a4b.. and pinned ONNX run 38680169728 plus LYRICS.md / SCRIPT.md. Author frame-followable 7708-frame shot schedule from music and lyric cues, not uniform four-second workprints; prevent repeated 10s same-film Gemini performance motifs from becoming obvious in the complete film. Assemble master with authorized native FX/shot package camera transitions, continuity grade, sound and encoded-video actual QC. Complete film, final artistic signoff and owner release NOT yet approved. Do not change source stills, main or unrelated song branches.",
+  "exact_next_action": "HANDOFF FIRST: Read projects/la-luna-de-florida/MASTER_FX_DIRECTOR_HANDOFF_2026-10-15.md in entirety, then OS boot + guards. Full Director first-pass work still pending: 50 verified source-proofs need true lyric-verified 7708-frame 321.16s screenplay and nonrepetitive scene extension. Stage four archives/WAV in canonical render pipeline with bytes+SHA (Drive /view URLs alone insufficient); run representative true FX/audio proof; issue full parallel-film render candidate; full-length Director normal-speed watch and eleven-phase scan, surgical fixes, encoded QC, durable Drive review link, then user executive release gate. DO NOT redo five batch media, modify main/other repo, or claim MASTER lock yet.",
   "updated_at_utc": "2026-10-13T03:50:00Z",
   "director_supervision": {
     "required": true,
@@ -108,5 +108,16 @@
     "B05_10_shot_proofs": "https://drive.google.com/file/d/1vps_qOmVKJy_96aTcQh0-tgjJlZmXLsJ/view",
     "all_50_video_proofs_verified": true,
     "master_source_index": "MASTER_50_SHOT_SOURCE_PREFLIGHT.json"
+  },
+  "current_master_handoff": {
+    "path": "MASTER_FX_DIRECTOR_HANDOFF_2026-10-15.md",
+    "status": "DURABLE_DETAILED_NEXT_CHAT_INSTRUCTIONS_COMMITTED",
+    "scope": "La Luna song branch only",
+    "first_action": "OS bootstrap and 50-shot lyric/ONNX Director timing + source-stage proof",
+    "after_director_pass": "Canonical Director+Parallel candidate render; inspect entire actual 321.16s, QC and surgical repair, archive Drive, user executive release approval",
+    "master_timeline_locked": false,
+    "full_321s_movie_rendered": false,
+    "source_media_proofs_complete": true,
+    "source_archive_download_strategy": "byte-verified staging required; Drive view URL not always byte-serving"
   }
 }
