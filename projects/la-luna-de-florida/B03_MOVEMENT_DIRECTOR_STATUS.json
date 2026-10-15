@@ -4,7 +4,7 @@
   "branch": "song/la-luna-de-florida",
   "stage": "B03",
   "date_utc": "2026-10-15",
-  "status": "RC2_10_OF_10_SOURCE_DERIVED_MOVING_PROOFS_RENDERED_TECHNICAL_PASS__NATIVE_MAIN_FX_GATE_PENDING",
+  "status": "RC2_10_OF_10_MOVING_PROOFS_RENDERED__NATIVE_MAIN_18_AB_LIGHT_FX_PROOFS_PASS__DIRECTOR_CHARACTER_GATES_OPEN",
   "director_decision": "SELECT_B03_RC2_FOR_PROVISIONAL_STORY_ASSEMBLY_AND_REVIEW__DO_NOT_MARK_CANONICAL_FX_ORIGINALS_LOCKED",
   "mission": "Full 5:21 Director film, 50 fixed storyboard shots; B03 third act is port, road memories and rap, travelers, reunion.",
   "storyboard_source": "STORYBOARD_CANON.json",
@@ -124,12 +124,52 @@
   "originals_untouched": true,
   "source_video_originals_untouched": true,
   "remaining_before_native_stage_complete": [
-    "Demonstrate/verify exact current Lab main bootstrapped FXRuntime or precompile FX gate for B03 A/B motion, using authenticated Drive source archive and registered recipe selection; current RC2 is a sandbox equivalent only.",
-    "Director judge whether fixed-pose rap and boots detail meet in-film action intent when timing to the song; don't assert lip or foot articulation without evidence.",
-    "B03-S10 missing independent original remains a documented derivative exception; if a full original is mandated later, create and approve a new, separate scene-correct frame—never use generated contact-sheet/poster.",
-    "Full original 321.16-second film lyric-cue and scene timing are not locked."
+    "Native B03 light FX gate is now PASSED for S01-S09. S10 is a separately documented derived editorial composite, never an original still.",
+    "Director evaluate semantic motion of B03-S04 rap voiceover and B03-S05 boots detail in full-picture context; do not misclaim lip sync or physical foot choreography.",
+    "Full character/action and Director film-stage selection of the 10 moving shots remains separate; RC2 is a provisional candidate with full 40-second technical QC.",
+    "Full 321.16-second film lyric cue and scene timing remain unverified."
   ],
   "B04_B05_source_state_unchanged": true,
   "film_master_ready": false,
-  "human_release_approved": false
+  "human_release_approved": false,
+  "native_main_fx_gate": {
+    "status": "TECHNICAL_PASS_18_VARIANTS_FROM_9_SHA_CHECKED_ORIGINALS",
+    "run_id": 38700642135,
+    "url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38700642135",
+    "source_zip_sha256": "da7b54eef5373b2d6b4db69eac0c497e4e9443facbc8fd78db29baecbc565252",
+    "source_access": "PUBLIC_READ_ALLOWED_FROM_FOLDER_AS_USER_DIRECTED",
+    "bootstrap": "PASS",
+    "verified_source_shots": [
+      "B03-S01",
+      "B03-S02",
+      "B03-S03",
+      "B03-S04",
+      "B03-S05",
+      "B03-S06",
+      "B03-S07",
+      "B03-S08",
+      "B03-S09"
+    ],
+    "variants": 18,
+    "native_runtime_sha256": "6cfdf3ba68c1f79015c1f1b26174d4e3ca4de7b75b06b5ad9811580f5bc2cfa4",
+    "fx_ids": [
+      "FX2-MOTION-003",
+      "FX2-LIGHT-023"
+    ],
+    "loop_frames_each": 60,
+    "loop_fps": 24,
+    "loop_resolution": [
+      960,
+      540
+    ],
+    "protected_roi_max_delta": 0,
+    "loop_start_end_frame_mad": 0,
+    "source_shot_s10_original_missing": true,
+    "artifact_id": 11956611194,
+    "artifact_zip_sha256": "7d2057f68f796efa1008d612f2ff37f90c980575d891d57fd4b6de8c3b76de9b",
+    "artifact_drive": "https://drive.google.com/file/d/1284TQUxZiLqYEsXHgNo26mITEQa9Fl5L/view",
+    "archive_crc": "PASS",
+    "independently_read_and_checked_receipt": true,
+    "scope": "Light/ambient source-preserving FX only: not human performance, scene/storyboard/lyric alignment, missing original replacement, Director film or owner release"
+  }
 }
