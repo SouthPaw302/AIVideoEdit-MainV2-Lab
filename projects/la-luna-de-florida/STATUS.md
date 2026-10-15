@@ -1,5 +1,14 @@
 # La Luna de Florida — Status
 
+## B01/B02 RC5 — full 20-shot moving-source Director candidate (2026-10-15)
+
+**Newest:** [watch RC5 80-second 20-shot review](https://drive.google.com/file/d/1z6KpMw3WljbtWajHDVV1e02mzCLQjfFA/view); [download 20 individual original-source-derived motion clips with all reproduction scripts and receipts](https://drive.google.com/file/d/1J3dmI4nO_3TK601rvI8wdEulmW8czkBe/view); [contact sheet](https://drive.google.com/file/d/1JuwWOzpSzdos8lvKqvFUvKcL8TEF4RTy/view); [per-shot SHA + QC receipt](https://drive.google.com/file/d/1hfjxJj_55P33w7ACDSXYlwQFm5YT6d4C/view). 20 real rendered 4s MP4s; 15 actor/musician/reaction video candidates, four ambient-only camera/material scenes, and one pier-to-interior editorial transitional shot. Original source clips and B01/B02 A/B Light FX remain unchanged.
+
+**Actually encoded QC:** 1920 frames, 80s, 24fps, original song excerpt, **zero blackdetect events and zero ≥0.5s freezedetect events**. Earlier RC2 had seven freezes, RC3 six; RC4/RC5 have zero. B01-S10 incorrect sunset/title original remains archived but was not promoted; night-safe alternative from La Luna source B01-S01 was used as an editorial candidate. B02-S01 dock approach and B02-S02 pier→interior show an implied arrival **but do not literally depict actor stepping across a doorway**. Full-film 321.16s song script and lyric timing still not locked.
+
+**Director's film caveat:** Some true musician shots reuse the exact 10s B05 same-film source, including different crops/timing, so *artistic repetition/continuity is not yet approved* and should be inspected at normal speed. The QC PASS is **technical only**, not human visual, character action acceptance, FX lock, final film or release permission. **B03–B05 HOLD** until B01/B02 Director visual review and coverage decisions. Provenance and hash report stored in [production Drive folder](https://drive.google.com/drive/folders/19fPAokHiMzdwD0FqTHVlW_VhBAe6RFet). RC5 was rendered in sandbox; prior 20-shot core runner work traced to GitHub Actions #38684398752. No unrelated repo touched.
+
+
 ## B01/B02 RC3 real source-performance candidate — 2026-10-15
 
 **Latest review cut:** [RC3 80s](https://drive.google.com/file/d/1-nbQnQvvoSOnU_hEn4P8YPQOrFFqJ2q8/view) (actual 1920-frame H264/AAC export, source song first 80s, temporary 4s/shot). [20 individual candidates + executable source and receipts](https://drive.google.com/file/d/1R8PxP8T1BG_BQStDPX0k54VpIY3JLec-/view), [20-shot contact](https://drive.google.com/file/d/1qPCIDnEYnSDyVEU4DqgQz_Q09tuEzNeb/view), [receipt](https://drive.google.com/file/d/1isO3wnorU0iKSlhoedVfdJrw2FbTTk2V/view). All archive bytes listed on Drive. Song branch work remains **Director review candidate**, and this new RC3 was rendered in sandbox, NOT a new GitHub Actions run. The 20 underlying moving FX proofs *were* previously rendered in GitHub Actions #38684398752.
