@@ -12,7 +12,7 @@ import numpy as np
 
 FPS = 24
 SIZE = 560
-FRAMES = 144
+FRAMES = 145
 FX_ID = "FX2-ATM-001"
 # The user-provided woman's figure lives left/center. Never modify x < 0.72.
 PROTECTED_FRACTION = 0.72
@@ -102,7 +102,7 @@ def main():
     subprocess.run(["ffmpeg","-hide_banner","-loglevel","error","-nostdin","-y",
         "-framerate",str(FPS),"-i",str(output/"frame_%06d.png"),"-i",str(source),
         "-map","0:v:0","-map","1:a:0","-c:v","libx264","-preset","veryfast","-crf","19","-pix_fmt","yuv420p",
-        "-c:a","aac","-b:a","192k","-t","6","-movflags","+faststart",str(dst)],check=True)
+        "-c:a","aac","-b:a","192k","-t",str(FRAMES/FPS),"-movflags","+faststart",str(dst)],check=True)
     v = probe(dst)
     vstream=[x for x in v["streams"] if x["codec_type"]=="video"]
     astream=[x for x in v["streams"] if x["codec_type"]=="audio"]
@@ -112,7 +112,7 @@ def main():
       "schema":"aive.lab.godot-source-reconstruction.v1",
       "status":"TECHNICAL_SOURCE_PROOF_PASS",
       "source_label":args.label,"source_sha256":got_sha,"source_video":{"width":SIZE,"height":SIZE,"fps":FPS},
-      "frames_rendered":FRAMES,"duration_seconds":6,"godot_role":"procedural environment-only screen overlay",
+      "frames_rendered":FRAMES,"duration_seconds":FRAMES/FPS,"godot_role":"procedural environment-only screen overlay",
       "aive_role":"canonical FXExecutor via approved FX2-ATM-001",
       "effect_id":FX_ID,"seed":302,
       "protected_region":"x < 0.72, full height, plus y 0.35-0.72 full width",

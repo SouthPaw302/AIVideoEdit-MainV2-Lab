@@ -55,6 +55,21 @@ jobs:
           python experiment/.lab/godot-source/fetch_pinned.py \
             experiment/.lab/fixtures/irish-eyes-real-source-30s.json \
             "$RUNNER_TEMP/pinned_source.mp4"
+          python experiment/.lab/godot-source/fetch_pinned.py \
+            experiment/.lab/fixtures/irish-eyes-real-source-30s.json \
+            "$RUNNER_TEMP/pinned_audio.wav" audio
+      - name: Create explicitly derived 560-square source with verified WAV (for CI only)
+        shell: bash
+        run: |
+          set -euo pipefail
+          ffmpeg -hide_banner -loglevel error -nostdin -y \
+            -stream_loop -1 -i "$RUNNER_TEMP/pinned_source.mp4" \
+            -i "$RUNNER_TEMP/pinned_audio.wav" \
+            -vf "scale=560:560:force_original_aspect_ratio=decrease,pad=560:560:(ow-iw)/2:(oh-ih)/2:color=black,fps=24" \
+            -c:v libx264 -preset veryfast -crf 18 -pix_fmt yuv420p \
+            -c:a aac -b:a 192k -t 6.041667 \
+            -movflags +faststart "$RUNNER_TEMP/derived_560_square.mp4"
+          sha256sum "$RUNNER_TEMP/derived_560_square.mp4" > "$RUNNER_TEMP/derived_sha256.txt"
       - name: Godot Movie Maker -- real rendered overlay frames
         shell: bash
         run: |
@@ -66,17 +81,17 @@ jobs:
           xvfb-run -a -s "-screen 0 1024x768x24" "$GODOT_BIN" \
             --path "$PROJ" --rendering-method gl_compatibility \
             --write-movie "$RUNNER_TEMP/godot-source/overlay/overlay.png" \
-            --fixed-fps 24 --quit-after 144 "res://atmosphere.tscn"
+            --fixed-fps 24 --quit-after 145 "res://atmosphere.tscn"
       - name: Source-faithful composition with actual approved FXExecutor
         shell: bash
         run: |
           set -euo pipefail
-          SOURCE_HASH="$(python -c 'import json;print(json.load(open("experiment/.lab/fixtures/irish-eyes-real-source-30s.json"))["shots"][0]["source"]["sha256"])')"
+          SOURCE_HASH="$(sha256sum "$RUNNER_TEMP/derived_560_square.mp4" | cut -d' ' -f1)"
           python experiment/.lab/godot-source/composite.py \
             --repo-root experiment \
-            --source "$RUNNER_TEMP/pinned_source.mp4" \
+            --source "$RUNNER_TEMP/derived_560_square.mp4" \
             --sha256 "$SOURCE_HASH" \
-            --label "repo-pinned-Irish-Eyes-source" \
+            --label "derived-square-from-SHA-pinned-Irish-Eyes-source-and-WAV" \
             --overlay "$RUNNER_TEMP/godot-source/overlay" \
             --output "$RUNNER_TEMP/godot-source/composite"
       - name: Publish strictly technical samples, original hashes and movie
@@ -90,6 +105,12 @@ jobs:
             ${{ runner.temp }}/godot-source/composite/before_*.png
             ${{ runner.temp }}/godot-source/composite/after_*.png
             ${{ runner.temp }}/godot-source/overlay/*.png
+            experiment/.lab/godot-source/composite.py
+            experiment/.lab/godot-source/README.md
+            experiment/general/reusable/fx_v2/executor.py
+            experiment/general/reusable/fx_v2/runtime.py
+            experiment/general/reusable/fx_v2/registry.json
+            ${{ runner.temp }}/derived_sha256.txt
           retention-days: 7
           if-no-files-found: warn
       - name: Technical classification

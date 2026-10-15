@@ -6,7 +6,7 @@ import sys
 import urllib.request
 from pathlib import Path
 manifest=json.loads(Path(sys.argv[1]).read_text())
-source=manifest["shots"][0]["source"]
+source=manifest["audio"] if len(sys.argv)>3 and sys.argv[3]=="audio" else manifest["shots"][0]["source"]
 target=Path(sys.argv[2])
 target.parent.mkdir(parents=True,exist_ok=True)
 request=urllib.request.Request(source["url"],headers={"User-Agent":"AIVideoEdit-Godot-Lab-Proof"})
