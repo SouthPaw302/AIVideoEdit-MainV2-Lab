@@ -45,7 +45,7 @@ jobs:
       - name: Real full-song ONNX inference (no fixture, no DSP fallback)
         run: |
           set -euo pipefail
-          python scripts/la_luna_onnx_song_scan.py
+          PYTHONPATH="$PWD" python scripts/la_luna_onnx_song_scan.py
       - name: GitHub run summary
         if: always()
         run: |
