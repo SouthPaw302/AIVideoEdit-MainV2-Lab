@@ -1,0 +1,615 @@
+{
+  "schema": "aivideoedit.la-luna-full-master-50-source-preflight.v1",
+  "source_original_WAV_sha256": "1a4bffef36930b504423d2653faff4cc5bfd9a15d44bdcf1083b27fbb0db1c10",
+  "source_original_WAV_duration_s": 321.16,
+  "total_accepted_batch_scene_proof_clips": 50,
+  "total_four_sec_preview_seconds": 200.0,
+  "full_song_seconds": 321.16,
+  "duration_gap_to_fill_by_music_director_edit_seconds": 121.16,
+  "shot_timing_status": "MASTER_NOT_TIMED_WITH_LYRIC_LINE_AND_ONNX_BEATS",
+  "batch_preview_status": "PASS_SOURCE_50_OF_50_HASHED_CODEC_FRAME_AND_FPS_VERIFIED",
+  "may_assemble_master_candidate": true,
+  "may_release_film": false,
+  "shots": [
+    {
+      "shot_id": "B01-S01",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "original_entry": "clips/B01-S01_RC8_DIRECTOR_MOVING_4s.mp4",
+      "sha256": "e0156c760bdf9447ab607e19721304d4b9ca9f89c7c0bd648ba12b5b05e17a34",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B01-S02",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "original_entry": "clips/B01-S02_RC8_DIRECTOR_MOVING_4s.mp4",
+      "sha256": "23591d4e7e34ca94c0a89991ba9e6a9694df240506b25ea7a861ee2ad685f097",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B01-S03",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "original_entry": "clips/B01-S03_RC8_DIRECTOR_MOVING_4s.mp4",
+      "sha256": "21a24d452a967141dfbfc6449130c4f8492a751b609c92338cf29347097b826b",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B01-S04",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "original_entry": "clips/B01-S04_RC8_DIRECTOR_MOVING_4s.mp4",
+      "sha256": "7ffc6038d4e66c3d9f6139951c488ebd02f12f0cac23b14f72f5b84ad40120cb",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B01-S05",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "original_entry": "clips/B01-S05_RC8_DIRECTOR_MOVING_4s.mp4",
+      "sha256": "6c69ff266fc16e5d207e4e3cbe693239da76de72e8d2b7e51d6745a909697b0e",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B01-S06",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "original_entry": "clips/B01-S06_RC8_DIRECTOR_MOVING_4s.mp4",
+      "sha256": "bb25bba54c3f43bcc9db54b8f41c64797ee74a20a1128bd5f689ca0c2ec63bad",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B01-S07",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "original_entry": "clips/B01-S07_RC8_DIRECTOR_MOVING_4s.mp4",
+      "sha256": "fd13c62448e45e783db47802534bfa292bc93eb820243d908cb64104d0c254db",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B01-S08",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "original_entry": "clips/B01-S08_RC8_DIRECTOR_MOVING_4s.mp4",
+      "sha256": "7b8d5489c2470ebcf4a1a45d165b48a6614b7bf6f6b5c4cd938a9b5f37b26f0f",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B01-S09",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "original_entry": "clips/B01-S09_RC8_DIRECTOR_MOVING_4s.mp4",
+      "sha256": "2001e884435f9c8159ac912cf004a0da814e285892f0eaa6d6d024b371a6ee2f",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B01-S10",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "original_entry": "clips/B01-S10_RC8_DIRECTOR_MOVING_4s.mp4",
+      "sha256": "efed5954a5b2a3d3524f9ab034fb88e6a4651e40fa3f71a5b6b4aa88451ae130",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B02-S01",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "original_entry": "clips/B02-S01_RC8_DIRECTOR_MOVING_4s.mp4",
+      "sha256": "488e962cb4525729485ebfb89a83128542d76a1c94c33ac9ac2a7d2f8adc0f6a",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B02-S02",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "original_entry": "clips/B02-S02_RC8_DIRECTOR_MOVING_4s.mp4",
+      "sha256": "e1b886c7091ce8efb2842d5b3e3f737535ca2e59cef2acc27a6ec321936d6d72",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B02-S03",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "original_entry": "clips/B02-S03_RC8_DIRECTOR_MOVING_4s.mp4",
+      "sha256": "0b572bf526193dd90f0849965282bd8c9f13361ede62be6b5bb6165bb1cc3903",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B02-S04",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "original_entry": "clips/B02-S04_RC8_DIRECTOR_MOVING_4s.mp4",
+      "sha256": "cd7a12e264e69b77c4797c195434b3a721b4ae6190b6dbfc17d9170bd30c3b20",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B02-S05",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "original_entry": "clips/B02-S05_RC8_DIRECTOR_MOVING_4s.mp4",
+      "sha256": "0ea4e3219e801748695011ee4757555f3a3f4961caea734572de000d38004014",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B02-S06",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "original_entry": "clips/B02-S06_RC8_DIRECTOR_MOVING_4s.mp4",
+      "sha256": "a3ac4e19bbb5d8c57cb2b1300f75ce9fecd60d3bb897df3ed50eef6e698b4124",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B02-S07",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "original_entry": "clips/B02-S07_RC8_DIRECTOR_MOVING_4s.mp4",
+      "sha256": "573c351bd847cce03731472804899d819d292d5dd337b4789544b8efadba3352",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B02-S08",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "original_entry": "clips/B02-S08_RC8_DIRECTOR_MOVING_4s.mp4",
+      "sha256": "93a3e8213802a992c2e5d9603a3c4d6be000e6fbaf493548e5c7b8fa29a7fb82",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B02-S09",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "original_entry": "clips/B02-S09_RC8_DIRECTOR_MOVING_4s.mp4",
+      "sha256": "63ff4bd77c3b5c4c866690d8c4b332e2f9b1b92d262284dc5330fcdfa86b92d3",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B02-S10",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "original_entry": "clips/B02-S10_RC8_DIRECTOR_MOVING_4s.mp4",
+      "sha256": "2d46bfd5dfcda2a7974b211b7d3f277dba8148dda4b4eaf356df505811c88088",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B03-S01",
+      "source_archive": "La_Luna_B03_RC2_10_Moving_Shots_and_Repro_Scripts.zip",
+      "original_entry": "moving_shots/B03-S01_RC2_DIRECTOR_PROOF_4s.mp4",
+      "sha256": "d8021b930a58029f91c22accf5c1495c450d30712b8d8f7ed8a881322eed3a3c",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B03-S02",
+      "source_archive": "La_Luna_B03_RC2_10_Moving_Shots_and_Repro_Scripts.zip",
+      "original_entry": "moving_shots/B03-S02_RC2_DIRECTOR_PROOF_4s.mp4",
+      "sha256": "dfe0aff86441e60b610712d444495daf4fa3903cd784297acea0f398dd8f11a6",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B03-S03",
+      "source_archive": "La_Luna_B03_RC2_10_Moving_Shots_and_Repro_Scripts.zip",
+      "original_entry": "moving_shots/B03-S03_RC2_DIRECTOR_PROOF_4s.mp4",
+      "sha256": "11314c2fc60e3bdbebf48d6da7f1c70078f7bde8800f1fdbbc98b7ad3d352b95",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B03-S04",
+      "source_archive": "La_Luna_B03_RC2_10_Moving_Shots_and_Repro_Scripts.zip",
+      "original_entry": "moving_shots/B03-S04_RC2_DIRECTOR_PROOF_4s.mp4",
+      "sha256": "8b8a61ec1f8ba7d53d66f5b46a95e95cc23c6b32c01a9dfb533246daabe48f17",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B03-S05",
+      "source_archive": "La_Luna_B03_RC2_10_Moving_Shots_and_Repro_Scripts.zip",
+      "original_entry": "moving_shots/B03-S05_RC2_DIRECTOR_PROOF_4s.mp4",
+      "sha256": "ac1bd474302203b34fbc3ab819a7381ce4b9dfa3a47c8fa633f74037eabbd674",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B03-S06",
+      "source_archive": "La_Luna_B03_RC2_10_Moving_Shots_and_Repro_Scripts.zip",
+      "original_entry": "moving_shots/B03-S06_RC2_DIRECTOR_PROOF_4s.mp4",
+      "sha256": "00a1fd7362fb760b3c12da329e7b8bc9357456ec232e4a3f83a61f9f533adc05",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B03-S07",
+      "source_archive": "La_Luna_B03_RC2_10_Moving_Shots_and_Repro_Scripts.zip",
+      "original_entry": "moving_shots/B03-S07_RC2_DIRECTOR_PROOF_4s.mp4",
+      "sha256": "6b520d92c6bb7ac6f3dc0d03d07a4d65275d79cb2e60cf7bc81a75103a8d9a1e",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B03-S08",
+      "source_archive": "La_Luna_B03_RC2_10_Moving_Shots_and_Repro_Scripts.zip",
+      "original_entry": "moving_shots/B03-S08_RC2_DIRECTOR_PROOF_4s.mp4",
+      "sha256": "7ddf37380f7044a560e9060d513b22b48fe6256f981337fe1ffe0eb5c8cd4450",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B03-S09",
+      "source_archive": "La_Luna_B03_RC2_10_Moving_Shots_and_Repro_Scripts.zip",
+      "original_entry": "moving_shots/B03-S09_RC2_DIRECTOR_PROOF_4s.mp4",
+      "sha256": "3a8852a330a87de718c81e022e51ecd4061b01327970d09a6e4e702c8ed042bc",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B03-S10",
+      "source_archive": "La_Luna_B03_RC2_10_Moving_Shots_and_Repro_Scripts.zip",
+      "original_entry": "moving_shots/B03-S10_RC2_DIRECTOR_PROOF_4s.mp4",
+      "sha256": "3034fbbc2c60892ac8c10e497ee9367002a713b3b8909cceb055b318a6038cfc",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B04-S01",
+      "source_archive": "La_Luna_B04_RC2_10_Moving_Shots_and_Director_Receipts.zip",
+      "original_entry": "moving_shots/B04-S01_DIRECTOR_MOVING_PROOF_4s.mp4",
+      "sha256": "48a32ec51df49d61d14aa4be07447e159c58ce29dd10d66cc88286e8df6d0b9e",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B04-S02",
+      "source_archive": "La_Luna_B04_RC2_10_Moving_Shots_and_Director_Receipts.zip",
+      "original_entry": "moving_shots/B04-S02_DIRECTOR_MOVING_PROOF_4s.mp4",
+      "sha256": "a641890347b94982539475307d1998c89cf2cecf3cc95821656d27c1dacf3106",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B04-S03",
+      "source_archive": "La_Luna_B04_RC2_10_Moving_Shots_and_Director_Receipts.zip",
+      "original_entry": "moving_shots/B04-S03_DIRECTOR_MOVING_PROOF_4s.mp4",
+      "sha256": "431752b9fcd008796bbcf46bff61e00f74aa4ef202fc88732ea341d6adf6a673",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B04-S04",
+      "source_archive": "La_Luna_B04_RC2_10_Moving_Shots_and_Director_Receipts.zip",
+      "original_entry": "moving_shots/B04-S04_DIRECTOR_MOVING_PROOF_4s.mp4",
+      "sha256": "75880736096f62c92411333a2f3c390af101713d9dbe49c3fd4fe63068b9ca58",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B04-S05",
+      "source_archive": "La_Luna_B04_RC2_10_Moving_Shots_and_Director_Receipts.zip",
+      "original_entry": "moving_shots/B04-S05_DIRECTOR_MOVING_PROOF_4s.mp4",
+      "sha256": "38ed958c25e397acd18f1f03dfe76cec201efeb7345df99e9cd71c18335a3e1c",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B04-S06",
+      "source_archive": "La_Luna_B04_RC2_10_Moving_Shots_and_Director_Receipts.zip",
+      "original_entry": "moving_shots/B04-S06_DIRECTOR_MOVING_PROOF_4s.mp4",
+      "sha256": "c8eb833e4a1f07497d393f45a339eb8497fbac9e5b03fef41c3680c8ebd30351",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B04-S07",
+      "source_archive": "La_Luna_B04_RC2_10_Moving_Shots_and_Director_Receipts.zip",
+      "original_entry": "moving_shots/B04-S07_DIRECTOR_MOVING_PROOF_4s.mp4",
+      "sha256": "a8fee7392c569ddb2397e683fb206255744e6536316ae62625601d86519f2557",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B04-S08",
+      "source_archive": "La_Luna_B04_RC2_10_Moving_Shots_and_Director_Receipts.zip",
+      "original_entry": "moving_shots/B04-S08_DIRECTOR_MOVING_PROOF_4s.mp4",
+      "sha256": "bda3015b89d0f17d199f86f090d43101a43208dc104e24b53dcca097e41919be",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B04-S09",
+      "source_archive": "La_Luna_B04_RC2_10_Moving_Shots_and_Director_Receipts.zip",
+      "original_entry": "moving_shots/B04-S09_DIRECTOR_MOVING_PROOF_4s.mp4",
+      "sha256": "353053e9efecddef6470070ce31da52b70c82de0b13ece55767cfbc9ce1325e8",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B04-S10",
+      "source_archive": "La_Luna_B04_RC2_10_Moving_Shots_and_Director_Receipts.zip",
+      "original_entry": "moving_shots/B04-S10_DIRECTOR_MOVING_PROOF_4s.mp4",
+      "sha256": "c88f2a28e9bcb20d1480bb55f9de6ad9456b1176db992b1dcef1ba25b98127c2",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B05-S01",
+      "source_archive": "La_Luna_B05_RC1_10_Moving_Shots_Provenance_and_Scripts.zip",
+      "original_entry": "B05-S01_MOVING_4s.mp4",
+      "sha256": "05cf0f0f8f07fd40b6120d19dd3b78cf8959d95968155beac4943a656e79e227",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B05-S02",
+      "source_archive": "La_Luna_B05_RC1_10_Moving_Shots_Provenance_and_Scripts.zip",
+      "original_entry": "B05-S02_MOVING_4s.mp4",
+      "sha256": "ff10f0d53d521bf2429a7fab902b7e5826b15bb674770d96d399627264837084",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B05-S03",
+      "source_archive": "La_Luna_B05_RC1_10_Moving_Shots_Provenance_and_Scripts.zip",
+      "original_entry": "B05-S03_MOVING_4s.mp4",
+      "sha256": "0b47e9d0720a721fae963f508bdf687928ad16892628ddf0d9c3436005da408b",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B05-S04",
+      "source_archive": "La_Luna_B05_RC1_10_Moving_Shots_Provenance_and_Scripts.zip",
+      "original_entry": "B05-S04_MOVING_4s.mp4",
+      "sha256": "49a8fb5ef76feba0bb04c54cdbd6e53c28843c3bfda277cd5e0794f79634a95b",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B05-S05",
+      "source_archive": "La_Luna_B05_RC1_10_Moving_Shots_Provenance_and_Scripts.zip",
+      "original_entry": "B05-S05_MOVING_4s.mp4",
+      "sha256": "45ced15103b9f23bcd7b27b9bd00a3308cd072e7b8e8f7552840944c0ed622c8",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B05-S06",
+      "source_archive": "La_Luna_B05_RC1_10_Moving_Shots_Provenance_and_Scripts.zip",
+      "original_entry": "B05-S06_MOVING_4s.mp4",
+      "sha256": "889a4b0bb098c05e0a2b31df4182a5141c18841eab94ad196cc4e604f90f0ab4",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B05-S07",
+      "source_archive": "La_Luna_B05_RC1_10_Moving_Shots_Provenance_and_Scripts.zip",
+      "original_entry": "B05-S07_MOVING_4s.mp4",
+      "sha256": "0c1c32fe8cc7f44c8ec9252c76487673ba44c88d0323c8c0c41f1dffa8b0a605",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B05-S08",
+      "source_archive": "La_Luna_B05_RC1_10_Moving_Shots_Provenance_and_Scripts.zip",
+      "original_entry": "B05-S08_MOVING_4s.mp4",
+      "sha256": "176ec94fe3bf6cfbaa62d2fd7cda3d6f0aed4e6710b4e490a10ffd67157fe7f8",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B05-S09",
+      "source_archive": "La_Luna_B05_RC1_10_Moving_Shots_Provenance_and_Scripts.zip",
+      "original_entry": "B05-S09_MOVING_4s.mp4",
+      "sha256": "b93a84350bd209cb4cef58adbf37a3502859b8dd5d12d10896e5717d216f9777",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    },
+    {
+      "shot_id": "B05-S10",
+      "source_archive": "La_Luna_B05_RC1_10_Moving_Shots_Provenance_and_Scripts.zip",
+      "original_entry": "B05-S10_MOVING_4s.mp4",
+      "sha256": "6d03acf3645374833c54121862a4f314c2ca332b2963d4ec48ee9aed963a9023",
+      "frames": 96,
+      "fps": 24,
+      "resolution": [
+        960,
+        540
+      ]
+    }
+  ]
+}
