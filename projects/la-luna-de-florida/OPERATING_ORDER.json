@@ -58,8 +58,8 @@
     "forbidden_changes": [],
     "source_replacement_authorized": false
   },
-  "current_user_direction": "Full Director theatrical film from La Luna 50-shot storyboard with heavily reused Lab main canonical FX stack. User authorized B01/B02 Director-scene stage selection at RC8, then explicitly requested B03. Keep B01/B02 immutable; B03 shot-level source and FX provenance mandatory, do not fake absent B03-S10 original. No other movie's media or canon may be imported.",
-  "exact_next_action": "B03 native current-Lab-main FXRuntime SOURCE & LIGHT GATE PASSED (GitHub run #38700642135) using 9 original SHA-verified stills, 18 A/B loops archived on Drive; B03-S10 original remains MISSING and RC2 source-derived road-memory/couple scene must not be promoted as original. Next Director shot review/semantic character FX, especially S04 rap and S05 boots; do not mislabel workprint 40s as final music cue, and preserve all B01/B02 work. B04/B05 not yet started; master film and release unapproved.",
+  "current_user_direction": "Director's full five-act La Luna film, original stills and canonical Lab main FX first. As of 2026-10-15 the user expressly permits B03 to have NINE independent source stills, while the tenth storyboard intent (B03-S10) uses an identified source-derived S07→S09 cinematic transition. Preserve ten shot intents, the provenance of the missing original, and all existing B01/B02/B03 proofs. Do not blend other production media.",
+  "exact_next_action": "B03 DIRECTOR BATCH STAGE SELECTED with 9 exact-original stills, 18 native Lab-main A/B Light FX proofs PASS (run 38700642135) and 10 RC2 moving-scene shot positions (S10 derived selected), see B03_DIRECTOR_BATCH_DECISION.json. NEXT B04: verify the pre-existing ten B04 originals and SHA receipts from Drive, storyboard-match, then native Lab-main A/B FX and separate moving-character FX proofs/Director review. Do not redo B03 or demand an unnecessary new S10 still; no premature Master FX or 5:21 film release.",
   "updated_at_utc": "2026-10-13T03:50:00Z",
   "director_supervision": {
     "required": true,
@@ -90,9 +90,9 @@
   },
   "movement_current_work": {
     "active_batches": [
-      "B03"
+      "B04"
     ],
-    "status": "B03_RC2_10_MOVING_SCENES_TECHNICAL_PASS_PLUS_NATIVE_LIGHT_FX_18_AB_PASS__DIRECTOR_SEMANTIC_MOTION_GATE_OPEN",
+    "status": "B03_DIRECTOR_MOVING_SCENE_BATCH_STAGE_SELECTED__NEXT_B04_SOURCE_FX_PREFLIGHT",
     "director_status": "B03_MOVEMENT_DIRECTOR_STATUS.json",
     "baseline_B01_B02": "RC8 Director batch-stage selection preserved",
     "B03_originals_verified": 9,
@@ -105,6 +105,13 @@
     "master_approved": false,
     "native_fx_run_id": 38700642135,
     "native_fx_artifact": "https://drive.google.com/file/d/1284TQUxZiLqYEsXHgNo26mITEQa9Fl5L/view",
-    "native_fx_technical_status": "PASS_9_SOURCES_18_VARIANTS"
+    "native_fx_technical_status": "PASS_9_SOURCES_18_VARIANTS",
+    "B03_director_stage_selected": true,
+    "B03_approved_original_count": 9,
+    "B03_S10_source_original_missing": true,
+    "B03_S10_derived_editorial_selected": true,
+    "B03_decision_file": "B03_DIRECTOR_BATCH_DECISION.json",
+    "B04_started": false,
+    "final_master_approved": false
   }
 }
