@@ -58,8 +58,8 @@
     "forbidden_changes": [],
     "source_replacement_authorized": false
   },
-  "current_user_direction": "Treat La Luna de Florida as a theatrical film, with its story following the supplied lyrics; preserve the existing workprint and Batch 01; the latest five-act/50-shot storyboard is now explicitly canon for still generation.",
-  "exact_next_action": "Generate or match B01-S01..B05-S10 clean individual full-frame stills in order, preserving previously backed-up candidates, then produce source-derived FX proofs and inspect continuity before new render.",
+  "current_user_direction": "Treat La Luna de Florida as a theatrical film, with its story following the supplied lyrics; preserve the existing workprint and Batch 01; the latest five-act/50-shot storyboard is now explicitly canon for still generation. Current additional user direction: for each batch, treat A/B environmental/light proofs as a preparation gate; create separate, identity-safe character-action proofs before final Master FX and film assembly. Existing B01/B02 light FX technical PASS is not character animation or final-film acceptance. An unnamed external film project may be studied for methods only, never imported into La Luna.",
+  "exact_next_action": "Preserve B01/B02 technical light FX PASS and archives; keep production truth/50-shot storyboard intact. Continue remaining individually verified batches. For each shot that requires semantic action, run a separate bounded Character FX gate with source/identity/temporal QC (B01/B02 still require this); for non-character shots record NOT_APPLICABLE. Complete lyric-line/shot timing against the existing full-song ONNX evidence before Master FX/assembly. Never silently transfer another project's creative or runtime state.",
   "updated_at_utc": "2026-10-13T03:50:00Z",
   "director_supervision": {
     "required": true,
@@ -75,5 +75,17 @@
     ],
     "runner_may_choose_art_direction": false,
     "technical_pass_is_creative_pass": false
+  },
+  "fx_stage_canon": {
+    "status": "CANON",
+    "path": "FX_STAGE_CANON.json",
+    "scope": "la-luna-de-florida_song_branch_only",
+    "sequence": [
+      "BATCH_LIGHT_FX",
+      "BATCH_CHARACTER_FX",
+      "MASTER_FX_AND_ASSEMBLY"
+    ],
+    "separate_gate_status_required": true,
+    "external_reference_policy": "process_learning_only"
   }
 }
