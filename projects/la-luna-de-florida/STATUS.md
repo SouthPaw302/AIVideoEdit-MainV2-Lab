@@ -1,5 +1,14 @@
 # La Luna de Florida — Status
 
+## Latest Director decision — B03 stage selected, B04 next (2026-10-15)
+
+**B03 complete for batch-level production progression.** User explicitly permits **nine original full-size stills** for B03. The original B03-S10 remains historically unrecovered, but the tenth **storyboard shot intent** is fulfilled for this stage by the Director-selected *S07 road-memory → S09 couple/reunion* moving editorial composite. **No tenth original still is required.** This modifies neither the locked 50-shot storyboard nor the source history. [Exact shot-by-shot Director decision](B03_DIRECTOR_BATCH_DECISION.json).
+
+Evidence: [B03 RC2 40s Director moving-scene cut](https://drive.google.com/file/d/1s89gO338Tb0dFx37Vco25o0cSnXuE0Qo/view), [10 moving shot proofs](https://drive.google.com/file/d/1efo2t2xX6TKclhZ1I1hBWxhX1-z-62op/view), native **18 A/B light loops/9 originals GitHub PASS** [#38700642135](https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38700642135), [runner original + FX receipts](https://drive.google.com/file/d/1284TQUxZiLqYEsXHgNo26mITEQa9Fl5L/view). RC2 encoded: 960/960 frames and zero black/0.5s freeze events. The moving cut came from the sandbox equivalent FX workflow; the native runner executed a **separate** nine-source light-FX pass. Both are preserved.
+
+Director treats B03-S04 as illustrative rap *voiceover*, **not fake lip-sync**; B03-S05 is footwear/wood cutaway, **not fake articulated stepping**. Same-film S06 musician and S09 couple motion remain available; source repetition and definitive lyrics/ONNX cue alignment will be handled with the 5:21 Master FX. **Next B04 original-still preflight, not B03 regeneration.** User release permission and complete film remain unset.
+
+
 ## B03 native Lab-main FXRunner — PASSED on exact originals (2026-10-15)
 
 [GitHub Actions #38700642135](https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38700642135) **completed/success**. Using the user-enabled public reader folder and no Drive credential copies, runner downloaded the unchanged original B03 ZIP with exact SHA256 `da7b54eef5373b2d6b4db69eac0c497e4e9443facbc8fd78db29baecbc565252`, booted **current Lab-main FXRuntime**, individually verified the nine original still hashes, and rendered 18 A/B loops (2.5s, 60 frames, 960×540, 24fps). Actual encoded video decode, original pixel protection (max outside-mask delta zero), material motion and loop-seam QC passed. Verified runner artifact ZIP CRC PASS; [download from La Luna Drive](https://drive.google.com/file/d/1284TQUxZiLqYEsXHgNo26mITEQa9Fl5L/view) SHA256 `7d2057f68f796efa1008d612f2ff37f90c980575d891d57fd4b6de8c3b76de9b` (GitHub artifact ID `11956611194`).
