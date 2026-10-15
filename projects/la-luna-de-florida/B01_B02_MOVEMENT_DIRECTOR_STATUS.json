@@ -37,7 +37,46 @@
     "black_frames": 0,
     "near_frozen_adjacent_frame_pairs": 208,
     "reason": "FX and slow camera micro-motion frequently too subtle to distinguish every adjacent encoded frame; this remains a creative quality warning",
-    "approval": "PENDING"
+    "approval": "PENDING",
+    "full_RC2_actual_export_scan": {
+      "movie_frames": 1920,
+      "duration_s": 80,
+      "video_decode": "PASS",
+      "blackdetect_events": 0,
+      "freezedetect_ge_0p5s_events": 7,
+      "time_intervals": [
+        [
+          5.291667,
+          5.791667
+        ],
+        [
+          6.041667,
+          6.625
+        ],
+        [
+          22.041667,
+          22.583333
+        ],
+        [
+          37.5,
+          38
+        ],
+        [
+          38,
+          38.666667
+        ],
+        [
+          45.458333,
+          46.083333
+        ],
+        [
+          46.083333,
+          46.666667
+        ]
+      ],
+      "conclusion": "TECHNICAL_DECODE_PASS_TEMPORAL_MOTION_REWORK_REQUIRED",
+      "caveat": "Freeze detection alone does not resolve creative choreography; material/camera motion is insufficient as actor movement."
+    }
   },
   "source_video_inserts": {
     "origin": "GEMINI_UPLOAD_952aed07_ORIGINAL_UNCUT.mp4",
@@ -65,11 +104,14 @@
     "all_20_clips_zip": "https://drive.google.com/file/d/1wC2qxvCZAPgQR0AZ9w94T9sKPVnf6NIN/view",
     "scene_motion_review_RC1": "https://drive.google.com/file/d/1pACopmFy6ZonvxFdaSQihCFXvkvzUkaP/view",
     "scene_motion_review_RC2_real_dance": "https://drive.google.com/file/d/1VTshGBSTdKKNf87PaH3wfNzLUn47AJ-x/view",
-    "RC2_hash_sha256": "not_recorded_in_repo_until_verified",
+    "RC2_hash_sha256": "885fdd7dbe66866844ad72492ac30142cb64362a85d193c59dce7c30182ce0b2",
     "RC2_frames": 1920,
     "RC2_duration_seconds": 80,
     "RC2_mode": "temporary 4s each shot in canonical order, audio first 80s of original WAV, NOT final lyric/frame-locked screenplay",
-    "gemini_derivation_receipt": "https://drive.google.com/file/d/1ipNh5TXaO2-M76vIgne0g8xG6vSizn2D/view"
+    "gemini_derivation_receipt": "https://drive.google.com/file/d/1ipNh5TXaO2-M76vIgne0g8xG6vSizn2D/view",
+    "real_Gemini_two_segments_zip": "https://drive.google.com/file/d/1uJpSg6IqNYOGuBNkYiIfriv6mg0e1_Hc/view",
+    "B01_contact": "https://drive.google.com/file/d/1qDm1u7CLpQcPJs2Kv8Gm-kWqqcQgmQIO/view",
+    "B02_contact": "https://drive.google.com/file/d/1qLLCUdvBt3Sf0ZltWIz0hgb2j-7JWFaM/view"
   },
   "shot_review": [
     {
@@ -198,7 +240,7 @@
     "canon_coverage_mismatch_nonoverlapping": 3,
     "real_Gemini_inserts_under_review": 2
   },
-  "director_disposition": "REVISIONS_REQUIRED",
+  "director_disposition": "REVISIONS_REQUIRED_NO_PREMATURE_B01_B02_CHARACTER_LOCK",
   "B01_character_gate": "OPEN",
   "B02_character_gate": "OPEN",
   "B03_B04_B05_progression_hold": true,
@@ -206,6 +248,7 @@
   "individual_source_pixels_locked": false,
   "film_release_approved": false,
   "next_actions": [
+    "Remove detected hard/near freeze in existing 4s comps using truly evolving, zero-drift internal FX/layers; do not falsely pass via global noise, random jitter, optical distortion or repeated zoom.",
     "Review RC2 at normal speed against 50-shot canon; keep current source and FX bytes immutable",
     "Finish B01 performance gaps for S02/S03/S04/S05/S06/S08 using verified same-song pose variants, independent moving-footage coverage or a specifically authorized bounded continuation; do not fake musical actions with camera zoom",
     "Repair B01-S10 source mismatch: correct night-world finale to Act 1 without text or dawn and keep existing original as rejected candidate",
