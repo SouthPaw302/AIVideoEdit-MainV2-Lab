@@ -1,0 +1,135 @@
+{
+  "schema": "aivideoedit.la-luna-master-director-source-screen.v1",
+  "project": "la-luna-de-florida",
+  "branch": "song/la-luna-de-florida",
+  "scope": "EXISTING_50_SOURCE_PROOFS_AND_SUNRISE_12S_CANDIDATE_ONLY",
+  "os_main_sha": "900e3e5749ed6fa13ad91524975a9e64661e6649",
+  "parent_master_plan_commit": "bb489760f50bb5917b96d0b49287f210503fb3cb",
+  "director_verdict": "REPAIR_REQUIRED_BEFORE_FULL_LENGTH_MASTER",
+  "master_approved": false,
+  "picture_locked": false,
+  "user_release_approved": false,
+  "auditable_media": {
+    "original_wav_sha256": "1a4bffef36930b504423d2653faff4cc5bfd9a15d44bdcf1083b27fbb0db1c10",
+    "original_wav_seconds": 321.16,
+    "rate_hz": 48000,
+    "stereo": true,
+    "source_proof_shots": 50,
+    "source_proof_frames": 4800,
+    "source_proof_sha256_matching": 50,
+    "source_proof_decode_resolution": "960x540",
+    "source_proof_fps": 24,
+    "native_fx_variants_verified_sha256": 98,
+    "native_fx_distinct_original_still_positions": 49,
+    "per_act_native_variants": {
+      "B01": 20,
+      "B02": 20,
+      "B03": 18,
+      "B04": 20,
+      "B05": 20
+    },
+    "original_dance_source_sha256": "3d05e8dc50fad543d063a5356c959999d9fc33f0906c4ad45de01dcecaa99c3f",
+    "dance_source_seconds": 4.5,
+    "original_musician_source_sha256": "5e1c2b35ce9fbbe60d45a6c55766a1fd876644c39ae5e7b97218ab087cae1cc5",
+    "musician_source_seconds": 10,
+    "original_dance_harbor_uncut_sha256": "e9335abaad0d9ee7d62131c66eab1d6626c53e3b035b4bb1b9a0362477a102c2",
+    "source_first_pass_repeated_composition_candidate_pairs": 58,
+    "cross_act_repeated_composition_candidate_pairs": 52,
+    "screening_flags_by_shot_count": {
+      "near_identical_adjacent": 26,
+      "low_motion": 20,
+      "large_discontinuity": 1,
+      "duplicate_downsampled_frame": 2
+    },
+    "total_shots_with_technical_motion_screen_flags": 28,
+    "dawn_12s_proof_sha256": "08dc0eea01accbe9dff26f34449380e71175dee924dfd3aac32bb779b0226ab6",
+    "dawn_12s_frames": 288,
+    "decodes_full": true,
+    "black_events": 0,
+    "freeze_events_over_0p5s": 0,
+    "dawn_proof_original_wav_excerpt_start_seconds": 309.16,
+    "dawn_proof_aac_to_original_pcm_8k_mono_correlation": 0.9997116
+  },
+  "d01_inventory": "PASS_50_PROOFS_98_NATIVE_LOOPS_AND_ORIGINAL_SAME_FILM_FOOTAGE_INDEXED",
+  "d02_hashes": "PASS_HASHED_50_PROOF_MP4S_98_FX_LOOP_MP4S_AND_ORIGINAL_WAV",
+  "d03_source_fidelity": "ISSUE_APPROVED_SOURCE_SHOTS_4S_EACH_ONLY_200S_VS_321P16S_MASTER",
+  "d04_semantic_motion": "REPAIR_REQUIRED_REAL_DANCE_MUSICIAN_SOURCE_REUSED_ACROSS_ACTS_AND_NOT_EXTENDABLE_BY_CAMERA",
+  "d05_effects": "PARTIAL_NATIVE_PER_BATCH_EFFECTS_VERIFIED_SUNRISE_S08_MATERIAL_COMPOSITE_MEASURED_MASTER_WIDE_FX_NOT_DONE",
+  "d06_music": "PARTIAL_WAV_AND_ONNX_SHA_PASS_LAST12S_PCM_WINDOW_MATCH_BUT_FULL_LYRIC_CUES_UNVERIFIED",
+  "d07_full_film_watch": "NOT_DONE_NO_FULL_LENGTH_7708_FRAME_CANDIDATE_EXISTS",
+  "d08_baseline_comparison": "EXISTING_BATCH_RC8_RC2_RC1_PRESERVED_NO_LOCKED_FULL_FILM_BASELINE",
+  "d09_title_outro": "PARTIAL_APPROVED_SUNRISE_SOURCE_PREVIEW_PRESENT_FINAL_LYRICS_TIMING_UNVERIFIED",
+  "d10_actual_master_link": "NOT_DONE_NO_PLAYABLE_321S_MASTER",
+  "d11_archive_caveat": "PASS_SOURCE_DRIVE_ARCHIVES_AND_GITHUB_BRANCH_REMAIN_UNMODIFIED; MASTER_CANDIDATE_NOT_UPLOADED",
+  "director_findings": [
+    {
+      "id": "D-R01",
+      "severity": "HIGH",
+      "shots": [
+        "B01-S07",
+        "B02-S06",
+        "B02-S09",
+        "B03-S09",
+        "B04-S10",
+        "B05-S02"
+      ],
+      "finding": "Almost identical dance poses and gestures recur through separate acts; carve truly distinct footage windows/cutaways, do not loop 4s source to 7-10s"
+    },
+    {
+      "id": "D-R02",
+      "severity": "HIGH",
+      "shots": [
+        "B03-S06",
+        "B04-S01",
+        "B04-S07",
+        "B05-S04"
+      ],
+      "finding": "One original ~10s violin/guitar performance source reused for multiple extended act moments; unique timing/motion impossible without new coverage or bounded legitimate continuation"
+    },
+    {
+      "id": "D-R03",
+      "severity": "MEDIUM",
+      "shots": [
+        "B01-S10",
+        "B02-S01",
+        "B05-S05"
+      ],
+      "finding": "Tavern dock image nearly repeats at act entry and nighttime callback; recut framing and scene action to advance geography"
+    },
+    {
+      "id": "D-R04",
+      "severity": "HIGH",
+      "shots": [
+        "B05-S08",
+        "B05-S09",
+        "B05-S10"
+      ],
+      "finding": "12s sunrise proof technically decodes and WAV excerpt matches, but 4s-per-shot candidate is not yet a lyric verified cinematic finale; cannot pass creative gate"
+    },
+    {
+      "id": "D-R05",
+      "severity": "HIGH",
+      "shots": [
+        "B01-S01"
+      ],
+      "finding": "Opening needs 280 frames of night panorama, original movie source only 96 frames; protect vocal-scales panoramic framing, do not use original full-frame still showing cropped actors"
+    },
+    {
+      "id": "D-R06",
+      "severity": "HIGH",
+      "shots": [
+        "B03-S07",
+        "B03-S10"
+      ],
+      "finding": "Warm mountain image is road memory, never current Miami sunrise; B03-S10 explicitly derived from S07 and S09"
+    }
+  ],
+  "blocking_gates": [
+    "verified_vocal_section_and_line_cues",
+    "nonrepetitive_authorized_2910_new_frame_coverage",
+    "representative_5_act_Master_FX_proofs_artistically_checked",
+    "stageable_SHA_verified_canonical_manifest",
+    "normal_speed_321s_watch_and_full_director_scan"
+  ],
+  "phase_note": "This is a source/representative proof Director screening, NOT an assertion of full-film Director watch or final release."
+}
