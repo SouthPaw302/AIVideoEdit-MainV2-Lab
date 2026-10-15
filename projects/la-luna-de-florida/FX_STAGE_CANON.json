@@ -1,0 +1,178 @@
+{
+  "schema": "aivideoedit.la-luna-fx-stage-canon.v1",
+  "production_id": "la-luna-de-florida",
+  "branch": "song/la-luna-de-florida",
+  "status": "CANON_BY_EXPLICIT_USER_DIRECTION",
+  "scope": "this_song_branch_only",
+  "authoritative_inputs": {
+    "storyboard": {
+      "path": "STORYBOARD_CANON.json",
+      "image_sha256": "05b232452eebce56fb9c047a0f481a19e04cf2d13e364bee30255dd27c88703a",
+      "acts": 5,
+      "ordered_shots": 50,
+      "locked": true,
+      "authority": "user_approved_visual_direction_only"
+    },
+    "audio": {
+      "file": "La luna de Florida.wav",
+      "sha256": "1a4bffef36930b504423d2653faff4cc5bfd9a15d44bdcf1083b27fbb0db1c10",
+      "preserve_original": true
+    },
+    "lyrics": {
+      "path": "LYRICS.md",
+      "source_authority": "song_lyrics"
+    },
+    "script": {
+      "human_path": "SCRIPT.md",
+      "machine_path": "SCRIPT.json",
+      "frame_timing_status": "NOT_LOCKED",
+      "rule": "Do not claim lyric-line timing, final shot timings or performance synchronization until independently verified against audio and the 50-shot storyboard."
+    },
+    "music": {
+      "analysis_path": "MUSIC_ANALYSIS.json",
+      "engine": "Beat This! ONNX",
+      "run_id": 38680169728,
+      "analysis_status": "BEAT_DOWNBEAT_PASS",
+      "tempo_bpm": 93.75,
+      "beat_count": 510,
+      "downbeat_count": 140,
+      "interpretation": "evidence_only_not_automatic_lyric_alignment"
+    }
+  },
+  "batch_structure": {
+    "batch_ids": [
+      "B01",
+      "B02",
+      "B03",
+      "B04",
+      "B05"
+    ],
+    "shots_per_batch": 10,
+    "original_still_policy": "Preserve originals and SHA-256 provenance; canonical storyboard cells are direction references, not finished production stills. Never silently promote candidate stills or contact-sheet crops."
+  },
+  "stages": [
+    {
+      "id": "BATCH_LIGHT_FX",
+      "execution_scope": "each_batch_each_eligible_still",
+      "purpose": "Prepare source-preserving localized water, atmospheric, reflections and motivated practical-light motion; A/B variants for later composition.",
+      "inputs": [
+        "source_still_and_hash",
+        "per_shot_protection_mask",
+        "storyboard_shot_intent",
+        "current_main_approved_fx_runtime"
+      ],
+      "outputs": [
+        "originals_unchanged",
+        "per_shot_light_fx_stills",
+        "per_shot_A_B_short_motion_proofs",
+        "source_and_variant_hash_receipts",
+        "temporal_and_protected_region_QC"
+      ],
+      "pass_rule": "Light FX technical PASS requires actual rendered nonzero intended material movement, protected-ROI integrity, usable loop seam and verified hashes. Do not demand performer or articulated character movement at this gate.",
+      "cannot_claim": [
+        "individual_source_still_approved",
+        "character_animation_complete",
+        "master_fx_locked",
+        "finished_film_approved"
+      ]
+    },
+    {
+      "id": "BATCH_CHARACTER_FX",
+      "execution_scope": "each_batch_per_shot_when_semantic_action_required",
+      "purpose": "Produce genuine articulated human, costume, prop and instrument action before master assembly; use a distinct versioned pass, not a rewrite of light FX.",
+      "inputs": [
+        "storyboard_shot_intent",
+        "identity_and_zero_drift_anchors",
+        "source_still_or_separately_authorized_moving_source",
+        "bounded_action_envelope",
+        "target_timing_guidance"
+      ],
+      "outputs": [
+        "separate_character_animation_clips",
+        "character_action_and_identity_QC",
+        "source_start_frame_and_clip_hashes",
+        "shot_specific_acceptance_or_reasoned_NOT_APPLICABLE"
+      ],
+      "pass_rule": "Show real semantically correct movement—dance, walking, faces, hands, instruments, clothing as the shot requires—while preserving identity, geography, anatomy and continuity. Camera-only parallax or environmental movement is not a substitute. A no-character shot may record NOT_APPLICABLE with Director reasoning.",
+      "cannot_claim": [
+        "light_fx_failure_due_to_absent_character_action",
+        "source_video_authorized_by_mere_presence",
+        "terminal_frames_auto_canonical",
+        "final_film_approved"
+      ]
+    },
+    {
+      "id": "MASTER_FX_AND_ASSEMBLY",
+      "execution_scope": "complete_film_after_sufficient_verified_batch_shots",
+      "purpose": "Composite selected, inspected light and character passes with song, lyrics and script; direct cinematic pacing, motion continuity, grade and sound/image sync.",
+      "inputs": [
+        "verified_source_and_variants",
+        "reviewed_character_motion_or_reasoned_not_applicable",
+        "completed_frame_followable_script",
+        "ONNX_beats_downbeats_and_energy_evidence",
+        "verified_lyric_section_cue_alignment",
+        "canonical_storyboard"
+      ],
+      "outputs": [
+        "full_film_candidate",
+        "FX_application_and_continuity_proofs",
+        "source_to_export_Director_scan",
+        "final_render_QC",
+        "separate_human_release_gate"
+      ],
+      "pass_rule": "Master FX synchronizes motion/edit events using the music evidence and independently verified lyric cues; reviews identity, performers, continuity, edit rhythm, complete source-audio integrity and actual final export.",
+      "cannot_claim": [
+        "finished_film_from_runner_success_only",
+        "music_model_automatically_knows_lyric_times",
+        "unapproved_media_becomes_canon"
+      ]
+    }
+  ],
+  "handoff_and_approval": {
+    "per_batch_decision_record": "Record per-stage technical status, artistic review, source provenance, output hashes and Drive/archive locators separately for each batch; never combine Light FX PASS with Character FX or Master FX acceptance.",
+    "source_isolation": "Do not modify original stills, WAV, board or already archived A/B light FX proofs when making Character FX candidates.",
+    "approval_scope": "User approval of storyboard or FX process does not imply approval of every still, animated shot, complete film or release."
+  },
+  "verified_baseline_at_policy_creation": {
+    "B01": {
+      "light_fx": "TECHNICAL_PASS",
+      "run_id": 38675807521,
+      "variants": 20,
+      "character_fx": "NOT_COMPLETED_AS_SEPARATE_BATCH_GATE",
+      "master_fx": "NOT_COMPLETED",
+      "human_artistic_acceptance": false
+    },
+    "B02": {
+      "light_fx": "TECHNICAL_PASS",
+      "run_id": 38673490212,
+      "variants": 20,
+      "character_fx": "NOT_COMPLETED_AS_SEPARATE_BATCH_GATE",
+      "master_fx": "NOT_COMPLETED",
+      "human_artistic_acceptance": false
+    },
+    "B03_B04_B05": {
+      "light_fx": "NOT_DECLARED_COMPLETE_BY_THIS_POLICY",
+      "character_fx": "NOT_DECLARED_COMPLETE_BY_THIS_POLICY",
+      "master_fx": "NOT_COMPLETED"
+    }
+  },
+  "external_film_reference_boundary": {
+    "permission": "A separate movie project may be studied only after user identifies it; process_learning_only.",
+    "permitted": [
+      "read_agent_workflow_and_handoff",
+      "analyze_runner_use_and_evidence_gates",
+      "summarize_reusable_production_lessons_with_source_attribution"
+    ],
+    "forbidden": [
+      "import_its_story_or_visual_canon",
+      "import_characters_costumes_assets_or_media",
+      "reuse_its_project_state_or_hidden_assumptions",
+      "copy_or_execute_its_workflow_in_this_branch_without_explicit_user_approval",
+      "alter_external_repository",
+      "change_main_or_other_song_branches"
+    ],
+    "promotion_rule": "If a method looks useful, propose an independent La Luna-specific adaptation and require explicit user authorization before adoption or implementation; still obey current-main OS and this branch canon.",
+    "unknown_source": "NO_EXTERNAL_REPOSITORY_NAMED_YET",
+    "unrelated_branch_source_authority_unchanged": true
+  }
+}
