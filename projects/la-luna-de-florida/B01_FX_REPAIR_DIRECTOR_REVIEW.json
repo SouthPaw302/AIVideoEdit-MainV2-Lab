@@ -1,0 +1,131 @@
+{
+  "schema": "aivideoedit.la-luna-b01-director-fx-repair-review.v1",
+  "production": "la-luna-de-florida",
+  "branch": "song/la-luna-de-florida",
+  "inspection_date_utc": "2026-10-15",
+  "prior_director_review": "projects/la-luna-de-florida/B01_DIRECTOR_POST_RENDER_REVIEW.json",
+  "prior_verdict": "REPAIR_REQUIRED",
+  "repair": {
+    "run_id": 38675807521,
+    "run_url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38675807521",
+    "commit": "552011d0c771347f0db4c8d54c74b2505c8a1394",
+    "canonical_engine": "exact bootstrapped current-main FXRuntime; localized FX2-MOTION-003 water and FX2-LIGHT-023 motivated practical lighting",
+    "jobs_passed": 5,
+    "job_count": 5,
+    "source_count": 10,
+    "variant_count": 20,
+    "fx_stills_count": 20,
+    "fx_loops_count": 20,
+    "source_resolution": "1280x720",
+    "loop_resolution": "960x540",
+    "fps": 24,
+    "frames_each": 60,
+    "seconds_each": 2.5,
+    "original_source_hashes_verified": true,
+    "originals_mutated": false,
+    "ffmpeg_decode_all": "PASS",
+    "raw_frame_protection_max_pixel_delta": 0,
+    "raw_loop_seam_mean_absolute_delta": 0,
+    "active_material_mean_absolute_delta_min": 3.491,
+    "active_material_mean_absolute_delta_max": 20.9615,
+    "preserves_prior_run_id": 38458305189,
+    "artifact_ids": [
+      11946606395,
+      11945632965,
+      11946081760,
+      11946481400,
+      11946586424
+    ]
+  },
+  "archive": {
+    "drive_folder": "https://drive.google.com/drive/folders/18KPMUNy65yTEj13CyOUWqEXgzqZOnfJh",
+    "runner_archive_groups": [
+      "S01-S02",
+      "S03-S04",
+      "S05-S06",
+      "S07-S08",
+      "S09-S10"
+    ],
+    "zip_count": 5,
+    "drive_remote_file_names_and_sizes_verified": true,
+    "drive_remote_file_hash_readback_verified": false,
+    "comparison_review_archive": "https://drive.google.com/file/d/100lESlbbzV6gM23NZJuNicHE8gnF1yJ5/view",
+    "source_motion_candidates_archive": "https://drive.google.com/file/d/1HaxrXFkkHdZZuPqiRacOpdskgVClQLpo/view",
+    "continuity_candidate_archive": "https://drive.google.com/file/d/1h_igtXeKxTN0BhG1shmc0bPflWEeasre/view"
+  },
+  "director_scan": {
+    "scope": "B01 material FX repair evidence and an additional candidate continuity proof only, not complete film",
+    "actual_evidence_inspected": [
+      "10 B01 original images as contact sheet",
+      "10 old-A vs new-B mid-frames",
+      "all 20 repaired MP4s decoded and sampled frame-by-frame by software",
+      "actual 10-second unchanged user-supplied Gemini source video sampled at one-second increments",
+      "all five B01 runner proof receipts and exact output/source SHA-256 values",
+      "10-shot 25-second source/FX A/B review copy exported",
+      "separate 25-second continuity candidate assembled from source-derived video and runner FX loops"
+    ],
+    "not_verified": [
+      "normal-speed human playback of the complete 25-second review copies",
+      "entire 321.16-second film",
+      "all musical timing and actor/instrument performance continuity",
+      "individual original stills as clean accepted full-frame canon",
+      "full cinematic artistic acceptance"
+    ],
+    "observed_visual_result": "Material FX changes are localized and measurable; still-camera visual proof remains artistically restrained. People and instruments remain static in FX still-loop outputs.",
+    "accepted_scope": "technical engine, per-shot material FX evidence, protected source preservation and provenance ONLY",
+    "creative_disposition": "REPAIR_REQUIRED",
+    "fx_lock": false,
+    "source_media_canon_accepted": false,
+    "human_artistic_approval": false,
+    "film_release_approved": false,
+    "reason": "Material FX technical PASS cannot solve source montage crop issues or independent real movement of performers and instruments; comparison contact still looks visually similar. Animated subject action must come from real video or bounded generated continuation."
+  },
+  "source_derived_motion_options": {
+    "parent_clip": "https://drive.google.com/file/d/1xC18cxLZrPgdXyUn9o8jt8hEAN0WP3p9/view",
+    "original_sha256": "e9335abaad0d9ee7d62131c66eab1d6626c53e3b035b4bb1b9a0362477a102c2",
+    "original_duration_seconds": 10,
+    "original_fps": 24,
+    "source_footage_verified": "at 0-5 seconds original dancing couple matches B01 scene, at 5-10 seconds original night harbor yacht shot",
+    "exact_derivations": [
+      {
+        "shot_id": "B01-S03",
+        "source_range_seconds": [
+          0,
+          2.5
+        ],
+        "purpose": "genuine articulated couple motion",
+        "candidate_sha256": "4ae0507fe8a0525c897ba1b7acd2c095151e416c8e69859f84c40df0ba197ef4"
+      },
+      {
+        "shot_id": "B01-S08",
+        "source_range_seconds": [
+          2.5,
+          5
+        ],
+        "purpose": "genuine articulated couple motion",
+        "candidate_sha256": "fbea42caed721d4f061e1c43ff336c2d54e44cac872ff1916d62647994741f61"
+      },
+      {
+        "shot_id": "B01-S09",
+        "source_range_seconds": [
+          5,
+          7.5
+        ],
+        "purpose": "authentic animated harbor coverage",
+        "candidate_sha256": "8fd456679d121145cee98429811669c70206b0c6c0315cbd9768dfeb5aaaf4fe"
+      }
+    ],
+    "candidate_status": "unapproved source-derived cutaway proofs; user original and runner outputs unchanged",
+    "candidate_continuity_review_sha256": "117941076fcea9008a23c87711562922c01a9154d991defc8efe9f82fd51aa05",
+    "candidate_duration_s": 25,
+    "candidate_resolution": "960x540",
+    "candidate_audio": "none",
+    "caveat": "sandbox editorial review proof, not Actions-built release; independent backend equivalence would be needed for promotion"
+  },
+  "next_actions": [
+    "Director screen 25-second existing review cuts at normal playback speed and record observed defects rather than claim whole-film viewing",
+    "For B01-S02/S04/S06 musician and dance performance, use verified relevant authorized video or specifically bounded Zero-Drift GENERATED_CONTINUATION, with anatomy and temporal checks; no fake instrument playing from light FX",
+    "Reconcile B01 composite crop and storyboard caption/source mismatches before picture canon",
+    "Only consider B01 FX lock when source/motion, continuity, output review and user-release gates are satisfied; do not modify B02, master WAV, accepted storyboard or old proofs"
+  ]
+}
