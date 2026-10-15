@@ -1,0 +1,97 @@
+{
+  "schema": "aivideoedit.la-luna-b03-director-batch-selection.v1",
+  "production": "la-luna-de-florida",
+  "branch": "song/la-luna-de-florida",
+  "batch": "B03",
+  "decision": "DIRECTOR_SELECT_B03_MOVING_SCENES_FOR_CONTINUED_FILM_PRODUCTION",
+  "authorization": "2026-10-15 user explicitly permits nine B03 original stills; no tenth independent still required",
+  "sources": {
+    "recovered_original_stills": 9,
+    "locked_storyboard_shot_positions": 10,
+    "source_archive": "https://drive.google.com/file/d/1oSb1FLlWJjzPccU2sywjI5gGGw2Lqv4K/view",
+    "b03_s10_original_status": "MISSING_NOT_RESTORED",
+    "b03_s10_director_selected_treatment": "Source-derived road-memory S07 -> nighttime couple S09 editorial bridge; not a tenth original; no new generated still mandated",
+    "canonical_storyboard_unchanged": true
+  },
+  "batch_fx": {
+    "native_lab_main_light_fx": "PASS",
+    "github_run": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38700642135",
+    "shot_count_with_original_sources": 9,
+    "AB_variants": 18,
+    "artifact": "https://drive.google.com/file/d/1284TQUxZiLqYEsXHgNo26mITEQa9Fl5L/view",
+    "sandbox_moving_proof_count": 10,
+    "sandbox_A_B_preview_fx_count": 20,
+    "review_cut": "https://drive.google.com/file/d/1s89gO338Tb0dFx37Vco25o0cSnXuE0Qo/view",
+    "per_shot_source_and_repro": "https://drive.google.com/file/d/1efo2t2xX6TKclhZ1I1hBWxhX1-z-62op/view",
+    "encoded_40s_QC": {
+      "frames": 960,
+      "fps": 24,
+      "black_events": 0,
+      "freezes_ge_0p5s": 0
+    },
+    "scope_note": "B03 RC2 moving scene comp was created in sandbox FX equivalent; separate native Lab-main runtime validated nine still sources and 18 A/B light loops. Do not combine these into a false claim the moving scene cut was rendered by native runner."
+  },
+  "director_shot_selection": [
+    {
+      "id": "B03-S01",
+      "verdict": "SELECT",
+      "direction": "Living old dock: water, lantern reflections, internal scene depth; no human performance needed"
+    },
+    {
+      "id": "B03-S02",
+      "verdict": "SELECT",
+      "direction": "Intimate protected road-memory portrait, quiet internal mood, bounded camera"
+    },
+    {
+      "id": "B03-S03",
+      "verdict": "SELECT",
+      "direction": "Woman waiting; protected portrait plus surrounding world motion, no false moving face claim"
+    },
+    {
+      "id": "B03-S04",
+      "verdict": "SELECT_AS_RAP_VOICEOVER_IMAGE",
+      "direction": "Rap lyric is voiceover; harbor gesture source remains illustrative, not lip-synchronized actor performance"
+    },
+    {
+      "id": "B03-S05",
+      "verdict": "SELECT_AS_BOOT_DETAIL",
+      "direction": "Boots/wood cutaway and material/lighting motion; not authentic filmed stamping or footstep action"
+    },
+    {
+      "id": "B03-S06",
+      "verdict": "SELECT_SAME_FILM_PERFORMANCE",
+      "direction": "Genuine guitar and violin action; B05 same-film Gemini source is cross-act provisional, repetition check in master"
+    },
+    {
+      "id": "B03-S07",
+      "verdict": "SELECT_MEMORY_ONLY",
+      "direction": "Warm Appalachian mountain-road image is a time-shifted memory, not current Miami dawn"
+    },
+    {
+      "id": "B03-S08",
+      "verdict": "SELECT",
+      "direction": "Travelers/workers with room and practical-light movement; no claim of additional articulate crowd motion"
+    },
+    {
+      "id": "B03-S09",
+      "verdict": "SELECT_SAME_FILM_COUPLE",
+      "direction": "Actual couple motion, continuity/reuse checked during later full-film assembly"
+    },
+    {
+      "id": "B03-S10",
+      "verdict": "SELECT_DERIVED_EDITORIAL_SHOT",
+      "direction": "Road memory to reunion as transparent/camera layered bridge, deliberately built from S07/S09 sources; nine originals sufficient"
+    }
+  ],
+  "batch_gate": {
+    "director_picture_for_batch": "SELECTED_FOR_NEXT_BATCH_PRODUCTION",
+    "human_signoff_not_required_for_batch_progression": true,
+    "source_count_exception_applies_only_to_B03": true,
+    "final_film_release": false,
+    "master_fx_locked": false,
+    "lyric_frame_alignment_locked": false,
+    "original_assets_mutated": false,
+    "foreign_project_media_imported": false
+  },
+  "next": "B04: inspect 10 original stills in Drive 09 archive against locked storyboard, render A/B native Lab-main FX using authenticated/public-read SHA-pinned archive, then create independent B04 moving-scene proofs and Director review. B05 afterward. Do not perform Master FX until all batches story/FX ready."
+}
