@@ -1,0 +1,146 @@
+{
+  "schema": "aivideoedit.la-luna-b03-director-preflight.v1",
+  "production": "la-luna-de-florida",
+  "branch": "song/la-luna-de-florida",
+  "stage": "B03",
+  "status": "SOURCE_AUDIT_PASSED_9_OF_10__S10_SOURCE_DERIVED_CANDIDATE_ONLY",
+  "source_zip": "https://drive.google.com/file/d/1oSb1FLlWJjzPccU2sywjI5gGGw2Lqv4K/view",
+  "source_zip_size_bytes": 19189873,
+  "canonical_board_sha256": "05b232452eebce56fb9c047a0f481a19e04cf2d13e364bee30255dd27c88703a",
+  "original_source_stills_recovered": 9,
+  "source_original_s10_missing": true,
+  "sha_verification_method": "exact SHA256 against pre-existing Drive archive audit and CRC-checked zip entries",
+  "user_direction": "Full Director film: internal/environment motion first, character action truthful, preserve original and variants, no new storyboard, B01 B02 remain untouched.",
+  "story_context": "Third act: old port, memory, Appalachian roots/road, lyrical rap, reunion. Mountain sunrise tones ONLY as explicitly motivated road-memory insert; rest night.",
+  "shot_intents": [
+    {
+      "shot_id": "B03-S01",
+      "caption": "Old dock, new stories",
+      "fx_direction": "harbor_environment_water_lantern_camera",
+      "source_kind": "original_recovered_from_archive",
+      "original_sha256": "f20f3f2a2d00441c53ee1d14b4277348da73d2f4f26e1a7b73facb1e29e038e1",
+      "primary_canonical_fx_candidate": "FX2-MOTION-003",
+      "reusable_recipe_candidate": "RCP-LONG-HOLD",
+      "fx_runtime_status": "to_resolve_or_implement_and_prove_at_shot_level",
+      "approval": false
+    },
+    {
+      "shot_id": "B03-S02",
+      "caption": "Thinking of the road",
+      "fx_direction": "protected_hero_road_memory_at_harbor",
+      "source_kind": "original_recovered_from_archive",
+      "original_sha256": "fde4e91b252944969366e3b379710c3f0b46bd5db99ef89231aa6ed6f38911c2",
+      "primary_canonical_fx_candidate": "FX2-LIGHT-023",
+      "reusable_recipe_candidate": "RCP-PROTECTED-ENVIRONMENT",
+      "fx_runtime_status": "to_resolve_or_implement_and_prove_at_shot_level",
+      "approval": false
+    },
+    {
+      "shot_id": "B03-S03",
+      "caption": "She waits",
+      "fx_direction": "protected_hero_woman_by_harbor",
+      "source_kind": "original_recovered_from_archive",
+      "original_sha256": "70bf7fcf0c8ecede25cfc15ecc95360caea171e4fd74b8fb6acb508239d8de56",
+      "primary_canonical_fx_candidate": "FX2-MOTION-003",
+      "reusable_recipe_candidate": "RCP-PROTECTED-ENVIRONMENT",
+      "fx_runtime_status": "to_resolve_or_implement_and_prove_at_shot_level",
+      "approval": false
+    },
+    {
+      "shot_id": "B03-S04",
+      "caption": "Rap verse – the harbor",
+      "fx_direction": "narrative_rap_voiceover_visual_do_not_claim_lip_sync",
+      "source_kind": "original_recovered_from_archive",
+      "original_sha256": "b5cb3aba6a606cdc75fe5c6c41f760b659356371947fd06e7c1f6db844336a9b",
+      "primary_canonical_fx_candidate": "FX2-LIGHT-023",
+      "reusable_recipe_candidate": "RCP-LONG-HOLD",
+      "fx_runtime_status": "to_resolve_or_implement_and_prove_at_shot_level",
+      "approval": false
+    },
+    {
+      "shot_id": "B03-S05",
+      "caption": "Boots on the wood",
+      "fx_direction": "physical_footwear_details_lantern_reflections_no_false_steps",
+      "source_kind": "original_recovered_from_archive",
+      "original_sha256": "94a0873152c2df251b77a127c8e1451e759d01f67433e13de5a6bf58c75679d7",
+      "primary_canonical_fx_candidate": "FX2-MOTION-002",
+      "reusable_recipe_candidate": "RCP-INSTRUMENT-AXIS",
+      "fx_runtime_status": "to_resolve_or_implement_and_prove_at_shot_level",
+      "approval": false
+    },
+    {
+      "shot_id": "B03-S06",
+      "caption": "Hands and history",
+      "fx_direction": "original_guitar_still_FX_then_real_same_film_musician_clip",
+      "source_kind": "original_recovered_from_archive",
+      "original_sha256": "316b053c868012593f32638dce3fc1bb8096781120ed6e3dad281b4f8d575b27",
+      "primary_canonical_fx_candidate": "FX2-COMP-021",
+      "reusable_recipe_candidate": "RCP-TRANSPARENT-HANDOFF",
+      "fx_runtime_status": "to_resolve_or_implement_and_prove_at_shot_level",
+      "approval": false
+    },
+    {
+      "shot_id": "B03-S07",
+      "caption": "Mountains to the sea",
+      "fx_direction": "clearly_motivated_road_memory_not_actual_current_time_sunrise",
+      "source_kind": "original_recovered_from_archive",
+      "original_sha256": "8d5e3f6b16dab97f120b531dac5e5b3358cc153e5df6a590d4cc7e7652c92877",
+      "primary_canonical_fx_candidate": "FX2-ATM-021",
+      "reusable_recipe_candidate": "RCP-LONG-HOLD",
+      "fx_runtime_status": "to_resolve_or_implement_and_prove_at_shot_level",
+      "approval": false
+    },
+    {
+      "shot_id": "B03-S08",
+      "caption": "Travelers and workers",
+      "fx_direction": "travelers_group_room_depth_lantern_movement",
+      "source_kind": "original_recovered_from_archive",
+      "original_sha256": "1a337a41b88bf7f604a72e95345619cdc64e8954c32c79448a0c394d7edd40b5",
+      "primary_canonical_fx_candidate": "FX2-LIGHT-023",
+      "reusable_recipe_candidate": "RCP-PROTECTED-ENVIRONMENT",
+      "fx_runtime_status": "to_resolve_or_implement_and_prove_at_shot_level",
+      "approval": false
+    },
+    {
+      "shot_id": "B03-S09",
+      "caption": "Back together",
+      "fx_direction": "couple_reunion_protected_face_hands_with_background_life",
+      "source_kind": "original_recovered_from_archive",
+      "original_sha256": "975750f344e73561e266af1ecc046127c0a1251eb8ecfccf2605e5c31ac3a778",
+      "primary_canonical_fx_candidate": "FX2-COMP-021",
+      "reusable_recipe_candidate": "RCP-LONG-HOLD",
+      "fx_runtime_status": "to_resolve_or_implement_and_prove_at_shot_level",
+      "approval": false
+    },
+    {
+      "shot_id": "B03-S10",
+      "caption": "One story, many roads",
+      "fx_direction": "missing_original_use_explicit_S07_mountain_to_S09_reunion_editorial_bridge",
+      "source_kind": "missing_original_source_derived_composite_candidate",
+      "original_sha256": null,
+      "primary_canonical_fx_candidate": "FX2-TRANS-025",
+      "reusable_recipe_candidate": "RCP-TRANSPARENT-HANDOFF",
+      "fx_runtime_status": "to_resolve_or_implement_and_prove_at_shot_level",
+      "approval": false
+    }
+  ],
+  "S10_exception": {
+    "original_missing": true,
+    "candidate_source_images": [
+      "B03-S07",
+      "B03-S09"
+    ],
+    "method": "camera_and_alpha_handoff_from_existing_originals",
+    "must_not_claim": "10 independent full-size original stills recovered",
+    "director_right_to_reject_if_artistic_coverage_mismatch": true
+  },
+  "visual_protection": [
+    "actors identity faces",
+    "hands instruments",
+    "boots structural topology",
+    "skyline horizon and harbor geometry",
+    "source time night except deliberate mountain memory"
+  ],
+  "run_provenance": "Initial sandbox FX equivalent, not claimed bootstrapped current-main FXRuntime. GitHub Actions current-main native workflow to be staged or tested separately.",
+  "master_film_approved": false
+}
