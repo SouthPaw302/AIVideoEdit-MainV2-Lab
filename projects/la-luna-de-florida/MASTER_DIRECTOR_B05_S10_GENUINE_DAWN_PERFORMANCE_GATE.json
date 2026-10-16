@@ -1,0 +1,43 @@
+{
+  "schema": "aivideoedit.la-luna-director-performance-gap.v1",
+  "project": "la-luna-de-florida",
+  "branch": "song/la-luna-de-florida",
+  "shot_id": "B05-S10",
+  "timeline": {
+    "start_frame": 7280,
+    "end_frame_exclusive": 7708,
+    "frames": 428,
+    "seconds": 17.833333333333332,
+    "original_moving_shot_frames": 96,
+    "required_additional_unique_real_or_authorized_motion_frames": 332,
+    "original_wav_excerpt_start_seconds": 303.3333333333333
+  },
+  "source_authority": {
+    "approved_original_sunrise_plate": "B05-S10.png",
+    "existing_selected_moving_proof": "B05-S10_MOVING_4s.mp4",
+    "original_WAV_preserved": true,
+    "original_proof_preserved": true,
+    "dawn_source_is_authentic_standalone_full_frame": true
+  },
+  "previous_actual_motion_sources": {
+    "same_film_night_dance": "GEMINI_01_DANCE_CANDIDATE_silent.mp4",
+    "note": "Only ~108f and filmed at night; reused across act previews, not authentic dawn. Cannot automatically relabel or color-transform as new independent sunrise choreography."
+  },
+  "director_gate": "FAIL_UNTIL_GENUINE_OR_AUTHORIZED_BOUNDED_CONTINUATION_IS_VALIDATED",
+  "disallowed_shortcuts": [
+    "Repeat the existing 4sec B05-S10 still-derived moving scene 4+ times",
+    "Retiming the 108-frame night dance clip to 428f",
+    "Mislabeling localized lantern/water/camera FX as body choreography",
+    "Inventing new actor poses, faces or dressing without zero-drift receipts",
+    "Silently replacing approved hero source stills"
+  ],
+  "authorized_next_steps": [
+    "Use existing native Lab main FX for material light, but never claim it replaces human motion",
+    "Inspect any same-project currently approved unused real sunrise body-action clip if found and verify SHA, protagonist identity and wardrobe before importing",
+    "If no genuine sunrise action exists, obtain a new explicitly authorized bounded continuation from the approved B05-S10 start frame, with unchanged actors, clothing, hands, shoreline and environment; require per-frame and continuity QC",
+    "Use real sunrise cutaways judiciously without relabeling static crowd as moving actors"
+  ],
+  "master_assembly_allowed": false,
+  "executive_release_allowed": false,
+  "creator_note": "Companion B05-S09 RC3 is a scenic editorial repair, NOT proof that B05-S10 genuine dance movement exists."
+}
