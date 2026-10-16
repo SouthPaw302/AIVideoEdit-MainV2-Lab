@@ -1,0 +1,56 @@
+{
+  "schema": "aivideoedit.la-luna-world-longform-surgical-checkpoints.v1",
+  "branch": "song/la-luna-de-florida",
+  "status": "TWO_SCENIC_SHOT_EXTENSIONS_RENDERED_REVIEW_NOT_ACCEPTED",
+  "source_integrity": "EXISTING_STILLS_ALL_50_MP4S_ALL_98_NATIVE_LOOP_BYTES_UNMODIFIED",
+  "director_candidate_shots": [
+    {
+      "id": "B03-S07",
+      "description": "Appalachian mountain-road image: road-memory only (NOT present-day Florida sunrise)",
+      "proposed_master_frames": 178,
+      "new_longform_original_shot_96f_plus_A_B_native_motion": true,
+      "rc1_sha256": "259509c84304d4118e51d54ec47ed04be35f89163557569b5f21978c7e19c0ea",
+      "rc2_sha256": "8334fa23273dca82c57dfb1bd82eb16c81ab4bab87965e2f5a10458b6079aabb",
+      "technical": {
+        "full_decoded_frames": 178,
+        "zero_nearblack": true,
+        "lowmotion_pairs_rc1": 38,
+        "lowmotion_pairs_rc2": 17
+      },
+      "director_verdict": "REPAIR_STILL_REQUIRED_MINOR_MOTION_HOLDS_PERSIST_NO_LYRIC_LOCK"
+    },
+    {
+      "id": "B05-S05",
+      "description": "Night harbor fade, strictly no fabricated sunrise",
+      "proposed_master_frames": 156,
+      "candidate_sha256": "8b6976252196f26ea93ed2f2de3eed5fa5eb5d60a77bcd880504b0ad8e987b13",
+      "technical": {
+        "full_decoded_frames": 156,
+        "nearblack_frames": 0,
+        "lowmotion_pairs": 10
+      },
+      "director_verdict": "REVIEW_PENDING_EDIT_SOUND_ALIGNMENT"
+    }
+  ],
+  "drive": {
+    "url": "https://drive.google.com/file/d/1gqvxBudaO12arxQT3pgSG8JXfPfVOe4n/view?usp=drivesdk",
+    "file_id": "1gqvxBudaO12arxQT3pgSG8JXfPfVOe4n",
+    "sha256": "fcf5973481e7c3f9f599794894504c738edf7cabf31881451f1abd14a0070531",
+    "size_bytes": 4506945,
+    "metadata_readback_verified": true
+  },
+  "original_wav_sha256": "1a4bffef36930b504423d2653faff4cc5bfd9a15d44bdcf1083b27fbb0db1c10",
+  "privacy_blocker": {
+    "wav_google_drive_visibility": "owner_only",
+    "runner_download_gdown": "FAIL_CANNOT_DOWNLOAD_PRIVATE_ASSET",
+    "no_permission_changes_attempted": true,
+    "known_past_onnx_run_used_precomputed_audio_features_not_original_wav_download": true
+  },
+  "separate_offline_transcription_approach": ".github/workflows/la-luna-director-offline-whisper-kit.yml",
+  "exact_full_film_duration_seconds": 321.16,
+  "picture_frame_contract": 7708,
+  "full_film_rendered": false,
+  "full_film_director_pass": false,
+  "lyric_line_timestamps_verified": false,
+  "user_release_approved": false
+}
