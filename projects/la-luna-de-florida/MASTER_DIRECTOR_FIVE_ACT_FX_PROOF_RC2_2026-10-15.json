@@ -1,0 +1,128 @@
+{
+  "schema": "aivideoedit.la-luna-master-director-fx-cinematic-five-act-review.v1",
+  "project": "la-luna-de-florida",
+  "branch": "song/la-luna-de-florida",
+  "director_scope": "SOURCE_PRESERVING_REPRESENTATIVE_FX_CHECKPOINTS_NOT_FULL_FILM",
+  "status": "FIVE_ACTS_12S_EACH_TECHNICAL_DECODE_PASS_CREATIVE_AND_LYRIC_APPROVAL_PENDING",
+  "source_overwrite": false,
+  "all_50_original_moving_clips_preserved": true,
+  "all_98_existing_fx_loops_preserved": true,
+  "original_wav_sha256": "1a4bffef36930b504423d2653faff4cc5bfd9a15d44bdcf1083b27fbb0db1c10",
+  "method": "Per scene the original selected 96-frame MP4 drives genuine motion. Independently SHA-verified native FX variant A (60 frames once) and B (36 frames once) supply a bounded temporally changing residual under shot-specific material mask; subtle optical camera shift 0.25-0.45%, no geometry deformation or synthesized actor articulation. Master FX candidate compositor runs sandbox, not a claim of current-main FX executor execution.",
+  "batch_review": [
+    {
+      "act": "B01",
+      "shots": [
+        "B01-S01",
+        "B01-S02",
+        "B01-S04"
+      ],
+      "original_wav_start_s": 0,
+      "picture_frames": 288,
+      "sha256": "31daa5918c340f0d63d5d98c6b95c3d344281cee9a63a6b2fc4878776e7381da",
+      "director_issues": [
+        "B01-S01 needs stronger genuine living harbor for planned 11.67sec master shot",
+        "B01-S04 approved existing four-second shot changes geography rapidly; in full edit protect meaningful first meeting"
+      ]
+    },
+    {
+      "act": "B02",
+      "shots": [
+        "B02-S01",
+        "B02-S02",
+        "B02-S08"
+      ],
+      "original_wav_start_s": 79,
+      "picture_frames": 288,
+      "sha256": "21d03aa07d74e8f0aaaf4db15819a2d7377234bc9f05f4892683a5dae18c9d14",
+      "director_issues": [
+        "B02-S01→S02 editorial ellipsis remains intentional; final lyric cue unverified",
+        "Additional B02-S06 in-source hard cut f35→f36 warrants musical alignment; do not classify as corrupted frames"
+      ]
+    },
+    {
+      "act": "B03",
+      "shots": [
+        "B03-S04",
+        "B03-S07",
+        "B03-S09"
+      ],
+      "original_wav_start_s": 148,
+      "picture_frames": 288,
+      "sha256": "33ccc03634c7df5fe603566791c874951971ca62b9acd9c4fcd1945dec00754a",
+      "director_issues": [
+        "Mountains must read as memory rather than Miami present-time dawn",
+        "Rap voiceover illustrative not manufactured lip sync",
+        "B03-S09 repeated human action/source compared with other acts; allocate unique original performance frames"
+      ]
+    },
+    {
+      "act": "B04",
+      "shots": [
+        "B04-S01",
+        "B04-S08",
+        "B04-S10"
+      ],
+      "original_wav_start_s": 228,
+      "picture_frames": 288,
+      "sha256": "da12467638c5e9689c4f5064f94534287727cf10cb4998a79e64c5901437db6f",
+      "director_issues": [
+        "Violin footage physically limited; reserve source frames uniquely",
+        "Preserve accepted indoor tavern chorus; no empty marina ending"
+      ]
+    },
+    {
+      "act": "B05",
+      "shots": [
+        "B05-S05",
+        "B05-S08",
+        "B05-S10"
+      ],
+      "original_wav_start_s": 309.16,
+      "picture_frames": 288,
+      "sha256": "8b649385ce802a5c81be3cfc448dfecacc9ced93137c5e8b4ec7aa372b8fd9cf",
+      "director_issues": [
+        "Night→genuine full-frame dawn present",
+        "These 12 seconds are not proven final-outro vocal alignment or accepted ending"
+      ]
+    }
+  ],
+  "objective_qc": {
+    "total_proof_clips": 5,
+    "clip_frames_each": 288,
+    "clips_full_decode_pass": 5,
+    "frame_rate": 24,
+    "size_pixels": [
+      960,
+      540
+    ],
+    "near_black_frames": 0,
+    "original_movie_audio_muxed_each": true,
+    "encoded_duration_each_s": 12,
+    "source_clip_content_sha_checked": 15,
+    "native_fx_AB_loop_sha_checked": 30
+  },
+  "all_50_master_duration_content_authorized": false,
+  "full_7708_frame_feature_rendered": false,
+  "full_normal_speed_director_watch": false,
+  "original_lyric_line_time_verified": false,
+  "script_locked": false,
+  "full_master_approved": false,
+  "executive_final_release_approved": false,
+  "audio_cue_runner": {
+    "workflow": ".github/workflows/la-luna-director-lyric-cues.yml",
+    "run_url": "https://github.com/SouthPaw302/AIVideoEdit-MainV2-Lab/actions/runs/38827339116",
+    "status_at_record": "RUNNING_ASR_ESTIMATION_ONLY",
+    "source_sha_gate": true
+  },
+  "archive": {
+    "sha256": "eabf15c2bb5f80673e863a05a90107563b40e8e5c7b03556bb1eb9be6a99f890",
+    "filename": "La_Luna_Florida_Five_Act_Cinematic_Master_FX_Proof_RC2_2026-10-15.zip",
+    "bytes": 15024368,
+    "drive_file_id": "1BIwoHXpszo5v_oq2OzoLzneoe1-TK7iL",
+    "drive_url": "https://drive.google.com/file/d/1BIwoHXpszo5v_oq2OzoLzneoe1-TK7iL/view?usp=drivesdk",
+    "drive_metadata_readback_pass": true,
+    "drive_folder": "05 QC and Handoff"
+  },
+  "next_gate": "Inspect ASR timing estimate with actual playback windows; recompute Master Director frame edit timeline only from verified vocal cues; create real nonrepeating 2910 frame extra coverage, five-act representative shot extensions and canonical 50-shot real-render manifest, then parallel full film candidate."
+}
