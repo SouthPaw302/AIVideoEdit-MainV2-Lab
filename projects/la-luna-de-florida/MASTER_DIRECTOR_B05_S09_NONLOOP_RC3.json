@@ -76,8 +76,9 @@
     "near_static_pair_reduction_pct": 80.61,
     "candidate_original_WAV_decode_correlation": 0.99927,
     "joined_sunrise_film_frames": 321,
-    "candidate_196f_sha256": "bdcabcf1e64e5928c4ef1d45e29e038b48cc13b67d5d71ef8b52a4d7fd33c5aa",
-    "matched_frame_audio_has_original_WAV_once": true
+    "candidate_196f_sha256": "aac761cc04a299d72805018d48723d56753c68a361d6a0119025d6c4997dbfe3",
+    "matched_frame_audio_has_original_WAV_once": true,
+    "candidate_321f_sha256": "2b365f0e3d45662f4ef2905263c5328f9a636fe37cb30e290d03177de45d24d0"
   },
   "archive": {
     "drive_url": "https://drive.google.com/file/d/1DVXxOfPm3iWUfYmpK6gLqGCkrfoxhHz-/view?usp=drivesdk",
