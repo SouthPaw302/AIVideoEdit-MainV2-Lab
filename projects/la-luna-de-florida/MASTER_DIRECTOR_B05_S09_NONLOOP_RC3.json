@@ -1,0 +1,105 @@
+{
+  "schema": "aivideoedit.la-luna-surgical-scene-candidate.v1",
+  "production": "la-luna-de-florida",
+  "branch": "song/la-luna-de-florida",
+  "director_scope": "B05-S09_REPAIR_ONLY_NOT_MASTER_RELEASE",
+  "decision": "DIRECTOR_SELECT_RC3_FOR_INTEGRATION_TEST_ONLY",
+  "authority": {
+    "script_locked": false,
+    "source_plates_modified": false,
+    "original_50_proofs_modified": false,
+    "original_native_fx_loops_modified": false,
+    "main_modified": false,
+    "full_7708_frame_master_rendered": false,
+    "user_final_release_approved": false
+  },
+  "line": {
+    "global_start_frame": 7084,
+    "global_end_frame_exclusive": 7280,
+    "fps": 24,
+    "frames": 196,
+    "seconds": 8.166666666666666,
+    "candidate_lyric": "Pero mientras quede música",
+    "lyric_boundary_status": "ASR_ESTIMATE_PENDING_EAR_VERIFICATION"
+  },
+  "source_sha256": {
+    "B05_S09_original_still": "36c4dc8c1c96bb3b779c6c76e21e41612614df27cdb3178f94ee044495137188",
+    "B05_S08_original_still": "ec6fe9ec0c4161ba27063cfcf0243cc6257a81f6b4d57ae6a60fc08ffdc8e090",
+    "B05_S09_native_FX_A": "28d7c4049b6a84b107e2367bc4b2fb79f1c1faa6dc8184f16be63eadccb86b76",
+    "B05_S09_native_FX_B": "497612a0cd831d1bf4499992c46e6cc7af1170007d4be4e65824456f1a77d33a",
+    "B05_S08_native_FX_A": "667681c8c2c7129c14ebdefd042f557ff008226982914be4cc2a961bd264ef9a",
+    "B05_S08_native_FX_B": "479b6842153f238b574c52fa591fe69eab8d6df57a531ee68812fbeb8e33ceeb",
+    "original_wav": "1a4bffef36930b504423d2653faff4cc5bfd9a15d44bdcf1083b27fbb0db1c10"
+  },
+  "editorial_subshots": [
+    {
+      "source": "B05-S09 ORIGINAL DAWN TAVERN 1672x941",
+      "local_frames": [
+        0,
+        84
+      ],
+      "global_frames": [
+        7084,
+        7168
+      ],
+      "function": "couple quiet emotional tableau and real native practical-light FX",
+      "camera": "59px bounded source-space track and 7px vertical movement",
+      "actor_action_claimed": false,
+      "source_and_fx_loops_repeated": false
+    },
+    {
+      "source": "B05-S08 ORIGINAL SUNRISE HARBOR 1672x941",
+      "local_frames": [
+        84,
+        196
+      ],
+      "global_frames": [
+        7168,
+        7280
+      ],
+      "function": "distinct dawn dock/water insert before finale",
+      "material_fx": "time-varying water/reflection optics on protected mask; registered dawn FX A/B scene reference used once",
+      "actor_action_claimed": false,
+      "source_and_fx_loops_repeated": false
+    }
+  ],
+  "qc": {
+    "decoded_frames": 196,
+    "black_frames": 0,
+    "freeze_events_ge_half_second": 0,
+    "fps": 24,
+    "width": 960,
+    "height": 540,
+    "low_motion_screen": "grayscale MAE adjacent frames below 0.3/255",
+    "rejected_RC2_near_static_pairs": 98,
+    "new_RC3_near_static_pairs": 19,
+    "near_static_pair_reduction_pct": 80.61,
+    "candidate_original_WAV_decode_correlation": 0.99927,
+    "joined_sunrise_film_frames": 321,
+    "candidate_196f_sha256": "bdcabcf1e64e5928c4ef1d45e29e038b48cc13b67d5d71ef8b52a4d7fd33c5aa",
+    "matched_frame_audio_has_original_WAV_once": true
+  },
+  "archive": {
+    "drive_url": "https://drive.google.com/file/d/1DVXxOfPm3iWUfYmpK6gLqGCkrfoxhHz-/view?usp=drivesdk",
+    "drive_file_id": "1DVXxOfPm3iWUfYmpK6gLqGCkrfoxhHz-",
+    "drive_folder": "05 QC and Handoff",
+    "bytes": 9137152,
+    "sha256": "1fb87393b96d0925ebdd3b350d6d6c2fe23489e3c223c028c431ce72aed68c26",
+    "drive_metadata_readback": "PASS",
+    "contains": [
+      "196f visual candidate original excerpt",
+      "321f lyric-aligned joined sunrise proof",
+      "frame contact sheet",
+      "renderer source",
+      "per-source and output QC receipts"
+    ],
+    "original_WAV_uploaded": false
+  },
+  "warning": "This scene avoids fake actor motion; it does not supply genuine dancing. Source-anchored environmental motion cannot satisfy B05-S10 authentic sunrise performance requirements.",
+  "remaining_gates": [
+    "B05-S10 final 428f dawn dancing has only 96f static proof and no unique genuine dawn dance video",
+    "Normal-speed full candidate film Director inspection",
+    "All-five-act Master FX sources and timing",
+    "Whole-film 7708f render, 11-phase QC and user final release acceptance"
+  ]
+}
