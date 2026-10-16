@@ -1,0 +1,165 @@
+{
+  "schema": "aivideoedit.la-luna.gemini-uncut-master-edit.v2",
+  "project": "la-luna-de-florida",
+  "authoritative_branch": "song/la-luna-de-florida",
+  "status": "DIRECTOR_CORRECTION_CANDIDATE_NOT_PICTURE_LOCKED",
+  "user_direction": "Gemini movies play intact, back-to-back as authored motion, then cinematically integrated at external boundaries. Never internally edit Gemini performance or substitute a pan/FX for action. Use this repo/branch for the real render.",
+  "video_timing": {
+    "fps": 24,
+    "total_frames": 7708,
+    "total_seconds": 321.1666666666667,
+    "render_size": [
+      854,
+      480
+    ],
+    "original_music_sha256": "1a4bffef36930b504423d2653faff4cc5bfd9a15d44bdcf1083b27fbb0db1c10",
+    "original_music_start_seconds": 0,
+    "original_music_only_once": true
+  },
+  "protected_scene_policy": {
+    "source_original_bytes_unchanged": true,
+    "no_internal_cuts": true,
+    "no_time_stretch": true,
+    "no_loop": true,
+    "no_performance_modifying_fx": true,
+    "no_crossfade_over_source": true,
+    "no_transition_preroll_consuming_source_start": true,
+    "no_transition_out_overwriting_source_end": true,
+    "full_24fps_frame_order": true,
+    "source_frame_count_must_match_window": true,
+    "editorial_transition_rule": "Motivated cinematic shot choices or FX solely in surrounding non-Gemini footage. Inside all Gemini performance frames, preserve content and timing; only resolution normalization for output allowed.",
+    "boundary_first_frame_and_last_frame_preserved": true,
+    "old_sandbox_480p_rough_cut_status": "REJECTED_AS_NATIVE_MASTER"
+  },
+  "unique_gemini_inputs": [
+    {
+      "id": "GEMINI_EARLY_DANCE_HARBOR_ORIGINAL",
+      "file_name": "GEMINI_UPLOAD_952aed07_ORIGINAL_UNCUT.mp4",
+      "original_frames": 240,
+      "frame_rate": 24,
+      "sha256": "e9335abaad0d9ee7d62131c66eab1d6626c53e3b035b4bb1b9a0362477a102c2",
+      "source_frame_window": [
+        0,
+        240
+      ],
+      "global_picture_frames": [
+        2112,
+        2352
+      ],
+      "editorial_intent": "Musical first-chorus performance and physical night-harbor world, one complete original 10s Gemini upload, no source splitting",
+      "origin_note": "Derived 108-frame/114-frame legacy Gemini preview exports are alternate subdivisions of this original; do not stack them as independently unique motion."
+    },
+    {
+      "id": "GEMINI_MUSICIAN_ORIGINAL",
+      "file_name": "B05-S04_GEMINI_a6339758_original.mp4",
+      "original_frames": 240,
+      "frame_rate": 24,
+      "sha256": "5e1c2b35ce9fbbe60d45a6c55766a1fd876644c39ae5e7b97218ab087cae1cc5",
+      "source_frame_window": [
+        0,
+        240
+      ],
+      "global_picture_frames": [
+        3768,
+        4008
+      ],
+      "editorial_intent": "A continuous genuine violin and guitar performance on corresponding Verse 3 music, no chopped 4s replay."
+    },
+    {
+      "id": "GEMINI_B06_MOONLIT_HARBOR",
+      "file_name": "gemini_generated_video_fb24cfbc.mp4",
+      "original_frames": 240,
+      "frame_rate": 24,
+      "sha256": "54443de11f4b1466002d157f6f3c5d5686c4f03b6ddc31ab358707f9bab894a1",
+      "drive_id": "1ow3vrwVxAn4RCvWx6Znadv30mdFurfLg",
+      "source_frame_window": [
+        0,
+        240
+      ],
+      "global_picture_frames": [
+        6720,
+        6960
+      ],
+      "editorial_intent": "Full ten-second night/pre-sunrise harbor leading without interruption into the real sunrise dance."
+    },
+    {
+      "id": "GEMINI_B06_SUNRISE_DANCE",
+      "file_name": "gemini_generated_video_203a298c.mp4",
+      "original_frames": 480,
+      "frame_rate": 24,
+      "sha256": "9a9ab750324489c6f75659e3eca54108a97724a90973f0395c57652c98aedbac",
+      "drive_id": "14dMiA2VTxf47Lco087DZHwBFzdtokF9r",
+      "source_frame_window": [
+        240,
+        480
+      ],
+      "global_picture_frames": [
+        6960,
+        7200
+      ],
+      "editorial_intent": "Full ten-second authored sunrise dance is native second half of a 20s upload. Its first half is a duplicate harbor and is NOT new performance. The edit point is the already-existing Gemini internal hard splice at frame 240; NEVER slice, dissolve or modify frames 240–479."
+    }
+  ],
+  "proposed_blocks": [
+    {
+      "id": "FIRST_CHORUS_GEMINI",
+      "scene_ids": [
+        "GEMINI_EARLY_DANCE_HARBOR_ORIGINAL"
+      ],
+      "picture_frames": [
+        2112,
+        2352
+      ]
+    },
+    {
+      "id": "VIOLIN_PERFORMANCE_GEMINI",
+      "scene_ids": [
+        "GEMINI_MUSICIAN_ORIGINAL"
+      ],
+      "picture_frames": [
+        3768,
+        4008
+      ]
+    },
+    {
+      "id": "B06_HARBOR_TO_DANCE_GEMINI",
+      "scene_ids": [
+        "GEMINI_B06_MOONLIT_HARBOR",
+        "GEMINI_B06_SUNRISE_DANCE"
+      ],
+      "picture_frames": [
+        6720,
+        7200
+      ],
+      "contiguous": true,
+      "subscene_cut_at_frame": 6960,
+      "interior_transition": "NONE",
+      "note": "The full 240-frame harbor is immediately followed by full 240-frame dance; no insert, dissolve, or cutaway between."
+    }
+  ],
+  "archival_duplicate_policy": {
+    "separate_source_20_second_upload_preserved_untouched": true,
+    "first_ten_seconds_of_20_second_upload_duplicates_B06_harbor": true,
+    "not_repeated_in_film": true,
+    "source_file_sha_preserved": true,
+    "legacy_early_partial_clips_not_counted_as_distinct": true
+  },
+  "source_staging": {
+    "status": "PRIVATE_BYTE_SERVING_NOT_YET_STAGEABLE_ON_GITHUB_RUNNER",
+    "available_drive_urls_must_not_be_used_as_MP4_payload_urls": true,
+    "github_public_repo_must_not_receive_private_original_WAV": true,
+    "full_native_render_dispatched": false,
+    "workflow_to_use": "mainv2-director-parallel-real-render.yml",
+    "requires_staged_sha256_verified_real_render_manifest": true
+  },
+  "quality_gates": {
+    "gemini_chain_manifest_validation": "REQUIRED",
+    "exact_source_sha256": "REQUIRED",
+    "native_real_renderer": "REQUIRED",
+    "normal_speed_321_second_director_review": "REQUIRED",
+    "source_frame_alignment": "REQUIRED",
+    "final_film_approved": false,
+    "script_locked": false,
+    "executive_public_release_approved": false
+  }
+}
