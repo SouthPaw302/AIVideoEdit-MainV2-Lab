@@ -1,0 +1,2803 @@
+{
+  "schema": "aivideoedit.la-luna-master-director-lyric-candidate.v2",
+  "production_id": "la-luna-de-florida",
+  "authoritative_write_branch": "song/la-luna-de-florida",
+  "status": "DIRECTOR_ASR_LYRIC_TIMED_CANDIDATE_NOT_LOCKED",
+  "locked": false,
+  "source_branch_parent_sha": "5621c26e5d1870607fcfa9bcafc3c462d352ded0",
+  "current_main_os_sha": "900e3e5749ed6fa13ad91524975a9e64661e6649",
+  "music": {
+    "sha256": "1a4bffef36930b504423d2653faff4cc5bfd9a15d44bdcf1083b27fbb0db1c10",
+    "duration_seconds": 321.16,
+    "sample_rate_hz": 48000,
+    "original_WAV_preserve_and_mux_once": true
+  },
+  "onnx": {
+    "full_json_sha256": "cc6ef0c817624560832c8a67994cbd664a5b1567b6ba41f38911f1f2a83e062c",
+    "actual_pinned_model": true,
+    "beat_count": 510,
+    "downbeat_count": 140,
+    "lyric_alignment": false
+  },
+  "target": {
+    "fps": 24,
+    "width": 960,
+    "height": 540,
+    "frames": 7708,
+    "picture_seconds": 321.1666666666667,
+    "pcm_picture_tolerance_seconds": 0.006666666666660603
+  },
+  "prior_50_proofs_hash_verified": true,
+  "prior_50_proofs_unchanged": true,
+  "master_extension_artistic_coverage_complete": false,
+  "shot_semantic_lyric_timing_complete": false,
+  "master_fx_accepted": false,
+  "user_final_release_approved": false,
+  "mandatory_master_fx_rule": "All five batches already have their own authored FX loops. Cinematic Master Director FX pass is a distinct supervised scene-by-scene film treatment integrating existing A/B FX, zero-drift protected layers, meaningful internal motion, depth, intentional camera/edit/grade and independently verified music/lyric cues. Never render full film as four-second proofs blindly repeated.",
+  "next_gate": "Independent full-WAV lyric in/out audit + nonrepeating long-shot coverage + director-approved multi-act Master FX representative proofs + canonical SHA media staging; only then full parallel render.",
+  "shots": [
+    {
+      "shot_id": "B01-S01",
+      "global_index": 1,
+      "storyboard_caption": "Miami harbor at night",
+      "source_clip_sha256": "e0156c760bdf9447ab607e19721304d4b9ca9f89c7c0bd648ba12b5b05e17a34",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B01-S01_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "harbor",
+      "time_of_day": "Miami_night",
+      "time_start": 0,
+      "time_end": 11.666666666666666,
+      "start_frame": 0,
+      "end_frame_exclusive": 280,
+      "duration_frames": 280,
+      "duration_seconds": 11.666666666666666,
+      "lyric_or_instrumental_cue": "ASR estimated Intro 8.44s: Bajo la luna de Florida",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 8.44,
+          "section": "Intro",
+          "line": "Bajo la luna de Florida"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-MOTION-003",
+          "FX2-SPATIAL-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "EXTENSION_AUTHORING_REQUIRED_NONREPEATING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_OR_LAYERED_SOURCE_EVOLUTION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 184,
+      "old_start_frame_pass01": 0,
+      "old_end_frame_pass01": 280,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B01-S02",
+      "global_index": 2,
+      "storyboard_caption": "The tavern by the dock",
+      "source_clip_sha256": "23591d4e7e34ca94c0a89991ba9e6a9694df240506b25ea7a861ee2ad685f097",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B01-S02_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "harbor",
+      "time_of_day": "Miami_night",
+      "time_start": 11.666666666666666,
+      "time_end": 16.5,
+      "start_frame": 280,
+      "end_frame_exclusive": 396,
+      "duration_frames": 116,
+      "duration_seconds": 4.833333333333333,
+      "lyric_or_instrumental_cue": "ASR estimated Intro 8.44s: Bajo la luna de Florida",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 8.44,
+          "section": "Intro",
+          "line": "Bajo la luna de Florida"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-MOTION-003",
+          "FX2-SPATIAL-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "EXTENSION_AUTHORING_REQUIRED_NONREPEATING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_OR_LAYERED_SOURCE_EVOLUTION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 20,
+      "old_start_frame_pass01": 280,
+      "old_end_frame_pass01": 436,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B01-S03",
+      "global_index": 3,
+      "storyboard_caption": "Our lead",
+      "source_clip_sha256": "21a24d452a967141dfbfc6449130c4f8492a751b609c92338cf29347097b826b",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B01-S03_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "couple",
+      "time_of_day": "Miami_night",
+      "time_start": 16.5,
+      "time_end": 21.5,
+      "start_frame": 396,
+      "end_frame_exclusive": 516,
+      "duration_frames": 120,
+      "duration_seconds": 5,
+      "lyric_or_instrumental_cue": "ASR estimated Intro 8.44s: Bajo la luna de Florida",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 8.44,
+          "section": "Intro",
+          "line": "Bajo la luna de Florida"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "EXTENSION_AUTHORING_REQUIRED_NONREPEATING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_OR_LAYERED_SOURCE_EVOLUTION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 24,
+      "old_start_frame_pass01": 436,
+      "old_end_frame_pass01": 548,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B01-S04",
+      "global_index": 4,
+      "storyboard_caption": "First meeting",
+      "source_clip_sha256": "7ffc6038d4e66c3d9f6139951c488ebd02f12f0cac23b14f72f5b84ad40120cb",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B01-S04_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "couple",
+      "time_of_day": "Miami_night",
+      "time_start": 21.5,
+      "time_end": 26,
+      "start_frame": 516,
+      "end_frame_exclusive": 624,
+      "duration_frames": 108,
+      "duration_seconds": 4.5,
+      "lyric_or_instrumental_cue": "ASR estimated Intro 8.44s: Bajo la luna de Florida",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 8.44,
+          "section": "Intro",
+          "line": "Bajo la luna de Florida"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "EXTENSION_AUTHORING_REQUIRED_NONREPEATING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_OR_LAYERED_SOURCE_EVOLUTION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 12,
+      "old_start_frame_pass01": 548,
+      "old_end_frame_pass01": 676,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B01-S05",
+      "global_index": 5,
+      "storyboard_caption": "Music begins",
+      "source_clip_sha256": "6c69ff266fc16e5d207e4e3cbe693239da76de72e8d2b7e51d6745a909697b0e",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B01-S05_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "musician",
+      "time_of_day": "Miami_night",
+      "time_start": 26,
+      "time_end": 31,
+      "start_frame": 624,
+      "end_frame_exclusive": 744,
+      "duration_frames": 120,
+      "duration_seconds": 5,
+      "lyric_or_instrumental_cue": "ASR estimated Intro 8.44s: Bajo la luna de Florida",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 8.44,
+          "section": "Intro",
+          "line": "Bajo la luna de Florida"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "preserve_actual_actor_motion_and_source_camera; no fabricated articulation",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "CROSS_ACT_GEMINI_PERFORMANCE_REUSE_REVIEW",
+        "EXTENSION_AUTHORING_REQUIRED_NONREPEATING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_OR_LAYERED_SOURCE_EVOLUTION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 24,
+      "old_start_frame_pass01": 676,
+      "old_end_frame_pass01": 772,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B01-S06",
+      "global_index": 6,
+      "storyboard_caption": "The violin joins",
+      "source_clip_sha256": "bb25bba54c3f43bcc9db54b8f41c64797ee74a20a1128bd5f689ca0c2ec63bad",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B01-S06_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "musician",
+      "time_of_day": "Miami_night",
+      "time_start": 31,
+      "time_end": 35.5,
+      "start_frame": 744,
+      "end_frame_exclusive": 852,
+      "duration_frames": 108,
+      "duration_seconds": 4.5,
+      "lyric_or_instrumental_cue": "ASR estimated Intro 8.44s: Bajo la luna de Florida",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 8.44,
+          "section": "Intro",
+          "line": "Bajo la luna de Florida"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "preserve_actual_actor_motion_and_source_camera; no fabricated articulation",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "CROSS_ACT_GEMINI_PERFORMANCE_REUSE_REVIEW",
+        "EXTENSION_AUTHORING_REQUIRED_NONREPEATING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_OR_LAYERED_SOURCE_EVOLUTION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 12,
+      "old_start_frame_pass01": 772,
+      "old_end_frame_pass01": 868,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B01-S07",
+      "global_index": 7,
+      "storyboard_caption": "First dance",
+      "source_clip_sha256": "fd13c62448e45e783db47802534bfa292bc93eb820243d908cb64104d0c254db",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B01-S07_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "dance",
+      "time_of_day": "Miami_night",
+      "time_start": 35.5,
+      "time_end": 39,
+      "start_frame": 852,
+      "end_frame_exclusive": 936,
+      "duration_frames": 84,
+      "duration_seconds": 3.5,
+      "lyric_or_instrumental_cue": "ASR estimated Intro 8.44s: Bajo la luna de Florida",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 8.44,
+          "section": "Intro",
+          "line": "Bajo la luna de Florida"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "preserve_actual_actor_motion_and_source_camera; no fabricated articulation",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "CROSS_ACT_GEMINI_PERFORMANCE_REUSE_REVIEW"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_REQUIRED",
+      "source_motion_proven_frames": 84,
+      "required_new_content_frames": 0,
+      "old_start_frame_pass01": 868,
+      "old_end_frame_pass01": 980,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B01-S08",
+      "global_index": 8,
+      "storyboard_caption": "A night of strangers",
+      "source_clip_sha256": "7b8d5489c2470ebcf4a1a45d165b48a6614b7bf6f6b5c4cd938a9b5f37b26f0f",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B01-S08_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "crowd",
+      "time_of_day": "Miami_night",
+      "time_start": 39,
+      "time_end": 43,
+      "start_frame": 936,
+      "end_frame_exclusive": 1032,
+      "duration_frames": 96,
+      "duration_seconds": 4,
+      "lyric_or_instrumental_cue": "ASR estimated Intro 8.44s: Bajo la luna de Florida",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 8.44,
+          "section": "Intro",
+          "line": "Bajo la luna de Florida"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "KEEP",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 0,
+      "old_start_frame_pass01": 980,
+      "old_end_frame_pass01": 1074,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B01-S09",
+      "global_index": 9,
+      "storyboard_caption": "The city watches",
+      "source_clip_sha256": "2001e884435f9c8159ac912cf004a0da814e285892f0eaa6d6d024b371a6ee2f",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B01-S09_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "harbor",
+      "time_of_day": "Miami_night",
+      "time_start": 43,
+      "time_end": 49,
+      "start_frame": 1032,
+      "end_frame_exclusive": 1176,
+      "duration_frames": 144,
+      "duration_seconds": 6,
+      "lyric_or_instrumental_cue": "ASR estimated Intro 8.44s: Bajo la luna de Florida",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 8.44,
+          "section": "Intro",
+          "line": "Bajo la luna de Florida"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-MOTION-003",
+          "FX2-SPATIAL-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "EXTENSION_AUTHORING_REQUIRED_NONREPEATING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_OR_LAYERED_SOURCE_EVOLUTION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 48,
+      "old_start_frame_pass01": 1074,
+      "old_end_frame_pass01": 1170,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B01-S10",
+      "global_index": 10,
+      "storyboard_caption": "This is only the beginning",
+      "source_clip_sha256": "efed5954a5b2a3d3524f9ab034fb88e6a4651e40fa3f71a5b6b4aa88451ae130",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B01-S10_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "harbor",
+      "time_of_day": "Miami_night",
+      "time_start": 49,
+      "time_end": 53.333333333333336,
+      "start_frame": 1176,
+      "end_frame_exclusive": 1280,
+      "duration_frames": 104,
+      "duration_seconds": 4.333333333333333,
+      "lyric_or_instrumental_cue": "ASR estimated Verse 1 46.74s: En la taberna del puerto",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 46.74,
+          "section": "Verse 1",
+          "line": "En la taberna del puerto"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-MOTION-003",
+          "FX2-SPATIAL-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "EXTENSION_AUTHORING_REQUIRED_NONREPEATING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_OR_LAYERED_SOURCE_EVOLUTION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 8,
+      "old_start_frame_pass01": 1170,
+      "old_end_frame_pass01": 1280,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B02-S01",
+      "global_index": 11,
+      "storyboard_caption": "Entrance to the tavern",
+      "source_clip_sha256": "488e962cb4525729485ebfb89a83128542d76a1c94c33ac9ac2a7d2f8adc0f6a",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B02-S01_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "harbor",
+      "time_of_day": "Miami_night",
+      "time_start": 53.333333333333336,
+      "time_end": 56.708333333333336,
+      "start_frame": 1280,
+      "end_frame_exclusive": 1361,
+      "duration_frames": 81,
+      "duration_seconds": 3.375,
+      "lyric_or_instrumental_cue": "ASR estimated Verse 1 46.74s: En la taberna del puerto",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 46.74,
+          "section": "Verse 1",
+          "line": "En la taberna del puerto"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-MOTION-003",
+          "FX2-SPATIAL-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "FX_LAYER",
+      "source_motion_proven_frames": 81,
+      "required_new_content_frames": 0,
+      "old_start_frame_pass01": 1280,
+      "old_end_frame_pass01": 1430,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B02-S02",
+      "global_index": 12,
+      "storyboard_caption": "Stepping inside",
+      "source_clip_sha256": "e1b886c7091ce8efb2842d5b3e3f737535ca2e59cef2acc27a6ec321936d6d72",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B02-S02_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "musician",
+      "time_of_day": "Miami_night",
+      "time_start": 56.708333333333336,
+      "time_end": 59.791666666666664,
+      "start_frame": 1361,
+      "end_frame_exclusive": 1435,
+      "duration_frames": 74,
+      "duration_seconds": 3.0833333333333335,
+      "lyric_or_instrumental_cue": "ASR estimated Verse 1 46.74s: En la taberna del puerto",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 46.74,
+          "section": "Verse 1",
+          "line": "En la taberna del puerto"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "preserve_actual_actor_motion_and_source_camera; no fabricated articulation",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "CROSS_ACT_GEMINI_PERFORMANCE_REUSE_REVIEW"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_REQUIRED",
+      "source_motion_proven_frames": 74,
+      "required_new_content_frames": 0,
+      "old_start_frame_pass01": 1430,
+      "old_end_frame_pass01": 1558,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B02-S03",
+      "global_index": 13,
+      "storyboard_caption": "The song starts",
+      "source_clip_sha256": "0b572bf526193dd90f0849965282bd8c9f13361ede62be6b5bb6165bb1cc3903",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B02-S03_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "musician",
+      "time_of_day": "Miami_night",
+      "time_start": 59.791666666666664,
+      "time_end": 63.5,
+      "start_frame": 1435,
+      "end_frame_exclusive": 1524,
+      "duration_frames": 89,
+      "duration_seconds": 3.7083333333333335,
+      "lyric_or_instrumental_cue": "ASR estimated Verse 1 46.74s: En la taberna del puerto",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 46.74,
+          "section": "Verse 1",
+          "line": "En la taberna del puerto"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "preserve_actual_actor_motion_and_source_camera; no fabricated articulation",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "CROSS_ACT_GEMINI_PERFORMANCE_REUSE_REVIEW"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_REQUIRED",
+      "source_motion_proven_frames": 89,
+      "required_new_content_frames": 0,
+      "old_start_frame_pass01": 1558,
+      "old_end_frame_pass01": 1742,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B02-S04",
+      "global_index": 14,
+      "storyboard_caption": "Wine and laughter",
+      "source_clip_sha256": "cd7a12e264e69b77c4797c195434b3a721b4ae6190b6dbfc17d9170bd30c3b20",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B02-S04_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "community",
+      "time_of_day": "Miami_night",
+      "time_start": 63.5,
+      "time_end": 66.83333333333333,
+      "start_frame": 1524,
+      "end_frame_exclusive": 1604,
+      "duration_frames": 80,
+      "duration_seconds": 3.3333333333333335,
+      "lyric_or_instrumental_cue": "ASR estimated Verse 1 46.74s: En la taberna del puerto",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 46.74,
+          "section": "Verse 1",
+          "line": "En la taberna del puerto"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-MOTION-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "CUTAWAY_WITH_EXISTING_SOURCE",
+      "source_motion_proven_frames": 80,
+      "required_new_content_frames": 0,
+      "old_start_frame_pass01": 1742,
+      "old_end_frame_pass01": 1902,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B02-S05",
+      "global_index": 15,
+      "storyboard_caption": "Closer now",
+      "source_clip_sha256": "0ea4e3219e801748695011ee4757555f3a3f4961caea734572de000d38004014",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B02-S05_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "couple",
+      "time_of_day": "Miami_night",
+      "time_start": 66.83333333333333,
+      "time_end": 70.5,
+      "start_frame": 1604,
+      "end_frame_exclusive": 1692,
+      "duration_frames": 88,
+      "duration_seconds": 3.6666666666666665,
+      "lyric_or_instrumental_cue": "ASR estimated Chorus 66.82s: Baila conmigo hasta que salga el sol",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 66.82,
+          "section": "Chorus",
+          "line": "Baila conmigo hasta que salga el sol"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "CUTAWAY_WITH_EXISTING_SOURCE",
+      "source_motion_proven_frames": 88,
+      "required_new_content_frames": 0,
+      "old_start_frame_pass01": 1902,
+      "old_end_frame_pass01": 2062,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B02-S06",
+      "global_index": 16,
+      "storyboard_caption": "The room alive",
+      "source_clip_sha256": "a3ac4e19bbb5d8c57cb2b1300f75ce9fecd60d3bb897df3ed50eef6e698b4124",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B02-S06_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "dance",
+      "time_of_day": "Miami_night",
+      "time_start": 70.5,
+      "time_end": 76,
+      "start_frame": 1692,
+      "end_frame_exclusive": 1824,
+      "duration_frames": 132,
+      "duration_seconds": 5.5,
+      "lyric_or_instrumental_cue": "ASR estimated Chorus 66.82s: Baila conmigo hasta que salga el sol",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 66.82,
+          "section": "Chorus",
+          "line": "Baila conmigo hasta que salga el sol"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "preserve_actual_actor_motion_and_source_camera; no fabricated articulation",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "CROSS_ACT_GEMINI_PERFORMANCE_REUSE_REVIEW",
+        "EXTENSION_AUTHORING_REQUIRED_NONREPEATING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_OR_LAYERED_SOURCE_EVOLUTION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 36,
+      "old_start_frame_pass01": 2062,
+      "old_end_frame_pass01": 2262,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B02-S07",
+      "global_index": 17,
+      "storyboard_caption": "Castanuelas and strings",
+      "source_clip_sha256": "573c351bd847cce03731472804899d819d292d5dd337b4789544b8efadba3352",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B02-S07_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "musician",
+      "time_of_day": "Miami_night",
+      "time_start": 76,
+      "time_end": 81,
+      "start_frame": 1824,
+      "end_frame_exclusive": 1944,
+      "duration_frames": 120,
+      "duration_seconds": 5,
+      "lyric_or_instrumental_cue": "ASR estimated Chorus 66.82s: Baila conmigo hasta que salga el sol",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 66.82,
+          "section": "Chorus",
+          "line": "Baila conmigo hasta que salga el sol"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "preserve_actual_actor_motion_and_source_camera; no fabricated articulation",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "CROSS_ACT_GEMINI_PERFORMANCE_REUSE_REVIEW",
+        "EXTENSION_AUTHORING_REQUIRED_NONREPEATING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_OR_LAYERED_SOURCE_EVOLUTION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 24,
+      "old_start_frame_pass01": 2262,
+      "old_end_frame_pass01": 2422,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B02-S08",
+      "global_index": 18,
+      "storyboard_caption": "Conversations & secrets",
+      "source_clip_sha256": "93a3e8213802a992c2e5d9603a3c4d6be000e6fbaf493548e5c7b8fa29a7fb82",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B02-S08_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "community",
+      "time_of_day": "Miami_night",
+      "time_start": 81,
+      "time_end": 86.58333333333333,
+      "start_frame": 1944,
+      "end_frame_exclusive": 2078,
+      "duration_frames": 134,
+      "duration_seconds": 5.583333333333333,
+      "lyric_or_instrumental_cue": "ASR estimated Chorus 66.82s: Baila conmigo hasta que salga el sol",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 66.82,
+          "section": "Chorus",
+          "line": "Baila conmigo hasta que salga el sol"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-MOTION-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "EXTENSION_AUTHORING_REQUIRED_NONREPEATING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_OR_LAYERED_SOURCE_EVOLUTION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 38,
+      "old_start_frame_pass01": 2422,
+      "old_end_frame_pass01": 2572,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B02-S09",
+      "global_index": 19,
+      "storyboard_caption": "The first chorus",
+      "source_clip_sha256": "63ff4bd77c3b5c4c866690d8c4b332e2f9b1b92d262284dc5330fcdfa86b92d3",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B02-S09_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "dance",
+      "time_of_day": "Miami_night",
+      "time_start": 86.58333333333333,
+      "time_end": 98,
+      "start_frame": 2078,
+      "end_frame_exclusive": 2352,
+      "duration_frames": 274,
+      "duration_seconds": 11.416666666666666,
+      "lyric_or_instrumental_cue": "ASR estimated Chorus 66.82s: Baila conmigo hasta que salga el sol",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 66.82,
+          "section": "Chorus",
+          "line": "Baila conmigo hasta que salga el sol"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "preserve_actual_actor_motion_and_source_camera; no fabricated articulation",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "CROSS_ACT_GEMINI_PERFORMANCE_REUSE_REVIEW",
+        "EXTENSION_AUTHORING_REQUIRED_NONREPEATING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_OR_LAYERED_SOURCE_EVOLUTION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 178,
+      "old_start_frame_pass01": 2572,
+      "old_end_frame_pass01": 2824,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B02-S10",
+      "global_index": 20,
+      "storyboard_caption": "Music spills into the night",
+      "source_clip_sha256": "2d46bfd5dfcda2a7974b211b7d3f277dba8148dda4b4eaf356df505811c88088",
+      "source_archive": "La_Luna_B01_B02_RC8_20_Movement_Proofs.zip",
+      "source_entry": "clips/B02-S10_RC8_DIRECTOR_MOVING_4s.mp4",
+      "scene_type": "harbor",
+      "time_of_day": "Miami_night",
+      "time_start": 98,
+      "time_end": 108.70833333333333,
+      "start_frame": 2352,
+      "end_frame_exclusive": 2609,
+      "duration_frames": 257,
+      "duration_seconds": 10.708333333333334,
+      "lyric_or_instrumental_cue": "ASR estimated Verse 2 87.74s: La marea empuja adentro",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 87.74,
+          "section": "Verse 2",
+          "line": "La marea empuja adentro"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-MOTION-003",
+          "FX2-SPATIAL-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "EXTENSION_AUTHORING_REQUIRED_NONREPEATING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_OR_LAYERED_SOURCE_EVOLUTION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 161,
+      "old_start_frame_pass01": 2824,
+      "old_end_frame_pass01": 3004,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B03-S01",
+      "global_index": 21,
+      "storyboard_caption": "Old dock, new stories",
+      "source_clip_sha256": "d8021b930a58029f91c22accf5c1495c450d30712b8d8f7ed8a881322eed3a3c",
+      "source_archive": "La_Luna_B03_RC2_10_Moving_Shots_and_Repro_Scripts.zip",
+      "source_entry": "moving_shots/B03-S01_RC2_DIRECTOR_PROOF_4s.mp4",
+      "scene_type": "harbor",
+      "time_of_day": "Miami_night",
+      "time_start": 108.70833333333333,
+      "time_end": 111.79166666666667,
+      "start_frame": 2609,
+      "end_frame_exclusive": 2683,
+      "duration_frames": 74,
+      "duration_seconds": 3.0833333333333335,
+      "lyric_or_instrumental_cue": "ASR estimated Rap Verse 108.72s: Viejo muelle, tabla rota",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 108.72,
+          "section": "Rap Verse",
+          "line": "Viejo muelle, tabla rota"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B03_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-MOTION-003",
+          "FX2-SPATIAL-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "FX_LAYER",
+      "source_motion_proven_frames": 74,
+      "required_new_content_frames": 0,
+      "old_start_frame_pass01": 3004,
+      "old_end_frame_pass01": 3174,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B03-S02",
+      "global_index": 22,
+      "storyboard_caption": "Thinking of the road",
+      "source_clip_sha256": "dfe0aff86441e60b610712d444495daf4fa3903cd784297acea0f398dd8f11a6",
+      "source_archive": "La_Luna_B03_RC2_10_Moving_Shots_and_Repro_Scripts.zip",
+      "source_entry": "moving_shots/B03-S02_RC2_DIRECTOR_PROOF_4s.mp4",
+      "scene_type": "couple",
+      "time_of_day": "Miami_night",
+      "time_start": 111.79166666666667,
+      "time_end": 115.29166666666667,
+      "start_frame": 2683,
+      "end_frame_exclusive": 2767,
+      "duration_frames": 84,
+      "duration_seconds": 3.5,
+      "lyric_or_instrumental_cue": "ASR estimated Rap Verse 108.72s: Viejo muelle, tabla rota",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 108.72,
+          "section": "Rap Verse",
+          "line": "Viejo muelle, tabla rota"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B03_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "CUTAWAY_WITH_EXISTING_SOURCE",
+      "source_motion_proven_frames": 84,
+      "required_new_content_frames": 0,
+      "old_start_frame_pass01": 3174,
+      "old_end_frame_pass01": 3330,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B03-S03",
+      "global_index": 23,
+      "storyboard_caption": "She waits",
+      "source_clip_sha256": "11314c2fc60e3bdbebf48d6da7f1c70078f7bde8800f1fdbbc98b7ad3d352b95",
+      "source_archive": "La_Luna_B03_RC2_10_Moving_Shots_and_Repro_Scripts.zip",
+      "source_entry": "moving_shots/B03-S03_RC2_DIRECTOR_PROOF_4s.mp4",
+      "scene_type": "couple",
+      "time_of_day": "Miami_night",
+      "time_start": 115.29166666666667,
+      "time_end": 118.70833333333333,
+      "start_frame": 2767,
+      "end_frame_exclusive": 2849,
+      "duration_frames": 82,
+      "duration_seconds": 3.4166666666666665,
+      "lyric_or_instrumental_cue": "ASR estimated Rap Verse 113.94s: Traigo polvo del camino",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 113.94,
+          "section": "Rap Verse",
+          "line": "Traigo polvo del camino"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B03_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "CUTAWAY_WITH_EXISTING_SOURCE",
+      "source_motion_proven_frames": 82,
+      "required_new_content_frames": 0,
+      "old_start_frame_pass01": 3330,
+      "old_end_frame_pass01": 3486,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B03-S04",
+      "global_index": 24,
+      "storyboard_caption": "Rap verse – the harbor",
+      "source_clip_sha256": "8b8a61ec1f8ba7d53d66f5b46a95e95cc23c6b32c01a9dfb533246daabe48f17",
+      "source_archive": "La_Luna_B03_RC2_10_Moving_Shots_and_Repro_Scripts.zip",
+      "source_entry": "moving_shots/B03-S04_RC2_DIRECTOR_PROOF_4s.mp4",
+      "scene_type": "rap_voiceover",
+      "time_of_day": "Miami_night",
+      "time_start": 118.70833333333333,
+      "time_end": 121,
+      "start_frame": 2849,
+      "end_frame_exclusive": 2904,
+      "duration_frames": 55,
+      "duration_seconds": 2.2916666666666665,
+      "lyric_or_instrumental_cue": "ASR estimated Rap Verse 113.94s: Traigo polvo del camino",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 113.94,
+          "section": "Rap Verse",
+          "line": "Traigo polvo del camino"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B03_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "CUTAWAY_WITH_EXISTING_SOURCE",
+      "source_motion_proven_frames": 55,
+      "required_new_content_frames": 0,
+      "old_start_frame_pass01": 3486,
+      "old_end_frame_pass01": 3691,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B03-S05",
+      "global_index": 25,
+      "storyboard_caption": "Boots on the wood",
+      "source_clip_sha256": "ac1bd474302203b34fbc3ab819a7381ce4b9dfa3a47c8fa633f74037eabbd674",
+      "source_archive": "La_Luna_B03_RC2_10_Moving_Shots_and_Repro_Scripts.zip",
+      "source_entry": "moving_shots/B03-S05_RC2_DIRECTOR_PROOF_4s.mp4",
+      "scene_type": "boots_detail",
+      "time_of_day": "Miami_night",
+      "time_start": 121,
+      "time_end": 123,
+      "start_frame": 2904,
+      "end_frame_exclusive": 2952,
+      "duration_frames": 48,
+      "duration_seconds": 2,
+      "lyric_or_instrumental_cue": "ASR estimated Rap Verse 113.94s: Traigo polvo del camino",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 113.94,
+          "section": "Rap Verse",
+          "line": "Traigo polvo del camino"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B03_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "FX_LAYER",
+      "source_motion_proven_frames": 48,
+      "required_new_content_frames": 0,
+      "old_start_frame_pass01": 3691,
+      "old_end_frame_pass01": 3826,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B03-S06",
+      "global_index": 26,
+      "storyboard_caption": "Hands and history",
+      "source_clip_sha256": "00a1fd7362fb760b3c12da329e7b8bc9357456ec232e4a3f83a61f9f533adc05",
+      "source_archive": "La_Luna_B03_RC2_10_Moving_Shots_and_Repro_Scripts.zip",
+      "source_entry": "moving_shots/B03-S06_RC2_DIRECTOR_PROOF_4s.mp4",
+      "scene_type": "musician",
+      "time_of_day": "Miami_night",
+      "time_start": 123,
+      "time_end": 124.125,
+      "start_frame": 2952,
+      "end_frame_exclusive": 2979,
+      "duration_frames": 27,
+      "duration_seconds": 1.125,
+      "lyric_or_instrumental_cue": "ASR estimated Rap Verse 113.94s: Traigo polvo del camino",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 113.94,
+          "section": "Rap Verse",
+          "line": "Traigo polvo del camino"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B03_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "preserve_actual_actor_motion_and_source_camera; no fabricated articulation",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "CROSS_ACT_GEMINI_PERFORMANCE_REUSE_REVIEW"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_REQUIRED",
+      "source_motion_proven_frames": 27,
+      "required_new_content_frames": 0,
+      "old_start_frame_pass01": 3826,
+      "old_end_frame_pass01": 4016,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B03-S07",
+      "global_index": 27,
+      "storyboard_caption": "Mountains to the sea",
+      "source_clip_sha256": "6b520d92c6bb7ac6f3dc0d03d07a4d65275d79cb2e60cf7bc81a75103a8d9a1e",
+      "source_archive": "La_Luna_B03_RC2_10_Moving_Shots_and_Repro_Scripts.zip",
+      "source_entry": "moving_shots/B03-S07_RC2_DIRECTOR_PROOF_4s.mp4",
+      "scene_type": "mountain_memory",
+      "time_of_day": "appalachian_memory_NOT_current_Miami_dawn",
+      "time_start": 124.125,
+      "time_end": 131.54166666666666,
+      "start_frame": 2979,
+      "end_frame_exclusive": 3157,
+      "duration_frames": 178,
+      "duration_seconds": 7.416666666666667,
+      "lyric_or_instrumental_cue": "ASR estimated Rap Verse 124.12s: De los montes hasta el puerto",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 124.12,
+          "section": "Rap Verse",
+          "line": "De los montes hasta el puerto"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B03_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-SPATIAL-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "EXTENSION_AUTHORING_REQUIRED_NONREPEATING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_OR_LAYERED_SOURCE_EVOLUTION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 82,
+      "old_start_frame_pass01": 4016,
+      "old_end_frame_pass01": 4194,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED",
+      "director_semantic_note": "Appalachian mountain road is MEMORY on De los montes ~124.12s, not Florida dawn; 178-frame separately versioned RC2 shot exists, re-mux and QC to corrected soundtrack position."
+    },
+    {
+      "shot_id": "B03-S08",
+      "global_index": 28,
+      "storyboard_caption": "Travelers and workers",
+      "source_clip_sha256": "7ddf37380f7044a560e9060d513b22b48fe6256f981337fe1ffe0eb5c8cd4450",
+      "source_archive": "La_Luna_B03_RC2_10_Moving_Shots_and_Repro_Scripts.zip",
+      "source_entry": "moving_shots/B03-S08_RC2_DIRECTOR_PROOF_4s.mp4",
+      "scene_type": "community",
+      "time_of_day": "Miami_night",
+      "time_start": 131.54166666666666,
+      "time_end": 139.5,
+      "start_frame": 3157,
+      "end_frame_exclusive": 3348,
+      "duration_frames": 191,
+      "duration_seconds": 7.958333333333333,
+      "lyric_or_instrumental_cue": "ASR estimated Rap Verse 129.20s: No me hables del mañana",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 129.2,
+          "section": "Rap Verse",
+          "line": "No me hables del mañana"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B03_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-MOTION-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "EXTENSION_AUTHORING_REQUIRED_NONREPEATING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_OR_LAYERED_SOURCE_EVOLUTION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 95,
+      "old_start_frame_pass01": 4194,
+      "old_end_frame_pass01": 4370,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B03-S09",
+      "global_index": 29,
+      "storyboard_caption": "Back together",
+      "source_clip_sha256": "3a8852a330a87de718c81e022e51ecd4061b01327970d09a6e4e702c8ed042bc",
+      "source_archive": "La_Luna_B03_RC2_10_Moving_Shots_and_Repro_Scripts.zip",
+      "source_entry": "moving_shots/B03-S09_RC2_DIRECTOR_PROOF_4s.mp4",
+      "scene_type": "dance",
+      "time_of_day": "Miami_night",
+      "time_start": 139.5,
+      "time_end": 147,
+      "start_frame": 3348,
+      "end_frame_exclusive": 3528,
+      "duration_frames": 180,
+      "duration_seconds": 7.5,
+      "lyric_or_instrumental_cue": "ASR estimated Chorus 2 136.36s: Baila conmigo hasta que salga el sol",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 136.36,
+          "section": "Chorus 2",
+          "line": "Baila conmigo hasta que salga el sol"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B03_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "preserve_actual_actor_motion_and_source_camera; no fabricated articulation",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "CROSS_ACT_GEMINI_PERFORMANCE_REUSE_REVIEW",
+        "EXTENSION_AUTHORING_REQUIRED_NONREPEATING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_OR_LAYERED_SOURCE_EVOLUTION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 84,
+      "old_start_frame_pass01": 4370,
+      "old_end_frame_pass01": 4554,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B03-S10",
+      "global_index": 30,
+      "storyboard_caption": "One story, many roads",
+      "source_clip_sha256": "3034fbbc2c60892ac8c10e497ee9367002a713b3b8909cceb055b318a6038cfc",
+      "source_archive": "La_Luna_B03_RC2_10_Moving_Shots_and_Repro_Scripts.zip",
+      "source_entry": "moving_shots/B03-S10_RC2_DIRECTOR_PROOF_4s.mp4",
+      "scene_type": "memory_reunion_bridge",
+      "time_of_day": "appalachian_memory_NOT_current_Miami_dawn",
+      "time_start": 147,
+      "time_end": 157,
+      "start_frame": 3528,
+      "end_frame_exclusive": 3768,
+      "duration_frames": 240,
+      "duration_seconds": 10,
+      "lyric_or_instrumental_cue": "ASR estimated Chorus 2 136.36s: Baila conmigo hasta que salga el sol",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 136.36,
+          "section": "Chorus 2",
+          "line": "Baila conmigo hasta que salga el sol"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "B01_B02_NATIVE_FX_SOURCE_STAGING_PENDING",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "EXTENSION_AUTHORING_REQUIRED_NONREPEATING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_OR_LAYERED_SOURCE_EVOLUTION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 144,
+      "old_start_frame_pass01": 4554,
+      "old_end_frame_pass01": 4730,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B04-S01",
+      "global_index": 31,
+      "storyboard_caption": "The violin from the corner",
+      "source_clip_sha256": "48a32ec51df49d61d14aa4be07447e159c58ce29dd10d66cc88286e8df6d0b9e",
+      "source_archive": "La_Luna_B04_RC2_10_Moving_Shots_and_Director_Receipts.zip",
+      "source_entry": "moving_shots/B04-S01_DIRECTOR_MOVING_PROOF_4s.mp4",
+      "scene_type": "musician",
+      "time_of_day": "Miami_night",
+      "time_start": 157,
+      "time_end": 163.41666666666666,
+      "start_frame": 3768,
+      "end_frame_exclusive": 3922,
+      "duration_frames": 154,
+      "duration_seconds": 6.416666666666667,
+      "lyric_or_instrumental_cue": "ASR estimated Verse 3 157.00s: Un violín desde la esquina",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 157,
+          "section": "Verse 3",
+          "line": "Un violín desde la esquina"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B04_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "preserve_actual_actor_motion_and_source_camera; no fabricated articulation",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "CROSS_ACT_GEMINI_PERFORMANCE_REUSE_REVIEW",
+        "EXTENSION_AUTHORING_REQUIRED_NONREPEATING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_OR_LAYERED_SOURCE_EVOLUTION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 58,
+      "old_start_frame_pass01": 4730,
+      "old_end_frame_pass01": 4906,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B04-S02",
+      "global_index": 32,
+      "storyboard_caption": "Palmas and compás",
+      "source_clip_sha256": "a641890347b94982539475307d1998c89cf2cecf3cc95821656d27c1dacf3106",
+      "source_archive": "La_Luna_B04_RC2_10_Moving_Shots_and_Director_Receipts.zip",
+      "source_entry": "moving_shots/B04-S02_DIRECTOR_MOVING_PROOF_4s.mp4",
+      "scene_type": "palmas_tableau",
+      "time_of_day": "Miami_night",
+      "time_start": 163.41666666666666,
+      "time_end": 170,
+      "start_frame": 3922,
+      "end_frame_exclusive": 4080,
+      "duration_frames": 158,
+      "duration_seconds": 6.583333333333333,
+      "lyric_or_instrumental_cue": "ASR estimated Verse 3 157.00s: Un violín desde la esquina",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 157,
+          "section": "Verse 3",
+          "line": "Un violín desde la esquina"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B04_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "EXTENSION_AUTHORING_REQUIRED_NONREPEATING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_OR_LAYERED_SOURCE_EVOLUTION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 62,
+      "old_start_frame_pass01": 4906,
+      "old_end_frame_pass01": 5031,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B04-S03",
+      "global_index": 33,
+      "storyboard_caption": "She laughs",
+      "source_clip_sha256": "431752b9fcd008796bbcf46bff61e00f74aa4ef202fc88732ea341d6adf6a673",
+      "source_archive": "La_Luna_B04_RC2_10_Moving_Shots_and_Director_Receipts.zip",
+      "source_entry": "moving_shots/B04-S03_DIRECTOR_MOVING_PROOF_4s.mp4",
+      "scene_type": "couple",
+      "time_of_day": "Miami_night",
+      "time_start": 170,
+      "time_end": 177,
+      "start_frame": 4080,
+      "end_frame_exclusive": 4248,
+      "duration_frames": 168,
+      "duration_seconds": 7,
+      "lyric_or_instrumental_cue": "ASR estimated Verse 3 157.00s: Un violín desde la esquina",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 157,
+          "section": "Verse 3",
+          "line": "Un violín desde la esquina"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B04_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "EXTENSION_AUTHORING_REQUIRED_NONREPEATING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_OR_LAYERED_SOURCE_EVOLUTION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 72,
+      "old_start_frame_pass01": 5031,
+      "old_end_frame_pass01": 5168,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B04-S04",
+      "global_index": 34,
+      "storyboard_caption": "Lost in the dance",
+      "source_clip_sha256": "75880736096f62c92411333a2f3c390af101713d9dbe49c3fd4fe63068b9ca58",
+      "source_archive": "La_Luna_B04_RC2_10_Moving_Shots_and_Director_Receipts.zip",
+      "source_entry": "moving_shots/B04-S04_DIRECTOR_MOVING_PROOF_4s.mp4",
+      "scene_type": "dance",
+      "time_of_day": "Miami_night",
+      "time_start": 177,
+      "time_end": 184,
+      "start_frame": 4248,
+      "end_frame_exclusive": 4416,
+      "duration_frames": 168,
+      "duration_seconds": 7,
+      "lyric_or_instrumental_cue": "ASR estimated Verse 3 157.00s: Un violín desde la esquina",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 157,
+          "section": "Verse 3",
+          "line": "Un violín desde la esquina"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B04_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "preserve_actual_actor_motion_and_source_camera; no fabricated articulation",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "CROSS_ACT_GEMINI_PERFORMANCE_REUSE_REVIEW",
+        "EXTENSION_AUTHORING_REQUIRED_NONREPEATING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_OR_LAYERED_SOURCE_EVOLUTION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 72,
+      "old_start_frame_pass01": 5168,
+      "old_end_frame_pass01": 5374,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B04-S05",
+      "global_index": 35,
+      "storyboard_caption": "Forgotten promises",
+      "source_clip_sha256": "38ed958c25e397acd18f1f03dfe76cec201efeb7345df99e9cd71c18335a3e1c",
+      "source_archive": "La_Luna_B04_RC2_10_Moving_Shots_and_Director_Receipts.zip",
+      "source_entry": "moving_shots/B04-S05_DIRECTOR_MOVING_PROOF_4s.mp4",
+      "scene_type": "couple",
+      "time_of_day": "Miami_night",
+      "time_start": 184,
+      "time_end": 191,
+      "start_frame": 4416,
+      "end_frame_exclusive": 4584,
+      "duration_frames": 168,
+      "duration_seconds": 7,
+      "lyric_or_instrumental_cue": "ASR estimated Verse 3 157.00s: Un violín desde la esquina",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 157,
+          "section": "Verse 3",
+          "line": "Un violín desde la esquina"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B04_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "EXTENSION_AUTHORING_REQUIRED_NONREPEATING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_OR_LAYERED_SOURCE_EVOLUTION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 72,
+      "old_start_frame_pass01": 5374,
+      "old_end_frame_pass01": 5514,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B04-S06",
+      "global_index": 36,
+      "storyboard_caption": "Voices in the tavern",
+      "source_clip_sha256": "c8eb833e4a1f07497d393f45a339eb8497fbac9e5b03fef41c3680c8ebd30351",
+      "source_archive": "La_Luna_B04_RC2_10_Moving_Shots_and_Director_Receipts.zip",
+      "source_entry": "moving_shots/B04-S06_DIRECTOR_MOVING_PROOF_4s.mp4",
+      "scene_type": "community",
+      "time_of_day": "Miami_night",
+      "time_start": 191,
+      "time_end": 197.375,
+      "start_frame": 4584,
+      "end_frame_exclusive": 4737,
+      "duration_frames": 153,
+      "duration_seconds": 6.375,
+      "lyric_or_instrumental_cue": "ASR estimated Verse 3 157.00s: Un violín desde la esquina",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 157,
+          "section": "Verse 3",
+          "line": "Un violín desde la esquina"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B04_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-MOTION-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "EXTENSION_AUTHORING_REQUIRED_NONREPEATING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_OR_LAYERED_SOURCE_EVOLUTION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 57,
+      "old_start_frame_pass01": 5514,
+      "old_end_frame_pass01": 5658,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B04-S07",
+      "global_index": 37,
+      "storyboard_caption": "The musicians as one",
+      "source_clip_sha256": "a8fee7392c569ddb2397e683fb206255744e6536316ae62625601d86519f2557",
+      "source_archive": "La_Luna_B04_RC2_10_Moving_Shots_and_Director_Receipts.zip",
+      "source_entry": "moving_shots/B04-S07_DIRECTOR_MOVING_PROOF_4s.mp4",
+      "scene_type": "musician",
+      "time_of_day": "Miami_night",
+      "time_start": 197.375,
+      "time_end": 204,
+      "start_frame": 4737,
+      "end_frame_exclusive": 4896,
+      "duration_frames": 159,
+      "duration_seconds": 6.625,
+      "lyric_or_instrumental_cue": "ASR estimated Rap Verse 2 197.38s: Tengo el ritmo de la calle",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 197.38,
+          "section": "Rap Verse 2",
+          "line": "Tengo el ritmo de la calle"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B04_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "preserve_actual_actor_motion_and_source_camera; no fabricated articulation",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "CROSS_ACT_GEMINI_PERFORMANCE_REUSE_REVIEW",
+        "EXTENSION_AUTHORING_REQUIRED_NONREPEATING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_OR_LAYERED_SOURCE_EVOLUTION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 63,
+      "old_start_frame_pass01": 5658,
+      "old_end_frame_pass01": 5843,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B04-S08",
+      "global_index": 38,
+      "storyboard_caption": "Candlelight",
+      "source_clip_sha256": "bda3015b89d0f17d199f86f090d43101a43208dc104e24b53dcca097e41919be",
+      "source_archive": "La_Luna_B04_RC2_10_Moving_Shots_and_Director_Receipts.zip",
+      "source_entry": "moving_shots/B04-S08_DIRECTOR_MOVING_PROOF_4s.mp4",
+      "scene_type": "candle",
+      "time_of_day": "Miami_night",
+      "time_start": 204,
+      "time_end": 212,
+      "start_frame": 4896,
+      "end_frame_exclusive": 5088,
+      "duration_frames": 192,
+      "duration_seconds": 8,
+      "lyric_or_instrumental_cue": "ASR estimated Rap Verse 2 197.38s: Tengo el ritmo de la calle",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 197.38,
+          "section": "Rap Verse 2",
+          "line": "Tengo el ritmo de la calle"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B04_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-022"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "EXTENSION_AUTHORING_REQUIRED_NONREPEATING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_OR_LAYERED_SOURCE_EVOLUTION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 96,
+      "old_start_frame_pass01": 5843,
+      "old_end_frame_pass01": 5978,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B04-S09",
+      "global_index": 39,
+      "storyboard_caption": "A look that says more",
+      "source_clip_sha256": "353053e9efecddef6470070ce31da52b70c82de0b13ece55767cfbc9ce1325e8",
+      "source_archive": "La_Luna_B04_RC2_10_Moving_Shots_and_Director_Receipts.zip",
+      "source_entry": "moving_shots/B04-S09_DIRECTOR_MOVING_PROOF_4s.mp4",
+      "scene_type": "couple",
+      "time_of_day": "Miami_night",
+      "time_start": 212,
+      "time_end": 219,
+      "start_frame": 5088,
+      "end_frame_exclusive": 5256,
+      "duration_frames": 168,
+      "duration_seconds": 7,
+      "lyric_or_instrumental_cue": "ASR estimated Rap Verse 2 197.38s: Tengo el ritmo de la calle",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 197.38,
+          "section": "Rap Verse 2",
+          "line": "Tengo el ritmo de la calle"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B04_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "EXTENSION_AUTHORING_REQUIRED_NONREPEATING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_OR_LAYERED_SOURCE_EVOLUTION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 72,
+      "old_start_frame_pass01": 5978,
+      "old_end_frame_pass01": 6134,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B04-S10",
+      "global_index": 40,
+      "storyboard_caption": "The chorus lifts again",
+      "source_clip_sha256": "c88f2a28e9bcb20d1480bb55f9de6ad9456b1176db992b1dcef1ba25b98127c2",
+      "source_archive": "La_Luna_B04_RC2_10_Moving_Shots_and_Director_Receipts.zip",
+      "source_entry": "moving_shots/B04-S10_DIRECTOR_MOVING_PROOF_4s.mp4",
+      "scene_type": "dance",
+      "time_of_day": "Miami_night",
+      "time_start": 219,
+      "time_end": 226.58333333333334,
+      "start_frame": 5256,
+      "end_frame_exclusive": 5438,
+      "duration_frames": 182,
+      "duration_seconds": 7.583333333333333,
+      "lyric_or_instrumental_cue": "ASR estimated Rap Verse 2 197.38s: Tengo el ritmo de la calle",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 197.38,
+          "section": "Rap Verse 2",
+          "line": "Tengo el ritmo de la calle"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B04_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "preserve_actual_actor_motion_and_source_camera; no fabricated articulation",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "CROSS_ACT_GEMINI_PERFORMANCE_REUSE_REVIEW",
+        "EXTENSION_AUTHORING_REQUIRED_NONREPEATING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_OR_LAYERED_SOURCE_EVOLUTION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 86,
+      "old_start_frame_pass01": 6134,
+      "old_end_frame_pass01": 6304,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B05-S01",
+      "global_index": 41,
+      "storyboard_caption": "After the celebration",
+      "source_clip_sha256": "05cf0f0f8f07fd40b6120d19dd3b78cf8959d95968155beac4943a656e79e227",
+      "source_archive": "La_Luna_B05_RC1_10_Moving_Shots_Provenance_and_Scripts.zip",
+      "source_entry": "B05-S01_MOVING_4s.mp4",
+      "scene_type": "community",
+      "time_of_day": "Miami_night",
+      "time_start": 226.58333333333334,
+      "time_end": 239.79166666666666,
+      "start_frame": 5438,
+      "end_frame_exclusive": 5755,
+      "duration_frames": 317,
+      "duration_seconds": 13.208333333333334,
+      "lyric_or_instrumental_cue": "ASR estimated Bridge 226.58s: Y si la noche se apaga",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 226.58,
+          "section": "Bridge",
+          "line": "Y si la noche se apaga"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B05_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-MOTION-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "EXTENSION_AUTHORING_REQUIRED_NONREPEATING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_OR_LAYERED_SOURCE_EVOLUTION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 221,
+      "old_start_frame_pass01": 6304,
+      "old_end_frame_pass01": 6472,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B05-S02",
+      "global_index": 42,
+      "storyboard_caption": "One last dance",
+      "source_clip_sha256": "ff10f0d53d521bf2429a7fab902b7e5826b15bb674770d96d399627264837084",
+      "source_archive": "La_Luna_B05_RC1_10_Moving_Shots_Provenance_and_Scripts.zip",
+      "source_entry": "B05-S02_MOVING_4s.mp4",
+      "scene_type": "dance",
+      "time_of_day": "Miami_night",
+      "time_start": 239.79166666666666,
+      "time_end": 247,
+      "start_frame": 5755,
+      "end_frame_exclusive": 5928,
+      "duration_frames": 173,
+      "duration_seconds": 7.208333333333333,
+      "lyric_or_instrumental_cue": "ASR estimated Bridge 239.80s: cuando empiece a amanecer",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 239.8,
+          "section": "Bridge",
+          "line": "cuando empiece a amanecer"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B05_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "preserve_actual_actor_motion_and_source_camera; no fabricated articulation",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "CROSS_ACT_GEMINI_PERFORMANCE_REUSE_REVIEW",
+        "EXTENSION_AUTHORING_REQUIRED_NONREPEATING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_OR_LAYERED_SOURCE_EVOLUTION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 77,
+      "old_start_frame_pass01": 6472,
+      "old_end_frame_pass01": 6620,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B05-S03",
+      "global_index": 43,
+      "storyboard_caption": "The breakdown",
+      "source_clip_sha256": "0b47e9d0720a721fae963f508bdf687928ad16892628ddf0d9c3436005da408b",
+      "source_archive": "La_Luna_B05_RC1_10_Moving_Shots_Provenance_and_Scripts.zip",
+      "source_entry": "B05-S03_MOVING_4s.mp4",
+      "scene_type": "couple",
+      "time_of_day": "Miami_night",
+      "time_start": 247,
+      "time_end": 250.29166666666666,
+      "start_frame": 5928,
+      "end_frame_exclusive": 6007,
+      "duration_frames": 79,
+      "duration_seconds": 3.2916666666666665,
+      "lyric_or_instrumental_cue": "ASR estimated Breakdown 246.98s: Suena el violín",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 246.98,
+          "section": "Breakdown",
+          "line": "Suena el violín"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B05_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "CUTAWAY_WITH_EXISTING_SOURCE",
+      "source_motion_proven_frames": 79,
+      "required_new_content_frames": 0,
+      "old_start_frame_pass01": 6620,
+      "old_end_frame_pass01": 6814,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B05-S04",
+      "global_index": 44,
+      "storyboard_caption": "Strings and percussion",
+      "source_clip_sha256": "49a8fb5ef76feba0bb04c54cdbd6e53c28843c3bfda277cd5e0794f79634a95b",
+      "source_archive": "La_Luna_B05_RC1_10_Moving_Shots_Provenance_and_Scripts.zip",
+      "source_entry": "B05-S04_MOVING_4s.mp4",
+      "scene_type": "musician",
+      "time_of_day": "Miami_night",
+      "time_start": 250.29166666666666,
+      "time_end": 254.04166666666666,
+      "start_frame": 6007,
+      "end_frame_exclusive": 6097,
+      "duration_frames": 90,
+      "duration_seconds": 3.75,
+      "lyric_or_instrumental_cue": "ASR estimated Breakdown 250.28s: Golpea la bota contra la madera",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 250.28,
+          "section": "Breakdown",
+          "line": "Golpea la bota contra la madera"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B05_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "preserve_actual_actor_motion_and_source_camera; no fabricated articulation",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "CROSS_ACT_GEMINI_PERFORMANCE_REUSE_REVIEW"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_REQUIRED",
+      "source_motion_proven_frames": 90,
+      "required_new_content_frames": 0,
+      "old_start_frame_pass01": 6814,
+      "old_end_frame_pass01": 6974,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B05-S05",
+      "global_index": 45,
+      "storyboard_caption": "The night fades",
+      "source_clip_sha256": "45ced15103b9f23bcd7b27b9bd00a3308cd072e7b8e8f7552840944c0ed622c8",
+      "source_archive": "La_Luna_B05_RC1_10_Moving_Shots_Provenance_and_Scripts.zip",
+      "source_entry": "B05-S05_MOVING_4s.mp4",
+      "scene_type": "harbor",
+      "time_of_day": "Miami_night",
+      "time_start": 254.04166666666666,
+      "time_end": 257.75,
+      "start_frame": 6097,
+      "end_frame_exclusive": 6186,
+      "duration_frames": 89,
+      "duration_seconds": 3.7083333333333335,
+      "lyric_or_instrumental_cue": "ASR estimated Breakdown 250.28s: Golpea la bota contra la madera",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 250.28,
+          "section": "Breakdown",
+          "line": "Golpea la bota contra la madera"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B05_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-MOTION-003",
+          "FX2-SPATIAL-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "FX_LAYER",
+      "source_motion_proven_frames": 89,
+      "required_new_content_frames": 0,
+      "old_start_frame_pass01": 6974,
+      "old_end_frame_pass01": 7130,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B05-S06",
+      "global_index": 46,
+      "storyboard_caption": "Everyone together",
+      "source_clip_sha256": "889a4b0bb098c05e0a2b31df4182a5141c18841eab94ad196cc4e604f90f0ab4",
+      "source_archive": "La_Luna_B05_RC1_10_Moving_Shots_Provenance_and_Scripts.zip",
+      "source_entry": "B05-S06_MOVING_4s.mp4",
+      "scene_type": "community",
+      "time_of_day": "Miami_night",
+      "time_start": 257.75,
+      "time_end": 277.2083333333333,
+      "start_frame": 6186,
+      "end_frame_exclusive": 6653,
+      "duration_frames": 467,
+      "duration_seconds": 19.458333333333332,
+      "lyric_or_instrumental_cue": "ASR estimated Final Chorus 257.76s: Baila conmigo hasta que salga el sol",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 257.76,
+          "section": "Final Chorus",
+          "line": "Baila conmigo hasta que salga el sol"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B05_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-MOTION-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "EXTENSION_AUTHORING_REQUIRED_NONREPEATING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_OR_LAYERED_SOURCE_EVOLUTION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 371,
+      "old_start_frame_pass01": 7130,
+      "old_end_frame_pass01": 7274,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B05-S07",
+      "global_index": 47,
+      "storyboard_caption": "Before we let go",
+      "source_clip_sha256": "0c1c32fe8cc7f44c8ec9252c76487673ba44c88d0323c8c0c41f1dffa8b0a605",
+      "source_archive": "La_Luna_B05_RC1_10_Moving_Shots_Provenance_and_Scripts.zip",
+      "source_entry": "B05-S07_MOVING_4s.mp4",
+      "scene_type": "couple",
+      "time_of_day": "Miami_night",
+      "time_start": 277.2083333333333,
+      "time_end": 289.9583333333333,
+      "start_frame": 6653,
+      "end_frame_exclusive": 6959,
+      "duration_frames": 306,
+      "duration_seconds": 12.75,
+      "lyric_or_instrumental_cue": "ASR estimated Final Chorus 268.16s: Baila conmigo, no mires atrás",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 268.16,
+          "section": "Final Chorus",
+          "line": "Baila conmigo, no mires atrás"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B05_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "MORE_THAN_4S_MOTION_COVERAGE_PENDING",
+        "EXTENSION_AUTHORING_REQUIRED_NONREPEATING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_OR_LAYERED_SOURCE_EVOLUTION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 210,
+      "old_start_frame_pass01": 7274,
+      "old_end_frame_pass01": 7420,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B05-S08",
+      "global_index": 48,
+      "storyboard_caption": "The new day",
+      "source_clip_sha256": "176ec94fe3bf6cfbaa62d2fd7cda3d6f0aed4e6710b4e490a10ffd67157fe7f8",
+      "source_archive": "La_Luna_B05_RC1_10_Moving_Shots_Provenance_and_Scripts.zip",
+      "source_entry": "B05-S08_MOVING_4s.mp4",
+      "scene_type": "dawn_harbor",
+      "time_of_day": "authentic_sunrise",
+      "time_start": 289.9583333333333,
+      "time_end": 295.1666666666667,
+      "start_frame": 6959,
+      "end_frame_exclusive": 7084,
+      "duration_frames": 125,
+      "duration_seconds": 5.208333333333333,
+      "lyric_or_instrumental_cue": "ASR estimated Outro 289.96s: Sale el sol sobre Florida",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 289.96,
+          "section": "Outro",
+          "line": "Sale el sol sobre Florida"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B05_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-MOTION-003",
+          "FX2-SPATIAL-021"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "EXTENSION_AUTHORING_REQUIRED_NONREPEATING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_OR_LAYERED_SOURCE_EVOLUTION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 29,
+      "old_start_frame_pass01": 7420,
+      "old_end_frame_pass01": 7516,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED",
+      "director_semantic_note": "Real full-frame sunrise begins near Sale el sol sobre Florida estimated at 289.96s, 20 seconds earlier than prior 309s candidate."
+    },
+    {
+      "shot_id": "B05-S09",
+      "global_index": 49,
+      "storyboard_caption": "The echo remains",
+      "source_clip_sha256": "b93a84350bd209cb4cef58adbf37a3502859b8dd5d12d10896e5717d216f9777",
+      "source_archive": "La_Luna_B05_RC1_10_Moving_Shots_Provenance_and_Scripts.zip",
+      "source_entry": "B05-S09_MOVING_4s.mp4",
+      "scene_type": "dawn_community",
+      "time_of_day": "authentic_sunrise",
+      "time_start": 295.1666666666667,
+      "time_end": 303.3333333333333,
+      "start_frame": 7084,
+      "end_frame_exclusive": 7280,
+      "duration_frames": 196,
+      "duration_seconds": 8.166666666666666,
+      "lyric_or_instrumental_cue": "ASR estimated Outro 295.18s: Pero mientras quede música",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 295.18,
+          "section": "Outro",
+          "line": "Pero mientras quede música"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B05_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-023"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "bounded_lens_axis_scene_motion_first_no_global_warp",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "EXTENSION_AUTHORING_REQUIRED_NONREPEATING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_OR_LAYERED_SOURCE_EVOLUTION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 100,
+      "old_start_frame_pass01": 7516,
+      "old_end_frame_pass01": 7612,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED"
+    },
+    {
+      "shot_id": "B05-S10",
+      "global_index": 50,
+      "storyboard_caption": "Volveremos a bailar",
+      "source_clip_sha256": "6d03acf3645374833c54121862a4f314c2ca332b2963d4ec48ee9aed963a9023",
+      "source_archive": "La_Luna_B05_RC1_10_Moving_Shots_Provenance_and_Scripts.zip",
+      "source_entry": "B05-S10_MOVING_4s.mp4",
+      "scene_type": "dawn_dance",
+      "time_of_day": "authentic_sunrise",
+      "time_start": 303.3333333333333,
+      "time_end": 321.1666666666667,
+      "start_frame": 7280,
+      "end_frame_exclusive": 7708,
+      "duration_frames": 428,
+      "duration_seconds": 17.833333333333332,
+      "lyric_or_instrumental_cue": "ASR estimated Outro 303.32s: volveremos a bailar",
+      "cue_evidence": {
+        "basis": "SHA-verified original-WAV offline Spanish Whisper base (686 words/54 segments), estimated 126/129 canonical lines; current-main BeatThis beat grid is separate rhythm evidence",
+        "certainty": "ASR_ESTIMATED_REQUIRES_DIRECTOR_AUDIBLE_VERIFICATION",
+        "nearest_known_estimated_cue": {
+          "t": 303.32,
+          "section": "Outro",
+          "line": "volveremos a bailar"
+        },
+        "timing_status": "NOT_LOCKED"
+      },
+      "original_4s_clip_use_policy": "Use verified source video frames at most once or trim; any longer shot requires separately staged authorized source-derived non-repeating motion/FX/real coverage with SHA lineage. No automatic MP4 loop/freeze/time stretch.",
+      "fx_layers": {
+        "prior_batch_native_fx_archive": "La_Luna_B05_Native_Lab_FX_Run",
+        "prior_batch_fx_reuse_first": true,
+        "current_main_candidate_fx_ids_unexecuted": [
+          "FX2-COMP-023"
+        ],
+        "execution_receipt_required": true,
+        "double_fx_forbidden": true
+      },
+      "camera": "preserve_actual_actor_motion_and_source_camera; no fabricated articulation",
+      "depth_masks": "protect_hero_faces,hands,instruments,wardrobe,tavern_topology,skyline,light_direction; scene-local alpha+2.5D only",
+      "transitions": "hard music-motivated cut until lyric and transition QC; no unapproved typography",
+      "repetition_flags": [
+        "EXTENSION_AUTHORING_REQUIRED_NONREPEATING"
+      ],
+      "QC_review": "MASTER_DURATION_PICTURE_NOT_YET_COMPILED_OR_WATCHED",
+      "director_first_pass_veto": "ACTUAL_CONTINUATION_OR_LAYERED_SOURCE_EVOLUTION_REQUIRED",
+      "source_motion_proven_frames": 96,
+      "required_new_content_frames": 332,
+      "old_start_frame_pass01": 7612,
+      "old_end_frame_pass01": 7708,
+      "master_film_pictures_accepted": false,
+      "master_director_film_timing_status": "CANDIDATE_ASR_WORD_ESTIMATES_NOT_AUDIBLY_VERIFIED",
+      "director_semantic_note": "~17.833s real sunrise return-to-dance; extensive distinct genuine choreography/media required, never loop the prior 4s clip; final outro refrain ASR unmatched."
+    }
+  ],
+  "version": "MASTER_DIRECTOR_PASS_02_ASR_RC2",
+  "lyric_cue_certainty": "INDEPENDENT_OFFLINE_ASR_ESTIMATES_NOT_NORMAL_SPEED_VERIFIED",
+  "all_lyric_line_boundaries_verified": false,
+  "all_master_extension_coverage_verified": false,
+  "master_director_accepted": false,
+  "executive_release_approved": false,
+  "director_retimed_shots": 49,
+  "asr_matched_lines": 126,
+  "asr_total_lines": 129,
+  "asr_detected_word_count": 686,
+  "asr_segments_count": 54,
+  "asr_evidence_method": "Privacy-preserving offline sandbox Faster-Whisper base; public model only from Actions run 38828301127, original owner-only WAV never transmitted to GitHub. Ear verification still necessary.",
+  "audio_duration_seconds": 321.16,
+  "frames": 7708,
+  "needed_additional_content_gross_frames": 3224,
+  "shots_requiring_nonrepeating_coverage": 34,
+  "total_original_96frame_clips": 50,
+  "frame_aligned_acts": [
+    {
+      "act": "B01",
+      "start_frame": 0,
+      "end_frame_exclusive": 1280
+    },
+    {
+      "act": "B02",
+      "start_frame": 1280,
+      "end_frame_exclusive": 2609
+    },
+    {
+      "act": "B03",
+      "start_frame": 2609,
+      "end_frame_exclusive": 3768
+    },
+    {
+      "act": "B04",
+      "start_frame": 3768,
+      "end_frame_exclusive": 5438
+    },
+    {
+      "act": "B05",
+      "start_frame": 5438,
+      "end_frame_exclusive": 7708
+    }
+  ],
+  "asr_estimated_section_cues": [
+    {
+      "t": 8.44,
+      "section": "Intro",
+      "line": "Bajo la luna de Florida"
+    },
+    {
+      "t": 46.74,
+      "section": "Verse 1",
+      "line": "En la taberna del puerto"
+    },
+    {
+      "t": 66.82,
+      "section": "Chorus",
+      "line": "Baila conmigo hasta que salga el sol"
+    },
+    {
+      "t": 87.74,
+      "section": "Verse 2",
+      "line": "La marea empuja adentro"
+    },
+    {
+      "t": 108.72,
+      "section": "Rap Verse",
+      "line": "Viejo muelle, tabla rota"
+    },
+    {
+      "t": 113.94,
+      "section": "Rap Verse",
+      "line": "Traigo polvo del camino"
+    },
+    {
+      "t": 124.12,
+      "section": "Rap Verse",
+      "line": "De los montes hasta el puerto"
+    },
+    {
+      "t": 129.2,
+      "section": "Rap Verse",
+      "line": "No me hables del mañana"
+    },
+    {
+      "t": 136.36,
+      "section": "Chorus 2",
+      "line": "Baila conmigo hasta que salga el sol"
+    },
+    {
+      "t": 157,
+      "section": "Verse 3",
+      "line": "Un violín desde la esquina"
+    },
+    {
+      "t": 197.38,
+      "section": "Rap Verse 2",
+      "line": "Tengo el ritmo de la calle"
+    },
+    {
+      "t": 226.58,
+      "section": "Bridge",
+      "line": "Y si la noche se apaga"
+    },
+    {
+      "t": 239.8,
+      "section": "Bridge",
+      "line": "cuando empiece a amanecer"
+    },
+    {
+      "t": 242.72,
+      "section": "Bridge",
+      "line": "déjame un último baile"
+    },
+    {
+      "t": 246.98,
+      "section": "Breakdown",
+      "line": "Suena el violín"
+    },
+    {
+      "t": 250.28,
+      "section": "Breakdown",
+      "line": "Golpea la bota contra la madera"
+    },
+    {
+      "t": 257.76,
+      "section": "Final Chorus",
+      "line": "Baila conmigo hasta que salga el sol"
+    },
+    {
+      "t": 268.16,
+      "section": "Final Chorus",
+      "line": "Baila conmigo, no mires atrás"
+    },
+    {
+      "t": 279.5,
+      "section": "Outro",
+      "line": "En la taberna del puerto"
+    },
+    {
+      "t": 289.96,
+      "section": "Outro",
+      "line": "Sale el sol sobre Florida"
+    },
+    {
+      "t": 295.18,
+      "section": "Outro",
+      "line": "Pero mientras quede música"
+    },
+    {
+      "t": 303.32,
+      "section": "Outro",
+      "line": "volveremos a bailar"
+    },
+    {
+      "t": 305.5,
+      "section": "Outro",
+      "line": "Volveremos a bailar"
+    }
+  ],
+  "scope": "song/la-luna-de-florida only; current main untouched; no release without user approval."
+}
