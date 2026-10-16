@@ -1,0 +1,110 @@
+{
+  "schema": "aivideoedit.la-luna-gemini-source-intake.v1",
+  "project": "la-luna-de-florida",
+  "branch": "song/la-luna-de-florida",
+  "source_shot_id": "B06-S10",
+  "role": "new authentic-looking animated sunrise dance footage, not a new sixth act",
+  "original_video": {
+    "name": "gemini_generated_video_203a298c.mp4",
+    "sha256": "9a9ab750324489c6f75659e3eca54108a97724a90973f0395c57652c98aedbac",
+    "bytes": 14806997,
+    "codec": "h264",
+    "video_frames": 480,
+    "video_fps": 24,
+    "video_dimensions": [
+      1280,
+      720
+    ],
+    "video_duration_seconds": 20,
+    "audio_stream": "AAC stereo 48000 Hz (source archival only; do not mix into full film)",
+    "drive_file_id": "14dMiA2VTxf47Lco087DZHwBFzdtokF9r",
+    "drive_url": "https://drive.google.com/file/d/14dMiA2VTxf47Lco087DZHwBFzdtokF9r/view?usp=drivesdk",
+    "folder": "08 Gemini Video Inputs",
+    "metadata_size_and_parent_verified": true
+  },
+  "editorial_observations": [
+    {
+      "source_frame_range_inclusive": [
+        0,
+        235
+      ],
+      "seconds": [
+        0,
+        9.8333333
+      ],
+      "content": "Near-duplicate of the PREVIOUSLY uploaded B06-S01 moonlit-marina source with second-pass encode. Not new footage or additional independent coverage."
+    },
+    {
+      "source_frame_range_inclusive": [
+        236,
+        239
+      ],
+      "seconds": [
+        9.8333333,
+        10
+      ],
+      "content": "Harbor-to-dance hard cut across the exported original, exclude edit seam/guard frames from stand-alone dance asset"
+    },
+    {
+      "source_frame_range_inclusive": [
+        240,
+        479
+      ],
+      "seconds": [
+        10,
+        20
+      ],
+      "content": "New full sunrise dance 240f: couple lead turn, separates, returns to partner, expressive finish. NO synthetic loop used in local candidate cut."
+    }
+  ],
+  "dance_only_candidate": {
+    "filename": "B06-S10_GEMINI_SUNRISE_DANCE_ONLY_240f_DIRECTOR_CANDIDATE.mp4",
+    "sha256": "b79489abf5c4956c91c1c73fd8adf8b119ae7dbaa1441adbf24dfb9fd1c871e9",
+    "trim_exact_source_frames": [
+      240,
+      480
+    ],
+    "fps": 24,
+    "frames": 240,
+    "seconds": 10,
+    "dimensions": [
+      1280,
+      720
+    ],
+    "audio_removed": true,
+    "remux_current_original_wav_at_final_edit": true,
+    "picture_technical_screen": {
+      "decoded_frames": 240,
+      "errors": 0,
+      "near_black_frames": 0,
+      "near_static_pairs_mae_lt_0p3": 0,
+      "near_static_pairs_mae_lt_0p8": 0,
+      "largest_adjacent_MAE": 11.908055305480957
+    },
+    "director_qualitative_review": "Genuine-looking successive body positions; first-to-last progression, full turn and reunion; background guitarist resembles/duplicates protagonist hat-and-costume and should be masked/corrected or deliberately approved before film cut; protect faces, hands, wardrobe and music instrument geometry. Automated QC cannot conclusively certify anatomical/identity stability.",
+    "accept_as_cinematic_source": "PROVISIONAL_DIRECTOR_CANDIDATE",
+    "accept_as_picture_locked": false
+  },
+  "original_50_shots_and_98_fx_loops_unchanged": true,
+  "final_cut_candidate": {
+    "existing_finale_shot": "B05-S10",
+    "planned_shot_duration_frames": 428,
+    "clean_gemini_dance_frames": 240,
+    "still_missing_unique_picture_frames_for_that_full_slot": 188,
+    "additional_unique_picture_seconds": 7.833333333333333,
+    "do_not_loop_gemini_clip": true,
+    "cannot_count_duplicated_harbor_portion_as_new_picture": true,
+    "placement": "PROVISIONAL. Decide while hearing lyric-aligned original WAV and inspecting previously staged sunrise cutaways; earlier B05-S10 duration plan remains candidate, not released."
+  },
+  "qc_archive": {
+    "drive_file_id": "17OS9R0-wFTV5sjgLwp5__mOQrWoyklz7",
+    "drive_url": "https://drive.google.com/file/d/17OS9R0-wFTV5sjgLwp5__mOQrWoyklz7/view?usp=drivesdk",
+    "bytes": 9236852,
+    "sha256": "3b274d7fc50e5966cbb5f7d077ab04c7c1ad4b690b5f78a20753833f420627be",
+    "folder": "05 QC and Handoff",
+    "metadata_readback_verified": true
+  },
+  "script_locked": false,
+  "full_7708_frame_master_rendered": false,
+  "final_release_approved": false
+}
