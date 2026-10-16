@@ -31,7 +31,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B01-S02",
@@ -49,7 +49,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B01-S03",
@@ -67,7 +67,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B01-S04",
@@ -85,7 +85,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B01-S05",
@@ -103,7 +103,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B01-S06",
@@ -121,7 +121,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B01-S07",
@@ -139,7 +139,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B01-S08",
@@ -155,9 +155,7 @@
         {
           "id": "FX2-LIGHT-023"
         }
-      ],
-      "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      ]
     },
     {
       "id": "B01-S09",
@@ -175,7 +173,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B01-S10",
@@ -193,7 +191,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-032",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B02-S01",
@@ -211,7 +209,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B02-S02",
@@ -229,7 +227,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B02-S03",
@@ -247,7 +245,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B02-S04",
@@ -265,7 +263,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B02-S05",
@@ -283,7 +281,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B02-S06",
@@ -299,9 +297,7 @@
         {
           "id": "FX2-LIGHT-023"
         }
-      ],
-      "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      ]
     },
     {
       "id": "B02-S07",
@@ -319,7 +315,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B02-S08",
@@ -337,7 +333,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B02-S09",
@@ -355,7 +351,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B02-S10",
@@ -373,7 +369,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B03-S01",
@@ -391,7 +387,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B03-S02",
@@ -409,7 +405,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B03-S03",
@@ -427,7 +423,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B03-S04",
@@ -443,9 +439,7 @@
         {
           "id": "FX2-ATM-024"
         }
-      ],
-      "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      ]
     },
     {
       "id": "B03-S05",
@@ -463,7 +457,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B03-S06",
@@ -481,7 +475,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B03-S07",
@@ -499,7 +493,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B03-S08",
@@ -517,7 +511,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B03-S09",
@@ -535,7 +529,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B03-S10",
@@ -553,7 +547,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-030",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B04-S01",
@@ -571,7 +565,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B04-S02",
@@ -587,9 +581,7 @@
         {
           "id": "FX2-LIGHT-023"
         }
-      ],
-      "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      ]
     },
     {
       "id": "B04-S03",
@@ -607,7 +599,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B04-S04",
@@ -625,7 +617,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B04-S05",
@@ -643,7 +635,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B04-S06",
@@ -661,7 +653,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B04-S07",
@@ -679,7 +671,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B04-S08",
@@ -697,7 +689,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B04-S09",
@@ -715,7 +707,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B04-S10",
@@ -731,9 +723,7 @@
         {
           "id": "FX2-LIGHT-023"
         }
-      ],
-      "transition_out": "FX2-TRANS-029",
-      "transition_seconds": 0.08
+      ]
     },
     {
       "id": "B05-S01",
@@ -751,7 +741,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B05-S02",
@@ -769,7 +759,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B05-S03",
@@ -787,7 +777,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B05-S04",
@@ -805,7 +795,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B05-S05",
@@ -823,7 +813,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B05-S06",
@@ -841,7 +831,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B05-S07",
@@ -859,7 +849,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B05-S08",
@@ -875,9 +865,7 @@
         {
           "id": "FX2-MOTION-003"
         }
-      ],
-      "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      ]
     },
     {
       "id": "B05-S09",
@@ -895,7 +883,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B05-S10",
@@ -913,7 +901,7 @@
         }
       ],
       "transition_out": "FX2-TRANS-022",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B01-MASTER-FX",
@@ -927,7 +915,7 @@
       "fit": "cover",
       "fx": [],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B02-MASTER-FX",
@@ -941,7 +929,7 @@
       "fit": "cover",
       "fx": [],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B03-MASTER-FX",
@@ -955,7 +943,7 @@
       "fit": "cover",
       "fx": [],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B04-MASTER-FX",
@@ -969,7 +957,7 @@
       "fit": "cover",
       "fx": [],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B05-MASTER-FX",
@@ -983,7 +971,7 @@
       "fit": "cover",
       "fx": [],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B06-S01-GEMINI",
@@ -995,9 +983,7 @@
       "media_role": "real_source",
       "duration_seconds": 10.0,
       "fit": "cover",
-      "fx": [],
-      "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "fx": []
     },
     {
       "id": "B06-S10-GEMINI",
@@ -1011,7 +997,7 @@
       "fit": "cover",
       "fx": [],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B03-S07-LYRIC",
@@ -1025,7 +1011,7 @@
       "fit": "cover",
       "fx": [],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B05-S05-LYRIC",
@@ -1039,7 +1025,7 @@
       "fit": "cover",
       "fx": [],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B05-S08-SUNRISE",
@@ -1053,7 +1039,7 @@
       "fit": "cover",
       "fx": [],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B05-S09-SUNRISE",
@@ -1067,7 +1053,7 @@
       "fit": "cover",
       "fx": [],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B05-DAWN-SEQUENCE",
@@ -1081,7 +1067,7 @@
       "fit": "cover",
       "fx": [],
       "transition_out": "FX2-TRANS-025",
-      "transition_seconds": 0.08
+      "transition_seconds": 0.02
     },
     {
       "id": "B06-S02-MOVING",

@@ -51,8 +51,13 @@ for name, ident, duration, role in extras:
     shots.append({"id": ident, "source": source(local, role), "media_role": "real_source", "duration_seconds": duration, "fit": "cover", "fx": []})
 
 for i, shot in enumerate(shots[:-1]):
+    # The native shard planner validates each 8-shot slice independently;
+    # leave every shard terminal clean while retaining one-frame transitions
+    # throughout the interior of each slice.
+    if i % 8 == 7:
+        continue
     shot["transition_out"] = "FX2-TRANS-025"
-    shot["transition_seconds"] = 0.08
+    shot["transition_seconds"] = 0.02
     if shot["id"] == "B01-S10": shot["transition_out"] = "FX2-TRANS-032"
     if shot["id"] == "B03-S10": shot["transition_out"] = "FX2-TRANS-030"
     if shot["id"] == "B04-S10": shot["transition_out"] = "FX2-TRANS-029"
