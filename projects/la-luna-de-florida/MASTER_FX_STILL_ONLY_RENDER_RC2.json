@@ -232,7 +232,7 @@
           "id": "FX2-MOTION-003"
         }
       ],
-      "transition_out": "FX2-TRANS-025",
+      "transition_out": null,
       "transition_seconds": 0.18
     },
     {
@@ -256,7 +256,7 @@
           "id": "FX2-MOTION-003"
         }
       ],
-      "transition_out": "FX2-TRANS-030",
+      "transition_out": null,
       "transition_seconds": 0.42
     },
     {
@@ -814,9 +814,6 @@
           "id": "FX2-FIRE-001"
         },
         {
-          "id": "FX2-FIRE-002"
-        },
-        {
           "id": "FX2-LIGHT-023"
         },
         {
@@ -844,9 +841,6 @@
           "id": "FX2-FIRE-001"
         },
         {
-          "id": "FX2-FIRE-002"
-        },
-        {
           "id": "FX2-LIGHT-023"
         },
         {
@@ -870,9 +864,6 @@
         },
         {
           "id": "FX2-FIRE-001"
-        },
-        {
-          "id": "FX2-FIRE-002"
         },
         {
           "id": "FX2-LIGHT-023"
@@ -902,9 +893,6 @@
           "id": "FX2-FIRE-001"
         },
         {
-          "id": "FX2-FIRE-002"
-        },
-        {
           "id": "FX2-LIGHT-023"
         },
         {
@@ -930,9 +918,6 @@
         },
         {
           "id": "FX2-FIRE-001"
-        },
-        {
-          "id": "FX2-FIRE-002"
         },
         {
           "id": "FX2-LIGHT-023"
@@ -962,9 +947,6 @@
           "id": "FX2-FIRE-001"
         },
         {
-          "id": "FX2-FIRE-002"
-        },
-        {
           "id": "FX2-LIGHT-023"
         },
         {
@@ -990,9 +972,6 @@
         },
         {
           "id": "FX2-FIRE-001"
-        },
-        {
-          "id": "FX2-FIRE-002"
         },
         {
           "id": "FX2-LIGHT-023"
@@ -1022,9 +1001,6 @@
           "id": "FX2-FIRE-001"
         },
         {
-          "id": "FX2-FIRE-002"
-        },
-        {
           "id": "FX2-LIGHT-023"
         },
         {
@@ -1052,9 +1028,6 @@
           "id": "FX2-FIRE-001"
         },
         {
-          "id": "FX2-FIRE-002"
-        },
-        {
           "id": "FX2-LIGHT-023"
         },
         {
@@ -1080,9 +1053,6 @@
         },
         {
           "id": "FX2-FIRE-001"
-        },
-        {
-          "id": "FX2-FIRE-002"
         },
         {
           "id": "FX2-LIGHT-023"
@@ -1366,7 +1336,7 @@
           "id": "FX2-SURFACE-022"
         }
       ],
-      "transition_out": "FX2-TRANS-022",
+      "transition_out": null,
       "transition_seconds": 0.42
     },
     {
@@ -1463,9 +1433,6 @@
         },
         {
           "id": "FX2-FIRE-001"
-        },
-        {
-          "id": "FX2-FIRE-002"
         },
         {
           "id": "FX2-LIGHT-023"
@@ -1688,7 +1655,7 @@
           "id": "FX2-COMP-023"
         }
       ],
-      "transition_out": "FX2-TRANS-025",
+      "transition_out": null,
       "transition_seconds": 0.18
     },
     {
