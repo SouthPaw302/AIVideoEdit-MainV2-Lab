@@ -81,7 +81,7 @@ def main() -> int:
     engine = args.engine_root.resolve()
     sys.path.insert(0, str(engine))
     from scripts import render_real_music_film as canonical
-    from scripts.render_lineage import receipt_identity, verify_bundle
+    from scripts.render_lineage import receipt_identity, require_receipt_identity, verify_bundle
     from scripts.render_quality import bundle_fx_proofs, combine_visual_evidence
 
     lineage = verify_bundle(

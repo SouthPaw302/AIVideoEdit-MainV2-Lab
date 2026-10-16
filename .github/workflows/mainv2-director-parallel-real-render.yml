@@ -306,7 +306,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          python engine/scripts/assemble_parallel_music_film.py \
+          python source/scripts/assemble_parallel_music_film.py \
             --manifest "$RUNNER_TEMP/media-bundle/STAGED_MANIFEST.json" \
             --original-manifest "source/$MANIFEST" \
             --lineage "$RUNNER_TEMP/media-bundle/RUN_LINEAGE.json" \
