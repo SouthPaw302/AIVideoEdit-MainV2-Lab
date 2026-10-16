@@ -52,7 +52,7 @@ for name, ident, duration, role in extras:
 
 for i, shot in enumerate(shots[:-1]):
     shot["transition_out"] = "FX2-TRANS-025"
-    shot["transition_seconds"] = 0.35
+    shot["transition_seconds"] = 0.08
     if shot["id"] == "B01-S10": shot["transition_out"] = "FX2-TRANS-032"
     if shot["id"] == "B03-S10": shot["transition_out"] = "FX2-TRANS-030"
     if shot["id"] == "B04-S10": shot["transition_out"] = "FX2-TRANS-029"
