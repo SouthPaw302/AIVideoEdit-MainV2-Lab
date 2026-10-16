@@ -1,0 +1,74 @@
+name: La Luna — Director Original-WAV Lyric Cue Scan
+
+on:
+  push:
+    branches:
+      - song/la-luna-de-florida
+    paths:
+      - ".github/workflows/la-luna-director-lyric-cues.yml"
+      - "projects/la-luna-de-florida/scripts/la_luna_lyric_asr_cue_scan.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: la-luna-director-cues-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  original-wav-lyric-cues:
+    if: github.repository == 'SouthPaw302/AIVideoEdit-MainV2-Lab' && github.ref == 'refs/heads/song/la-luna-de-florida'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - name: Checkout active song branch, never edit main
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: song/la-luna-de-florida
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.11"
+      - name: Bootstrap exact current-main production OS and source rules
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git branch --show-current)" = "song/la-luna-de-florida"
+          git fetch --no-tags origin main
+          python bootstrap.py boot --repo-root "$PWD" --branch song/la-luna-de-florida --offline
+          python scripts/la_luna_fx_canon_guard.py
+      - name: Install separate evidence-only ASR runner
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --disable-pip-version-check 'gdown==5.2.0' 'faster-whisper==1.1.1'
+          ffprobe -version | head -1
+      - name: Retrieve original source WAV with mandatory SHA-256 gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/la-luna-cues"
+          python -m gdown 'https://drive.google.com/uc?id=18DlMA-MUfdL5rO0DYmU0pTLlYdqsJdCX' \
+            --output "$RUNNER_TEMP/la-luna-cues/La_Luna_original.wav"
+          echo '1a4bffef36930b504423d2653faff4cc5bfd9a15d44bdcf1083b27fbb0db1c10  '"$RUNNER_TEMP/la-luna-cues/La_Luna_original.wav" | sha256sum -c -
+          ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1 "$RUNNER_TEMP/la-luna-cues/La_Luna_original.wav"
+      - name: Estimate Spanish lyric word times — never promote as verified
+        shell: bash
+        run: |
+          set -euo pipefail
+          python projects/la-luna-de-florida/scripts/la_luna_lyric_asr_cue_scan.py \
+            --wav "$RUNNER_TEMP/la-luna-cues/La_Luna_original.wav" \
+            --lyrics projects/la-luna-de-florida/LYRICS.md \
+            --out "$RUNNER_TEMP/la-luna-cues/results"
+          test -s "$RUNNER_TEMP/la-luna-cues/results/LYRIC_CUE_ASR_CANDIDATE.json"
+          echo "ASR estimation only; Director listening and final lyric verification still required." >> "$GITHUB_STEP_SUMMARY"
+      - name: Preserve independent lyric evidence for Director review
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: la-luna-original-wav-lyric-cues-${{ github.run_id }}
+          path: ${{ runner.temp }}/la-luna-cues/results/
+          retention-days: 30
+          if-no-files-found: warn
