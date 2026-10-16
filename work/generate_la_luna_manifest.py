@@ -28,7 +28,7 @@ for item in preflight["shots"]:
     name = Path(item["original_entry"]).name
     local = find(name)
     fx = [{"id": "FX2-ATM-024"}] if item["shot_id"].startswith("B03-") else [{"id": "FX2-MOTION-003"}] if item["shot_id"].startswith("B05-") else [{"id": "FX2-LIGHT-023"}]
-    shot = {"id": item["shot_id"], "source": source(local, "canonical_batch_scene_proof"), "duration_seconds": 4.0, "fit": "cover", "fx": fx}
+    shot = {"id": item["shot_id"], "source": source(local, "canonical_batch_scene_proof"), "media_role": "canonical_source_derived", "duration_seconds": 4.0, "fit": "cover", "fx": fx}
     shots.append(shot)
 
 extras = [
@@ -48,7 +48,7 @@ extras = [
 ]
 for name, ident, duration, role in extras:
     local = find(name)
-    shots.append({"id": ident, "source": source(local, role), "duration_seconds": duration, "fit": "cover", "fx": []})
+    shots.append({"id": ident, "source": source(local, role), "media_role": "real_source", "duration_seconds": duration, "fit": "cover", "fx": []})
 
 for i, shot in enumerate(shots[:-1]):
     shot["transition_out"] = "FX2-TRANS-025"
