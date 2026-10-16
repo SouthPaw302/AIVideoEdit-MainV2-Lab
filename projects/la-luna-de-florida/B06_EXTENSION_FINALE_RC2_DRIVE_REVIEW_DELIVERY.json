@@ -1,0 +1,52 @@
+{
+  "schema": "aivideoedit.la-luna-b06-finale-drive-review.v1",
+  "branch": "song/la-luna-de-florida",
+  "purpose": "Save objectively screened 428-frame B05-S10 sunrise-final-shot candidate and retain source approval gates",
+  "source_original_50_and_native_98_fx_unchanged": true,
+  "new_B06_independent_stills_count": 10,
+  "new_B06_stills_folder_id": "16Vd3zLa19Bz3QJHDg0gUtIYBVlpsEhBy",
+  "new_B06_folder_readback_count": 10,
+  "new_B06_folder_readback_png_count": 10,
+  "video_output_file": "La_Luna_B05_S10_17p833s_Master_Director_Finale_RC2_CANDIDATE.mp4",
+  "video_sha256": "7868448c06d3d280f8302928f6bcb007872db56ad128cdcf03224b88ccbd6b8d",
+  "drive": {
+    "id": "1h7uuQdhME6klqk4otn7ikXkPN1uSir0N",
+    "url": "https://drive.google.com/file/d/1h7uuQdhME6klqk4otn7ikXkPN1uSir0N/view?usp=drivesdk",
+    "parent": "1wDsDKVr1N4t6AWfbX1d_zEo0pWjkSCeR",
+    "name": "04 Render Candidates",
+    "bytes": 5232136,
+    "metadata_readback": true
+  },
+  "video": {
+    "fps": 24,
+    "frames": 428,
+    "frame_segments": [
+      {
+        "name": "B06-S09 source-still dawn water localized FX",
+        "count": 92
+      },
+      {
+        "name": "one distinct Gemini sunrise dance",
+        "count": 240
+      },
+      {
+        "name": "one original selected B05-S10 four-second moving proof",
+        "count": 96
+      }
+    ],
+    "full_decode_pass": true,
+    "nearblack_frames": 0,
+    "freezes_ge_half_second": 0,
+    "source_wav_mux_once": true
+  },
+  "QC_caveats": [
+    "water movement is real environmental pixel animation, not real human dancing",
+    "background guitarist resembles lead male and remains under protected-identity screening",
+    "two hard picture cuts need normal-speed music-led Director inspection"
+  ],
+  "current_main_canon_test_green_on_commit": "e1c3aa0818532f5eac5ba4f5bc4aecc14814c171",
+  "not_the_full_film": true,
+  "not_picture_locked": true,
+  "not_released": true,
+  "next": "Assemble the real 50-shot 7,708-frame music-led rough cut with only source-authorized B06 cutaways and actual original Gemini motion; continue surgical repairs; normal-speed Director watch before any release."
+}
