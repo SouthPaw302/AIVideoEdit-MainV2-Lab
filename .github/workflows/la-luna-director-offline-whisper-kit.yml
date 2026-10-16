@@ -37,8 +37,8 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p "$RUNNER_TEMP/la-luna-offline-kit"/{wheels,model}
-          python -m pip download --dest "$RUNNER_TEMP/la-luna-offline-kit/wheels" 'faster-whisper==1.1.1'
-          python -m pip install --disable-pip-version-check 'huggingface-hub==2.2.0' 'faster-whisper==1.1.1'
+          python -m pip download --dest "$RUNNER_TEMP/la-luna-offline-kit/wheels" 'faster-whisper==1.1.1' 'requests==2.34.2'
+          python -m pip install --disable-pip-version-check 'huggingface-hub==2.2.0' 'faster-whisper==1.1.1' 'requests==2.34.2'
           MODEL_DIR="$RUNNER_TEMP/la-luna-offline-kit/model" python - <<'PY'
           import os,json,hashlib
           from pathlib import Path
