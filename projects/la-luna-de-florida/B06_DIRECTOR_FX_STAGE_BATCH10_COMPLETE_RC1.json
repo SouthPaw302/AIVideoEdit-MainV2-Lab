@@ -1,0 +1,130 @@
+{
+  "schema": "aivideoedit.la-luna-b06-director-fx-batch-10-evidence.v1",
+  "project": "la-luna-de-florida",
+  "branch": "song/la-luna-de-florida",
+  "status": "B06_SHOT_AND_NATIVE_A_B_FX_STAGE_BATCH_COMPLETE_WITH_CREATIVE_FLAGS",
+  "scope": "S51–S60 new source/still extension Batch 06 only; B01–B05 untouched; not new narrative Act 6",
+  "individual_stills": {
+    "count": 10,
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256_verified_against": "B06_EXTENSION_ASSETS_FINALE_RC2_DIRECTOR_EVIDENCE.json",
+    "folder_id": "16Vd3zLa19Bz3QJHDg0gUtIYBVlpsEhBy",
+    "original_bytes_modified": false
+  },
+  "source_gemini": {
+    "harbor_drive_file_id": "1ow3vrwVxAn4RCvWx6Znadv30mdFurfLg",
+    "sunset_dance_uncut_20s_drive_file_id": "14dMiA2VTxf47Lco087DZHwBFzdtokF9r",
+    "S01_unique_original_frames": 240,
+    "S10_unique_dance_frames": 240,
+    "format": "960x540 24fps silent output copies, original user uploads and audio tracks preserved in 08 Gemini Video Inputs",
+    "duplicate_harbor_first_half_of_20s_excluded": true
+  },
+  "output": {
+    "all_shot_proofs_count": 10,
+    "gemini_real_scene_motion_shots": [
+      "B06-S01",
+      "B06-S10"
+    ],
+    "gemini_shot_frames_each": 240,
+    "still_based_camera_material_fx_shots": [
+      "B06-S02",
+      "B06-S03",
+      "B06-S04",
+      "B06-S05",
+      "B06-S06",
+      "B06-S07",
+      "B06-S08",
+      "B06-S09"
+    ],
+    "still_based_shot_frames_each": 96,
+    "clip_resolution": [
+      960,
+      540
+    ],
+    "fps": 24,
+    "FX_A_count": 10,
+    "FX_B_count": 10,
+    "FX_variant_frames_each": 60,
+    "gif_review_previews": 10,
+    "gif_preview_cannot_be_used_to_pad_film": true,
+    "review_reel_seconds": 52,
+    "review_reel_frames": 1248,
+    "original_song_audio_omitted_in_review_reel": true,
+    "video_output_reel_sha256": "35ccb4408cfe6d2cb4716f0e33db9d26b937fb7be39fa75115f42212bfa8690d",
+    "full_decode_10_of_10": true,
+    "total_black_frames": 0,
+    "contact_frames_reviewed": "start, middle, end for every one of 10 shots; full 1,248 frame automated motion screen and actual FFmpeg decode",
+    "source_video_A_B_FX_all_sha256_receipts": "ZIP:B06_REAL_PIXELS_SOURCE_AND_FX_RECEIPTS.json",
+    "per_shot_qc": "ZIP:B06_DIRECTOR_QC_SUMMARY.json"
+  },
+  "per_shot_visual_limits": [
+    {
+      "id": "B06-S02",
+      "status": "SOURCE_AND_MATERIAL_FX_TECH_PASS_DUPLICATE_BACKGROUND_HAT_ACTOR_CREATIVE_HOLD"
+    },
+    {
+      "id": "B06-S03",
+      "status": "STILL_IMAGE_CAMERA_FX_ONLY_ACTUAL_DANCE_MOVEMENT_NOT_CLAIMED"
+    },
+    {
+      "id": "B06-S04",
+      "status": "APPALACHIAN_NIGHT_ROAD_MEMORY_ONLY_NO_MIAMI_SUNRISE"
+    },
+    {
+      "id": "B06-S05",
+      "status": "STILL_IMAGE_CAMERA_FX_ONLY_ACTUAL_VIOLIN_BOW_MOTION_NOT_CLAIMED"
+    },
+    {
+      "id": "B06-S06",
+      "status": "STILL_IMAGE_CAMERA_FX_ONLY_ACTUAL_BODY_TURN_MOTION_NOT_CLAIMED"
+    },
+    {
+      "id": "B06-S07",
+      "status": "STILL_IMAGE_CAMERA_FX_ONLY_ACTUAL_EMBRACE_ACTION_NOT_CLAIMED"
+    },
+    {
+      "id": "B06-S08",
+      "status": "BLUE_HOUR_HARBOR_MATERIAL_WATER_CAMERA_FX_ONLY"
+    },
+    {
+      "id": "B06-S09",
+      "status": "GENUINE_SUNRISE_SOURCE_MATERIAL_WATER_CAMERA_FX_ONLY"
+    },
+    {
+      "id": "B06-S01",
+      "status": "USER_GEMINI_REAL_240FRAME_HARBOR_TECH_PASS"
+    },
+    {
+      "id": "B06-S10",
+      "status": "USER_GEMINI_REAL_240FRAME_DANCE_TECH_PASS_PROVISIONAL_FACE_DUPLICATE_BACKGROUND_REVIEW"
+    }
+  ],
+  "delivery": {
+    "Drive_folder_name": "18 Director FX B06",
+    "Drive_folder_id": "1-lTvoSAixOSoDItETCS5DlyI89iP0y9H",
+    "archive_name": "LA_LUNA_B06_TEN_SHOTS_FX_AB_DIRECTOR_REVIEW_RC1.zip",
+    "archive_sha256": "d525b60185214f0dbf81e6b3b03c4f00e35da3ac5980b8303195ff221e46e0be",
+    "archive_bytes": 77244073,
+    "archive_drive_file_id": "1uWWQrlpMd1V3YJokxjZDdmrBD-Yv8kyE",
+    "archive_drive_url": "https://drive.google.com/file/d/1uWWQrlpMd1V3YJokxjZDdmrBD-Yv8kyE/view?usp=drivesdk",
+    "review_reel_drive_file_id": "1RrHfC27NNpd1NW7chkH0zxPotWbYa2if",
+    "review_reel_drive_url": "https://drive.google.com/file/d/1RrHfC27NNpd1NW7chkH0zxPotWbYa2if/view?usp=drivesdk",
+    "contact_sheet_drive_file_id": "1uDV2i_pb9cBn3vEJUpBCYB_VrcQDN-fo",
+    "qc_json_drive_file_id": "1Rx3B94bV9uitVyP3jHB_CxDsMoL6iNAx",
+    "drive_metadata_readback_size_and_parent_verified": true
+  },
+  "approvals": {
+    "Director_batch_technical_fx_gate": "PASS",
+    "Director_creative_material_limit_flags_open": true,
+    "Master_Director_FX_full_film_stage": "PENDING",
+    "original_song_wav_original_sha256": "1a4bffef36930b504423d2653faff4cc5bfd9a15d44bdcf1083b27fbb0db1c10",
+    "all_7708_frame_full_feature_rendered_from_this_batch": false,
+    "SCRIPT_locked": false,
+    "executive_user_release_approved": false
+  },
+  "no_more_stills_or_gemini_required_for_b06": true,
+  "next_step": "Director merges B06 as selective cutaway source against original music and existing 50-shot five-act film, performs a normal-speed 5:21 watch and rejects static/doubled performers. Do not append 52sec at film end or simply stretch GIFs/96f clips."
+}
