@@ -1,0 +1,182 @@
+{
+  "schema": "aivideoedit.la-luna-storyboard-single-continuation.v1",
+  "project": "la-luna-de-florida",
+  "branch": "song/la-luna-de-florida",
+  "original_canon": {
+    "path": "projects/la-luna-de-florida/STORYBOARD_CANON.json",
+    "sha256_of_original_image": "05b232452eebce56fb9c047a0f481a19e04cf2d13e364bee30255dd27c88703a",
+    "drive_original_image_id": "1cR6kUCti5UkS8zdXz5B56EfjyRr_1Fau",
+    "original_batches_unchanged": [
+      "B01",
+      "B02",
+      "B03",
+      "B04",
+      "B05"
+    ],
+    "original_50_cells_unchanged": true,
+    "all_original_pixels_byte_equivalent_in_combined_image": true,
+    "original_approved_media_unchanged": true
+  },
+  "single_authoritative_continuation_preview": {
+    "drive_file_id": "1s9E5I5SEoy_iIumVRO1vZ-OXD9-AXZM1",
+    "drive_url": "https://drive.google.com/file/d/1s9E5I5SEoy_iIumVRO1vZ-OXD9-AXZM1/view?usp=drivesdk",
+    "sha256": "f26f971893d18b1d44e1d95bf8aacf4449c7d6ff64ca30b876200b5f0ec99936",
+    "dimensions": [
+      1536,
+      1281
+    ],
+    "image_includes_all_original_five_rows_and_one_new_row": true,
+    "file_size_bytes": 3008806,
+    "note": "The only retained extension storyboard image, previous unapproved chat storyboard variants discarded. Extension pictures are thumbnail concepts only; not ten independently produced full-resolution stills."
+  },
+  "new_extension_batch": "B06",
+  "role": "CUTAWAY_INSERTS_IN_EXISTING_321_SECOND_FIVE_ACT_FILM_NOT_SIXTH_NARRATIVE_ACT",
+  "source_original_50_shots_unchanged": true,
+  "story_order_of_original_50_shots_unchanged": true,
+  "locked_original_storyboard_untouched": true,
+  "visual_rules": [
+    "Maintain original lead woman's dark wavy hair/red flower/red-and-black ruffled dress",
+    "Maintain original lead man's dark hat/dark vest/rolled white shirt",
+    "Same working dockside tavern, Miami skyline, pier, musicians, consistent props",
+    "Moonlit blue/amber to real dawn violet/gold; mountain road occurs only as memory",
+    "No new car/cruise subplot; no unrelated characters or new locations",
+    "Do not paste thumbnail crop as independently approved full-resolution still",
+    "Genuine actor/environment motion in later proof: no generic looping FX, static pan or counterfeit dancer movement"
+  ],
+  "extension_still_targets": [
+    {
+      "shot_id": "B06-S01",
+      "index_in_extension": 1,
+      "title": "Harbor breathes",
+      "insert_against_original_shots": [
+        "B01-S01"
+      ],
+      "story_intent": "Opening harbor insert: new moonlit waterline, anchored boats, subtle changing reflections; no sunrise",
+      "picture_status": "STORYBOARD_THUMBNAIL_CONCEPT_ONLY_FULL_RES_ORIGINAL_STILL_NOT_YET_GENERATED",
+      "motion_status": "NOT_RENDERED_NONREPEATING_EXTENSION_REQUIRED",
+      "final_storyboard_approval": "PENDING_DIRECTOR_SOURCE_CONTINUITY_AND_USER_CANON_ACCEPTANCE"
+    },
+    {
+      "shot_id": "B06-S02",
+      "index_in_extension": 2,
+      "title": "Across the tavern",
+      "insert_against_original_shots": [
+        "B02-S10"
+      ],
+      "story_intent": "Same dockside taberna from new interior/exterior perspective; existing musicians/patrons only",
+      "picture_status": "STORYBOARD_THUMBNAIL_CONCEPT_ONLY_FULL_RES_ORIGINAL_STILL_NOT_YET_GENERATED",
+      "motion_status": "NOT_RENDERED_NONREPEATING_EXTENSION_REQUIRED",
+      "final_storyboard_approval": "PENDING_DIRECTOR_SOURCE_CONTINUITY_AND_USER_CANON_ACCEPTANCE"
+    },
+    {
+      "shot_id": "B06-S03",
+      "index_in_extension": 3,
+      "title": "Steps in rhythm",
+      "insert_against_original_shots": [
+        "B02-S09"
+      ],
+      "story_intent": "Different full-body/footwork angle on original red/black ruffled dress and dark-vest/white-shirt partner",
+      "picture_status": "STORYBOARD_THUMBNAIL_CONCEPT_ONLY_FULL_RES_ORIGINAL_STILL_NOT_YET_GENERATED",
+      "motion_status": "NOT_RENDERED_NONREPEATING_EXTENSION_REQUIRED",
+      "final_storyboard_approval": "PENDING_DIRECTOR_SOURCE_CONTINUITY_AND_USER_CANON_ACCEPTANCE"
+    },
+    {
+      "shot_id": "B06-S04",
+      "index_in_extension": 4,
+      "title": "Road remembered",
+      "insert_against_original_shots": [
+        "B03-S07",
+        "B03-S10"
+      ],
+      "story_intent": "Separate remembered Appalachian mountain road insert; this is memory and must never be mistaken for Miami dawn",
+      "picture_status": "STORYBOARD_THUMBNAIL_CONCEPT_ONLY_FULL_RES_ORIGINAL_STILL_NOT_YET_GENERATED",
+      "motion_status": "NOT_RENDERED_NONREPEATING_EXTENSION_REQUIRED",
+      "final_storyboard_approval": "PENDING_DIRECTOR_SOURCE_CONTINUITY_AND_USER_CANON_ACCEPTANCE"
+    },
+    {
+      "shot_id": "B06-S05",
+      "index_in_extension": 5,
+      "title": "Fiddle answers",
+      "insert_against_original_shots": [
+        "B04-S01",
+        "B04-S07"
+      ],
+      "story_intent": "Distinct violin performance coverage in same tavern with established heroine and band; preserve bow/finger anatomy",
+      "picture_status": "STORYBOARD_THUMBNAIL_CONCEPT_ONLY_FULL_RES_ORIGINAL_STILL_NOT_YET_GENERATED",
+      "motion_status": "NOT_RENDERED_NONREPEATING_EXTENSION_REQUIRED",
+      "final_storyboard_approval": "PENDING_DIRECTOR_SOURCE_CONTINUITY_AND_USER_CANON_ACCEPTANCE"
+    },
+    {
+      "shot_id": "B06-S06",
+      "index_in_extension": 6,
+      "title": "One more turn",
+      "insert_against_original_shots": [
+        "B04-S04",
+        "B04-S10"
+      ],
+      "story_intent": "Distinct dance beat in existing tavern with real choreographic action, preserve the recurring couple",
+      "picture_status": "STORYBOARD_THUMBNAIL_CONCEPT_ONLY_FULL_RES_ORIGINAL_STILL_NOT_YET_GENERATED",
+      "motion_status": "NOT_RENDERED_NONREPEATING_EXTENSION_REQUIRED",
+      "final_storyboard_approval": "PENDING_DIRECTOR_SOURCE_CONTINUITY_AND_USER_CANON_ACCEPTANCE"
+    },
+    {
+      "shot_id": "B06-S07",
+      "index_in_extension": 7,
+      "title": "Before we let go",
+      "insert_against_original_shots": [
+        "B05-S01",
+        "B05-S07"
+      ],
+      "story_intent": "Quiet close, emotional last moments during bridge without spontaneous costume shifts",
+      "picture_status": "STORYBOARD_THUMBNAIL_CONCEPT_ONLY_FULL_RES_ORIGINAL_STILL_NOT_YET_GENERATED",
+      "motion_status": "NOT_RENDERED_NONREPEATING_EXTENSION_REQUIRED",
+      "final_storyboard_approval": "PENDING_DIRECTOR_SOURCE_CONTINUITY_AND_USER_CANON_ACCEPTANCE"
+    },
+    {
+      "shot_id": "B06-S08",
+      "index_in_extension": 8,
+      "title": "Blue hour",
+      "insert_against_original_shots": [
+        "B05-S07"
+      ],
+      "story_intent": "Moonlit harbor shifts to real pre-dawn violet; character/world framing without premature orange daylight",
+      "picture_status": "STORYBOARD_THUMBNAIL_CONCEPT_ONLY_FULL_RES_ORIGINAL_STILL_NOT_YET_GENERATED",
+      "motion_status": "NOT_RENDERED_NONREPEATING_EXTENSION_REQUIRED",
+      "final_storyboard_approval": "PENDING_DIRECTOR_SOURCE_CONTINUITY_AND_USER_CANON_ACCEPTANCE"
+    },
+    {
+      "shot_id": "B06-S09",
+      "index_in_extension": 9,
+      "title": "The real sunrise",
+      "insert_against_original_shots": [
+        "B05-S08",
+        "B05-S09"
+      ],
+      "story_intent": "New dawn harbor alternate shot, real amber light and water wake, never night footage recolored",
+      "picture_status": "STORYBOARD_THUMBNAIL_CONCEPT_ONLY_FULL_RES_ORIGINAL_STILL_NOT_YET_GENERATED",
+      "motion_status": "NOT_RENDERED_NONREPEATING_EXTENSION_REQUIRED",
+      "final_storyboard_approval": "PENDING_DIRECTOR_SOURCE_CONTINUITY_AND_USER_CANON_ACCEPTANCE"
+    },
+    {
+      "shot_id": "B06-S10",
+      "index_in_extension": 10,
+      "title": "Dance returns",
+      "insert_against_original_shots": [
+        "B05-S10"
+      ],
+      "story_intent": "Genuinely new morning couple/dance perspective to support final refrain; keep ORIGINAL B05-S10 as last closing composition",
+      "picture_status": "STORYBOARD_THUMBNAIL_CONCEPT_ONLY_FULL_RES_ORIGINAL_STILL_NOT_YET_GENERATED",
+      "motion_status": "NOT_RENDERED_NONREPEATING_EXTENSION_REQUIRED",
+      "final_storyboard_approval": "PENDING_DIRECTOR_SOURCE_CONTINUITY_AND_USER_CANON_ACCEPTANCE"
+    }
+  ],
+  "still_targets_count": 10,
+  "storyboard_approval_status": "CANDIDATE_SINGLE_BOARD_AWAITING_SOURCE_CONTINUITY_AND_DIRECTOR_CHECK",
+  "production_stills_generated": 0,
+  "still_motion_shots_proven": 0,
+  "fixed_runtime_12sec_per_still": false,
+  "source_shortfall_gross_frames": 3224,
+  "picture_lock": false,
+  "final_release_approved": false,
+  "preserve_only_one_board": "This branch records a single sixth-row addition to the pre-existing original B01–B05 storyboard; no competing alternate boards are canonical."
+}
