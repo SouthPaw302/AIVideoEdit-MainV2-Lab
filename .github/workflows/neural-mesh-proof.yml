@@ -1,0 +1,235 @@
+name: Neural Mesh - Six Runner Recurrent Proof
+
+on:
+  # One bounded distributed proof on initial branch creation. Future execution
+  # is manual; ordinary PR updates only run the offline protocol tests.
+  push:
+    branches: [prototype/neural-mesh-v0-20261120]
+    paths: [.github/workflows/neural-mesh-proof.yml]
+  pull_request:
+    paths:
+      - .github/workflows/neural-mesh-proof.yml
+      - prototype/neural_mesh/**
+      - tests/test_neural_mesh.py
+  workflow_dispatch:
+    inputs:
+      seed:
+        description: "Reproducible synthetic motion scene seed"
+        required: false
+        default: '314159'
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: neural-mesh-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  protocol-tests:
+    name: Offline neural-mesh integrity and feedback tests
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.11'
+      - run: python -m unittest discover -s tests -p test_neural_mesh.py -v
+
+  prepare:
+    if: github.event_name != 'pull_request'
+    needs: [protocol-tests]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Train six small neural modules and seal evaluation target separately
+        env:
+          MESH_SEED: ${{ inputs.seed || '314159' }}
+        run: python prototype/neural_mesh/mesh.py prepare --seed "$MESH_SEED" --out mesh-state
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: mesh-input-${{ github.run_id }}
+          path: |
+            mesh-state/weights.json
+            mesh-state/observation.json
+          retention-days: 14
+          if-no-files-found: error
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: mesh-truth-${{ github.run_id }}
+          path: mesh-state/truth.json
+          retention-days: 14
+          if-no-files-found: error
+
+  round-1:
+    needs: [prepare]
+    name: "Round 1 / ${{ matrix.node }}"
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        node: [position, velocity, acceleration, short_horizon, long_horizon, stabilizer]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: mesh-input-${{ github.run_id }}
+          path: input
+      - name: Infer first independent node embedding
+        env:
+          NODE: ${{ matrix.node }}
+        run: |
+          mkdir -p outputs
+          python prototype/neural_mesh/mesh.py node --name "$NODE" --stage 1 \
+            --observations input/observation.json --weights input/weights.json \
+            --out "outputs/node-$NODE.json"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: mesh-r1-${{ matrix.node }}-${{ github.run_id }}
+          path: outputs/
+          retention-days: 14
+          if-no-files-found: error
+
+  synapse-1:
+    needs: [round-1]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: mesh-input-${{ github.run_id }}
+          path: input
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          pattern: mesh-r1-*-${{ github.run_id }}
+          path: receipts
+          merge-multiple: true
+      - run: python prototype/neural_mesh/mesh.py integrate --stage 1 --weights input/weights.json --outputs receipts --out packet.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: mesh-synapse-1-${{ github.run_id }}
+          path: packet.json
+          retention-days: 14
+          if-no-files-found: error
+
+  round-2:
+    needs: [synapse-1]
+    name: "Round 2 / ${{ matrix.node }}"
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        node: [position, velocity, acceleration, short_horizon, long_horizon, stabilizer]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: mesh-input-${{ github.run_id }}
+          path: input
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: mesh-synapse-1-${{ github.run_id }}
+          path: feedback
+      - name: Recurrent inference influenced by all five peer messages
+        env:
+          NODE: ${{ matrix.node }}
+        run: |
+          mkdir -p outputs
+          python prototype/neural_mesh/mesh.py node --name "$NODE" --stage 2 \
+            --observations input/observation.json --weights input/weights.json \
+            --messages feedback/packet.json --out "outputs/node-$NODE.json"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: mesh-r2-${{ matrix.node }}-${{ github.run_id }}
+          path: outputs/
+          retention-days: 14
+          if-no-files-found: error
+
+  synapse-2:
+    needs: [round-2]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: mesh-input-${{ github.run_id }}
+          path: input
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          pattern: mesh-r2-*-${{ github.run_id }}
+          path: receipts
+          merge-multiple: true
+      - run: python prototype/neural_mesh/mesh.py integrate --stage 2 --weights input/weights.json --outputs receipts --out packet.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: mesh-synapse-2-${{ github.run_id }}
+          path: packet.json
+          retention-days: 14
+          if-no-files-found: error
+
+  evaluate:
+    needs: [synapse-2]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: mesh-input-${{ github.run_id }}
+          path: input
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: mesh-truth-${{ github.run_id }}
+          path: sealed-truth
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: mesh-synapse-1-${{ github.run_id }}
+          path: round1
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: mesh-synapse-2-${{ github.run_id }}
+          path: round2
+      - name: Evaluate against sealed ground truth (no fabricated PASS)
+        run: |
+          mkdir -p evidence
+          python prototype/neural_mesh/mesh.py evaluate \
+            --round1 round1/packet.json --round2 round2/packet.json \
+            --truth sealed-truth/truth.json --weights input/weights.json \
+            --out evidence/metrics.json
+          cp round1/packet.json evidence/round1.json
+          cp round2/packet.json evidence/round2.json
+          cat evidence/metrics.json
+          {
+            echo "### Distributed neural mesh synthetic proof"
+            echo "Actual six separate runner workers, two inference rounds."
+            echo "The measured result is in the metrics artifact. No real-video or creative approval is implied."
+          } >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: mesh-evidence-${{ github.run_id }}
+          path: evidence/
+          retention-days: 30
+          if-no-files-found: error
